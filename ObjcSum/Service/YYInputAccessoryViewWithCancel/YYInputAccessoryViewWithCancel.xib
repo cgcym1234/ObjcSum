@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYInputAccessoryViewWithCancel">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pc-uG-1xn">
+                    <rect key="frame" x="323" y="0.0" width="52" height="44"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" red="0.058823529411764705" green="0.69411764705882351" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="TU0-Ni-5Ca"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6t-yv-ybx">
+                    <rect key="frame" x="0.0" y="0.0" width="52" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="fBe-7R-iiD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="5bR-s9-9v7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="S6t-yv-ybx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Pt-ks-WbA"/>
+                <constraint firstAttribute="bottom" secondItem="S6t-yv-ybx" secondAttribute="bottom" id="6PM-ms-ZfX"/>
+                <constraint firstItem="S6t-yv-ybx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6kL-Bh-J2q"/>
+                <constraint firstItem="3Pc-uG-1xn" firstAttribute="width" secondItem="S6t-yv-ybx" secondAttribute="width" id="8fn-bW-6nX"/>
+                <constraint firstAttribute="trailing" secondItem="3Pc-uG-1xn" secondAttribute="trailing" id="IQU-bf-1PR"/>
+                <constraint firstItem="3Pc-uG-1xn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LA1-zi-LYL"/>
+                <constraint firstAttribute="bottom" secondItem="3Pc-uG-1xn" secondAttribute="bottom" id="TaL-M6-ggC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="S6t-yv-ybx" id="kRw-0k-BJQ"/>
+                <outlet property="doneButton" destination="3Pc-uG-1xn" id="Z2z-ER-dbr"/>
+            </connections>
+            <point key="canvasLocation" x="498.5" y="208"/>
+        </view>
+    </objects>
+</document>
