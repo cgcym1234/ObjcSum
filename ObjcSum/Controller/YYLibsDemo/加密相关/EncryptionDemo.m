@@ -8,6 +8,10 @@
 
 #import "EncryptionDemo.h"
 #import "AESenAndDe.h"
+#import "YYBaseHttp.h"
+
+#define UrlRoot       @"http://kuaikou.jios.org:7777/justice"
+#define UrlTasksTodo             UrlRoot@"/mobile/task/todo"
 
 @interface EncryptionDemo ()
 
@@ -21,6 +25,15 @@
     NSString *str = @"zhangjianlong";
     NSString *encryptStr = [self stringFromAESEncrypt:str];
     NSLog(@"加密前: %@， 加密后: %@", str, encryptStr);
+    
+    
+    NSDictionary *parameters = @{@"audit":@"N", @"start": @"0"};
+    [[YYBaseHttp new] getUrl:UrlTasksTodo parameters:parameters completionBlock:^(id responseData, NSError *error, AFHTTPRequestOperation *operation) {
+        if (error) {
+            NSLog(@"%@", error);
+        }
+        NSLog(@"%@", responseData);
+    }];
 }
 
 
