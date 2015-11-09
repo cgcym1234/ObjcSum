@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArr = @[
+                   [[LibDemoInfo alloc] initWithTitle:@"YYScrollSigmentDemo" desc:@"ScrollSigment滑动选择条" controllerName:@"YYScrollSigmentDemo"],
+                   
                    [[LibDemoInfo alloc] initWithTitle:@"YYAlertGridViewDemo" desc:@"Alert表格选择" controllerName:@"YYAlertGridViewDemo"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"YYAlertTableDemo" desc:@"alert选择" controllerName:@"YYAlertTableDemo"],

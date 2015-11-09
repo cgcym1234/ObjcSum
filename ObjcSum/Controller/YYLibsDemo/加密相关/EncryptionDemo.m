@@ -36,6 +36,37 @@
     }];
 }
 
+//伪造响应
+- (void)cacheDemo {
+    NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.16.25.44/test1.php"] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:3];
+    NSURLCache *cache = [NSURLCache sharedURLCache];
+    
+    NSData *contentData = [@"123" dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLResponse *response = [[NSURLResponse alloc] initWithURL:[NSURL URLWithString:@"http://172.16.25.44/test1.php"] MIMEType:@"text/html" expectedContentLength:1000 textEncodingName:@"UTF-8"];
+    NSCachedURLResponse *cacheResponse = [[NSCachedURLResponse alloc] initWithResponse:response data:contentData];
+    
+    [cache storeCachedResponse:cacheResponse forRequest:request];
+    
+    //如上代码，创建了一个针对@"http://172.16.25.44/test1.php"请求的响应，并且让 cache 对该响应进行了存储。
+}
+
+//修改响应内容
+//修改响应内容需要我们实现NSURLConnectionDataDelegate 协议并实现
+-(NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse
+{
+    //应为 NSCachedURLResponse 的属性都是readonly的，所以我们想要添加内容就要创建一个可变副本增减内容。
+    NSMutableData *mutableData = [[cachedResponse data] mutableCopy];
+    
+    //添加数据
+    
+    NSCachedURLResponse *response = [[NSCachedURLResponse alloc] initWithResponse:cachedResponse.response data:mutableData];
+    return response;
+}
+
+//可以看到输出的是我们自定义的123，而不是服务器返回的1。
 
 #define PrivateKey @"3b188cf6d320b798"
 

@@ -29,11 +29,6 @@ static NSString* const AppKeyForUM = @"5608d2fee0f55ae7bd003fc5";
 /**
  *  配置app
  */
-
-@property (nonatomic,assign)  NSUInteger pushToFollowVcType;//判断从什么入口进入的客户跟进页
-@property (nonatomic,assign)  NSUInteger orderStatus;//判断从什么入口进入的客户跟进页
-
-
 + (instancetype)configAppWithLaunchOptions:(NSDictionary *)launchOptions;
 
 + (instancetype)sharedInstance;

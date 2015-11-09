@@ -15,6 +15,7 @@
 
 //http请求错误域
 #define HttpErrorDomain   @"httpError"
+
 #define  OPTIONS    @"OPTIONS"
 #define  GET        @"GET"
 #define  HEAD       @"HEAD"

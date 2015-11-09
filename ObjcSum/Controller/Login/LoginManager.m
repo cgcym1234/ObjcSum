@@ -33,7 +33,6 @@
 - (void)setLoginModel:(LoginModel *)loginModel {
     _loginModel = loginModel;
     [LoginModel update:loginModel];
-//    [[HttpManager sharedInstance] setRequestHttpHeaderKey:SESSION_ID value:loginModel.sessionId];
 }
 
 #pragma mark - Public
