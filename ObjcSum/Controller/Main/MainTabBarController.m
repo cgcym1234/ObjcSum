@@ -70,6 +70,9 @@
     BaseNavigationController *firstNav = [firstStory instantiateInitialViewController];
     firstNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:tabInfo[KeyTitle] image:[UIImage imageNamed:tabInfo[KeyUnselectedImag]] tag:i++];
     
+    //调整文字位置
+    firstNav.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -3);
+    
     tabInfo = tabInfoArr[i];
     UIStoryboard *secondStory = [UIStoryboard storyboardWithName:StoryboardNameApproval bundle:nil];
     BaseNavigationController *secondNav = [secondStory instantiateInitialViewController];

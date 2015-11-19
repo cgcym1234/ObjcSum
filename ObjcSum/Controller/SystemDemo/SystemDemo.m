@@ -20,7 +20,7 @@
     self.dataArr = @[
                      [[LibDemoInfo alloc] initWithTitle:@"LocalNotificationDemo" desc:@"本地通知" controllerName:@"LocalNotificationDemo"],
                      
-                     [[LibDemoInfo alloc] initWithTitle:@"YYAlertTableDemo" desc:@"alert选择" controllerName:@"YYAlertTableDemo"],
+                     [[LibDemoInfo alloc] initWithTitle:@"UISearchDemo" desc:@"搜索相关" controllerName:@"UISearchDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"YYAlertTextViewDemo" desc:@"alert输入框" controllerName:@"YYAlertTextViewDemo"],
                      

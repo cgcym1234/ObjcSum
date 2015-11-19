@@ -111,7 +111,7 @@
 - (void)setMaxCharNum:(NSUInteger)maxCharNum {
     _maxCharNum = maxCharNum;
     
-    self.maxcharNumLabel.text = _maxCharNum > 0 ? [NSString stringWithFormat:@"0/%ld", _maxCharNum] : nil;
+    self.maxcharNumLabel.text = _maxCharNum > 0 ? [NSString stringWithFormat:@"0/%ld", (unsigned long)_maxCharNum] : nil;
 }
 
 - (void)setAccessoryViewShow:(BOOL)accessoryViewShow {
@@ -218,7 +218,7 @@
     }
     
     if (_maxCharNum > 0) {
-        _maxcharNumLabel.text = [NSString stringWithFormat:@"%ld/%ld", textView.text.length, _maxCharNum];
+        _maxcharNumLabel.text = [NSString stringWithFormat:@"%ld/%ld", (unsigned long)textView.text.length, _maxCharNum];
     }
     
     

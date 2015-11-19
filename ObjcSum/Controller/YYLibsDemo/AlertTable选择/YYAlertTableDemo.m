@@ -24,7 +24,7 @@
     [self addButtonWithTitle:@"show" action:^(UIButton *btn) {
         weakSelf.alertTable = [YYAlertTable showWithTitle:@"标题" textArry:@[@"中国人明裙子", @"fhasfasjlfslaffsadfdsa",@"1",@"2"]];
         weakSelf.alertTable.didClickedBlock = ^(YYAlertTable *alertTable, NSInteger index) {
-            NSLog(@"didClickedBlock %ld",index);
+            NSLog(@"didClickedBlock %ld",(long)index);
         };
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
     

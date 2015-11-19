@@ -219,7 +219,7 @@
     NSInteger min = [comps minute];
     NSInteger sec = [comps second];
 
-    NSString *time = [NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld", year, month, day, hour, min, sec];
+    NSString *time = [NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld", (long)year, month, day, hour, min, sec];
 
     return time;
 }

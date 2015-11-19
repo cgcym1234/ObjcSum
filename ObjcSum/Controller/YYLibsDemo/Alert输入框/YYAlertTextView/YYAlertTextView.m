@@ -126,6 +126,10 @@
 #pragma mark - notifycation
 
 - (void)keyboardWillShow:(NSNotification*)notification{
+    /**
+     *  4,5,keyboardRect = (origin = (x = 0, y = 227), size = (width = 320, height = 253))
+     6的height = 258
+     */
     CGRect keyboardRect = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     
     CGFloat visibleY = CGRectGetMaxY(_containerView.frame);

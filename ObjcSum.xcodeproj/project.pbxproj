@@ -27,7 +27,10 @@
 		1F4E0D761BE26B6E0099B66D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E0D6C1BE26B6E0099B66D /* UIProgressView+AFNetworking.m */; };
 		1F4E0D771BE26B6E0099B66D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E0D6E1BE26B6E0099B66D /* UIRefreshControl+AFNetworking.m */; };
 		1F4E0D781BE26B6E0099B66D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E0D701BE26B6E0099B66D /* UIWebView+AFNetworking.m */; };
+		1F5D1A481BF1CE9D0049F342 /* ExtensionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */; };
 		1F739A071BEC3E14007790B5 /* ProccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F739A061BEC3E14007790B5 /* ProccessHelper.m */; };
+		1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769871BFB1FF100253D18 /* QrcodeDemo.m */; };
+		1F8769951BFB248100253D18 /* YYQRcodeGenerater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */; };
 		1F8B89F51BE2058600D81096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B89F41BE2058600D81096 /* main.m */; };
 		1F8B89FE1BE2058700D81096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FC1BE2058700D81096 /* Main.storyboard */; };
 		1F8B8A001BE2058700D81096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FF1BE2058700D81096 /* Assets.xcassets */; };
@@ -110,7 +113,11 @@
 		1FA4A5421BEC3B9D0076ECAA /* YYScrollSigmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A53F1BEC3B9D0076ECAA /* YYScrollSigmentCell.xib */; };
 		1FA4A5461BEC3BF20076ECAA /* YYScrollSigmentDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */; };
 		1FA4A5481BEC3C700076ECAA /* YYScrollSigmentDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */; };
+		1FD1DD8F1BFC61E1001AE9BE /* UITableViewCell+CustomSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1DD8E1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.m */; };
+		1FD1DD921BFC6221001AE9BE /* UITableView+CustomSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1DD911BFC6221001AE9BE /* UITableView+CustomSetting.m */; };
 		1FDB55121BEE1DB80048E1F7 /* InterviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB55111BEE1DB80048E1F7 /* InterviewDemo.m */; };
+		1FDB55191BF62BD70048E1F7 /* UISearchDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB55181BF62BD70048E1F7 /* UISearchDemo.m */; };
+		1FDB551D1BF62C040048E1F7 /* YYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB551C1BF62C040048E1F7 /* YYSearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,8 +180,14 @@
 		1F4E0D6E1BE26B6E0099B66D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		1F4E0D6F1BE26B6E0099B66D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		1F4E0D701BE26B6E0099B66D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		1F5D1A461BF1CE9D0049F342 /* ExtensionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDemo.h; sourceTree = "<group>"; };
+		1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDemo.m; sourceTree = "<group>"; };
 		1F739A051BEC3E14007790B5 /* ProccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProccessHelper.h; sourceTree = "<group>"; };
 		1F739A061BEC3E14007790B5 /* ProccessHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProccessHelper.m; sourceTree = "<group>"; };
+		1F8769861BFB1FF100253D18 /* QrcodeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrcodeDemo.h; sourceTree = "<group>"; };
+		1F8769871BFB1FF100253D18 /* QrcodeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrcodeDemo.m; sourceTree = "<group>"; };
+		1F8769931BFB248100253D18 /* YYQRcodeGenerater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYQRcodeGenerater.h; sourceTree = "<group>"; };
+		1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYQRcodeGenerater.m; sourceTree = "<group>"; };
 		1F8B89F01BE2058600D81096 /* ObjcSum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcSum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8B89F41BE2058600D81096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F8B89F61BE2058600D81096 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -340,8 +353,16 @@
 		1FA4A5441BEC3BF20076ECAA /* YYScrollSigmentDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYScrollSigmentDemo.h; sourceTree = "<group>"; };
 		1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYScrollSigmentDemo.m; sourceTree = "<group>"; };
 		1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYScrollSigmentDemo.xib; sourceTree = "<group>"; };
+		1FD1DD8D1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+CustomSetting.h"; sourceTree = "<group>"; };
+		1FD1DD8E1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+CustomSetting.m"; sourceTree = "<group>"; };
+		1FD1DD901BFC6221001AE9BE /* UITableView+CustomSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CustomSetting.h"; sourceTree = "<group>"; };
+		1FD1DD911BFC6221001AE9BE /* UITableView+CustomSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CustomSetting.m"; sourceTree = "<group>"; };
 		1FDB55101BEE1DB80048E1F7 /* InterviewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterviewDemo.h; sourceTree = "<group>"; };
 		1FDB55111BEE1DB80048E1F7 /* InterviewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterviewDemo.m; sourceTree = "<group>"; };
+		1FDB55171BF62BD70048E1F7 /* UISearchDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISearchDemo.h; sourceTree = "<group>"; };
+		1FDB55181BF62BD70048E1F7 /* UISearchDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISearchDemo.m; sourceTree = "<group>"; };
+		1FDB551B1BF62C030048E1F7 /* YYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSearchBar.h; sourceTree = "<group>"; };
+		1FDB551C1BF62C040048E1F7 /* YYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +441,15 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		1F5D1A491BF1CEA20049F342 /* 扩展相关 */ = {
+			isa = PBXGroup;
+			children = (
+				1F5D1A461BF1CE9D0049F342 /* ExtensionDemo.h */,
+				1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */,
+			);
+			path = "扩展相关";
+			sourceTree = "<group>";
+		};
 		1F8B89E71BE2058600D81096 = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +526,7 @@
 				1F8B8AA81BE20F3400D81096 /* BaseNavigationController.m */,
 				1F8B8A261BE2075500D81096 /* YYBaseDemoController.h */,
 				1F8B8A271BE2075500D81096 /* YYBaseDemoController.m */,
+				1FD1DD931BFC623B001AE9BE /* CustomSetting */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -505,6 +536,10 @@
 			children = (
 				1F8B8A471BE2082300D81096 /* YYLibsDemo.h */,
 				1F8B8A481BE2082300D81096 /* YYLibsDemo.m */,
+				1F8769861BFB1FF100253D18 /* QrcodeDemo.h */,
+				1F8769871BFB1FF100253D18 /* QrcodeDemo.m */,
+				1F8769931BFB248100253D18 /* YYQRcodeGenerater.h */,
+				1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */,
 				1FDB55131BEE1DBC0048E1F7 /* 面试相关 */,
 				1FA4A5431BEC3BB20076ECAA /* ScrollSigment滑动选择条 */,
 				1F8B8A2B1BE2082300D81096 /* AlertTable选择 */,
@@ -752,7 +787,7 @@
 				1F8B8AAA1BE20F3C00D81096 /* MainTabBarController.h */,
 				1F8B8AAB1BE20F3C00D81096 /* MainTabBarController.m */,
 			);
-			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		1F8B8AAE1BE2152900D81096 /* Login */ = {
@@ -788,8 +823,7 @@
 				1F8B8AC11BE215AC00D81096 /* HeaderStoryboard.h */,
 				1F8B8AC21BE215AC00D81096 /* HeaderSystem.h */,
 			);
-			name = Header;
-			path = GlobalHeaders;
+			path = Header;
 			sourceTree = "<group>";
 		};
 		1F8B8AC41BE2185F00D81096 /* YYHud */ = {
@@ -811,7 +845,7 @@
 				1F8B8A8C1BE20D1500D81096 /* YYTextView */,
 				1F98C9A01BE4C071002EE116 /* YYBaseHttp */,
 			);
-			name = MyLibrary;
+			path = MyLibrary;
 			sourceTree = "<group>";
 		};
 		1F8B8AD01BE33DC800D81096 /* 本地通知 */ = {
@@ -820,7 +854,7 @@
 				1F8B8ACD1BE33DC400D81096 /* LocalNotificationDemo.h */,
 				1F8B8ACE1BE33DC400D81096 /* LocalNotificationDemo.m */,
 			);
-			name = "本地通知";
+			path = "本地通知";
 			sourceTree = "<group>";
 		};
 		1F8B8AD11BE33DD200D81096 /* SystemDemo */ = {
@@ -828,9 +862,11 @@
 			children = (
 				1F8B8AD21BE360A700D81096 /* SystemDemo.h */,
 				1F8B8AD31BE360A700D81096 /* SystemDemo.m */,
+				1FDB551A1BF62BE40048E1F7 /* 搜索控件相关 */,
+				1F5D1A491BF1CEA20049F342 /* 扩展相关 */,
 				1F8B8AD01BE33DC800D81096 /* 本地通知 */,
 			);
-			name = SystemDemo;
+			path = SystemDemo;
 			sourceTree = "<group>";
 		};
 		1F98C9421BE4B84F002EE116 /* UINavigationItem */ = {
@@ -839,7 +875,7 @@
 				1F98C9431BE4BA64002EE116 /* UINavigationItem+ArrowBackButton.h */,
 				1F98C9441BE4BA64002EE116 /* UINavigationItem+ArrowBackButton.m */,
 			);
-			name = UINavigationItem;
+			path = UINavigationItem;
 			sourceTree = "<group>";
 		};
 		1F98C9511BE4BCDA002EE116 /* MBProgressHUD */ = {
@@ -992,7 +1028,7 @@
 				1F9829C81BE715DC00AF6E3F /* YYUrlCache.h */,
 				1F9829C91BE715DC00AF6E3F /* YYUrlCache.m */,
 			);
-			name = YYBaseHttp;
+			path = YYBaseHttp;
 			sourceTree = "<group>";
 		};
 		1FA4A53A1BEC3B9D0076ECAA /* YYScrollSigment */ = {
@@ -1015,7 +1051,18 @@
 				1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */,
 				1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */,
 			);
-			name = "ScrollSigment滑动选择条";
+			path = "ScrollSigment滑动选择条";
+			sourceTree = "<group>";
+		};
+		1FD1DD931BFC623B001AE9BE /* CustomSetting */ = {
+			isa = PBXGroup;
+			children = (
+				1FD1DD901BFC6221001AE9BE /* UITableView+CustomSetting.h */,
+				1FD1DD911BFC6221001AE9BE /* UITableView+CustomSetting.m */,
+				1FD1DD8D1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.h */,
+				1FD1DD8E1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.m */,
+			);
+			name = CustomSetting;
 			sourceTree = "<group>";
 		};
 		1FDB55131BEE1DBC0048E1F7 /* 面试相关 */ = {
@@ -1024,7 +1071,26 @@
 				1FDB55101BEE1DB80048E1F7 /* InterviewDemo.h */,
 				1FDB55111BEE1DB80048E1F7 /* InterviewDemo.m */,
 			);
-			name = "面试相关";
+			path = "面试相关";
+			sourceTree = "<group>";
+		};
+		1FDB551A1BF62BE40048E1F7 /* 搜索控件相关 */ = {
+			isa = PBXGroup;
+			children = (
+				1FDB55171BF62BD70048E1F7 /* UISearchDemo.h */,
+				1FDB55181BF62BD70048E1F7 /* UISearchDemo.m */,
+				1FDB551E1BF62C0E0048E1F7 /* YYSearchBar */,
+			);
+			path = "搜索控件相关";
+			sourceTree = "<group>";
+		};
+		1FDB551E1BF62C0E0048E1F7 /* YYSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				1FDB551B1BF62C030048E1F7 /* YYSearchBar.h */,
+				1FDB551C1BF62C040048E1F7 /* YYSearchBar.m */,
+			);
+			path = YYSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1175,6 +1241,7 @@
 				1F8B8A671BE2082300D81096 /* YYAlertGridViewDemo.m in Sources */,
 				1F8B8A861BE20C6F00D81096 /* YYTextView.m in Sources */,
 				1F98C98C1BE4BF39002EE116 /* NSObject+Property.m in Sources */,
+				1F8769951BFB248100253D18 /* YYQRcodeGenerater.m in Sources */,
 				1F8B8A6D1BE2082300D81096 /* YYTimeManager.m in Sources */,
 				1F8B8AA21BE20E3100D81096 /* DTTimePeriod.m in Sources */,
 				1F9829C31BE70DFD00AF6E3F /* YYHttpRequestSerializer.m in Sources */,
@@ -1190,15 +1257,18 @@
 				1F98C9691BE4BDB6002EE116 /* UMTrack.m in Sources */,
 				1F4E0D581BE26B4B0099B66D /* AFNetworkReachabilityManager.m in Sources */,
 				1F4E0D591BE26B4B0099B66D /* AFSecurityPolicy.m in Sources */,
+				1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */,
 				1F98C99F1BE4C06B002EE116 /* YYBaseHttp.m in Sources */,
 				1F98C9501BE4BC37002EE116 /* ApplicationManager.m in Sources */,
 				1F8B8AA41BE20E3100D81096 /* DTTimePeriodCollection.m in Sources */,
 				1F4E0D771BE26B6E0099B66D /* UIRefreshControl+AFNetworking.m in Sources */,
 				1F98C98D1BE4BF39002EE116 /* YYFoundation.m in Sources */,
 				1F8B8AAC1BE20F3C00D81096 /* MainTabBarController.m in Sources */,
+				1FD1DD8F1BFC61E1001AE9BE /* UITableViewCell+CustomSetting.m in Sources */,
 				1F8B8A281BE2075500D81096 /* YYBaseDemoController.m in Sources */,
 				1F98C94B1BE4BBAE002EE116 /* ApplicationInfo.m in Sources */,
 				1F4E0D741BE26B6E0099B66D /* UIButton+AFNetworking.m in Sources */,
+				1F5D1A481BF1CE9D0049F342 /* ExtensionDemo.m in Sources */,
 				1F8B8A6B1BE2082300D81096 /* YYLibsDemo.m in Sources */,
 				1F98C99B1BE4BFB8002EE116 /* SSKeychain.m in Sources */,
 				1FA4A5401BEC3B9D0076ECAA /* YYScrollSigment.m in Sources */,
@@ -1223,6 +1293,7 @@
 				1F4E0D751BE26B6E0099B66D /* UIImageView+AFNetworking.m in Sources */,
 				1F8B8AA01BE20E3100D81096 /* DTConstants.m in Sources */,
 				1FA4A5411BEC3B9D0076ECAA /* YYScrollSigmentCell.m in Sources */,
+				1FDB55191BF62BD70048E1F7 /* UISearchDemo.m in Sources */,
 				1F98C9941BE4BF39002EE116 /* UIView+Frame.m in Sources */,
 				1F4E0D561BE26B4B0099B66D /* AFHTTPRequestOperationManager.m in Sources */,
 				1F8B8AC91BE2185F00D81096 /* YYHud.m in Sources */,
@@ -1246,8 +1317,10 @@
 				1F8B8A731BE2082300D81096 /* YYThumbnailView.m in Sources */,
 				1F9829C71BE7101B00AF6E3F /* YYJsonRequestSerializer.m in Sources */,
 				1F4E0D5D1BE26B4B0099B66D /* AFURLSessionManager.m in Sources */,
+				1FDB551D1BF62C040048E1F7 /* YYSearchBar.m in Sources */,
 				1F4E0D571BE26B4B0099B66D /* AFHTTPSessionManager.m in Sources */,
 				1F8B8AB91BE2152900D81096 /* LoginViewController.m in Sources */,
+				1FD1DD921BFC6221001AE9BE /* UITableView+CustomSetting.m in Sources */,
 				1F98C9921BE4BF39002EE116 /* UITableView+Extension.m in Sources */,
 				1F4E0D731BE26B6E0099B66D /* UIAlertView+AFNetworking.m in Sources */,
 				1F8B8A8A1BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.m in Sources */,
@@ -1297,7 +1370,7 @@
 				1F8B89FD1BE2058700D81096 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ../.;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

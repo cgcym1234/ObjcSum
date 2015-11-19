@@ -25,7 +25,7 @@
     int btnNum = 2;
     [self addButtonWithTitle:@"show" action:^(UIButton *btn) {
         [YYAlertGridView showWithTextArry:@[@"中国人明裙子", @"fhasfasjlf",@"1",@"2"]].didClickedBlock = ^(YYAlertGridView *alertTable, NSInteger index) {
-            NSLog(@"didClickedBlock %ld",index);
+            NSLog(@"didClickedBlock %ld",(long)index);
             
         };
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
