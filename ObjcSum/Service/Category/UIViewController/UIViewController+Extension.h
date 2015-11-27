@@ -34,4 +34,7 @@
 - (void)addRightBarButtonItemWithTarget:(id)target sel:(SEL)selector image:(UIImage *)image selectedImage:(UIImage *)selectedImage;
 - (void)addLeftBarButtonItemWithTarget:(id)target sel:(SEL)selector image:(UIImage *)image selectedImage:(UIImage *)selectedImage;
 
+#pragma mark - 导航BarButtonItem文字或者图片与屏幕边界的间隔调整方法
+- (UIButton *)addRightBarButtonItemWithTitle:(NSString *)title action:(SEL)action;
+
 @end

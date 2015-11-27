@@ -122,4 +122,85 @@
     self.navigationItem.rightBarButtonItems = array;
 }
 
+#pragma mark - 导航BarButtonItem文字或者图片与屏幕边界的间隔调整方法
+
+/**
+ 在设置navigationItem的leftBarButtonItem或rightBarButtonItem时，
+ 用CustomView初始化UIBarButtonItem，不论怎么设置CustomView的frame，
+ 添加到导航条上之后总是和屏幕边界有一定的间距（5pix），
+ 如何自由调整这个间距呢？
+ */
+
+//1、不用直接设置rightBartButtonItem而是设置rightBartButtonItems，并且第一个item设置为一个占位。
+- (UIButton *)addRightBarButtonItemWithTitle:(NSString *)title action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGSize size = [title sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]}];
+    
+    //! 这里需要根据内容大小来调整宽度
+    button.frame = CGRectMake(0, 0, size.width <= 10 ? 70 : size.width + 10, 44);
+    button.titleLabel.textColor = [UIColor whiteColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:16];
+    button.titleLabel.textAlignment = NSTextAlignmentRight;
+    [button setTitle:title forState:UIControlStateNormal];
+    
+    /**
+     *  width为负数时，相当于btn向右移动width数值个像素，由于按钮本身和边界间距为5pix，所以width设为-15时，间距正好调整
+     *  为10；width为正数时，正好相反，相当于往左移动width数值个像素
+     */
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = -15;
+    
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer, backItem];
+    return button;
+}
+
+/**
+ *  2、如果是只有图片，那么通过设置
+ [button setImageEdgeInsets:UIEdgeInsetsMake(0, -15, 0, -15)];这样也可以调整
+ */
+- (UIButton *)addRightBarButtonItemWithImage:(NSString *)imageName action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:imageName];
+    button.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    
+    // 这里需要注意：由于是想让图片右移，所以left需要设置为正，right需要设置为负。正在是相反的。
+    // 让按钮图片右移15
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 15, 0, -15)];
+    
+    [button setImage:image forState:UIControlStateNormal];
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    button.titleLabel.font = [UIFont systemFontOfSize:16];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    return button;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
