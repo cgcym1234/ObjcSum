@@ -103,6 +103,23 @@
  */
 - (id)yy_deepCopyWithArchiver:(Class)archiver unarchiver:(Class)unarchiver;
 
+/**
+ *  通过运行时机制取得对象的属性(property)，并存入到数组中
+ */
+- (NSArray *)yy_arrayWithProperties;
++ (NSArray *)yy_arrayWithPropertiesFromClass:(Class)clazz;
+
+/**
+ *  把一个实体对象，封装成字典Dictionary,只支持简单类型
+ key为property名字,value为该property的取值
+ */
+- (NSDictionary *)yy_dictionaryWithProperties;
+
+/**
+ *  根据类名来实例化对象
+ */
++ (id)yy_instanceFromClassName:(NSString *)clsName;
+
 #pragma mark - KVO
 
 /**

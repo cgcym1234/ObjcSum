@@ -38,10 +38,10 @@
     [self.tabBar setTranslucent:NO];
     self.delegate = self;
     
-    LoginModel *user = [LoginManager getLatestUserInfo];
-    if (!user.sessionId) {
-        [LoginManager gotoLogin];
-    }
+//    LoginModel *user = [LoginManager getLatestUserInfo];
+//    if (!user.sessionId) {
+//        [LoginManager gotoLogin];
+//    }
 //    [self composeMainViewControllers];
     
     

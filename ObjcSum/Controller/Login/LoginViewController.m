@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-//#import "HttpManager.h"
+#import "HttpManager.h"
 #import "LoginManager.h"
 #import "YYHud.h"
 
@@ -149,20 +149,20 @@ static NSString * const TipNoPassword           = @"请输入密码";
         return;
     }
     
-//    [YYHud show:@"登录中"];
-//    
-//    __weak typeof(self) weakSelf = self;
-//    
-//    [HttpManager loginWithLoginName:username password:password success:^(LoginModel *loginModel) {
-//        [LoginManager loginSuccessWithUserInfo:loginModel];
-//        [YYHud dismiss];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:Notify_LoginSuccess object:nil];
-//        if (weakSelf.completionBlock) {
-//            weakSelf.completionBlock(weakSelf, YES);
-//        }
-//    } failure:^(NSString *errorString) {
-//        [YYHud showTip:errorString];
-//    }];
+    [YYHud show:@"登录中"];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [HttpManager loginWithLoginName:username password:password success:^(LoginModel *loginModel) {
+        [LoginManager loginSuccessWithUserInfo:loginModel];
+        [YYHud dismiss];
+        [[NSNotificationCenter defaultCenter] postNotificationName:Notify_LoginSuccess object:nil];
+        if (weakSelf.completionBlock) {
+            weakSelf.completionBlock(weakSelf, YES);
+        }
+    } failure:^(NSString *errorString) {
+        [YYHud showTip:errorString];
+    }];
 }
 
 #pragma mark - Public

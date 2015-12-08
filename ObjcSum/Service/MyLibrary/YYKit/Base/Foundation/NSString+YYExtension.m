@@ -8,6 +8,8 @@
 
 #import "NSString+YYExtension.h"
 #import "NSData+YYExtension.h"
+#import "NSNumber+YYExtension.h"
+#import "NSDate+YYExtension.h"
 
 @implementation NSString (YYExtension)
 
@@ -21,57 +23,56 @@
  Returns a lowercase NSString for md2 hash.
  */
 - (NSString *)yy_md2String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] md2String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] md2String];
 }
 
 /**
  Returns a lowercase NSString for md4 hash.
  */
 - (NSString *)yy_md4String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] md4String];
-
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] md4String];
 }
 
 /**
  Returns a lowercase NSString for md5 hash.
  */
 - (NSString *)yy_md5String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] md5String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] md5String];
 }
 
 /**
  Returns a lowercase NSString for sha1 hash.
  */
 - (NSString *)yy_sha1String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] sha1String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] sha1String];
 }
 
 /**
  Returns a lowercase NSString for sha224 hash.
  */
 - (NSString *)yy_sha224String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] sha224String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] sha224String];
 }
 
 /**
  Returns a lowercase NSString for sha256 hash.
  */
 - (NSString *)yy_sha256String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] sha256String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] sha256String];
 }
 
 /**
  Returns a lowercase NSString for sha384 hash.
  */
 - (NSString *)yy_sha384String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] sha384String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] sha384String];
 }
 
 /**
  Returns a lowercase NSString for sha512 hash.
  */
 - (NSString *)yy_sha512String {
-    [[self dataUsingEncoding:NSUTF8StringEncoding] sha512String];
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] sha512String];
 }
 
 /**
@@ -79,7 +80,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacMD5StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacMD5StringWithKey:key];
 }
 
@@ -88,7 +89,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacSHA1StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacSHA1StringWithKey:key];
 }
 
@@ -97,7 +98,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacSHA224StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacSHA224StringWithKey:key];
 }
 
@@ -106,7 +107,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacSHA256StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacSHA256StringWithKey:key];
 }
 
@@ -115,7 +116,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacSHA384StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacSHA384StringWithKey:key];
 }
 
@@ -124,7 +125,7 @@
  @param key The hmac key.
  */
 - (NSString *)yy_hmacSHA512StringWithKey:(NSString *)key {
-    [[self dataUsingEncoding:NSUTF8StringEncoding]
+    return [[self dataUsingEncoding:NSUTF8StringEncoding]
      hmacSHA512StringWithKey:key];
 }
 
@@ -410,6 +411,95 @@
     return modifiedString;
 }
 
+#pragma mark - Date
+
+/**日期进行下面4种情况的转换
+ *  今天：  19：00
+ *  昨天：  昨天 19：00
+ *  本周：  周二 19：00
+ *  其他：  2014年4月3日 19：00
+ */
++ (NSString *)yy_stringFromDate:(NSDate *)date {
+    if (!date) {
+        return nil;
+    }
+    NSString *fmt = @"yyyy年M月d日 HH:mm";;
+    NSDate *cur = [NSDate date];
+    
+    NSInteger curYear = [cur year];
+    NSInteger curWeekOfYear = [cur weekOfYear];
+    //NSInteger curWeekday = [cur weekday];
+    NSInteger curDayOfYear = [cur dayOfYear];
+    
+    NSInteger selfYear = [date year];
+    NSInteger selfWeekOfYear = [date weekOfYear];
+    NSInteger selfWeekday = [date weekday];
+    NSInteger selfDayOfYear = [date dayOfYear];
+    
+    
+    if (selfYear == curYear) {
+        //本周
+        if (selfWeekOfYear == curWeekOfYear) {
+            //今天
+            if (selfDayOfYear == curDayOfYear) {
+                fmt = @"HH:mm";
+            } else if (selfDayOfYear == curDayOfYear - 1) {//昨天
+                fmt = @"昨天 HH:mm";
+            } else {
+                fmt = [[self yy_stringFromWeekday:selfWeekday] stringByAppendingString:@" HH:mm"];
+            }
+        }
+    }
+    
+    return [date yy_stringWithFormat:fmt];
+}
+
+/** 数字1~7转换为周日~周六,否则返回未知
+ *  1:周日
+ *  2:周一
+    ...
+ */
++ (NSString *)yy_stringFromWeekday:(NSInteger)weekday {
+    switch (weekday) {
+        case 1:
+            return @"周日";
+        case 2:
+            return @"周一";
+        case 3:
+            return @"周二";
+        case 4:
+            return @"周三";
+        case 5:
+            return @"周四";
+        case 6:
+            return @"周五";
+        case 7:
+            return @"周六";
+        default:
+            return @"未知";
+    }
+}
+
+#pragma mark - NSString转换成二维坐标，格式@"123,456"
+
+/**
+ *  转换成合法的二维坐标，格式@"123,456"
+ *
+ *  @param sep 分隔符,比如上面是,
+ *
+ *  @return 无法转换或转换结果不合法则返回kCLLocationCoordinate2DInvalid
+ */
+- (CLLocationCoordinate2D)yy_coordinate2DFromSelfWithSep:(NSString *)sep {
+    NSArray *arrLocation = [self componentsSeparatedByString:sep];
+    if (arrLocation.count == 2) {
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([arrLocation[0] doubleValue], [arrLocation[1] doubleValue]);
+        if (CLLocationCoordinate2DIsValid(coordinate)) {
+            return coordinate;
+        }
+    }
+    return kCLLocationCoordinate2DInvalid;
+}
+
 #pragma mark - NSNumber Compatible
 ///=============================================================================
 /// @name NSNumber Compatible
@@ -537,6 +627,24 @@
 }
 
 /**
+ *  截取字符串，防止表情字符被中间截断
+ */
+- (NSString *)yy_substringWithMaxLength:(NSInteger)maxLength {
+    if (self.length > maxLength) {
+        NSData *data = [self dataUsingEncoding:NSUTF32StringEncoding];
+        NSUInteger length = data.length/4;
+        if(length > maxLength ){
+            data = [data subdataWithRange:NSMakeRange(0, maxLength * 4)];
+            NSString *newStr = [[NSString alloc] initWithData:data encoding:NSUTF32StringEncoding];
+            return newStr;
+        }
+    }
+    
+    return self;
+
+}
+
+/**
  Add scale modifier to the file name (without path extension),
  From @"name" to @"name@2x".
  
@@ -651,8 +759,7 @@
  @return Returns an `NSNumber` if parse succeed, or nil if an error occurs.
  */
 - (NSNumber *)yy_numberValue {
-    return @(1);
-//    return [NSNumber numberWithString:self];
+    return [NSNumber yy_numberWithString:self];
 }
 
 /**
@@ -689,7 +796,7 @@
 + (NSString *)yy_stringNamed:(NSString *)name {
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@""];
     NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    if (!str) {
+    if (!string) {
         path = [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
         string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
     }

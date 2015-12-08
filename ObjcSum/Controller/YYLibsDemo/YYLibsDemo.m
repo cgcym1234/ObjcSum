@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArr = @[
+                   [[LibDemoInfo alloc] initWithTitle:@"LoginDemo" desc:@"登录demo" controllerName:@"LoginDemo"],
+                   
                    [[LibDemoInfo alloc] initWithTitle:@"YYKeyValueStoreDemo" desc:@"KV存储库" controllerName:@"SqlliteDemo"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"YYScrollSigmentDemo" desc:@"ScrollSigment滑动选择条" controllerName:@"YYScrollSigmentDemo"],

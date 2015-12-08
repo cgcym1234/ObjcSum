@@ -42,6 +42,8 @@ typedef NS_ENUM(NSUInteger, YYHudMaskType) {
 /*
  显示到window上，并且只有一个YYHud实例
  */
++ (YYHud *)showSpinner;
+
 + (YYHud *)show:(NSString *)msg;
 + (YYHud *)show:(NSString *)msg maskType:(YYHudMaskType)maskType;
 
@@ -56,6 +58,8 @@ typedef NS_ENUM(NSUInteger, YYHudMaskType) {
 
 
 #pragma mark - Pulic
+
+- (YYHud *)showSpinner;
 
 - (YYHud *)show:(NSString *)msg;
 

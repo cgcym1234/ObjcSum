@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
 /**
  提供hash,加密,编码等扩展方法
  Provide hash, encrypt, encode and some common method for 'NSString'.
@@ -246,6 +246,35 @@ Returns a lowercase NSString for md4 hash.
  */
 - (NSString *)yy_stringWithNoEmoji;
 
+#pragma mark - Date
+
+/**日期进行下面4种情况的转换
+ *  今天：  19：00
+ *  昨天：  昨天 19：00
+ *  本周：  周二 19：00
+ *  其他：  2014年4月3日 19：00
+ */
++ (NSString *)yy_stringFromDate:(NSDate *)date;
+
+/** 数字1~7转换为周日~周六,否则返回未知
+ *  1:周日
+ *  2:周一
+ ...
+ */
++ (NSString *)yy_stringFromWeekday:(NSInteger)weekday;
+
+#pragma mark - NSString转换成二维坐标，格式@"123,456"
+
+/**
+ *  转换成合法的二维坐标，格式@"123,456"
+ *
+ *  @param sep 分隔符,比如上面是,
+ *
+ *  @return 无法转换或转换结果不合法则返回kCLLocationCoordinate2DInvalid
+ */
+- (CLLocationCoordinate2D)yy_coordinate2DFromSelfWithSep:(NSString *)sep;
+
+
 #pragma mark - NSNumber Compatible
 ///=============================================================================
 /// @name NSNumber Compatible
@@ -310,6 +339,12 @@ Returns a lowercase NSString for md4 hash.
  @return the trimmed string.
  */
 - (NSString *)yy_stringByTrim;
+
+/**
+ *  截取字符串，防止表情字符被中间截断
+ */
+- (NSString *)yy_substringWithMaxLength:(NSInteger)maxLength;
+
 
 /**
  Add scale modifier to the file name (without path extension),

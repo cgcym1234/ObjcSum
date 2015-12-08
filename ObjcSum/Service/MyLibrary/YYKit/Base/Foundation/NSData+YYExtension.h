@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSData (YYExtension)
 
 /**
+ 提供hash,加密解密,编码解码,压缩解压等扩展方法
  Provide hash, encrypt, encode and some common method for `NSData`.
  */
-@interface NSData (YYAdd)
+@interface NSData (YYExtension)
 
 #pragma mark - Hash
 ///=============================================================================

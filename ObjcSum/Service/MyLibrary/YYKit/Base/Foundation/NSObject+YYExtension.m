@@ -208,6 +208,61 @@ static const int YY_KeyBlock;
 
 }
 
+/**
+ *  通过运行时机制取得对象的属性(property)，并存入到数组中
+ */
+- (NSArray *)yy_arrayWithProperties {
+    return [NSObject yy_arrayWithPropertiesFromClass:self.class];
+}
+
++ (NSArray *)yy_arrayWithPropertiesFromClass:(Class)clazz {
+    u_int count;
+    objc_property_t *properties  = class_copyPropertyList(clazz, &count);
+    NSMutableArray *propertyArray = [NSMutableArray arrayWithCapacity:count];
+    
+    for (int i = 0; i < count ; i++)
+    {
+        const char* propertyName = property_getName(properties[i]);
+        [propertyArray addObject: [NSString  stringWithUTF8String: propertyName]];
+    }
+    
+    free(properties);
+    
+    return propertyArray;
+}
+
+/**
+ *  把一个实体对象，封装成字典Dictionary
+ key为property名字,value为该property的取值
+ */
+- (NSDictionary *)yy_dictionaryWithProperties {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    NSArray *propertyList = [self yy_arrayWithProperties];
+    
+    [propertyList enumerateObjectsUsingBlock:^(NSString *propertyName, NSUInteger idx, BOOL *stop) {
+        id value = [self valueForKey:propertyName];
+        if (value == nil) {
+            value = [NSNull null];
+        } else {
+            [dict setObject:value forKey:propertyName];
+        }
+        
+    }];
+    
+    return dict;
+}
+
+/**
+ *  根据类名来实例化对象
+ */
++ (id)yy_instanceFromClassName:(NSString *)clsName {
+    Class cls = NSClassFromString(clsName);
+    if (cls) {
+        return [[cls alloc] init];
+    }
+    return nil;
+}
+
 #pragma mark - KVO
 
 /**

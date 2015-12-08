@@ -13,6 +13,15 @@
 #ifndef YYKitMacro_h
 #define YYKitMacro_h
 
+#pragma mark - 画1像素的线
+
+#define YY_OnePixelLine           (1 / [UIScreen mainScreen].scale)
+
+/**
+ *  画一像素的线需要调整的偏移量,否则可能会因为失真变成2px
+ */
+#define YY_OnePixelLineOffset   ((1 / [UIScreen mainScreen].scale) / 2)
+
 #pragma mark - C相关
 
 #ifdef __cplusplus

@@ -19,14 +19,13 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageContainerTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageContainerHeight;
-
-
-
+@property (nonatomic, assign) BOOL isShowSpiner;
 
 @property (nonatomic, strong) NSTimer *fadeOutTimer;
 
 //记录当前在多少界面展示
 @property (nonatomic, assign) NSUInteger activityCount;
+
 
 @end
 
@@ -47,6 +46,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
     self.hudContainer.layer.cornerRadius = YYHudRadius;
     self.allowUserInteraction = YES;
     self.defaultMaskType = YYHudMaskTypeNone;
+    _hudBackgroundColor = self.hudContainer.backgroundColor;
     return self;
 }
 
@@ -63,10 +63,12 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 - (void)setHudBackgroundColor:(UIColor *)hudBackgroundColor {
+    _hudBackgroundColor = hudBackgroundColor;
     _hudContainer.backgroundColor = hudBackgroundColor;
 }
 
 - (void)setForegroundColor:(UIColor *)foregroundColor {
+    _foregroundColor = foregroundColor;
     _stringLabel.textColor = foregroundColor;
 }
 
@@ -85,7 +87,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 #pragma mark Show
-- (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText {
+- (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText isSpiner:(BOOL)isSpiner {
     [self setTempMaskType:maskType];
     self.userInteractionEnabled = !_allowUserInteraction;
     
@@ -113,6 +115,9 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
         //正中间
         _imageContainerTop.constant = str.length > 0 ? YYHudImageContainerCenterTopWithStr : YYHudImageContainerCenterTopDefault;
         _imageContainerHeight.constant = 50;
+        
+        _progressView.activityIndicatorViewStyle = isSpiner ? UIActivityIndicatorViewStyleGray : UIActivityIndicatorViewStyleWhiteLarge;
+        _hudContainer.backgroundColor = isSpiner ? [UIColor clearColor] : _hudBackgroundColor;
     }
     
     
@@ -121,7 +126,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
         if (superView) {
             [superView addSubview:self];
         } else {
-            #pragma mark - 找到当前显示的window
+#pragma mark - 找到当前显示的window
             NSEnumerator *frontToBackWindows = [[UIApplication sharedApplication].windows reverseObjectEnumerator];
             for (UIWindow *window in frontToBackWindows) {
                 BOOL windowOnMainScreen = window.screen == [UIScreen mainScreen];
@@ -149,8 +154,12 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
     return self;
 }
 
+- (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText {
+    return [self showInView:nil image:image str:str duration:duration maskType:maskType isText:isText isSpiner:NO];
+}
+
 - (YYHud *)showImage:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType {
-    return [self showInView:nil image:image str:str duration:duration maskType:maskType isText:NO];
+    return [self showInView:nil image:image str:str duration:duration maskType:maskType isText:NO isSpiner:NO];
 }
 
 - (YYHud *)show:(NSString *)msg {
@@ -158,7 +167,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 - (YYHud *)showTip:(NSString *)msg duration:(NSTimeInterval)duration {
-    return [self showInView:nil image:nil str:msg duration:duration maskType:YYHudMaskTypeNone isText:YES];
+    return [self showInView:nil image:nil str:msg duration:duration maskType:YYHudMaskTypeNone isText:YES isSpiner:NO];
 }
 
 - (YYHud *)showSucess:(NSString *)msg {
@@ -167,6 +176,10 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 
 - (YYHud *)showError:(NSString *)msg {
     return [self showImage:[UIImage imageNamed:@"icon-error"] str:msg duration:YYHudDuration maskType:_defaultMaskType];
+}
+
+- (YYHud *)showSpinner {
+    return [self showInView:nil image:nil str:nil duration:DISPATCH_TIME_FOREVER maskType:_defaultMaskType isText:NO isSpiner:YES];
 }
 
 #pragma mark - Internal show & hide operations
@@ -204,12 +217,17 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 /*
  显示到window上，并且只有一个YYProgressHUD实例
  */
+
++ (YYHud *)showSpinner {
+    return [[YYHud sharedInstance] showSpinner];
+}
+
 + (YYHud *)show:(NSString *)msg {
     return [[YYHud sharedInstance] show:msg];
 }
 
 + (YYHud *)show:(NSString *)msg maskType:(YYHudMaskType)maskType {
-   return [[YYHud sharedInstance] showInView:nil image:nil str:msg duration:DISPATCH_TIME_FOREVER maskType:maskType isText:NO];
+    return [[YYHud sharedInstance] showInView:nil image:nil str:msg duration:DISPATCH_TIME_FOREVER maskType:maskType isText:NO];
 }
 
 + (YYHud *)showTip:(NSString *)msg {

@@ -7,9 +7,7 @@
 //
 
 #import "LoginManager.h"
-#import "AppDelegate.h"
 #import "LoginViewController.h"
-//#import "HttpManager.h"
 
 @interface LoginManager ()
 
@@ -33,6 +31,18 @@
 - (void)setLoginModel:(LoginModel *)loginModel {
     _loginModel = loginModel;
     [LoginModel update:loginModel];
+    [LoginManager setCookieName:@"sessionId" value:loginModel.sessionId];
+}
+
++ (void)setCookieName:(NSString *)name value:(NSString *)value {
+    NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+    
+    [cookieProperties setObject:name forKey:NSHTTPCookieName];
+    [cookieProperties setObject:value forKey:NSHTTPCookieValue];
+    [cookieProperties setObject:@".meilele.com" forKey:NSHTTPCookieDomain];
+    [cookieProperties setObject:@"/" forKey:NSHTTPCookiePath];
+    NSHTTPCookie *mll_CIDCookie = [[NSHTTPCookie alloc] initWithProperties:cookieProperties];
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:mll_CIDCookie];
 }
 
 #pragma mark - Public

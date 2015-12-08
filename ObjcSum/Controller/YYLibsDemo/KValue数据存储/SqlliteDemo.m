@@ -39,18 +39,18 @@
     NSString *filePath = [doc stringByAppendingPathComponent:@"test.sqlite"];
     const char *filePathC = filePath.UTF8String;
     
-    sqlite3 *db = dbGetHandleWithPath(filePathC);
+//    sqlite3 *db = dbGetHandleWithPath(filePathC);
     
     const char* createTableSQL =
     "CREATE TABLE if not exists TESTTABLE (int_col INT, float_col REAL, string_col TEXT)";
-    dbExecSql(db, createTableSQL);
+//    dbExecSql(db, createTableSQL);
     
     char *sqls[4] = {0};
     sqls[0] = "INSERT INTO TESTTABLE VALUES(1,1,1)";
     sqls[1] = "INSERT INTO TESTTABLE VALUES(1,2,2)";
     sqls[2] = "INSERT INTO TESTTABLE VALUES(1,2,3)";
     
-    dbExecSqls(db, sqls);
+//    dbExecSqls(db, sqls);
     
     
 //    const char* dropSQL = "DROP TABLE TESTTABLE";
@@ -222,127 +222,127 @@ void doTest()
     return _db;
 }
 
-#pragma mark - 简单封装
-
-int deClose(sqlite3 *db) {
-    if (db) {
-        return sqlite3_close(db);
-    }
-    return DbError;
-}
-
-/**
- *  获取数据库句柄
- */
-sqlite3 * dbGetHandleWithPath(const char *dbPath) {
-    sqlite3 *db = NULL;
-    
-    //1.打开数据库文件（如果数据库文件不存在，那么该函数会自动创建数据库文件）
-    if (sqlite3_open(dbPath, &db) != SQLITE_OK) {
-        //需要关闭，因为即使open失败。db也不为空
-        deClose(db);
-        db = NULL;
-        printf("open db error, path:[%s]\n", dbPath);
-    }
-    return db;
-}
-
-/**
- *  将sql文本转换成一个准备语句（prepared statement）对象，同时返回这个对象的指针
- */
-sqlite3_stmt * dbPrepareSql(sqlite3 *db, const char *sql) {
-    sqlite3_stmt *stmt = NULL;
-    if (!db || !sql) {
-        goto error;
-    }
-    
-    int len = (int)strlen(sql);
-//    int result = 0;
-    
-    /**
-     *  将sql文本转换成一个准备语句（prepared statement）对象，同时返回这个对象的指针。
-     它实际上并不执行（evaluate）这个SQL语句，它仅仅为执行准备这个sql语句
-     */
-    if (sqlite3_prepare_v2(db, sql, len, &stmt, NULL) != SQLITE_OK) {
-        goto error;
-    }
-    
-    return stmt;
-    
-error:
-    if (stmt) {
-        sqlite3_finalize(stmt);
-    }
-    
-    printf("open db error, path:[%s]\n", sqlite3_errmsg(db));
-    return NULL;
-}
-
-/**
- *  执行一条sql
- */
-int dbExecSql(sqlite3 *db, const char *sql) {
-    sqlite3_stmt *stmt = dbPrepareSql(db, sql);
-    if (!stmt) {
-        goto error;
-    }
-    
-    /**
-     *  通过sqlite3_step命令执行sql语句。对于DDL和DML语句而言，sqlite3_step执行正确的返回值只有SQLITE_DONE
-     对于SELECT查询而言，如果有数据返回SQLITE_ROW，当到达结果集末尾时则返回SQLITE_DONE
-     */
-    if (sqlite3_step(stmt) != SQLITE_DONE) {
-        goto error;
-    }
-    
-    //释放资源。
-    sqlite3_finalize(stmt);
-    return DbScucess;
-    
-error:
-    if (stmt) {
-        sqlite3_finalize(stmt);
-    }
-    printf("open db error, path:[%s]\n", sqlite3_errmsg(db));
-    return DbError;
-}
-
-/**
- *  开启一个事务执行多条sql
- */
-int dbExecSqls(sqlite3 *db, char **sqls) {
-    sqlite3_stmt *stmt = NULL;
-    
-    /**
-     *  显式的开启一个事务。
-     */
-    const char* beginSQL = "BEGIN";
-    assert(dbExecSql(db, beginSQL) == DbScucess);
-    
-    
-    char **iterator = sqls;
-    while (*iterator) {
-        stmt = dbPrepareSql(db, *iterator);
-        if (dbExecSql(db, *iterator) == DbError) {
-            //任何一条sql执行失败就回滚
-            assert(dbExecSql(db, "ROLLBACK") == DbScucess);
-            goto error;
-        }
-        iterator++;
-    }
-    
-    /**
-     *  提交事务。
-     */
-    const char* commitSQL = "COMMIT";
-    assert(dbExecSql(db, commitSQL) == DbScucess);
-    
-error:
-    if (stmt) {
-        sqlite3_finalize(stmt);
-    }
-    return DbError;
-}
+//#pragma mark - 简单封装
+//
+//int deClose(sqlite3 *db) {
+//    if (db) {
+//        return sqlite3_close(db);
+//    }
+//    return DbError;
+//}
+//
+///**
+// *  获取数据库句柄
+// */
+//sqlite3 * dbGetHandleWithPath(const char *dbPath) {
+//    sqlite3 *db = NULL;
+//    
+//    //1.打开数据库文件（如果数据库文件不存在，那么该函数会自动创建数据库文件）
+//    if (sqlite3_open(dbPath, &db) != SQLITE_OK) {
+//        //需要关闭，因为即使open失败。db也不为空
+//        deClose(db);
+//        db = NULL;
+//        printf("open db error, path:[%s]\n", dbPath);
+//    }
+//    return db;
+//}
+//
+///**
+// *  将sql文本转换成一个准备语句（prepared statement）对象，同时返回这个对象的指针
+// */
+//sqlite3_stmt * dbPrepareSql(sqlite3 *db, const char *sql) {
+//    sqlite3_stmt *stmt = NULL;
+//    if (!db || !sql) {
+//        goto error;
+//    }
+//    
+//    int len = (int)strlen(sql);
+////    int result = 0;
+//    
+//    /**
+//     *  将sql文本转换成一个准备语句（prepared statement）对象，同时返回这个对象的指针。
+//     它实际上并不执行（evaluate）这个SQL语句，它仅仅为执行准备这个sql语句
+//     */
+//    if (sqlite3_prepare_v2(db, sql, len, &stmt, NULL) != SQLITE_OK) {
+//        goto error;
+//    }
+//    
+//    return stmt;
+//    
+//error:
+//    if (stmt) {
+//        sqlite3_finalize(stmt);
+//    }
+//    
+//    printf("open db error, path:[%s]\n", sqlite3_errmsg(db));
+//    return NULL;
+//}
+//
+///**
+// *  执行一条sql
+// */
+//int dbExecSql(sqlite3 *db, const char *sql) {
+//    sqlite3_stmt *stmt = dbPrepareSql(db, sql);
+//    if (!stmt) {
+//        goto error;
+//    }
+//    
+//    /**
+//     *  通过sqlite3_step命令执行sql语句。对于DDL和DML语句而言，sqlite3_step执行正确的返回值只有SQLITE_DONE
+//     对于SELECT查询而言，如果有数据返回SQLITE_ROW，当到达结果集末尾时则返回SQLITE_DONE
+//     */
+//    if (sqlite3_step(stmt) != SQLITE_DONE) {
+//        goto error;
+//    }
+//    
+//    //释放资源。
+//    sqlite3_finalize(stmt);
+//    return DbScucess;
+//    
+//error:
+//    if (stmt) {
+//        sqlite3_finalize(stmt);
+//    }
+//    printf("open db error, path:[%s]\n", sqlite3_errmsg(db));
+//    return DbError;
+//}
+//
+///**
+// *  开启一个事务执行多条sql
+// */
+//int dbExecSqls(sqlite3 *db, char **sqls) {
+//    sqlite3_stmt *stmt = NULL;
+//    
+//    /**
+//     *  显式的开启一个事务。
+//     */
+//    const char* beginSQL = "BEGIN";
+//    assert(dbExecSql(db, beginSQL) == DbScucess);
+//    
+//    
+//    char **iterator = sqls;
+//    while (*iterator) {
+//        stmt = dbPrepareSql(db, *iterator);
+//        if (dbExecSql(db, *iterator) == DbError) {
+//            //任何一条sql执行失败就回滚
+//            assert(dbExecSql(db, "ROLLBACK") == DbScucess);
+//            goto error;
+//        }
+//        iterator++;
+//    }
+//    
+//    /**
+//     *  提交事务。
+//     */
+//    const char* commitSQL = "COMMIT";
+//    assert(dbExecSql(db, commitSQL) == DbScucess);
+//    
+//error:
+//    if (stmt) {
+//        sqlite3_finalize(stmt);
+//    }
+//    return DbError;
+//}
 
 
 
