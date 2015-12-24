@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+//数据类型
+typedef NS_ENUM(NSUInteger, NavigationControllerBarThemeType) {
+    NavigationControllerBarThemeTypeWhite,//白色主题
+    NavigationControllerBarThemeTypeGreen,//绿色主题
+};
+
 @interface UIViewController (Extension)
 
 #pragma mark - 添加一个button
@@ -36,5 +42,9 @@
 
 #pragma mark - 导航BarButtonItem文字或者图片与屏幕边界的间隔调整方法
 - (UIButton *)addRightBarButtonItemWithTitle:(NSString *)title action:(SEL)action;
+
+#pragma mark - 设置导航条主题
+@property (nonatomic, assign) NavigationControllerBarThemeType barThemeType;
+- (void)setNavagationBarTheme:(NavigationControllerBarThemeType)type;
 
 @end

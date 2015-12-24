@@ -7,6 +7,8 @@
 //
 
 #import "MVVMDemo.h"
+#import "FastRecordController.h"
+#import "UIViewController+Extension.h"
 
 @interface MVVMDemo ()
 
@@ -16,7 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    __weak typeof(self) weakSelf = self;
+    if (weakSelf) {
+        
+    }
+    int btnNum = 2;
+    [self addButtonWithTitle:@"随手记" action:^(UIButton *btn) {
+        [FastRecordController pushFromViewController:weakSelf];
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
 }
 
 - (void)didReceiveMemoryWarning {

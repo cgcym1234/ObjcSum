@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="FastRecordModel" representedClassName="FastRecordModel" syncable="YES">
+        <attribute name="clockDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="customerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordDate" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="recordImages" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="recordText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordVoiceDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="recordVoicePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FastRecordModel" positionX="-63" positionY="-18" width="128" height="195"/>
+    </elements>
+</model>

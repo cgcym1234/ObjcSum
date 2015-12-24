@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+Extension.h"
-
+#import <objc/runtime.h>
 @interface YYButton : UIButton
 @property (nonatomic, copy)id object;
 @end
@@ -15,6 +15,7 @@
 @implementation YYButton
 @end;
 
+static char KeyBarThemeType;
 @implementation UIViewController (Extension)
 
 - (void)__btnClick:(YYButton *)btn {
@@ -181,7 +182,46 @@
 
 
 
+#pragma mark - 设置导航条主题
+- (NavigationControllerBarThemeType)barThemeType {
+    return [objc_getAssociatedObject(self, &KeyBarThemeType) integerValue];
+}
 
+- (void)setBarThemeType:(NavigationControllerBarThemeType)barThemeType {
+    objc_setAssociatedObject(self, &KeyBarThemeType, @(barThemeType), OBJC_ASSOCIATION_ASSIGN);
+}
+- (void)setNavagationBarTheme:(NavigationControllerBarThemeType)type {
+    UIColor *barTintColor;
+    UIColor *tintColor;
+    UIColor *titleColor;
+    UIColor *leftBarbartemColor;
+    switch (type) {
+        case NavigationControllerBarThemeTypeWhite:
+            barTintColor = [UIColor whiteColor];
+            tintColor = [UIColor blackColor];
+            titleColor = [UIColor blackColor];
+            leftBarbartemColor = [UIColor blackColor];
+            break;
+        case NavigationControllerBarThemeTypeGreen:
+            barTintColor = [UIColor colorWithRed:49.f/255.f green:189.f/255.f blue:198.f/255.f alpha:0.8f];
+            tintColor = [UIColor whiteColor];
+            titleColor = [UIColor whiteColor];
+            leftBarbartemColor = [UIColor whiteColor];
+            break;
+    }
+    
+    self.barThemeType = type;
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        [(UINavigationController *)self navigationBar].barTintColor = barTintColor;
+        [(UINavigationController *)self navigationBar].tintColor = tintColor;
+        [(UINavigationController *)self navigationBar].titleTextAttributes = @{NSForegroundColorAttributeName:titleColor};
+        return;
+    }
+    self.navigationController.navigationBar.barTintColor = barTintColor;
+    self.navigationController.navigationBar.tintColor = tintColor;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:titleColor};
+    self.navigationItem.leftBarButtonItem.tintColor = leftBarbartemColor;
+}
 
 
 

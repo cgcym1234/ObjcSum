@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArr = @[
+                   [[LibDemoInfo alloc] initWithTitle:@"MVVMDemo" desc:@"随手记MVVM版" controllerName:@"MVVMDemo"],
+                   
                    [[LibDemoInfo alloc] initWithTitle:@"YYCacheTest" desc:@"YYCache性能测试" controllerName:@"YYCacheTest"],
                    
                    
