@@ -80,6 +80,21 @@ typedef NS_ENUM(NSUInteger, YYHudMaskType) {
  */
 - (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText;
 
+/**
+ *  显示hud
+ *
+ *  @param superView 显示到哪个view上，superView=nil,会添加到当前window上
+ *  @param image     显示图片, 36*36 pt png
+ *  @param str       显示内容
+ *  @param duration  显示时间，然后会自动消失，单位：秒，duration=DISPATCH_TIME_FOREVER表示不消失
+ *  @param maskType  蒙版类型
+ *  @param isText    是否只显示文字
+ *  @param isSpiner  是否只显示转圈的小菊花
+ *
+ *  @return YYHud对象
+ */
+- (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText isSpiner:(BOOL)isSpiner;
+
 - (void)dismiss;
 
 @end

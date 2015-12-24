@@ -61,33 +61,22 @@
 
 - (void)envInit {
     
-    _pagingEnabled = NO;
-    _itemSizeAuto = YES;
-    
-    _itemWith = 0;
     _indicatorViewHeight = 2;
-    _indicatorViewEnable = YES;
-    
-    _bottomLineEnable = YES;
-    _bottomLineColor = [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1];
-    
     [self addSubview:self.collectionView];
-    [_collectionView addSubview:self.indicatorView];
-    self.backgroundColor = [UIColor whiteColor];
-    self.collectionView.backgroundColor = [UIColor clearColor];
     
     _cellIdentifier = CellIdentifierDefault;
+    
     [_collectionView registerNib:[UINib nibWithNibName:_cellIdentifier bundle:nil] forCellWithReuseIdentifier:_cellIdentifier];
     
-    
+    _itemSizeAuto = YES;
 }
 
 - (void)layoutSubviews {
-//    CGRect frame = self.frame;
-//    CGFloat width = CGRectGetWidth(self.superview.bounds);
-//    frame.size.width = width;
-//    self.frame = frame;
-    //旋转相关
+    CGRect frame = self.superview.bounds;
+    CGFloat height = CGRectGetHeight(self.bounds);
+    frame.size.height = height;
+    self.frame = frame;
+    
     if (!CGRectEqualToRect(self.bounds, self.collectionView.frame)) {
         self.collectionView.frame = self.bounds;
         [self.collectionView.collectionViewLayout invalidateLayout];
@@ -113,7 +102,7 @@
         
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
         collectionView.alwaysBounceHorizontal = YES;
-        collectionView.pagingEnabled = _pagingEnabled;
+        collectionView.pagingEnabled = YES;
         collectionView.backgroundColor = [UIColor clearColor];
         collectionView.delegate = self;
         collectionView.dataSource = self;
@@ -132,7 +121,8 @@
         view.frame = CGRectMake(0, CGRectGetHeight(_collectionView.bounds) - _indicatorViewHeight, _itemWith, _indicatorViewHeight);
         view.backgroundColor = ItemColorSelected;
         _indicatorView = view;
-        _indicatorView.hidden = !_indicatorViewEnable;
+        _indicatorView.hidden = YES;
+        [_collectionView addSubview:view];
     }
     return _indicatorView;
 }
@@ -156,19 +146,6 @@
 
 
 #pragma mark - Public
-
-- (void)drawRect:(CGRect)rect {
-    if (_bottomLineEnable && _bottomLineColor) {
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetLineWidth(context, 1);
-        CGContextSetStrokeColorWithColor(context, _bottomLineColor.CGColor);
-        CGContextMoveToPoint(context, 0, self.frame.size.height-0.5);
-        CGContextAddLineToPoint(context, self.frame.size.width, self.frame.size.height);
-        CGContextStrokePath(context);
-    }
-    
-}
-
 - (void)setDataArr:(NSArray *)dataArr {
     _dataArr = dataArr;
     _totalIndex = dataArr.count;
@@ -213,12 +190,8 @@
     if (_collectionView.contentSize.width <= _collectionView.bounds.size.width) {
         return;
     }
-    CGFloat positionX = idx * _itemWith;
-    CGFloat maxContenOffsetX = (_itemWith * _totalIndex) - CGRectGetWidth(self.collectionView.bounds);
-    CGFloat contentOffsetX = MIN(MAX(0, positionX-_itemWith/2), maxContenOffsetX);
-    if (contentOffsetX != _collectionView.contentOffset.x) {
-        [_collectionView setContentOffset:CGPointMake(contentOffsetX, 0) animated:animated];
-    }
+    CGFloat x = idx * _itemWith;
+    [_collectionView setContentOffset:CGPointMake(x, 0) animated:animated];
 }
 
 
@@ -275,18 +248,16 @@
 }
 
 - (void)setIndicatorLocationAtIndex:(NSInteger)index animation:(BOOL)animation {
-    if (!_indicatorViewEnable || _itemWith <= 0 || _itemWith >= CGFLOAT_MAX) {
+    if (!_indicatorViewEnable) {
         return;
     }
     
     CGFloat positionX = _itemWith * index;
     CGFloat height = CGRectGetHeight(self.bounds);
     
-    
     if (animation) {
         [UIView animateWithDuration:0.2 animations:^{
             _indicatorView.frame = CGRectMake(positionX, height - _indicatorViewHeight, _itemWith, _indicatorViewHeight);
-            [self scrollToIndex:index animated:NO];
         }];
     } else {
         _indicatorView.frame = CGRectMake(positionX, height - _indicatorViewHeight, _itemWith, _indicatorViewHeight);

@@ -454,4 +454,9 @@ Returns a lowercase NSString for md4 hash.
  */
 + (NSString *)yy_stringNamed:(NSString *)name;
 
+/**
+ *  将url的请求参数转换成字典,没有的话返回nil
+ */
+- (NSDictionary *)yy_dictionaryFromUrlParameters;
+
 @end

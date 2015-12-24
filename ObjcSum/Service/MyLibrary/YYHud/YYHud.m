@@ -87,6 +87,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 #pragma mark Show
+
 - (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText isSpiner:(BOOL)isSpiner {
     [self setTempMaskType:maskType];
     self.userInteractionEnabled = !_allowUserInteraction;

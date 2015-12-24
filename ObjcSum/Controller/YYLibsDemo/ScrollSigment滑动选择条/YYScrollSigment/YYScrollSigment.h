@@ -64,14 +64,8 @@ typedef void (^YYScrollSigmentDidSelectedItemBlock)(YYScrollSigment *view, NSInt
 @property (nonatomic, strong) UIView *indicatorView;
 //条形指示条高度，默认2
 @property (nonatomic, assign) CGFloat indicatorViewHeight;
-//设置条形指示条是否显示,默认YES
+//设置条形指示条是否显示,默认不显示
 @property(nonatomic, assign) BOOL indicatorViewEnable;
-
-/**
- *  是否显示底部的一条线,以及线的颜色,默认显示,d8d8d8
- */
-@property(nonatomic, assign) BOOL bottomLineEnable;
-@property(nonatomic, strong) UIColor *bottomLineColor;
 
 
 @property(nonatomic, copy)YYScrollSigmentDidSelectedItemBlock didSelectedItemBlock;

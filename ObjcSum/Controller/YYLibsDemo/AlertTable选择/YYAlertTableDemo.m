@@ -9,6 +9,8 @@
 #import "YYAlertTableDemo.h"
 #import "YYAlertTable.h"
 #import "UIViewController+Extension.h"
+#import "UIViewController+NoDataView.h"
+#import "UIView+YYChrysanthemum.h"
 
 @interface YYAlertTableDemo ()
 @property (nonatomic, strong) YYAlertTable *alertTable;
@@ -28,6 +30,21 @@
         };
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
     
+    [self addButtonWithTitle:@"NoDataViewShow" action:^(UIButton *btn) {
+        [weakSelf noDataViewShow:@"测试测试" image:[UIImage imageNamed:@"no_data_default"]];
+        
+//        [weakSelf noDataViewShow:@"测试测试" image:[UIImage imageNamed:@"no_data_default"] buttonTitle:@"dian 我" buttonBlock:^{
+//            NSLog(@"noDataViewShow didClickedBlock");
+//        } superView:weakSelf.view];
+
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self addButtonWithTitle:@"noDataViewDismiss" action:^(UIButton *btn) {
+        [weakSelf noDataViewDismiss];
+        
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self.view yyChrysanthemumShow];
 }
 
 - (void)didReceiveMemoryWarning {

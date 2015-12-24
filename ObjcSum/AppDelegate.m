@@ -22,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //延迟启动图显示时间,2秒
+    sleep(2);
     systemprocessArray = [NSMutableArray arrayWithObjects:
                            @"kernel_task",
                            @"launchd",

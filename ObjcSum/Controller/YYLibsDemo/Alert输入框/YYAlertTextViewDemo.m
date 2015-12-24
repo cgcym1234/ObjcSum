@@ -8,6 +8,7 @@
 
 #import "YYAlertTextViewDemo.h"
 #import "YYAlertTextView.h"
+#import "YYMultiSelectTable.h"
 #import "UIViewController+Extension.h"
 
 @interface YYAlertTextViewDemo ()
@@ -24,8 +25,19 @@
     
     __weak typeof(self) weakSelf = self;
     int btnNum = 2;
-    [self addButtonWithTitle:@"show" action:^(UIButton *btn) {
+    
+    [self addButtonWithTitle:@"show AlertTextView" action:^(UIButton *btn) {
         [weakSelf.alertView show];
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self addButtonWithTitle:@"show YYMultiSelectTable" action:^(UIButton *btn) {
+        NSArray *dataArry = @[
+                              [[YYMultiSelectModel alloc] initWithDictionary:@{@"name":@"制作中"}],
+                              [[YYMultiSelectModel alloc] initWithDictionary:@{@"name":@"选中了", @"checked":@(1)}],
+                              [[YYMultiSelectModel alloc] initWithDictionary:@{@"name":@"嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒嘀嗒点点滴滴的群"}],
+                              [[YYMultiSelectModel alloc] initWithDictionary:@{@"name":@"出差错"}],
+                              ];
+        [YYMultiSelectTable showWithTitle:@"标题" dataArr:dataArry];
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
 }
 

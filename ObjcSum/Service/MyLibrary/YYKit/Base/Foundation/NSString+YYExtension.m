@@ -803,6 +803,38 @@
     return string;
 }
 
+/**
+ *  将url的请求参数转换成字典
+ */
+- (NSDictionary *)yy_dictionaryFromUrlParameters {
+    //获取问号的位置，问号后是参数列表
+    NSRange range = [self rangeOfString:@"?"];
+    if (range.length == 0) {
+        return nil;
+    }
+    //获取参数列表
+    NSString *propertys = [self substringFromIndex:(int)(range.location+1)];
+    
+    //进行字符串的拆分，通过&来拆分，把每个参数分开
+    NSArray *subArray = [propertys componentsSeparatedByString:@"&"];
+    if (subArray.count == 0) {
+        return nil;
+    }
+    //把subArray转换为字典
+    //tempDic中存放一个URL中转换的键值对
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithCapacity:4];
+    
+    for (int j = 0 ; j < subArray.count; j++)
+    {
+        //在通过=拆分键和值
+        NSArray *dicArray = [subArray[j] componentsSeparatedByString:@"="];
+        if (dicArray.count >= 2) {
+            //给字典加入元素
+            [tempDic setObject:dicArray[1] forKey:dicArray[0]];
+        }
+    }
+    return tempDic;
+}
 @end
 
 
