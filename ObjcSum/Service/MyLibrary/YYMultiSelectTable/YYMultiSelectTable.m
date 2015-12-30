@@ -109,6 +109,10 @@ static NSString * const IdentifierCell = @"YYMultiSelectCell";
     self.title = title;
     self.dataArr = dataArr;
     
+    [self show];
+}
+
+- (void)show {
     CGFloat tableHeight = MIN(MaxCells, _dataArr.count)*HeightForCommonCell;
     self.tableViewHeight.constant = tableHeight;
     [self.tableView reloadData];

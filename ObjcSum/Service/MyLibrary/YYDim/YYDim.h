@@ -51,6 +51,6 @@ typedef NS_OPTIONS(NSUInteger, YYDimOpition) {
 + (instancetype)showView:(UIView *)view animation:(YYDimAnimation)animated duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(YYDimOpition)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 
 + (void)dismss;
-+ (void)dismssWithCompletion:(void (^)(void))completion;
++ (void)dismssCompletion:(void (^)(void))completion;
 
 @end

@@ -9,7 +9,7 @@
 #import "YYScrollSigmentDemo.h"
 #import "YYScrollSigment.h"
 #import "YYPageController.h"
-#import "YYAlertTableDemo.h"
+#import "YYAlertTextViewDemo.h"
 
 @interface YYScrollSigmentDemo ()<YYPageControllerDelegate>
 
@@ -71,7 +71,7 @@
 }
 
 - (UIViewController *)yyPageController:(YYPageController *)pageController controllerAtIndex:(NSInteger)index {
-    return [[YYAlertTableDemo alloc] init];
+    return [[YYAlertTextViewDemo alloc] init];
 }
 
 - (void)yyPageController:(YYPageController *)pageController didScrollToPage:(NSInteger)page {

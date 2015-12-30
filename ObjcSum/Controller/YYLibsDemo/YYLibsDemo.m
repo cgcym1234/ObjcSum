@@ -28,11 +28,7 @@
                    
                    [[LibDemoInfo alloc] initWithTitle:@"YYScrollSigmentDemo" desc:@"ScrollSigment滑动选择条" controllerName:@"YYScrollSigmentDemo"],
                    
-                   [[LibDemoInfo alloc] initWithTitle:@"YYAlertGridViewDemo" desc:@"Alert表格选择" controllerName:@"YYAlertGridViewDemo"],
-                   
-                   [[LibDemoInfo alloc] initWithTitle:@"YYAlertTableDemo" desc:@"alert选择" controllerName:@"YYAlertTableDemo"],
-                   
-                   [[LibDemoInfo alloc] initWithTitle:@"YYAlertTextViewDemo" desc:@"alert输入框" controllerName:@"YYAlertTextViewDemo"],
+                   [[LibDemoInfo alloc] initWithTitle:@"一些Alert控件" desc:@"弹出输入,选择等控件" controllerName:@"YYAlertTextViewDemo"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"EncryptionDemo" desc:@"加密相关" controllerName:@"EncryptionDemo"],
                    

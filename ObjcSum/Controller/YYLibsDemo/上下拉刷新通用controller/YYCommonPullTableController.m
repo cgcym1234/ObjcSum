@@ -16,7 +16,6 @@
 
 #pragma mark - Consts
 
-static NSInteger const CommonCellHeight = 49;
 
 static NSString * const CommonCellIdentifier = @"CommonCellIdentifier";
 

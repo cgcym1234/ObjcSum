@@ -106,6 +106,10 @@ static NSString * const IdentifierTitle = @"YYAlertTableTitleCell";
     self.title = title;
     self.textArray = textArry;
     
+    return [self show];
+}
+
+- (instancetype)show {
     CGFloat tableHeight = 1*HeightForTitle + MIN(MiniCells, _textArray.count)*HeightForCommonCell;
     self.tableViewHeight.constant = MIN([UIScreen mainScreen].bounds.size.height, tableHeight);
     [self.tableView reloadData];

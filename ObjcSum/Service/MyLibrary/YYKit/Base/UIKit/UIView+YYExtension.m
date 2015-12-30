@@ -9,7 +9,6 @@
 #import "UIView+YYExtension.h"
 #import <objc/runtime.h>
 
-static char motionEffectFlag;
 
 @implementation UIView (YYExtension)
 

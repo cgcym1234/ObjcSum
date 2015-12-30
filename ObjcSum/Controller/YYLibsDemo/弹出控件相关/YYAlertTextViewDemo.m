@@ -9,11 +9,17 @@
 #import "YYAlertTextViewDemo.h"
 #import "YYAlertTextView.h"
 #import "YYMultiSelectTable.h"
+#import "YYAlertTable.h"
+#import "YYSimpleAlertTable.h"
+#import "YYAlertGridView.h"
 #import "UIViewController+Extension.h"
+#import "UIViewController+NoDataView.h"
+#import "UIView+YYChrysanthemum.h"
 
 @interface YYAlertTextViewDemo ()
 
 @property (nonatomic, strong) YYAlertTextView *alertView;
+@property (nonatomic, strong) YYAlertTable *alertTable;
 
 @end
 
@@ -30,6 +36,13 @@
         [weakSelf.alertView show];
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
     
+    [self addButtonWithTitle:@"show AlertGridView" action:^(UIButton *btn) {
+        [YYAlertGridView showWithTextArry:@[@"中国人明裙子", @"fhasfasjlf",@"1",@"2"]].didClickedBlock = ^(YYAlertGridView *alertTable, NSInteger index) {
+            NSLog(@"didClickedBlock %ld",(long)index);
+            
+        };
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
     [self addButtonWithTitle:@"show YYMultiSelectTable" action:^(UIButton *btn) {
         NSArray *dataArry = @[
                               [[YYMultiSelectModel alloc] initWithDictionary:@{@"name":@"制作中"}],
@@ -39,6 +52,34 @@
                               ];
         [YYMultiSelectTable showWithTitle:@"标题" dataArr:dataArry];
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    
+    [self addButtonWithTitle:@"show alertTable" action:^(UIButton *btn) {
+        weakSelf.alertTable = [YYAlertTable showWithTitle:@"标题" textArry:@[@"中国人明裙子", @"fhasfasjlfslaffsadfdsa",@"1",@"2"]];
+        weakSelf.alertTable.didClickedBlock = ^(YYAlertTable *alertTable, NSInteger index) {
+            NSLog(@"didClickedBlock %ld",(long)index);
+        };
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self addButtonWithTitle:@"show alertTable" action:^(UIButton *btn) {
+        [YYSimpleAlertTable showWithTextArry:@[@"中国人明裙子", @"fhasfasjlfslaffsadfdsa",@"1",@"2"]];
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self addButtonWithTitle:@"NoDataViewShow" action:^(UIButton *btn) {
+        [weakSelf noDataViewShow:@"测试测试" image:[UIImage imageNamed:@"no_data_default"]];
+        
+        //        [weakSelf noDataViewShow:@"测试测试" image:[UIImage imageNamed:@"no_data_default"] buttonTitle:@"dian 我" buttonBlock:^{
+        //            NSLog(@"noDataViewShow didClickedBlock");
+        //        } superView:weakSelf.view];
+        
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self addButtonWithTitle:@"noDataViewDismiss" action:^(UIButton *btn) {
+        [weakSelf noDataViewDismiss];
+        
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    [self.view yyChrysanthemumShow];
 }
 
 - (YYAlertTextView *)alertView {

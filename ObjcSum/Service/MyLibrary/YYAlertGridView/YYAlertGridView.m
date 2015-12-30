@@ -105,16 +105,20 @@ static NSString * const IdentifierCell = @"YYAlertGridViewCell";
     _dataArr = arr;
 }
 
-- (instancetype)showWithTitle:(NSString *)title textArry:(NSArray *)textArry {
-    self.title = title;
-    self.textArray = textArry;
-    
+- (instancetype)show {
     CGFloat height = ceilf(_textArray.count*1.0/ItemNumsPerLine)*HeightForCommonCell;
     self.collectionViewHeigth.constant = MIN([UIScreen mainScreen].bounds.size.height-_marginTop.constant, height);
     [self.collectionView reloadData];
     
     [YYDim showView:self];
     return self;
+}
+
+- (instancetype)showWithTitle:(NSString *)title textArry:(NSArray *)textArry {
+    self.title = title;
+    self.textArray = textArry;
+    
+    return [self show];
 }
 
 - (instancetype)showWithTextArry:(NSArray *)textArry {
