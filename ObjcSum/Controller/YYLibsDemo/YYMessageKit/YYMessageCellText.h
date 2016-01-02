@@ -8,8 +8,10 @@
 
 #import "YYMessageCellBase.h"
 
+@class YYMessageTextLabel;
+
 @interface YYMessageCellText : YYMessageCellBase<YYMessageCellLayoutConfig>
 
-@property (nonatomic, strong) UILabel *messageTextLabel;
+@property (nonatomic, strong) YYMessageTextLabel *messageTextLabel;
 
 @end

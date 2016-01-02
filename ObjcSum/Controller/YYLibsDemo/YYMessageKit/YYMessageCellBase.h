@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "YYMessageCellLayoutConfig.h"
+#import "YYMessageAvatarView.h"
+#import "YYMessageBubbleView.h"
 #import "UIView+YYMessage.h"
 #import "UILabel+YYMessage.h"
 
@@ -35,10 +37,10 @@
 //用来显示昵称，气泡下面
 @property (nonatomic, strong) UILabel *cellBottomLabel;
 
-@property (nonatomic, strong) UIImageView *avatarImageView;
+@property (nonatomic, strong) YYMessageAvatarView *avatarImageView;
 
-@property (nonatomic, strong) UIView *bubbleContainerView;
-@property (nonatomic, strong) UIImageView *bubbleImageView;
+@property (nonatomic, strong) YYMessageBubbleView *bubbleContainerView;
+//@property (nonatomic, strong) UIImageView *bubbleImageView;
 
 
 /**

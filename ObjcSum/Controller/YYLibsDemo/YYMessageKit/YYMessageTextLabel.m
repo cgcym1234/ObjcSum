@@ -12,7 +12,7 @@
 
 #pragma mark - Public
 
-- (instancetype)cloneLabel {
+- (instancetype)clone {
     YYMessageTextLabel *label = [YYMessageTextLabel new];
     label.font = self.font;
     label.textColor = self.textColor;

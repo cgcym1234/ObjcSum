@@ -63,7 +63,7 @@
         _bubbleContainerView.left = _avatarImageView.right;
     }
     
-    _bubbleImageView.size = _bubbleContainerView.size;
+//    _bubbleImageView.size = _bubbleContainerView.size;
     
     _cellBottomLabel.frame = CGRectMake(x,
                                      _bubbleContainerView.bottom,
@@ -80,7 +80,7 @@
     [self.contentView addSubview:self.bubbleTopLabel];
     
     [self.contentView addSubview:self.avatarImageView];
-    [self.bubbleContainerView addSubview:self.bubbleImageView];
+//    [self.bubbleContainerView addSubview:self.bubbleImageView];
     [self.contentView addSubview:self.bubbleContainerView];
     
     [self.contentView addSubview:self.cellBottomLabel];
@@ -154,7 +154,7 @@
 
 - (UIImageView *)avatarImageView {
     if (!_avatarImageView) {
-        UIImageView *imageView = [UIImageView new];
+        YYMessageAvatarView *imageView = [YYMessageAvatarView new];
         imageView.bounds = CGRectMake(0, 0, _cellConfig.avatarImageViewWH, _cellConfig.avatarImageViewWH);
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         _avatarImageView = imageView;
@@ -165,21 +165,21 @@
 
 - (UIView *)bubbleContainerView {
     if (!_bubbleContainerView) {
-        _bubbleContainerView = [UIView new];
+        _bubbleContainerView = [YYMessageBubbleView new];
         _bubbleContainerView.backgroundColor = [UIColor redColor];
     }
     return _bubbleContainerView;
 }
 
-- (UIImageView *)bubbleImageView {
-    if (!_bubbleImageView) {
-        UIImageView *imageView = [UIImageView new];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        _bubbleImageView = imageView;
-        _bubbleImageView.origin = CGPointZero;
-    }
-    return _bubbleImageView;
-}
+//- (UIImageView *)bubbleImageView {
+//    if (!_bubbleImageView) {
+//        UIImageView *imageView = [UIImageView new];
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        _bubbleImageView = imageView;
+//        _bubbleImageView.origin = CGPointZero;
+//    }
+//    return _bubbleImageView;
+//}
 
 
 @end

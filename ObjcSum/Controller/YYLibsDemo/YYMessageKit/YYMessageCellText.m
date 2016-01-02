@@ -46,9 +46,9 @@
 
 #pragma mark - Private
 
-- (UILabel *)messageTextLabel {
+- (YYMessageTextLabel *)messageTextLabel {
     if (!_messageTextLabel) {
-        _messageTextLabel = [[YYMessageCellConfig defaultConfig].messageTextLabel cloneLabel];
+        _messageTextLabel = [[YYMessageCellConfig defaultConfig].messageTextLabel clone];
     }
     return _messageTextLabel;
 }

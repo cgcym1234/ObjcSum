@@ -388,6 +388,9 @@
 		1FDC2CD51C212CCB000BF77F /* YYNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD11C212CCB000BF77F /* YYNoDataView.m */; };
 		1FDC2CD61C212CCB000BF77F /* YYNoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD21C212CCB000BF77F /* YYNoDataView.xib */; };
 		1FDC2CD91C215AD7000BF77F /* UIView+YYChrysanthemum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD81C215AD7000BF77F /* UIView+YYChrysanthemum.m */; };
+		1FEE31741C377CF900C52A85 /* YYMessageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */; };
+		1FEE31771C3783F100C52A85 /* YYMessageAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */; };
+		1FEE317A1C3791E300C52A85 /* YYMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */; };
 		1FF64A4D1C338A7000E3B562 /* YYMessageCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */; };
 		1FF64A541C33C63600E3B562 /* UIView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */; };
 		1FF64A571C33CD6D00E3B562 /* YYMessageCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */; };
@@ -1172,6 +1175,12 @@
 		1FDC2CD21C212CCB000BF77F /* YYNoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYNoDataView.xib; sourceTree = "<group>"; };
 		1FDC2CD71C215AD7000BF77F /* UIView+YYChrysanthemum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYChrysanthemum.h"; sourceTree = "<group>"; };
 		1FDC2CD81C215AD7000BF77F /* UIView+YYChrysanthemum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYChrysanthemum.m"; sourceTree = "<group>"; };
+		1FEE31721C377CF900C52A85 /* YYMessageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCollectionView.h; sourceTree = "<group>"; };
+		1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCollectionView.m; sourceTree = "<group>"; };
+		1FEE31751C3783F100C52A85 /* YYMessageAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageAvatarView.h; sourceTree = "<group>"; };
+		1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageAvatarView.m; sourceTree = "<group>"; };
+		1FEE31781C3791E300C52A85 /* YYMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageBubbleView.h; sourceTree = "<group>"; };
+		1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageBubbleView.m; sourceTree = "<group>"; };
 		1FF64A4B1C338A7000E3B562 /* YYMessageCellBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCellBase.h; sourceTree = "<group>"; };
 		1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCellBase.m; sourceTree = "<group>"; };
 		1FF64A521C33C63600E3B562 /* UIView+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYMessage.h"; sourceTree = "<group>"; };
@@ -2830,7 +2839,7 @@
 			path = YYNoDataView;
 			sourceTree = "<group>";
 		};
-		1FF64A4E1C338A7500E3B562 /* View */ = {
+		1FEE31711C377CCE00C52A85 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				1FF64A4B1C338A7000E3B562 /* YYMessageCellBase.h */,
@@ -2838,14 +2847,28 @@
 				1FF64A551C33CD6D00E3B562 /* YYMessageCellText.h */,
 				1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */,
 			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		1FF64A4E1C338A7500E3B562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FEE31711C377CCE00C52A85 /* Cell */,
+				1FEE31721C377CF900C52A85 /* YYMessageCollectionView.h */,
+				1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */,
+				1FEE31751C3783F100C52A85 /* YYMessageAvatarView.h */,
+				1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */,
+				1FEE31781C3791E300C52A85 /* YYMessageBubbleView.h */,
+				1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */,
+				1FDB24421C3516C800FFCBA4 /* YYMessageTextLabel.h */,
+				1FDB24431C3516C800FFCBA4 /* YYMessageTextLabel.m */,
+			);
 			name = View;
 			sourceTree = "<group>";
 		};
 		1FF64A5B1C33D20600E3B562 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				1FDB24421C3516C800FFCBA4 /* YYMessageTextLabel.h */,
-				1FDB24431C3516C800FFCBA4 /* YYMessageTextLabel.m */,
 				1FF64A521C33C63600E3B562 /* UIView+YYMessage.h */,
 				1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */,
 				1FF64A581C33CE0C00E3B562 /* UILabel+YYMessage.h */,
@@ -3117,6 +3140,7 @@
 				1F5A579F1C2BA091000E9E04 /* RACSubscriber.m in Sources */,
 				1F5A56861C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m in Sources */,
 				1F5A579A1C2BA091000E9E04 /* RACSignalProvider.d in Sources */,
+				1FEE31771C3783F100C52A85 /* YYMessageAvatarView.m in Sources */,
 				1F5A57A21C2BA091000E9E04 /* RACTargetQueueScheduler.m in Sources */,
 				1F5A579D1C2BA091000E9E04 /* RACStringSequence.m in Sources */,
 				1F2DA2261C19787F00126FB1 /* YYCommonPullTableController.m in Sources */,
@@ -3132,6 +3156,7 @@
 				1F5A57BC1C2BA091000E9E04 /* README.md in Sources */,
 				1F45E3FA1C20132400938B2E /* YYThreadSafeDictionary.m in Sources */,
 				1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */,
+				1FEE317A1C3791E300C52A85 /* YYMessageBubbleView.m in Sources */,
 				1F6872C51C27E881008BC6BE /* YYMultiSelectModel.m in Sources */,
 				1F45E3FD1C20132400938B2E /* YYWeakProxy.m in Sources */,
 				1F2DA2691C197B8300126FB1 /* UITableView+FDTemplateLayoutCell.m in Sources */,
@@ -3309,6 +3334,7 @@
 				1F5A57791C2BA091000E9E04 /* RACBehaviorSubject.m in Sources */,
 				1F45E3C91C1FFBD600938B2E /* UIApplication+YYExtension.m in Sources */,
 				1F5A56871C2B9F3A000E9E04 /* FastRecordController.m in Sources */,
+				1FEE31741C377CF900C52A85 /* YYMessageCollectionView.m in Sources */,
 				1F160BCE1C32777E00EDDAA4 /* YYMessageSetting.m in Sources */,
 				1F5A577D1C2BA091000E9E04 /* RACCompoundDisposable.m in Sources */,
 				1F5A57F81C2BA37E000E9E04 /* UIImage+Extension.m in Sources */,

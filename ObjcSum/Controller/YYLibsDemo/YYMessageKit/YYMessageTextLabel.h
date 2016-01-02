@@ -13,6 +13,6 @@
 /**
  *  克隆一个同样设置的label
  */
-- (instancetype)cloneLabel;
+- (instancetype)clone;
 
 @end
