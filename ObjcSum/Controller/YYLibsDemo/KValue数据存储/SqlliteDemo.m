@@ -35,24 +35,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *filePath = [doc stringByAppendingPathComponent:@"test.sqlite"];
-    const char *filePathC = filePath.UTF8String;
-    
+//    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString *filePath = [doc stringByAppendingPathComponent:@"test.sqlite"];
+//    const char *filePathC = filePath.UTF8String;
+//    
 //    sqlite3 *db = dbGetHandleWithPath(filePathC);
-    
-    const char* createTableSQL =
-    "CREATE TABLE if not exists TESTTABLE (int_col INT, float_col REAL, string_col TEXT)";
+//    
+//    const char* createTableSQL =
+//    "CREATE TABLE if not exists TESTTABLE (int_col INT, float_col REAL, string_col TEXT)";
 //    dbExecSql(db, createTableSQL);
-    
-    char *sqls[4] = {0};
-    sqls[0] = "INSERT INTO TESTTABLE VALUES(1,1,1)";
-    sqls[1] = "INSERT INTO TESTTABLE VALUES(1,2,2)";
-    sqls[2] = "INSERT INTO TESTTABLE VALUES(1,2,3)";
-    
+//    
+//    char *sqls[4] = {0};
+//    sqls[0] = "INSERT INTO TESTTABLE VALUES(1,1,1)";
+//    sqls[1] = "INSERT INTO TESTTABLE VALUES(1,2,2)";
+//    sqls[2] = "INSERT INTO TESTTABLE VALUES(1,2,3)";
+//    
 //    dbExecSqls(db, sqls);
-    
-    
+//    
+//    
 //    const char* dropSQL = "DROP TABLE TESTTABLE";
 //    dbExecSql(db, dropSQL);
 }
@@ -96,7 +96,7 @@ void doTest()
     const char* createTableSQL =
     "CREATE TABLE TESTTABLE (int_col INT, float_col REAL, string_col TEXT)";
     sqlite3_stmt* stmt = NULL;
-    int len = strlen(createTableSQL);
+    int len = (int)strlen(createTableSQL);
     //2. 准备创建数据表，如果创建失败，需要用sqlite3_finalize释放sqlite3_stmt对象，以防止内存泄露。
     if (sqlite3_prepare_v2(conn,createTableSQL,len,&stmt,NULL) != SQLITE_OK) {
         if (stmt)
@@ -116,10 +116,10 @@ void doTest()
     sqlite3_finalize(stmt);
     printf("Succeed to create test table now.\n");
     
-    //5. 显式的开启一个事物。
+    //5. 显式的开启一个事务。
     sqlite3_stmt* stmt2 = NULL;
     const char* beginSQL = "BEGIN TRANSACTION";
-    if (sqlite3_prepare_v2(conn,beginSQL,strlen(beginSQL),&stmt2,NULL) != SQLITE_OK) {
+    if (sqlite3_prepare_v2(conn,beginSQL,-1,&stmt2,NULL) != SQLITE_OK) {
         if (stmt2)
             sqlite3_finalize(stmt2);
         sqlite3_close(conn);
@@ -135,7 +135,7 @@ void doTest()
     //6. 构建基于绑定变量的插入数据。
     const char* insertSQL = "INSERT INTO TESTTABLE VALUES(?,?,?)";
     sqlite3_stmt* stmt3 = NULL;
-    if (sqlite3_prepare_v2(conn,insertSQL,strlen(insertSQL),&stmt3,NULL) != SQLITE_OK) {
+    if (sqlite3_prepare_v2(conn,insertSQL,-1,&stmt3,NULL) != SQLITE_OK) {
         if (stmt3)
             sqlite3_finalize(stmt3);
         sqlite3_close(conn);
@@ -148,7 +148,7 @@ void doTest()
         //在绑定时，最左面的变量索引值是1。
         sqlite3_bind_int(stmt3,1,i);
         sqlite3_bind_double(stmt3,2,i * 1.0);
-        sqlite3_bind_text(stmt3,3,strData,strlen(strData),SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt3,3,strData,-1,SQLITE_TRANSIENT);
         if (sqlite3_step(stmt3) != SQLITE_DONE) {
             sqlite3_finalize(stmt3);
             sqlite3_close(conn);
@@ -163,7 +163,7 @@ void doTest()
     //8. 提交之前的事物。
     const char* commitSQL = "COMMIT";
     sqlite3_stmt* stmt4 = NULL;
-    if (sqlite3_prepare_v2(conn,commitSQL,strlen(commitSQL),&stmt4,NULL) != SQLITE_OK) {
+    if (sqlite3_prepare_v2(conn,commitSQL,-1,&stmt4,NULL) != SQLITE_OK) {
         if (stmt4)
             sqlite3_finalize(stmt4);
         sqlite3_close(conn);
@@ -180,7 +180,7 @@ void doTest()
     //创建该表，因为它已经存在。
     const char* dropSQL = "DROP TABLE TESTTABLE";
     sqlite3_stmt* stmt5 = NULL;
-    if (sqlite3_prepare_v2(conn,dropSQL,strlen(dropSQL),&stmt5,NULL) != SQLITE_OK) {
+    if (sqlite3_prepare_v2(conn,dropSQL,-1,&stmt5,NULL) != SQLITE_OK) {
         if (stmt5)
             sqlite3_finalize(stmt5);
         sqlite3_close(conn);

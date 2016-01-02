@@ -179,9 +179,9 @@ static NSString *const DELETE_ITEMS_WITH_PREFIX_SQL = @"DELETE from %@ where id 
     return result;
 }
 
-//- (BOOL)deleteTable:(NSString *)tableName {
-//    
-//}
+- (BOOL)deleteTable:(NSString *)tableName {
+    return [self truncateTable:tableName];
+}
 
 - (void)close {
     [_dbQueue close];
