@@ -19,7 +19,6 @@
 //全局是否正在展示需要横屏旋转的图像（注意需要出入重置）
 @property (nonatomic, assign) BOOL beShowImage;
 
-
 //hash 后的UUID
 @property (nonatomic, strong) NSString *appUUID;
 

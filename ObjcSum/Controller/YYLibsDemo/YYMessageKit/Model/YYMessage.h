@@ -43,7 +43,7 @@
 /**
  *  消息所属会话
  */
-@property (nonatomic,strong,readonly)       NSString *session;
+@property (nonatomic,copy,readonly)       NSString *session;
 
 /**
  *  消息发送者名字
@@ -58,6 +58,11 @@
 @property (nonatomic,copy,readonly)         NSString *senderID;
 
 /**
+ *  消息文本
+ */
+@property (nonatomic,copy)                  NSString *text;
+
+/**
  *  消息推送文案,长度限制200字节
  */
 @property (nonatomic,copy)                  NSString *apnsContent;
@@ -65,7 +70,7 @@
 /**
  *  消息发送时间
  */
-@property (nonatomic,copy,readonly)       NSDate *sendDate;
+@property (nonatomic,copy,readonly)       NSDate *sendTime;
 
 /**
  *  是否是往外发的消息
@@ -78,6 +83,10 @@
  *  @discussion 已删除的消息在获取本地消息列表时会被过滤掉，只有根据messageId获取消息的接口可能会返回已删除消息。
  */
 @property (nonatomic,assign,readonly)       BOOL isDeleted;
+
+
++ (instancetype)messageTextOutgoing;
++ (instancetype)messageTextInComing;
 
 @end
 
