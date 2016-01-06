@@ -10,6 +10,17 @@
 
 @implementation UIView (YYMessage)
 
+#pragma mark - 圆形设置
+
+- (void)setRound:(BOOL)round {
+    self.layer.cornerRadius = self.width/2;
+    self.layer.masksToBounds = YES;
+}
+
+- (BOOL)round {
+    return self.layer.cornerRadius == self.width/2;
+}
+
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;

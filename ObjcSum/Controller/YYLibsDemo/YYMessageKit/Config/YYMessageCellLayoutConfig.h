@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YYMessageTextLabel.h"
 
+#define YYColorFromRGBHex(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #pragma mark - 配置参数
 
@@ -36,6 +38,9 @@
 @property (nonatomic, assign) CGFloat bubbleTopLabelHeight;
 @property (nonatomic, assign) CGFloat cellBottomLabelHeight;
 
+//气泡箭头宽度，默认10
+@property (nonatomic, assign) CGFloat bubbleArrowWith;
+
 //默认40
 @property (nonatomic, assign) CGFloat avatarImageViewWH;
 
@@ -45,9 +50,16 @@
 @property (nonatomic, strong) UIFont *messageTextLabelFont;
 
 @property (nonatomic, strong) UIColor *cellTopLabelColor;
-@property (nonatomic, strong) UIColor *bubbleTopLabelColor;
 @property (nonatomic, strong) UIColor *cellBottomLabelColor;
-@property (nonatomic, strong) UIColor *messageTextLabelColor;
+@property (nonatomic, strong) UIColor *bubbleTopLabelColor;
+
+@property (nonatomic, strong) UIColor *bubbleColorIncoming;
+@property (nonatomic, strong) UIColor *bubbleColorOutgoing;
+@property (nonatomic, strong) UIColor *messageTextColorIncoming;
+@property (nonatomic, strong) UIColor *messageTextColorOutgoing;
+
+//背景色
+@property (nonatomic, strong) UIColor *messageBackgroundColor;
 
 //显示bubbleTopLabel，默认YES，
 @property (nonatomic, assign) BOOL bubbleTopLabelShow;

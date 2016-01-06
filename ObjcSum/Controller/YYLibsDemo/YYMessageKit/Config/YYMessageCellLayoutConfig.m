@@ -20,23 +20,31 @@
         self.bubbleTopLabelHeight = 20;
         self.cellBottomLabelHeight = 20;
         
+        self.bubbleArrowWith = 10;
         self.avatarImageViewWH = 40;
         
-        self.cellTopLabelFont = [UIFont systemFontOfSize:14];
+        self.cellTopLabelFont = [UIFont systemFontOfSize:13];
         self.bubbleTopLabelFont = [UIFont systemFontOfSize:14];
         self.cellBottomLabelFont = [UIFont systemFontOfSize:14];
-        self.messageTextLabelFont = [UIFont systemFontOfSize:18];
+        self.messageTextLabelFont = [UIFont boldSystemFontOfSize:17];
         
-        self.cellTopLabelColor = [UIColor lightGrayColor];
+        self.cellTopLabelColor = YYColorFromRGBHex(0x666666);
         self.bubbleTopLabelColor = [UIColor lightGrayColor];
         self.cellBottomLabelColor = [UIColor lightGrayColor];
-        self.messageTextLabelColor = [UIColor lightGrayColor];
         
-        self.bubbleTopLabelShow = YES;
-        self.cellBottomLabelShow = NO;
+        self.messageTextColorIncoming = [UIColor blackColor];
+        self.messageTextColorOutgoing = [UIColor whiteColor];
+        
+        self.bubbleColorIncoming = [UIColor whiteColor];
+        self.bubbleColorOutgoing = YYColorFromRGBHex(0xfa882a);
+        
+        self.messageBackgroundColor = YYColorFromRGBHex(0xe5e5e5);
+        
         self.avatarImageViewShowAtTop = YES;
+        self.bubbleTopLabelShow = NO;
+        self.cellBottomLabelShow = NO;
         
-        self.contentViewInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+        self.contentViewInsets = UIEdgeInsetsMake(8, 12, 8, 12);
         self.bubbleViewInsets = UIEdgeInsetsMake(8, 8, 8, 8);
     }
     return self;

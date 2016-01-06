@@ -39,13 +39,18 @@
     
     _cellTopLabel.frame = CGRectMake(x, _cellConfig.contentViewInsets.top, labeWidth, _cellTopLabel.height);
     
+    //气泡上面label位置
     _bubbleTopLabel.y = _cellTopLabel.bottom;
     _bubbleTopLabel.width = labeWidth - _avatarImageView.width;
+    
     _bubbleContainerView.y = _bubbleTopLabel.bottom;
     _bubbleContainerView.size = CGSizeMake(
+                                           _cellConfig.bubbleArrowWith +
                                            _messageModel.contentSize.width + _cellConfig.bubbleViewInsets.left + _cellConfig.bubbleViewInsets.right,
                                            _messageModel.contentSize.height + _cellConfig.bubbleViewInsets.top +_cellConfig.bubbleViewInsets.bottom);
     
+    _bubbleSubViewCustomer.size = _messageModel.contentSize;
+    _bubbleSubViewCustomer.top = _cellConfig.bubbleViewInsets.top;
     //头像上下位置设置
     if (_cellConfig.avatarImageViewShowAtTop) {
         _avatarImageView.y = _cellTopLabel.bottom;
@@ -57,10 +62,12 @@
         _avatarImageView.right = cellWidth - _cellConfig.contentViewInsets.right;
         _bubbleTopLabel.right = _avatarImageView.left;
         _bubbleContainerView.right = _avatarImageView.left;
+        _bubbleSubViewCustomer.left = _cellConfig.bubbleViewInsets.left;
     } else {
         _avatarImageView.left = _cellConfig.contentViewInsets.left;
         _bubbleTopLabel.left = _avatarImageView.right;
         _bubbleContainerView.left = _avatarImageView.right;
+        _bubbleSubViewCustomer.right = _bubbleContainerView.width - _cellConfig.bubbleViewInsets.right;
     }
     
 //    _bubbleImageView.size = _bubbleContainerView.size;
@@ -69,6 +76,7 @@
                                      _bubbleContainerView.bottom,
                                      labeWidth,
                                      _cellBottomLabel.height);
+    [super layoutSubviews];
 }
 
 #pragma mark - Public
@@ -84,7 +92,8 @@
     [self.contentView addSubview:self.bubbleContainerView];
     
     [self.contentView addSubview:self.cellBottomLabel];
-    self.contentView.backgroundColor = [UIColor orangeColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 /**
@@ -99,6 +108,7 @@
     _indexPath = [indexPath copy];
     _collectionView = collectionView;
     
+    _bubbleContainerView.isOutgoing = messageModel.message.isOutgoing;
     [self setCellTopLabelText:messageModel.displaySendTime];
     [self setBubbleTopLabelText:messageModel.message.senderName];
     [self setCellBottomLabelText:messageModel.message.senderName];
@@ -152,13 +162,18 @@
     return _cellBottomLabel;
 }
 
-- (UIImageView *)avatarImageView {
+- (YYMessageAvatarView *)avatarImageView {
     if (!_avatarImageView) {
-        YYMessageAvatarView *imageView = [YYMessageAvatarView new];
-        imageView.bounds = CGRectMake(0, 0, _cellConfig.avatarImageViewWH, _cellConfig.avatarImageViewWH);
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        _avatarImageView = imageView;
-        _avatarImageView.image = [UIImage imageNamed:@"no_data_default"];
+        YYMessageAvatarView *avatarView = [YYMessageAvatarView new];
+        avatarView.bounds = CGRectMake(0, 0, _cellConfig.avatarImageViewWH, _cellConfig.avatarImageViewWH);
+//        avatarView.contentMode = UIViewContentModeScaleAspectFit;
+        avatarView.round = YES;
+        _avatarImageView = avatarView;
+        _avatarImageView.image = [UIImage imageNamed:@"ChatWindow_DefaultAvatar"];
+        MacroWeakSelf(weakSelf);
+        avatarView.touchUpInsideBlock = ^(YYMessageAvatarView *view) {
+            [weakSelf.delegate yyMessageCellBase:weakSelf didClickItem:YYMessageItemAvatar atIndexPath:[weakSelf.collectionView indexPathForCell:weakSelf] withMessageModel:weakSelf.messageModel];
+        };
     }
     return _avatarImageView;
 }
@@ -166,7 +181,7 @@
 - (UIView *)bubbleContainerView {
     if (!_bubbleContainerView) {
         _bubbleContainerView = [YYMessageBubbleView new];
-        _bubbleContainerView.backgroundColor = [UIColor redColor];
+        _bubbleContainerView.backgroundColor = [UIColor clearColor];
     }
     return _bubbleContainerView;
 }

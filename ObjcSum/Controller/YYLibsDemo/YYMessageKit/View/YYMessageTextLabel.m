@@ -10,6 +10,25 @@
 
 @implementation YYMessageTextLabel
 
+#pragma mark - Life Cycle
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setContext];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setContext];
+    }
+    return self;
+}
+
+- (void)setContext {
+}
+
 #pragma mark - Public
 
 - (instancetype)clone {

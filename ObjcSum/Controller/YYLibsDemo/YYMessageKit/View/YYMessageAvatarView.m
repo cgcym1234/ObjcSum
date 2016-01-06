@@ -7,15 +7,55 @@
 //
 
 #import "YYMessageAvatarView.h"
+#import "UIView+YYMessage.h"
 
 @implementation YYMessageAvatarView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - Life Cycle
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setContext];
+    }
+    return self;
 }
-*/
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setContext];
+    }
+    return self;
+}
+
+- (void)setContext {
+    [self addTarget:self action:@selector(touchUpInsideCallback:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+#pragma mark - Public
+
+- (void)setRound:(BOOL)round {
+    self.layer.masksToBounds = round;
+    self.layer.cornerRadius = self.width/2;
+}
+
+- (void)setImage:(UIImage *)image {
+    [self setImage:image placeholderImage:nil];
+}
+
+- (void)setImage:(UIImage *)image placeholderImage:(UIImage *)placeholder {
+    [self setImage:image forState:UIControlStateNormal];
+}
+
+- (void)setImageUrlSting:(NSString *)urlString {
+    
+}
+
+#pragma mark - Private
+
+- (void)touchUpInsideCallback:(UIButton *)button {
+    if (_touchUpInsideBlock) {
+        _touchUpInsideBlock(self);
+    }
+}
 
 @end

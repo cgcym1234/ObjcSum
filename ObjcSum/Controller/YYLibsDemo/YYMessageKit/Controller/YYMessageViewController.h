@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYMessageCollectionView.h"
 
 @interface YYMessageViewController : UIViewController
 
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) YYMessageCollectionView *collectionView;
 
 @end

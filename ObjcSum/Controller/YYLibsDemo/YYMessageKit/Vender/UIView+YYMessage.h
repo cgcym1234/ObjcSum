@@ -10,7 +10,12 @@
 
 @interface UIView (YYMessage)
 
-#pragma mark - 获取view坐标和大小
+#pragma mark - 圆形设置
+
+@property (nonatomic, assign) BOOL round;
+
+#pragma mark - view坐标和大小相关
+
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 

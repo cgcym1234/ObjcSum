@@ -47,31 +47,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UICollectionView *)collectionView {
+- (YYMessageCollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        flowLayout.minimumInteritemSpacing = 0.0f;
-        flowLayout.minimumLineSpacing = 10.0f;
-        flowLayout.sectionInset = UIEdgeInsetsZero;
-        flowLayout.footerReferenceSize = CGSizeZero;
-        flowLayout.headerReferenceSize = CGSizeZero;
-        
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
-        collectionView.alwaysBounceVertical = YES;
-        collectionView.pagingEnabled = NO;
-        collectionView.backgroundColor = [UIColor clearColor];
+        YYMessageCollectionView *collectionView = [[YYMessageCollectionView alloc] initWithFrame:self.view.bounds];
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        collectionView.showsVerticalScrollIndicator = NO;
-        collectionView.showsHorizontalScrollIndicator = NO;
         [collectionView registerClass:[YYMessageCellText class] forCellWithReuseIdentifier:[YYMessageCellText identifier]];
         _collectionView = collectionView;
     }
     return _collectionView;
 }
 
-#pragma mark- UICollectionViewDataSource,UICollectionViewDelegate
+#pragma mark - UICollectionViewDataSource,UICollectionViewDelegate
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -100,6 +87,24 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - YYMessageCellBaseDelegate
+
+- (void)yyMessageCellBase:(YYMessageCellBase *)cell didClickItem:(YYMessageItem)itemType atIndexPath:(NSIndexPath *)indexPath withMessageModel:(YYMessageModel *)messageModel {
+    switch (itemType) {
+        case YYMessageItemAvatar: {
+            break;
+        }
+        case YYMessageItemBubble: {
+            break;
+        }
+        case YYMessageItemOther: {
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 #pragma mark - Private

@@ -7,6 +7,7 @@
 //
 
 #import "YYMessageCollectionView.h"
+#import "YYMessageCellLayoutConfig.h"
 
 @implementation YYMessageCollectionView
 
@@ -20,7 +21,15 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    flowLayout.minimumInteritemSpacing = 0.0f;
+    flowLayout.minimumLineSpacing = 10.0f;
+    flowLayout.sectionInset = UIEdgeInsetsZero;
+    flowLayout.footerReferenceSize = CGSizeZero;
+    flowLayout.headerReferenceSize = CGSizeZero;
+    
+    if (self = [super initWithFrame:frame collectionViewLayout:flowLayout]) {
         [self setContext];
     }
     return self;
@@ -29,7 +38,7 @@
 - (void)setContext {
     self.alwaysBounceVertical = YES;
     self.pagingEnabled = NO;
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [YYMessageCellConfig defaultConfig].messageBackgroundColor;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
 }

@@ -10,4 +10,6 @@
 
 @interface YYMessageBubbleView : UIView
 
+@property (nonatomic, assign) BOOL isOutgoing;
+
 @end

@@ -16,9 +16,17 @@
 @class YYMessageCellConfig;
 @class YYMessageCellBase;
 @class YYMessageModel;
+
+typedef NS_ENUM(NSUInteger, YYMessageItem) {
+    YYMessageItemAvatar,//头像
+    YYMessageItemBubble,//气泡
+    YYMessageItemOther,
+};
+
 @protocol YYMessageCellBaseDelegate <NSObject>
 
-- (void)yyMessageCellBase:(YYMessageCellBase *)cell didClickedAtIndexPath:(NSIndexPath *)indexPath withMessageModel:(YYMessageModel *)messageModel;
+@required
+- (void)yyMessageCellBase:(YYMessageCellBase *)cell didClickItem:(YYMessageItem)itemType atIndexPath:(NSIndexPath *)indexPath withMessageModel:(YYMessageModel *)messageModel;
 
 @end
 
@@ -42,6 +50,11 @@
 @property (nonatomic, strong) YYMessageBubbleView *bubbleContainerView;
 //@property (nonatomic, strong) UIImageView *bubbleImageView;
 
+/**
+ *  继承YYMessageCellBase后，在bubbleContainerView上添加的自定义View
+ 用于自动计算位置
+ */
+@property (nonatomic, weak) UIView *bubbleSubViewCustomer;
 
 /**
  *  cell的唯一标志符

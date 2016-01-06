@@ -28,7 +28,7 @@
 
 + (instancetype)messageTextOutgoing {
     YYMessage *message = [YYMessage new];
-    message.text = @"合法i啊违法违纪发呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵";
+    message.text = @"合法i呵呵呵呵呵呵呵呵呵呵呵";
     message.senderName = @"hehe";
     message.isOutgoing = YES;
     return message;
