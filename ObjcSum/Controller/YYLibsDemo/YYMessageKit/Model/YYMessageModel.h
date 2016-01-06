@@ -40,5 +40,9 @@
  */
 - (void)calculateSizeInWidth:(CGFloat)width;
 
+/**
+ *  清除缓存的布局数据，contentSize，cellHeight
+ */
+- (void)cleanCacheLayout;
 
 @end

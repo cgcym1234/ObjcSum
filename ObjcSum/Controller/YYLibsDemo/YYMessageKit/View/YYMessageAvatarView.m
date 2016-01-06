@@ -33,11 +33,6 @@
 
 #pragma mark - Public
 
-- (void)setRound:(BOOL)round {
-    self.layer.masksToBounds = round;
-    self.layer.cornerRadius = self.width/2;
-}
-
 - (void)setImage:(UIImage *)image {
     [self setImage:image placeholderImage:nil];
 }

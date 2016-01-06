@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, strong) NSArray *messageArray;
+
+@property (nonatomic, strong) NSIndexPath *lastVisibleIndexPathBeforeRotation;
 @end
 
 @implementation YYMessageViewController
@@ -21,30 +23,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.view addSubview:self.collectionView];
+    [self.collectionView layoutEqualParent];
+    [self loadData];
+}
+
+- (void)loadData {
     _messageArray = @[
-                   [YYMessage messageTextOutgoing],
-                   [YYMessage messageTextInComing],
-                   [YYMessage messageTextOutgoing],
-                   [YYMessage messageTextOutgoing],
-                   [YYMessage messageTextOutgoing],
-                   [YYMessage messageTextOutgoing],
-                   [YYMessage messageTextInComing],
-                   ];
+                      [YYMessage messageTextOutgoing],
+                      [YYMessage messageTextInComing],
+                      [YYMessage messageTextOutgoing],
+                      [YYMessage messageTextOutgoing],
+                      [YYMessage messageTextOutgoing],
+                      [YYMessage messageTextOutgoing],
+                      [YYMessage messageTextInComing],
+                      ];
     NSMutableArray *arr = [NSMutableArray new];
     for (YYMessage *message in _messageArray) {
         [arr addObject:[self makeModel:message]];
     }
     _dataArray = arr;
-    [self.view addSubview:self.collectionView];
+    [_collectionView reloadData];
 }
 
 - (void)viewDidLayoutSubviews {
-    _collectionView.frame = self.view.bounds;
+    NSLog(@"viewDidLayoutSubviews");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (YYMessageCollectionView *)collectionView {
@@ -117,6 +124,28 @@
     YYMessageModel *model = [YYMessageModel modelWithMessage:message];
     [self layoutModel:model];
     return model;
+}
+
+- (void)refreshModelLayout {
+    [_dataArray enumerateObjectsUsingBlock:^(YYMessageModel *messageMoel, NSUInteger idx, BOOL * _Nonnull stop) {
+        [messageMoel cleanCacheLayout];
+        [messageMoel calculateSizeInWidth:self.view.width];
+    }];
+}
+
+#pragma mark - 旋转处理 (iOS7)
+
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    _lastVisibleIndexPathBeforeRotation = [_collectionView indexPathsForVisibleItems].lastObject;
+    
+    [_collectionView.collectionViewLayout invalidateLayout];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self refreshModelLayout];
+    [_collectionView reloadData];
+    [_collectionView scrollToItemAtIndexPath:_lastVisibleIndexPathBeforeRotation atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
 }
 
 @end

@@ -47,7 +47,7 @@
     _shouldShowNickName = YES;
 }
 
-#pragma mark - Private
+#pragma mark - Public
 
 - (void)calculateSizeInWidth:(CGFloat)width {
     if (CGSizeEqualToSize(_contentSize, CGSizeZero)) {
@@ -55,6 +55,16 @@
         _cellHeight = [self calculateCellHeight];
     }
 }
+
+/**
+ *  清楚缓存的布局数据，contentSize，cellHeight
+ */
+- (void)cleanCacheLayout {
+    _contentSize = CGSizeZero;
+    _cellHeight = 0;
+}
+
+#pragma mark - Private
 
 - (CGFloat)calculateCellHeight {
     YYMessageCellConfig *cellConfig = [YYMessageCellConfig defaultConfig];
