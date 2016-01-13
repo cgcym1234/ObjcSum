@@ -62,7 +62,7 @@ typedef NS_ENUM(NSUInteger, YYMessageItem) {
 + (NSString *)identifier;
 
 /**
- *  一些额外的初始化，子类覆盖的话需要调用super
+ *  一些必须的初始化，子类覆盖的话需要调用super
  */
 - (void)setContext;
 

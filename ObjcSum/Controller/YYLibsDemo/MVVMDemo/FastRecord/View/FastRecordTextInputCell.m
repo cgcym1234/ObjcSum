@@ -42,9 +42,9 @@
         weakSelf.textView.inputView = currentType == FastRecordAccessoryViewTypeText ? nil : weakSelf.inputView;
         [weakSelf.textView reloadInputViews];
         if (currentType == FastRecordAccessoryViewTypeText) {
-            [FastRecordVoiceInputViewDim dismiss];
+//            [FastRecordVoiceInputViewDim dismiss];
         } else {
-            [FastRecordVoiceInputViewDim showMarginBottom:(_keyboardHeigth)];
+//            [FastRecordVoiceInputViewDim showMarginBottom:(_keyboardHeigth)];
         }
 //        weakSelf.textView.hidden = currentType == FastRecordAccessoryViewTypeText ? NO : YES;
     };
@@ -135,6 +135,10 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:FastRecordTextInputCellTextViewDidChangedHeigthNotification object:nil];
         _textViewMaxHeight.constant = _textViewContentSizeHeigth+10;
         NSLog(@"%lf, %@", _textViewContentSizeHeigth, NSStringFromCGRect(textView.bounds));
+        CGRect frme = _inputAccessory.bounds;
+        frme.size.height = _textViewContentSizeHeigth+10;
+        _inputAccessory.bounds = frme;
+        
     }
 }
 

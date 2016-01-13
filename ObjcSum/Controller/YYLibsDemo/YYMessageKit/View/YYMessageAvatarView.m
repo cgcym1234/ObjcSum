@@ -29,7 +29,12 @@
 
 - (void)setContext {
     [self addTarget:self action:@selector(touchUpInsideCallback:) forControlEvents:UIControlEventTouchUpInside];
+//    self.backgroundColor= [UIColor redColor];
 }
+
+//- (UIEdgeInsets)alignmentRectInsets {
+//    return UIEdgeInsetsMake(10, 10, 10, 20);
+//}
 
 #pragma mark - Public
 

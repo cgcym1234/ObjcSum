@@ -8,16 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#define AppStoreChannel        @"Appstore"   // Appstore渠道，默认值
+
 @interface AppInfo : NSObject
 
-//渠道，以AppConfig.plist中配置为准，如果没配置，使用AppStoreChannel
-@property (nonatomic, copy) NSString *appChannel;
 
 //是否为第一次启动标记，如果是第一次启动则不需要提示wifi联网信息
 @property (nonatomic, assign) BOOL beFirstLaunch;
 
 //全局是否正在展示需要横屏旋转的图像（注意需要出入重置）
 @property (nonatomic, assign) BOOL beShowImage;
+
+//渠道，以AppConfig.plist中配置为准，如果没配置，使用AppStoreChannel
+@property (nonatomic, copy) NSString *appChannel;
 
 //hash 后的UUID
 @property (nonatomic, strong) NSString *appUUID;

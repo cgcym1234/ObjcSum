@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSObject+YYMessage.h"
 
 @interface UIView (YYMessage)
+
++ (instancetype)newInstanceFromNib;
 
 - (id)subviewWithTag:(NSInteger)tag;
 

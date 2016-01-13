@@ -70,8 +70,6 @@
         _bubbleSubViewCustomer.right = _bubbleContainerView.width - _cellConfig.bubbleViewInsets.right;
     }
     
-//    _bubbleImageView.size = _bubbleContainerView.size;
-    
     _cellBottomLabel.frame = CGRectMake(x,
                                      _bubbleContainerView.bottom,
                                      labeWidth,
@@ -80,21 +78,6 @@
 }
 
 #pragma mark - Public
-
-- (void)setContext {
-    _cellConfig = [YYMessageCellConfig defaultConfig];
-    
-    [self.contentView addSubview:self.cellTopLabel];
-    [self.contentView addSubview:self.bubbleTopLabel];
-    
-    [self.contentView addSubview:self.avatarImageView];
-//    [self.bubbleContainerView addSubview:self.bubbleImageView];
-    [self.contentView addSubview:self.bubbleContainerView];
-    
-    [self.contentView addSubview:self.cellBottomLabel];
-    self.contentView.backgroundColor = [UIColor clearColor];
-    self.backgroundColor = [UIColor clearColor];
-}
 
 /**
  *  cell的唯一标志符
@@ -115,6 +98,23 @@
 }
 
 #pragma mark - Private
+
+- (void)setContext {
+    _cellConfig = [YYMessageCellConfig defaultConfig];
+    
+    [self.contentView addSubview:self.cellTopLabel];
+    [self.contentView addSubview:self.bubbleTopLabel];
+    
+    [self.contentView addSubview:self.avatarImageView];
+    //    [self.bubbleContainerView addSubview:self.bubbleImageView];
+    [self.contentView addSubview:self.bubbleContainerView];
+    
+    [self.contentView addSubview:self.cellBottomLabel];
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
+}
+
+#pragma mark - Getters and Setters
 
 - (void)setCellTopLabelText:(NSString *)text {
     _cellTopLabel.text = text;
@@ -167,7 +167,7 @@
         YYMessageAvatarView *avatarView = [YYMessageAvatarView new];
         avatarView.bounds = CGRectMake(0, 0, _cellConfig.avatarImageViewWH, _cellConfig.avatarImageViewWH);
 //        avatarView.contentMode = UIViewContentModeScaleAspectFit;
-        avatarView.round = YES;
+//        avatarView.round = YES;
         _avatarImageView = avatarView;
         _avatarImageView.image = [UIImage imageNamed:@"ChatWindow_DefaultAvatar"];
         MacroWeakSelf(weakSelf);

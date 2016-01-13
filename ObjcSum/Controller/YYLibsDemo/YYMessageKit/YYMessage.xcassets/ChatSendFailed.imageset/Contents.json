@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Chat_Not-sent.png"
+      "filename" : "ChatSendFailed.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Chat_Not-sent@2x.png"
+      "filename" : "ChatSendFailed@2x.png"
     },
     {
       "idiom" : "universal",

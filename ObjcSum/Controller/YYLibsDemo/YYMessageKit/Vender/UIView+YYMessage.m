@@ -10,6 +10,10 @@
 
 @implementation UIView (YYMessage)
 
++ (instancetype)newInstanceFromNib {
+    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:[self className] owner:nil options:nil];
+    return nibViews.firstObject;
+}
 #pragma mark - 圆形设置
 
 - (void)setRound:(BOOL)round {

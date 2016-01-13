@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "bubble_stroke.png"
+      "filename" : "bubble_stroked_downward.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "bubble_stroke@2x.png"
+      "filename" : "bubble_stroked_downward@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "bubble_stroke@3x.png"
+      "filename" : "bubble_stroked_downward@3x.png"
     }
   ],
   "info" : {

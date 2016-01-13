@@ -9,22 +9,24 @@
 #import "YYMessageViewController.h"
 #import "YYMessageCellText.h"
 #import "YYMessageModel.h"
+#import "YYMessageInputToolManager.h"
 
-@interface YYMessageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, YYMessageCellBaseDelegate>
+@interface YYMessageViewController ()
+<UICollectionViewDelegate, UICollectionViewDataSource, YYMessageCellBaseDelegate, YYMessageInputToolManagerDelegate>
 
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, strong) NSArray *messageArray;
 
 @property (nonatomic, strong) NSIndexPath *lastVisibleIndexPathBeforeRotation;
+@property (nonatomic, strong) YYMessageInputToolManager *inputToolManager;
 @end
 
 @implementation YYMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self.view addSubview:self.collectionView];
-    [self.collectionView layoutEqualParent];
+    
+    [self setContext];
     [self loadData];
 }
 
@@ -52,17 +54,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (YYMessageCollectionView *)collectionView {
-    if (!_collectionView) {
-        YYMessageCollectionView *collectionView = [[YYMessageCollectionView alloc] initWithFrame:self.view.bounds];
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-        [collectionView registerClass:[YYMessageCellText class] forCellWithReuseIdentifier:[YYMessageCellText identifier]];
-        _collectionView = collectionView;
-    }
-    return _collectionView;
 }
 
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegate
@@ -114,7 +105,25 @@
     }
 }
 
+#pragma mark - YYMessageInputToolManagerDelegate
+
+- (void)yyMessageInputToolManager:(YYMessageInputToolManager *)manager didSendMessage:(id)messageObj messageType:(YYMessageType)messageType {
+    
+}
+
+- (void)yyMessageInputToolManager:(YYMessageInputToolManager *)manager willTranslateToFrame:(CGRect)toFrame fromFrame:(CGRect)fromFrame {
+    
+}
+
 #pragma mark - Private
+
+- (void)setContext {
+    [self.view addSubview:self.collectionView];
+    [self.collectionView layoutEqualParent];
+    
+    if (self.inputToolManager) {
+    }
+}
 
 - (void)layoutModel:(YYMessageModel *)model {
     [model calculateSizeInWidth:self.collectionView.width];
@@ -133,19 +142,43 @@
     }];
 }
 
+#pragma mark - Getters
+
+- (YYMessageCollectionView *)collectionView {
+    if (!_collectionView) {
+        YYMessageCollectionView *collectionView = [[YYMessageCollectionView alloc] initWithFrame:self.view.bounds];
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        [collectionView registerClass:[YYMessageCellText class] forCellWithReuseIdentifier:[YYMessageCellText identifier]];
+        _collectionView = collectionView;
+    }
+    return _collectionView;
+}
+
+- (YYMessageInputToolManager *)inputToolManager {
+    if (!_inputToolManager) {
+        YYMessageInputToolManager *inputToolManager = [[YYMessageInputToolManager alloc] initWithDelegate:self inputToolBarContainerView:self.view];
+        _inputToolManager = inputToolManager;
+    }
+    return _inputToolManager;
+}
+
 #pragma mark - 旋转处理 (iOS7)
 
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     _lastVisibleIndexPathBeforeRotation = [_collectionView indexPathsForVisibleItems].lastObject;
-    
     [_collectionView.collectionViewLayout invalidateLayout];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [self refreshModelLayout];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    
     [_collectionView reloadData];
-    [_collectionView scrollToItemAtIndexPath:_lastVisibleIndexPathBeforeRotation atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+    [_collectionView scrollToItemAtIndexPath:_lastVisibleIndexPathBeforeRotation atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
 }
 
 @end
