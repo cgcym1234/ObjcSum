@@ -49,4 +49,16 @@
  */
 - (UIEdgeInsets)centerPointEdgeInsetsForImage;
 
++ (CGSize)sizeProperlyFromOrigin:(CGSize)originSize
+                             min:(CGSize)imageMinSize
+                             max:(CGSize)imageMaxSiz;
+#pragma mark - 获取Image
+
++ (UIImage *)imageByNameOrPath:(NSString *)imageNameOrPath;
+
+- (NSString *)saveToDiskAsThumbnail;
+- (NSString *)saveToDiskWithSize:(CGSize)size;
+
+- (UIImage *)imageByResizeToSize:(CGSize)size;
+
 @end

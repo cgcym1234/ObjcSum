@@ -33,7 +33,6 @@
 
 @interface YYBaseHttp ()
 
-@property (nonatomic) AFHTTPRequestOperationManager *operationManager;
 @property (nonatomic) AFHTTPSessionManager *sessoinManager;
 
 @end
@@ -48,9 +47,9 @@
     self = [super init];
     
     if (self) {
-        _operationManager = [AFHTTPRequestOperationManager manager];
-        [_operationManager setRequestSerializer:[YYJsonRequestSerializer new]];
-        [_operationManager setResponseSerializer:[YYJsonResponseSerializer new]];
+        _sessoinManager = [AFHTTPSessionManager manager];
+        [_sessoinManager setRequestSerializer:[YYJsonRequestSerializer new]];
+        [_sessoinManager setResponseSerializer:[YYJsonResponseSerializer new]];
     }
     return self;
 }
@@ -63,67 +62,39 @@
                            userInfo:@{NSLocalizedDescriptionKey :message}];
 }
 
-- (AFHTTPRequestOperation *)requestWithDelegate:(__weak id)delegate
-                                     urlRequest:(NSMutableURLRequest *)request
-                                completionBlock:(YYBaseHttpCompletionBlock)completion {
-    AFHTTPRequestOperation *httpOperation = [self.operationManager HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        if (completion) {
-            completion(responseObject, nil, operation);
-        }
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        if (error.code == NSURLErrorCancelled) {
-            return;
-        }
-        if (completion) {
-            NSInteger code = operation.response ? operation.response.statusCode : error.code;
-            NSString *errorMsg = error.localizedDescription;
-            
-            if (code == NSURLErrorTimedOut) {
-                errorMsg = ErrorTimeOut;
-            } else if (code == NSURLErrorNotConnectedToInternet) {
-                errorMsg = ErrorNetworkUnvailable;
-            } else {
-                errorMsg = operation.responseObject;
-            }
-            
-            if (!errorMsg) {
-                errorMsg = @"无数据";//404
-            }
-            
-            NSLog(@"requestFailed error=%@, responseCode=%ld, errorMsg=%@", error, (long)code, errorMsg);
-            
-            completion(nil, [self errWithCode:code message:errorMsg], operation);
-        }
-    }];
-    
-    [httpOperation setRedirectResponseBlock:^NSURLRequest * _Nonnull(NSURLConnection * _Nonnull connection, NSURLRequest * _Nonnull request, NSURLResponse * _Nonnull redirectResponse) {
-        if (redirectResponse) {
-            NSLog(@"redirectResponse=%@,request=%@",redirectResponse,request);
-        }
-        return request;
-    }];
-    
-    return httpOperation;
-}
-
 #pragma mark - public
 //全局设置请求头
 - (void)setHttpRequestHeaderValue:(NSString *)value key:(NSString *)key {
-    [self.operationManager.requestSerializer setValue:value forHTTPHeaderField:key];
+    [self.sessoinManager.requestSerializer setValue:value forHTTPHeaderField:key];
 }
 
 /**
  *  取消网络请求
  */
 - (void)cancelAllRequests {
-    [self.operationManager.operationQueue cancelAllOperations];
+    [self.sessoinManager.operationQueue cancelAllOperations];
 }
 
-- (NSURLRequest *)getUrl:(NSString *)urlString
-              parameters:(NSDictionary *)parameters
-         completionBlock:(YYBaseHttpCompletionBlock)completion {
-    return [self requestWithDelegate:nil method:GET urlString:urlString parameters:parameters headers:nil useCache:IsUserCache removeCache:NO cacheExpiration:-1 progressBlock:nil completionBlock:completion];
+- (NSURLRequest *)getUrlString:(NSString *)urlString
+                    parameters:(NSDictionary *)parameters
+               completionBlock:(YYBaseHttpCompletionBlock)completion {
+    return [self requestWithDelegate:nil method:GET urlString:urlString parameters:parameters headers:nil useCache:IsUserCache removeCache:NO cacheExpiration:-1 uploadProgress:nil downloadProgress:nil completion:completion];
 }
+
+- (NSURLRequest *)postUrlString:(NSString *)urlString
+                     parameters:(NSDictionary *)parameters
+                completionBlock:(YYBaseHttpCompletionBlock)completion {
+    return [self requestWithHttpMethod:POST urlString:urlString parameters:parameters headers:nil completion:completion];
+}
+
+- (NSURLRequest *)requestWithHttpMethod:(NSString *)method
+                              urlString:(NSString *)urlString
+                             parameters:(NSDictionary *)parameters
+                                headers:(NSDictionary *)headers
+                             completion:(YYBaseHttpCompletionBlock)completion {
+    return [self requestWithDelegate:nil method:method urlString:urlString parameters:parameters headers:headers useCache:NO removeCache:NO cacheExpiration:-1 uploadProgress:nil downloadProgress:nil completion:completion];
+}
+
 
 /**
  *  发起一个http请求
@@ -149,20 +120,17 @@
                              useCache:(BOOL)useCache
                           removeCache:(BOOL)beRefreshCache
                       cacheExpiration:(NSTimeInterval)cacheExpiration
-                        progressBlock:(YYBaseHttpProgressBlock)progress
-                      completionBlock:(YYBaseHttpCompletionBlock)completion {
-//    NSMutableURLRequest *request = [self.operationManager.requestSerializer multipartFormRequestWithMethod:method URLString:urlString parameters:parameters constructingBodyWithBlock:NULL error:nil];
-    NSMutableURLRequest *request = nil;
-    
-    //上传
-    if (progress && [method isEqualToString:POST]) {
-        request = [self.operationManager.requestSerializer multipartFormRequestWithMethod:method URLString:urlString parameters:parameters constructingBodyWithBlock:NULL error:nil];
-    } else {
-        request = [self.operationManager.requestSerializer requestWithMethod:method URLString:urlString parameters:parameters error:nil];
-    }
-    
-    if (!request) {
-        completion(nil, [self errWithCode:ErrorCodeCustomer message:ErrorArgument], nil);
+                       uploadProgress:(YYBaseHttpProgressBlock)uploadProgress
+                     downloadProgress:(YYBaseHttpProgressBlock)downloadProgress
+                           completion:(YYBaseHttpCompletionBlock)completion {
+    NSError *serializationError = nil;
+    NSMutableURLRequest *request = [_sessoinManager.requestSerializer requestWithMethod:method URLString:[NSURL URLWithString:urlString relativeToURL:_sessoinManager.baseURL].absoluteString parameters:parameters error:&serializationError];
+    if (serializationError) {
+        if (completion) {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                completion(nil, serializationError, nil);
+            });
+        }
         return request;
     }
     
@@ -183,20 +151,36 @@
         [YYUrlCache setExpirationInterval:cacheExpiration forRequest:request];
     }
     
+    __block NSURLSessionDataTask *dataTask = nil;
+    dataTask = [_sessoinManager dataTaskWithRequest:request uploadProgress:uploadProgress downloadProgress:downloadProgress completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (completion) {
+            if (error) {
+                NSInteger code = [(NSHTTPURLResponse *)response statusCode];
+                NSString *errorMsg = error.localizedDescription;
+                
+                if (code == NSURLErrorTimedOut) {
+                    errorMsg = ErrorTimeOut;
+                } else if (code == NSURLErrorNotConnectedToInternet) {
+                    errorMsg = ErrorNetworkUnvailable;
+                } else {
+                    errorMsg = responseObject;
+                }
+                
+                if (!errorMsg) {
+                    errorMsg = @"无数据";//404
+                }
+                
+                NSLog(@"requestFailed error=%@, responseCode=%ld, errorMsg=%@", error, (long)code, errorMsg);
+                
+                completion(nil, [self errWithCode:code message:errorMsg], dataTask);
+            } else {
+                completion(responseObject, nil, dataTask);
+            }
+        }
+    }];
     
-    AFHTTPRequestOperation *operation = [self requestWithDelegate:delegate urlRequest:request completionBlock:completion];
-    
-    if (!operation) {
-        completion(nil, [self errWithCode:ErrorCodeCustomer message:@"无法生成 AFHTTPRequestOperation"], nil);
-        return request;
-    }
-    
-    if (progress) {
-        [operation setUploadProgressBlock:progress];
-    }
-    [self.operationManager.operationQueue addOperation:operation];
-    
-    return operation.request;
+    [dataTask resume];
+    return request;
 }
 
 

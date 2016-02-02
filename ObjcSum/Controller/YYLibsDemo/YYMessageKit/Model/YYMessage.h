@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "YYMessageDefinition.h"
 #import "YYMessageSetting.h"
+#import "YYMessageObject.h"
+
 /**
  *  消息结构
  */
@@ -34,6 +36,11 @@
  *  消息ID,唯一标识
  */
 @property (nonatomic, copy, readonly)         NSString *messageId;
+
+/**
+ *  消息附件，图片，语音等
+ */
+@property (nonatomic,strong)        id<YYMessageObject> messageObject;
 
 /**
  *  消息来源
@@ -85,8 +92,11 @@
 @property (nonatomic,assign,readonly)       BOOL isDeleted;
 
 
++ (instancetype)messageWithType:(YYMessageType)type content:(id)obj;
+
 + (instancetype)messageTextOutgoing;
 + (instancetype)messageTextInComing;
++ (instancetype)messageImageInComing;
 
 @end
 

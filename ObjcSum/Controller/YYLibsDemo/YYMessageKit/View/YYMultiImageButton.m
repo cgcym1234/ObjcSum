@@ -20,6 +20,10 @@
     _currentImageIndex = 0;
 }
 
+/**
+ *  拦截UIControlEventTouchUpInside方法，
+ 在点击之前先执行图片切换回调
+ */
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
     if (controlEvents & UIControlEventTouchUpInside) {
         __weak typeof(self) weakSelf = self;

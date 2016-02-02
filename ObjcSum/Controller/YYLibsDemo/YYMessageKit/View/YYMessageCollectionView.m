@@ -41,6 +41,7 @@
     self.backgroundColor = [YYMessageCellConfig defaultConfig].messageBackgroundColor;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
+    self.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
 
 

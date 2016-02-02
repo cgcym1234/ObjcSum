@@ -20,6 +20,13 @@
 
 @property (nonatomic, strong) NSMutableDictionary *dict;
 
+
+@property (nonatomic, strong) NSMutableArray *sectionArray;
+@property (nonatomic, strong) NSMutableArray *section0;
+@property (nonatomic, strong) NSMutableArray *section1;
+@property (nonatomic, strong) NSMutableArray *section3;
+@property (nonatomic, strong) NSMutableArray *section2;
+
 @end
 
 @implementation FoundationDemo
@@ -36,6 +43,17 @@
     
     [self addButtonWithTitle:@"序列化效率测试" action:^(UIButton *btn) {
         [weakSelf serialisationTest];
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
+    
+    
+    _section0 = [@[@"001", @"002"] mutableCopy];
+    _section1 = [@[@"101", @"102"] mutableCopy];
+    _section2 = [@[@"201", @"202"] mutableCopy];
+    _section3 = _section0;
+    _sectionArray = [@[_section0, _section1, _section3] mutableCopy];
+    [self addButtonWithTitle:@"修改数组" action:^(UIButton *btn) {
+        [weakSelf.section0 addObject:@"003"];
+        _section3 = _section2;
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
 }
 

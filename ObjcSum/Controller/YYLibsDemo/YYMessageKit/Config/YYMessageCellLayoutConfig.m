@@ -70,6 +70,16 @@
     _cellBottomLabelShow = !avatarImageViewShowAtTop;
 }
 
+- (CGSize)attachmentImageSizeMax {
+    CGFloat cellWidth = [UIScreen mainScreen].bounds.size.width;
+    return CGSizeMake(cellWidth - 184, cellWidth - 184);
+}
+
+- (CGSize)attachmentImageSizeMin {
+    CGFloat cellWidth = [UIScreen mainScreen].bounds.size.width;
+    return CGSizeMake(cellWidth / 4, cellWidth / 4);
+}
+
 #pragma mark - Public
 
 + (instancetype)defaultConfig {

@@ -28,7 +28,6 @@
 @property (nonatomic, readonly) BOOL shouldShowAvatar;
 @property (nonatomic, readonly) BOOL shouldShowNickName;
 
-@property (nonatomic, weak) Class<YYMessageCellLayoutConfig> cellLayoutDelegate;
 
 - (instancetype)initWithMessage:(YYMessage*)message;
 + (instancetype)modelWithMessage:(YYMessage*)message;

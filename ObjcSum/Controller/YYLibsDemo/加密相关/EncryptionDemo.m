@@ -28,7 +28,7 @@
     
     
     NSDictionary *parameters = @{@"audit":@"N", @"start": @"0"};
-    [[YYBaseHttp new] getUrl:UrlTasksTodo parameters:parameters completionBlock:^(id responseData, NSError *error, AFHTTPRequestOperation *operation) {
+    [[YYBaseHttp new] getUrl:UrlTasksTodo parameters:parameters completionBlock:^(id responseData, NSError *error, NSURLSessionDataTask *dataTask) {
         if (error) {
             NSLog(@"%@", error);
         }

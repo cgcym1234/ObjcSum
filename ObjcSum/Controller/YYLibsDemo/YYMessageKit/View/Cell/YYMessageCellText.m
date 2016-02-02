@@ -23,6 +23,17 @@
     _messageTextLabel.textColor = messageModel.message.isOutgoing ? self.cellConfig.messageTextColorOutgoing : self.cellConfig.messageTextColorIncoming;
 }
 
+#pragma mark - Private
+
+#pragma mark - Getter
+
+- (YYMessageTextLabel *)messageTextLabel {
+    if (!_messageTextLabel) {
+        _messageTextLabel = [[YYMessageCellConfig defaultConfig].messageTextLabel clone];
+    }
+    return _messageTextLabel;
+}
+
 #pragma mark - YYMessageCellLayoutConfig
 
 + (CGSize)contentSize:(YYMessageModel *)model cellWidth:(CGFloat)width {
@@ -37,17 +48,11 @@
     YYMessageTextLabel *textLabel = cellConfig.messageTextLabel;
     textLabel.text = model.message.text;
     CGSize contentSize = [textLabel sizeThatFits:CGSizeMake(textMaxWidth, CGFLOAT_MAX)];
+    NSLog(@"contentSize %@, %@", NSStringFromCGSize(contentSize), textLabel.text);
     return contentSize;
 }
 
-#pragma mark - Private
 
-- (YYMessageTextLabel *)messageTextLabel {
-    if (!_messageTextLabel) {
-        _messageTextLabel = [[YYMessageCellConfig defaultConfig].messageTextLabel clone];
-    }
-    return _messageTextLabel;
-}
 
 
 

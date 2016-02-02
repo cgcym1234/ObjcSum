@@ -14,11 +14,8 @@
 static const BOOL IsUserCache = YES;
 
 
-typedef void (^YYBaseHttpCompletionBlock)(id responseData, NSError *error, AFHTTPRequestOperation *operation);
-typedef void (^YYBaseHttpProgressBlock)(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite);
-
-//typedef void(^YYBaseHttpSuccessBlock)(id responseData, AFHTTPRequestOperation *operation);
-//typedef void(^YYBaseHttpFailureBlock)(NSError *error, AFHTTPRequestOperation *operation);
+typedef void (^YYBaseHttpCompletionBlock)(id responseData, NSError *error, NSURLSessionDataTask *dataTask);
+typedef void (^YYBaseHttpProgressBlock)(NSProgress *progress);
 
 @interface YYBaseHttp : NSObject
 
@@ -34,9 +31,13 @@ typedef void (^YYBaseHttpProgressBlock)(NSUInteger bytesWritten, long long total
 
 #pragma mark - Get
 
-- (NSURLRequest *)getUrl:(NSString *)urlString
-              parameters:(NSDictionary *)parameters
-         completionBlock:(YYBaseHttpCompletionBlock)completion;
+- (NSURLRequest *)getUrlString:(NSString *)urlString
+                    parameters:(NSDictionary *)parameters
+               completionBlock:(YYBaseHttpCompletionBlock)completion;
+
+- (NSURLRequest *)postUrlString:(NSString *)urlString
+                    parameters:(NSDictionary *)parameters
+               completionBlock:(YYBaseHttpCompletionBlock)completion;
 
 /**
  *  发起一个http请求
@@ -49,7 +50,8 @@ typedef void (^YYBaseHttpProgressBlock)(NSUInteger bytesWritten, long long total
  *  @param useCache        是否使用该url的缓存
  *  @param beRefreshCache  是否清除该url的缓存
  *  @param cacheExpiration 设置该url缓存的有效期
- *  @param progress        上传的回调
+ *  @param uploadProgress  上传的回调
+ *  @param downloadProgress 下载的回调
  *  @param completion      请求完成的回调，包含成功返回的数据或失败的信息
  *
  *  @return 请求的NSURLRequest
@@ -62,8 +64,9 @@ typedef void (^YYBaseHttpProgressBlock)(NSUInteger bytesWritten, long long total
                              useCache:(BOOL)useCache
                           removeCache:(BOOL)beRefreshCache
                       cacheExpiration:(NSTimeInterval)cacheExpiration
-                        progressBlock:(YYBaseHttpProgressBlock)progress
-                      completionBlock:(YYBaseHttpCompletionBlock)completion;
+                       uploadProgress:(YYBaseHttpProgressBlock)uploadProgress
+                     downloadProgress:(YYBaseHttpProgressBlock)downloadProgress
+                           completion:(YYBaseHttpCompletionBlock)completion;
 
 
 @end

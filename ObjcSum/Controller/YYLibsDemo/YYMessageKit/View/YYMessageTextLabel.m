@@ -10,7 +10,7 @@
 
 @implementation YYMessageTextLabel
 
-#pragma mark - Life Cycle
+#pragma mark - Initialization
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {

@@ -80,6 +80,10 @@
 @property (nonatomic, assign) UIEdgeInsets contentViewInsets;
 @property (nonatomic, assign) UIEdgeInsets bubbleViewInsets;
 
+//预览小图的尺寸限制
+@property (nonatomic, assign) CGSize attachmentImageSizeMax;
+@property (nonatomic, assign) CGSize attachmentImageSizeMin;
+
 //用于计算文本大小
 @property (nonatomic, strong) YYMessageTextLabel *messageTextLabel;
 

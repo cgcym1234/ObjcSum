@@ -37,15 +37,15 @@
                   password:(NSString *)password
                    success:(void(^)(LoginModel *loginModel))success
                    failure:(void(^)(NSString *errorString))failure {
-    [[HttpManager sharedInstance] requestWithDelegate:nil method:@"POST" urlString:UrlLogin parameters:@{@"loginName":loginName, @"password": password} headers:nil useCache:NO removeCache:NO cacheExpiration:0 progressBlock:nil completionBlock:^(id responseData, NSError *error, AFHTTPRequestOperation *operation) {
-        if (!error || error.code == 200) {
-            success([[LoginModel alloc] initWithDictionary:responseData]);
-        } else if (error.code == 401) {
-            failure(@"用户名或密码错误！");
-        } else {
-            failure(error.localizedDescription);
-        }
-    }];
+//    [[HttpManager sharedInstance] requestWithDelegate:nil method:@"POST" urlString:UrlLogin parameters:@{@"loginName":loginName, @"password": password} headers:nil useCache:NO removeCache:NO cacheExpiration:0 progressBlock:nil completionBlock:^(id responseData, NSError *error, AFHTTPRequestOperation *operation) {
+//        if (!error || error.code == 200) {
+//            success([[LoginModel alloc] initWithDictionary:responseData]);
+//        } else if (error.code == 401) {
+//            failure(@"用户名或密码错误！");
+//        } else {
+//            failure(error.localizedDescription);
+//        }
+//    }];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "YYMessage.h"
+#import "YYMessageObjectImage.h"
 
 @interface YYMessage ()
 
@@ -24,6 +25,16 @@
 
 @implementation YYMessage
 
++ (instancetype)messageWithType:(YYMessageType)type content:(id)obj {
+    YYMessage *message = [YYMessage new];
+    message.text = obj;
+    message.senderName = @"rilong";
+    message.isOutgoing = YES;
+    message.messageType = type;
+    return message;
+}
+
+
 #pragma mark - Demo
 
 + (instancetype)messageTextOutgoing {
@@ -38,6 +49,15 @@
     message.text = @"在Xcode开发调试App时，一旦遇到崩溃问题，开发者可以直接使用Xcode的调试器定位分析。\n但如果App发布上线，开发者不可能进行调试，只能通过分析系统记录的崩溃日志来定位问题，在这份崩溃日志文件中，会指出App出错的函数内存地址，而这些函数地址是可以在.dSYM文件中找到具体的文件名、函数名和行号信息的，这正是符号表的重要作用所在。";
     message.senderName = @"日龙包";
     message.isOutgoing = NO;
+    return message;
+}
+
++ (instancetype)messageImageInComing {
+    YYMessage *message = [YYMessage new];
+    message.messageObject = [[YYMessageObjectImage alloc] initWithImage:[UIImage imageNamed:@"demo_avatar_cook"]];
+    message.senderName = @"日龙包";
+    message.isOutgoing = NO;
+    message.messageType = YYMessageTypeImage;
     return message;
 }
 

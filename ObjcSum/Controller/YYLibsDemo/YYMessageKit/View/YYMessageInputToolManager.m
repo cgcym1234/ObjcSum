@@ -18,7 +18,8 @@ static NSInteger const HeightForInputToolBar = 49;
 
 static NSString * const KeyCell = @"KeyCell";
 
-@interface YYMessageInputToolManager ()<YYKeyboardObserver>
+@interface YYMessageInputToolManager ()
+<YYKeyboardObserver, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *assetsButton;
 @property (nonatomic, strong) YYMessageInputToolBar *inputToolBar;
@@ -63,7 +64,30 @@ static NSString * const KeyCell = @"KeyCell";
     CGRect keyboardFrame = [keyboardManager convertRect:transition.toFrame toView:_inputToolBarContainerView];
     CGRect originFrame = _inputToolBar.frame;
     _inputToolBar.bottom = keyboardFrame.origin.y;
+    _inputToolBar.width = keyboardFrame.size.width;
     [_delegate yyMessageInputToolManager:self willTranslateToFrame:_inputToolBar.frame fromFrame:originFrame];
+}
+
+#pragma mark UITextViewDelegate
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    BOOL ret = YES;
+    
+    //判断输入的字是否是回车，即按下return
+    if ([text isEqualToString:@"\n"]){
+        [_delegate yyMessageInputToolManager:self didSendMessage:_inputToolBar.inputTextView.text messageType:YYMessageTypeText];
+        ret = NO;
+    }
+    return ret;
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    if (textView.text.length >= 200) {
+//        [YYHud showTip:@"请将随手记内容保持在200个字以内"];
+        NSString *text = [textView.text substringToIndex:200];
+        textView.text = text;
+        return;
+    }
 }
 
 #pragma mark - Private methods
@@ -73,6 +97,7 @@ static NSString * const KeyCell = @"KeyCell";
     _inputToolBar.width = _inputToolBarContainerView.width;
     _inputToolBar.height = HeightForInputToolBar;
     _inputToolBar.bottom = _inputToolBarContainerView.height;
+    _inputToolBar.inputTextView.delegate = self;
     [[YYKeyboardManager defaultManager] addObserver:self];
 }
 

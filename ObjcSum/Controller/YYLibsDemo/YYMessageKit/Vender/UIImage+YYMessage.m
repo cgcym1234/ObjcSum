@@ -7,6 +7,9 @@
 //
 
 #import "UIImage+YYMessage.h"
+#import "NSString+YYMessage.h"
+#import "NSDate+YYMessage.h"
+#import "YYMessageCellLayoutConfig.h"
 
 @implementation UIImage (YYMessage)
 
@@ -75,5 +78,94 @@
 - (UIEdgeInsets)centerPointEdgeInsetsForImage {
     CGPoint center = CGPointMake(self.size.width / 2.0f, self.size.height / 2.0f);
     return UIEdgeInsetsMake(center.y, center.x, center.y, center.x);
+}
+
++ (CGSize)sizeProperlyFromOrigin:(CGSize)originSize
+                             min:(CGSize)imageMinSize
+                             max:(CGSize)imageMaxSiz {
+    CGSize size;
+    NSInteger imageWidth = originSize.width ,imageHeight = originSize.height;
+    NSInteger imageMinWidth = imageMinSize.width, imageMinHeight = imageMinSize.height;
+    NSInteger imageMaxWidth = imageMaxSiz.width, imageMaxHeight = imageMaxSiz.height;
+    if (imageWidth > imageHeight) //宽图
+    {
+        size.height = imageMinHeight;  //高度取最小高度
+        size.width = imageWidth * imageMinHeight / imageHeight;
+        if (size.width > imageMaxWidth)
+        {
+            size.width = imageMaxWidth;
+        }
+    }
+    else if(imageWidth < imageHeight)//高图
+    {
+        size.width = imageMinWidth;
+        size.height = imageHeight *imageMinWidth / imageWidth;
+        if (size.height > imageMaxHeight)
+        {
+            size.height = imageMaxHeight;
+        }
+    }
+    else//方图
+    {
+        if (imageWidth > imageMaxWidth)
+        {
+            size.width = imageMaxWidth;
+            size.height = imageMaxHeight;
+        }
+        else if(imageWidth > imageMinWidth)
+        {
+            size.width = imageWidth;
+            size.height = imageHeight;
+        }
+        else
+        {
+            size.width = imageMinWidth;
+            size.height = imageMinHeight;
+        }
+    }
+    return size;
+}
+
+#pragma mark - 获取Image
+
++ (UIImage *)imageByNameOrPath:(NSString *)imageNameOrPath {
+    UIImage *image = [UIImage imageNamed:imageNameOrPath];
+    if (!image) {
+        image = [UIImage imageWithContentsOfFile:imageNameOrPath];
+    }
+    return image;
+}
+
+- (NSString *)saveToDiskAsThumbnail {
+    return [self saveToDiskWithSize:[UIImage sizeProperlyFromOrigin:self.size min:[YYMessageCellConfig defaultConfig].attachmentImageSizeMin max:[YYMessageCellConfig defaultConfig].attachmentImageSizeMax]];
+}
+
+- (NSString *)saveToDiskWithSize:(CGSize)targetSize {
+    UIImage *targetSizeImage = [self imageByResizeToSize:targetSize];
+    if (targetSizeImage) {
+        NSDate *currentDate = [NSDate date];
+        
+        NSString *filePath = [[NSString directoryMessageHomeImages] stringByAppendingPathComponent:[currentDate stringWithDefaultFormat]];
+        NSString *fileName = [NSString stringWithFormat:@"%.lf", currentDate.timeIntervalSince1970*1000*1000];
+        NSString *fullPath = [filePath stringByAppendingPathComponent:fileName];
+        
+        NSError *error;
+        [[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:&error];
+        [UIImagePNGRepresentation(targetSizeImage) writeToFile:fullPath options:NSDataWritingAtomic error:&error];
+        if (!error) {
+            return fullPath;
+        }
+        return nil;
+    }
+     return nil;
+}
+
+- (UIImage *)imageByResizeToSize:(CGSize)size {
+    if (size.width <= 0 || size.height <= 0) return nil;
+    UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 @end

@@ -9,6 +9,7 @@
 #import "YYMessageModel.h"
 #import "YYMessage.h"
 #import "YYMessageCellText.h"
+#import "YYMessageCellImage.h"
 
 @interface YYMessageModel ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, readwrite) BOOL shouldShowAvatar;
 @property (nonatomic, readwrite) BOOL shouldShowNickName;
 
+@property (nonatomic, weak) Class<YYMessageCellLayoutConfig> cellLayoutDelegate;
 @end
 
 @implementation YYMessageModel
@@ -39,6 +41,11 @@
     switch (message.messageType) {
         case YYMessageTypeText:
             _cellLayoutDelegate = [YYMessageCellText class];
+            _cellIdentifier = [YYMessageCellText identifier];
+            break;
+        case YYMessageTypeImage:
+            _cellLayoutDelegate = [YYMessageCellImage class];
+            _cellIdentifier = [YYMessageCellImage identifier];
             break;
             
         default:
