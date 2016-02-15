@@ -125,4 +125,79 @@
     return YES;
 }
 
+
+#pragma mark - 解决手势冲突
+
+#pragma mark 1 requireGestureRecognizerToFail
+
+- (void)gestureConflict {
+    UITapGestureRecognizer *ges1;
+    UITapGestureRecognizer *ges2;
+    
+    /**
+     *  当ges1无法触发，ges2才生效
+     */
+    [ges2 requireGestureRecognizerToFail:ges1];
+    
+}
+
+#pragma mark 2 代理
+
+/**
+ *  下面2个返回YES，意味着必须等到某个手势彻底无法触发才能响应另一个手势。
+ 
+ 如果设定了手势间的依赖，意味着识别器的反应时间会有所延迟，
+ 因为它要等到另一个识别器彻底失败为止。
+ 
+ 比如，要同时识别单击和双击，那么再第一次点击后，需要多等一会儿才能确定
+ 是否发生了单机。
+ 
+ 为了适应这种规则变化，GUI的响应能力会下降，单击操作会稍微"迟钝"。
+ 
+ 如果有非常高的要求，不要同时设置2种手势，可以动态添加删除。
+ */
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return YES;
+//}
+//
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return YES;
+//}
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

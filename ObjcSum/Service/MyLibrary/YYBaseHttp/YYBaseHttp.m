@@ -33,7 +33,7 @@
 
 @interface YYBaseHttp ()
 
-@property (nonatomic) AFHTTPSessionManager *sessoinManager;
+
 
 @end
 

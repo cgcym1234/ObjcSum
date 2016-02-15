@@ -19,6 +19,8 @@ typedef void (^YYBaseHttpProgressBlock)(NSProgress *progress);
 
 @interface YYBaseHttp : NSObject
 
+@property (nonatomic) AFHTTPSessionManager *sessoinManager;
+
 /**
  *  全局设置请求头
  */

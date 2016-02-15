@@ -126,6 +126,7 @@
 		1F45E40B1C20137B00938B2E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E4071C20137B00938B2E /* NSObject+YYModel.m */; };
 		1F45E40C1C20137B00938B2E /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E4091C20137B00938B2E /* YYClassInfo.m */; };
 		1F45E40F1C210D3A00938B2E /* YYChrysanthemum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E40E1C210D3A00938B2E /* YYChrysanthemum.m */; };
+		1F48F2461C61993B00416803 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48F2451C61993B00416803 /* HitTestView.m */; };
 		1F5A56841C2B9F3A000E9E04 /* FastRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56561C2B9F3A000E9E04 /* FastRecord.m */; };
 		1F5A56851C2B9F3A000E9E04 /* FastRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A56571C2B9F3A000E9E04 /* FastRecord.storyboard */; };
 		1F5A56861C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56591C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m */; };
@@ -683,6 +684,8 @@
 		1F45E40A1C20137B00938B2E /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		1F45E40D1C210D3A00938B2E /* YYChrysanthemum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYChrysanthemum.h; sourceTree = "<group>"; };
 		1F45E40E1C210D3A00938B2E /* YYChrysanthemum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYChrysanthemum.m; sourceTree = "<group>"; };
+		1F48F2441C61993B00416803 /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
+		1F48F2451C61993B00416803 /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
 		1F5A56551C2B9F3A000E9E04 /* FastRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastRecord.h; sourceTree = "<group>"; };
 		1F5A56561C2B9F3A000E9E04 /* FastRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastRecord.m; sourceTree = "<group>"; };
 		1F5A56571C2B9F3A000E9E04 /* FastRecord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FastRecord.storyboard; sourceTree = "<group>"; };
@@ -1479,6 +1482,8 @@
 				1F2BE0791C50B8E600E71E53 /* DragImageViewGesture.m */,
 				1F2BE07B1C50C3BB00E71E53 /* DragImageViewGesture3.h */,
 				1F2BE07C1C50C3BB00E71E53 /* DragImageViewGesture3.m */,
+				1F48F2441C61993B00416803 /* HitTestView.h */,
+				1F48F2451C61993B00416803 /* HitTestView.m */,
 			);
 			name = "iOS核心开发";
 			sourceTree = "<group>";
@@ -2473,6 +2478,7 @@
 		1F8B8A771BE20ADE00D81096 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EEB074671C644387001CB1ED /* CodeSnippets */,
 				1F8B8A781BE20AEE00D81096 /* Category */,
 				1F8B8ACC1BE2186800D81096 /* MyLibrary */,
 				1F8B8A831BE20BAF00D81096 /* ThirdLibrary */,
@@ -3078,6 +3084,13 @@
 			path = sqlite3.9;
 			sourceTree = "<group>";
 		};
+		EEB074671C644387001CB1ED /* CodeSnippets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CodeSnippets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3478,6 +3491,7 @@
 				1F5A57701C2BA091000E9E04 /* NSObject+RACSelectorSignal.m in Sources */,
 				1F45E3FC1C20132400938B2E /* YYTransaction.m in Sources */,
 				1FD90ECA1C2A2F080020EAED /* YYDim.m in Sources */,
+				1F48F2461C61993B00416803 /* HitTestView.m in Sources */,
 				1FA4A5411BEC3B9D0076ECAA /* YYScrollSigmentCell.m in Sources */,
 				1F2BE06A1C4F8FF900E71E53 /* GestureDemo.m in Sources */,
 				1F45E3911C1E57DF00938B2E /* AppManager.m in Sources */,
