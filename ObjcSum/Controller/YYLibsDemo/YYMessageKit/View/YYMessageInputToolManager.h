@@ -21,11 +21,12 @@
 
 @end
 
-@interface YYMessageInputToolManager : UIView
+@interface YYMessageInputToolManager : NSObject
 
 @property (nonatomic, weak) id<YYMessageInputToolManagerDelegate> delegate;
 
 @property (nonatomic, weak) UIView *inputToolBarContainerView;
+@property (nonatomic, assign) CGFloat height;
 
 #pragma mark - Public
 

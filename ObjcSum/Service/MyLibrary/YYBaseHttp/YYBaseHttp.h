@@ -35,11 +35,11 @@ typedef void (^YYBaseHttpProgressBlock)(NSProgress *progress);
 
 - (NSURLRequest *)getUrlString:(NSString *)urlString
                     parameters:(NSDictionary *)parameters
-               completionBlock:(YYBaseHttpCompletionBlock)completion;
+                    completion:(YYBaseHttpCompletionBlock)completion;
 
 - (NSURLRequest *)postUrlString:(NSString *)urlString
-                    parameters:(NSDictionary *)parameters
-               completionBlock:(YYBaseHttpCompletionBlock)completion;
+                     parameters:(NSDictionary *)parameters
+                     completion:(YYBaseHttpCompletionBlock)completion;
 
 /**
  *  发起一个http请求

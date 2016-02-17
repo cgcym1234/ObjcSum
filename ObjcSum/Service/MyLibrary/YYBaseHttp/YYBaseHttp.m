@@ -77,13 +77,13 @@
 
 - (NSURLRequest *)getUrlString:(NSString *)urlString
                     parameters:(NSDictionary *)parameters
-               completionBlock:(YYBaseHttpCompletionBlock)completion {
+                    completion:(YYBaseHttpCompletionBlock)completion {
     return [self requestWithDelegate:nil method:GET urlString:urlString parameters:parameters headers:nil useCache:IsUserCache removeCache:NO cacheExpiration:-1 uploadProgress:nil downloadProgress:nil completion:completion];
 }
 
 - (NSURLRequest *)postUrlString:(NSString *)urlString
                      parameters:(NSDictionary *)parameters
-                completionBlock:(YYBaseHttpCompletionBlock)completion {
+                     completion:(YYBaseHttpCompletionBlock)completion {
     return [self requestWithHttpMethod:POST urlString:urlString parameters:parameters headers:nil completion:completion];
 }
 

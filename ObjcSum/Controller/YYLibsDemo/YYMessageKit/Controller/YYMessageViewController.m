@@ -46,7 +46,7 @@
     for (YYMessage *message in messageArray) {
         [_messageModelManager addMessage:message];
     }
-    [_collectionView reloadData];
+    [self reloadCollectionView];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -126,7 +126,7 @@
      *  要先调整contentInset，再调整contentOffset
      */
     [self setCollectionViewInsetsTopValue:0 bottomValue:bottom];
-    [self scrollToBottom:bottom animated:YES];
+    [self scrollToBottom:bottom animated:NO];
 }
 
 #pragma mark - Message
@@ -153,27 +153,6 @@
 - (void)onRecvMessages:(NSArray *)message {
 }
 
-//- (void)uiAddMessages:(NSArray *)messages{
-//    NSArray *insert = [self.sessionDatasource addMessages:messages];
-//    for (NIMMessage *message in messages) {
-//        NIMMessageModel *model = [[NIMMessageModel alloc] initWithMessage:message];
-//        [self layoutConfig:model];
-//    }
-//    [self.layoutManager insertTableViewCellAtRows:insert];
-//}
-//
-//- (void)uiDeleteMessage:(NIMMessage *)message{
-//    NIMMessageModel *model = [self makeModel:message];
-//    NSArray *indexs = [self.sessionDatasource deleteMessageModel:model];
-//    [self.layoutManager deleteCellAtIndexs:indexs];
-//}
-//
-//- (void)uiUpdateMessage:(NIMMessage *)message{
-//    NIMMessageModel *model = [self makeModel:message];
-//    NSInteger index = [self.sessionDatasource indexAtModelArray:model];
-//    [self.sessionDatasource.modelArray replaceObjectAtIndex:index withObject:model];
-//    [self.layoutManager updateCellAtIndex:index model:model];
-//}
 
 #pragma mark - Private
 
@@ -186,8 +165,32 @@
 }
 
 - (void)reloadCollectionView {
+    
+    /**
+     [_collectionView reloadData];
+     [self scrollToBottom:0 animated:NO];
+     如果是这样写，会发现scrollToBottom无效，
+     因为在[_collectionView reloadData]返回后，_collectionView的contentSize是zero的
+     
+     原因应该是reloadData 背后开启了分线程来处理这个事情，所以 reloadData 方法返回的时候，视图并没有完成刷新。
+     
+     使用下面方法，可以解决问题，不过可能出现crash
+     [_collectionView performBatchUpdates:^{
+     [_collectionView reloadData];
+     } completion:^(BOOL finished) {
+     [self scrollToBottom:0 animated:NO];
+     }];
+     */
+    
+    //完美方案如下
     [_collectionView reloadData];
-    [self scrollToBottom:0 animated:NO];
+    [_collectionView layoutIfNeeded];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self scrollToBottom:0 animated:NO];
+    });
+    /**
+     *  The reason this works is because the code within the dispatch block gets put to the back of line (also known as a queue). This means that it is waiting in line for all the main thread operations to finish, including reloadData()'s methods, before it becomes it's turn on the main thread.
+     */
 }
 
 - (void)setCollectionViewInsetsTopValue:(CGFloat)top bottomValue:(CGFloat)bottom
@@ -199,11 +202,11 @@
 
 - (void)scrollToBottom:(CGFloat)bottom animated:(BOOL)animated
 {
-    if ([self.collectionView numberOfSections] == 0) {
+    if ([_collectionView numberOfSections] == 0) {
         return;
     }
     
-    NSInteger items = [self.collectionView numberOfItemsInSection:0];
+    NSInteger items = [_collectionView numberOfItemsInSection:0];
     
     if (items == 0) {
         return;
@@ -236,6 +239,7 @@
     if (!_inputToolManager) {
         YYMessageInputToolManager *inputToolManager = [[YYMessageInputToolManager alloc] initWithDelegate:self inputToolBarContainerView:self.view];
         _inputToolManager = inputToolManager;
+        [self setCollectionViewInsetsTopValue:0 bottomValue:inputToolManager.height];
     }
     return _inputToolManager;
 }

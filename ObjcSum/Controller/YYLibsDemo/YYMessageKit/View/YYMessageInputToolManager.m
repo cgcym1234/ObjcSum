@@ -21,7 +21,7 @@ static NSString * const KeyCell = @"KeyCell";
 @interface YYMessageInputToolManager ()
 <YYKeyboardObserver, UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *assetsButton;
+//@property (weak, nonatomic) IBOutlet UIButton *assetsButton;
 @property (nonatomic, strong) YYMessageInputToolBar *inputToolBar;
 
 @end
@@ -99,6 +99,7 @@ static NSString * const KeyCell = @"KeyCell";
     _inputToolBar.bottom = _inputToolBarContainerView.height;
     _inputToolBar.inputTextView.delegate = self;
     [[YYKeyboardManager defaultManager] addObserver:self];
+    _height = HeightForInputToolBar;
 }
 
 #pragma mark - Setters

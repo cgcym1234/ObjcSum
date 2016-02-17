@@ -296,6 +296,7 @@
 		1F7FBC3C1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3B1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib */; };
 		1F7FBC3F1C3E6E1800FC37A2 /* NSObject+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3E1C3E6E1800FC37A2 /* NSObject+YYMessage.m */; };
 		1F7FBC461C3F9F8E00FC37A2 /* YYMessageInputToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */; };
+		1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8714161C74BA5500143074 /* YYWebImageManager.m */; };
 		1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769871BFB1FF100253D18 /* QrcodeDemo.m */; };
 		1F8769951BFB248100253D18 /* YYQRcodeGenerater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */; };
 		1F8B89F51BE2058600D81096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B89F41BE2058600D81096 /* main.m */; };
@@ -1018,6 +1019,8 @@
 		1F7FBC3E1C3E6E1800FC37A2 /* NSObject+YYMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYMessage.m"; sourceTree = "<group>"; };
 		1F7FBC441C3F9F8E00FC37A2 /* YYMessageInputToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageInputToolManager.h; sourceTree = "<group>"; };
 		1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageInputToolManager.m; sourceTree = "<group>"; };
+		1F8714151C74BA5500143074 /* YYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWebImageManager.h; sourceTree = "<group>"; };
+		1F8714161C74BA5500143074 /* YYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWebImageManager.m; sourceTree = "<group>"; };
 		1F8769861BFB1FF100253D18 /* QrcodeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrcodeDemo.h; sourceTree = "<group>"; };
 		1F8769871BFB1FF100253D18 /* QrcodeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrcodeDemo.m; sourceTree = "<group>"; };
 		1F8769931BFB248100253D18 /* YYQRcodeGenerater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYQRcodeGenerater.h; sourceTree = "<group>"; };
@@ -2276,6 +2279,15 @@
 			name = ToolView;
 			sourceTree = "<group>";
 		};
+		1F8714181C74BA6000143074 /* YYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				1F8714151C74BA5500143074 /* YYWebImageManager.h */,
+				1F8714161C74BA5500143074 /* YYWebImageManager.m */,
+			);
+			name = YYWebImage;
+			sourceTree = "<group>";
+		};
 		1F8B89E71BE2058600D81096 = {
 			isa = PBXGroup;
 			children = (
@@ -2380,6 +2392,7 @@
 				1F617D141C09C28600492D9D /* 颜色转换 */,
 				1F8B8A471BE2082300D81096 /* YYLibsDemo.h */,
 				1F8B8A481BE2082300D81096 /* YYLibsDemo.m */,
+				1F8714181C74BA6000143074 /* YYWebImage */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -3499,6 +3512,7 @@
 				1FAC3C461C0ED1350007520F /* YYMemoryCache.m in Sources */,
 				1F2BE07D1C50C3BB00E71E53 /* DragImageViewGesture3.m in Sources */,
 				1F5A56931C2B9F3A000E9E04 /* FastRecordImageCell.m in Sources */,
+				1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */,
 				1F5A57991C2BA091000E9E04 /* RACSignal.m in Sources */,
 				1F075BB71C44D2D00013C815 /* UIView+AutoLayout.m in Sources */,
 				1F5A56941C2B9F3A000E9E04 /* FastRecordTextInputCell.m in Sources */,

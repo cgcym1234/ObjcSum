@@ -64,7 +64,7 @@
 }
 
 /**
- *  清楚缓存的布局数据，contentSize，cellHeight
+ *  清除缓存的布局数据，contentSize，cellHeight
  */
 - (void)cleanCacheLayout {
     _contentSize = CGSizeZero;
