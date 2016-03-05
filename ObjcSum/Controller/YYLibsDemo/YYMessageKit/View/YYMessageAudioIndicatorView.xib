@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTT-s9-lIP" customClass="YYMessageAudioIndicatorView">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-fB-Dfd">
+                    <rect key="frame" x="0.0" y="39.5" width="140" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="oqb-Hj-lNp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="滑动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9H-j7-kfP">
+                    <rect key="frame" x="0.0" y="72" width="140" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="bXF-p4-wHU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.23226848821989532" green="0.23226848821989532" blue="0.23226848821989532" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="140" id="1Vl-5S-EeT"/>
+                <constraint firstAttribute="height" constant="100" id="4aK-NF-HrU"/>
+                <constraint firstItem="R9H-j7-kfP" firstAttribute="leading" secondItem="oTT-s9-lIP" secondAttribute="leading" id="OP0-nw-7i5"/>
+                <constraint firstItem="AiW-fB-Dfd" firstAttribute="leading" secondItem="oTT-s9-lIP" secondAttribute="leading" id="OZy-8j-oAa"/>
+                <constraint firstAttribute="bottom" secondItem="R9H-j7-kfP" secondAttribute="bottom" id="Qv7-bI-XiD"/>
+                <constraint firstItem="AiW-fB-Dfd" firstAttribute="centerY" secondItem="oTT-s9-lIP" secondAttribute="centerY" id="a2l-lY-UjJ"/>
+                <constraint firstAttribute="trailing" secondItem="AiW-fB-Dfd" secondAttribute="trailing" id="sQ8-Zm-Cbm"/>
+                <constraint firstAttribute="trailing" secondItem="R9H-j7-kfP" secondAttribute="trailing" id="sk0-F4-M9M"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1Vl-5S-EeT"/>
+                    <exclude reference="4aK-NF-HrU"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="textLabel" destination="R9H-j7-kfP" id="4SV-br-rhk"/>
+                <outlet property="timeLabel" destination="AiW-fB-Dfd" id="3LM-dG-Gl6"/>
+            </connections>
+            <point key="canvasLocation" x="180" y="1114"/>
+        </view>
+    </objects>
+</document>

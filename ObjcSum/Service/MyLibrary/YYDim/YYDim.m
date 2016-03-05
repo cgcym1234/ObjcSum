@@ -87,6 +87,7 @@ static NSTimeInterval const DismissDuration = 0.2;
     [self removeFromSuperview];
     
     if (view) {
+        view.translatesAutoresizingMaskIntoConstraints = YES;
         [self addSubview:view];
     }
     self.showView = view;

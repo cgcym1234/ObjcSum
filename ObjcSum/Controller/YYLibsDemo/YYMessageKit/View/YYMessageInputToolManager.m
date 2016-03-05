@@ -21,7 +21,6 @@ static NSString * const KeyCell = @"KeyCell";
 @interface YYMessageInputToolManager ()
 <YYKeyboardObserver, UITextViewDelegate>
 
-//@property (weak, nonatomic) IBOutlet UIButton *assetsButton;
 @property (nonatomic, strong) YYMessageInputToolBar *inputToolBar;
 
 @end

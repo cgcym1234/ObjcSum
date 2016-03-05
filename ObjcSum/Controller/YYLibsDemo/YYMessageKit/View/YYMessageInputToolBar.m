@@ -7,6 +7,7 @@
 //
 
 #import "YYMessageInputToolBar.h"
+#import "YYMessageAudioRecordButton.h"
 #import "UIView+YYMessage.h"
 
 #pragma mark - Consts
@@ -25,7 +26,7 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 @property (weak, nonatomic) IBOutlet YYMultiImageButton *inputAndVoiceSwitchButton;
 
 @property (weak, nonatomic) IBOutlet UITextView *inputTextView;
-@property (weak, nonatomic) IBOutlet UIButton *voiceRecordButton;
+@property (weak, nonatomic) IBOutlet YYMessageAudioRecordButton *voiceRecordButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *emojiButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;

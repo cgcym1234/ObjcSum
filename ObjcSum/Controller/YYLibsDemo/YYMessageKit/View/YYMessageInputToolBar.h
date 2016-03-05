@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YYMultiImageButton.h"
 
+@class YYMessageAudioRecordButton;
+
 typedef NS_ENUM(NSUInteger, YYMessageInputToolBarItemType) {
     YYMessageInputToolBarItemTypeSwitchButton,
 };
@@ -18,7 +20,7 @@ typedef NS_ENUM(NSUInteger, YYMessageInputToolBarItemType) {
 @property (weak, nonatomic, readonly) YYMultiImageButton *inputAndVoiceSwitchButton;
 
 @property (weak, nonatomic, readonly) UITextView *inputTextView;
-@property (weak, nonatomic, readonly) UIButton *voiceRecordButton;
+@property (weak, nonatomic, readonly) YYMessageAudioRecordButton *voiceRecordButton;
 
 @property (weak, nonatomic, readonly) UIButton *emojiButton;
 @property (weak, nonatomic, readonly) UIButton *moreButton;

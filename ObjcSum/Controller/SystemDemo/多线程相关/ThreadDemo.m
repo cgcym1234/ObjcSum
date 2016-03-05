@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    dispatch_queue_t myCustomQueue;
+    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
+    dispatch_sync(myCustomQueue, ^{
+        sleep(10);
+    });
 }
 
 - (void)didReceiveMemoryWarning {

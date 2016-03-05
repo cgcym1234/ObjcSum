@@ -20,6 +20,8 @@
     self.dataArr = @[
                      [[LibDemoInfo alloc] initWithTitle:@"GestureDemo" desc:@"手势处理相关" controllerName:@"GestureDemo"],
                      
+                     [[LibDemoInfo alloc] initWithTitle:@"ThreadDemo" desc:@"多线程相关" controllerName:@"ThreadDemo"],
+                     
                      [[LibDemoInfo alloc] initWithTitle:@"WebViewDemo" desc:@"js和oc相互调用demo" controllerName:@"WebViewDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"ObjectiveCDemo" desc:@"Objective-C特性测试" controllerName:@"ObjectiveCDemo"],

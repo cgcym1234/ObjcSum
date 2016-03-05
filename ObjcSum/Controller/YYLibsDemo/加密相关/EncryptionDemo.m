@@ -26,7 +26,6 @@
     NSString *encryptStr = [self stringFromAESEncrypt:str];
     NSLog(@"加密前: %@， 加密后: %@", str, encryptStr);
     
-    
     NSDictionary *parameters = @{@"audit":@"N", @"start": @"0"};
     [[YYBaseHttp new] getUrlString:UrlTasksTodo parameters:parameters completion:^(id responseData, NSError *error, NSURLSessionDataTask *dataTask) {
         if (error) {

@@ -37,6 +37,10 @@
 		1F124DE11C60608700B281E4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD01C60608700B281E4 /* UIProgressView+AFNetworking.m */; };
 		1F124DE21C60608700B281E4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD21C60608700B281E4 /* UIRefreshControl+AFNetworking.m */; };
 		1F124DE31C60608700B281E4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD41C60608700B281E4 /* UIWebView+AFNetworking.m */; };
+		1F139B541C873A17005E89EB /* iOS7Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F139B531C873A17005E89EB /* iOS7Demo.m */; };
+		1F158D2A1C78AA8F008AD080 /* YYMessageMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F158D291C78AA8F008AD080 /* YYMessageMoreView.m */; };
+		1F158D2F1C78AAD7008AD080 /* YYMessageMoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F158D2D1C78AAD7008AD080 /* YYMessageMoreViewCell.m */; };
+		1F158D301C78AAD7008AD080 /* YYMessageMoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F158D2E1C78AAD7008AD080 /* YYMessageMoreViewCell.xib */; };
 		1F160BA81C2FC18800EDDAA4 /* ObjectiveCPointor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */; };
 		1F160BAB1C2FC2A500EDDAA4 /* ObjectiveC_objc_msgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BAA1C2FC2A500EDDAA4 /* ObjectiveC_objc_msgSend.m */; };
 		1F160BAE1C2FC77E00EDDAA4 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BAD1C2FC77E00EDDAA4 /* NSObject+Debug.m */; };
@@ -291,12 +295,17 @@
 		1F76E85D1C1563EF005E43E9 /* YYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E85C1C1563EF005E43E9 /* YYWebViewController.m */; };
 		1F76E8631C156846005E43E9 /* TestJSObjectProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8621C156846005E43E9 /* TestJSObjectProtocol.m */; };
 		1F76E8771C167E5C005E43E9 /* YYPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8751C167E5C005E43E9 /* YYPageController.m */; };
+		1F792CC01C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CBF1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m */; };
+		1F792CC31C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CC21C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m */; };
+		1F792CC51C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F792CC41C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib */; };
 		1F7FBC341C3D15BD00FC37A2 /* ObjectiveC_BlockAndGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC331C3D15BD00FC37A2 /* ObjectiveC_BlockAndGCD.m */; };
 		1F7FBC3A1C3E5DCF00FC37A2 /* YYMessageInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC391C3E5DCF00FC37A2 /* YYMessageInputToolBar.m */; };
 		1F7FBC3C1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3B1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib */; };
 		1F7FBC3F1C3E6E1800FC37A2 /* NSObject+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3E1C3E6E1800FC37A2 /* NSObject+YYMessage.m */; };
 		1F7FBC461C3F9F8E00FC37A2 /* YYMessageInputToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */; };
 		1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8714161C74BA5500143074 /* YYWebImageManager.m */; };
+		1F87141B1C74C58D00143074 /* YYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87141A1C74C58D00143074 /* YYImageCache.m */; };
+		1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87141D1C74C59C00143074 /* YYWebImageOperation.m */; };
 		1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769871BFB1FF100253D18 /* QrcodeDemo.m */; };
 		1F8769951BFB248100253D18 /* YYQRcodeGenerater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */; };
 		1F8B89F51BE2058600D81096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B89F41BE2058600D81096 /* main.m */; };
@@ -506,6 +515,13 @@
 		1F124DD21C60608700B281E4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		1F124DD31C60608700B281E4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		1F124DD41C60608700B281E4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		1F139B521C873A17005E89EB /* iOS7Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS7Demo.h; sourceTree = "<group>"; };
+		1F139B531C873A17005E89EB /* iOS7Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOS7Demo.m; sourceTree = "<group>"; };
+		1F158D281C78AA8F008AD080 /* YYMessageMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageMoreView.h; sourceTree = "<group>"; };
+		1F158D291C78AA8F008AD080 /* YYMessageMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageMoreView.m; sourceTree = "<group>"; };
+		1F158D2C1C78AAD7008AD080 /* YYMessageMoreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageMoreViewCell.h; sourceTree = "<group>"; };
+		1F158D2D1C78AAD7008AD080 /* YYMessageMoreViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageMoreViewCell.m; sourceTree = "<group>"; };
+		1F158D2E1C78AAD7008AD080 /* YYMessageMoreViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYMessageMoreViewCell.xib; sourceTree = "<group>"; };
 		1F160BA61C2FC18800EDDAA4 /* ObjectiveCPointor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCPointor.h; sourceTree = "<group>"; };
 		1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCPointor.m; sourceTree = "<group>"; };
 		1F160BA91C2FC2A500EDDAA4 /* ObjectiveC_objc_msgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveC_objc_msgSend.h; sourceTree = "<group>"; };
@@ -1010,6 +1026,11 @@
 		1F76E8621C156846005E43E9 /* TestJSObjectProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJSObjectProtocol.m; sourceTree = "<group>"; };
 		1F76E8741C167E5C005E43E9 /* YYPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPageController.h; sourceTree = "<group>"; };
 		1F76E8751C167E5C005E43E9 /* YYPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPageController.m; sourceTree = "<group>"; };
+		1F792CBE1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageAudioRecordButton.h; sourceTree = "<group>"; };
+		1F792CBF1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageAudioRecordButton.m; sourceTree = "<group>"; };
+		1F792CC11C8A946D00EE70D4 /* YYMessageAudioIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageAudioIndicatorView.h; sourceTree = "<group>"; };
+		1F792CC21C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageAudioIndicatorView.m; sourceTree = "<group>"; };
+		1F792CC41C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYMessageAudioIndicatorView.xib; sourceTree = "<group>"; };
 		1F7FBC321C3D15BD00FC37A2 /* ObjectiveC_BlockAndGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveC_BlockAndGCD.h; sourceTree = "<group>"; };
 		1F7FBC331C3D15BD00FC37A2 /* ObjectiveC_BlockAndGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveC_BlockAndGCD.m; sourceTree = "<group>"; };
 		1F7FBC381C3E5DCF00FC37A2 /* YYMessageInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageInputToolBar.h; sourceTree = "<group>"; };
@@ -1021,6 +1042,10 @@
 		1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageInputToolManager.m; sourceTree = "<group>"; };
 		1F8714151C74BA5500143074 /* YYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWebImageManager.h; sourceTree = "<group>"; };
 		1F8714161C74BA5500143074 /* YYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWebImageManager.m; sourceTree = "<group>"; };
+		1F8714191C74C58D00143074 /* YYImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCache.h; sourceTree = "<group>"; };
+		1F87141A1C74C58D00143074 /* YYImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCache.m; sourceTree = "<group>"; };
+		1F87141C1C74C59C00143074 /* YYWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWebImageOperation.h; sourceTree = "<group>"; };
+		1F87141D1C74C59C00143074 /* YYWebImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWebImageOperation.m; sourceTree = "<group>"; };
 		1F8769861BFB1FF100253D18 /* QrcodeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrcodeDemo.h; sourceTree = "<group>"; };
 		1F8769871BFB1FF100253D18 /* QrcodeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrcodeDemo.m; sourceTree = "<group>"; };
 		1F8769931BFB248100253D18 /* YYQRcodeGenerater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYQRcodeGenerater.h; sourceTree = "<group>"; };
@@ -1400,6 +1425,18 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		1F158D2B1C78AAB6008AD080 /* YYMessageMoreView */ = {
+			isa = PBXGroup;
+			children = (
+				1F158D281C78AA8F008AD080 /* YYMessageMoreView.h */,
+				1F158D291C78AA8F008AD080 /* YYMessageMoreView.m */,
+				1F158D2C1C78AAD7008AD080 /* YYMessageMoreViewCell.h */,
+				1F158D2D1C78AAD7008AD080 /* YYMessageMoreViewCell.m */,
+				1F158D2E1C78AAD7008AD080 /* YYMessageMoreViewCell.xib */,
+			);
+			name = YYMessageMoreView;
+			sourceTree = "<group>";
+		};
 		1F160BC41C32726600EDDAA4 /* YYMessageKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1435,6 +1472,8 @@
 			children = (
 				1F2BDFDC1C4BE7FD00E71E53 /* ReadingNote.h */,
 				1F2BDFDD1C4BE7FD00E71E53 /* ReadingNote.m */,
+				1F139B521C873A17005E89EB /* iOS7Demo.h */,
+				1F139B531C873A17005E89EB /* iOS7Demo.m */,
 				1F2BDFE21C4BE89300E71E53 /* iOS核心开发 */,
 				1F2BDFDB1C4BE75E00E71E53 /* Objc52个建议 */,
 			);
@@ -2272,9 +2311,15 @@
 			children = (
 				1F7FBC441C3F9F8E00FC37A2 /* YYMessageInputToolManager.h */,
 				1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */,
+				1F792CBE1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.h */,
+				1F792CBF1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m */,
+				1F792CC11C8A946D00EE70D4 /* YYMessageAudioIndicatorView.h */,
+				1F792CC21C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m */,
+				1F792CC41C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib */,
 				1F7FBC381C3E5DCF00FC37A2 /* YYMessageInputToolBar.h */,
 				1F7FBC391C3E5DCF00FC37A2 /* YYMessageInputToolBar.m */,
 				1F7FBC3B1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib */,
+				1F158D2B1C78AAB6008AD080 /* YYMessageMoreView */,
 			);
 			name = ToolView;
 			sourceTree = "<group>";
@@ -2284,6 +2329,10 @@
 			children = (
 				1F8714151C74BA5500143074 /* YYWebImageManager.h */,
 				1F8714161C74BA5500143074 /* YYWebImageManager.m */,
+				1F8714191C74C58D00143074 /* YYImageCache.h */,
+				1F87141A1C74C58D00143074 /* YYImageCache.m */,
+				1F87141C1C74C59C00143074 /* YYWebImageOperation.h */,
+				1F87141D1C74C59C00143074 /* YYWebImageOperation.m */,
 			);
 			name = YYWebImage;
 			sourceTree = "<group>";
@@ -3217,6 +3266,7 @@
 				1FDC2CD31C212CCB000BF77F /* no_data_default@2x.png in Resources */,
 				1F6872C21C27E881008BC6BE /* YYMultiSelectTable.xib in Resources */,
 				1FA4A5421BEC3B9D0076ECAA /* YYScrollSigmentCell.xib in Resources */,
+				1F158D301C78AAD7008AD080 /* YYMessageMoreViewCell.xib in Resources */,
 				1F6872C41C27E881008BC6BE /* YYMultiSelectCell.xib in Resources */,
 				1F5A568E1C2B9F3A000E9E04 /* FastRecordAccessoryView.xib in Resources */,
 				1F6872C81C27EC59008BC6BE /* ic_radiobutton_checked@2x.png in Resources */,
@@ -3236,6 +3286,7 @@
 				1F5A57F21C2BA37E000E9E04 /* DNImagePicker.strings in Resources */,
 				1F2BE0771C507DB900E71E53 /* RunTraceHelp.xib in Resources */,
 				1F5A56971C2B9F3A000E9E04 /* FastRecordVoiceButton.xib in Resources */,
+				1F792CC51C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib in Resources */,
 				1F8B8AB71BE2152900D81096 /* Login.storyboard in Resources */,
 				1F2DA2621C197B1E00126FB1 /* MJRefresh.bundle in Resources */,
 				1F7FBC3C1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib in Resources */,
@@ -3317,6 +3368,7 @@
 				1F124DDC1C60608700B281E4 /* AFImageDownloader.m in Sources */,
 				1F8B8AA21BE20E3100D81096 /* DTTimePeriod.m in Sources */,
 				1F160BC01C32284600EDDAA4 /* SerialisationTest.m in Sources */,
+				1F792CC31C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m in Sources */,
 				1FAC3C291C0D75CA0007520F /* NSNotificationCenter+YYExtension.m in Sources */,
 				1F9829C31BE70DFD00AF6E3F /* YYHttpRequestSerializer.m in Sources */,
 				1F124DE01C60608700B281E4 /* UIImageView+AFNetworking.m in Sources */,
@@ -3337,6 +3389,7 @@
 				1FDB55121BEE1DB80048E1F7 /* InterviewDemo.m in Sources */,
 				1F8B8A811BE20B9D00D81096 /* MSWeakTimer.m in Sources */,
 				1F2DA2581C197B1E00126FB1 /* MJRefreshHeader.m in Sources */,
+				1F792CC01C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m in Sources */,
 				1F5A56891C2B9F3A000E9E04 /* FastRecord.xcdatamodeld in Sources */,
 				1FAC3C231C0D6BB10007520F /* NSDate+YYExtension.m in Sources */,
 				1F01EB141BFE1997009919F2 /* FMDatabase.m in Sources */,
@@ -3510,9 +3563,11 @@
 				1F45E3911C1E57DF00938B2E /* AppManager.m in Sources */,
 				1FDB55191BF62BD70048E1F7 /* UISearchDemo.m in Sources */,
 				1FAC3C461C0ED1350007520F /* YYMemoryCache.m in Sources */,
+				1F87141B1C74C58D00143074 /* YYImageCache.m in Sources */,
 				1F2BE07D1C50C3BB00E71E53 /* DragImageViewGesture3.m in Sources */,
 				1F5A56931C2B9F3A000E9E04 /* FastRecordImageCell.m in Sources */,
 				1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */,
+				1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */,
 				1F5A57991C2BA091000E9E04 /* RACSignal.m in Sources */,
 				1F075BB71C44D2D00013C815 /* UIView+AutoLayout.m in Sources */,
 				1F5A56941C2B9F3A000E9E04 /* FastRecordTextInputCell.m in Sources */,
@@ -3540,6 +3595,7 @@
 				1F2DA2551C197B1E00126FB1 /* MJRefreshBackFooter.m in Sources */,
 				1F5A57911C2BA091000E9E04 /* RACQueueScheduler.m in Sources */,
 				1F124DD61C60608700B281E4 /* AFNetworkReachabilityManager.m in Sources */,
+				1F158D2A1C78AA8F008AD080 /* YYMessageMoreView.m in Sources */,
 				1F45E3F81C20132400938B2E /* YYSentinel.m in Sources */,
 				1F5A57961C2BA091000E9E04 /* RACSequence.m in Sources */,
 				1F5A576A1C2BA091000E9E04 /* NSNotificationCenter+RACSupport.m in Sources */,
@@ -3576,6 +3632,7 @@
 				1FAC3C3B1C0D9F580007520F /* NSError+YYExtension.m in Sources */,
 				1F5A57741C2BA091000E9E04 /* NSString+RACSequenceAdditions.m in Sources */,
 				1F45E3C61C1FFA2700938B2E /* UIDevice+YYExtension.m in Sources */,
+				1F139B541C873A17005E89EB /* iOS7Demo.m in Sources */,
 				1F5A57F51C2BA37E000E9E04 /* UIView+DNImagePicker.m in Sources */,
 				1F5A57AF1C2BA091000E9E04 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				1F5A57BB1C2BA091000E9E04 /* UITextView+RACSignalSupport.m in Sources */,
@@ -3634,6 +3691,7 @@
 				1F01EB181BFE1997009919F2 /* FMResultSet.m in Sources */,
 				1F5A57FF1C2BA37E000E9E04 /* JKPromptView.m in Sources */,
 				1F075BBC1C44DD3F0013C815 /* YYKeyboardManager.m in Sources */,
+				1F158D2F1C78AAD7008AD080 /* YYMessageMoreViewCell.m in Sources */,
 				1FAC3C1D1C0D44B00007520F /* NSArray+YYExtension.m in Sources */,
 				1F9829CA1BE715DC00AF6E3F /* YYUrlCache.m in Sources */,
 				1F5A56991C2B9F3A000E9E04 /* FastRecordVoiceInputView.m in Sources */,
