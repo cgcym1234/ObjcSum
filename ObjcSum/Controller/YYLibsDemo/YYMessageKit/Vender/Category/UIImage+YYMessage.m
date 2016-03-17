@@ -143,14 +143,9 @@
 - (NSString *)saveToDiskWithSize:(CGSize)targetSize {
     UIImage *targetSizeImage = [self imageByResizeToSize:targetSize];
     if (targetSizeImage) {
-        NSDate *currentDate = [NSDate date];
-        
-        NSString *filePath = [[NSString directoryMessageHomeImages] stringByAppendingPathComponent:[currentDate stringWithDefaultFormat]];
-        NSString *fileName = [NSString stringWithFormat:@"%.lf", currentDate.timeIntervalSince1970*1000*1000];
-        NSString *fullPath = [filePath stringByAppendingPathComponent:fileName];
+        NSString *fullPath = [NSString fullPathOfImageByCurrentTimestamp];
         
         NSError *error;
-        [[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:&error];
         [UIImagePNGRepresentation(targetSizeImage) writeToFile:fullPath options:NSDataWritingAtomic error:&error];
         if (!error) {
             return fullPath;

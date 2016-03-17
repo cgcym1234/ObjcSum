@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YYMessageCellLayoutConfig.h"
+#import "YYMessageModel.h"
 #import "YYMessageAvatarView.h"
 #import "YYMessageBubbleView.h"
 #import "UIView+YYMessage.h"
@@ -30,7 +31,7 @@ typedef NS_ENUM(NSUInteger, YYMessageItem) {
 
 @end
 
-@interface YYMessageCellBase : UICollectionViewCell
+@interface YYMessageCellBase : UICollectionViewCell<YYMessageCellLayoutConfig>
 
 @property (nonatomic, weak) YYMessageCellConfig *cellConfig;
 @property (nonatomic, weak) YYMessageModel *messageModel;

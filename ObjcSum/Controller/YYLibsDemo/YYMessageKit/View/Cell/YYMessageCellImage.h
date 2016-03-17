@@ -9,7 +9,7 @@
 #import "YYMessageCellBase.h"
 #import "YYMessageImageView.h"
 
-@interface YYMessageCellImage : YYMessageCellBase<YYMessageCellLayoutConfig>
+@interface YYMessageCellImage : YYMessageCellBase
 
 @property (nonatomic, strong) YYMessageImageView *messageImageView;
 @end

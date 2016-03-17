@@ -42,6 +42,10 @@
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
     self.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    
+    [self registerClass:[YYMessageCellText class] forCellWithReuseIdentifier:[YYMessageCellText identifier]];
+    [self registerClass:[YYMessageCellImage class] forCellWithReuseIdentifier:[YYMessageCellImage identifier]];
+    [self registerClass:[YYMessageCellAudio class] forCellWithReuseIdentifier:[YYMessageCellAudio identifier]];
 }
 
 

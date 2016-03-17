@@ -10,7 +10,7 @@
 
 @class YYMessageTextLabel;
 
-@interface YYMessageCellText : YYMessageCellBase<YYMessageCellLayoutConfig>
+@interface YYMessageCellText : YYMessageCellBase
 
 @property (nonatomic, strong) YYMessageTextLabel *messageTextLabel;
 

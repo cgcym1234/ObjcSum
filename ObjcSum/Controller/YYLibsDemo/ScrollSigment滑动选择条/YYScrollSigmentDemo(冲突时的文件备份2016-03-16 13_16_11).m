@@ -12,7 +12,7 @@
 #import "YYSegmentedControl.h"
 #import "YYAlertTextViewDemo.h"
 
-@interface YYScrollSigmentDemo ()<YYPageControllerDelegate, YYSegmentedControlDelegate>
+@interface YYScrollSigmentDemo ()<YYPageControllerDelegate>
 
 @property (nonatomic, weak)IBOutlet UIView *containerView;
 @property (nonatomic, weak)IBOutlet YYScrollSigment *segment;
@@ -40,7 +40,7 @@
     };
     
     [self.view addSubview:self.segmentedControl];
-    _segmentedControl.selectedIndex = 2;
+    
     
     YYPageController *viewController = [[YYPageController alloc] init];
     viewController.delegate = self;
@@ -57,18 +57,10 @@
 - (YYSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
         YYSegmentedControl *segmentedControl = [[YYSegmentedControl alloc] initWithFrame:CGRectMake(0, 50, 320, 44) dataArray:@[@"全部",@"呵呵和",@"全部"]];
-        segmentedControl.delegate = self;
         _segmentedControl = segmentedControl;
     }
     return _segmentedControl;
 }
-
-#pragma mark - YYSegmentedControlDelegate
-
-- (void)yySegmentedControl:(YYSegmentedControl *)segmenteControl didSelectItemAtIndex:(NSInteger)index {
-    NSLog(@"%ld",index);
-}
-
 
 - (YYScrollSigment *)segment2 {
     if (!_segment2) {

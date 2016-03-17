@@ -10,6 +10,9 @@
 #import "DragImageView.h"
 #import "DragImageViewGesture.h"
 #import "DragImageViewGesture3.h"
+#import "TouchEventDemo.h"
+
+#import "UIViewController+Extension.h"
 
 @interface GestureDemo ()
 
@@ -25,7 +28,13 @@
     // Do any additional setup after loading the view.
 //    [self.view addSubview:self.dragImageView];
 //    [self.view addSubview:self.dragImageViewGesture];
-    [self.view addSubview:self.dragImageViewGesture3];
+//    [self.view addSubview:self.dragImageViewGesture3];
+    __weak typeof(self) weakSelf = self;
+    int btnNum = 2;
+    
+    [self addButtonWithTitle:@"TouchEventDemo" action:^(UIButton *btn) {
+        [weakSelf.navigationController pushViewController:[TouchEventDemo instanceFromStoryboard] animated:YES];
+    }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
 }
 
 - (void)viewDidAppear:(BOOL)animated {

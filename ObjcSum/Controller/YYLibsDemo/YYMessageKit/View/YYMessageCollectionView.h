@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYMessageCellText.h"
+#import "YYMessageCellImage.h"
+#import "YYMessageCellAudio.h"
+
 
 @interface YYMessageCollectionView : UICollectionView
 

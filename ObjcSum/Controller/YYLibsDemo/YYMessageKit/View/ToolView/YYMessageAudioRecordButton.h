@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, YYMessageAudioRecordButtonState) {
 
 @class YYMessageAudioRecordButton;
 
-typedef void (^YYMessageAudioRecordButtonCompleteBlock)(YYMessageAudioRecordButton *view, NSURL *voicePath, NSTimeInterval duration);
+typedef void (^YYMessageAudioRecordButtonCompleteBlock)(YYMessageAudioRecordButton *view, NSURL *voicePath);
 
 @interface YYMessageAudioRecordButton : UIButton
 

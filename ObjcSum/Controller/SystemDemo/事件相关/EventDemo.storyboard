@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pZu-4Y-AHT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Touch Event Demo-->
+        <scene sceneID="t8T-lZ-F8e">
+            <objects>
+                <viewController id="pZu-4Y-AHT" customClass="TouchEventDemo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vXZ-TY-Pod"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZyW-SG-6sy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iB0-xy-fZL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZH-z9-Y2b">
+                                <rect key="frame" x="20" y="120" width="560" height="480"/>
+                                <color key="backgroundColor" red="1" green="0.54754762589999995" blue="0.65394765070000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="VeO-x8-Jg0" kind="embed" id="sqq-5f-YWO"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="灰色是父controller的view，红色是子controller的view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-qj-TIh">
+                                <rect key="frame" x="10" y="30" width="580" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SZH-z9-Y2b" firstAttribute="leading" secondItem="iB0-xy-fZL" secondAttribute="leading" constant="20" id="1eP-iM-tNC"/>
+                            <constraint firstItem="SZH-z9-Y2b" firstAttribute="top" secondItem="vXZ-TY-Pod" secondAttribute="bottom" constant="100" id="HZu-Zk-3KW"/>
+                            <constraint firstItem="ZyW-SG-6sy" firstAttribute="top" secondItem="SZH-z9-Y2b" secondAttribute="bottom" id="JTN-UI-pJC"/>
+                            <constraint firstAttribute="trailing" secondItem="SZH-z9-Y2b" secondAttribute="trailing" constant="20" id="bxe-j2-6Og"/>
+                            <constraint firstItem="BPz-qj-TIh" firstAttribute="leading" secondItem="iB0-xy-fZL" secondAttribute="leading" constant="10" id="c2V-Si-Bkx"/>
+                            <constraint firstItem="BPz-qj-TIh" firstAttribute="top" secondItem="vXZ-TY-Pod" secondAttribute="bottom" constant="10" id="gy2-ED-3xc"/>
+                            <constraint firstAttribute="trailing" secondItem="BPz-qj-TIh" secondAttribute="trailing" constant="10" id="rnC-mM-mw5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyk-wH-5dX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="424"/>
+        </scene>
+        <!--Touch Event Demo Child-->
+        <scene sceneID="vZO-5N-Wtq">
+            <objects>
+                <viewController id="VeO-x8-Jg0" customClass="TouchEventDemoChild" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NB7-3Q-fFn">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.54754762589999995" blue="0.65394765070000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwS-yq-w3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="-248"/>
+        </scene>
+    </scenes>
+</document>

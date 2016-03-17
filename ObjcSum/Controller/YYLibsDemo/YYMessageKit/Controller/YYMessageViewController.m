@@ -157,6 +157,8 @@
 #pragma mark - Private
 
 - (void)setContext {
+    self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan = YES;
+    self.navigationController.interactivePopGestureRecognizer.delaysTouchesEnded = YES;
     [self.view addSubview:self.collectionView];
     [self.collectionView layoutEqualParent];
     
@@ -228,8 +230,6 @@
         collectionView.translatesAutoresizingMaskIntoConstraints = NO;
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        [collectionView registerClass:[YYMessageCellText class] forCellWithReuseIdentifier:[YYMessageCellText identifier]];
-        [collectionView registerClass:[YYMessageCellImage class] forCellWithReuseIdentifier:[YYMessageCellImage identifier]];
         _collectionView = collectionView;
     }
     return _collectionView;

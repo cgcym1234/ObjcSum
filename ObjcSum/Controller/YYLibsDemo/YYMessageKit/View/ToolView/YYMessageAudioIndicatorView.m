@@ -10,6 +10,7 @@
 #import "UIView+YYMessage.h"
 #import "YYDim.h"
 
+
 static CGFloat const CountDownInterval = 0.1;
 static NSString * const TextRecording = @"手指上滑，取消发送";
 static NSString * const TextCanceling = @"松开手指，取消发送";
@@ -64,9 +65,10 @@ static NSString * const TextCanceling = @"松开手指，取消发送";
 - (void)countdownBegin {
     self.seconds = 0.00;
     self.state = YYMessageAudioIndicatorViewStateRecording;
-//    [self.timer fire];
-    [_timer invalidate];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:CountDownInterval target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    [self countdownEnd];
+    self.timer.fireDate = [NSDate distantPast];
+    [self.timer fire];
+    
 }
 
 - (void)updateTime {
@@ -79,8 +81,7 @@ static NSString * const TextCanceling = @"松开手指，取消发送";
 
 - (void)countdownEnd {
 //    self.seconds = 0;
-    [_timer invalidate];
-    _timer = nil;
+    self.timer.fireDate = [NSDate distantFuture];
 }
 
 
@@ -106,7 +107,7 @@ static NSString * const TextCanceling = @"松开手指，取消发送";
 - (void)setSeconds:(CGFloat)seconds {
     _seconds = seconds;
     dispatch_async(dispatch_get_main_queue(), ^{
-        _timeLabel.text = [NSString stringWithFormat:@"%.0fs", seconds];
+        _timeLabel.text = [NSString stringWithFormat:@"%02.0fs", seconds];
     });
 }
 
@@ -128,12 +129,13 @@ static NSString * const TextCanceling = @"松开手指，取消发送";
 
 #pragma mark - Getter
 
-//- (NSTimer *)timer {
-//    if (!_timer) {
-//        _timer = [NSTimer timerWithTimeInterval:CountDownInterval target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
-//    }
-//    return _timer;
-//}
+- (NSTimer *)timer {
+    if (!_timer) {
+        _timer = [NSTimer timerWithTimeInterval:CountDownInterval target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+    }
+    return _timer;
+}
 
 @end
 

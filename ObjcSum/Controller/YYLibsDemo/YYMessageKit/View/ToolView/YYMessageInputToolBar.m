@@ -8,6 +8,7 @@
 
 #import "YYMessageInputToolBar.h"
 #import "YYMessageAudioRecordButton.h"
+#import "YYEmoticonInputView.h"
 #import "UIView+YYMessage.h"
 
 #pragma mark - Consts
@@ -28,12 +29,18 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 @property (weak, nonatomic) IBOutlet UITextView *inputTextView;
 @property (weak, nonatomic) IBOutlet YYMessageAudioRecordButton *voiceRecordButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *emojiButton;
+@property (weak, nonatomic) IBOutlet YYMultiImageButton *emojiButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *emojiButtonWidth;
 
-@property (nonatomic, assign) BOOL switchButton;
+//语音和输入按钮状态
+@property (nonatomic, assign) BOOL isVoiceButtonVisible;
+
+//表情和输入按钮状态
+@property (nonatomic, assign) BOOL isEmojiButtonVisible;
+@property (nonatomic, strong) YYEmoticonInputView *emoticonInputView;
+
 @end
 
 @implementation YYMessageInputToolBar
@@ -53,7 +60,10 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
     
     
     _inputAndVoiceSwitchButton.images = @[[UIImage imageNamed:SwitchButtonImageVoice],[UIImage imageNamed:SwitchButtonImageInput]];
-    [_emojiButton setImage:[UIImage imageNamed:EmojiButtonImage] forState:UIControlStateNormal];
+    
+//    [_emojiButton setImage:[UIImage imageNamed:EmojiButtonImage] forState:UIControlStateNormal];
+    _emojiButton.images = @[[UIImage imageNamed:EmojiButtonImage],[UIImage imageNamed:SwitchButtonImageInput]];
+    
     [_moreButton setImage:[UIImage imageNamed:MoreButtonImage] forState:UIControlStateNormal];
     
     _inputTextView.text = nil;
@@ -85,7 +95,7 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 - (IBAction)didClickedSwitchButton:(YYMultiImageButton *)switchButton {
     
     //当前是语音图标，显示输入框
-    BOOL inputTextViewShow = switchButton.currentImageIndex == 0;
+    BOOL inputTextViewShow = self.isVoiceButtonVisible;
     _inputTextView.hidden = !inputTextViewShow;
     _voiceRecordButton.hidden = inputTextViewShow;
     
@@ -97,6 +107,10 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 }
 
 - (IBAction)didClickedEmojiButton:(UIButton *)sender {
+    BOOL isEmojiButtonVisible = self.isEmojiButtonVisible;
+    _inputTextView.inputView = isEmojiButtonVisible ? nil : self.emoticonInputView;
+    [_inputTextView reloadInputViews];
+    [_inputTextView becomeFirstResponder];
 }
 
 - (IBAction)didClickedMoreButton:(UIButton *)sender {
@@ -107,6 +121,21 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 
 #pragma mark - Getters
 
+- (BOOL)isVoiceButtonVisible {
+    return _inputAndVoiceSwitchButton.currentImageIndex == 0;
+}
+
+- (BOOL)isEmojiButtonVisible {
+    return _emojiButton.currentImageIndex == 0;
+}
+
+- (YYEmoticonInputView *)emoticonInputView {
+    if (!_emoticonInputView) {
+        YYEmoticonInputView *emoticonInputView = [[YYEmoticonInputView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+        _emoticonInputView = emoticonInputView;
+    }
+    return _emoticonInputView;
+}
 
 
 @end

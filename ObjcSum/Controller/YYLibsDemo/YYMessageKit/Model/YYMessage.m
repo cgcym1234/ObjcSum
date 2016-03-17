@@ -8,6 +8,7 @@
 
 #import "YYMessage.h"
 #import "YYMessageObjectImage.h"
+#import "YYMessageObjectAudio.h"
 
 @interface YYMessage ()
 
@@ -27,10 +28,37 @@
 
 + (instancetype)messageWithType:(YYMessageType)type content:(id)obj {
     YYMessage *message = [YYMessage new];
-    message.text = obj;
     message.senderName = @"rilong";
     message.isOutgoing = YES;
     message.messageType = type;
+    id<YYMessageObject> messageObject;
+    switch (type) {
+        case YYMessageTypeText: {
+            message.text = obj;
+            break;
+        }
+        case YYMessageTypeImage: {
+            messageObject = [[YYMessageObjectImage alloc] initWithImage:obj];
+            break;
+        }
+        case YYMessageTypeAudio: {
+            messageObject = [[YYMessageObjectAudio alloc] initWithAudioURL:obj];
+            break;
+        }
+        case YYMessageTypeVideo: {
+            break;
+        }
+        case YYMessageTypeLocation: {
+            break;
+        }
+        case YYMessageTypeFile: {
+            break;
+        }
+        case YYMessageTypeCustom: {
+            break;
+        }
+    }
+    message.messageObject = messageObject;
     return message;
 }
 

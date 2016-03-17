@@ -10,6 +10,7 @@
 #import "YYMessage.h"
 #import "YYMessageCellText.h"
 #import "YYMessageCellImage.h"
+#import "YYMessageCellAudio.h"
 
 @interface YYMessageModel ()
 
@@ -46,6 +47,10 @@
         case YYMessageTypeImage:
             _cellLayoutDelegate = [YYMessageCellImage class];
             _cellIdentifier = [YYMessageCellImage identifier];
+            break;
+        case YYMessageTypeAudio:
+            _cellLayoutDelegate = [YYMessageCellAudio class];
+            _cellIdentifier = [YYMessageCellAudio identifier];
             break;
             
         default:

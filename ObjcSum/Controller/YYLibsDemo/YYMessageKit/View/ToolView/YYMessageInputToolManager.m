@@ -92,11 +92,17 @@ static NSString * const KeyCell = @"KeyCell";
 #pragma mark - Private methods
 
 - (void)setContext {
+    __weak typeof(self)weakSelf = self;
+    
     [self.inputToolBarContainerView addSubview:self.inputToolBar];
     _inputToolBar.width = _inputToolBarContainerView.width;
     _inputToolBar.height = HeightForInputToolBar;
     _inputToolBar.bottom = _inputToolBarContainerView.height;
     _inputToolBar.inputTextView.delegate = self;
+    _inputToolBar.voiceRecordButton.completeBlock = ^(YYMessageAudioRecordButton *view, NSURL *voicePath) {
+        [weakSelf.delegate yyMessageInputToolManager:weakSelf didSendMessage:voicePath messageType:YYMessageTypeAudio];
+    };
+    
     [[YYKeyboardManager defaultManager] addObserver:self];
     _height = HeightForInputToolBar;
 }

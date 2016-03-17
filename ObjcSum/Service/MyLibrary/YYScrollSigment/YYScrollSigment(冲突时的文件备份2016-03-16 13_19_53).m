@@ -231,7 +231,7 @@
 //设置每个item的大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return _itemSize = CGSizeMake(_itemWith, CGRectGetHeight(self.bounds));;
+    return _itemSize = CGSizeMake(_itemWith, CGRectGetHeight(self.bounds));
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

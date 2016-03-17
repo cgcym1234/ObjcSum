@@ -30,7 +30,7 @@
 @implementation UIWindow (Load)
 +(void)load
 {
-    [RunTrace hookMethod:[UIWindow class] OriginSelector:@selector(makeKeyAndVisible) SwizzledSelector:@selector(myMakeKeyAndVisible)];
+//    [RunTrace hookMethod:[UIWindow class] OriginSelector:@selector(makeKeyAndVisible) SwizzledSelector:@selector(myMakeKeyAndVisible)];
 }
 
 -(void)myMakeKeyAndVisible
