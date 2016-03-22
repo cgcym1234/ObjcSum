@@ -31,7 +31,7 @@
     return [[self directoryMessageHome] stringByAppendingPathComponent:@"voices"];
 }
 
-//yyyy/MM/dd/hh/xxxxxxxxxxx
+//  xxxxx/yyyy/MM/dd
 + (NSString *)directoryCurrentTimestampWithRootPath:(NSString *)rootPath {
     NSDate *currentDate = [NSDate date];
     
@@ -44,21 +44,23 @@
         NSLog(@"%@", error);
         return nil;
     }
+    
+    return filePath;
 
-    NSString *fileName = [NSString stringWithFormat:@"%.lf", currentDate.timeIntervalSince1970*1000*1000];
-    return [filePath stringByAppendingPathComponent:fileName];
+//    NSString *fileName = [NSString stringWithFormat:@"%.lf", currentDate.timeIntervalSince1970*1000*1000];
+//    return [filePath stringByAppendingPathComponent:fileName];
 }
 
 /**
- *  根据当前时间戳生成图片完整路径，自动创建需要的目录
+ *  根据当前时间戳生成图片路径，自动创建需要的目录，按天存储
  */
-+ (NSString *)fullPathOfImageByCurrentTimestamp {
++ (NSString *)directoryForImageByCurrentTimestamp {
     return [self directoryCurrentTimestampWithRootPath:[self directoryMessageHomeImages]];
 }
 /**
- *  根据当前时间戳生成语音完整路径，自动创建需要的目录
+ *  根据当前时间戳生成语音路径，自动创建需要的目录，按天存储
  */
-+ (NSString *)fullPathOfVoiceByCurrentTimestamp {
++ (NSString *)directoryForVoiceByCurrentTimestamp {
     return [self directoryCurrentTimestampWithRootPath:[self directoryMessageHomeVoices]];
 }
 @end

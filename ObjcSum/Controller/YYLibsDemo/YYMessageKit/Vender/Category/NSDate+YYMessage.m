@@ -10,12 +10,12 @@
 
 @implementation NSDate (YYMessage)
 
-//默认yyyy/MM/dd/hh
+//默认yyyy/MM/dd
 - (NSString *)stringWithDefaultFormat {
     static NSDateFormatter *formatter = nil;
     if (!formatter) {
         formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy/MM/dd/hh"];
+        [formatter setDateFormat:@"yyyy/MM/dd"];
         [formatter setLocale:[NSLocale currentLocale]];
     }
     return [formatter stringFromDate:self];

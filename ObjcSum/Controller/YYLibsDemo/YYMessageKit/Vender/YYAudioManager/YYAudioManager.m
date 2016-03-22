@@ -209,8 +209,10 @@
     if (!_audioRecorder) {
         NSLog(@"audioRecorder");
         //创建录音文件保存路径
-        NSString *audioPath = [NSString fullPathOfVoiceByCurrentTimestamp];
-        NSURL *url = [NSURL fileURLWithPath:audioPath];
+        NSString *audioPath = [NSString directoryForImageByCurrentTimestamp];
+        NSString *audioName = [NSString stringWithFormat:@"%f.amr", [NSDate date].timeIntervalSince1970];
+        
+        NSURL *url = [NSURL fileURLWithPath:[audioPath stringByAppendingPathComponent:audioName]];
         //创建录音格式设置
         NSDictionary *setting=[self getAudioSetting];
         NSError *error;

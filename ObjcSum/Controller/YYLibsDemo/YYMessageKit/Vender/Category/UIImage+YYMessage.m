@@ -143,16 +143,17 @@
 - (NSString *)saveToDiskWithSize:(CGSize)targetSize {
     UIImage *targetSizeImage = [self imageByResizeToSize:targetSize];
     if (targetSizeImage) {
-        NSString *fullPath = [NSString fullPathOfImageByCurrentTimestamp];
+        NSString *fullPath = [NSString directoryForImageByCurrentTimestamp];
+        NSString *filename = [@(targetSizeImage.hash) stringValue];
+        NSString *filePath = [fullPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", filename]];
         
         NSError *error;
-        [UIImagePNGRepresentation(targetSizeImage) writeToFile:fullPath options:NSDataWritingAtomic error:&error];
+        [UIImageJPEGRepresentation(targetSizeImage, 1) writeToFile:filePath options:NSDataWritingAtomic error:&error];
         if (!error) {
-            return fullPath;
+            return filePath;
         }
-        return nil;
     }
-     return nil;
+    return nil;
 }
 
 - (UIImage *)imageByResizeToSize:(CGSize)size {

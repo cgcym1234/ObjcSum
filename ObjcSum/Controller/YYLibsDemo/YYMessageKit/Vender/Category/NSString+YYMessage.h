@@ -20,15 +20,15 @@
 //~/Libaray/YYMessage/voices
 + (NSString *)directoryMessageHomeVoices;
 
-//yyyy/MM/dd/hh/xxxxxxxxxxx
+//  xxxxx/yyyy/MM/dd
 + (NSString *)directoryCurrentTimestampWithRootPath:(NSString *)rootPath;
 
 /**
- *  根据当前时间戳生成图片完整路径，自动创建需要的目录
+ *  根据当前时间戳生成图片路径，自动创建需要的目录，按天存储
  */
-+ (NSString *)fullPathOfImageByCurrentTimestamp;
++ (NSString *)directoryForImageByCurrentTimestamp;
 /**
- *  根据当前时间戳生成语音完整路径，自动创建需要的目录
+ *  根据当前时间戳生成语音路径，自动创建需要的目录，按天存储
  */
-+ (NSString *)fullPathOfVoiceByCurrentTimestamp;
++ (NSString *)directoryForVoiceByCurrentTimestamp;
 @end

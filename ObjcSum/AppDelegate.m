@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JPEngine.h"
 
 @interface AppDelegate ()
 {
@@ -18,8 +18,23 @@
 
 @implementation AppDelegate
 
-
+/**
+ *  解决iOS 键盘初始化的过程有延迟问题
+ http://stackoverflow.com/a/9850093
+ 因为某种原因，当app以调试模式第一次在机上运行的时候就会出现这个情况。在release模式下不会有延迟。
+ http://stackoverflow.com/a/20436797
+ 对于每次运行都出现延迟，下面一段代码可能有用：
+ */
+- (void)fixProblemKeyboardInitDelay {
+    UITextField *lagFreeField = [[UITextField alloc] init];
+    [self.window addSubview:lagFreeField];
+    [lagFreeField becomeFirstResponder];
+    [lagFreeField resignFirstResponder];
+    [lagFreeField removeFromSuperview];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self fixProblemKeyboardInitDelay];
+    [JPEngine startEngine];
     // Override point for customization after application launch.
     //延迟启动图显示时间,2秒
 //    sleep(1);

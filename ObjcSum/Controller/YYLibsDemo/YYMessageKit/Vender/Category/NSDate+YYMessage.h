@@ -10,7 +10,7 @@
 
 @interface NSDate (YYMessage)
 
-//默认yyyy/mm/dd/hh
+//默认yyyy/mm/dd
 - (NSString *)stringWithDefaultFormat;
 - (NSString *)stringWithFormat:(NSString *)format;
 @end
