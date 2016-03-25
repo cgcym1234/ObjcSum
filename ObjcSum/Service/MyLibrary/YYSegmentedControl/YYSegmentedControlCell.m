@@ -8,9 +8,6 @@
 
 #import "YYSegmentedControlCell.h"
 
-//选中时候的颜色
-#define ItemColorSelected                    [UIColor colorWithRed:0.192 green:0.741 blue:0.769 alpha:1.000]
-#define ItemColorNormal                      [UIColor darkGrayColor]
 
 
 @implementation YYSegmentedControlCell

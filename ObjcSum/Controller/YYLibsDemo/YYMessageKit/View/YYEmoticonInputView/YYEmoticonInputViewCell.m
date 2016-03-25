@@ -11,7 +11,8 @@
 @implementation YYEmoticonInputViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+//    self.layer.borderWidth = 0.5;
+//    self.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 @end

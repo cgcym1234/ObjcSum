@@ -9,7 +9,9 @@
 #import "JSPatchDemo.h"
 #import "JPEngine.h"
 
-@interface JSPatchDemo ()<UIWebViewDelegate>
+@interface JSPatchDemo ()<UIWebViewDelegate> {
+//    __unsafe_unretained NSString *name;
+}
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 

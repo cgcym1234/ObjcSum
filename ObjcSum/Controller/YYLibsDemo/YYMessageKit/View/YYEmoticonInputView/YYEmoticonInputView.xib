@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYEmoticonInputView">
+            <rect key="frame" x="0.0" y="0.0" width="546" height="234"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UMG-iz-iZd">
+                    <rect key="frame" x="0.0" y="0.0" width="546" height="159"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="159" id="Cx3-o0-d9t"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DqW-Bf-hgi">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Cx3-o0-d9t"/>
+                        </mask>
+                    </variation>
+                </collectionView>
+                <pageControl contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fiI-6f-erC">
+                    <rect key="frame" x="0.0" y="159" width="546" height="37"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="BXW-CL-WzR"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8q-Xm-mRy">
+                    <rect key="frame" x="0.0" y="196" width="546" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBx-MF-VI0">
+                            <rect key="frame" x="478" y="0.0" width="68" height="38"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="M7F-lG-0iX"/>
+                                <constraint firstAttribute="width" constant="68" id="jNO-2N-IJs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="M7F-lG-0iX"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="didTapSendButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="YPf-By-C4g"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="qBx-MF-VI0" firstAttribute="top" secondItem="u8q-Xm-mRy" secondAttribute="top" id="6Ps-jD-DMu"/>
+                        <constraint firstAttribute="bottom" secondItem="qBx-MF-VI0" secondAttribute="bottom" id="I9m-4s-gcq"/>
+                        <constraint firstAttribute="bottom" secondItem="qBx-MF-VI0" secondAttribute="bottom" id="KRB-dL-KQd"/>
+                        <constraint firstItem="qBx-MF-VI0" firstAttribute="top" secondItem="u8q-Xm-mRy" secondAttribute="top" id="Phs-cD-MHX"/>
+                        <constraint firstAttribute="trailing" secondItem="qBx-MF-VI0" secondAttribute="trailing" id="VWu-If-Jsj"/>
+                        <constraint firstAttribute="trailing" secondItem="qBx-MF-VI0" secondAttribute="trailing" id="WiB-cn-H32"/>
+                        <constraint firstAttribute="height" constant="38" id="ng5-Df-DZW"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6Ps-jD-DMu"/>
+                            <exclude reference="KRB-dL-KQd"/>
+                            <exclude reference="WiB-cn-H32"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="u8q-Xm-mRy" secondAttribute="trailing" id="4zc-Mr-uUP"/>
+                <constraint firstAttribute="trailing" secondItem="fiI-6f-erC" secondAttribute="trailing" id="Acz-FY-ERr"/>
+                <constraint firstAttribute="bottom" secondItem="u8q-Xm-mRy" secondAttribute="bottom" id="Fh2-wc-i1x"/>
+                <constraint firstItem="fiI-6f-erC" firstAttribute="top" secondItem="UMG-iz-iZd" secondAttribute="bottom" id="Lit-b3-MaW"/>
+                <constraint firstItem="fiI-6f-erC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MIk-fo-jgq"/>
+                <constraint firstAttribute="trailing" secondItem="UMG-iz-iZd" secondAttribute="trailing" id="OC5-YO-U8W"/>
+                <constraint firstItem="u8q-Xm-mRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bd5-qt-iQX"/>
+                <constraint firstItem="UMG-iz-iZd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fNl-VE-Vxm"/>
+                <constraint firstItem="fiI-6f-erC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ffC-QJ-Dv8"/>
+                <constraint firstItem="u8q-Xm-mRy" firstAttribute="top" secondItem="fiI-6f-erC" secondAttribute="bottom" id="jEr-KC-HcJ"/>
+                <constraint firstItem="UMG-iz-iZd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rrK-53-5OT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="UMG-iz-iZd" id="vUI-2O-z0B"/>
+                <outlet property="flowLayout" destination="DqW-Bf-hgi" id="Jav-ub-AE8"/>
+                <outlet property="pageControl" destination="fiI-6f-erC" id="iyr-tI-szd"/>
+                <outlet property="sendButton" destination="qBx-MF-VI0" id="Mex-Ed-8Gc"/>
+                <outlet property="tabContainerView" destination="u8q-Xm-mRy" id="YFo-k2-EbF"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="159"/>
+        </view>
+    </objects>
+</document>

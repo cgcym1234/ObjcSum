@@ -101,8 +101,6 @@
 		1F2F68EF1C98569100A3F432 /* NSURL+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F68EE1C98569100A3F432 /* NSURL+YYMessage.m */; };
 		1F2F69071C9A39FE00A3F432 /* YYEmoticonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69061C9A39FE00A3F432 /* YYEmoticonInputView.m */; };
 		1F2F690D1C9A3ADB00A3F432 /* YYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69091C9A3ADB00A3F432 /* YYSegmentedControl.m */; };
-		1F2F690E1C9A3ADB00A3F432 /* YYSegmentedControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F690B1C9A3ADB00A3F432 /* YYSegmentedControlCell.m */; };
-		1F2F690F1C9A3ADB00A3F432 /* YYSegmentedControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F690C1C9A3ADB00A3F432 /* YYSegmentedControlCell.xib */; };
 		1F2F69131C9A44E500A3F432 /* YYEmoticonInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69111C9A44E500A3F432 /* YYEmoticonInputViewCell.m */; };
 		1F2F69141C9A44E500A3F432 /* YYEmoticonInputViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F69121C9A44E500A3F432 /* YYEmoticonInputViewCell.xib */; };
 		1F2F69181C9A56FC00A3F432 /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F69171C9A56FC00A3F432 /* EmojisList.plist */; };
@@ -330,6 +328,9 @@
 		1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87141D1C74C59C00143074 /* YYWebImageOperation.m */; };
 		1F8769881BFB1FF100253D18 /* QrcodeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769871BFB1FF100253D18 /* QrcodeDemo.m */; };
 		1F8769951BFB248100253D18 /* YYQRcodeGenerater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */; };
+		1F87A2791CA266940001519E /* YYSegmentedControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87A2771CA266940001519E /* YYSegmentedControlCell.m */; };
+		1F87A27A1CA266940001519E /* YYSegmentedControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F87A2781CA266940001519E /* YYSegmentedControlCell.xib */; };
+		1F87A2A51CA3DD570001519E /* YYEmoticonInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F87A2A41CA3DD570001519E /* YYEmoticonInputView.xib */; };
 		1F8B89F51BE2058600D81096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B89F41BE2058600D81096 /* main.m */; };
 		1F8B89FE1BE2058700D81096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FC1BE2058700D81096 /* Main.storyboard */; };
 		1F8B8A001BE2058700D81096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FF1BE2058700D81096 /* Assets.xcassets */; };
@@ -694,9 +695,6 @@
 		1F2F69061C9A39FE00A3F432 /* YYEmoticonInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYEmoticonInputView.m; sourceTree = "<group>"; };
 		1F2F69081C9A3ADB00A3F432 /* YYSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedControl.h; sourceTree = "<group>"; };
 		1F2F69091C9A3ADB00A3F432 /* YYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedControl.m; sourceTree = "<group>"; };
-		1F2F690A1C9A3ADB00A3F432 /* YYSegmentedControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedControlCell.h; sourceTree = "<group>"; };
-		1F2F690B1C9A3ADB00A3F432 /* YYSegmentedControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedControlCell.m; sourceTree = "<group>"; };
-		1F2F690C1C9A3ADB00A3F432 /* YYSegmentedControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYSegmentedControlCell.xib; sourceTree = "<group>"; };
 		1F2F69101C9A44E500A3F432 /* YYEmoticonInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYEmoticonInputViewCell.h; sourceTree = "<group>"; };
 		1F2F69111C9A44E500A3F432 /* YYEmoticonInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYEmoticonInputViewCell.m; sourceTree = "<group>"; };
 		1F2F69121C9A44E500A3F432 /* YYEmoticonInputViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYEmoticonInputViewCell.xib; sourceTree = "<group>"; };
@@ -1141,6 +1139,10 @@
 		1F8769871BFB1FF100253D18 /* QrcodeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrcodeDemo.m; sourceTree = "<group>"; };
 		1F8769931BFB248100253D18 /* YYQRcodeGenerater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYQRcodeGenerater.h; sourceTree = "<group>"; };
 		1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYQRcodeGenerater.m; sourceTree = "<group>"; };
+		1F87A2761CA266940001519E /* YYSegmentedControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedControlCell.h; sourceTree = "<group>"; };
+		1F87A2771CA266940001519E /* YYSegmentedControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedControlCell.m; sourceTree = "<group>"; };
+		1F87A2781CA266940001519E /* YYSegmentedControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYSegmentedControlCell.xib; sourceTree = "<group>"; };
+		1F87A2A41CA3DD570001519E /* YYEmoticonInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYEmoticonInputView.xib; sourceTree = "<group>"; };
 		1F8B89F01BE2058600D81096 /* ObjcSum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcSum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8B89F41BE2058600D81096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F8B89F61BE2058600D81096 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1847,6 +1849,7 @@
 				1F2F69171C9A56FC00A3F432 /* EmojisList.plist */,
 				1F2F69051C9A39FE00A3F432 /* YYEmoticonInputView.h */,
 				1F2F69061C9A39FE00A3F432 /* YYEmoticonInputView.m */,
+				1F87A2A41CA3DD570001519E /* YYEmoticonInputView.xib */,
 				1F2F69101C9A44E500A3F432 /* YYEmoticonInputViewCell.h */,
 				1F2F69111C9A44E500A3F432 /* YYEmoticonInputViewCell.m */,
 				1F2F69121C9A44E500A3F432 /* YYEmoticonInputViewCell.xib */,
@@ -1860,9 +1863,9 @@
 			children = (
 				1F2F69081C9A3ADB00A3F432 /* YYSegmentedControl.h */,
 				1F2F69091C9A3ADB00A3F432 /* YYSegmentedControl.m */,
-				1F2F690A1C9A3ADB00A3F432 /* YYSegmentedControlCell.h */,
-				1F2F690B1C9A3ADB00A3F432 /* YYSegmentedControlCell.m */,
-				1F2F690C1C9A3ADB00A3F432 /* YYSegmentedControlCell.xib */,
+				1F87A2761CA266940001519E /* YYSegmentedControlCell.h */,
+				1F87A2771CA266940001519E /* YYSegmentedControlCell.m */,
+				1F87A2781CA266940001519E /* YYSegmentedControlCell.xib */,
 			);
 			path = YYSegmentedControl;
 			sourceTree = "<group>";
@@ -3643,8 +3646,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F87A27A1CA266940001519E /* YYSegmentedControlCell.xib in Resources */,
 				1F98C94D1BE4BBCD002EE116 /* AppConfig.plist in Resources */,
-				1F2F690F1C9A3ADB00A3F432 /* YYSegmentedControlCell.xib in Resources */,
 				1F10373F1C970B290021CAC7 /* YYAudioPlayButton.xib in Resources */,
 				1F5A58021C2BA491000E9E04 /* FastRecord.xcassets in Resources */,
 				1F5A56851C2B9F3A000E9E04 /* FastRecord.storyboard in Resources */,
@@ -3662,6 +3665,7 @@
 				1F6872C41C27E881008BC6BE /* YYMultiSelectCell.xib in Resources */,
 				1F5A568E1C2B9F3A000E9E04 /* FastRecordAccessoryView.xib in Resources */,
 				1F6872C81C27EC59008BC6BE /* ic_radiobutton_checked@2x.png in Resources */,
+				1F87A2A51CA3DD570001519E /* YYEmoticonInputView.xib in Resources */,
 				1F8B8A8B1BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				1F2F69181C9A56FC00A3F432 /* EmojisList.plist in Resources */,
 				1F8B8A661BE2082300D81096 /* YYAlertGridViewCell.xib in Resources */,
@@ -3977,7 +3981,6 @@
 				1FAC3C2F1C0D7FEB0007520F /* NSKeyedUnarchiver+YYExtension.m in Sources */,
 				1F7FBC3A1C3E5DCF00FC37A2 /* YYMessageInputToolBar.m in Sources */,
 				1F2F68EF1C98569100A3F432 /* NSURL+YYMessage.m in Sources */,
-				1F2F690E1C9A3ADB00A3F432 /* YYSegmentedControlCell.m in Sources */,
 				1F8B8AA01BE20E3100D81096 /* DTConstants.m in Sources */,
 				1F65D50D1C100D45001216ED /* YYKVStorage.m in Sources */,
 				1F5A57701C2BA091000E9E04 /* NSObject+RACSelectorSignal.m in Sources */,
@@ -4041,6 +4044,7 @@
 				1FF64A621C33D2E400E3B562 /* YYMessageViewController.m in Sources */,
 				1F2BE0751C507DB900E71E53 /* RunTrace.m in Sources */,
 				1F2DA25F1C197B1E00126FB1 /* MJRefreshGifHeader.m in Sources */,
+				1F87A2791CA266940001519E /* YYSegmentedControlCell.m in Sources */,
 				1F01EB151BFE1997009919F2 /* FMDatabaseAdditions.m in Sources */,
 				1F5A57791C2BA091000E9E04 /* RACBehaviorSubject.m in Sources */,
 				1F2F69131C9A44E500A3F432 /* YYEmoticonInputViewCell.m in Sources */,
@@ -4219,6 +4223,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4262,6 +4267,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4284,15 +4290,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
 			};
 			name = Debug;
 		};
@@ -4301,15 +4308,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
 			};
 			name = Release;
 		};

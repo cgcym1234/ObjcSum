@@ -20,8 +20,11 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
 //使用UICollectionView实现
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-
 @property (nonatomic, copy) NSString *cellIdentifier;
+@property (nonatomic, assign) CGSize itemSize;
+
+//条形指示条
+@property (nonatomic, strong) UIView *indicatorView;
 
 @end
 
@@ -54,6 +57,7 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
     self.bottomLineColor = [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1];
     
     [self addSubview:self.collectionView];
+    [self.collectionView addSubview:self.indicatorView];
     self.backgroundColor = [UIColor whiteColor];
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.cellIdentifier = CellIdentifierDefault;
@@ -63,12 +67,14 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
     }
 }
 
-#pragma mark - Override
 
 - (void)layoutSubviews {
     if (!CGRectEqualToRect(self.bounds, self.collectionView.frame)) {
         self.collectionView.frame = self.bounds;
         [self resetItemLayout];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setIndicatorLocationAtIndex:_selectedIndex animation:NO];
+        });
     }
 }
 
@@ -83,6 +89,30 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
     }
 }
 
+- (void)setIndicatorLocationAtIndex:(NSInteger)index {
+    [self setIndicatorLocationAtIndex:index animation:YES];
+}
+
+- (void)setIndicatorLocationAtIndex:(NSInteger)index animation:(BOOL)animation {
+    CGFloat _itemWith = _itemSize.width;
+    if (!_indicatorViewEnable || _itemWith <= 0 || _itemWith >= CGFLOAT_MAX) {
+        return;
+    }
+    
+    _indicatorView.hidden = !_indicatorViewEnable;
+    CGFloat positionX = _itemWith * index;
+    CGFloat height = CGRectGetHeight(self.bounds);
+    
+    if (animation) {
+        [UIView animateWithDuration:0.2 animations:^{
+            _indicatorView.frame = CGRectMake(positionX, height - _indicatorViewHeight, _itemWith, _indicatorViewHeight);
+        }];
+    } else {
+        _indicatorView.frame = CGRectMake(positionX, height - _indicatorViewHeight, _itemWith, _indicatorViewHeight);
+    }
+}
+
+
 #pragma mark - Public
 
 - (void)reloadData {
@@ -90,7 +120,7 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
 }
 
 - (void)resetItemLayout {
-    [self.collectionView.collectionViewLayout invalidateLayout];
+    [_collectionView.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark- UICollectionViewDataSource,UICollectionViewDelegate
@@ -102,7 +132,8 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
 //设置每个item的大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(CGRectGetWidth(collectionView.bounds)/_dataArray.count, CGRectGetHeight(collectionView.bounds));;
+    self.itemSize = CGSizeMake(CGRectGetWidth(collectionView.bounds)/_dataArray.count, CGRectGetHeight(collectionView.bounds));
+    return _itemSize;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -133,6 +164,8 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
         [cell setSelected:YES animated:YES];
     }
     
+    [self setIndicatorLocationAtIndex:_selectedIndex];
+    
     if ([self.delegate respondsToSelector:@selector(yySegmentedControl:didSelectItemAtIndex:)]) {
         [self.delegate yySegmentedControl:self didSelectItemAtIndex:_selectedIndex];
     }
@@ -155,6 +188,38 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
     }
     _selectedIndex = selectedIndex;
     [self reloadData];
+    [self setIndicatorLocationAtIndex:_selectedIndex];
+}
+
+- (void)setIndicatorViewEnable:(BOOL)indicatorViewEnable {
+    _indicatorViewEnable = indicatorViewEnable;
+    self.indicatorView.hidden = !indicatorViewEnable;
+    if (indicatorViewEnable) {
+        [self layoutIfNeeded];
+    }
+}
+
+- (void)setIndicatorViewHeight:(CGFloat)indicatorViewHeight {
+    if (_indicatorViewHeight == indicatorViewHeight) {
+        return;
+    }
+    _indicatorViewHeight = indicatorViewHeight;
+    if (_indicatorViewEnable) {
+        [self layoutIfNeeded];
+    }
+}
+
+- (void)setItemSize:(CGSize)itemSize {
+    if (!CGSizeEqualToSize(_itemSize, itemSize)) {
+        _itemSize = itemSize;
+        [self setIndicatorViewWith:itemSize.width];
+    }
+}
+
+- (void)setIndicatorViewWith:(CGFloat)width {
+    CGRect frame = _indicatorView.frame;
+    frame.size.width = width;
+    _indicatorView.frame = frame;
 }
 
 #pragma mark - Getter
@@ -188,6 +253,19 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
         _flowLayout = flowLayout;
     }
     return _flowLayout;
+}
+
+- (UIView *)indicatorView {
+    if (!_indicatorView) {
+        _indicatorViewHeight = 2;
+        _indicatorViewEnable = YES;
+        UIView *view = [[UIView alloc] init];
+        view.frame = CGRectMake(0, CGRectGetHeight(_collectionView.bounds) - _indicatorViewHeight, 0, _indicatorViewHeight);
+        view.backgroundColor = ItemColorSelected;
+        _indicatorView.hidden = YES;
+        _indicatorView = view;
+    }
+    return _indicatorView;
 }
 
 

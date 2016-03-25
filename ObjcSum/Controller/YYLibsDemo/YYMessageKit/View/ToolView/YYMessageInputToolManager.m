@@ -75,6 +75,7 @@ static NSString * const KeyCell = @"KeyCell";
     //判断输入的字是否是回车，即按下return
     if ([text isEqualToString:@"\n"]){
         [_delegate yyMessageInputToolManager:self didSendMessage:_inputToolBar.inputTextView.text messageType:YYMessageTypeText];
+        _inputToolBar.inputTextView.text = nil;
         ret = NO;
     }
     return ret;

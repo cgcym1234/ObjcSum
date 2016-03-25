@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class YYEmoticonInputView;
+
+@protocol YYEmoticonInputViewDelegate <NSObject>
+
+@optional
+- (void)yyEmoticonInputView:(YYEmoticonInputView *)view didTapText:(NSString *)text;
+- (void)yyEmoticonInputViewDidTapBackspace:(YYEmoticonInputView *)view;
+- (void)yyEmoticonInputViewDidTapSend:(YYEmoticonInputView *)view;
+
+@end
+
+
+/// 表情输入键盘
 @interface YYEmoticonInputView : UIView
+
+@property (nonatomic, weak) id<YYEmoticonInputViewDelegate> delegate;
+
++ (instancetype)instance;
 
 @end

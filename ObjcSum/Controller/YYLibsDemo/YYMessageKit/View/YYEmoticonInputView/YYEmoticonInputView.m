@@ -8,16 +8,19 @@
 
 #import "YYEmoticonInputView.h"
 #import "YYEmoticonInputViewCell.h"
+#import "UIView+YYMessage.h"
 
 #pragma mark - Const
 
 #define ScreenWidth CGRectGetWidth([[UIScreen mainScreen] bounds])
 
-static NSInteger const ViewHeight = 216;
-static NSInteger const EmoticonSize = 50;
-static NSInteger const OneRowCount = 7;
-static NSInteger const OnePageCount = 21;
-static NSInteger const kToolbarHeight = 37;
+//static NSInteger const PageViewHeight = 120;
+static NSInteger const PageControlHeight = 37;
+static NSInteger const TabViewHeight = 38;
+
+static NSInteger const RowCount = 3;
+static NSInteger const ColumnCount = 7;
+static NSInteger const SectionCount = 10;
 
 static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 
@@ -25,10 +28,21 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 <UICollectionViewDelegate, UICollectionViewDataSource>
 
 //使用UICollectionView实现
-@property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout *flowLayout;
+
+//圆点指示
+@property (nonatomic, weak) IBOutlet  UIPageControl *pageControl;
+
+@property (nonatomic, weak) IBOutlet  UIView *tabContainerView;
+@property (nonatomic, weak) IBOutlet  UIButton *sendButton;
+
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
+//当前表情页
+@property (nonatomic, assign) NSInteger currentPage;
+@property (nonatomic, assign) NSInteger totalPage;
 
 @end
 
@@ -37,15 +51,16 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setContext];
-    }
-    return self;
++ (instancetype)instance {
+    return [self newInstanceFromNib];
+}
+
+- (void)awakeFromNib {
+    [self setContext];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:CGRectMake(0, 0, ScreenWidth, ViewHeight)]) {
+    if (self = [super initWithFrame:frame]) {
         [self setContext];
     }
     return self;
@@ -53,15 +68,14 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 
 
 - (void)setContext {
-    [self addSubview:self.collectionView];
-    self.backgroundColor = [UIColor whiteColor];
-    self.collectionView.backgroundColor = [UIColor clearColor];
-    [self.collectionView registerNib:[UINib nibWithNibName:CellIdentifierDefault bundle:nil] forCellWithReuseIdentifier:CellIdentifierDefault];
-    
+//    [self addSubview:self.collectionView];
+    self.translatesAutoresizingMaskIntoConstraints = YES;
+//    self.backgroundColor = [UIColor whiteColor];
+    [self _initCollectionView];
     [self loadEmoticonData];
     if (_dataArray.count > 0) {
-        [self resetItemLayout];
         [self reloadData];
+        [self scrollToMiddlle];
     }
 }
 
@@ -69,13 +83,45 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 #pragma mark - Override
 
 - (void)layoutSubviews {
-    if (!CGRectEqualToRect(self.bounds, self.collectionView.frame)) {
-        self.collectionView.frame = self.bounds;
+    CGFloat viewHeight = CGRectGetHeight(self.bounds);
+    CGFloat collectionViewHeight = CGRectGetHeight(_collectionView.bounds);
+    CGFloat collectionViewWidth = CGRectGetHeight(_collectionView.bounds);
+    if (collectionViewWidth != ScreenWidth || collectionViewHeight != (viewHeight - PageControlHeight - TabViewHeight)) {
         [self resetItemLayout];
     }
 }
 
 #pragma mark - Private
+
+- (void)_initCollectionView {
+    UICollectionView *collectionView = self.collectionView;
+    collectionView.alwaysBounceHorizontal = YES;
+    collectionView.bounces = YES;
+    collectionView.pagingEnabled = YES;
+    collectionView.backgroundColor = [UIColor clearColor];
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    collectionView.showsVerticalScrollIndicator = NO;
+    collectionView.showsHorizontalScrollIndicator = NO;
+    [collectionView registerNib:[UINib nibWithNibName:CellIdentifierDefault bundle:nil] forCellWithReuseIdentifier:CellIdentifierDefault];
+    
+    UICollectionViewFlowLayout *flowLayout = self.flowLayout;
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    //设置行列间距
+    flowLayout.minimumInteritemSpacing = 0.0f;
+    flowLayout.minimumLineSpacing = 0.0f;
+    
+    flowLayout.footerReferenceSize = CGSizeZero;
+    flowLayout.headerReferenceSize = CGSizeZero;
+    flowLayout.sectionInset = UIEdgeInsetsZero;
+    
+//    flowLayout.itemSize = CGSizeMake(30, 30);
+}
+
+- (void)_initPageControl {
+    _pageControl.currentPage = 0;
+    _pageControl.enabled = YES;
+}
 
 - (void)loadEmoticonData {
     NSMutableArray *dataArray = [NSMutableArray array];
@@ -88,8 +134,23 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
             [dataArray addObject:[NSString stringWithFormat:@"%C", (unichar)emojiCode]];
         }
     }
-    _dataArray = dataArray;
+    self.dataArray = dataArray;
 }
+
+- (void)scrollToMiddlle {
+    [self scrollToPage:0 animated:NO];
+}
+
+- (void)scrollToPage:(NSInteger)page animated:(BOOL)animated {
+    if (page < 0 || page > _dataArray.count - 1) {
+        page = 0;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:page*RowCount*ColumnCount inSection:SectionCount/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:animated];
+    });
+}
+
 
 #pragma mark - Public
 
@@ -104,88 +165,74 @@ static NSString * const CellIdentifierDefault = @"YYEmoticonInputViewCell";
 #pragma mark - Delegate
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return (_dataArray.count/OnePageCount)+(_dataArray.count%OnePageCount==0?0:1);
+    return SectionCount;
 }
 
-//每页OnePageCount个表情
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (((_dataArray.count/OnePageCount)+(_dataArray.count%OnePageCount==0?0:1))!=section+1) {
-        return OnePageCount;
-    }else{
-        return _dataArray.count-OnePageCount*((_dataArray.count/OnePageCount)+(_dataArray.count%OnePageCount==0?0:1)-1);
-    }
+    return _dataArray.count;
 }
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat itemWidth = CGRectGetWidth(collectionView.bounds)/ColumnCount;
+    CGFloat itemHeight = CGRectGetHeight(collectionView.bounds)/RowCount;
+    return CGSizeMake(itemWidth, itemHeight);
+}
+
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     YYEmoticonInputViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierDefault forIndexPath:indexPath];
-    cell.label.text =_dataArray[indexPath.row+indexPath.section*OnePageCount] ;
-    
+    cell.label.text =_dataArray[indexPath.item] ;
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * emojiCode = _dataArray[indexPath.section*OnePageCount+indexPath.row];
-    //这里手动将表情符号添加到textField上
-//    if ([self.delegate respondsToSelector:@selector(yySegmentedControl:didSelectItemAtIndex:)]) {
-//        [self.delegate yySegmentedControl:self didSelectItemAtIndex:_selectedIndex];
-//    }
+    NSString *emojiCode = _dataArray[indexPath.item];
+    if ([self.delegate respondsToSelector:@selector(yyEmoticonInputView:didTapText:)]) {
+        [self.delegate yyEmoticonInputView:self didTapText:emojiCode];
+    }
 }
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (_totalPage == 0) {
+        return;
+    }
+    NSInteger page=(NSInteger)(scrollView.contentOffset.x/scrollView.frame.size.width+0.5)%_totalPage;
+    
+    if (_currentPage != page) {
+        _currentPage = page;
+        _pageControl.currentPage = page;
+    }
+}
+
+#pragma mark - Action
+
+- (IBAction)didTapSendButton:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(yyEmoticonInputView:didTapText:)]) {
+        [self.delegate yyEmoticonInputViewDidTapSend:self];
+    }
+}
+
+- (IBAction)didTapPageControl:(UIPageControl *)sender {
+    if (_currentPage != sender.currentPage) {
+        _currentPage = sender.currentPage;
+        [self scrollToPage:_currentPage animated:YES];
+    }
+}
+
 
 #pragma mark - Setter
 
 - (void)setDataArray:(NSMutableArray *)dataArray {
     _dataArray = dataArray;
+    _totalPage = dataArray.count/(ColumnCount*RowCount);
+    self.pageControl.numberOfPages = _totalPage;
 }
 
 #pragma mark - Getter
 
-- (UICollectionView *)collectionView {
-    if (!_collectionView) {
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
-        collectionView.alwaysBounceHorizontal = YES;
-        collectionView.bounces = YES;
-        collectionView.pagingEnabled = YES;
-        collectionView.backgroundColor = [UIColor clearColor];
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-        collectionView.showsVerticalScrollIndicator = NO;
-        collectionView.showsHorizontalScrollIndicator = NO;
-        
-        _collectionView = collectionView;
-    }
-    return _collectionView;
-}
-
-- (UICollectionViewFlowLayout *)flowLayout {
-    if (!_flowLayout) {
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        
-        //设置行列间距
-        flowLayout.minimumInteritemSpacing = 0.0f;
-        flowLayout.minimumLineSpacing = 0.0f;
-        
-        flowLayout.footerReferenceSize = CGSizeZero;
-        flowLayout.headerReferenceSize = CGSizeZero;
-        
-        CGFloat itemWidth = (ScreenWidth - 10 * 2) / OneRowCount;
-//        itemWidth = CGFloatPixelRound(itemWidth);
-        CGFloat padding = (ScreenWidth - 7 * itemWidth) / 2.0;
-        CGFloat paddingLeft = padding; //CGFloatPixelRound(padding);
-        CGFloat paddingRight = ScreenWidth - paddingLeft - itemWidth * 7;
-        //设置每个表情按钮的大小为30*30;
-        flowLayout.itemSize = CGSizeMake(itemWidth, EmoticonSize);
-        
-        //计算每个分区的左右边距
-        float xOffset = (ScreenWidth - 7*30 - 10*6)/2;
-        //设置分区的内容偏移
-        flowLayout.sectionInset = UIEdgeInsetsMake(10, paddingLeft, 10, paddingRight);
-        _flowLayout = flowLayout;
-    }
-    return _flowLayout;
-}
 
 
 @end

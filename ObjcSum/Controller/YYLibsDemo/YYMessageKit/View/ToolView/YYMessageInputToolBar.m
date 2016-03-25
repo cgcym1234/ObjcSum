@@ -23,6 +23,7 @@ static NSString * const EmojiButtonImage = @"ChatWindow_Expression";
 static NSString * const MoreButtonImage = @"ChatWindow_More";
 
 @interface YYMessageInputToolBar ()
+<YYEmoticonInputViewDelegate>
 
 @property (weak, nonatomic) IBOutlet YYMultiImageButton *inputAndVoiceSwitchButton;
 
@@ -61,7 +62,6 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
     
     _inputAndVoiceSwitchButton.images = @[[UIImage imageNamed:SwitchButtonImageVoice],[UIImage imageNamed:SwitchButtonImageInput]];
     
-//    [_emojiButton setImage:[UIImage imageNamed:EmojiButtonImage] forState:UIControlStateNormal];
     _emojiButton.images = @[[UIImage imageNamed:EmojiButtonImage],[UIImage imageNamed:SwitchButtonImageInput]];
     
     [_moreButton setImage:[UIImage imageNamed:MoreButtonImage] forState:UIControlStateNormal];
@@ -89,6 +89,19 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 
 #pragma mark - Delegate
 
+#pragma mark YYEmoticonInputViewDelegate
+
+- (void)yyEmoticonInputView:(YYEmoticonInputView *)view didTapText:(NSString *)text {
+   [_inputTextView replaceRange:_inputTextView.selectedTextRange withText:text];
+}
+
+- (void)yyEmoticonInputViewDidTapBackspace:(YYEmoticonInputView *)view {
+//    [_textView deleteBackward];
+}
+
+- (void)yyEmoticonInputViewDidTapSend:(YYEmoticonInputView *)view {
+    [_inputTextView.delegate textView:_inputTextView shouldChangeTextInRange:NSMakeRange(0, 1) replacementText:@"\n"];
+}
 
 #pragma mark - Private methods
 
@@ -131,7 +144,9 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 
 - (YYEmoticonInputView *)emoticonInputView {
     if (!_emoticonInputView) {
-        YYEmoticonInputView *emoticonInputView = [[YYEmoticonInputView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+        YYEmoticonInputView *emoticonInputView = [YYEmoticonInputView instance];
+        emoticonInputView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
+        emoticonInputView.delegate = self;
         _emoticonInputView = emoticonInputView;
     }
     return _emoticonInputView;

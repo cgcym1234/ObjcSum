@@ -10,6 +10,9 @@
 
 #pragma mark - YYSegmentedControlItem
 
+#define ItemColorSelected                    [UIColor colorWithRed:0.059 green:0.694 blue:0.729 alpha:1.000]
+#define ItemColorNormal                      [UIColor colorWithWhite:0.400 alpha:1.000]
+
 @class YYSegmentedControl;
 //配置cell的协议,自定义item时候必须实现
 @protocol YYSegmentedControlItem <NSObject>
@@ -53,6 +56,11 @@
  */
 @property(nonatomic, assign) BOOL bottomLineEnable;
 @property(nonatomic, strong) UIColor *bottomLineColor;
+
+//条形指示条高度，默认2
+@property (nonatomic, assign) CGFloat indicatorViewHeight;
+//设置条形指示条是否显示,默认YES
+@property(nonatomic, assign) BOOL indicatorViewEnable;
 
 - (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArr;
 - (void)reloadData;
