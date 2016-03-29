@@ -8,36 +8,53 @@
 
 #import "YYAudioPlayButton.h"
 #import "YYAudioManager.h"
+#import "YYMessageDefinition.h"
+
+
 
 @interface YYAudioPlayButton ()<YYAudioManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageMarginLeftToSuperView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageMarginRightToSuperView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelMarginLeftToImage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelMarginRightToImage;
 @end
 
 @implementation YYAudioPlayButton
 
 - (void)awakeFromNib {
-    self.showDeleteButton = NO;
-//    _voiceButton.layer.borderColor = ColorFromRGBHex(0xdddddd).CGColor;
-//    _voiceButton.layer.borderWidth = 1;
-//    _voiceButton.layer.cornerRadius = 16;
+    //    _voiceButton.layer.borderColor = ColorFromRGBHex(0xdddddd).CGColor;
+    //    _voiceButton.layer.borderWidth = 1;
+    //    _voiceButton.layer.cornerRadius = 16;
     self.translatesAutoresizingMaskIntoConstraints = YES;
     self.backgroundColor = [UIColor clearColor];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapView)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:tap];
 }
 
-- (IBAction)voiceButtonDidClicked:(UIButton *)sender {
-    if (_didClickBlock) {
-        _didClickBlock(self, YYAudioPlayButtonActionTypePlay);
+- (IBAction)didTapView {
+    if (_didTapBlock) {
+        _didTapBlock(self);
     }
     [self play];
 }
 
-- (IBAction)deleteButtonDidClicked:(UIButton *)sender {
-//    if (self.filePath.absoluteString) {
-//        [[NSFileManager defaultManager] removeItemAtPath:self.filePath.absoluteString error:nil];
-//    }
-    
-    if (_didClickBlock) {
-        _didClickBlock(self, YYAudioPlayButtonActionTypeDelete);
+#pragma mark - Private
+
+- (BOOL)_isAudioPlaying {
+    return [[YYAudioManager defaultManager] isPlaying];
+}
+
+- (void)_updatePlayingImage {
+    NSString *prefix = _type == YYAudioPlayButtonTypeVoiceLeft ? @"ReceiverVoiceNodePlaying00":@"SenderVoiceNodePlaying00";
+    if ([self _isAudioPlaying]) {
+        _imageView.image = [UIImage animatedImageNamed:prefix duration:1.0];
+    } else {
+        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@2", prefix]];
     }
 }
 
@@ -48,30 +65,56 @@
     self.duration = duration;
 }
 
-- (void)setShowDeleteButton:(BOOL)showDeleteButton {
-    _showDeleteButton = showDeleteButton;
-    _deleteButton.hidden = !showDeleteButton;
-}
-
 - (void)setDuration:(NSInteger)duration {
     _duration = duration;
     
     NSString *durationString = [@(ceil(duration/1000)) stringValue];
-    [_voiceButton setTitle:durationString != nil ? [durationString stringByAppendingString:@"''"] : nil forState:UIControlStateNormal];
+    [_textLabel setText:durationString != nil ? [durationString stringByAppendingString:@"''"] : nil];
+}
+
+- (void)setType:(YYAudioPlayButtonType)type {
+    _type = type;
+    
+    //左边的配置
+    UILayoutPriority marginLeftPriority = UILayoutPriorityRequired;
+    UILayoutPriority marginRigthPriority = UILayoutPriorityDefaultHigh;
+    UIColor *textColor = ColorFromRGBHex(0x000000);
+    
+    switch (type) {
+        case YYAudioPlayButtonTypeVoiceLeft: {
+            break;
+        }
+        case YYAudioPlayButtonTypeVoiceRight: {
+            marginLeftPriority = UILayoutPriorityDefaultHigh;
+            marginRigthPriority = UILayoutPriorityRequired;
+            textColor = ColorFromRGBHex(0xffffff);
+            break;
+        }
+    }
+    _imageMarginLeftToSuperView.priority = marginLeftPriority;
+    _imageMarginRightToSuperView.priority = marginRigthPriority;
+    
+    _labelMarginLeftToImage.priority = marginLeftPriority;
+    _labelMarginRightToImage.priority = marginRigthPriority;
+    _textLabel.textColor = textColor;
+    
+    [self _updatePlayingImage];
 }
 
 - (void)play {
     [[YYAudioManager defaultManager] playAudio:_audioURL delegate:self];
+    [self _updatePlayingImage];
 }
 
 - (void)stopPlaying {
     [[YYAudioManager defaultManager] stopPlaying];
+    [self _updatePlayingImage];
 }
 
 #pragma mark - Delegate
 
 - (void)yyAudioManager:(YYAudioManager *)audioManager didFinishPlayingAudio:(NSURL *)audioURL error:(NSError *)error {
-    
+    [self _updatePlayingImage];
 }
 
 

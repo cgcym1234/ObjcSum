@@ -107,7 +107,7 @@ static NSString * const TextCanceling = @"松开手指，取消发送";
 - (void)setSeconds:(CGFloat)seconds {
     _seconds = seconds;
     dispatch_async(dispatch_get_main_queue(), ^{
-        _timeLabel.text = [NSString stringWithFormat:@"%02.0fs", seconds];
+        _timeLabel.text = [NSString stringWithFormat:@"%02.1fs", seconds];
     });
 }
 

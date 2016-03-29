@@ -18,6 +18,8 @@
     [super viewDidLoad];
     
     self.dataArr = @[
+                     [[LibDemoInfo alloc] initWithTitle:@"RuntimeDemo" desc:@"RunTime相关" controllerName:@"RuntimeDemo"],
+                     
                      [[LibDemoInfo alloc] initWithTitle:@"GestureDemo" desc:@"手势处理相关" controllerName:@"GestureDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"ThreadDemo" desc:@"多线程相关" controllerName:@"ThreadDemo"],

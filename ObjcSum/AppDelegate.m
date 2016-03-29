@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JPEngine.h"
+#import <JSPatch/JSPatch.h>
 
 @interface AppDelegate ()
 {
@@ -34,7 +34,11 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self fixProblemKeyboardInitDelay];
-    [JPEngine startEngine];
+    
+    static NSString *AppKeyJSPatch = @"32d4c3a5ffdfb78f";
+    [JSPatch startWithAppKey:AppKeyJSPatch];
+    [JSPatch sync];
+    
     // Override point for customization after application launch.
     //延迟启动图显示时间,2秒
 //    sleep(1);

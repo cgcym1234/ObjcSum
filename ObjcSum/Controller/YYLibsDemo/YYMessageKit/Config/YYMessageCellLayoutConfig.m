@@ -45,7 +45,9 @@
         self.cellBottomLabelShow = NO;
         
         self.contentViewInsets = UIEdgeInsetsMake(8, 12, 8, 12);
-        self.bubbleViewInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+        
+        //气泡图带箭头的方向需要额外4dp，看上去才匹配
+        self.bubbleViewInsets = UIEdgeInsetsMake(8, 12, 8, 8);
     }
     return self;
 }

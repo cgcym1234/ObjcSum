@@ -23,6 +23,8 @@
 - (void)renderWithMessageModel:(YYMessageModel *)messageModel atIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView *)collectionView {
     [super renderWithMessageModel:messageModel atIndexPath:indexPath inCollectionView:collectionView];
     YYMessageObjectAudio *audioObject = messageModel.message.messageObject;
+    
+    _audioPlayButton.type = messageModel.message.isOutgoing ? YYAudioPlayButtonTypeVoiceRight : YYAudioPlayButtonTypeVoiceLeft;
     [_audioPlayButton setAudioURL:audioObject.locolURL duration:audioObject.duration];
 }
 
@@ -40,7 +42,10 @@
 #pragma mark - YYMessageCellLayoutConfig
 
 + (CGSize)contentSize:(YYMessageModel *)model cellWidth:(CGFloat)cellWidth {
-    CGSize  contentSize = CGSizeMake(120, 20);
+    YYMessageObjectAudio *audioObject = model.message.messageObject;
+    NSInteger duration = audioObject.duration/1000;
+    CGFloat width = 40 + MIN(duration/30.0, 1) * 200 ;
+    CGSize  contentSize = CGSizeMake(width, 24);
     return contentSize;
 }
 @end

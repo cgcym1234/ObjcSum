@@ -58,6 +58,7 @@
         _avatarImageView.bottom = _bubbleContainerView.bottom;
     }
     
+    //发出去的消息位置
     if (_messageModel.message.isOutgoing) {
         _avatarImageView.right = cellWidth - _cellConfig.contentViewInsets.right;
         _bubbleTopLabel.right = _avatarImageView.left;
@@ -67,7 +68,9 @@
         _avatarImageView.left = _cellConfig.contentViewInsets.left;
         _bubbleTopLabel.left = _avatarImageView.right;
         _bubbleContainerView.left = _avatarImageView.right;
-        _bubbleSubViewCustomer.right = _bubbleContainerView.width - _cellConfig.bubbleViewInsets.right;
+        
+        //根据气泡箭头方向，动态调整左右间距
+        _bubbleSubViewCustomer.right = _bubbleContainerView.width - _cellConfig.bubbleViewInsets.left;
     }
     
     _cellBottomLabel.frame = CGRectMake(x,

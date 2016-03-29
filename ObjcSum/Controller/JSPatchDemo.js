@@ -1,10 +1,10 @@
 require('JSExport,UIView,UIColor')
 /*defineClass 接口 任意替换一个类的方法或新增方法*/
 defineClass('JSPatchDemo', {
-	handleBtn: function(sender) {
-        var tableViewController = JPTableViewController.alloc().init()
-        self.navigationController().pushViewController_animated(tableViewController, YES)
-	},
+//	handleBtn: function(sender) {
+//        var tableViewController = JPTableViewController.alloc().init()
+//        self.navigationController().pushViewController_animated(tableViewController, YES)
+//	},
 	
 	registerNativeFunToHtml: function() {
             console.log('JS log');

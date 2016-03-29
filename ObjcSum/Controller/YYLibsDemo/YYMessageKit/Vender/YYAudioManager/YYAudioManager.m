@@ -290,8 +290,15 @@
     if (!_audioRecorder) {
         NSLog(@"audioRecorder");
         //创建录音文件保存路径
-        NSString *audioPath = [NSString directoryForImageByCurrentTimestamp];
-        NSString *audioName = [NSString stringWithFormat:@"%f.amr", [NSDate date].timeIntervalSince1970];
+        NSString *audioPath = [NSString directoryForVoiceByCurrentTimestamp];
+        
+#warning 注意这里audioName不能自己加后缀.amr .mp3等
+        /**
+         *  注意这里audioName如果加上后缀.amr 或.mp3
+         *  创建audioRecorder会报错 NSOSStatusErrorDomain 1718449215
+         但是加.wav和.caf可以。。。
+         */
+        NSString *audioName = [NSString stringWithFormat:@"%ld.caf", (long)[NSDate date].timeIntervalSince1970*1000*1000 ];
         NSURL *url = [NSURL fileURLWithPath:[audioPath stringByAppendingPathComponent:audioName]];
         
         NSError *error;

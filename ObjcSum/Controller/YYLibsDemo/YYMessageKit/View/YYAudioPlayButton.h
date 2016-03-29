@@ -9,29 +9,30 @@
 #import <UIKit/UIKit.h>
 #import "UIView+YYMessage.h"
 
-typedef NS_ENUM(NSUInteger, YYAudioPlayButtonActionType) {
-    YYAudioPlayButtonActionTypePlay,    //播放
-    YYAudioPlayButtonActionTypeDelete,  //删除
+typedef NS_ENUM(NSUInteger, YYAudioPlayButtonType) {
+    YYAudioPlayButtonTypeVoiceLeft = 0,   //播放图片在左边
+    YYAudioPlayButtonTypeVoiceRight,  //播放图片在右边
 };
 
 
 @class YYAudioPlayButton;
 
-typedef void (^YYAudioPlayButtonDidClickBlock)(YYAudioPlayButton *btn, YYAudioPlayButtonActionType actionType);
+typedef void (^YYAudioPlayButtonDidTapBlock)(YYAudioPlayButton *btn);
 
 @interface YYAudioPlayButton : UIView
 
-@property (weak, nonatomic) IBOutlet UIButton *voiceButton;
-@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
-@property (nonatomic, copy) YYAudioPlayButtonDidClickBlock didClickBlock;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (nonatomic, copy) YYAudioPlayButtonDidTapBlock didTapBlock;
 
 @property (nonatomic, strong) NSURL *audioURL;
 
 //毫秒
 @property (nonatomic, assign) NSInteger duration;
 
-//默认是yes
-@property (nonatomic, assign) BOOL showDeleteButton;
+@property (nonatomic, assign) YYAudioPlayButtonType type;
+
 
 #pragma mark - Public
 
