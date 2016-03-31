@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="374" id="KGk-i7-Jjw" customClass="ShowRoomCell">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="374"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="373.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Ku-SxX">
+                        <rect key="frame" x="10" y="6" width="60" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-FO-73n">
+                        <rect key="frame" x="10" y="32" width="361" height="197.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ya3-FO-73n" secondAttribute="height" multiplier="254:139" id="esM-1D-Vpg"/>
+                            <constraint firstAttribute="height" constant="236" id="nCm-c8-8ct"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nCm-c8-8ct"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="饿威锋网v噶v啊把那个拉法兰十几分,饿威锋网v噶v啊把那个拉法兰十几分,饿威锋网v噶v啊把那个拉法兰十几分兰十几分,饿威锋网v噶v啊把那个拉法兰十几分" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-R2-MQt">
+                        <rect key="frame" x="10" y="237.5" width="361" height="128"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qbe-R2-MQt" secondAttribute="trailing" constant="10" id="1H6-Z1-QSx"/>
+                    <constraint firstItem="qbe-R2-MQt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1Jm-we-2C8"/>
+                    <constraint firstAttribute="bottom" secondItem="qbe-R2-MQt" secondAttribute="bottom" constant="8" id="8CN-xD-kPv"/>
+                    <constraint firstItem="OiK-Ku-SxX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="A88-hM-jKg"/>
+                    <constraint firstAttribute="trailing" secondItem="ya3-FO-73n" secondAttribute="trailing" constant="10" id="BGs-Vo-SjY"/>
+                    <constraint firstItem="OiK-Ku-SxX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="JuK-7O-msM"/>
+                    <constraint firstItem="qbe-R2-MQt" firstAttribute="top" secondItem="ya3-FO-73n" secondAttribute="bottom" constant="8" id="RWH-Vb-ne9"/>
+                    <constraint firstItem="ya3-FO-73n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZbP-A3-M6W"/>
+                    <constraint firstItem="ya3-FO-73n" firstAttribute="top" secondItem="OiK-Ku-SxX" secondAttribute="bottom" constant="8" id="mpY-kR-UpR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="desc" destination="qbe-R2-MQt" id="aiH-4k-lDC"/>
+                <outlet property="image" destination="ya3-FO-73n" id="Nxj-AO-eTU"/>
+                <outlet property="title" destination="OiK-Ku-SxX" id="SON-d1-8yP"/>
+            </connections>
+            <point key="canvasLocation" x="244.5" y="522"/>
+        </tableViewCell>
+    </objects>
+</document>

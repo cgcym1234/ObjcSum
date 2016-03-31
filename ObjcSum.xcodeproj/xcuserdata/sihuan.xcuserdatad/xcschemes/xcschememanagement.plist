@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ObjcSumDev.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1F5B65D41CACAF65003CFD75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1F8B89EF1BE2058600D81096</key>
 		<dict>
 			<key>primary</key>

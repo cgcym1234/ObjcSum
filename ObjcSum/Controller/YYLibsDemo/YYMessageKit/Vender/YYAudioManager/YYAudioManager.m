@@ -39,12 +39,42 @@
 - (instancetype)init {
     if (self = [super init]) {
         _isPlaying = _isRecording = NO;
-        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-        //设置为播放和录音状态，以便可以在录制完之后播放录音
-        [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-        [audioSession setActive:YES error:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleInterruption:)
+                                                     name:        AVAudioSessionInterruptionNotification
+                                                   object:[AVAudioSession sharedInstance]];
     }
     return self;
+}
+
+/**
+ AudioSession这个玩意的主要功能包括以下几点：
+ 1.确定你的app如何使用音频（是播放？还是录音？）
+ 2.为你的app选择合适的输入输出设备（比如输入用的麦克风，输出是耳机、手机功放或者airplay）
+ 3.协调你的app的音频播放和系统以及其他app行为（例如有电话时需要打断，电话结束时需要恢复，按下静音按钮时是否歌曲也要静音等）
+ */
+- (void)_recodingPrepare {
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    //设置为录音状态
+    [audioSession setCategory:AVAudioSessionCategoryRecord error:nil];
+    //启动音频会话管理,此时会阻断后台音乐的播放.
+    [audioSession setActive:YES error:nil];
+    
+    //在录制完声音或者播放完声音后,可以将音频会话关闭,来延续后台音乐的播放
+    //[[AVAudioSession sharedInstance] setActive:NO error: nil];
+}
+
+- (void)_playingPrepare {
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    //扬声器播放
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [audioSession setActive:YES error:nil];
+    
+    /**
+     通过音频会话可以强制的设置应用程序使用指定的输出方式,例如:内声道,扬声器,
+     kAudioSessionOverrideAudioRoute_None  内声道,耳机
+     kAudioSessionOverrideAudioRoute_Speaker 扬声器
+     */
 }
 
 #pragma mark - Public
@@ -143,6 +173,12 @@
 
 
 #pragma mark - Delegate
+
+#pragma mark - AVAudioSessionInterruptionNotification
+
+- (void)handleInterruption:(AVAudioSession *)audioSession {
+    
+}
 
 #pragma mark - AVAudioPlayerDelegate
 

@@ -81,6 +81,14 @@
     return [self requestWithDelegate:nil method:GET urlString:urlString parameters:parameters headers:nil useCache:IsUserCache removeCache:NO cacheExpiration:-1 uploadProgress:nil downloadProgress:nil completion:completion];
 }
 
+- (NSURLRequest *)getUrlString:(NSString *)urlString
+                    parameters:(NSDictionary *)parameters
+                      useCache:(BOOL)useCache
+               cacheExpiration:(NSTimeInterval)cacheExpiration
+                    completion:(YYBaseHttpCompletionBlock)completion {
+    return [self requestWithDelegate:nil method:GET urlString:urlString parameters:parameters headers:nil useCache:useCache removeCache:NO cacheExpiration:cacheExpiration uploadProgress:nil downloadProgress:nil completion:completion];
+}
+
 - (NSURLRequest *)postUrlString:(NSString *)urlString
                      parameters:(NSDictionary *)parameters
                      completion:(YYBaseHttpCompletionBlock)completion {

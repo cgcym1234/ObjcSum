@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SimpleGestureRecognizers">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="442"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-33-xGx">
+                    <rect key="frame" x="10" y="187" width="443" height="29"/>
+                    <segments>
+                        <segment title="Enable Left"/>
+                        <segment title="Disable Left"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeLeftSwipeRecognitionEnabledFrom:" destination="iN0-l3-epB" eventType="valueChanged" id="Ynq-7a-u4Z"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PgW-33-xGx" secondAttribute="trailing" constant="10" id="MLf-jw-NYr"/>
+                <constraint firstItem="PgW-33-xGx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Rgr-r0-Duc"/>
+                <constraint firstItem="PgW-33-xGx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Yxw-lR-ZAn"/>
+                <constraint firstItem="PgW-33-xGx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qz4-ov-gnD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="rotateRecognizer" destination="rb6-3M-5wY" id="fER-aE-nX2"/>
+                <outlet property="segmentedControl" destination="PgW-33-xGx" id="Yt8-ny-7fP"/>
+                <outlet property="swipeLeftRecognizer" destination="fWh-ix-gW6" id="7ta-tO-OG0"/>
+                <outlet property="tapRecognizer" destination="a8g-aP-Kks" id="gJe-W3-J1I"/>
+                <outletCollection property="gestureRecognizers" destination="a8g-aP-Kks" appends="YES" id="G73-UI-HDY"/>
+                <outletCollection property="gestureRecognizers" destination="fWh-ix-gW6" appends="YES" id="h1n-SD-lgo"/>
+                <outletCollection property="gestureRecognizers" destination="qu2-io-mbj" appends="YES" id="HSm-QL-yus"/>
+                <outletCollection property="gestureRecognizers" destination="rb6-3M-5wY" appends="YES" id="aO8-YG-UPa"/>
+            </connections>
+            <point key="canvasLocation" x="104" y="343"/>
+        </view>
+        <tapGestureRecognizer id="a8g-aP-Kks">
+            <connections>
+                <action selector="showGestureForTapRecognizer:" destination="iN0-l3-epB" id="DNg-De-5Pg"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="zan-DQ-8MW"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="fWh-ix-gW6" userLabel="Swipe Left">
+            <connections>
+                <action selector="showGestureForSwipeRecognizer:" destination="iN0-l3-epB" id="8e3-Eo-Nai"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="UtI-iO-qdW"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="qu2-io-mbj" userLabel="Swipe Right">
+            <connections>
+                <action selector="showGestureForSwipeRecognizer:" destination="iN0-l3-epB" id="lc9-LU-UR9"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="Z5H-lP-V7f"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <rotationGestureRecognizer id="rb6-3M-5wY">
+            <connections>
+                <action selector="showGestureForRotation:" destination="iN0-l3-epB" id="6cq-3Z-wbc"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="Iec-nf-M6e"/>
+            </connections>
+        </rotationGestureRecognizer>
+    </objects>
+</document>

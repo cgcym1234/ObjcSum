@@ -39,7 +39,7 @@
  */
 + (void)setExpirationInterval:(NSTimeInterval)expirationInterval forRequest:(NSMutableURLRequest *)request {
     NSTimeInterval interval = expirationInterval > 0 ? expirationInterval : CacheExpirationInterval;
-    [request setValue:[@(interval) stringValue] forKey:KeyExpirationInterval];
+    [request setValue:[@(interval) stringValue] forHTTPHeaderField:KeyExpirationInterval];
 }
 
 /**

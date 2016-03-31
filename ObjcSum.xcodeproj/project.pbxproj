@@ -284,6 +284,479 @@
 		1F5A57FF1C2BA37E000E9E04 /* JKPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E81C2BA37E000E9E04 /* JKPromptView.m */; };
 		1F5A58001C2BA37E000E9E04 /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57EA1C2BA37E000E9E04 /* MWTapDetectingImageView.m */; };
 		1F5A58021C2BA491000E9E04 /* FastRecord.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A58011C2BA491000E9E04 /* FastRecord.xcassets */; };
+		1F5B65D01CABBCE1003CFD75 /* GestureTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B65CF1CABBCE1003CFD75 /* GestureTestView.m */; };
+		1F5B65D31CAC1942003CFD75 /* ShowRoomListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B65D21CAC1942003CFD75 /* ShowRoomListModel.m */; };
+		1F5B65D61CACAF65003CFD75 /* UIDatePicker+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57481C2BA091000E9E04 /* UIDatePicker+RACSignalSupport.m */; };
+		1F5B65D71CACAF65003CFD75 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57D21C2BA37E000E9E04 /* UIColor+Hex.m */; };
+		1F5B65D81CACAF65003CFD75 /* JSPatchDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD23FE1CA12BD800FEA94A /* JSPatchDemo.m */; };
+		1F5B65D91CACAF65003CFD75 /* FastRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A565D1C2B9F3A000E9E04 /* FastRecordListController.m */; };
+		1F5B65DA1CACAF65003CFD75 /* UISwitch+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57561C2BA091000E9E04 /* UISwitch+RACSignalSupport.m */; };
+		1F5B65DB1CACAF65003CFD75 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD41C60608700B281E4 /* UIWebView+AFNetworking.m */; };
+		1F5B65DC1CACAF65003CFD75 /* UINavigationItem+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3D41C200F1900938B2E /* UINavigationItem+YYExtension.m */; };
+		1F5B65DD1CACAF65003CFD75 /* ShowRoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */; };
+		1F5B65DE1CACAF65003CFD75 /* DNBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E01C2BA37E000E9E04 /* DNBrowserCell.m */; };
+		1F5B65DF1CACAF65003CFD75 /* RACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56FC1C2BA091000E9E04 /* RACKVOTrampoline.m */; };
+		1F5B65E01CACAF65003CFD75 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DC21C60608700B281E4 /* AFAutoPurgingImageCache.m */; };
+		1F5B65E11CACAF65003CFD75 /* DNBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57DE1C2BA37E000E9E04 /* DNBadgeLabel.m */; };
+		1F5B65E21CACAF65003CFD75 /* RACEagerSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56E81C2BA091000E9E04 /* RACEagerSequence.m */; };
+		1F5B65E31CACAF65003CFD75 /* FastRecordVoiceInputViewDim.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56821C2B9F3A000E9E04 /* FastRecordVoiceInputViewDim.m */; };
+		1F5B65E41CACAF65003CFD75 /* UITextField+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3BF1C1FF67200938B2E /* UITextField+YYExtension.m */; };
+		1F5B65E51CACAF65003CFD75 /* NSBundle+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C311C0D81160007520F /* NSBundle+YYExtension.m */; };
+		1F5B65E61CACAF65003CFD75 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2491C197B1E00126FB1 /* MJRefreshStateHeader.m */; };
+		1F5B65E71CACAF65003CFD75 /* RACUnarySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57331C2BA091000E9E04 /* RACUnarySequence.m */; };
+		1F5B65E81CACAF65003CFD75 /* RACSubscriptingAssignmentTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57271C2BA091000E9E04 /* RACSubscriptingAssignmentTrampoline.m */; };
+		1F5B65E91CACAF65003CFD75 /* NSData+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C141C0C485D0007520F /* NSData+YYExtension.m */; };
+		1F5B65EA1CACAF65003CFD75 /* UIBarButtonItem+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3B01C1EC56D00938B2E /* UIBarButtonItem+YYExtension.m */; };
+		1F5B65EB1CACAF65003CFD75 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2511C197B1E00126FB1 /* UIScrollView+MJRefresh.m */; };
+		1F5B65EC1CACAF65003CFD75 /* YYAudioRocorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CCF1C8E820500EE70D4 /* YYAudioRocorder.m */; };
+		1F5B65ED1CACAF65003CFD75 /* RACValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57371C2BA091000E9E04 /* RACValueTransformer.m */; };
+		1F5B65EE1CACAF65003CFD75 /* YYAlertTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18BD351BE4B2B000005BA4 /* YYAlertTextView.m */; };
+		1F5B65EF1CACAF65003CFD75 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BAD1C2FC77E00EDDAA4 /* NSObject+Debug.m */; };
+		1F5B65F01CACAF65003CFD75 /* UIBezierPath+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3CE1C1FFE9F00938B2E /* UIBezierPath+YYExtension.m */; };
+		1F5B65F11CACAF65003CFD75 /* DNPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57CB1C2BA37E000E9E04 /* DNPhotoBrowser.m */; };
+		1F5B65F21CACAF65003CFD75 /* FastRecordVoiceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A567A1C2B9F3A000E9E04 /* FastRecordVoiceButton.m */; };
+		1F5B65F31CACAF65003CFD75 /* YYReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3E51C20132400938B2E /* YYReachability.m */; };
+		1F5B65F41CACAF65003CFD75 /* UIButton+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57401C2BA091000E9E04 /* UIButton+RACCommandSupport.m */; };
+		1F5B65F51CACAF65003CFD75 /* RACTestScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A572D1C2BA091000E9E04 /* RACTestScheduler.m */; };
+		1F5B65F61CACAF65003CFD75 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C96C1BE4BF39002EE116 /* NSDate+Extension.m */; };
+		1F5B65F71CACAF65003CFD75 /* NSObject+RACDeallocating.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56B91C2BA091000E9E04 /* NSObject+RACDeallocating.m */; };
+		1F5B65F81CACAF65003CFD75 /* YYMultiSelectTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872BA1C27E881008BC6BE /* YYMultiSelectTable.m */; };
+		1F5B65F91CACAF65003CFD75 /* RACObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57011C2BA091000E9E04 /* RACObjCRuntime.m */; };
+		1F5B65FA1CACAF65003CFD75 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA22E1C197B1E00126FB1 /* MJRefreshComponent.m */; };
+		1F5B65FB1CACAF65003CFD75 /* UIBarButtonItem+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A573E1C2BA091000E9E04 /* UIBarButtonItem+RACCommandSupport.m */; };
+		1F5B65FC1CACAF65003CFD75 /* RACReplaySubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57081C2BA091000E9E04 /* RACReplaySubject.m */; };
+		1F5B65FD1CACAF65003CFD75 /* YYGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3E11C20132400938B2E /* YYGestureRecognizer.m */; };
+		1F5B65FE1CACAF65003CFD75 /* RACDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56E21C2BA091000E9E04 /* RACDisposable.m */; };
+		1F5B65FF1CACAF65003CFD75 /* YYKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3E31C20132400938B2E /* YYKeychain.m */; };
+		1F5B66001CACAF65003CFD75 /* YYAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CD51C8F0EBF00EE70D4 /* YYAudioManager.m */; };
+		1F5B66011CACAF65003CFD75 /* YYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A851BE20C6F00D81096 /* YYTextView.m */; };
+		1F5B66021CACAF65003CFD75 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9711BE4BF39002EE116 /* NSObject+Property.m */; };
+		1F5B66031CACAF65003CFD75 /* RACSignal+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57161C2BA091000E9E04 /* RACSignal+Operations.m */; };
+		1F5B66041CACAF65003CFD75 /* YYTextViewTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872A91C27CB03008BC6BE /* YYTextViewTimePicker.m */; };
+		1F5B66051CACAF65003CFD75 /* YYQRcodeGenerater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769941BFB248100253D18 /* YYQRcodeGenerater.m */; };
+		1F5B66061CACAF65003CFD75 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB101BFE1997009919F2 /* FMDatabaseQueue.m */; };
+		1F5B66071CACAF65003CFD75 /* YYTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A4D1BE2082300D81096 /* YYTimeManager.m */; };
+		1F5B66081CACAF65003CFD75 /* FastRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56661C2B9F3A000E9E04 /* FastRecordModel.m */; };
+		1F5B66091CACAF65003CFD75 /* DNImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57C81C2BA37E000E9E04 /* DNImagePickerController.m */; };
+		1F5B660A1CACAF65003CFD75 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DC41C60608700B281E4 /* AFImageDownloader.m */; };
+		1F5B660B1CACAF65003CFD75 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A961BE20E3100D81096 /* DTTimePeriod.m */; };
+		1F5B660C1CACAF65003CFD75 /* SerialisationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BBF1C32284600EDDAA4 /* SerialisationTest.m */; };
+		1F5B660D1CACAF65003CFD75 /* TouchEventDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1037331C8FCAB10021CAC7 /* TouchEventDemo.m */; };
+		1F5B660E1CACAF65003CFD75 /* YYMessageAudioIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CC21C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m */; };
+		1F5B660F1CACAF65003CFD75 /* NSNotificationCenter+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C281C0D75CA0007520F /* NSNotificationCenter+YYExtension.m */; };
+		1F5B66101CACAF65003CFD75 /* YYHttpRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C01BE70DFD00AF6E3F /* YYHttpRequestSerializer.m */; };
+		1F5B66111CACAF65003CFD75 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DCD1C60608700B281E4 /* UIImageView+AFNetworking.m */; };
+		1F5B66121CACAF65003CFD75 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB0E1BFE1997009919F2 /* FMDatabasePool.m */; };
+		1F5B66131CACAF65003CFD75 /* NSOrderedSet+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56C51C2BA091000E9E04 /* NSOrderedSet+RACSequenceAdditions.m */; };
+		1F5B66141CACAF65003CFD75 /* NSNull+YYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF6B9C1CA4DCA200554A2A /* NSNull+YYKit.m */; };
+		1F5B66151CACAF65003CFD75 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2421C197B1E00126FB1 /* MJRefreshBackStateFooter.m */; };
+		1F5B66161CACAF65003CFD75 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A575A1C2BA091000E9E04 /* UITableViewHeaderFooterView+RACSignalSupport.m */; };
+		1F5B66171CACAF65003CFD75 /* FastRecordVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A567D1C2B9F3A000E9E04 /* FastRecordVoiceCell.m */; };
+		1F5B66181CACAF65003CFD75 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A941BE20E3100D81096 /* DTError.m */; };
+		1F5B66191CACAF65003CFD75 /* NSDate+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A27831C5E52B20030976A /* NSDate+YYMessage.m */; };
+		1F5B661A1CACAF65003CFD75 /* UIView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */; };
+		1F5B661B1CACAF65003CFD75 /* NSObject+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3E1C3E6E1800FC37A2 /* NSObject+YYMessage.m */; };
+		1F5B661C1CACAF65003CFD75 /* RACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57101C2BA091000E9E04 /* RACScopedDisposable.m */; };
+		1F5B661D1CACAF65003CFD75 /* FastRecordModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56641C2B9F3A000E9E04 /* FastRecordModel+CoreDataProperties.m */; };
+		1F5B661E1CACAF65003CFD75 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9541BE4BCDA002EE116 /* MBProgressHUD.m */; };
+		1F5B661F1CACAF65003CFD75 /* RACSubscriptionScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57291C2BA091000E9E04 /* RACSubscriptionScheduler.m */; };
+		1F5B66201CACAF65003CFD75 /* NSData+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56AB1C2BA091000E9E04 /* NSData+RACSupport.m */; };
+		1F5B66211CACAF65003CFD75 /* InterviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB55111BEE1DB80048E1F7 /* InterviewDemo.m */; };
+		1F5B66221CACAF65003CFD75 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A7E1BE20B9D00D81096 /* MSWeakTimer.m */; };
+		1F5B66231CACAF65003CFD75 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2321C197B1E00126FB1 /* MJRefreshHeader.m */; };
+		1F5B66241CACAF65003CFD75 /* YYMessageAudioRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CBF1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m */; };
+		1F5B66251CACAF65003CFD75 /* FastRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A565F1C2B9F3A000E9E04 /* FastRecord.xcdatamodeld */; };
+		1F5B66261CACAF65003CFD75 /* NSDate+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C221C0D6BB10007520F /* NSDate+YYExtension.m */; };
+		1F5B66271CACAF65003CFD75 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB0A1BFE1997009919F2 /* FMDatabase.m */; };
+		1F5B66281CACAF65003CFD75 /* YYMessageObjectAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1037421C97BFBC0021CAC7 /* YYMessageObjectAudio.m */; };
+		1F5B66291CACAF65003CFD75 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AB11BE2152900D81096 /* LoginManager.m */; };
+		1F5B662A1CACAF65003CFD75 /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A9E1BE20E3100D81096 /* NSDate+DateTools.m */; };
+		1F5B662B1CACAF65003CFD75 /* EncryptionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A581BE2082300D81096 /* EncryptionDemo.m */; };
+		1F5B662C1CACAF65003CFD75 /* RACStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A571E1C2BA091000E9E04 /* RACStream.m */; };
+		1F5B662D1CACAF65003CFD75 /* NSObject+RACDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56BB1C2BA091000E9E04 /* NSObject+RACDescription.m */; };
+		1F5B662E1CACAF65003CFD75 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C97C1BE4BF39002EE116 /* UIImage+Extension.m */; };
+		1F5B662F1CACAF65003CFD75 /* RACIndexSetSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56F61C2BA091000E9E04 /* RACIndexSetSequence.m */; };
+		1F5B66301CACAF65003CFD75 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA24F1C197B1E00126FB1 /* UIScrollView+MJExtension.m */; };
+		1F5B66311CACAF65003CFD75 /* YYNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD11C212CCB000BF77F /* YYNoDataView.m */; };
+		1F5B66321CACAF65003CFD75 /* RACSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57251C2BA091000E9E04 /* RACSubscriber.m */; };
+		1F5B66331CACAF65003CFD75 /* FastRecordAddAndModifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56591C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m */; };
+		1F5B66341CACAF65003CFD75 /* RACSignalProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57191C2BA091000E9E04 /* RACSignalProvider.d */; };
+		1F5B66351CACAF65003CFD75 /* YYMessageAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */; };
+		1F5B66361CACAF65003CFD75 /* RACTargetQueueScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A572B1C2BA091000E9E04 /* RACTargetQueueScheduler.m */; };
+		1F5B66371CACAF65003CFD75 /* RACStringSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57201C2BA091000E9E04 /* RACStringSequence.m */; };
+		1F5B66381CACAF65003CFD75 /* YYCommonPullTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2251C19787F00126FB1 /* YYCommonPullTableController.m */; };
+		1F5B66391CACAF65003CFD75 /* NSObject+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C96F1BE4BF39002EE116 /* NSObject+Extention.m */; };
+		1F5B663A1CACAF65003CFD75 /* ThirdLibraryDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */; };
+		1F5B663B1CACAF65003CFD75 /* YYAsyncLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3DB1C20132400938B2E /* YYAsyncLayer.m */; };
+		1F5B663C1CACAF65003CFD75 /* RACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56FA1C2BA091000E9E04 /* RACKVOProxy.m */; };
+		1F5B663D1CACAF65003CFD75 /* UIScrollView+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3B91C1EC92E00938B2E /* UIScrollView+YYExtension.m */; };
+		1F5B663E1CACAF65003CFD75 /* UMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9671BE4BDB6002EE116 /* UMTrack.m */; };
+		1F5B663F1CACAF65003CFD75 /* NSURL+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E39A1C1E712100938B2E /* NSURL+YYExtension.m */; };
+		1F5B66401CACAF65003CFD75 /* YYAudioPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F10373C1C970B090021CAC7 /* YYAudioPlayButton.m */; };
+		1F5B66411CACAF65003CFD75 /* ThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA21E1C19695E00126FB1 /* ThreadDemo.m */; };
+		1F5B66421CACAF65003CFD75 /* VoiceDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CC71C8E6FA100EE70D4 /* VoiceDemo.m */; };
+		1F5B66431CACAF65003CFD75 /* YYThreadSafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3EB1C20132400938B2E /* YYThreadSafeDictionary.m */; };
+		1F5B66441CACAF65003CFD75 /* QrcodeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8769871BFB1FF100253D18 /* QrcodeDemo.m */; };
+		1F5B66451CACAF65003CFD75 /* YYMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */; };
+		1F5B66461CACAF65003CFD75 /* YYMultiSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872C01C27E881008BC6BE /* YYMultiSelectModel.m */; };
+		1F5B66471CACAF65003CFD75 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3F11C20132400938B2E /* YYWeakProxy.m */; };
+		1F5B66481CACAF65003CFD75 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2681C197B8300126FB1 /* UITableView+FDTemplateLayoutCell.m */; };
+		1F5B66491CACAF65003CFD75 /* RACPassthroughSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57031C2BA091000E9E04 /* RACPassthroughSubscriber.m */; };
+		1F5B664A1CACAF65003CFD75 /* YYBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BBC1C32283500EDDAA4 /* YYBenchmark.m */; };
+		1F5B664B1CACAF65003CFD75 /* UITableView+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3BC1C1EC9D100938B2E /* UITableView+YYExtension.m */; };
+		1F5B664C1CACAF65003CFD75 /* FastRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A566E1C2B9F3A000E9E04 /* FastRecordCell.m */; };
+		1F5B664D1CACAF65003CFD75 /* YYLinkedMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C481C0EE1240007520F /* YYLinkedMap.m */; };
+		1F5B664E1CACAF65003CFD75 /* NSURL+DNIMagePickerUrlEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57D01C2BA37E000E9E04 /* NSURL+DNIMagePickerUrlEqual.m */; };
+		1F5B664F1CACAF65003CFD75 /* YYBaseHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C99E1BE4C06B002EE116 /* YYBaseHttp.m */; };
+		1F5B66501CACAF65003CFD75 /* FastRecordAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56691C2B9F3A000E9E04 /* FastRecordAccessoryView.m */; };
+		1F5B66511CACAF65003CFD75 /* YYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69091C9A3ADB00A3F432 /* YYSegmentedControl.m */; };
+		1F5B66521CACAF65003CFD75 /* FastRecordCustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56721C2B9F3A000E9E04 /* FastRecordCustomerCell.m */; };
+		1F5B66531CACAF65003CFD75 /* ApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C94F1BE4BC37002EE116 /* ApplicationManager.m */; };
+		1F5B66541CACAF65003CFD75 /* YYBaseLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C411C0EC2410007520F /* YYBaseLayoutConstraint.m */; };
+		1F5B66551CACAF65003CFD75 /* TouchDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDFE01C4BE88E00E71E53 /* TouchDemo.m */; };
+		1F5B66561CACAF65003CFD75 /* UISlider+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57521C2BA091000E9E04 /* UISlider+RACSignalSupport.m */; };
+		1F5B66571CACAF65003CFD75 /* LoginDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8351C154ECD005E43E9 /* LoginDemo.m */; };
+		1F5B66581CACAF65003CFD75 /* RACMulticastConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56FF1C2BA091000E9E04 /* RACMulticastConnection.m */; };
+		1F5B66591CACAF65003CFD75 /* NSDictionary+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56AD1C2BA091000E9E04 /* NSDictionary+RACSequenceAdditions.m */; };
+		1F5B665A1CACAF65003CFD75 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8461C1551F3005E43E9 /* HttpManager.m */; };
+		1F5B665B1CACAF65003CFD75 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DC81C60608700B281E4 /* UIActivityIndicatorView+AFNetworking.m */; };
+		1F5B665C1CACAF65003CFD75 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2471C197B1E00126FB1 /* MJRefreshNormalHeader.m */; };
+		1F5B665D1CACAF65003CFD75 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A9A1BE20E3100D81096 /* DTTimePeriodCollection.m */; };
+		1F5B665E1CACAF65003CFD75 /* UITableViewCell+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3D71C2010AC00938B2E /* UITableViewCell+YYExtension.m */; };
+		1F5B665F1CACAF65003CFD75 /* UIFont+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3CB1C1FFDA400938B2E /* UIFont+YYExtension.m */; };
+		1F5B66601CACAF65003CFD75 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56A31C2BA091000E9E04 /* RACEXTRuntimeExtensions.m */; };
+		1F5B66611CACAF65003CFD75 /* NSInvocation+RACTypeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56B51C2BA091000E9E04 /* NSInvocation+RACTypeParsing.m */; };
+		1F5B66621CACAF65003CFD75 /* YYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F792CCA1C8E742400EE70D4 /* YYAudioPlayer.m */; };
+		1F5B66631CACAF65003CFD75 /* YYFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9731BE4BF39002EE116 /* YYFoundation.m */; };
+		1F5B66641CACAF65003CFD75 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AAB1BE20F3C00D81096 /* MainTabBarController.m */; };
+		1F5B66651CACAF65003CFD75 /* YYFileHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3DF1C20132400938B2E /* YYFileHash.m */; };
+		1F5B66661CACAF65003CFD75 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F199A001C17F346000F690C /* sqlite3.c */; };
+		1F5B66671CACAF65003CFD75 /* NSString+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56CD1C2BA091000E9E04 /* NSString+RACSupport.m */; };
+		1F5B66681CACAF65003CFD75 /* NSObject+RACPropertySubscribing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56C11C2BA091000E9E04 /* NSObject+RACPropertySubscribing.m */; };
+		1F5B66691CACAF65003CFD75 /* UIControl+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3AD1C1EBFB100938B2E /* UIControl+YYExtension.m */; };
+		1F5B666A1CACAF65003CFD75 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA22A1C197B1E00126FB1 /* MJRefreshAutoFooter.m */; };
+		1F5B666B1CACAF65003CFD75 /* DNAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57DC1C2BA37E000E9E04 /* DNAssetsViewCell.m */; };
+		1F5B666C1CACAF65003CFD75 /* ProtocolAndCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB243A1C34C6AE00FFCBA4 /* ProtocolAndCategory.m */; };
+		1F5B666D1CACAF65003CFD75 /* UITableViewCell+CustomSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1DD8E1BFC61E0001AE9BE /* UITableViewCell+CustomSetting.m */; };
+		1F5B666E1CACAF65003CFD75 /* YYBaseDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A271BE2075500D81096 /* YYBaseDemoController.m */; };
+		1F5B666F1CACAF65003CFD75 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA23E1C197B1E00126FB1 /* MJRefreshBackGifFooter.m */; };
+		1F5B66701CACAF65003CFD75 /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57EA1C2BA37E000E9E04 /* MWTapDetectingImageView.m */; };
+		1F5B66711CACAF65003CFD75 /* DNImageFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57C61C2BA37E000E9E04 /* DNImageFlowViewController.m */; };
+		1F5B66721CACAF65003CFD75 /* ApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C94A1BE4BBAE002EE116 /* ApplicationInfo.m */; };
+		1F5B66731CACAF65003CFD75 /* DNAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57C41C2BA37E000E9E04 /* DNAsset.m */; };
+		1F5B66741CACAF65003CFD75 /* ExtensionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */; };
+		1F5B66751CACAF65003CFD75 /* YYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E85C1C1563EF005E43E9 /* YYWebViewController.m */; };
+		1F5B66761CACAF65003CFD75 /* YYLibsDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A481BE2082300D81096 /* YYLibsDemo.m */; };
+		1F5B66771CACAF65003CFD75 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DC61C60608700B281E4 /* AFNetworkActivityIndicatorManager.m */; };
+		1F5B66781CACAF65003CFD75 /* NSArray+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56A91C2BA091000E9E04 /* NSArray+RACSequenceAdditions.m */; };
+		1F5B66791CACAF65003CFD75 /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56C91C2BA091000E9E04 /* NSString+RACKeyPathUtilities.m */; };
+		1F5B667A1CACAF65003CFD75 /* UITableViewCell+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57581C2BA091000E9E04 /* UITableViewCell+RACSignalSupport.m */; };
+		1F5B667B1CACAF65003CFD75 /* NSFileHandle+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56B11C2BA091000E9E04 /* NSFileHandle+RACSupport.m */; };
+		1F5B667C1CACAF65003CFD75 /* NSEnumerator+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56AF1C2BA091000E9E04 /* NSEnumerator+RACSequenceAdditions.m */; };
+		1F5B667D1CACAF65003CFD75 /* UIColor+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05D4591C3BBEFD00C6DD29 /* UIColor+YYMessage.m */; };
+		1F5B667E1CACAF65003CFD75 /* UIView+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3B61C1EC87400938B2E /* UIView+YYExtension.m */; };
+		1F5B667F1CACAF65003CFD75 /* ObjectiveC_objc_msgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BAA1C2FC2A500EDDAA4 /* ObjectiveC_objc_msgSend.m */; };
+		1F5B66801CACAF65003CFD75 /* UINavigationBar+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3D11C200F0200938B2E /* UINavigationBar+YYExtension.m */; };
+		1F5B66811CACAF65003CFD75 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DE51C50CEAE00B0C17A /* UIView+Frame.m */; };
+		1F5B66821CACAF65003CFD75 /* ObjectiveC_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BB31C30DFB500EDDAA4 /* ObjectiveC_Class.m */; };
+		1F5B66831CACAF65003CFD75 /* RACCompoundDisposableProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56DE1C2BA091000E9E04 /* RACCompoundDisposableProvider.d */; };
+		1F5B66841CACAF65003CFD75 /* RACSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57221C2BA091000E9E04 /* RACSubject.m */; };
+		1F5B66851CACAF65003CFD75 /* UIRefreshControl+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A574E1C2BA091000E9E04 /* UIRefreshControl+RACCommandSupport.m */; };
+		1F5B66861CACAF65003CFD75 /* RACReturnSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A570A1C2BA091000E9E04 /* RACReturnSignal.m */; };
+		1F5B66871CACAF65003CFD75 /* UILocalNotification+YYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57BE1C2BA289000E9E04 /* UILocalNotification+YYExtention.m */; };
+		1F5B66881CACAF65003CFD75 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9981BE4BFB8002EE116 /* SSKeychain.m */; };
+		1F5B66891CACAF65003CFD75 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2371C197B1E00126FB1 /* MJRefreshAutoGifFooter.m */; };
+		1F5B668A1CACAF65003CFD75 /* YYSimpleAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD90ED91C2AA29A0020EAED /* YYSimpleAlertTable.m */; };
+		1F5B668B1CACAF65003CFD75 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E4091C20137B00938B2E /* YYClassInfo.m */; };
+		1F5B668C1CACAF65003CFD75 /* YYScrollSigment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A53C1BEC3B9D0076ECAA /* YYScrollSigment.m */; };
+		1F5B668D1CACAF65003CFD75 /* YYAlertTextViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A461BE2082300D81096 /* YYAlertTextViewDemo.m */; };
+		1F5B668E1CACAF65003CFD75 /* InterfaceAndAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BD41C33684500EDDAA4 /* InterfaceAndAPI.m */; };
+		1F5B668F1CACAF65003CFD75 /* ObjectiveC_BlockAndGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC331C3D15BD00FC37A2 /* ObjectiveC_BlockAndGCD.m */; };
+		1F5B66901CACAF65003CFD75 /* YYAlertTableTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A331BE2082300D81096 /* YYAlertTableTitleCell.m */; };
+		1F5B66911CACAF65003CFD75 /* RACImmediateScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56F41C2BA091000E9E04 /* RACImmediateScheduler.m */; };
+		1F5B66921CACAF65003CFD75 /* UIControl+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57441C2BA091000E9E04 /* UIControl+RACSignalSupport.m */; };
+		1F5B66931CACAF65003CFD75 /* NSObject+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D1A1C0C153800492D9D /* NSObject+YYExtension.m */; };
+		1F5B66941CACAF65003CFD75 /* UIViewController+UMStatistic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9641BE4BDB6002EE116 /* UIViewController+UMStatistic.m */; };
+		1F5B66951CACAF65003CFD75 /* SystemDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AD31BE360A700D81096 /* SystemDemo.m */; };
+		1F5B66961CACAF65003CFD75 /* FastRecordCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56621C2B9F3A000E9E04 /* FastRecordCellModel.m */; };
+		1F5B66971CACAF65003CFD75 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD01C60608700B281E4 /* UIProgressView+AFNetworking.m */; };
+		1F5B66981CACAF65003CFD75 /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3ED1C20132400938B2E /* YYTimer.m */; };
+		1F5B66991CACAF65003CFD75 /* RACTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A572F1C2BA091000E9E04 /* RACTuple.m */; };
+		1F5B669A1CACAF65003CFD75 /* UIImage+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3A21C1EBAD200938B2E /* UIImage+YYExtension.m */; };
+		1F5B669B1CACAF65003CFD75 /* CLLocation+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C371C0D9B960007520F /* CLLocation+YYExtension.m */; };
+		1F5B669C1CACAF65003CFD75 /* YYScrollSigmentDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */; };
+		1F5B669D1CACAF65003CFD75 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65D5011C0FD99F001216ED /* YYDiskCache.m */; };
+		1F5B669E1CACAF65003CFD75 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A551BE2082300D81096 /* GTMBase64.m */; };
+		1F5B669F1CACAF65003CFD75 /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A981BE20E3100D81096 /* DTTimePeriodChain.m */; };
+		1F5B66A01CACAF65003CFD75 /* UIView+YYChrysanthemum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD81C215AD7000BF77F /* UIView+YYChrysanthemum.m */; };
+		1F5B66A11CACAF65003CFD75 /* RACDynamicSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56E41C2BA091000E9E04 /* RACDynamicSequence.m */; };
+		1F5B66A21CACAF65003CFD75 /* ObjectiveCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F199A151C190981000F690C /* ObjectiveCDemo.m */; };
+		1F5B66A31CACAF65003CFD75 /* RACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57141C2BA091000E9E04 /* RACSerialDisposable.m */; };
+		1F5B66A41CACAF65003CFD75 /* UILabel+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A591C33CE0C00E3B562 /* UILabel+YYMessage.m */; };
+		1F5B66A51CACAF65003CFD75 /* UIImagePickerController+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A574C1C2BA091000E9E04 /* UIImagePickerController+RACSignalSupport.m */; };
+		1F5B66A61CACAF65003CFD75 /* RACChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56D91C2BA091000E9E04 /* RACChannel.m */; };
+		1F5B66A71CACAF65003CFD75 /* UIViewController+NoDataTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA26B1C197B9200126FB1 /* UIViewController+NoDataTip.m */; };
+		1F5B66A81CACAF65003CFD75 /* UIViewController+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57D61C2BA37E000E9E04 /* UIViewController+DNImagePicker.m */; };
+		1F5B66A91CACAF65003CFD75 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DBD1C60608700B281E4 /* AFURLResponseSerialization.m */; };
+		1F5B66AA1CACAF65003CFD75 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DD21C60608700B281E4 /* UIRefreshControl+AFNetworking.m */; };
+		1F5B66AB1CACAF65003CFD75 /* DragImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE0571C4F84C900E71E53 /* DragImageView.m */; };
+		1F5B66AC1CACAF65003CFD75 /* MVVMDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FF3AF1C2B949000468F29 /* MVVMDemo.m */; };
+		1F5B66AD1CACAF65003CFD75 /* TouchEventDemoChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1037361C8FCC440021CAC7 /* TouchEventDemoChild.m */; };
+		1F5B66AE1CACAF65003CFD75 /* ReadingNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDFDD1C4BE7FD00E71E53 /* ReadingNote.m */; };
+		1F5B66AF1CACAF65003CFD75 /* NSIndexSet+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56B31C2BA091000E9E04 /* NSIndexSet+RACSequenceAdditions.m */; };
+		1F5B66B01CACAF65003CFD75 /* YYMessageObjectImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DF61C512EB900B0C17A /* YYMessageObjectImage.m */; };
+		1F5B66B11CACAF65003CFD75 /* NSObject+RACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56BD1C2BA091000E9E04 /* NSObject+RACKVOWrapper.m */; };
+		1F5B66B21CACAF65003CFD75 /* RACUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57351C2BA091000E9E04 /* RACUnit.m */; };
+		1F5B66B31CACAF65003CFD75 /* DNFullImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E21C2BA37E000E9E04 /* DNFullImageButton.m */; };
+		1F5B66B41CACAF65003CFD75 /* YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BC71C3272E000EDDAA4 /* YYMessage.m */; };
+		1F5B66B51CACAF65003CFD75 /* RACDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56E01C2BA091000E9E04 /* RACDelegateProxy.m */; };
+		1F5B66B61CACAF65003CFD75 /* NSSet+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56C71C2BA091000E9E04 /* NSSet+RACSequenceAdditions.m */; };
+		1F5B66B71CACAF65003CFD75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A5381BEC396D0076ECAA /* AppDelegate.m */; };
+		1F5B66B81CACAF65003CFD75 /* RACGroupedSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56F21C2BA091000E9E04 /* RACGroupedSignal.m */; };
+		1F5B66B91CACAF65003CFD75 /* YYMessageCellLayoutConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB24401C35070900FFCBA4 /* YYMessageCellLayoutConfig.m */; };
+		1F5B66BA1CACAF65003CFD75 /* YYEmoticonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69061C9A39FE00A3F432 /* YYEmoticonInputView.m */; };
+		1F5B66BB1CACAF65003CFD75 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9791BE4BF39002EE116 /* UIColor+Extention.m */; };
+		1F5B66BC1CACAF65003CFD75 /* GestureTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B65CF1CABBCE1003CFD75 /* GestureTestView.m */; };
+		1F5B66BD1CACAF65003CFD75 /* UIColor+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E39F1C1EB72500938B2E /* UIColor+YYExtension.m */; };
+		1F5B66BE1CACAF65003CFD75 /* YYCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1999F71C16D5CE000F690C /* YYCacheTest.m */; };
+		1F5B66BF1CACAF65003CFD75 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA23B1C197B1E00126FB1 /* MJRefreshAutoStateFooter.m */; };
+		1F5B66C01CACAF65003CFD75 /* RACDynamicSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56E61C2BA091000E9E04 /* RACDynamicSignal.m */; };
+		1F5B66C11CACAF65003CFD75 /* FoundationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D1E1C0C2A0F00492D9D /* FoundationDemo.m */; };
+		1F5B66C21CACAF65003CFD75 /* YYMessageModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F075BC21C463B920013C815 /* YYMessageModelManager.m */; };
+		1F5B66C31CACAF65003CFD75 /* RACEmptySignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56EC1C2BA091000E9E04 /* RACEmptySignal.m */; };
+		1F5B66C41CACAF65003CFD75 /* NSString+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D221C0C33D400492D9D /* NSString+YYExtension.m */; };
+		1F5B66C51CACAF65003CFD75 /* ObjectiveC_SystemFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD800971C434422004E2D22 /* ObjectiveC_SystemFramework.m */; };
+		1F5B66C61CACAF65003CFD75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B89F41BE2058600D81096 /* main.m */; };
+		1F5B66C71CACAF65003CFD75 /* YYKeyValueStoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BB06C1BFF6C7500364708 /* YYKeyValueStoreDemo.m */; };
+		1F5B66C81CACAF65003CFD75 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C3D1C0E9BBF0007520F /* YYCache.m */; };
+		1F5B66C91CACAF65003CFD75 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9761BE4BF39002EE116 /* NSString+Extention.m */; };
+		1F5B66CA1CACAF65003CFD75 /* YYAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A2E1BE2082300D81096 /* YYAlertTable.m */; };
+		1F5B66CB1CACAF65003CFD75 /* RACTupleSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57311C2BA091000E9E04 /* RACTupleSequence.m */; };
+		1F5B66CC1CACAF65003CFD75 /* YYPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8751C167E5C005E43E9 /* YYPageController.m */; };
+		1F5B66CD1CACAF65003CFD75 /* FastRecordBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A566C1C2B9F3A000E9E04 /* FastRecordBaseCell.m */; };
+		1F5B66CE1CACAF65003CFD75 /* NSKeyedUnarchiver+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C2E1C0D7FEB0007520F /* NSKeyedUnarchiver+YYExtension.m */; };
+		1F5B66CF1CACAF65003CFD75 /* YYMessageInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC391C3E5DCF00FC37A2 /* YYMessageInputToolBar.m */; };
+		1F5B66D01CACAF65003CFD75 /* NSURL+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F68EE1C98569100A3F432 /* NSURL+YYMessage.m */; };
+		1F5B66D11CACAF65003CFD75 /* DTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A921BE20E3100D81096 /* DTConstants.m */; };
+		1F5B66D21CACAF65003CFD75 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65D50C1C100D45001216ED /* YYKVStorage.m */; };
+		1F5B66D31CACAF65003CFD75 /* NSObject+RACSelectorSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56C31C2BA091000E9E04 /* NSObject+RACSelectorSignal.m */; };
+		1F5B66D41CACAF65003CFD75 /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3EF1C20132400938B2E /* YYTransaction.m */; };
+		1F5B66D51CACAF65003CFD75 /* YYDim.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD90EC91C2A2F080020EAED /* YYDim.m */; };
+		1F5B66D61CACAF65003CFD75 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48F2451C61993B00416803 /* HitTestView.m */; };
+		1F5B66D71CACAF65003CFD75 /* YYScrollSigmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A53E1BEC3B9D0076ECAA /* YYScrollSigmentCell.m */; };
+		1F5B66D81CACAF65003CFD75 /* GestureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE0691C4F8FF900E71E53 /* GestureDemo.m */; };
+		1F5B66D91CACAF65003CFD75 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3901C1E57DF00938B2E /* AppManager.m */; };
+		1F5B66DA1CACAF65003CFD75 /* UISearchDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB55181BF62BD70048E1F7 /* UISearchDemo.m */; };
+		1F5B66DB1CACAF65003CFD75 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C451C0ED1350007520F /* YYMemoryCache.m */; };
+		1F5B66DC1CACAF65003CFD75 /* YYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87141A1C74C58D00143074 /* YYImageCache.m */; };
+		1F5B66DD1CACAF65003CFD75 /* DragImageViewGesture3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE07C1C50C3BB00E71E53 /* DragImageViewGesture3.m */; };
+		1F5B66DE1CACAF65003CFD75 /* FastRecordImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56741C2B9F3A000E9E04 /* FastRecordImageCell.m */; };
+		1F5B66DF1CACAF65003CFD75 /* YYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8714161C74BA5500143074 /* YYWebImageManager.m */; };
+		1F5B66E01CACAF65003CFD75 /* YYMessageCellAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1037391C970A0F0021CAC7 /* YYMessageCellAudio.m */; };
+		1F5B66E11CACAF65003CFD75 /* YYWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87141D1C74C59C00143074 /* YYWebImageOperation.m */; };
+		1F5B66E21CACAF65003CFD75 /* RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57181C2BA091000E9E04 /* RACSignal.m */; };
+		1F5B66E31CACAF65003CFD75 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F075BB61C44D2D00013C815 /* UIView+AutoLayout.m */; };
+		1F5B66E41CACAF65003CFD75 /* FastRecordTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56761C2B9F3A000E9E04 /* FastRecordTextInputCell.m */; };
+		1F5B66E51CACAF65003CFD75 /* RACErrorSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56EE1C2BA091000E9E04 /* RACErrorSignal.m */; };
+		1F5B66E61CACAF65003CFD75 /* RACArraySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56D31C2BA091000E9E04 /* RACArraySequence.m */; };
+		1F5B66E71CACAF65003CFD75 /* ObjectiveC_method_swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BB01C30CDDC00EDDAA4 /* ObjectiveC_method_swizzling.m */; };
+		1F5B66E81CACAF65003CFD75 /* YYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AC61BE2185F00D81096 /* YYHud.m */; };
+		1F5B66E91CACAF65003CFD75 /* YYMessageCellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DED1C50DF6500B0C17A /* YYMessageCellImage.m */; };
+		1F5B66EA1CACAF65003CFD75 /* TableViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */; };
+		1F5B66EB1CACAF65003CFD75 /* ObjectiveC_Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05D4201C3A1D3300C6DD29 /* ObjectiveC_Memory.m */; };
+		1F5B66EC1CACAF65003CFD75 /* RACSignalSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A571B1C2BA091000E9E04 /* RACSignalSequence.m */; };
+		1F5B66ED1CACAF65003CFD75 /* FastRecordTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56781C2B9F3A000E9E04 /* FastRecordTitleCell.m */; };
+		1F5B66EE1CACAF65003CFD75 /* YYAlertGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18BD3A1BE4B2E000005BA4 /* YYAlertGridView.m */; };
+		1F5B66EF1CACAF65003CFD75 /* YYThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3E91C20132400938B2E /* YYThreadSafeArray.m */; };
+		1F5B66F01CACAF65003CFD75 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C99A1BE4BFB8002EE116 /* SSKeychainQuery.m */; };
+		1F5B66F11CACAF65003CFD75 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2301C197B1E00126FB1 /* MJRefreshFooter.m */; };
+		1F5B66F21CACAF65003CFD75 /* UICollectionReusableView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57421C2BA091000E9E04 /* UICollectionReusableView+RACSignalSupport.m */; };
+		1F5B66F31CACAF65003CFD75 /* RACBlockTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56D71C2BA091000E9E04 /* RACBlockTrampoline.m */; };
+		1F5B66F41CACAF65003CFD75 /* CALayer+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3A51C1EBC7B00938B2E /* CALayer+YYExtension.m */; };
+		1F5B66F51CACAF65003CFD75 /* RACCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56DB1C2BA091000E9E04 /* RACCommand.m */; };
+		1F5B66F61CACAF65003CFD75 /* SqlliteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A0E181C02E8D20081BC18 /* SqlliteDemo.m */; };
+		1F5B66F71CACAF65003CFD75 /* UIStepper+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57541C2BA091000E9E04 /* UIStepper+RACSignalSupport.m */; };
+		1F5B66F81CACAF65003CFD75 /* YYChrysanthemum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E40E1C210D3A00938B2E /* YYChrysanthemum.m */; };
+		1F5B66F91CACAF65003CFD75 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C95B1BE4BD7B002EE116 /* Aspects.m */; };
+		1F5B66FA1CACAF65003CFD75 /* YYJsonResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C21BE70DFD00AF6E3F /* YYJsonResponseSerializer.m */; };
+		1F5B66FB1CACAF65003CFD75 /* ShowRoomListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B65D21CAC1942003CFD75 /* ShowRoomListModel.m */; };
+		1F5B66FC1CACAF65003CFD75 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA22C1C197B1E00126FB1 /* MJRefreshBackFooter.m */; };
+		1F5B66FD1CACAF65003CFD75 /* RACQueueScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57061C2BA091000E9E04 /* RACQueueScheduler.m */; };
+		1F5B66FE1CACAF65003CFD75 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DB71C60608700B281E4 /* AFNetworkReachabilityManager.m */; };
+		1F5B66FF1CACAF65003CFD75 /* YYMessageMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F158D291C78AA8F008AD080 /* YYMessageMoreView.m */; };
+		1F5B67001CACAF65003CFD75 /* YYSentinel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3E71C20132400938B2E /* YYSentinel.m */; };
+		1F5B67011CACAF65003CFD75 /* RACSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57121C2BA091000E9E04 /* RACSequence.m */; };
+		1F5B67021CACAF65003CFD75 /* NSNotificationCenter+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56B71C2BA091000E9E04 /* NSNotificationCenter+RACSupport.m */; };
+		1F5B67031CACAF65003CFD75 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DB41C60608700B281E4 /* AFHTTPSessionManager.m */; };
+		1F5B67041CACAF65003CFD75 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DBB1C60608700B281E4 /* AFURLRequestSerialization.m */; };
+		1F5B67051CACAF65003CFD75 /* DNUnAuthorizedTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E61C2BA37E000E9E04 /* DNUnAuthorizedTipsView.m */; };
+		1F5B67061CACAF65003CFD75 /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3A81C1EBD6D00938B2E /* YYCGUtilities.m */; };
+		1F5B67071CACAF65003CFD75 /* UINavigationItem+ArrowBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9441BE4BA64002EE116 /* UINavigationItem+ArrowBackButton.m */; };
+		1F5B67081CACAF65003CFD75 /* FastRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56561C2B9F3A000E9E04 /* FastRecord.m */; };
+		1F5B67091CACAF65003CFD75 /* NSHTTPCookie+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05D41D1C3A0AF100C6DD29 /* NSHTTPCookie+YYExtension.m */; };
+		1F5B670A1CACAF65003CFD75 /* CountdownDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A4B1BE2082300D81096 /* CountdownDemo.m */; };
+		1F5B670B1CACAF65003CFD75 /* RACKVOChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56F81C2BA091000E9E04 /* RACKVOChannel.m */; };
+		1F5B670C1CACAF65003CFD75 /* YYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A601C33D2E400E3B562 /* YYMessageViewController.m */; };
+		1F5B670D1CACAF65003CFD75 /* RunTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE0711C507DB900E71E53 /* RunTrace.m */; };
+		1F5B670E1CACAF65003CFD75 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2451C197B1E00126FB1 /* MJRefreshGifHeader.m */; };
+		1F5B670F1CACAF65003CFD75 /* RuntimeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF6B9F1CA4E06800554A2A /* RuntimeDemo.m */; };
+		1F5B67101CACAF65003CFD75 /* YYSegmentedControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F87A2771CA266940001519E /* YYSegmentedControlCell.m */; };
+		1F5B67111CACAF65003CFD75 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB0C1BFE1997009919F2 /* FMDatabaseAdditions.m */; };
+		1F5B67121CACAF65003CFD75 /* RACBehaviorSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56D51C2BA091000E9E04 /* RACBehaviorSubject.m */; };
+		1F5B67131CACAF65003CFD75 /* YYEmoticonInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F69111C9A44E500A3F432 /* YYEmoticonInputViewCell.m */; };
+		1F5B67141CACAF65003CFD75 /* UIApplication+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3C81C1FFBD600938B2E /* UIApplication+YYExtension.m */; };
+		1F5B67151CACAF65003CFD75 /* RunTraceHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE0731C507DB900E71E53 /* RunTraceHelp.m */; };
+		1F5B67161CACAF65003CFD75 /* FastRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A565B1C2B9F3A000E9E04 /* FastRecordController.m */; };
+		1F5B67171CACAF65003CFD75 /* YYMessageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */; };
+		1F5B67181CACAF65003CFD75 /* YYMessageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BCD1C32777E00EDDAA4 /* YYMessageSetting.m */; };
+		1F5B67191CACAF65003CFD75 /* RACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56DD1C2BA091000E9E04 /* RACCompoundDisposable.m */; };
+		1F5B671A1CACAF65003CFD75 /* RunLoopDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F696D1C9AF73400A3F432 /* RunLoopDemo.m */; };
+		1F5B671B1CACAF65003CFD75 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57D91C2BA37E000E9E04 /* UIImage+Extension.m */; };
+		1F5B671C1CACAF65003CFD75 /* YYMessageCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */; };
+		1F5B671D1CACAF65003CFD75 /* YYMultiImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F075BBF1C44F51D0013C815 /* YYMultiImageButton.m */; };
+		1F5B671E1CACAF65003CFD75 /* TestJSObjectProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8621C156846005E43E9 /* TestJSObjectProtocol.m */; };
+		1F5B671F1CACAF65003CFD75 /* FastRecordClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56701C2B9F3A000E9E04 /* FastRecordClockCell.m */; };
+		1F5B67201CACAF65003CFD75 /* NSString+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A27801C5E523F0030976A /* NSString+YYMessage.m */; };
+		1F5B67211CACAF65003CFD75 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DBF1C60608700B281E4 /* AFURLSessionManager.m */; };
+		1F5B67221CACAF65003CFD75 /* YYAlertGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A3C1BE2082300D81096 /* YYAlertGridViewCell.m */; };
+		1F5B67231CACAF65003CFD75 /* YYMultiSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872BD1C27E881008BC6BE /* YYMultiSelectCell.m */; };
+		1F5B67241CACAF65003CFD75 /* NSTimer+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C2B1C0D7DDF0007520F /* NSTimer+YYExtension.m */; };
+		1F5B67251CACAF65003CFD75 /* NSError+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C3A1C0D9F580007520F /* NSError+YYExtension.m */; };
+		1F5B67261CACAF65003CFD75 /* NSString+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56CB1C2BA091000E9E04 /* NSString+RACSequenceAdditions.m */; };
+		1F5B67271CACAF65003CFD75 /* UIDevice+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3C51C1FFA2700938B2E /* UIDevice+YYExtension.m */; };
+		1F5B67281CACAF65003CFD75 /* iOS7Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F139B531C873A17005E89EB /* iOS7Demo.m */; };
+		1F5B67291CACAF65003CFD75 /* UIView+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57D41C2BA37E000E9E04 /* UIView+DNImagePicker.m */; };
+		1F5B672A1CACAF65003CFD75 /* UIControl+RACSignalSupportPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57461C2BA091000E9E04 /* UIControl+RACSignalSupportPrivate.m */; };
+		1F5B672B1CACAF65003CFD75 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A575E1C2BA091000E9E04 /* UITextView+RACSignalSupport.m */; };
+		1F5B672C1CACAF65003CFD75 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A751BE20AD700D81096 /* UIViewController+Extension.m */; };
+		1F5B672D1CACAF65003CFD75 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C95F1BE4BD89002EE116 /* UncaughtExceptionHandler.m */; };
+		1F5B672E1CACAF65003CFD75 /* YYMessageImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DF01C50DFC100B0C17A /* YYMessageImageView.m */; };
+		1F5B672F1CACAF65003CFD75 /* YYMessageTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB24431C3516C800FFCBA4 /* YYMessageTextLabel.m */; };
+		1F5B67301CACAF65003CFD75 /* DragImageViewGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BE0791C50B8E600E71E53 /* DragImageViewGesture.m */; };
+		1F5B67311CACAF65003CFD75 /* DNSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E41C2BA37E000E9E04 /* DNSendButton.m */; };
+		1F5B67321CACAF65003CFD75 /* NSNumber+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C171C0D35B50007520F /* NSNumber+YYExtension.m */; };
+		1F5B67331CACAF65003CFD75 /* NSUserDefaults+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56D11C2BA091000E9E04 /* NSUserDefaults+RACSupport.m */; };
+		1F5B67341CACAF65003CFD75 /* MethodForword.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF6BA31CA4E25A00554A2A /* MethodForword.m */; };
+		1F5B67351CACAF65003CFD75 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DB91C60608700B281E4 /* AFSecurityPolicy.m */; };
+		1F5B67361CACAF65003CFD75 /* UIView+MotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F98C9891BE4BF39002EE116 /* UIView+MotionEffect.m */; };
+		1F5B67371CACAF65003CFD75 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AA81BE20F3400D81096 /* BaseNavigationController.m */; };
+		1F5B67381CACAF65003CFD75 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A531BE2082300D81096 /* FBEncryptorAES.m */; };
+		1F5B67391CACAF65003CFD75 /* UIAlertView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A573C1C2BA091000E9E04 /* UIAlertView+RACSignalSupport.m */; };
+		1F5B673A1CACAF65003CFD75 /* RACScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A570E1C2BA091000E9E04 /* RACScheduler.m */; };
+		1F5B673B1CACAF65003CFD75 /* LocalNotificationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8ACE1BE33DC400D81096 /* LocalNotificationDemo.m */; };
+		1F5B673C1CACAF65003CFD75 /* RACEmptySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56EA1C2BA091000E9E04 /* RACEmptySequence.m */; };
+		1F5B673D1CACAF65003CFD75 /* YYAlertTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A311BE2082300D81096 /* YYAlertTableCell.m */; };
+		1F5B673E1CACAF65003CFD75 /* YYThumbnailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A5B1BE2082300D81096 /* YYThumbnailItem.m */; };
+		1F5B673F1CACAF65003CFD75 /* NSObject+RACLifting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56BF1C2BA091000E9E04 /* NSObject+RACLifting.m */; };
+		1F5B67401CACAF65003CFD75 /* UIViewController+NoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC2CCF1C212CCB000BF77F /* UIViewController+NoDataView.m */; };
+		1F5B67411CACAF65003CFD75 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3DD1C20132400938B2E /* YYDispatchQueuePool.m */; };
+		1F5B67421CACAF65003CFD75 /* YYThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A5D1BE2082300D81096 /* YYThumbnailView.m */; };
+		1F5B67431CACAF65003CFD75 /* YYJsonRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C61BE7101B00AF6E3F /* YYJsonRequestSerializer.m */; };
+		1F5B67441CACAF65003CFD75 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A575C1C2BA091000E9E04 /* UITextField+RACSignalSupport.m */; };
+		1F5B67451CACAF65003CFD75 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2401C197B1E00126FB1 /* MJRefreshBackNormalFooter.m */; };
+		1F5B67461CACAF65003CFD75 /* yy_color_converter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D0E1C09C24800492D9D /* yy_color_converter.c */; };
+		1F5B67471CACAF65003CFD75 /* YYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB551C1BF62C040048E1F7 /* YYSearchBar.m */; };
+		1F5B67481CACAF65003CFD75 /* ObjectiveCPointor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */; };
+		1F5B67491CACAF65003CFD75 /* UIGestureRecognizer+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A574A1C2BA091000E9E04 /* UIGestureRecognizer+RACSignalSupport.m */; };
+		1F5B674A1CACAF65003CFD75 /* UIGestureRecognizer+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3B31C1EC70E00938B2E /* UIGestureRecognizer+YYExtension.m */; };
+		1F5B674B1CACAF65003CFD75 /* WebViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8561C1562CC005E43E9 /* WebViewDemo.m */; };
+		1F5B674C1CACAF65003CFD75 /* YYCommonList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2221C196DAB00126FB1 /* YYCommonList.m */; };
+		1F5B674D1CACAF65003CFD75 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AB31BE2152900D81096 /* LoginViewController.m */; };
+		1F5B674E1CACAF65003CFD75 /* UIActionSheet+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A573A1C2BA091000E9E04 /* UIActionSheet+RACSignalSupport.m */; };
+		1F5B674F1CACAF65003CFD75 /* RACEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56F01C2BA091000E9E04 /* RACEvent.m */; };
+		1F5B67501CACAF65003CFD75 /* UIView+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DE91C50D0D400B0C17A /* UIView+Transform.m */; };
+		1F5B67511CACAF65003CFD75 /* UISegmentedControl+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57501C2BA091000E9E04 /* UISegmentedControl+RACSignalSupport.m */; };
+		1F5B67521CACAF65003CFD75 /* DNAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57C21C2BA37E000E9E04 /* DNAlbumTableViewController.m */; };
+		1F5B67531CACAF65003CFD75 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E4071C20137B00938B2E /* NSObject+YYModel.m */; };
+		1F5B67541CACAF65003CFD75 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2531C197B1E00126FB1 /* UIView+MJExtension.m */; };
+		1F5B67551CACAF65003CFD75 /* ShowRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */; };
+		1F5B67561CACAF65003CFD75 /* MKAnnotationView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56A71C2BA091000E9E04 /* MKAnnotationView+RACSignalSupport.m */; };
+		1F5B67571CACAF65003CFD75 /* UIImage+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05D4561C3BB93600C6DD29 /* UIImage+YYMessage.m */; };
+		1F5B67581CACAF65003CFD75 /* UITableView+CustomSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1DD911BFC6221001AE9BE /* UITableView+CustomSetting.m */; };
+		1F5B67591CACAF65003CFD75 /* HitTestViewApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */; };
+		1F5B675A1CACAF65003CFD75 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F124DCA1C60608700B281E4 /* UIButton+AFNetworking.m */; };
+		1F5B675B1CACAF65003CFD75 /* UIScreen+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E3C21C1FF85C00938B2E /* UIScreen+YYExtension.m */; };
+		1F5B675C1CACAF65003CFD75 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA24D1C197B1E00126FB1 /* MJRefreshConst.m */; };
+		1F5B675D1CACAF65003CFD75 /* YYMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F160BC21C32725B00EDDAA4 /* YYMessageModel.m */; };
+		1F5B675E1CACAF65003CFD75 /* NSThread+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C341C0D845F0007520F /* NSThread+YYExtension.m */; };
+		1F5B675F1CACAF65003CFD75 /* YYInputAccessoryViewWithCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A881BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.m */; };
+		1F5B67601CACAF65003CFD75 /* YYKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB1A1BFE19D6009919F2 /* YYKeyValueStore.m */; };
+		1F5B67611CACAF65003CFD75 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DA2391C197B1E00126FB1 /* MJRefreshAutoNormalFooter.m */; };
+		1F5B67621CACAF65003CFD75 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E38A1C1E571E00938B2E /* AppInfo.m */; };
+		1F5B67631CACAF65003CFD75 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F01EB131BFE1997009919F2 /* FMResultSet.m */; };
+		1F5B67641CACAF65003CFD75 /* JKPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A57E81C2BA37E000E9E04 /* JKPromptView.m */; };
+		1F5B67651CACAF65003CFD75 /* YYKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F075BBB1C44DD3F0013C815 /* YYKeyboardManager.m */; };
+		1F5B67661CACAF65003CFD75 /* YYMessageMoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F158D2D1C78AAD7008AD080 /* YYMessageMoreViewCell.m */; };
+		1F5B67671CACAF65003CFD75 /* NSArray+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C1C1C0D44B00007520F /* NSArray+YYExtension.m */; };
+		1F5B67681CACAF65003CFD75 /* YYUrlCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C91BE715DC00AF6E3F /* YYUrlCache.m */; };
+		1F5B67691CACAF65003CFD75 /* FastRecordVoiceInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A567F1C2B9F3A000E9E04 /* FastRecordVoiceInputView.m */; };
+		1F5B676A1CACAF65003CFD75 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AB61BE2152900D81096 /* LoginModel.m */; };
+		1F5B676B1CACAF65003CFD75 /* NSURLConnection+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56CF1C2BA091000E9E04 /* NSURLConnection+RACSupport.m */; };
+		1F5B676C1CACAF65003CFD75 /* AESenAndDe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A511BE2082300D81096 /* AESenAndDe.m */; };
+		1F5B676D1CACAF65003CFD75 /* NSDictionary+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C1F1C0D4EC40007520F /* NSDictionary+YYExtension.m */; };
+		1F5B676E1CACAF65003CFD75 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A9C1BE20E3100D81096 /* DTTimePeriodGroup.m */; };
+		1F5B676F1CACAF65003CFD75 /* JSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD24071CA1480C00FEA94A /* JSObject.m */; };
+		1F5B67701CACAF65003CFD75 /* YYMessageCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */; };
+		1F5B67711CACAF65003CFD75 /* YYMessageInputToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */; };
+		1F5B67731CACAF65003CFD75 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6788F01CA8C99D00BF17DD /* JSPatch.framework */; };
+		1F5B67741CACAF65003CFD75 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F76E8591C15637C005E43E9 /* JavaScriptCore.framework */; };
+		1F5B67751CACAF65003CFD75 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
+		1F5B67771CACAF65003CFD75 /* YYSegmentedControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F87A2781CA266940001519E /* YYSegmentedControlCell.xib */; };
+		1F5B67781CACAF65003CFD75 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F98C94C1BE4BBCD002EE116 /* AppConfig.plist */; };
+		1F5B67791CACAF65003CFD75 /* YYAudioPlayButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F10373E1C970B290021CAC7 /* YYAudioPlayButton.xib */; };
+		1F5B677A1CACAF65003CFD75 /* FastRecord.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A58011C2BA491000E9E04 /* FastRecord.xcassets */; };
+		1F5B677B1CACAF65003CFD75 /* FastRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A56571C2B9F3A000E9E04 /* FastRecord.storyboard */; };
+		1F5B677C1CACAF65003CFD75 /* YYNoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC2CD21C212CCB000BF77F /* YYNoDataView.xib */; };
+		1F5B677D1CACAF65003CFD75 /* YYScrollSigmentDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */; };
+		1F5B677E1CACAF65003CFD75 /* YYMessage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F05D4531C3BB8F100C6DD29 /* YYMessage.xcassets */; };
+		1F5B677F1CACAF65003CFD75 /* Second.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD24041CA145AF00FEA94A /* Second.html */; };
+		1F5B67801CACAF65003CFD75 /* no_data_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC2CCD1C212CCB000BF77F /* no_data_default@2x.png */; };
+		1F5B67811CACAF65003CFD75 /* JSPatchDemo.js in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD24091CA1482D00FEA94A /* JSPatchDemo.js */; };
+		1F5B67821CACAF65003CFD75 /* YYAudioPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F792CCB1C8E742400EE70D4 /* YYAudioPlayer.xib */; };
+		1F5B67831CACAF65003CFD75 /* EventDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1037301C8FC94E0021CAC7 /* EventDemo.storyboard */; };
+		1F5B67841CACAF65003CFD75 /* YYMultiSelectTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872BB1C27E881008BC6BE /* YYMultiSelectTable.xib */; };
+		1F5B67851CACAF65003CFD75 /* YYScrollSigmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A53F1BEC3B9D0076ECAA /* YYScrollSigmentCell.xib */; };
+		1F5B67861CACAF65003CFD75 /* ShowRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */; };
+		1F5B67871CACAF65003CFD75 /* YYMessageMoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F158D2E1C78AAD7008AD080 /* YYMessageMoreViewCell.xib */; };
+		1F5B67881CACAF65003CFD75 /* YYMultiSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872BE1C27E881008BC6BE /* YYMultiSelectCell.xib */; };
+		1F5B67891CACAF65003CFD75 /* FastRecordAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A566A1C2B9F3A000E9E04 /* FastRecordAccessoryView.xib */; };
+		1F5B678A1CACAF65003CFD75 /* ic_radiobutton_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872C71C27EC59008BC6BE /* ic_radiobutton_checked@2x.png */; };
+		1F5B678B1CACAF65003CFD75 /* YYEmoticonInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F87A2A41CA3DD570001519E /* YYEmoticonInputView.xib */; };
+		1F5B678C1CACAF65003CFD75 /* YYInputAccessoryViewWithCancel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8A891BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.xib */; };
+		1F5B678D1CACAF65003CFD75 /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F69171C9A56FC00A3F432 /* EmojisList.plist */; };
+		1F5B678E1CACAF65003CFD75 /* YYAlertGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8A3D1BE2082300D81096 /* YYAlertGridViewCell.xib */; };
+		1F5B678F1CACAF65003CFD75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FF1BE2058700D81096 /* Assets.xcassets */; };
+		1F5B67901CACAF65003CFD75 /* imageResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A57D71C2BA37E000E9E04 /* imageResources.xcassets */; };
+		1F5B67911CACAF65003CFD75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B89FC1BE2058700D81096 /* Main.storyboard */; };
+		1F5B67921CACAF65003CFD75 /* YYAlertGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8A3A1BE2082300D81096 /* YYAlertGridView.xib */; };
+		1F5B67931CACAF65003CFD75 /* YYAlertTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8A2F1BE2082300D81096 /* YYAlertTable.xib */; };
+		1F5B67941CACAF65003CFD75 /* ic_radiobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872C91C27EC63008BC6BE /* ic_radiobutton@2x.png */; };
+		1F5B67951CACAF65003CFD75 /* YYHud.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8AC71BE2185F00D81096 /* YYHud.xcassets */; };
+		1F5B67961CACAF65003CFD75 /* YYHud.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8AC81BE2185F00D81096 /* YYHud.xib */; };
+		1F5B67971CACAF65003CFD75 /* FastRecordVoiceInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A56801C2B9F3A000E9E04 /* FastRecordVoiceInputView.xib */; };
+		1F5B67981CACAF65003CFD75 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8A8F1BE20E3100D81096 /* DateTools.bundle */; };
+		1F5B67991CACAF65003CFD75 /* YYAlertTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F18BD361BE4B2B000005BA4 /* YYAlertTextView.xib */; };
+		1F5B679A1CACAF65003CFD75 /* DNImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A57CC1C2BA37E000E9E04 /* DNImagePicker.strings */; };
+		1F5B679B1CACAF65003CFD75 /* RunTraceHelp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2BE0741C507DB900E71E53 /* RunTraceHelp.xib */; };
+		1F5B679C1CACAF65003CFD75 /* FastRecordVoiceButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A567B1C2B9F3A000E9E04 /* FastRecordVoiceButton.xib */; };
+		1F5B679D1CACAF65003CFD75 /* YYMessageAudioIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F792CC41C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib */; };
+		1F5B679E1CACAF65003CFD75 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8AAF1BE2152900D81096 /* Login.storyboard */; };
+		1F5B679F1CACAF65003CFD75 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DA24A1C197B1E00126FB1 /* MJRefresh.bundle */; };
+		1F5B67A01CACAF65003CFD75 /* YYMessageInputToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FBC3B1C3E5E2300FC37A2 /* YYMessageInputToolBar.xib */; };
+		1F5B67A11CACAF65003CFD75 /* YYEmoticonInputViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F69121C9A44E500A3F432 /* YYEmoticonInputViewCell.xib */; };
+		1F5B67A21CACAF65003CFD75 /* YYAudioRocorder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F792CD01C8E820500EE70D4 /* YYAudioRocorder.xib */; };
+		1F5B67A31CACAF65003CFD75 /* FastRecordVoiceInputViewDim.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A56831C2B9F3A000E9E04 /* FastRecordVoiceInputViewDim.xib */; };
+		1F5B67A41CACAF65003CFD75 /* DNImagePickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A57C91C2BA37E000E9E04 /* DNImagePickerController.strings */; };
+		1F5B67A51CACAF65003CFD75 /* README.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F617D0C1C09C24800492D9D /* README.png */; };
+		1F5B67AD1CACBED1003CFD75 /* SimpleGestureRecognizers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B67AC1CACBED1003CFD75 /* SimpleGestureRecognizers.m */; };
+		1F5B67B21CACC03F003CFD75 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67AF1CACC03F003CFD75 /* rotation.png */; };
+		1F5B67B31CACC03F003CFD75 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67AF1CACC03F003CFD75 /* rotation.png */; };
+		1F5B67B41CACC03F003CFD75 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B01CACC03F003CFD75 /* swipe.png */; };
+		1F5B67B51CACC03F003CFD75 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B01CACC03F003CFD75 /* swipe.png */; };
+		1F5B67B61CACC03F003CFD75 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B11CACC03F003CFD75 /* tap.png */; };
+		1F5B67B71CACC03F003CFD75 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B11CACC03F003CFD75 /* tap.png */; };
+		1F5B67BA1CACC583003CFD75 /* SimpleGestureRecognizers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B91CACC583003CFD75 /* SimpleGestureRecognizers.xib */; };
+		1F5B67BB1CACC583003CFD75 /* SimpleGestureRecognizers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B67B91CACC583003CFD75 /* SimpleGestureRecognizers.xib */; };
 		1F5D1A481BF1CE9D0049F342 /* ExtensionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */; };
 		1F617D111C09C24800492D9D /* README.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F617D0C1C09C24800492D9D /* README.png */; };
 		1F617D131C09C24800492D9D /* yy_color_converter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D0E1C09C24800492D9D /* yy_color_converter.c */; };
@@ -294,6 +767,10 @@
 		1F65D50D1C100D45001216ED /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65D50C1C100D45001216ED /* YYKVStorage.m */; };
 		1F6788F11CA8C99D00BF17DD /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6788F01CA8C99D00BF17DD /* JSPatch.framework */; };
 		1F6788F71CA907D800BF17DD /* HitTestViewApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */; };
+		1F6788FE1CAB5F3A00BF17DD /* TableViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */; };
+		1F6789071CAB618900BF17DD /* ShowRoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */; };
+		1F67890B1CAB61AD00BF17DD /* ShowRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */; };
+		1F67890C1CAB61AD00BF17DD /* ShowRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */; };
 		1F6872AA1C27CB03008BC6BE /* YYTextViewTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872A91C27CB03008BC6BE /* YYTextViewTimePicker.m */; };
 		1F6872C11C27E881008BC6BE /* YYMultiSelectTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6872BA1C27E881008BC6BE /* YYMultiSelectTable.m */; };
 		1F6872C21C27E881008BC6BE /* YYMultiSelectTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872BB1C27E881008BC6BE /* YYMultiSelectTable.xib */; };
@@ -1037,6 +1514,18 @@
 		1F5A57EA1C2BA37E000E9E04 /* MWTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingImageView.m; sourceTree = "<group>"; };
 		1F5A57EB1C2BA37E000E9E04 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DNImagePicker.strings"; sourceTree = "<group>"; };
 		1F5A58011C2BA491000E9E04 /* FastRecord.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FastRecord.xcassets; sourceTree = "<group>"; };
+		1F5B65CE1CABBCE1003CFD75 /* GestureTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTestView.h; sourceTree = "<group>"; };
+		1F5B65CF1CABBCE1003CFD75 /* GestureTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTestView.m; sourceTree = "<group>"; };
+		1F5B65D11CAC1942003CFD75 /* ShowRoomListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRoomListModel.h; sourceTree = "<group>"; };
+		1F5B65D21CAC1942003CFD75 /* ShowRoomListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRoomListModel.m; sourceTree = "<group>"; };
+		1F5B67A91CACAF65003CFD75 /* ObjcSumDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcSumDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5B67AA1CACAF65003CFD75 /* ObjcSum copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ObjcSum copy-Info.plist"; path = "/Users/sihuan/Desktop/MyProjects/iOS/ObjcSum/ObjcSum copy-Info.plist"; sourceTree = "<absolute>"; };
+		1F5B67AB1CACBED1003CFD75 /* SimpleGestureRecognizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleGestureRecognizers.h; sourceTree = "<group>"; };
+		1F5B67AC1CACBED1003CFD75 /* SimpleGestureRecognizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleGestureRecognizers.m; sourceTree = "<group>"; };
+		1F5B67AF1CACC03F003CFD75 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
+		1F5B67B01CACC03F003CFD75 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		1F5B67B11CACC03F003CFD75 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
+		1F5B67B91CACC583003CFD75 /* SimpleGestureRecognizers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleGestureRecognizers.xib; sourceTree = "<group>"; };
 		1F5D1A461BF1CE9D0049F342 /* ExtensionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDemo.h; sourceTree = "<group>"; };
 		1F5D1A471BF1CE9D0049F342 /* ExtensionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDemo.m; sourceTree = "<group>"; };
 		1F617D0C1C09C24800492D9D /* README.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = README.png; sourceTree = "<group>"; };
@@ -1057,6 +1546,13 @@
 		1F6788F01CA8C99D00BF17DD /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		1F6788F51CA907D800BF17DD /* HitTestViewApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewApplication.h; sourceTree = "<group>"; };
 		1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewApplication.m; sourceTree = "<group>"; };
+		1F6788FC1CAB5F3A00BF17DD /* TableViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDemo.h; sourceTree = "<group>"; };
+		1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDemo.m; sourceTree = "<group>"; };
+		1F6789051CAB618900BF17DD /* ShowRoomCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRoomCellModel.h; sourceTree = "<group>"; };
+		1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRoomCellModel.m; sourceTree = "<group>"; };
+		1F6789081CAB61AD00BF17DD /* ShowRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRoomCell.h; sourceTree = "<group>"; };
+		1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRoomCell.m; sourceTree = "<group>"; };
+		1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowRoomCell.xib; sourceTree = "<group>"; };
 		1F6872A81C27CB03008BC6BE /* YYTextViewTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTextViewTimePicker.h; sourceTree = "<group>"; };
 		1F6872A91C27CB03008BC6BE /* YYTextViewTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTextViewTimePicker.m; sourceTree = "<group>"; };
 		1F6872B91C27E881008BC6BE /* YYMultiSelectTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMultiSelectTable.h; sourceTree = "<group>"; };
@@ -1388,6 +1884,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F5B67721CACAF65003CFD75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5B67731CACAF65003CFD75 /* JSPatch.framework in Frameworks */,
+				1F5B67741CACAF65003CFD75 /* JavaScriptCore.framework in Frameworks */,
+				1F5B67751CACAF65003CFD75 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8B89ED1BE2058600D81096 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1640,6 +2146,7 @@
 				1F1037361C8FCC440021CAC7 /* TouchEventDemoChild.m */,
 				1F6788F51CA907D800BF17DD /* HitTestViewApplication.h */,
 				1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */,
+				1F5B67AE1CACBED9003CFD75 /* 手势 */,
 			);
 			path = "事件相关";
 			sourceTree = "<group>";
@@ -2262,6 +2769,29 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1F5B67AE1CACBED9003CFD75 /* 手势 */ = {
+			isa = PBXGroup;
+			children = (
+				1F5B65CE1CABBCE1003CFD75 /* GestureTestView.h */,
+				1F5B65CF1CABBCE1003CFD75 /* GestureTestView.m */,
+				1F5B67AB1CACBED1003CFD75 /* SimpleGestureRecognizers.h */,
+				1F5B67AC1CACBED1003CFD75 /* SimpleGestureRecognizers.m */,
+				1F5B67B91CACC583003CFD75 /* SimpleGestureRecognizers.xib */,
+				1F5B67B81CACC044003CFD75 /* images */,
+			);
+			name = "手势";
+			sourceTree = "<group>";
+		};
+		1F5B67B81CACC044003CFD75 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1F5B67AF1CACC03F003CFD75 /* rotation.png */,
+				1F5B67B01CACC03F003CFD75 /* swipe.png */,
+				1F5B67B11CACC03F003CFD75 /* tap.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		1F5D1A491BF1CEA20049F342 /* 扩展相关 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2373,6 +2903,22 @@
 				1FAC3C451C0ED1350007520F /* YYMemoryCache.m */,
 			);
 			path = YYMemoryCache;
+			sourceTree = "<group>";
+		};
+		1F6788FF1CAB5F4200BF17DD /* TableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1F6789051CAB618900BF17DD /* ShowRoomCellModel.h */,
+				1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */,
+				1F5B65D11CAC1942003CFD75 /* ShowRoomListModel.h */,
+				1F5B65D21CAC1942003CFD75 /* ShowRoomListModel.m */,
+				1F6789081CAB61AD00BF17DD /* ShowRoomCell.h */,
+				1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */,
+				1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */,
+				1F6788FC1CAB5F3A00BF17DD /* TableViewDemo.h */,
+				1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */,
+			);
+			name = TableViewDemo;
 			sourceTree = "<group>";
 		};
 		1F6872AB1C27CB1C008BC6BE /* YYTextViewTimePicker */ = {
@@ -2516,6 +3062,7 @@
 				1F8B89F11BE2058600D81096 /* Products */,
 				1F76E8591C15637C005E43E9 /* JavaScriptCore.framework */,
 				1FAC3C191C0D44760007520F /* libz.tbd */,
+				1F5B67AA1CACAF65003CFD75 /* ObjcSum copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2525,6 +3072,7 @@
 				1F8B89F01BE2058600D81096 /* ObjcSum.app */,
 				1F8B8A091BE2058700D81096 /* ObjcSumTests.xctest */,
 				1F8B8A141BE2058700D81096 /* ObjcSumUITests.xctest */,
+				1F5B67A91CACAF65003CFD75 /* ObjcSumDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2944,6 +3492,7 @@
 				1F8B8AD31BE360A700D81096 /* SystemDemo.m */,
 				1FAF6BA11CA4E07000554A2A /* RunTime */,
 				1FDD23F81CA12AE500FEA94A /* RunLoop */,
+				1F6788FF1CAB5F4200BF17DD /* TableViewDemo */,
 			);
 			path = SystemDemo;
 			sourceTree = "<group>";
@@ -3380,6 +3929,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1F5B65D41CACAF65003CFD75 /* ObjcSumDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5B67A61CACAF65003CFD75 /* Build configuration list for PBXNativeTarget "ObjcSumDev" */;
+			buildPhases = (
+				1F5B65D51CACAF65003CFD75 /* Sources */,
+				1F5B67721CACAF65003CFD75 /* Frameworks */,
+				1F5B67761CACAF65003CFD75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjcSumDev;
+			productName = ObjcSum;
+			productReference = 1F5B67A91CACAF65003CFD75 /* ObjcSumDev.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1F8B89EF1BE2058600D81096 /* ObjcSum */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8B8A1D1BE2058700D81096 /* Build configuration list for PBXNativeTarget "ObjcSum" */;
@@ -3472,16 +4038,76 @@
 				1F8B89EF1BE2058600D81096 /* ObjcSum */,
 				1F8B8A081BE2058700D81096 /* ObjcSumTests */,
 				1F8B8A131BE2058700D81096 /* ObjcSumUITests */,
+				1F5B65D41CACAF65003CFD75 /* ObjcSumDev */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F5B67761CACAF65003CFD75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5B67771CACAF65003CFD75 /* YYSegmentedControlCell.xib in Resources */,
+				1F5B67B71CACC03F003CFD75 /* tap.png in Resources */,
+				1F5B67781CACAF65003CFD75 /* AppConfig.plist in Resources */,
+				1F5B67791CACAF65003CFD75 /* YYAudioPlayButton.xib in Resources */,
+				1F5B677A1CACAF65003CFD75 /* FastRecord.xcassets in Resources */,
+				1F5B677B1CACAF65003CFD75 /* FastRecord.storyboard in Resources */,
+				1F5B677C1CACAF65003CFD75 /* YYNoDataView.xib in Resources */,
+				1F5B677D1CACAF65003CFD75 /* YYScrollSigmentDemo.xib in Resources */,
+				1F5B677E1CACAF65003CFD75 /* YYMessage.xcassets in Resources */,
+				1F5B677F1CACAF65003CFD75 /* Second.html in Resources */,
+				1F5B67801CACAF65003CFD75 /* no_data_default@2x.png in Resources */,
+				1F5B67811CACAF65003CFD75 /* JSPatchDemo.js in Resources */,
+				1F5B67821CACAF65003CFD75 /* YYAudioPlayer.xib in Resources */,
+				1F5B67831CACAF65003CFD75 /* EventDemo.storyboard in Resources */,
+				1F5B67841CACAF65003CFD75 /* YYMultiSelectTable.xib in Resources */,
+				1F5B67BB1CACC583003CFD75 /* SimpleGestureRecognizers.xib in Resources */,
+				1F5B67851CACAF65003CFD75 /* YYScrollSigmentCell.xib in Resources */,
+				1F5B67B31CACC03F003CFD75 /* rotation.png in Resources */,
+				1F5B67861CACAF65003CFD75 /* ShowRoomCell.xib in Resources */,
+				1F5B67871CACAF65003CFD75 /* YYMessageMoreViewCell.xib in Resources */,
+				1F5B67881CACAF65003CFD75 /* YYMultiSelectCell.xib in Resources */,
+				1F5B67891CACAF65003CFD75 /* FastRecordAccessoryView.xib in Resources */,
+				1F5B678A1CACAF65003CFD75 /* ic_radiobutton_checked@2x.png in Resources */,
+				1F5B678B1CACAF65003CFD75 /* YYEmoticonInputView.xib in Resources */,
+				1F5B678C1CACAF65003CFD75 /* YYInputAccessoryViewWithCancel.xib in Resources */,
+				1F5B678D1CACAF65003CFD75 /* EmojisList.plist in Resources */,
+				1F5B678E1CACAF65003CFD75 /* YYAlertGridViewCell.xib in Resources */,
+				1F5B678F1CACAF65003CFD75 /* Assets.xcassets in Resources */,
+				1F5B67901CACAF65003CFD75 /* imageResources.xcassets in Resources */,
+				1F5B67911CACAF65003CFD75 /* Main.storyboard in Resources */,
+				1F5B67921CACAF65003CFD75 /* YYAlertGridView.xib in Resources */,
+				1F5B67931CACAF65003CFD75 /* YYAlertTable.xib in Resources */,
+				1F5B67941CACAF65003CFD75 /* ic_radiobutton@2x.png in Resources */,
+				1F5B67951CACAF65003CFD75 /* YYHud.xcassets in Resources */,
+				1F5B67961CACAF65003CFD75 /* YYHud.xib in Resources */,
+				1F5B67971CACAF65003CFD75 /* FastRecordVoiceInputView.xib in Resources */,
+				1F5B67981CACAF65003CFD75 /* DateTools.bundle in Resources */,
+				1F5B67991CACAF65003CFD75 /* YYAlertTextView.xib in Resources */,
+				1F5B679A1CACAF65003CFD75 /* DNImagePicker.strings in Resources */,
+				1F5B679B1CACAF65003CFD75 /* RunTraceHelp.xib in Resources */,
+				1F5B67B51CACC03F003CFD75 /* swipe.png in Resources */,
+				1F5B679C1CACAF65003CFD75 /* FastRecordVoiceButton.xib in Resources */,
+				1F5B679D1CACAF65003CFD75 /* YYMessageAudioIndicatorView.xib in Resources */,
+				1F5B679E1CACAF65003CFD75 /* Login.storyboard in Resources */,
+				1F5B679F1CACAF65003CFD75 /* MJRefresh.bundle in Resources */,
+				1F5B67A01CACAF65003CFD75 /* YYMessageInputToolBar.xib in Resources */,
+				1F5B67A11CACAF65003CFD75 /* YYEmoticonInputViewCell.xib in Resources */,
+				1F5B67A21CACAF65003CFD75 /* YYAudioRocorder.xib in Resources */,
+				1F5B67A31CACAF65003CFD75 /* FastRecordVoiceInputViewDim.xib in Resources */,
+				1F5B67A41CACAF65003CFD75 /* DNImagePickerController.strings in Resources */,
+				1F5B67A51CACAF65003CFD75 /* README.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8B89EE1BE2058600D81096 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1F87A27A1CA266940001519E /* YYSegmentedControlCell.xib in Resources */,
+				1F5B67B61CACC03F003CFD75 /* tap.png in Resources */,
 				1F98C94D1BE4BBCD002EE116 /* AppConfig.plist in Resources */,
 				1F10373F1C970B290021CAC7 /* YYAudioPlayButton.xib in Resources */,
 				1F5A58021C2BA491000E9E04 /* FastRecord.xcassets in Resources */,
@@ -3495,7 +4121,10 @@
 				1F792CCD1C8E742400EE70D4 /* YYAudioPlayer.xib in Resources */,
 				1F1037311C8FC94E0021CAC7 /* EventDemo.storyboard in Resources */,
 				1F6872C21C27E881008BC6BE /* YYMultiSelectTable.xib in Resources */,
+				1F5B67BA1CACC583003CFD75 /* SimpleGestureRecognizers.xib in Resources */,
 				1FA4A5421BEC3B9D0076ECAA /* YYScrollSigmentCell.xib in Resources */,
+				1F5B67B21CACC03F003CFD75 /* rotation.png in Resources */,
+				1F67890C1CAB61AD00BF17DD /* ShowRoomCell.xib in Resources */,
 				1F158D301C78AAD7008AD080 /* YYMessageMoreViewCell.xib in Resources */,
 				1F6872C41C27E881008BC6BE /* YYMultiSelectCell.xib in Resources */,
 				1F5A568E1C2B9F3A000E9E04 /* FastRecordAccessoryView.xib in Resources */,
@@ -3517,6 +4146,7 @@
 				1F18BD381BE4B2B000005BA4 /* YYAlertTextView.xib in Resources */,
 				1F5A57F21C2BA37E000E9E04 /* DNImagePicker.strings in Resources */,
 				1F2BE0771C507DB900E71E53 /* RunTraceHelp.xib in Resources */,
+				1F5B67B41CACC03F003CFD75 /* swipe.png in Resources */,
 				1F5A56971C2B9F3A000E9E04 /* FastRecordVoiceButton.xib in Resources */,
 				1F792CC51C8A947F00EE70D4 /* YYMessageAudioIndicatorView.xib in Resources */,
 				1F8B8AB71BE2152900D81096 /* Login.storyboard in Resources */,
@@ -3547,6 +4177,425 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F5B65D51CACAF65003CFD75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5B65D61CACAF65003CFD75 /* UIDatePicker+RACSignalSupport.m in Sources */,
+				1F5B65D71CACAF65003CFD75 /* UIColor+Hex.m in Sources */,
+				1F5B65D81CACAF65003CFD75 /* JSPatchDemo.m in Sources */,
+				1F5B65D91CACAF65003CFD75 /* FastRecordListController.m in Sources */,
+				1F5B65DA1CACAF65003CFD75 /* UISwitch+RACSignalSupport.m in Sources */,
+				1F5B65DB1CACAF65003CFD75 /* UIWebView+AFNetworking.m in Sources */,
+				1F5B65DC1CACAF65003CFD75 /* UINavigationItem+YYExtension.m in Sources */,
+				1F5B65DD1CACAF65003CFD75 /* ShowRoomCellModel.m in Sources */,
+				1F5B65DE1CACAF65003CFD75 /* DNBrowserCell.m in Sources */,
+				1F5B65DF1CACAF65003CFD75 /* RACKVOTrampoline.m in Sources */,
+				1F5B65E01CACAF65003CFD75 /* AFAutoPurgingImageCache.m in Sources */,
+				1F5B65E11CACAF65003CFD75 /* DNBadgeLabel.m in Sources */,
+				1F5B65E21CACAF65003CFD75 /* RACEagerSequence.m in Sources */,
+				1F5B65E31CACAF65003CFD75 /* FastRecordVoiceInputViewDim.m in Sources */,
+				1F5B65E41CACAF65003CFD75 /* UITextField+YYExtension.m in Sources */,
+				1F5B65E51CACAF65003CFD75 /* NSBundle+YYExtension.m in Sources */,
+				1F5B65E61CACAF65003CFD75 /* MJRefreshStateHeader.m in Sources */,
+				1F5B65E71CACAF65003CFD75 /* RACUnarySequence.m in Sources */,
+				1F5B65E81CACAF65003CFD75 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
+				1F5B65E91CACAF65003CFD75 /* NSData+YYExtension.m in Sources */,
+				1F5B65EA1CACAF65003CFD75 /* UIBarButtonItem+YYExtension.m in Sources */,
+				1F5B65EB1CACAF65003CFD75 /* UIScrollView+MJRefresh.m in Sources */,
+				1F5B65EC1CACAF65003CFD75 /* YYAudioRocorder.m in Sources */,
+				1F5B65ED1CACAF65003CFD75 /* RACValueTransformer.m in Sources */,
+				1F5B65EE1CACAF65003CFD75 /* YYAlertTextView.m in Sources */,
+				1F5B65EF1CACAF65003CFD75 /* NSObject+Debug.m in Sources */,
+				1F5B65F01CACAF65003CFD75 /* UIBezierPath+YYExtension.m in Sources */,
+				1F5B65F11CACAF65003CFD75 /* DNPhotoBrowser.m in Sources */,
+				1F5B65F21CACAF65003CFD75 /* FastRecordVoiceButton.m in Sources */,
+				1F5B65F31CACAF65003CFD75 /* YYReachability.m in Sources */,
+				1F5B65F41CACAF65003CFD75 /* UIButton+RACCommandSupport.m in Sources */,
+				1F5B65F51CACAF65003CFD75 /* RACTestScheduler.m in Sources */,
+				1F5B65F61CACAF65003CFD75 /* NSDate+Extension.m in Sources */,
+				1F5B65F71CACAF65003CFD75 /* NSObject+RACDeallocating.m in Sources */,
+				1F5B65F81CACAF65003CFD75 /* YYMultiSelectTable.m in Sources */,
+				1F5B65F91CACAF65003CFD75 /* RACObjCRuntime.m in Sources */,
+				1F5B65FA1CACAF65003CFD75 /* MJRefreshComponent.m in Sources */,
+				1F5B65FB1CACAF65003CFD75 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
+				1F5B65FC1CACAF65003CFD75 /* RACReplaySubject.m in Sources */,
+				1F5B65FD1CACAF65003CFD75 /* YYGestureRecognizer.m in Sources */,
+				1F5B65FE1CACAF65003CFD75 /* RACDisposable.m in Sources */,
+				1F5B65FF1CACAF65003CFD75 /* YYKeychain.m in Sources */,
+				1F5B66001CACAF65003CFD75 /* YYAudioManager.m in Sources */,
+				1F5B66011CACAF65003CFD75 /* YYTextView.m in Sources */,
+				1F5B66021CACAF65003CFD75 /* NSObject+Property.m in Sources */,
+				1F5B66031CACAF65003CFD75 /* RACSignal+Operations.m in Sources */,
+				1F5B66041CACAF65003CFD75 /* YYTextViewTimePicker.m in Sources */,
+				1F5B66051CACAF65003CFD75 /* YYQRcodeGenerater.m in Sources */,
+				1F5B66061CACAF65003CFD75 /* FMDatabaseQueue.m in Sources */,
+				1F5B66071CACAF65003CFD75 /* YYTimeManager.m in Sources */,
+				1F5B66081CACAF65003CFD75 /* FastRecordModel.m in Sources */,
+				1F5B66091CACAF65003CFD75 /* DNImagePickerController.m in Sources */,
+				1F5B660A1CACAF65003CFD75 /* AFImageDownloader.m in Sources */,
+				1F5B660B1CACAF65003CFD75 /* DTTimePeriod.m in Sources */,
+				1F5B660C1CACAF65003CFD75 /* SerialisationTest.m in Sources */,
+				1F5B660D1CACAF65003CFD75 /* TouchEventDemo.m in Sources */,
+				1F5B660E1CACAF65003CFD75 /* YYMessageAudioIndicatorView.m in Sources */,
+				1F5B660F1CACAF65003CFD75 /* NSNotificationCenter+YYExtension.m in Sources */,
+				1F5B66101CACAF65003CFD75 /* YYHttpRequestSerializer.m in Sources */,
+				1F5B66111CACAF65003CFD75 /* UIImageView+AFNetworking.m in Sources */,
+				1F5B66121CACAF65003CFD75 /* FMDatabasePool.m in Sources */,
+				1F5B66131CACAF65003CFD75 /* NSOrderedSet+RACSequenceAdditions.m in Sources */,
+				1F5B66141CACAF65003CFD75 /* NSNull+YYKit.m in Sources */,
+				1F5B66151CACAF65003CFD75 /* MJRefreshBackStateFooter.m in Sources */,
+				1F5B66161CACAF65003CFD75 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
+				1F5B66171CACAF65003CFD75 /* FastRecordVoiceCell.m in Sources */,
+				1F5B66181CACAF65003CFD75 /* DTError.m in Sources */,
+				1F5B66191CACAF65003CFD75 /* NSDate+YYMessage.m in Sources */,
+				1F5B661A1CACAF65003CFD75 /* UIView+YYMessage.m in Sources */,
+				1F5B661B1CACAF65003CFD75 /* NSObject+YYMessage.m in Sources */,
+				1F5B661C1CACAF65003CFD75 /* RACScopedDisposable.m in Sources */,
+				1F5B661D1CACAF65003CFD75 /* FastRecordModel+CoreDataProperties.m in Sources */,
+				1F5B661E1CACAF65003CFD75 /* MBProgressHUD.m in Sources */,
+				1F5B661F1CACAF65003CFD75 /* RACSubscriptionScheduler.m in Sources */,
+				1F5B66201CACAF65003CFD75 /* NSData+RACSupport.m in Sources */,
+				1F5B66211CACAF65003CFD75 /* InterviewDemo.m in Sources */,
+				1F5B66221CACAF65003CFD75 /* MSWeakTimer.m in Sources */,
+				1F5B66231CACAF65003CFD75 /* MJRefreshHeader.m in Sources */,
+				1F5B66241CACAF65003CFD75 /* YYMessageAudioRecordButton.m in Sources */,
+				1F5B66251CACAF65003CFD75 /* FastRecord.xcdatamodeld in Sources */,
+				1F5B66261CACAF65003CFD75 /* NSDate+YYExtension.m in Sources */,
+				1F5B66271CACAF65003CFD75 /* FMDatabase.m in Sources */,
+				1F5B66281CACAF65003CFD75 /* YYMessageObjectAudio.m in Sources */,
+				1F5B66291CACAF65003CFD75 /* LoginManager.m in Sources */,
+				1F5B662A1CACAF65003CFD75 /* NSDate+DateTools.m in Sources */,
+				1F5B662B1CACAF65003CFD75 /* EncryptionDemo.m in Sources */,
+				1F5B662C1CACAF65003CFD75 /* RACStream.m in Sources */,
+				1F5B662D1CACAF65003CFD75 /* NSObject+RACDescription.m in Sources */,
+				1F5B662E1CACAF65003CFD75 /* UIImage+Extension.m in Sources */,
+				1F5B662F1CACAF65003CFD75 /* RACIndexSetSequence.m in Sources */,
+				1F5B66301CACAF65003CFD75 /* UIScrollView+MJExtension.m in Sources */,
+				1F5B66311CACAF65003CFD75 /* YYNoDataView.m in Sources */,
+				1F5B66321CACAF65003CFD75 /* RACSubscriber.m in Sources */,
+				1F5B66331CACAF65003CFD75 /* FastRecordAddAndModifyController.m in Sources */,
+				1F5B66341CACAF65003CFD75 /* RACSignalProvider.d in Sources */,
+				1F5B66351CACAF65003CFD75 /* YYMessageAvatarView.m in Sources */,
+				1F5B66361CACAF65003CFD75 /* RACTargetQueueScheduler.m in Sources */,
+				1F5B66371CACAF65003CFD75 /* RACStringSequence.m in Sources */,
+				1F5B66381CACAF65003CFD75 /* YYCommonPullTableController.m in Sources */,
+				1F5B66391CACAF65003CFD75 /* NSObject+Extention.m in Sources */,
+				1F5B663A1CACAF65003CFD75 /* ThirdLibraryDemo.m in Sources */,
+				1F5B663B1CACAF65003CFD75 /* YYAsyncLayer.m in Sources */,
+				1F5B663C1CACAF65003CFD75 /* RACKVOProxy.m in Sources */,
+				1F5B663D1CACAF65003CFD75 /* UIScrollView+YYExtension.m in Sources */,
+				1F5B663E1CACAF65003CFD75 /* UMTrack.m in Sources */,
+				1F5B663F1CACAF65003CFD75 /* NSURL+YYExtension.m in Sources */,
+				1F5B66401CACAF65003CFD75 /* YYAudioPlayButton.m in Sources */,
+				1F5B66411CACAF65003CFD75 /* ThreadDemo.m in Sources */,
+				1F5B66421CACAF65003CFD75 /* VoiceDemo.m in Sources */,
+				1F5B66431CACAF65003CFD75 /* YYThreadSafeDictionary.m in Sources */,
+				1F5B66441CACAF65003CFD75 /* QrcodeDemo.m in Sources */,
+				1F5B66451CACAF65003CFD75 /* YYMessageBubbleView.m in Sources */,
+				1F5B66461CACAF65003CFD75 /* YYMultiSelectModel.m in Sources */,
+				1F5B66471CACAF65003CFD75 /* YYWeakProxy.m in Sources */,
+				1F5B66481CACAF65003CFD75 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				1F5B66491CACAF65003CFD75 /* RACPassthroughSubscriber.m in Sources */,
+				1F5B664A1CACAF65003CFD75 /* YYBenchmark.m in Sources */,
+				1F5B664B1CACAF65003CFD75 /* UITableView+YYExtension.m in Sources */,
+				1F5B664C1CACAF65003CFD75 /* FastRecordCell.m in Sources */,
+				1F5B664D1CACAF65003CFD75 /* YYLinkedMap.m in Sources */,
+				1F5B664E1CACAF65003CFD75 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
+				1F5B664F1CACAF65003CFD75 /* YYBaseHttp.m in Sources */,
+				1F5B66501CACAF65003CFD75 /* FastRecordAccessoryView.m in Sources */,
+				1F5B66511CACAF65003CFD75 /* YYSegmentedControl.m in Sources */,
+				1F5B66521CACAF65003CFD75 /* FastRecordCustomerCell.m in Sources */,
+				1F5B66531CACAF65003CFD75 /* ApplicationManager.m in Sources */,
+				1F5B66541CACAF65003CFD75 /* YYBaseLayoutConstraint.m in Sources */,
+				1F5B66551CACAF65003CFD75 /* TouchDemo.m in Sources */,
+				1F5B66561CACAF65003CFD75 /* UISlider+RACSignalSupport.m in Sources */,
+				1F5B66571CACAF65003CFD75 /* LoginDemo.m in Sources */,
+				1F5B66581CACAF65003CFD75 /* RACMulticastConnection.m in Sources */,
+				1F5B66591CACAF65003CFD75 /* NSDictionary+RACSequenceAdditions.m in Sources */,
+				1F5B665A1CACAF65003CFD75 /* HttpManager.m in Sources */,
+				1F5B665B1CACAF65003CFD75 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				1F5B665C1CACAF65003CFD75 /* MJRefreshNormalHeader.m in Sources */,
+				1F5B665D1CACAF65003CFD75 /* DTTimePeriodCollection.m in Sources */,
+				1F5B665E1CACAF65003CFD75 /* UITableViewCell+YYExtension.m in Sources */,
+				1F5B665F1CACAF65003CFD75 /* UIFont+YYExtension.m in Sources */,
+				1F5B66601CACAF65003CFD75 /* RACEXTRuntimeExtensions.m in Sources */,
+				1F5B66611CACAF65003CFD75 /* NSInvocation+RACTypeParsing.m in Sources */,
+				1F5B66621CACAF65003CFD75 /* YYAudioPlayer.m in Sources */,
+				1F5B66631CACAF65003CFD75 /* YYFoundation.m in Sources */,
+				1F5B66641CACAF65003CFD75 /* MainTabBarController.m in Sources */,
+				1F5B66651CACAF65003CFD75 /* YYFileHash.m in Sources */,
+				1F5B66661CACAF65003CFD75 /* sqlite3.c in Sources */,
+				1F5B66671CACAF65003CFD75 /* NSString+RACSupport.m in Sources */,
+				1F5B66681CACAF65003CFD75 /* NSObject+RACPropertySubscribing.m in Sources */,
+				1F5B66691CACAF65003CFD75 /* UIControl+YYExtension.m in Sources */,
+				1F5B666A1CACAF65003CFD75 /* MJRefreshAutoFooter.m in Sources */,
+				1F5B666B1CACAF65003CFD75 /* DNAssetsViewCell.m in Sources */,
+				1F5B666C1CACAF65003CFD75 /* ProtocolAndCategory.m in Sources */,
+				1F5B666D1CACAF65003CFD75 /* UITableViewCell+CustomSetting.m in Sources */,
+				1F5B666E1CACAF65003CFD75 /* YYBaseDemoController.m in Sources */,
+				1F5B666F1CACAF65003CFD75 /* MJRefreshBackGifFooter.m in Sources */,
+				1F5B66701CACAF65003CFD75 /* MWTapDetectingImageView.m in Sources */,
+				1F5B66711CACAF65003CFD75 /* DNImageFlowViewController.m in Sources */,
+				1F5B66721CACAF65003CFD75 /* ApplicationInfo.m in Sources */,
+				1F5B66731CACAF65003CFD75 /* DNAsset.m in Sources */,
+				1F5B66741CACAF65003CFD75 /* ExtensionDemo.m in Sources */,
+				1F5B66751CACAF65003CFD75 /* YYWebViewController.m in Sources */,
+				1F5B66761CACAF65003CFD75 /* YYLibsDemo.m in Sources */,
+				1F5B66771CACAF65003CFD75 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				1F5B66781CACAF65003CFD75 /* NSArray+RACSequenceAdditions.m in Sources */,
+				1F5B66791CACAF65003CFD75 /* NSString+RACKeyPathUtilities.m in Sources */,
+				1F5B667A1CACAF65003CFD75 /* UITableViewCell+RACSignalSupport.m in Sources */,
+				1F5B667B1CACAF65003CFD75 /* NSFileHandle+RACSupport.m in Sources */,
+				1F5B667C1CACAF65003CFD75 /* NSEnumerator+RACSequenceAdditions.m in Sources */,
+				1F5B667D1CACAF65003CFD75 /* UIColor+YYMessage.m in Sources */,
+				1F5B667E1CACAF65003CFD75 /* UIView+YYExtension.m in Sources */,
+				1F5B667F1CACAF65003CFD75 /* ObjectiveC_objc_msgSend.m in Sources */,
+				1F5B66801CACAF65003CFD75 /* UINavigationBar+YYExtension.m in Sources */,
+				1F5B66811CACAF65003CFD75 /* UIView+Frame.m in Sources */,
+				1F5B66821CACAF65003CFD75 /* ObjectiveC_Class.m in Sources */,
+				1F5B66831CACAF65003CFD75 /* RACCompoundDisposableProvider.d in Sources */,
+				1F5B66841CACAF65003CFD75 /* RACSubject.m in Sources */,
+				1F5B66851CACAF65003CFD75 /* UIRefreshControl+RACCommandSupport.m in Sources */,
+				1F5B66861CACAF65003CFD75 /* RACReturnSignal.m in Sources */,
+				1F5B66871CACAF65003CFD75 /* UILocalNotification+YYExtention.m in Sources */,
+				1F5B66881CACAF65003CFD75 /* SSKeychain.m in Sources */,
+				1F5B66891CACAF65003CFD75 /* MJRefreshAutoGifFooter.m in Sources */,
+				1F5B668A1CACAF65003CFD75 /* YYSimpleAlertTable.m in Sources */,
+				1F5B668B1CACAF65003CFD75 /* YYClassInfo.m in Sources */,
+				1F5B668C1CACAF65003CFD75 /* YYScrollSigment.m in Sources */,
+				1F5B668D1CACAF65003CFD75 /* YYAlertTextViewDemo.m in Sources */,
+				1F5B668E1CACAF65003CFD75 /* InterfaceAndAPI.m in Sources */,
+				1F5B668F1CACAF65003CFD75 /* ObjectiveC_BlockAndGCD.m in Sources */,
+				1F5B66901CACAF65003CFD75 /* YYAlertTableTitleCell.m in Sources */,
+				1F5B66911CACAF65003CFD75 /* RACImmediateScheduler.m in Sources */,
+				1F5B66921CACAF65003CFD75 /* UIControl+RACSignalSupport.m in Sources */,
+				1F5B66931CACAF65003CFD75 /* NSObject+YYExtension.m in Sources */,
+				1F5B66941CACAF65003CFD75 /* UIViewController+UMStatistic.m in Sources */,
+				1F5B66951CACAF65003CFD75 /* SystemDemo.m in Sources */,
+				1F5B66961CACAF65003CFD75 /* FastRecordCellModel.m in Sources */,
+				1F5B66971CACAF65003CFD75 /* UIProgressView+AFNetworking.m in Sources */,
+				1F5B66981CACAF65003CFD75 /* YYTimer.m in Sources */,
+				1F5B66991CACAF65003CFD75 /* RACTuple.m in Sources */,
+				1F5B669A1CACAF65003CFD75 /* UIImage+YYExtension.m in Sources */,
+				1F5B669B1CACAF65003CFD75 /* CLLocation+YYExtension.m in Sources */,
+				1F5B669C1CACAF65003CFD75 /* YYScrollSigmentDemo.m in Sources */,
+				1F5B669D1CACAF65003CFD75 /* YYDiskCache.m in Sources */,
+				1F5B669E1CACAF65003CFD75 /* GTMBase64.m in Sources */,
+				1F5B669F1CACAF65003CFD75 /* DTTimePeriodChain.m in Sources */,
+				1F5B66A01CACAF65003CFD75 /* UIView+YYChrysanthemum.m in Sources */,
+				1F5B66A11CACAF65003CFD75 /* RACDynamicSequence.m in Sources */,
+				1F5B66A21CACAF65003CFD75 /* ObjectiveCDemo.m in Sources */,
+				1F5B66A31CACAF65003CFD75 /* RACSerialDisposable.m in Sources */,
+				1F5B66A41CACAF65003CFD75 /* UILabel+YYMessage.m in Sources */,
+				1F5B66A51CACAF65003CFD75 /* UIImagePickerController+RACSignalSupport.m in Sources */,
+				1F5B66A61CACAF65003CFD75 /* RACChannel.m in Sources */,
+				1F5B66A71CACAF65003CFD75 /* UIViewController+NoDataTip.m in Sources */,
+				1F5B66A81CACAF65003CFD75 /* UIViewController+DNImagePicker.m in Sources */,
+				1F5B66A91CACAF65003CFD75 /* AFURLResponseSerialization.m in Sources */,
+				1F5B66AA1CACAF65003CFD75 /* UIRefreshControl+AFNetworking.m in Sources */,
+				1F5B66AB1CACAF65003CFD75 /* DragImageView.m in Sources */,
+				1F5B66AC1CACAF65003CFD75 /* MVVMDemo.m in Sources */,
+				1F5B66AD1CACAF65003CFD75 /* TouchEventDemoChild.m in Sources */,
+				1F5B66AE1CACAF65003CFD75 /* ReadingNote.m in Sources */,
+				1F5B66AF1CACAF65003CFD75 /* NSIndexSet+RACSequenceAdditions.m in Sources */,
+				1F5B66B01CACAF65003CFD75 /* YYMessageObjectImage.m in Sources */,
+				1F5B66B11CACAF65003CFD75 /* NSObject+RACKVOWrapper.m in Sources */,
+				1F5B66B21CACAF65003CFD75 /* RACUnit.m in Sources */,
+				1F5B66B31CACAF65003CFD75 /* DNFullImageButton.m in Sources */,
+				1F5B66B41CACAF65003CFD75 /* YYMessage.m in Sources */,
+				1F5B66B51CACAF65003CFD75 /* RACDelegateProxy.m in Sources */,
+				1F5B66B61CACAF65003CFD75 /* NSSet+RACSequenceAdditions.m in Sources */,
+				1F5B66B71CACAF65003CFD75 /* AppDelegate.m in Sources */,
+				1F5B66B81CACAF65003CFD75 /* RACGroupedSignal.m in Sources */,
+				1F5B66B91CACAF65003CFD75 /* YYMessageCellLayoutConfig.m in Sources */,
+				1F5B66BA1CACAF65003CFD75 /* YYEmoticonInputView.m in Sources */,
+				1F5B66BB1CACAF65003CFD75 /* UIColor+Extention.m in Sources */,
+				1F5B66BC1CACAF65003CFD75 /* GestureTestView.m in Sources */,
+				1F5B66BD1CACAF65003CFD75 /* UIColor+YYExtension.m in Sources */,
+				1F5B66BE1CACAF65003CFD75 /* YYCacheTest.m in Sources */,
+				1F5B66BF1CACAF65003CFD75 /* MJRefreshAutoStateFooter.m in Sources */,
+				1F5B66C01CACAF65003CFD75 /* RACDynamicSignal.m in Sources */,
+				1F5B66C11CACAF65003CFD75 /* FoundationDemo.m in Sources */,
+				1F5B66C21CACAF65003CFD75 /* YYMessageModelManager.m in Sources */,
+				1F5B66C31CACAF65003CFD75 /* RACEmptySignal.m in Sources */,
+				1F5B66C41CACAF65003CFD75 /* NSString+YYExtension.m in Sources */,
+				1F5B66C51CACAF65003CFD75 /* ObjectiveC_SystemFramework.m in Sources */,
+				1F5B66C61CACAF65003CFD75 /* main.m in Sources */,
+				1F5B66C71CACAF65003CFD75 /* YYKeyValueStoreDemo.m in Sources */,
+				1F5B66C81CACAF65003CFD75 /* YYCache.m in Sources */,
+				1F5B66C91CACAF65003CFD75 /* NSString+Extention.m in Sources */,
+				1F5B66CA1CACAF65003CFD75 /* YYAlertTable.m in Sources */,
+				1F5B66CB1CACAF65003CFD75 /* RACTupleSequence.m in Sources */,
+				1F5B66CC1CACAF65003CFD75 /* YYPageController.m in Sources */,
+				1F5B66CD1CACAF65003CFD75 /* FastRecordBaseCell.m in Sources */,
+				1F5B66CE1CACAF65003CFD75 /* NSKeyedUnarchiver+YYExtension.m in Sources */,
+				1F5B66CF1CACAF65003CFD75 /* YYMessageInputToolBar.m in Sources */,
+				1F5B66D01CACAF65003CFD75 /* NSURL+YYMessage.m in Sources */,
+				1F5B66D11CACAF65003CFD75 /* DTConstants.m in Sources */,
+				1F5B66D21CACAF65003CFD75 /* YYKVStorage.m in Sources */,
+				1F5B66D31CACAF65003CFD75 /* NSObject+RACSelectorSignal.m in Sources */,
+				1F5B66D41CACAF65003CFD75 /* YYTransaction.m in Sources */,
+				1F5B66D51CACAF65003CFD75 /* YYDim.m in Sources */,
+				1F5B66D61CACAF65003CFD75 /* HitTestView.m in Sources */,
+				1F5B66D71CACAF65003CFD75 /* YYScrollSigmentCell.m in Sources */,
+				1F5B66D81CACAF65003CFD75 /* GestureDemo.m in Sources */,
+				1F5B66D91CACAF65003CFD75 /* AppManager.m in Sources */,
+				1F5B66DA1CACAF65003CFD75 /* UISearchDemo.m in Sources */,
+				1F5B66DB1CACAF65003CFD75 /* YYMemoryCache.m in Sources */,
+				1F5B66DC1CACAF65003CFD75 /* YYImageCache.m in Sources */,
+				1F5B66DD1CACAF65003CFD75 /* DragImageViewGesture3.m in Sources */,
+				1F5B66DE1CACAF65003CFD75 /* FastRecordImageCell.m in Sources */,
+				1F5B66DF1CACAF65003CFD75 /* YYWebImageManager.m in Sources */,
+				1F5B66E01CACAF65003CFD75 /* YYMessageCellAudio.m in Sources */,
+				1F5B66E11CACAF65003CFD75 /* YYWebImageOperation.m in Sources */,
+				1F5B66E21CACAF65003CFD75 /* RACSignal.m in Sources */,
+				1F5B66E31CACAF65003CFD75 /* UIView+AutoLayout.m in Sources */,
+				1F5B66E41CACAF65003CFD75 /* FastRecordTextInputCell.m in Sources */,
+				1F5B66E51CACAF65003CFD75 /* RACErrorSignal.m in Sources */,
+				1F5B66E61CACAF65003CFD75 /* RACArraySequence.m in Sources */,
+				1F5B66E71CACAF65003CFD75 /* ObjectiveC_method_swizzling.m in Sources */,
+				1F5B66E81CACAF65003CFD75 /* YYHud.m in Sources */,
+				1F5B66E91CACAF65003CFD75 /* YYMessageCellImage.m in Sources */,
+				1F5B66EA1CACAF65003CFD75 /* TableViewDemo.m in Sources */,
+				1F5B66EB1CACAF65003CFD75 /* ObjectiveC_Memory.m in Sources */,
+				1F5B66EC1CACAF65003CFD75 /* RACSignalSequence.m in Sources */,
+				1F5B66ED1CACAF65003CFD75 /* FastRecordTitleCell.m in Sources */,
+				1F5B66EE1CACAF65003CFD75 /* YYAlertGridView.m in Sources */,
+				1F5B66EF1CACAF65003CFD75 /* YYThreadSafeArray.m in Sources */,
+				1F5B66F01CACAF65003CFD75 /* SSKeychainQuery.m in Sources */,
+				1F5B66F11CACAF65003CFD75 /* MJRefreshFooter.m in Sources */,
+				1F5B66F21CACAF65003CFD75 /* UICollectionReusableView+RACSignalSupport.m in Sources */,
+				1F5B66F31CACAF65003CFD75 /* RACBlockTrampoline.m in Sources */,
+				1F5B66F41CACAF65003CFD75 /* CALayer+YYExtension.m in Sources */,
+				1F5B66F51CACAF65003CFD75 /* RACCommand.m in Sources */,
+				1F5B66F61CACAF65003CFD75 /* SqlliteDemo.m in Sources */,
+				1F5B66F71CACAF65003CFD75 /* UIStepper+RACSignalSupport.m in Sources */,
+				1F5B66F81CACAF65003CFD75 /* YYChrysanthemum.m in Sources */,
+				1F5B66F91CACAF65003CFD75 /* Aspects.m in Sources */,
+				1F5B66FA1CACAF65003CFD75 /* YYJsonResponseSerializer.m in Sources */,
+				1F5B66FB1CACAF65003CFD75 /* ShowRoomListModel.m in Sources */,
+				1F5B66FC1CACAF65003CFD75 /* MJRefreshBackFooter.m in Sources */,
+				1F5B66FD1CACAF65003CFD75 /* RACQueueScheduler.m in Sources */,
+				1F5B66FE1CACAF65003CFD75 /* AFNetworkReachabilityManager.m in Sources */,
+				1F5B66FF1CACAF65003CFD75 /* YYMessageMoreView.m in Sources */,
+				1F5B67001CACAF65003CFD75 /* YYSentinel.m in Sources */,
+				1F5B67011CACAF65003CFD75 /* RACSequence.m in Sources */,
+				1F5B67021CACAF65003CFD75 /* NSNotificationCenter+RACSupport.m in Sources */,
+				1F5B67031CACAF65003CFD75 /* AFHTTPSessionManager.m in Sources */,
+				1F5B67041CACAF65003CFD75 /* AFURLRequestSerialization.m in Sources */,
+				1F5B67051CACAF65003CFD75 /* DNUnAuthorizedTipsView.m in Sources */,
+				1F5B67061CACAF65003CFD75 /* YYCGUtilities.m in Sources */,
+				1F5B67071CACAF65003CFD75 /* UINavigationItem+ArrowBackButton.m in Sources */,
+				1F5B67081CACAF65003CFD75 /* FastRecord.m in Sources */,
+				1F5B67091CACAF65003CFD75 /* NSHTTPCookie+YYExtension.m in Sources */,
+				1F5B670A1CACAF65003CFD75 /* CountdownDemo.m in Sources */,
+				1F5B670B1CACAF65003CFD75 /* RACKVOChannel.m in Sources */,
+				1F5B670C1CACAF65003CFD75 /* YYMessageViewController.m in Sources */,
+				1F5B670D1CACAF65003CFD75 /* RunTrace.m in Sources */,
+				1F5B670E1CACAF65003CFD75 /* MJRefreshGifHeader.m in Sources */,
+				1F5B670F1CACAF65003CFD75 /* RuntimeDemo.m in Sources */,
+				1F5B67101CACAF65003CFD75 /* YYSegmentedControlCell.m in Sources */,
+				1F5B67111CACAF65003CFD75 /* FMDatabaseAdditions.m in Sources */,
+				1F5B67121CACAF65003CFD75 /* RACBehaviorSubject.m in Sources */,
+				1F5B67131CACAF65003CFD75 /* YYEmoticonInputViewCell.m in Sources */,
+				1F5B67141CACAF65003CFD75 /* UIApplication+YYExtension.m in Sources */,
+				1F5B67151CACAF65003CFD75 /* RunTraceHelp.m in Sources */,
+				1F5B67161CACAF65003CFD75 /* FastRecordController.m in Sources */,
+				1F5B67171CACAF65003CFD75 /* YYMessageCollectionView.m in Sources */,
+				1F5B67181CACAF65003CFD75 /* YYMessageSetting.m in Sources */,
+				1F5B67191CACAF65003CFD75 /* RACCompoundDisposable.m in Sources */,
+				1F5B671A1CACAF65003CFD75 /* RunLoopDemo.m in Sources */,
+				1F5B671B1CACAF65003CFD75 /* UIImage+Extension.m in Sources */,
+				1F5B671C1CACAF65003CFD75 /* YYMessageCellBase.m in Sources */,
+				1F5B671D1CACAF65003CFD75 /* YYMultiImageButton.m in Sources */,
+				1F5B671E1CACAF65003CFD75 /* TestJSObjectProtocol.m in Sources */,
+				1F5B671F1CACAF65003CFD75 /* FastRecordClockCell.m in Sources */,
+				1F5B67201CACAF65003CFD75 /* NSString+YYMessage.m in Sources */,
+				1F5B67211CACAF65003CFD75 /* AFURLSessionManager.m in Sources */,
+				1F5B67221CACAF65003CFD75 /* YYAlertGridViewCell.m in Sources */,
+				1F5B67231CACAF65003CFD75 /* YYMultiSelectCell.m in Sources */,
+				1F5B67241CACAF65003CFD75 /* NSTimer+YYExtension.m in Sources */,
+				1F5B67251CACAF65003CFD75 /* NSError+YYExtension.m in Sources */,
+				1F5B67261CACAF65003CFD75 /* NSString+RACSequenceAdditions.m in Sources */,
+				1F5B67271CACAF65003CFD75 /* UIDevice+YYExtension.m in Sources */,
+				1F5B67281CACAF65003CFD75 /* iOS7Demo.m in Sources */,
+				1F5B67291CACAF65003CFD75 /* UIView+DNImagePicker.m in Sources */,
+				1F5B672A1CACAF65003CFD75 /* UIControl+RACSignalSupportPrivate.m in Sources */,
+				1F5B672B1CACAF65003CFD75 /* UITextView+RACSignalSupport.m in Sources */,
+				1F5B672C1CACAF65003CFD75 /* UIViewController+Extension.m in Sources */,
+				1F5B672D1CACAF65003CFD75 /* UncaughtExceptionHandler.m in Sources */,
+				1F5B672E1CACAF65003CFD75 /* YYMessageImageView.m in Sources */,
+				1F5B672F1CACAF65003CFD75 /* YYMessageTextLabel.m in Sources */,
+				1F5B67301CACAF65003CFD75 /* DragImageViewGesture.m in Sources */,
+				1F5B67311CACAF65003CFD75 /* DNSendButton.m in Sources */,
+				1F5B67321CACAF65003CFD75 /* NSNumber+YYExtension.m in Sources */,
+				1F5B67331CACAF65003CFD75 /* NSUserDefaults+RACSupport.m in Sources */,
+				1F5B67341CACAF65003CFD75 /* MethodForword.m in Sources */,
+				1F5B67351CACAF65003CFD75 /* AFSecurityPolicy.m in Sources */,
+				1F5B67361CACAF65003CFD75 /* UIView+MotionEffect.m in Sources */,
+				1F5B67371CACAF65003CFD75 /* BaseNavigationController.m in Sources */,
+				1F5B67381CACAF65003CFD75 /* FBEncryptorAES.m in Sources */,
+				1F5B67391CACAF65003CFD75 /* UIAlertView+RACSignalSupport.m in Sources */,
+				1F5B673A1CACAF65003CFD75 /* RACScheduler.m in Sources */,
+				1F5B673B1CACAF65003CFD75 /* LocalNotificationDemo.m in Sources */,
+				1F5B673C1CACAF65003CFD75 /* RACEmptySequence.m in Sources */,
+				1F5B673D1CACAF65003CFD75 /* YYAlertTableCell.m in Sources */,
+				1F5B673E1CACAF65003CFD75 /* YYThumbnailItem.m in Sources */,
+				1F5B673F1CACAF65003CFD75 /* NSObject+RACLifting.m in Sources */,
+				1F5B67401CACAF65003CFD75 /* UIViewController+NoDataView.m in Sources */,
+				1F5B67411CACAF65003CFD75 /* YYDispatchQueuePool.m in Sources */,
+				1F5B67421CACAF65003CFD75 /* YYThumbnailView.m in Sources */,
+				1F5B67431CACAF65003CFD75 /* YYJsonRequestSerializer.m in Sources */,
+				1F5B67441CACAF65003CFD75 /* UITextField+RACSignalSupport.m in Sources */,
+				1F5B67451CACAF65003CFD75 /* MJRefreshBackNormalFooter.m in Sources */,
+				1F5B67461CACAF65003CFD75 /* yy_color_converter.c in Sources */,
+				1F5B67471CACAF65003CFD75 /* YYSearchBar.m in Sources */,
+				1F5B67481CACAF65003CFD75 /* ObjectiveCPointor.m in Sources */,
+				1F5B67491CACAF65003CFD75 /* UIGestureRecognizer+RACSignalSupport.m in Sources */,
+				1F5B674A1CACAF65003CFD75 /* UIGestureRecognizer+YYExtension.m in Sources */,
+				1F5B674B1CACAF65003CFD75 /* WebViewDemo.m in Sources */,
+				1F5B674C1CACAF65003CFD75 /* YYCommonList.m in Sources */,
+				1F5B674D1CACAF65003CFD75 /* LoginViewController.m in Sources */,
+				1F5B674E1CACAF65003CFD75 /* UIActionSheet+RACSignalSupport.m in Sources */,
+				1F5B674F1CACAF65003CFD75 /* RACEvent.m in Sources */,
+				1F5B67501CACAF65003CFD75 /* UIView+Transform.m in Sources */,
+				1F5B67511CACAF65003CFD75 /* UISegmentedControl+RACSignalSupport.m in Sources */,
+				1F5B67521CACAF65003CFD75 /* DNAlbumTableViewController.m in Sources */,
+				1F5B67531CACAF65003CFD75 /* NSObject+YYModel.m in Sources */,
+				1F5B67541CACAF65003CFD75 /* UIView+MJExtension.m in Sources */,
+				1F5B67551CACAF65003CFD75 /* ShowRoomCell.m in Sources */,
+				1F5B67561CACAF65003CFD75 /* MKAnnotationView+RACSignalSupport.m in Sources */,
+				1F5B67571CACAF65003CFD75 /* UIImage+YYMessage.m in Sources */,
+				1F5B67581CACAF65003CFD75 /* UITableView+CustomSetting.m in Sources */,
+				1F5B67591CACAF65003CFD75 /* HitTestViewApplication.m in Sources */,
+				1F5B675A1CACAF65003CFD75 /* UIButton+AFNetworking.m in Sources */,
+				1F5B675B1CACAF65003CFD75 /* UIScreen+YYExtension.m in Sources */,
+				1F5B675C1CACAF65003CFD75 /* MJRefreshConst.m in Sources */,
+				1F5B675D1CACAF65003CFD75 /* YYMessageModel.m in Sources */,
+				1F5B675E1CACAF65003CFD75 /* NSThread+YYExtension.m in Sources */,
+				1F5B675F1CACAF65003CFD75 /* YYInputAccessoryViewWithCancel.m in Sources */,
+				1F5B67601CACAF65003CFD75 /* YYKeyValueStore.m in Sources */,
+				1F5B67611CACAF65003CFD75 /* MJRefreshAutoNormalFooter.m in Sources */,
+				1F5B67621CACAF65003CFD75 /* AppInfo.m in Sources */,
+				1F5B67631CACAF65003CFD75 /* FMResultSet.m in Sources */,
+				1F5B67641CACAF65003CFD75 /* JKPromptView.m in Sources */,
+				1F5B67651CACAF65003CFD75 /* YYKeyboardManager.m in Sources */,
+				1F5B67661CACAF65003CFD75 /* YYMessageMoreViewCell.m in Sources */,
+				1F5B67671CACAF65003CFD75 /* NSArray+YYExtension.m in Sources */,
+				1F5B67681CACAF65003CFD75 /* YYUrlCache.m in Sources */,
+				1F5B67691CACAF65003CFD75 /* FastRecordVoiceInputView.m in Sources */,
+				1F5B676A1CACAF65003CFD75 /* LoginModel.m in Sources */,
+				1F5B676B1CACAF65003CFD75 /* NSURLConnection+RACSupport.m in Sources */,
+				1F5B676C1CACAF65003CFD75 /* AESenAndDe.m in Sources */,
+				1F5B676D1CACAF65003CFD75 /* NSDictionary+YYExtension.m in Sources */,
+				1F5B676E1CACAF65003CFD75 /* DTTimePeriodGroup.m in Sources */,
+				1F5B676F1CACAF65003CFD75 /* JSObject.m in Sources */,
+				1F5B67701CACAF65003CFD75 /* YYMessageCellText.m in Sources */,
+				1F5B67711CACAF65003CFD75 /* YYMessageInputToolManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8B89EC1BE2058600D81096 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3558,6 +4607,7 @@
 				1F5A57B71C2BA091000E9E04 /* UISwitch+RACSignalSupport.m in Sources */,
 				1F124DE31C60608700B281E4 /* UIWebView+AFNetworking.m in Sources */,
 				1F45E3D51C200F1900938B2E /* UINavigationItem+YYExtension.m in Sources */,
+				1F6789071CAB618900BF17DD /* ShowRoomCellModel.m in Sources */,
 				1F5A57FB1C2BA37E000E9E04 /* DNBrowserCell.m in Sources */,
 				1F5A578D1C2BA091000E9E04 /* RACKVOTrampoline.m in Sources */,
 				1F124DDB1C60608700B281E4 /* AFAutoPurgingImageCache.m in Sources */,
@@ -3694,6 +4744,7 @@
 				1F98C98D1BE4BF39002EE116 /* YYFoundation.m in Sources */,
 				1F8B8AAC1BE20F3C00D81096 /* MainTabBarController.m in Sources */,
 				1F45E3F41C20132400938B2E /* YYFileHash.m in Sources */,
+				1F5B67AD1CACBED1003CFD75 /* SimpleGestureRecognizers.m in Sources */,
 				1F199A021C17F346000F690C /* sqlite3.c in Sources */,
 				1F5A57751C2BA091000E9E04 /* NSString+RACSupport.m in Sources */,
 				1F5A576F1C2BA091000E9E04 /* NSObject+RACPropertySubscribing.m in Sources */,
@@ -3780,6 +4831,7 @@
 				1FDB24411C35070900FFCBA4 /* YYMessageCellLayoutConfig.m in Sources */,
 				1F2F69071C9A39FE00A3F432 /* YYEmoticonInputView.m in Sources */,
 				1F98C98F1BE4BF39002EE116 /* UIColor+Extention.m in Sources */,
+				1F5B65D01CABBCE1003CFD75 /* GestureTestView.m in Sources */,
 				1F45E3A01C1EB72500938B2E /* UIColor+YYExtension.m in Sources */,
 				1F1999F81C16D5CE000F690C /* YYCacheTest.m in Sources */,
 				1F2DA25B1C197B1E00126FB1 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -3825,6 +4877,7 @@
 				1F160BB11C30CDDC00EDDAA4 /* ObjectiveC_method_swizzling.m in Sources */,
 				1F8B8AC91BE2185F00D81096 /* YYHud.m in Sources */,
 				1FFC8DEE1C50DF6500B0C17A /* YYMessageCellImage.m in Sources */,
+				1F6788FE1CAB5F3A00BF17DD /* TableViewDemo.m in Sources */,
 				1F05D4211C3A1D3300C6DD29 /* ObjectiveC_Memory.m in Sources */,
 				1F5A579B1C2BA091000E9E04 /* RACSignalSequence.m in Sources */,
 				1F5A56951C2B9F3A000E9E04 /* FastRecordTitleCell.m in Sources */,
@@ -3841,6 +4894,7 @@
 				1F45E40F1C210D3A00938B2E /* YYChrysanthemum.m in Sources */,
 				1F98C95C1BE4BD7B002EE116 /* Aspects.m in Sources */,
 				1F9829C41BE70DFD00AF6E3F /* YYJsonResponseSerializer.m in Sources */,
+				1F5B65D31CAC1942003CFD75 /* ShowRoomListModel.m in Sources */,
 				1F2DA2551C197B1E00126FB1 /* MJRefreshBackFooter.m in Sources */,
 				1F5A57911C2BA091000E9E04 /* RACQueueScheduler.m in Sources */,
 				1F124DD61C60608700B281E4 /* AFNetworkReachabilityManager.m in Sources */,
@@ -3930,6 +4984,7 @@
 				1F5A57EC1C2BA37E000E9E04 /* DNAlbumTableViewController.m in Sources */,
 				1F45E40B1C20137B00938B2E /* NSObject+YYModel.m in Sources */,
 				1F2DA2661C197B1E00126FB1 /* UIView+MJExtension.m in Sources */,
+				1F67890B1CAB61AD00BF17DD /* ShowRoomCell.m in Sources */,
 				1F5A57621C2BA091000E9E04 /* MKAnnotationView+RACSignalSupport.m in Sources */,
 				1F05D4571C3BB93600C6DD29 /* UIImage+YYMessage.m in Sources */,
 				1FD1DD921BFC6221001AE9BE /* UITableView+CustomSetting.m in Sources */,
@@ -4015,6 +5070,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F5B67A71CACAF65003CFD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+				);
+				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
+				INFOPLIST_FILE = "ObjcSum copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
+			};
+			name = Debug;
+		};
+		1F5B67A81CACAF65003CFD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+				);
+				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
+				INFOPLIST_FILE = "ObjcSum copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
+			};
+			name = Release;
+		};
 		1F8B8A1B1BE2058700D81096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4111,7 +5210,7 @@
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4133,7 +5232,7 @@
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4192,6 +5291,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F5B67A61CACAF65003CFD75 /* Build configuration list for PBXNativeTarget "ObjcSumDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5B67A71CACAF65003CFD75 /* Debug */,
+				1F5B67A81CACAF65003CFD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1F8B89EB1BE2058600D81096 /* Build configuration list for PBXProject "ObjcSum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

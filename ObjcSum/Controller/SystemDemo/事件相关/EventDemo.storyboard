@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pZu-4Y-AHT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pZu-4Y-AHT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Touch Event Demo-->
@@ -51,10 +51,42 @@
         <scene sceneID="vZO-5N-Wtq">
             <objects>
                 <viewController id="VeO-x8-Jg0" customClass="TouchEventDemoChild" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tCG-bb-84a"/>
+                        <viewControllerLayoutGuide type="bottom" id="SMj-HJ-WVB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NB7-3Q-fFn">
                         <rect key="frame" x="0.0" y="0.0" width="560" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2W-Mg-Uxi" customClass="GestureTestView">
+                                <rect key="frame" x="10" y="10" width="530" height="370"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="NL9-xw-Cxw"/>
+                                    <constraint firstAttribute="width" constant="124" id="fdF-dd-yqa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NL9-xw-Cxw"/>
+                                        <exclude reference="fdF-dd-yqa"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.54754762589999995" blue="0.65394765070000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n2W-Mg-Uxi" firstAttribute="leading" secondItem="NB7-3Q-fFn" secondAttribute="leading" constant="10" id="Bum-2U-J45"/>
+                            <constraint firstItem="SMj-HJ-WVB" firstAttribute="top" secondItem="n2W-Mg-Uxi" secondAttribute="bottom" constant="100" id="MJR-YI-MXC"/>
+                            <constraint firstItem="SMj-HJ-WVB" firstAttribute="top" secondItem="n2W-Mg-Uxi" secondAttribute="bottom" constant="100" id="SDX-5X-FSs"/>
+                            <constraint firstAttribute="trailing" secondItem="n2W-Mg-Uxi" secondAttribute="trailing" constant="20" id="Upl-8a-di9"/>
+                            <constraint firstItem="n2W-Mg-Uxi" firstAttribute="top" secondItem="tCG-bb-84a" secondAttribute="bottom" constant="10" id="hjJ-Tj-rkP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MJR-YI-MXC"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwS-yq-w3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
