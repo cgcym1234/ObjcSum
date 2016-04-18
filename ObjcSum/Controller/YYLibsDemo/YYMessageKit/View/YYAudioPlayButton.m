@@ -7,12 +7,12 @@
 //
 
 #import "YYAudioPlayButton.h"
-#import "YYAudioManager.h"
+#import "YYAudioPlayer.h"
 #import "YYMessageDefinition.h"
 
 
 
-@interface YYAudioPlayButton ()<YYAudioManagerDelegate>
+@interface YYAudioPlayButton ()<YYAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageMarginLeftToSuperView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageMarginRightToSuperView;
@@ -46,7 +46,7 @@
 #pragma mark - Private
 
 - (BOOL)_isAudioPlaying {
-    return [[YYAudioManager defaultManager] isPlaying];
+    return [[YYAudioPlayer sharedInstance] isPlaying];
 }
 
 - (void)_updatePlayingImage {
@@ -102,18 +102,31 @@
 }
 
 - (void)play {
-    [[YYAudioManager defaultManager] playAudio:_audioURL delegate:self];
-    [self _updatePlayingImage];
+    [YYAudioPlayer playAudio:_audioURL delegate:self];
+//    [self _updatePlayingImage];
 }
 
 - (void)stopPlaying {
-    [[YYAudioManager defaultManager] stopPlaying];
-    [self _updatePlayingImage];
+    [YYAudioPlayer stopPlaying];
+//    [self _updatePlayingImage];
 }
 
 #pragma mark - Delegate
 
-- (void)yyAudioManager:(YYAudioManager *)audioManager didFinishPlayingAudio:(NSURL *)audioURL error:(NSError *)error {
+- (void)yyAudioPlayer:(YYAudioPlayer *)audioRecorder willBeginPlaying:(NSURL *)audioURL error:(NSError *)error {
+}
+- (void)yyAudioPlayer:(YYAudioPlayer *)audioRecorder didBeginPlaying:(NSURL *)audioURL {
+    [self _updatePlayingImage];
+}
+
+- (void)yyAudioPlayer:(YYAudioPlayer *)audioRecorder didPausePlaying:(NSURL *)audioURL {
+    [self _updatePlayingImage];
+}
+- (void)yyAudioPlayer:(YYAudioPlayer *)audioRecorder didResumePlaying:(NSURL *)audioURL {
+    [self _updatePlayingImage];
+}
+
+- (void)yyAudioPlayer:(YYAudioPlayer *)audioRecorder didFinishPlaying:(NSURL *)audioURL error:(NSError *)error {
     [self _updatePlayingImage];
 }
 

@@ -8,10 +8,10 @@
 
 #import "YYMessageAudioRecordButton.h"
 #import "YYMessageAudioIndicatorView.h"
-#import "YYAudioManager.h"
+#import "YYAudioRecorder.h"
 
 @interface YYMessageAudioRecordButton ()
-<YYAudioManagerDelegate>
+<YYAudioRecorderDelegate>
 
 @property (nonatomic, strong) UIView *inputTextView;
 @property (nonatomic, assign) YYMessageAudioRecordButtonState  recordState;
@@ -93,7 +93,14 @@
 
 #pragma mark - Delegate
 
-- (void)yyAudioManager:(YYAudioManager *)audioManager didFinishRecordingAudio:(NSURL *)audioURL error:(NSError *)error {
+- (void)yyAudioRecorder:(YYAudioRecorder *)audioRecorder willBeginRecording:(NSURL *)audioURL error:(NSError *)error {
+    
+}
+- (void)yyAudioRecorder:(YYAudioRecorder *)audioRecorder didBeginRecording:(NSURL *)audioURL {
+    
+}
+
+- (void)yyAudioRecorder:(YYAudioRecorder *)audioRecorder didFinishRecording:(NSURL *)audioURL error:(NSError *)error {
     if (error) {
         return;
     }
@@ -101,6 +108,9 @@
     if (_completeBlock) {
         _completeBlock(self, audioURL);
     }
+}
+- (void)yyAudioRecorder:(YYAudioRecorder *)audioRecorder didCancelRecording:(NSURL *)audioURL {
+    
 }
 
 #pragma mark - Setter
@@ -110,17 +120,17 @@
         case YYMessageAudioRecordButtonStateTouchDown: {
             NSLog(@"YYMessageAudioRecordButtonStateTouchDown");
             [YYMessageAudioIndicatorView show];
-            [[YYAudioManager defaultManager] recordForDuration:60 delegate:self];
+            [YYAudioRecorder recordForDuration:60 delegate:self];
             break;
         }
         case YYMessageAudioRecordButtonStateTouchUpInside: {
             [YYMessageAudioIndicatorView dismiss];
-            [[YYAudioManager defaultManager] stopRecording];
+            [YYAudioRecorder stopRecording];
             break;
         }
         case YYMessageAudioRecordButtonStateTouchUpOutside: {
             [YYMessageAudioIndicatorView dismiss];
-            [[YYAudioManager defaultManager] cancelRecording];
+            [YYAudioRecorder cancelRecording];
             break;
         }
         case YYMessageAudioRecordButtonStateTouchDragOutside: {

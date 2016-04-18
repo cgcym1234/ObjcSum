@@ -31,7 +31,6 @@
 //    [self.view addSubview:self.dragImageViewGesture3];
     __weak typeof(self) weakSelf = self;
     int btnNum = 2;
-    
     [self addButtonWithTitle:@"TouchEventDemo" action:^(UIButton *btn) {
         [weakSelf.navigationController pushViewController:[TouchEventDemo instanceFromStoryboard] animated:YES];
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
@@ -69,3 +68,7 @@
 }
 
 @end
+
+
+
+

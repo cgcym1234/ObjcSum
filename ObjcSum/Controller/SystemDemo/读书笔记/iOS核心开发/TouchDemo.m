@@ -36,7 +36,6 @@
 
 #pragma mark 用户手指在屏幕上移动时
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
 }
 
 #pragma mark 用户手指从屏幕上拿开时

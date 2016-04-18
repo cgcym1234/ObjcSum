@@ -138,7 +138,7 @@
 //发送消息
 - (void)willSendMessage:(YYMessage *)message {
     [_messageModelManager addMessage:message];
-    [self reloadCollectionView];
+    [self finishSendingMessageAnimated:YES];
 }
 
 //发送结果
@@ -157,8 +157,10 @@
 #pragma mark - Private
 
 - (void)setContext {
-    self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan = YES;
-    self.navigationController.interactivePopGestureRecognizer.delaysTouchesEnded = YES;
+    self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan = NO;
+    //Setting the tabBar as translucent (in addition to hiding it) allowed the touches to go through.
+    [self.tabBarController.tabBar setTranslucent:YES];
+    
     [self.view addSubview:self.collectionView];
     [self.collectionView layoutEqualParent];
     
@@ -167,6 +169,9 @@
 }
 
 - (void)reloadCollectionView {
+    [self finishSendingMessageAnimated:NO];
+}
+- (void)finishSendingMessageAnimated:(BOOL)animated {
     
     /**
      [_collectionView reloadData];
@@ -186,9 +191,9 @@
     
     //完美方案如下
     [_collectionView reloadData];
-    [_collectionView layoutIfNeeded];
+//    [_collectionView layoutIfNeeded];m
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self scrollToBottom:0 animated:NO];
+        [self scrollToBottom:0 animated:animated];
     });
     /**
      *  The reason this works is because the code within the dispatch block gets put to the back of line (also known as a queue). This means that it is waiting in line for all the main thread operations to finish, including reloadData()'s methods, before it becomes it's turn on the main thread.
