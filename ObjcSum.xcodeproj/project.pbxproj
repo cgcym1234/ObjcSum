@@ -706,7 +706,6 @@
 		1F5B676F1CACAF65003CFD75 /* JSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD24071CA1480C00FEA94A /* JSObject.m */; };
 		1F5B67701CACAF65003CFD75 /* YYMessageCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */; };
 		1F5B67711CACAF65003CFD75 /* YYMessageInputToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FBC451C3F9F8E00FC37A2 /* YYMessageInputToolManager.m */; };
-		1F5B67731CACAF65003CFD75 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6788F01CA8C99D00BF17DD /* JSPatch.framework */; };
 		1F5B67741CACAF65003CFD75 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F76E8591C15637C005E43E9 /* JavaScriptCore.framework */; };
 		1F5B67751CACAF65003CFD75 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
 		1F5B67771CACAF65003CFD75 /* YYSegmentedControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F87A2781CA266940001519E /* YYSegmentedControlCell.xib */; };
@@ -772,7 +771,6 @@
 		1F617D231C0C33D400492D9D /* NSString+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F617D221C0C33D400492D9D /* NSString+YYExtension.m */; };
 		1F65D5021C0FD99F001216ED /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65D5011C0FD99F001216ED /* YYDiskCache.m */; };
 		1F65D50D1C100D45001216ED /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65D50C1C100D45001216ED /* YYKVStorage.m */; };
-		1F6788F11CA8C99D00BF17DD /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6788F01CA8C99D00BF17DD /* JSPatch.framework */; };
 		1F6788F71CA907D800BF17DD /* HitTestViewApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */; };
 		1F6788FE1CAB5F3A00BF17DD /* TableViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */; };
 		1F6789071CAB618900BF17DD /* ShowRoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */; };
@@ -936,6 +934,8 @@
 		1FEE31741C377CF900C52A85 /* YYMessageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */; };
 		1FEE31771C3783F100C52A85 /* YYMessageAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */; };
 		1FEE317A1C3791E300C52A85 /* YYMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */; };
+		1FF133CF1CC7D7C200AD6822 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */; };
+		1FF133D01CC7D7C200AD6822 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */; };
 		1FF64A4D1C338A7000E3B562 /* YYMessageCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */; };
 		1FF64A541C33C63600E3B562 /* UIView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */; };
 		1FF64A571C33CD6D00E3B562 /* YYMessageCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */; };
@@ -1003,9 +1003,9 @@
 		1F1037361C8FCC440021CAC7 /* TouchEventDemoChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchEventDemoChild.m; sourceTree = "<group>"; };
 		1F1037381C970A0F0021CAC7 /* YYMessageCellAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCellAudio.h; sourceTree = "<group>"; };
 		1F1037391C970A0F0021CAC7 /* YYMessageCellAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCellAudio.m; sourceTree = "<group>"; };
-		1F10373B1C970B090021CAC7 /* YYAudioPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYAudioPlayButton.h; path = ../YYAudioPlayButton.h; sourceTree = "<group>"; };
-		1F10373C1C970B090021CAC7 /* YYAudioPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYAudioPlayButton.m; path = ../YYAudioPlayButton.m; sourceTree = "<group>"; };
-		1F10373E1C970B290021CAC7 /* YYAudioPlayButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYAudioPlayButton.xib; path = ../YYAudioPlayButton.xib; sourceTree = "<group>"; };
+		1F10373B1C970B090021CAC7 /* YYAudioPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAudioPlayButton.h; sourceTree = "<group>"; };
+		1F10373C1C970B090021CAC7 /* YYAudioPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAudioPlayButton.m; sourceTree = "<group>"; };
+		1F10373E1C970B290021CAC7 /* YYAudioPlayButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAudioPlayButton.xib; sourceTree = "<group>"; };
 		1F1037411C97BFBC0021CAC7 /* YYMessageObjectAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageObjectAudio.h; sourceTree = "<group>"; };
 		1F1037421C97BFBC0021CAC7 /* YYMessageObjectAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageObjectAudio.m; sourceTree = "<group>"; };
 		1F124DB31C60608700B281E4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -1561,7 +1561,6 @@
 		1F65D5011C0FD99F001216ED /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
 		1F65D50B1C100D45001216ED /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
 		1F65D50C1C100D45001216ED /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
-		1F6788F01CA8C99D00BF17DD /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		1F6788F51CA907D800BF17DD /* HitTestViewApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewApplication.h; sourceTree = "<group>"; };
 		1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewApplication.m; sourceTree = "<group>"; };
 		1F6788FC1CAB5F3A00BF17DD /* TableViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDemo.h; sourceTree = "<group>"; };
@@ -1862,8 +1861,8 @@
 		1FDC2CD21C212CCB000BF77F /* YYNoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYNoDataView.xib; sourceTree = "<group>"; };
 		1FDC2CD71C215AD7000BF77F /* UIView+YYChrysanthemum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYChrysanthemum.h"; sourceTree = "<group>"; };
 		1FDC2CD81C215AD7000BF77F /* UIView+YYChrysanthemum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYChrysanthemum.m"; sourceTree = "<group>"; };
-		1FDD23F91CA12B8700FEA94A /* ThirdLibraryDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdLibraryDemo.h; path = YYLibsDemo/ThirdLibraryDemo.h; sourceTree = "<group>"; };
-		1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdLibraryDemo.m; path = YYLibsDemo/ThirdLibraryDemo.m; sourceTree = "<group>"; };
+		1FDD23F91CA12B8700FEA94A /* ThirdLibraryDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLibraryDemo.h; sourceTree = "<group>"; };
+		1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLibraryDemo.m; sourceTree = "<group>"; };
 		1FDD23FD1CA12BD800FEA94A /* JSPatchDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPatchDemo.h; sourceTree = "<group>"; };
 		1FDD23FE1CA12BD800FEA94A /* JSPatchDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPatchDemo.m; sourceTree = "<group>"; };
 		1FDD24041CA145AF00FEA94A /* Second.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Second.html; sourceTree = "<group>"; };
@@ -1876,6 +1875,7 @@
 		1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageAvatarView.m; sourceTree = "<group>"; };
 		1FEE31781C3791E300C52A85 /* YYMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageBubbleView.h; sourceTree = "<group>"; };
 		1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageBubbleView.m; sourceTree = "<group>"; };
+		1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		1FF64A4B1C338A7000E3B562 /* YYMessageCellBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCellBase.h; sourceTree = "<group>"; };
 		1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCellBase.m; sourceTree = "<group>"; };
 		1FF64A521C33C63600E3B562 /* UIView+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYMessage.h"; sourceTree = "<group>"; };
@@ -1904,7 +1904,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5B67731CACAF65003CFD75 /* JSPatch.framework in Frameworks */,
+				1FF133D01CC7D7C200AD6822 /* JSPatch.framework in Frameworks */,
 				1F2899FC1CC2814F00988E82 /* libopencore-amrwb.a in Frameworks */,
 				1F2899FA1CC2814F00988E82 /* libopencore-amrnb.a in Frameworks */,
 				1F5B67741CACAF65003CFD75 /* JavaScriptCore.framework in Frameworks */,
@@ -1916,7 +1916,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F6788F11CA8C99D00BF17DD /* JSPatch.framework in Frameworks */,
+				1FF133CF1CC7D7C200AD6822 /* JSPatch.framework in Frameworks */,
 				1F2899FB1CC2814F00988E82 /* libopencore-amrwb.a in Frameworks */,
 				1F2899F91CC2814F00988E82 /* libopencore-amrnb.a in Frameworks */,
 				1F76E85A1C15637D005E43E9 /* JavaScriptCore.framework in Frameworks */,
@@ -2206,16 +2206,16 @@
 		1F2BE06B1C4F8FFE00E71E53 /* 事件相关 */ = {
 			isa = PBXGroup;
 			children = (
+				1F5B67AE1CACBED9003CFD75 /* 手势 */,
 				1F1037301C8FC94E0021CAC7 /* EventDemo.storyboard */,
 				1F2BE0681C4F8FF900E71E53 /* GestureDemo.h */,
 				1F2BE0691C4F8FF900E71E53 /* GestureDemo.m */,
+				1F6788F51CA907D800BF17DD /* HitTestViewApplication.h */,
+				1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */,
 				1F1037321C8FCAB10021CAC7 /* TouchEventDemo.h */,
 				1F1037331C8FCAB10021CAC7 /* TouchEventDemo.m */,
 				1F1037351C8FCC440021CAC7 /* TouchEventDemoChild.h */,
 				1F1037361C8FCC440021CAC7 /* TouchEventDemoChild.m */,
-				1F6788F51CA907D800BF17DD /* HitTestViewApplication.h */,
-				1F6788F61CA907D800BF17DD /* HitTestViewApplication.m */,
-				1F5B67AE1CACBED9003CFD75 /* 手势 */,
 			);
 			path = "事件相关";
 			sourceTree = "<group>";
@@ -2367,8 +2367,7 @@
 				1F2F69111C9A44E500A3F432 /* YYEmoticonInputViewCell.m */,
 				1F2F69121C9A44E500A3F432 /* YYEmoticonInputViewCell.xib */,
 			);
-			name = YYEmoticonInputView;
-			path = ../YYEmoticonInputView;
+			path = YYEmoticonInputView;
 			sourceTree = "<group>";
 		};
 		1F2F69161C9A544800A3F432 /* YYSegmentedControl */ = {
@@ -2395,7 +2394,7 @@
 				1F792CBE1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.h */,
 				1F792CBF1C8A7CD900EE70D4 /* YYMessageAudioRecordButton.m */,
 			);
-			name = YYAudioView;
+			path = YYAudioView;
 			sourceTree = "<group>";
 		};
 		1F45E3AA1C1EBF6600938B2E /* UIKit */ = {
@@ -2841,14 +2840,14 @@
 		1F5B67AE1CACBED9003CFD75 /* 手势 */ = {
 			isa = PBXGroup;
 			children = (
+				1F5B67B81CACC044003CFD75 /* images */,
 				1F5B65CE1CABBCE1003CFD75 /* GestureTestView.h */,
 				1F5B65CF1CABBCE1003CFD75 /* GestureTestView.m */,
 				1F5B67AB1CACBED1003CFD75 /* SimpleGestureRecognizers.h */,
 				1F5B67AC1CACBED1003CFD75 /* SimpleGestureRecognizers.m */,
 				1F5B67B91CACC583003CFD75 /* SimpleGestureRecognizers.xib */,
-				1F5B67B81CACC044003CFD75 /* images */,
 			);
-			name = "手势";
+			path = "手势";
 			sourceTree = "<group>";
 		};
 		1F5B67B81CACC044003CFD75 /* images */ = {
@@ -2858,7 +2857,7 @@
 				1F5B67B01CACC03F003CFD75 /* swipe.png */,
 				1F5B67B11CACC03F003CFD75 /* tap.png */,
 			);
-			name = images;
+			path = images;
 			sourceTree = "<group>";
 		};
 		1F5D1A491BF1CEA20049F342 /* 扩展相关 */ = {
@@ -2934,6 +2933,8 @@
 				1FAC3C2E1C0D7FEB0007520F /* NSKeyedUnarchiver+YYExtension.m */,
 				1FAC3C271C0D75CA0007520F /* NSNotificationCenter+YYExtension.h */,
 				1FAC3C281C0D75CA0007520F /* NSNotificationCenter+YYExtension.m */,
+				1FAF6B9B1CA4DCA200554A2A /* NSNull+YYKit.h */,
+				1FAF6B9C1CA4DCA200554A2A /* NSNull+YYKit.m */,
 				1FAC3C161C0D35B50007520F /* NSNumber+YYExtension.h */,
 				1FAC3C171C0D35B50007520F /* NSNumber+YYExtension.m */,
 				1F617D191C0C153800492D9D /* NSObject+YYExtension.h */,
@@ -2946,8 +2947,6 @@
 				1FAC3C2B1C0D7DDF0007520F /* NSTimer+YYExtension.m */,
 				1F45E3991C1E712000938B2E /* NSURL+YYExtension.h */,
 				1F45E39A1C1E712100938B2E /* NSURL+YYExtension.m */,
-				1FAF6B9B1CA4DCA200554A2A /* NSNull+YYKit.h */,
-				1FAF6B9C1CA4DCA200554A2A /* NSNull+YYKit.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -2977,17 +2976,17 @@
 		1F6788FF1CAB5F4200BF17DD /* TableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1F6789081CAB61AD00BF17DD /* ShowRoomCell.h */,
+				1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */,
+				1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */,
 				1F6789051CAB618900BF17DD /* ShowRoomCellModel.h */,
 				1F6789061CAB618900BF17DD /* ShowRoomCellModel.m */,
 				1F5B65D11CAC1942003CFD75 /* ShowRoomListModel.h */,
 				1F5B65D21CAC1942003CFD75 /* ShowRoomListModel.m */,
-				1F6789081CAB61AD00BF17DD /* ShowRoomCell.h */,
-				1F6789091CAB61AD00BF17DD /* ShowRoomCell.m */,
-				1F67890A1CAB61AD00BF17DD /* ShowRoomCell.xib */,
 				1F6788FC1CAB5F3A00BF17DD /* TableViewDemo.h */,
 				1F6788FD1CAB5F3A00BF17DD /* TableViewDemo.m */,
 			);
-			name = TableViewDemo;
+			path = TableViewDemo;
 			sourceTree = "<group>";
 		};
 		1F6872AB1C27CB1C008BC6BE /* YYTextViewTimePicker */ = {
@@ -3089,10 +3088,10 @@
 			isa = PBXGroup;
 			children = (
 				1F2899E81CC2814E00988E82 /* VoiceConvert */,
-				1F2899E21CC23EFC00988E82 /* YYAudioRecorder.h */,
-				1F2899E31CC23EFC00988E82 /* YYAudioRecorder.m */,
 				1F2899E51CC23F0E00988E82 /* YYAudioPlayer.h */,
 				1F2899E61CC23F0E00988E82 /* YYAudioPlayer.m */,
+				1F2899E21CC23EFC00988E82 /* YYAudioRecorder.h */,
+				1F2899E31CC23EFC00988E82 /* YYAudioRecorder.m */,
 			);
 			path = YYAudioManager;
 			sourceTree = "<group>";
@@ -3133,8 +3132,8 @@
 				1F8B8A171BE2058700D81096 /* ObjcSumUITests */,
 				1F8B89F11BE2058600D81096 /* Products */,
 				1F76E8591C15637C005E43E9 /* JavaScriptCore.framework */,
-				1FAC3C191C0D44760007520F /* libz.tbd */,
 				1F5B67AA1CACAF65003CFD75 /* ObjcSum copy-Info.plist */,
+				1FAC3C191C0D44760007520F /* libz.tbd */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3369,11 +3368,11 @@
 		1F8B8A7A1BE20B3700D81096 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1FDD23FC1CA12B9E00FEA94A /* ThirdLibraryDemo */,
 				1F8B8A291BE2075900D81096 /* BaseViewController */,
 				1F8B8AAE1BE2152900D81096 /* Login */,
 				1F8B8AAD1BE20F4100D81096 /* Main */,
 				1F8B8AD11BE33DD200D81096 /* SystemDemo */,
+				1FDD23FC1CA12B9E00FEA94A /* ThirdLibraryDemo */,
 				1F8B8A2A1BE2082300D81096 /* YYLibsDemo */,
 			);
 			path = Controller;
@@ -3391,7 +3390,7 @@
 		1F8B8A831BE20BAF00D81096 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				1FDD23F71CA12ABF00FEA94A /* JSPatch */,
+				1FF133CD1CC7D7C200AD6822 /* JSPatch */,
 				1F124DB21C60608700B281E4 /* AFNetworking */,
 				1F98C9591BE4BD7B002EE116 /* Aspects */,
 				1F5A57C01C2BA37E000E9E04 /* DNImagePicker */,
@@ -3552,6 +3551,9 @@
 			children = (
 				1F617D201C0C2A1500492D9D /* Foundation相关测试 */,
 				1F2DA21C1C1968EB00126FB1 /* ObjectiveC特性 */,
+				1FDD23F81CA12AE500FEA94A /* RunLoop */,
+				1FAF6BA11CA4E07000554A2A /* RunTime */,
+				1F6788FF1CAB5F4200BF17DD /* TableViewDemo */,
 				1F76E8581C1562D2005E43E9 /* Web相关 */,
 				1F2BE06B1C4F8FFE00E71E53 /* 事件相关 */,
 				1F2DA2201C19696200126FB1 /* 多线程相关 */,
@@ -3562,9 +3564,6 @@
 				1F792CD31C8F0E3A00EE70D4 /* 音频相关 */,
 				1F8B8AD21BE360A700D81096 /* SystemDemo.h */,
 				1F8B8AD31BE360A700D81096 /* SystemDemo.m */,
-				1FAF6BA11CA4E07000554A2A /* RunTime */,
-				1FDD23F81CA12AE500FEA94A /* RunLoop */,
-				1F6788FF1CAB5F4200BF17DD /* TableViewDemo */,
 			);
 			path = SystemDemo;
 			sourceTree = "<group>";
@@ -3771,12 +3770,12 @@
 		1FAF6BA11CA4E07000554A2A /* RunTime */ = {
 			isa = PBXGroup;
 			children = (
-				1FAF6B9E1CA4E06800554A2A /* RuntimeDemo.h */,
-				1FAF6B9F1CA4E06800554A2A /* RuntimeDemo.m */,
 				1FAF6BA21CA4E25A00554A2A /* MethodForword.h */,
 				1FAF6BA31CA4E25A00554A2A /* MethodForword.m */,
+				1FAF6B9E1CA4E06800554A2A /* RuntimeDemo.h */,
+				1FAF6B9F1CA4E06800554A2A /* RuntimeDemo.m */,
 			);
-			name = RunTime;
+			path = RunTime;
 			sourceTree = "<group>";
 		};
 		1FD1DD931BFC623B001AE9BE /* CustomSetting */ = {
@@ -3870,44 +3869,36 @@
 			path = YYNoDataView;
 			sourceTree = "<group>";
 		};
-		1FDD23F71CA12ABF00FEA94A /* JSPatch */ = {
-			isa = PBXGroup;
-			children = (
-				1F6788F01CA8C99D00BF17DD /* JSPatch.framework */,
-			);
-			name = JSPatch;
-			sourceTree = "<group>";
-		};
 		1FDD23F81CA12AE500FEA94A /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
 				1F2F696C1C9AF73400A3F432 /* RunLoopDemo.h */,
 				1F2F696D1C9AF73400A3F432 /* RunLoopDemo.m */,
 			);
-			name = RunLoop;
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		1FDD23FC1CA12B9E00FEA94A /* ThirdLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1FDD24001CA12BDF00FEA94A /* JSPatchDemo */,
 				1FDD23F91CA12B8700FEA94A /* ThirdLibraryDemo.h */,
 				1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */,
-				1FDD24001CA12BDF00FEA94A /* JSPatchDemo */,
 			);
-			name = ThirdLibraryDemo;
+			path = ThirdLibraryDemo;
 			sourceTree = "<group>";
 		};
 		1FDD24001CA12BDF00FEA94A /* JSPatchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1FDD23FD1CA12BD800FEA94A /* JSPatchDemo.h */,
-				1FDD23FE1CA12BD800FEA94A /* JSPatchDemo.m */,
-				1FDD24091CA1482D00FEA94A /* JSPatchDemo.js */,
-				1FDD24041CA145AF00FEA94A /* Second.html */,
 				1FDD24061CA1480C00FEA94A /* JSObject.h */,
 				1FDD24071CA1480C00FEA94A /* JSObject.m */,
+				1FDD23FD1CA12BD800FEA94A /* JSPatchDemo.h */,
+				1FDD24091CA1482D00FEA94A /* JSPatchDemo.js */,
+				1FDD23FE1CA12BD800FEA94A /* JSPatchDemo.m */,
+				1FDD24041CA145AF00FEA94A /* Second.html */,
 			);
-			name = JSPatchDemo;
+			path = JSPatchDemo;
 			sourceTree = "<group>";
 		};
 		1FEE31711C377CCE00C52A85 /* Cell */ = {
@@ -3923,6 +3914,14 @@
 				1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1FF133CD1CC7D7C200AD6822 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */,
+			);
+			path = JSPatch;
 			sourceTree = "<group>";
 		};
 		1FF64A4E1C338A7500E3B562 /* View */ = {
@@ -5153,6 +5152,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum copy-Info.plist";
@@ -5179,6 +5179,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum copy-Info.plist";
@@ -5287,6 +5288,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
@@ -5313,6 +5315,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
