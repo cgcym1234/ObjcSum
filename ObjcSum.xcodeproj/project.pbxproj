@@ -936,6 +936,10 @@
 		1FEE317A1C3791E300C52A85 /* YYMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */; };
 		1FF133CF1CC7D7C200AD6822 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */; };
 		1FF133D01CC7D7C200AD6822 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */; };
+		1FF133D31CC916A700AD6822 /* UICollectionView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF133D21CC916A600AD6822 /* UICollectionView+YYMessage.m */; };
+		1FF133D41CC916A700AD6822 /* UICollectionView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF133D21CC916A600AD6822 /* UICollectionView+YYMessage.m */; };
+		1FF133D71CC925D000AD6822 /* UIButton+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF133D61CC925D000AD6822 /* UIButton+YYMessage.m */; };
+		1FF133D81CC925D000AD6822 /* UIButton+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF133D61CC925D000AD6822 /* UIButton+YYMessage.m */; };
 		1FF64A4D1C338A7000E3B562 /* YYMessageCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */; };
 		1FF64A541C33C63600E3B562 /* UIView+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */; };
 		1FF64A571C33CD6D00E3B562 /* YYMessageCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64A561C33CD6D00E3B562 /* YYMessageCellText.m */; };
@@ -1876,6 +1880,10 @@
 		1FEE31781C3791E300C52A85 /* YYMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageBubbleView.h; sourceTree = "<group>"; };
 		1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageBubbleView.m; sourceTree = "<group>"; };
 		1FF133CE1CC7D7C200AD6822 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		1FF133D11CC916A600AD6822 /* UICollectionView+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+YYMessage.h"; sourceTree = "<group>"; };
+		1FF133D21CC916A600AD6822 /* UICollectionView+YYMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+YYMessage.m"; sourceTree = "<group>"; };
+		1FF133D51CC925D000AD6822 /* UIButton+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYMessage.h"; sourceTree = "<group>"; };
+		1FF133D61CC925D000AD6822 /* UIButton+YYMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYMessage.m"; sourceTree = "<group>"; };
 		1FF64A4B1C338A7000E3B562 /* YYMessageCellBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCellBase.h; sourceTree = "<group>"; };
 		1FF64A4C1C338A7000E3B562 /* YYMessageCellBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCellBase.m; sourceTree = "<group>"; };
 		1FF64A521C33C63600E3B562 /* UIView+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYMessage.h"; sourceTree = "<group>"; };
@@ -3983,6 +3991,10 @@
 				1FF64A591C33CE0C00E3B562 /* UILabel+YYMessage.m */,
 				1FF64A521C33C63600E3B562 /* UIView+YYMessage.h */,
 				1FF64A531C33C63600E3B562 /* UIView+YYMessage.m */,
+				1FF133D11CC916A600AD6822 /* UICollectionView+YYMessage.h */,
+				1FF133D21CC916A600AD6822 /* UICollectionView+YYMessage.m */,
+				1FF133D51CC925D000AD6822 /* UIButton+YYMessage.h */,
+				1FF133D61CC925D000AD6822 /* UIButton+YYMessage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -4385,6 +4397,7 @@
 				1F5B665A1CACAF65003CFD75 /* HttpManager.m in Sources */,
 				1F5B665B1CACAF65003CFD75 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				1F5B665C1CACAF65003CFD75 /* MJRefreshNormalHeader.m in Sources */,
+				1FF133D41CC916A700AD6822 /* UICollectionView+YYMessage.m in Sources */,
 				1F5B665D1CACAF65003CFD75 /* DTTimePeriodCollection.m in Sources */,
 				1F5B665E1CACAF65003CFD75 /* UITableViewCell+YYExtension.m in Sources */,
 				1F5B665F1CACAF65003CFD75 /* UIFont+YYExtension.m in Sources */,
@@ -4530,6 +4543,7 @@
 				1F5B66EC1CACAF65003CFD75 /* RACSignalSequence.m in Sources */,
 				1F5B66ED1CACAF65003CFD75 /* FastRecordTitleCell.m in Sources */,
 				1F5B66EE1CACAF65003CFD75 /* YYAlertGridView.m in Sources */,
+				1FF133D81CC925D000AD6822 /* UIButton+YYMessage.m in Sources */,
 				1F5B66EF1CACAF65003CFD75 /* YYThreadSafeArray.m in Sources */,
 				1F5B66F01CACAF65003CFD75 /* SSKeychainQuery.m in Sources */,
 				1F5B66F11CACAF65003CFD75 /* MJRefreshFooter.m in Sources */,
@@ -4941,6 +4955,7 @@
 				1F10373A1C970A0F0021CAC7 /* YYMessageCellAudio.m in Sources */,
 				1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */,
 				1F5A57991C2BA091000E9E04 /* RACSignal.m in Sources */,
+				1FF133D71CC925D000AD6822 /* UIButton+YYMessage.m in Sources */,
 				1F075BB71C44D2D00013C815 /* UIView+AutoLayout.m in Sources */,
 				1F5A56941C2B9F3A000E9E04 /* FastRecordTextInputCell.m in Sources */,
 				1F5A57861C2BA091000E9E04 /* RACErrorSignal.m in Sources */,
@@ -5019,6 +5034,7 @@
 				1FFC8DF11C50DFC100B0C17A /* YYMessageImageView.m in Sources */,
 				1FDB24441C3516C800FFCBA4 /* YYMessageTextLabel.m in Sources */,
 				1F2BE07A1C50B8E600E71E53 /* DragImageViewGesture.m in Sources */,
+				1FF133D31CC916A700AD6822 /* UICollectionView+YYMessage.m in Sources */,
 				1F5A57FD1C2BA37E000E9E04 /* DNSendButton.m in Sources */,
 				1FAC3C181C0D35B50007520F /* NSNumber+YYExtension.m in Sources */,
 				1F5A57771C2BA091000E9E04 /* NSUserDefaults+RACSupport.m in Sources */,

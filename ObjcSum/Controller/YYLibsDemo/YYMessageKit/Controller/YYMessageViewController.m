@@ -7,6 +7,7 @@
 //
 
 #import "YYMessageViewController.h"
+#import "UICollectionView+YYMessage.h"
 #import "YYMessageCellText.h"
 #import "YYMessageModel.h"
 #import "YYMessageInputToolManager.h"
@@ -126,7 +127,7 @@
      *  要先调整contentInset，再调整contentOffset
      */
     [self setCollectionViewInsetsTopValue:0 bottomValue:bottom];
-    [self scrollToBottom:bottom animated:NO];
+    [self.collectionView scrollToBottomAnimated:NO];
 }
 
 #pragma mark - Message
@@ -190,10 +191,11 @@
      */
     
     //完美方案如下
+//    [_collectionView.collectionViewLayout invalidateLayout];
     [_collectionView reloadData];
-//    [_collectionView layoutIfNeeded];m
+//    [self.collectionView scrollToBottomAnimated:YES];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self scrollToBottom:0 animated:animated];
+        [self.collectionView scrollToBottomAnimated:YES];
     });
     /**
      *  The reason this works is because the code within the dispatch block gets put to the back of line (also known as a queue). This means that it is waiting in line for all the main thread operations to finish, including reloadData()'s methods, before it becomes it's turn on the main thread.
@@ -205,26 +207,6 @@
     UIEdgeInsets insets = UIEdgeInsetsMake(top, 0.0f, bottom, 0.0f);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
-}
-
-- (void)scrollToBottom:(CGFloat)bottom animated:(BOOL)animated
-{
-    if ([_collectionView numberOfSections] == 0) {
-        return;
-    }
-    
-    NSInteger items = [_collectionView numberOfItemsInSection:0];
-    
-    if (items == 0) {
-        return;
-    }
-    
-    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:items -1 inSection:0];
-    [_collectionView scrollToItemAtIndexPath:lastIndexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:animated];
-    
-//    CGPoint bottomOffset = CGPointMake(0, _collectionView.contentSize.height - (_collectionView.height - bottom));
-//    
-//    [_collectionView setContentOffset:bottomOffset animated:animated];
 }
 
 #pragma mark - Getters

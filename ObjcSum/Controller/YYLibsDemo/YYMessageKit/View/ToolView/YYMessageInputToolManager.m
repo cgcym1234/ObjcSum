@@ -19,7 +19,7 @@ static NSInteger const HeightForInputToolBar = 49;
 static NSString * const KeyCell = @"KeyCell";
 
 @interface YYMessageInputToolManager ()
-<YYKeyboardObserver, UITextViewDelegate>
+<YYKeyboardObserver, UITextViewDelegate, YYMessageInputToolBarDelegate>
 
 @property (nonatomic, strong) YYMessageInputToolBar *inputToolBar;
 
@@ -59,6 +59,8 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Delegate
 
+#pragma mark YYKeyboardObserver
+
 - (void)yyKeyboardManager:(YYKeyboardManager *)keyboardManager
    keyboardWithTransition:(YYKeyboardTransition)transition {
     CGRect keyboardFrame = [keyboardManager convertRect:transition.toFrame toView:_inputToolBarContainerView];
@@ -68,24 +70,18 @@ static NSString * const KeyCell = @"KeyCell";
     [_delegate yyMessageInputToolManager:self willTranslateToFrame:_inputToolBar.frame fromFrame:originFrame];
 }
 
-#pragma mark UITextViewDelegate
+#pragma mark YYMessageInputToolBarDelegate
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    if (object == _inputToolBar.inputTextView && [keyPath isEqualToString:NSStringFromSelector(@selector(contentSize))]) {
-        CGSize oldContentSize = [change[NSKeyValueChangeOldKey] CGSizeValue];
-        CGSize newContentSize = [change[NSKeyValueChangeNewKey] CGSizeValue];
-        NSLog(@"oldContentSize=%@, newContentSize=%@", NSStringFromCGSize(oldContentSize), NSStringFromCGSize(newContentSize));
-        if (!CGSizeEqualToSize(oldContentSize, newContentSize)) {
-            CGRect originFrame = _inputToolBar.frame;
-            CGFloat offSet = newContentSize.height-oldContentSize.height;
-            _inputToolBar.y -= offSet;
-            _inputToolBar.height += offSet;
-            [_delegate yyMessageInputToolManager:self willTranslateToFrame:_inputToolBar.frame fromFrame:originFrame];
-            //必须加上，否则，文字显示位置不对
-            [_inputToolBar.inputTextView layoutIfNeeded];
+- (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar didChangeToState:(YYMessageInputToolBarState)state {
+    NSInteger offSet = _inputToolBar.height - HeightForInputToolBar;
+    if (state == YYMessageInputToolBarStateVoiceRecord) {
+        if (offSet != 0) {
+            [self toolBarHeightChangedWithOffset:offSet];
         }
     }
 }
+
+#pragma mark UITextViewDelegate
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     BOOL ret = YES;
@@ -122,12 +118,19 @@ static NSString * const KeyCell = @"KeyCell";
         [weakSelf.delegate yyMessageInputToolManager:weakSelf didSendMessage:voicePath messageType:YYMessageTypeAudio];
     };
     [[YYKeyboardManager defaultManager] addObserver:self];
-    [_inputToolBar.inputTextView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     _height = HeightForInputToolBar;
 }
 
-#pragma mark - Setters
+- (void)toolBarHeightChangedWithOffset:(CGFloat)offSet {
+    CGRect originFrame = _inputToolBar.frame;
+    _inputToolBar.y -= offSet;
+    _inputToolBar.height += offSet;
+    [_delegate yyMessageInputToolManager:self willTranslateToFrame:_inputToolBar.frame fromFrame:originFrame];
+    //必须加上，否则，文字显示位置不对
+    [_inputToolBar.inputTextView layoutIfNeeded];
+}
 
+#pragma mark - Setters
 
 #pragma mark - Getters
 

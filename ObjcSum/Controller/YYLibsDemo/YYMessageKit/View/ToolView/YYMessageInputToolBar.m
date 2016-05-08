@@ -9,6 +9,7 @@
 #import "YYMessageInputToolBar.h"
 #import "YYMessageAudioRecordButton.h"
 #import "YYEmoticonInputView.h"
+#import "UIButton+YYMessage.h"
 #import "UIView+YYMessage.h"
 
 #pragma mark - Consts
@@ -17,29 +18,26 @@
 
 #pragma mark  Keys
 
-static NSString * const SwitchButtonImageInput = @"ChatWindow_Keyboard";
-static NSString * const SwitchButtonImageVoice = @"ChatWindow_Speaking";
-static NSString * const EmojiButtonImage = @"ChatWindow_Expression";
-static NSString * const MoreButtonImage = @"ChatWindow_More";
+static NSString * const ImageInput = @"ChatWindow_Keyboard";
+static NSString * const ImageVoice = @"ChatWindow_Speaking";
+static NSString * const ImageEmoji = @"ChatWindow_Expression";
+static NSString * const ImageMore = @"ChatWindow_More";
 
 @interface YYMessageInputToolBar ()
 <YYEmoticonInputViewDelegate>
 
-@property (weak, nonatomic) IBOutlet YYMultiImageButton *inputAndVoiceSwitchButton;
+@property (weak, nonatomic) IBOutlet UIButton *inputAndVoiceSwitchButton;
 
 @property (weak, nonatomic) IBOutlet UITextView *inputTextView;
 @property (weak, nonatomic) IBOutlet YYMessageAudioRecordButton *voiceRecordButton;
 
-@property (weak, nonatomic) IBOutlet YYMultiImageButton *emojiButton;
+@property (weak, nonatomic) IBOutlet UIButton *emojiButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *emojiButtonWidth;
 
-//语音和输入按钮状态
-@property (nonatomic, assign) BOOL isVoiceButtonVisible;
+@property (assign, nonatomic) YYMessageInputToolBarState state;
 
-//表情和输入按钮状态
-@property (nonatomic, assign) BOOL isEmojiButtonVisible;
 @property (nonatomic, strong) YYEmoticonInputView *emoticonInputView;
 
 @end
@@ -60,12 +58,6 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
     [_moreButton setTitle:nil forState:UIControlStateNormal];
     
     
-    _inputAndVoiceSwitchButton.images = @[[UIImage imageNamed:SwitchButtonImageVoice],[UIImage imageNamed:SwitchButtonImageInput]];
-    
-    _emojiButton.images = @[[UIImage imageNamed:EmojiButtonImage],[UIImage imageNamed:SwitchButtonImageInput]];
-    
-    [_moreButton setImage:[UIImage imageNamed:MoreButtonImage] forState:UIControlStateNormal];
-    
     _inputTextView.text = nil;
     _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.698 alpha:1.000].CGColor;
     _inputTextView.layer.borderWidth = 0.5;
@@ -75,13 +67,30 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
     _voiceRecordButton.layer.borderWidth = 0.5;
     _voiceRecordButton.layer.cornerRadius = 6;
     [_voiceRecordButton setTitle:@"按住说话" forState:UIControlStateNormal];
+    self.state = YYMessageInputToolBarStateInput;
+    [_inputTextView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 }
 
 - (instancetype)init {
     return [YYMessageInputToolBar newInstanceFromNib];
 }
 
+- (void)dealloc {
+    [_inputTextView removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize))];
+}
 #pragma mark - Overrides
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if (object == _inputTextView && [keyPath isEqualToString:NSStringFromSelector(@selector(contentSize))]) {
+        CGSize oldContentSize = [change[NSKeyValueChangeOldKey] CGSizeValue];
+        CGSize newContentSize = [change[NSKeyValueChangeNewKey] CGSizeValue];
+        NSLog(@"oldContentSize=%@, newContentSize=%@", NSStringFromCGSize(oldContentSize), NSStringFromCGSize(newContentSize));
+        if (!CGSizeEqualToSize(oldContentSize, newContentSize)) {
+            CGFloat offSet = newContentSize.height - oldContentSize.height;
+//            [self toolBarHeightChangedWithOffset:offSet];
+        }
+    }
+}
 
 
 #pragma mark - Public methods
@@ -89,14 +98,37 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 
 #pragma mark - Delegate
 
+#pragma mark UITextViewDelegate
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    BOOL ret = YES;
+    
+    //判断输入的字是否是回车，即按下return
+    if ([text isEqualToString:@"\n"]){
+//        [_delegate yyMessageInputToolManager:self didSendMessage:_inputToolBar.inputTextView.text messageType:YYMessageTypeText];
+//        _inputToolBar.inputTextView.text = nil;
+        ret = NO;
+    }
+    return ret;
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    if (textView.text.length >= 200) {
+        //        [YYHud showTip:@"请将随手记内容保持在200个字以内"];
+        NSString *text = [textView.text substringToIndex:200];
+        textView.text = text;
+        return;
+    }
+}
+
 #pragma mark YYEmoticonInputViewDelegate
 
 - (void)yyEmoticonInputView:(YYEmoticonInputView *)view didTapText:(NSString *)text {
-   [_inputTextView replaceRange:_inputTextView.selectedTextRange withText:text];
+    [_inputTextView replaceRange:_inputTextView.selectedTextRange withText:text];
 }
 
 - (void)yyEmoticonInputViewDidTapBackspace:(YYEmoticonInputView *)view {
-//    [_textView deleteBackward];
+    //    [_textView deleteBackward];
 }
 
 - (void)yyEmoticonInputViewDidTapSend:(YYEmoticonInputView *)view {
@@ -106,41 +138,68 @@ static NSString * const MoreButtonImage = @"ChatWindow_More";
 #pragma mark - Private methods
 
 - (IBAction)didClickedSwitchButton:(YYMultiImageButton *)switchButton {
-    
-    //当前是语音图标，显示输入框
-    BOOL inputTextViewShow = self.isVoiceButtonVisible;
-    _inputTextView.hidden = !inputTextViewShow;
-    _voiceRecordButton.hidden = inputTextViewShow;
-    
-    if (inputTextViewShow) {
-        [_inputTextView becomeFirstResponder];
-    } else {
-        [_inputTextView resignFirstResponder];
-    }
+    self.state = _state != YYMessageInputToolBarStateVoiceRecord ? YYMessageInputToolBarStateVoiceRecord :YYMessageInputToolBarStateInput;
 }
 
 - (IBAction)didClickedEmojiButton:(UIButton *)sender {
-    BOOL isEmojiButtonVisible = self.isEmojiButtonVisible;
-    _inputTextView.inputView = isEmojiButtonVisible ? nil : self.emoticonInputView;
+    YYMessageInputToolBarState currentState = _state != YYMessageInputToolBarStateEmoji ? YYMessageInputToolBarStateEmoji :YYMessageInputToolBarStateInput;
+    _inputTextView.inputView = currentState != YYMessageInputToolBarStateEmoji ? nil : self.emoticonInputView;
     [_inputTextView reloadInputViews];
-    [_inputTextView becomeFirstResponder];
+    self.state = currentState;
 }
 
 - (IBAction)didClickedMoreButton:(UIButton *)sender {
+    self.state = _state != YYMessageInputToolBarStateMore ? YYMessageInputToolBarStateMore :YYMessageInputToolBarStateInput;
 }
 
 #pragma mark - Setters
 
+- (void)setState:(YYMessageInputToolBarState)state {
+    _state = state;
+    
+    //文字输入状态配置
+    BOOL textInputViewHidden = NO;
+    NSString *inputAndVoiceSwitchButtonImage = ImageVoice;
+    NSString *emojiButtonImage = ImageEmoji;
+    NSString *moreButtonImage = ImageMore;
+    
+    
+    switch (state) {
+        case YYMessageInputToolBarStateInput: {
+            break;
+        }
+        case YYMessageInputToolBarStateVoiceRecord: {
+            inputAndVoiceSwitchButtonImage = ImageInput;
+            textInputViewHidden = YES;
+            break;
+        }
+        case YYMessageInputToolBarStateEmoji: {
+            emojiButtonImage = ImageInput;
+            break;
+        }
+        case YYMessageInputToolBarStateMore: {
+            moreButtonImage = ImageInput;
+            break;
+        }
+    }
+    
+    [_inputAndVoiceSwitchButton setImageNomalState:[UIImage imageNamed:inputAndVoiceSwitchButtonImage]];
+    [_emojiButton setImageNomalState:[UIImage imageNamed:emojiButtonImage]];
+    [_moreButton setImageNomalState:[UIImage imageNamed:moreButtonImage]];
+    
+    _inputTextView.hidden = textInputViewHidden;
+    _voiceRecordButton.hidden = !textInputViewHidden;
+    
+    if (textInputViewHidden) {
+        [_inputTextView resignFirstResponder];
+    } else {
+        [_inputTextView becomeFirstResponder];
+    }
+    
+    [_delegate yyMessageInputToolBar:self didChangeToState:_state];
+}
 
 #pragma mark - Getters
-
-- (BOOL)isVoiceButtonVisible {
-    return _inputAndVoiceSwitchButton.currentImageIndex == 0;
-}
-
-- (BOOL)isEmojiButtonVisible {
-    return _emojiButton.currentImageIndex == 0;
-}
 
 - (YYEmoticonInputView *)emoticonInputView {
     if (!_emoticonInputView) {
