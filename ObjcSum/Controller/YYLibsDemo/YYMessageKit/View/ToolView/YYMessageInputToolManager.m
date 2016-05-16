@@ -51,7 +51,6 @@ static NSString * const KeyCell = @"KeyCell";
 - (void)dealloc {
     _inputToolBar = nil;
     [[YYKeyboardManager defaultManager] removeObserver:self];
-    [_inputToolBar.inputTextView removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize))];
 }
 
 #pragma mark - Public methods
@@ -73,12 +72,10 @@ static NSString * const KeyCell = @"KeyCell";
 #pragma mark YYMessageInputToolBarDelegate
 
 - (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar didChangeToState:(YYMessageInputToolBarState)state {
-    NSInteger offSet = _inputToolBar.height - HeightForInputToolBar;
-    if (state == YYMessageInputToolBarStateVoiceRecord) {
-        if (offSet != 0) {
-            [self toolBarHeightChangedWithOffset:offSet];
-        }
-    }
+}
+
+- (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar willTranslateToFrame:(CGRect)toFrame fromFrame:(CGRect)fromFrame {
+    [_delegate yyMessageInputToolManager:self willTranslateToFrame:toFrame fromFrame:fromFrame];
 }
 
 #pragma mark UITextViewDelegate
@@ -113,6 +110,7 @@ static NSString * const KeyCell = @"KeyCell";
     _inputToolBar.width = _inputToolBarContainerView.width;
     _inputToolBar.height = HeightForInputToolBar;
     _inputToolBar.bottom = _inputToolBarContainerView.height;
+    _inputToolBar.delegate = self;
     _inputToolBar.inputTextView.delegate = self;
     _inputToolBar.voiceRecordButton.completeBlock = ^(YYMessageAudioRecordButton *view, NSURL *voicePath) {
         [weakSelf.delegate yyMessageInputToolManager:weakSelf didSendMessage:voicePath messageType:YYMessageTypeAudio];
@@ -121,14 +119,6 @@ static NSString * const KeyCell = @"KeyCell";
     _height = HeightForInputToolBar;
 }
 
-- (void)toolBarHeightChangedWithOffset:(CGFloat)offSet {
-    CGRect originFrame = _inputToolBar.frame;
-    _inputToolBar.y -= offSet;
-    _inputToolBar.height += offSet;
-    [_delegate yyMessageInputToolManager:self willTranslateToFrame:_inputToolBar.frame fromFrame:originFrame];
-    //必须加上，否则，文字显示位置不对
-    [_inputToolBar.inputTextView layoutIfNeeded];
-}
 
 #pragma mark - Setters
 
@@ -137,7 +127,6 @@ static NSString * const KeyCell = @"KeyCell";
 - (YYMessageInputToolBar *)inputToolBar {
     if (!_inputToolBar) {
         YYMessageInputToolBar *toolBar = [YYMessageInputToolBar new];
-        toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         _inputToolBar = toolBar;
     }
     return _inputToolBar;

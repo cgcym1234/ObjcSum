@@ -14,7 +14,9 @@
 
 #pragma mark - Consts
 
-//static NSInteger const HeightForCommonCell = 49;
+//static NSInteger const TextViewMarginTopBottom = 8;
+static NSInteger const HeightDefault = 49;
+
 
 #pragma mark  Keys
 
@@ -51,6 +53,8 @@ static NSString * const ImageMore = @"ChatWindow_More";
     [super awakeFromNib];
     
     [self setTranslatesAutoresizingMaskIntoConstraints:YES];
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
+    
     self.backgroundColor = [UIColor whiteColor];
     
     [_inputAndVoiceSwitchButton setTitle:nil forState:UIControlStateNormal];
@@ -80,6 +84,12 @@ static NSString * const ImageMore = @"ChatWindow_More";
 }
 #pragma mark - Overrides
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview == nil) {
+        
+    }
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if (object == _inputTextView && [keyPath isEqualToString:NSStringFromSelector(@selector(contentSize))]) {
         CGSize oldContentSize = [change[NSKeyValueChangeOldKey] CGSizeValue];
@@ -87,7 +97,7 @@ static NSString * const ImageMore = @"ChatWindow_More";
         NSLog(@"oldContentSize=%@, newContentSize=%@", NSStringFromCGSize(oldContentSize), NSStringFromCGSize(newContentSize));
         if (!CGSizeEqualToSize(oldContentSize, newContentSize)) {
             CGFloat offSet = newContentSize.height - oldContentSize.height;
-//            [self toolBarHeightChangedWithOffset:offSet];
+            [self heightChangedWithOffset:offSet];
         }
     }
 }
@@ -137,8 +147,27 @@ static NSString * const ImageMore = @"ChatWindow_More";
 
 #pragma mark - Private methods
 
+- (void)heightChangedWithOffset:(CGFloat)offSet {
+    CGRect originFrame = self.frame;
+    self.top -= offSet;
+    self.height += offSet;
+    //必须加上，否则，文字显示位置不对
+    [_inputTextView layoutIfNeeded];
+    
+    [_delegate yyMessageInputToolBar:self willTranslateToFrame:self.frame fromFrame:originFrame];
+}
+
+- (void)switchFrameForStateVoiceAndText {
+    if (self.height != HeightDefault) {
+        [self heightChangedWithOffset:-(self.height - HeightDefault)];
+    } else if (_inputTextView.height != _inputTextView.contentSize.height) {
+        [self heightChangedWithOffset:_inputTextView.contentSize.height - _inputTextView.height];
+    }
+}
+
 - (IBAction)didClickedSwitchButton:(YYMultiImageButton *)switchButton {
     self.state = _state != YYMessageInputToolBarStateVoiceRecord ? YYMessageInputToolBarStateVoiceRecord :YYMessageInputToolBarStateInput;
+    [self switchFrameForStateVoiceAndText];
 }
 
 - (IBAction)didClickedEmojiButton:(UIButton *)sender {

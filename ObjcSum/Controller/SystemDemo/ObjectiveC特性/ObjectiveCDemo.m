@@ -9,7 +9,8 @@
 #import "ObjectiveCDemo.h"
 #import "ObjectiveCPointor.h"
 
-@interface ObjectiveCDemo ()
+@interface ObjectiveCDemo () {
+}
 
 @property (nonatomic, strong) NSMutableDictionary *dict;
 @end
@@ -125,7 +126,6 @@
             [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((int32_t)(i + 1))];
         }
     }
-    
     return [NSArray arrayWithArray:mutableArray];
 }
 

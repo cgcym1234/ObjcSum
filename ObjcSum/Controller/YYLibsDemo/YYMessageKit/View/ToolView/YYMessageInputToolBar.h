@@ -23,8 +23,7 @@ typedef NS_ENUM(NSUInteger, YYMessageInputToolBarState) {
 
 @required
 - (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar didChangeToState:(YYMessageInputToolBarState)state;
-- (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar heightWillChangeTo:(CGFloat)height;
-- (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar heightDidChangeTo:(CGFloat)height;
+- (void)yyMessageInputToolBar:(YYMessageInputToolBar *)inputToolBar willTranslateToFrame:(CGRect)toFrame fromFrame:(CGRect)fromFrame;
 
 @end
 

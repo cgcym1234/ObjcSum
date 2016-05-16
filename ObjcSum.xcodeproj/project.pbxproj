@@ -890,6 +890,8 @@
 		1FA4A5421BEC3B9D0076ECAA /* YYScrollSigmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A53F1BEC3B9D0076ECAA /* YYScrollSigmentCell.xib */; };
 		1FA4A5461BEC3BF20076ECAA /* YYScrollSigmentDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */; };
 		1FA4A5481BEC3C700076ECAA /* YYScrollSigmentDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */; };
+		1FAB22271CE089080085EAD3 /* block.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB22261CE089080085EAD3 /* block.c */; };
+		1FAB222A1CE08BE40085EAD3 /* block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB22291CE08BE40085EAD3 /* block.cpp */; };
 		1FAC3C151C0C485D0007520F /* NSData+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C141C0C485D0007520F /* NSData+YYExtension.m */; };
 		1FAC3C181C0D35B50007520F /* NSNumber+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC3C171C0D35B50007520F /* NSNumber+YYExtension.m */; };
 		1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
@@ -1796,6 +1798,8 @@
 		1FA4A5441BEC3BF20076ECAA /* YYScrollSigmentDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYScrollSigmentDemo.h; sourceTree = "<group>"; };
 		1FA4A5451BEC3BF20076ECAA /* YYScrollSigmentDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYScrollSigmentDemo.m; sourceTree = "<group>"; };
 		1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYScrollSigmentDemo.xib; sourceTree = "<group>"; };
+		1FAB22261CE089080085EAD3 /* block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = block.c; sourceTree = "<group>"; };
+		1FAB22291CE08BE40085EAD3 /* block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block.cpp; sourceTree = "<group>"; };
 		1FAC3C131C0C485D0007520F /* NSData+YYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YYExtension.h"; sourceTree = "<group>"; };
 		1FAC3C141C0C485D0007520F /* NSData+YYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYExtension.m"; sourceTree = "<group>"; };
 		1FAC3C161C0D35B50007520F /* NSNumber+YYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+YYExtension.h"; sourceTree = "<group>"; };
@@ -2240,14 +2244,16 @@
 			path = RunTrace;
 			sourceTree = "<group>";
 		};
-		1F2DA21C1C1968EB00126FB1 /* ObjectiveC特性 */ = {
+		1F2DA21C1C1968EB00126FB1 /* ObjectiveC相关 */ = {
 			isa = PBXGroup;
 			children = (
 				1F199A141C190981000F690C /* ObjectiveCDemo.h */,
 				1F199A151C190981000F690C /* ObjectiveCDemo.m */,
 				1F160BA61C2FC18800EDDAA4 /* ObjectiveCPointor.h */,
 				1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */,
+				1FAB22281CE0890C0085EAD3 /* block原理 */,
 			);
+			name = "ObjectiveC相关";
 			path = "ObjectiveC特性";
 			sourceTree = "<group>";
 		};
@@ -3558,7 +3564,7 @@
 			isa = PBXGroup;
 			children = (
 				1F617D201C0C2A1500492D9D /* Foundation相关测试 */,
-				1F2DA21C1C1968EB00126FB1 /* ObjectiveC特性 */,
+				1F2DA21C1C1968EB00126FB1 /* ObjectiveC相关 */,
 				1FDD23F81CA12AE500FEA94A /* RunLoop */,
 				1FAF6BA11CA4E07000554A2A /* RunTime */,
 				1F6788FF1CAB5F4200BF17DD /* TableViewDemo */,
@@ -3753,6 +3759,15 @@
 				1FA4A5471BEC3C700076ECAA /* YYScrollSigmentDemo.xib */,
 			);
 			path = "ScrollSigment滑动选择条";
+			sourceTree = "<group>";
+		};
+		1FAB22281CE0890C0085EAD3 /* block原理 */ = {
+			isa = PBXGroup;
+			children = (
+				1FAB22261CE089080085EAD3 /* block.c */,
+				1FAB22291CE08BE40085EAD3 /* block.cpp */,
+			);
+			name = "block原理";
 			sourceTree = "<group>";
 		};
 		1FAC3C3F1C0EC1ED0007520F /* YYCache */ = {
@@ -4703,6 +4718,7 @@
 				1F5A57A61C2BA091000E9E04 /* RACUnarySequence.m in Sources */,
 				1F5A57A01C2BA091000E9E04 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				1FAC3C151C0C485D0007520F /* NSData+YYExtension.m in Sources */,
+				1FAB222A1CE08BE40085EAD3 /* block.cpp in Sources */,
 				1F2899E71CC23F0E00988E82 /* YYAudioPlayer.m in Sources */,
 				1F45E3B11C1EC56D00938B2E /* UIBarButtonItem+YYExtension.m in Sources */,
 				1F2DA2651C197B1E00126FB1 /* UIScrollView+MJRefresh.m in Sources */,
@@ -4858,6 +4874,7 @@
 				1F160BAB1C2FC2A500EDDAA4 /* ObjectiveC_objc_msgSend.m in Sources */,
 				1F45E3D21C200F0200938B2E /* UINavigationBar+YYExtension.m in Sources */,
 				1FFC8DE61C50CEAE00B0C17A /* UIView+Frame.m in Sources */,
+				1FAB22271CE089080085EAD3 /* block.c in Sources */,
 				1F160BB41C30DFB500EDDAA4 /* ObjectiveC_Class.m in Sources */,
 				1F5A577E1C2BA091000E9E04 /* RACCompoundDisposableProvider.d in Sources */,
 				1F5A579E1C2BA091000E9E04 /* RACSubject.m in Sources */,
