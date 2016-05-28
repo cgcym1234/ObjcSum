@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2EB8B7BB73BEBD4627662F60C8B206536D16275",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "4f90ca0d-a7b3-4e53-92f0-428567e0be76++811" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E2EB8B7BB73BEBD4627662F60C8B206536D16275" : 0,
+    "4f90ca0d-a7b3-4e53-92f0-428567e0be76++811" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "15B6118C-43F2-4E5E-A4FD-3249894C50D1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E2EB8B7BB73BEBD4627662F60C8B206536D16275" : "ObjcSum\/",
+    "4f90ca0d-a7b3-4e53-92f0-428567e0be76++811" : "ObjcSum\/ObjcSum\/Service\/ThirdLibrary\/DNImagePicker\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ObjcSum",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ObjcSum.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/192.168.0.36",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4f90ca0d-a7b3-4e53-92f0-428567e0be76++811"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.coding.net:huansi\/ObjcSum.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2EB8B7BB73BEBD4627662F60C8B206536D16275"
+    }
+  ]
+}
