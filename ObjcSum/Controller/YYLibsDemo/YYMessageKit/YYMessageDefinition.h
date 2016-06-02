@@ -6,8 +6,11 @@
 //  Copyright © 2015年 sihuan. All rights reserved.
 //
 
+
 #ifndef YYMessageDefinition_h
 #define YYMessageDefinition_h
+
+#import <UIKit/UIKit.h>
 
 //直接从RGB取颜色16进制(RGB 0xFF00FF)
 #define ColorFromRGBHex(rgbValue) \
@@ -69,5 +72,22 @@ typedef NS_ENUM(NSInteger, YYMessageDeliveryState){
      */
     YYMessageDeliveryStateDelivered
 };
+
+#pragma mark - Delegates
+
+@protocol YYCellDelegate <NSObject>
+
+//@property (nonatomic, strong) id model;
+//@property (nonatomic, weak) UIView *containerView;
+
+@required
+- (void)renderWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inContainer:(UIView *)containerView;
+
+@optional
+- (void)cellDidTaped:(id<YYCellDelegate>)cell;
+
+@end
+
+
 
 #endif /* YYMessageDefinition_h */

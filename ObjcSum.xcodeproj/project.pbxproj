@@ -933,6 +933,7 @@
 		1FDD24051CA145AF00FEA94A /* Second.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD24041CA145AF00FEA94A /* Second.html */; };
 		1FDD24081CA1480C00FEA94A /* JSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD24071CA1480C00FEA94A /* JSObject.m */; };
 		1FDD240A1CA1482D00FEA94A /* JSPatchDemo.js in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD24091CA1482D00FEA94A /* JSPatchDemo.js */; };
+		1FE8C3B91CFD874C0034CD54 /* MainShiDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8C3B81CFD874C0034CD54 /* MainShiDemo.m */; };
 		1FEE31741C377CF900C52A85 /* YYMessageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */; };
 		1FEE31771C3783F100C52A85 /* YYMessageAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31761C3783F100C52A85 /* YYMessageAvatarView.m */; };
 		1FEE317A1C3791E300C52A85 /* YYMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE31791C3791E300C52A85 /* YYMessageBubbleView.m */; };
@@ -1877,6 +1878,8 @@
 		1FDD24061CA1480C00FEA94A /* JSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObject.h; sourceTree = "<group>"; };
 		1FDD24071CA1480C00FEA94A /* JSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObject.m; sourceTree = "<group>"; };
 		1FDD24091CA1482D00FEA94A /* JSPatchDemo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatchDemo.js; sourceTree = "<group>"; };
+		1FE8C3B71CFD874C0034CD54 /* MainShiDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainShiDemo.h; sourceTree = "<group>"; };
+		1FE8C3B81CFD874C0034CD54 /* MainShiDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainShiDemo.m; sourceTree = "<group>"; };
 		1FEE31721C377CF900C52A85 /* YYMessageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageCollectionView.h; sourceTree = "<group>"; };
 		1FEE31731C377CF900C52A85 /* YYMessageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageCollectionView.m; sourceTree = "<group>"; };
 		1FEE31751C3783F100C52A85 /* YYMessageAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageAvatarView.h; sourceTree = "<group>"; };
@@ -3245,6 +3248,7 @@
 				1F617D141C09C28600492D9D /* 颜色转换 */,
 				1F8B8A471BE2082300D81096 /* YYLibsDemo.h */,
 				1F8B8A481BE2082300D81096 /* YYLibsDemo.m */,
+				1FE8C3BA1CFD87500034CD54 /* mianshi */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -3924,6 +3928,15 @@
 			path = JSPatchDemo;
 			sourceTree = "<group>";
 		};
+		1FE8C3BA1CFD87500034CD54 /* mianshi */ = {
+			isa = PBXGroup;
+			children = (
+				1FE8C3B71CFD874C0034CD54 /* MainShiDemo.h */,
+				1FE8C3B81CFD874C0034CD54 /* MainShiDemo.m */,
+			);
+			name = mianshi;
+			sourceTree = "<group>";
+		};
 		1FEE31711C377CCE00C52A85 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4108,6 +4121,7 @@
 				TargetAttributes = {
 					1F8B89EF1BE2058600D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = R6XRM4JTNP;
 					};
 					1F8B8A081BE2058700D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -4848,6 +4862,7 @@
 				1F5A57751C2BA091000E9E04 /* NSString+RACSupport.m in Sources */,
 				1F5A576F1C2BA091000E9E04 /* NSObject+RACPropertySubscribing.m in Sources */,
 				1F45E3AE1C1EBFB100938B2E /* UIControl+YYExtension.m in Sources */,
+				1FE8C3B91CFD874C0034CD54 /* MainShiDemo.m in Sources */,
 				1F2DA2541C197B1E00126FB1 /* MJRefreshAutoFooter.m in Sources */,
 				1F5A57F91C2BA37E000E9E04 /* DNAssetsViewCell.m in Sources */,
 				1FDB243B1C34C6AE00FFCBA4 /* ProtocolAndCategory.m in Sources */,
@@ -5315,8 +5330,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5333,7 +5348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -5342,8 +5357,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sichuan Dingcheng Forensic Institution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5360,7 +5375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huan.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e4c90994-3c60-44b9-a418-b2d0fe50b2be";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

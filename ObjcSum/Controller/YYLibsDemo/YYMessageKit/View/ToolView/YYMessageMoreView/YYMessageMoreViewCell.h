@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYMessageDefinition.h"
 
-@interface YYMessageMoreViewCell : UICollectionViewCell
+@interface YYMessageMoreViewCellModel : NSObject
+
+@property (nonatomic, strong) NSString *imageName;
+@property (nonatomic, strong) NSString *text;
+
++ (instancetype)modelWithText:(NSString *)text imageName:(NSString *)imageName;
+
+@end
+
+@interface YYMessageMoreViewCell : UICollectionViewCell<YYCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;

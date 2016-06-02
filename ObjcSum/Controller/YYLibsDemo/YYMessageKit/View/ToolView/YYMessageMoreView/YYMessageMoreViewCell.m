@@ -8,10 +8,27 @@
 
 #import "YYMessageMoreViewCell.h"
 
+@implementation YYMessageMoreViewCellModel
+
++ (instancetype)modelWithText:(NSString *)text imageName:(NSString *)imageName {
+    YYMessageMoreViewCellModel *model = [YYMessageMoreViewCellModel new];
+    model.text = text;
+    model.imageName = imageName;
+    return model;
+}
+
+@end
+
 @implementation YYMessageMoreViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+}
+
+- (void)renderWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inContainer:(UIView *)containerView {
+    YYMessageMoreViewCellModel *item = model;
+    _label.text = item.text;
+    _imageView.image = [UIImage imageNamed:item.imageName];
 }
 
 @end

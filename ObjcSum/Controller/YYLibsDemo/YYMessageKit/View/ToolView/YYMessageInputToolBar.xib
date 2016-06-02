@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,7 +19,7 @@
                         <constraint firstAttribute="width" constant="32" id="qaI-dv-ZC8"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="切换">
+                    <state key="normal" image="ChatWindow_Speaking">
                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -27,14 +27,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-1c-p9C">
-                    <rect key="frame" x="337" y="9" width="32" height="32"/>
+                    <rect key="frame" x="337" y="8.5" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="49" id="9E2-4D-PUA"/>
                         <constraint firstAttribute="width" secondItem="Nbj-1c-p9C" secondAttribute="height" multiplier="1:1" id="f2k-Z6-vya"/>
                         <constraint firstAttribute="width" secondItem="Nbj-1c-p9C" secondAttribute="height" multiplier="1:1" id="hPt-0B-0AH"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="更多">
+                    <state key="normal" image="ChatWindow_More">
                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="default">
@@ -48,13 +48,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-Sc-vta" customClass="YYMultiImageButton">
-                    <rect key="frame" x="305" y="9" width="32" height="32"/>
+                    <rect key="frame" x="305" y="8.5" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mXS-Sc-vta" secondAttribute="height" multiplier="1:1" id="F6a-9e-VAt"/>
                         <constraint firstAttribute="width" constant="44" id="caK-HE-1aw"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="表情">
+                    <state key="normal" image="ChatWindow_Expression">
                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="default">
@@ -89,7 +89,6 @@
                 <constraint firstItem="PMD-6d-lzq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="5F3-CE-Q2W"/>
                 <constraint firstItem="lg7-7G-Qzp" firstAttribute="leading" secondItem="PMD-6d-lzq" secondAttribute="trailing" constant="6" id="BOT-Kq-VPb"/>
                 <constraint firstItem="mXS-Sc-vta" firstAttribute="centerY" secondItem="PMD-6d-lzq" secondAttribute="centerY" id="GF5-ub-Ygl"/>
-                <constraint firstItem="EK6-Jn-bpg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="IVM-6s-Ug8"/>
                 <constraint firstAttribute="trailing" secondItem="Nbj-1c-p9C" secondAttribute="trailing" constant="6" id="fG6-eY-qSh"/>
                 <constraint firstItem="mXS-Sc-vta" firstAttribute="leading" secondItem="lg7-7G-Qzp" secondAttribute="trailing" constant="6" id="fxF-Lp-eAy"/>
                 <constraint firstItem="lg7-7G-Qzp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="g9S-55-4ck"/>
@@ -102,11 +101,6 @@
                 <constraint firstItem="Nbj-1c-p9C" firstAttribute="centerY" secondItem="mXS-Sc-vta" secondAttribute="centerY" id="ybo-BU-Wyu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="IVM-6s-Ug8"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="emojiButton" destination="mXS-Sc-vta" id="ZH6-h3-ndJ"/>
                 <outlet property="emojiButtonWidth" destination="caK-HE-1aw" id="ctk-F9-Y47"/>
@@ -118,4 +112,9 @@
             <point key="canvasLocation" x="232.5" y="346"/>
         </view>
     </objects>
+    <resources>
+        <image name="ChatWindow_Expression" width="23" height="23"/>
+        <image name="ChatWindow_More" width="23" height="23"/>
+        <image name="ChatWindow_Speaking" width="23" height="23"/>
+    </resources>
 </document>

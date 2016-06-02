@@ -71,8 +71,8 @@ static NSString * const ImageMore = @"ChatWindow_More";
     _voiceRecordButton.layer.borderWidth = 0.5;
     _voiceRecordButton.layer.cornerRadius = 6;
     [_voiceRecordButton setTitle:@"按住说话" forState:UIControlStateNormal];
-    self.state = YYMessageInputToolBarStateInput;
     [_inputTextView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    _state = YYMessageInputToolBarStateInput;
 }
 
 - (instancetype)init {
@@ -181,6 +181,10 @@ static NSString * const ImageMore = @"ChatWindow_More";
     self.state = _state != YYMessageInputToolBarStateMore ? YYMessageInputToolBarStateMore :YYMessageInputToolBarStateInput;
 }
 
+- (void)setTextViewFirstResponder:(BOOL)isFirstResponder {
+    isFirstResponder ? [_inputTextView becomeFirstResponder] : [_inputTextView resignFirstResponder];
+}
+
 #pragma mark - Setters
 
 - (void)setState:(YYMessageInputToolBarState)state {
@@ -219,11 +223,7 @@ static NSString * const ImageMore = @"ChatWindow_More";
     _inputTextView.hidden = textInputViewHidden;
     _voiceRecordButton.hidden = !textInputViewHidden;
     
-    if (textInputViewHidden) {
-        [_inputTextView resignFirstResponder];
-    } else {
-        [_inputTextView becomeFirstResponder];
-    }
+    [self setTextViewFirstResponder:!textInputViewHidden];
     
     [_delegate yyMessageInputToolBar:self didChangeToState:_state];
 }
