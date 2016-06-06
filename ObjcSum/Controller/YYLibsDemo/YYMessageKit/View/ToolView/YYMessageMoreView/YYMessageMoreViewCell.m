@@ -25,10 +25,19 @@
     // Initialization code
 }
 
-- (void)renderWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inContainer:(UIView *)containerView {
++ (NSString *)identifier {
+    return NSStringFromClass(self.class);
+}
+
++ (NSString *)xibName {
+    return NSStringFromClass(self.class);
+}
+
+- (void)renderWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inView:(YYHorizontalScrollView *)view {
     YYMessageMoreViewCellModel *item = model;
     _label.text = item.text;
     _imageView.image = [UIImage imageNamed:item.imageName];
 }
+
 
 @end

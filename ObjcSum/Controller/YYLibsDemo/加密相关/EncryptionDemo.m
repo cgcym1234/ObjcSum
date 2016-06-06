@@ -9,11 +9,14 @@
 #import "EncryptionDemo.h"
 #import "AESenAndDe.h"
 #import "YYBaseHttp.h"
+#import "YYMessageMoreView.h"
 
 #define UrlRoot       @"http://kuaikou.jios.org:7777/justice"
 #define UrlTasksTodo             UrlRoot@"/mobile/task/todo"
 
 @interface EncryptionDemo ()
+
+@property (nonatomic, strong) YYMessageMoreView *moreView;
 
 @end
 
@@ -33,6 +36,7 @@
         }
         NSLog(@"%@", responseData);
     }];
+    [self.view addSubview:self.moreView];
 }
 
 //伪造响应
@@ -72,6 +76,15 @@
 #pragma mark - AES/ECB/PKCS5Padding加密以后再 base64 转成字符串
 - (NSString*)stringFromAESEncrypt:(NSString *)str{
     return [AESenAndDe En_AESandBase64EnToString:str privateKey:PrivateKey];
+}
+
+- (YYMessageMoreView *)moreView {
+    if (!_moreView) {
+        YYMessageMoreView *moreView = [YYMessageMoreView new];
+        //        moreView.delegate = self;
+        _moreView = moreView;
+    }
+    return _moreView;
 }
 
 @end

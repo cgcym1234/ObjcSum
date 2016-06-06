@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYHorizontalScrollView.h"
+@interface YYMessageMoreView : UIView
 
-@interface YYMessageMoreView : UICollectionView
+
 
 @end

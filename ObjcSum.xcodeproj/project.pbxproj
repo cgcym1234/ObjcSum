@@ -65,6 +65,7 @@
 		1F1999F81C16D5CE000F690C /* YYCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1999F71C16D5CE000F690C /* YYCacheTest.m */; };
 		1F199A021C17F346000F690C /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F199A001C17F346000F690C /* sqlite3.c */; };
 		1F199A161C190981000F690C /* ObjectiveCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F199A151C190981000F690C /* ObjectiveCDemo.m */; };
+		1F1FDD981D0178CE00D0C1E6 /* YYHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1FDD971D0178CE00D0C1E6 /* YYHorizontalScrollView.m */; };
 		1F2899E41CC23EFC00988E82 /* YYAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2899E31CC23EFC00988E82 /* YYAudioRecorder.m */; };
 		1F2899E71CC23F0E00988E82 /* YYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2899E61CC23F0E00988E82 /* YYAudioPlayer.m */; };
 		1F2899F71CC2814F00988E82 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F2899EB1CC2814F00988E82 /* amrFileCodec.mm */; };
@@ -785,6 +786,7 @@
 		1F6872C81C27EC59008BC6BE /* ic_radiobutton_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872C71C27EC59008BC6BE /* ic_radiobutton_checked@2x.png */; };
 		1F6872CA1C27EC63008BC6BE /* ic_radiobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6872C91C27EC63008BC6BE /* ic_radiobutton@2x.png */; };
 		1F6A0E191C02E8D20081BC18 /* SqlliteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A0E181C02E8D20081BC18 /* SqlliteDemo.m */; };
+		1F6FF0D01D02CD17008C33E8 /* UITabBarController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FF0CF1D02CD17008C33E8 /* UITabBarController+Extension.m */; };
 		1F6FF3B01C2B949000468F29 /* MVVMDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FF3AF1C2B949000468F29 /* MVVMDemo.m */; };
 		1F76E8361C154ECD005E43E9 /* LoginDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8351C154ECD005E43E9 /* LoginDemo.m */; };
 		1F76E8471C1551F3005E43E9 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76E8461C1551F3005E43E9 /* HttpManager.m */; };
@@ -1090,6 +1092,9 @@
 		1F199A011C17F346000F690C /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 		1F199A141C190981000F690C /* ObjectiveCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCDemo.h; sourceTree = "<group>"; };
 		1F199A151C190981000F690C /* ObjectiveCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCDemo.m; sourceTree = "<group>"; };
+		1F1FDD961D0178CE00D0C1E6 /* YYHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHorizontalScrollView.h; sourceTree = "<group>"; };
+		1F1FDD971D0178CE00D0C1E6 /* YYHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHorizontalScrollView.m; sourceTree = "<group>"; };
+		1F1FDD9A1D0188C300D0C1E6 /* YYHorizontalScrollViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHorizontalScrollViewCell.h; sourceTree = "<group>"; };
 		1F2899E21CC23EFC00988E82 /* YYAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAudioRecorder.h; sourceTree = "<group>"; };
 		1F2899E31CC23EFC00988E82 /* YYAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAudioRecorder.m; sourceTree = "<group>"; };
 		1F2899E51CC23F0E00988E82 /* YYAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAudioPlayer.h; sourceTree = "<group>"; };
@@ -1591,6 +1596,8 @@
 		1F6872C91C27EC63008BC6BE /* ic_radiobutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_radiobutton@2x.png"; sourceTree = "<group>"; };
 		1F6A0E171C02E8D20081BC18 /* SqlliteDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlliteDemo.h; sourceTree = "<group>"; };
 		1F6A0E181C02E8D20081BC18 /* SqlliteDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlliteDemo.m; sourceTree = "<group>"; };
+		1F6FF0CE1D02CD17008C33E8 /* UITabBarController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Extension.h"; sourceTree = "<group>"; };
+		1F6FF0CF1D02CD17008C33E8 /* UITabBarController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Extension.m"; sourceTree = "<group>"; };
 		1F6FF3AE1C2B949000468F29 /* MVVMDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMDemo.h; sourceTree = "<group>"; };
 		1F6FF3AF1C2B949000468F29 /* MVVMDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMDemo.m; sourceTree = "<group>"; };
 		1F76E8341C154ECD005E43E9 /* LoginDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginDemo.h; sourceTree = "<group>"; };
@@ -2127,6 +2134,16 @@
 				1F1999F71C16D5CE000F690C /* YYCacheTest.m */,
 			);
 			path = YYCacheTest;
+			sourceTree = "<group>";
+		};
+		1F1FDD991D0178DB00D0C1E6 /* YYHorizontalScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				1F1FDD961D0178CE00D0C1E6 /* YYHorizontalScrollView.h */,
+				1F1FDD971D0178CE00D0C1E6 /* YYHorizontalScrollView.m */,
+				1F1FDD9A1D0188C300D0C1E6 /* YYHorizontalScrollViewCell.h */,
+			);
+			name = YYHorizontalScrollView;
 			sourceTree = "<group>";
 		};
 		1F2899E81CC2814E00988E82 /* VoiceConvert */ = {
@@ -3032,6 +3049,15 @@
 			path = YYMultiSelectTable;
 			sourceTree = "<group>";
 		};
+		1F6FF0D11D02CD1C008C33E8 /* UITabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1F6FF0CE1D02CD17008C33E8 /* UITabBarController+Extension.h */,
+				1F6FF0CF1D02CD17008C33E8 /* UITabBarController+Extension.m */,
+			);
+			name = UITabBarController;
+			sourceTree = "<group>";
+		};
 		1F6FF3B11C2B94A500468F29 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -3368,6 +3394,7 @@
 				1F8B8A791BE20B0700D81096 /* UIViewController */,
 				1F2DA2671C197B8300126FB1 /* UITableView+FDTemplateLayoutCell.h */,
 				1F2DA2681C197B8300126FB1 /* UITableView+FDTemplateLayoutCell.m */,
+				1F6FF0D11D02CD1C008C33E8 /* UITabBarController */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -3551,6 +3578,7 @@
 				1FD90EDB1C2AA2A20020EAED /* YYSimpleAlertTable */,
 				1F8B8A8C1BE20D1500D81096 /* YYTextView */,
 				1F6872AB1C27CB1C008BC6BE /* YYTextViewTimePicker */,
+				1F1FDD991D0178DB00D0C1E6 /* YYHorizontalScrollView */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -4976,6 +5004,7 @@
 				1FD90ECA1C2A2F080020EAED /* YYDim.m in Sources */,
 				1F48F2461C61993B00416803 /* HitTestView.m in Sources */,
 				1FA4A5411BEC3B9D0076ECAA /* YYScrollSigmentCell.m in Sources */,
+				1F1FDD981D0178CE00D0C1E6 /* YYHorizontalScrollView.m in Sources */,
 				1F2BE06A1C4F8FF900E71E53 /* GestureDemo.m in Sources */,
 				1F45E3911C1E57DF00938B2E /* AppManager.m in Sources */,
 				1FDB55191BF62BD70048E1F7 /* UISearchDemo.m in Sources */,
@@ -5036,6 +5065,7 @@
 				1F87A2791CA266940001519E /* YYSegmentedControlCell.m in Sources */,
 				1F01EB151BFE1997009919F2 /* FMDatabaseAdditions.m in Sources */,
 				1F5A57791C2BA091000E9E04 /* RACBehaviorSubject.m in Sources */,
+				1F6FF0D01D02CD17008C33E8 /* UITabBarController+Extension.m in Sources */,
 				1F2F69131C9A44E500A3F432 /* YYEmoticonInputViewCell.m in Sources */,
 				1F45E3C91C1FFBD600938B2E /* UIApplication+YYExtension.m in Sources */,
 				1F2BE0761C507DB900E71E53 /* RunTraceHelp.m in Sources */,

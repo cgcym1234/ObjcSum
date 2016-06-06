@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YYMessageDefinition.h"
+#import "YYHorizontalScrollViewCell.h"
 
 @interface YYMessageMoreViewCellModel : NSObject
 
@@ -18,7 +18,7 @@
 
 @end
 
-@interface YYMessageMoreViewCell : UICollectionViewCell<YYCellDelegate>
+@interface YYMessageMoreViewCell : UICollectionViewCell<YYHorizontalScrollViewCell>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;

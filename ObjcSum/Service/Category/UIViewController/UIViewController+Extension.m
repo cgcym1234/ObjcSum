@@ -16,6 +16,13 @@
 @end;
 
 static char KeyBarThemeType;
+
+@interface UIViewController ()
+
+@property (nonatomic, assign) NSInteger buttonCount;
+
+@end
+
 @implementation UIViewController (Extension)
 
 - (void)__btnClick:(YYButton *)btn {
@@ -25,11 +32,13 @@ static char KeyBarThemeType;
 }
 
 #pragma mark - 添加一个button
+
 - (UIButton *)addButtonWithTitle:(NSString *)title action:(void (^)(UIButton *btn)) action {
     YYButton *btn = [YYButton buttonWithType:UIButtonTypeSystem];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(__btnClick:) forControlEvents:UIControlEventTouchUpInside];
     btn.object = action;
+    btn.frame = CGRectMake(10, 40*self.buttonCount++, 200, 40);
     [self.view addSubview:btn];
     return btn;
 }

@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.dataArr = @[
                      [[LibDemoInfo alloc] initWithTitle:@"TableViewDemo" desc:@"TableView相关" controllerName:@"TableViewDemo"],
                      

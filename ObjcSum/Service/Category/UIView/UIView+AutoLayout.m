@@ -190,7 +190,13 @@
 }
 
 
-
+#pragma mark - 控件和父控件保持一样的大小与位置
+- (void)layoutEqualParent {
+    [self layoutAlignParentTop:0];
+    [self layoutAlignParentBottom:0];
+    [self layoutAlignParentLeft:0];
+    [self layoutAlignParentRight:0];
+}
 
 #pragma mark - 用于调整2个同级或父子view之间的位置
 - (void)setAttribute:(NSLayoutAttribute)attr1 withItem:(id)view2 attribute:(NSLayoutAttribute)attr2 constant:(CGFloat)c
@@ -245,4 +251,31 @@
     return [self setAttribute:NSLayoutAttributeRight withItem:view attribute:NSLayoutAttributeRight constant:0];
 }
 
+
+
+
+#pragma mark - 设置Autoresizing
+
+- (void)setAutoresizingFillSuperView {
+    self.translatesAutoresizingMaskIntoConstraints = YES;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

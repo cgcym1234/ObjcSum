@@ -8,20 +8,16 @@
 
 #import "YYMessageMoreView.h"
 #import "YYMessageMoreViewCell.h"
-
-
+#import "YYMessageDefinition.h"
+#import "UIView+AutoLayout.h"
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
-
-static NSString * const KeyCell = @"YYMessageMoreViewCell";
+static NSString * const CellIdentifierDefault = @"YYMessageMoreViewCell";
 
 @interface YYMessageMoreView ()
-<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
+@property (nonatomic, strong) YYHorizontalScrollView *moreView;
 
 @end
 
@@ -30,34 +26,25 @@ static NSString * const KeyCell = @"YYMessageMoreViewCell";
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setContext];
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self setupUI];
     }
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        [self setContext];
-    }
-    return self;
-}
-
-
-- (void)setContext {
-    _dataArray = @[
-                   [YYMessageMoreViewCellModel modelWithText:@"照片" imageName:@"ChatWindow_Photo"],
-                   [YYMessageMoreViewCellModel modelWithText:@"拍照" imageName:@"ChatWindow_Camera"],
-                   ];
+- (void)setupUI {
+    [self addSubview:self.moreView];
+    self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, YYInputViewHeight);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_moreView reloadData];
+    });
 }
 
 
 #pragma mark - Override
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-}
 
 #pragma mark - Private
 
@@ -67,25 +54,27 @@ static NSString * const KeyCell = @"YYMessageMoreViewCell";
 
 #pragma mark - Delegate
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _dataArray.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell<YYCellDelegate> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KeyCell forIndexPath:indexPath];
-    [cell renderWithModel:_dataArray[indexPath.item] atIndexPath:indexPath inContainer:collectionView];
-    return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
 
 #pragma mark - Setter
 
 
 #pragma mark - Getter
 
+- (YYHorizontalScrollView *)moreView {
+    if (!_moreView) {
+        YYHorizontalScrollView *moreView = [YYHorizontalScrollView new];
+        
+        moreView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, YYInputViewHeight);
+        moreView.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width/4, 100);
+        [moreView registerClass:[YYMessageMoreViewCell class]];
+        moreView.dataArray = @[
+                               [YYMessageMoreViewCellModel modelWithText:@"照片" imageName:@"ChatWindow_Photo"],
+                               [YYMessageMoreViewCellModel modelWithText:@"拍照" imageName:@"ChatWindow_Camera"],
+                               ];
+        _moreView = moreView;
+    }
+    return _moreView;
+}
 
 
 @end

@@ -11,6 +11,8 @@
 #import "YYEmoticonInputView.h"
 #import "UIButton+YYMessage.h"
 #import "UIView+YYMessage.h"
+#import "YYMessageDefinition.h"
+#import "YYMessageMoreView.h"
 
 #pragma mark - Consts
 
@@ -41,6 +43,7 @@ static NSString * const ImageMore = @"ChatWindow_More";
 @property (assign, nonatomic) YYMessageInputToolBarState state;
 
 @property (nonatomic, strong) YYEmoticonInputView *emoticonInputView;
+@property (nonatomic, strong) YYMessageMoreView *moreView;
 
 @end
 
@@ -178,7 +181,10 @@ static NSString * const ImageMore = @"ChatWindow_More";
 }
 
 - (IBAction)didClickedMoreButton:(UIButton *)sender {
-    self.state = _state != YYMessageInputToolBarStateMore ? YYMessageInputToolBarStateMore :YYMessageInputToolBarStateInput;
+    YYMessageInputToolBarState currentState = _state != YYMessageInputToolBarStateMore ? YYMessageInputToolBarStateMore :YYMessageInputToolBarStateInput;
+    _inputTextView.inputView = currentState != YYMessageInputToolBarStateMore ? nil : self.moreView;
+    [_inputTextView reloadInputViews];
+    self.state = currentState;
 }
 
 - (void)setTextViewFirstResponder:(BOOL)isFirstResponder {
@@ -233,11 +239,20 @@ static NSString * const ImageMore = @"ChatWindow_More";
 - (YYEmoticonInputView *)emoticonInputView {
     if (!_emoticonInputView) {
         YYEmoticonInputView *emoticonInputView = [YYEmoticonInputView instance];
-        emoticonInputView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
+        emoticonInputView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, YYInputViewHeight);
         emoticonInputView.delegate = self;
         _emoticonInputView = emoticonInputView;
     }
     return _emoticonInputView;
+}
+
+- (YYMessageMoreView *)moreView {
+    if (!_moreView) {
+        YYMessageMoreView *moreView = [YYMessageMoreView new];
+//        moreView.delegate = self;
+        _moreView = moreView;
+    }
+    return _moreView;
 }
 
 

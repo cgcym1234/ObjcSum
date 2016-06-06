@@ -42,6 +42,7 @@
 - (void)layoutMaxWidth:(CGFloat)offset;
 
 
+- (void)layoutEqualParent;
 #pragma mark - 当前控件位于父控件的横向中间位置（水平方向上的中间）
 - (void)layoutCenterHorizontal;
 #pragma mark - 当前控件位于父控件的纵横向中间位置（垂直方向上的中间）
@@ -69,5 +70,12 @@
 - (void)layoutAlignLeft:(UIView *)view;
 #pragma mark - 将该控件的右边缘与给定ID控件的右边缘对齐
 - (void)layoutAlignRight:(UIView *)view;
+
+
+#pragma mark - 设置Autoresizing
+
+//保证和superView同样大小
+- (void)setAutoresizingFillSuperView;
+
 
 @end

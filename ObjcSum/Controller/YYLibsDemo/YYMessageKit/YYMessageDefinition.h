@@ -21,6 +21,8 @@
 
 #pragma mark - 一些类型和选项定义
 
+#define YYInputViewHeight (200)
+
 /**
  *  消息内容类型枚举
  */

@@ -84,7 +84,7 @@
 @property (nonatomic, assign) CGSize attachmentImageSizeMax;
 @property (nonatomic, assign) CGSize attachmentImageSizeMin;
 
-//用于计算文本大小
+//用于计算文本大小的lable
 @property (nonatomic, strong) YYMessageTextLabel *messageTextLabel;
 
 + (instancetype)defaultConfig;

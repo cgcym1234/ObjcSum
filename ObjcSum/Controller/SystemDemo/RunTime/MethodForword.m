@@ -110,6 +110,7 @@
     return [super resolveInstanceMethod:sel];
 }
 
+
 /**
  *1.  如果未实现的方法不是实例方法而是类方法,将调用该方法
  *
@@ -136,6 +137,8 @@
     NSLog(@"forwardingTargetForSelector");
     return nil;
 }
+
+
 
 #pragma mark 完整消息转发
 /**
