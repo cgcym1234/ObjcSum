@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArr = @[
+                   [[LibDemoInfo alloc] initWithTitle:@"GoodsDetailContainer" desc:@"仿淘宝商品详情" controllerName:@"GoodsDetailContainer"],
+                   
                    [[LibDemoInfo alloc] initWithTitle:@"YYMessageViewController" desc:@"聊天界面demo" controllerName:@"YYMessageViewController"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"MVVMDemo" desc:@"随手记MVVM版" controllerName:@"MVVMDemo"],
