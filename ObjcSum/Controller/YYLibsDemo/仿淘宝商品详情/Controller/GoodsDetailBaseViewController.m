@@ -127,6 +127,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id<GoodsDetailModel> model = _dataArray[indexPath.row];
     UITableViewCell<GoodsDetailCellDelegate> *cell = [tableView dequeueReusableCellWithIdentifier:model.cellIdentifier forIndexPath:indexPath];
+    
+    if ([cell respondsToSelector:@selector(delegate)]) {
+        cell.delegate = self;
+    }
     [cell updateWithModel:model atIndexPath:indexPath inView:tableView];
     return cell;
 }

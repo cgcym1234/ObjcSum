@@ -21,6 +21,9 @@
 
 @protocol GoodsDetailCellDelegate <NSObject>
 
+@optional
+@property (nonatomic, weak) id delegate;
+
 @required
 - (void)updateWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inView:(UIView *)view;
 
