@@ -13,7 +13,7 @@
 @interface YYRefresh ()
 
 @property (nonatomic, weak) UIScrollView *scrollView;
-@property (nonatomic, strong) YYRefreshView *refreshView;
+@property (nonatomic, strong) UIView<YYRefreshView> *refreshView;
 
 /** 记录scrollView刚开始的inset */
 @property (nonatomic, assign) UIEdgeInsets scrollViewOriginalInset;
@@ -32,21 +32,24 @@
 }
 
 - (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config {
+    return [self initWithScrollView:scroll position:position action:actionHandler config:nil customView:nil];
+}
+
+- (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config customView:(UIView<YYRefreshView> *)refreshView {
     if (self = [super init]) {
-        self.position = position;
-        self.actionHandler = actionHandler;
-        self.config = config ?: [YYRefreshConfig defaultConfig];
+        _position = position;
+        _actionHandler = actionHandler;
+        _config = config ?: [YYRefreshConfig defaultConfig];
+        _refreshView = refreshView ?: [[YYRefreshView alloc] initWithConfig:_config postion:_position];
+        _state = YYRefreshStateIdle;
         [self setContext];
     }
     return self;
 }
 
 - (void)setContext {
-    _refreshView = [[YYRefreshView alloc] initWithConfig:_config postion:_position];
     [self addSubview:_refreshView];
-    
     self.backgroundColor = [UIColor orangeColor];
-    self.state = YYRefreshStateIdle;
 }
 
 #pragma mark - Override
@@ -87,6 +90,8 @@
     [self updateLocation];
 }
 
+#pragma mark - Location
+
 - (void)updateLocation {
     CGFloat x = 0;
     CGFloat y = 0;
@@ -102,7 +107,7 @@
             break;
         }
         case YYRefreshPositionBottom: {
-            y = _scrollView.contentSize.height;
+            y = MAX(_scrollView.contentSize.height, CGRectGetHeight(_scrollView.bounds));
             break;
         }
         case YYRefreshPositionRight: {
@@ -111,7 +116,7 @@
              
              旋转选择的是左上角那个点，所以这里x的要额外加refreshView的高度
              */
-            x = _scrollView.contentSize.width + YYRefreshViewHeight;
+            x = MAX(_scrollView.contentSize.width, CGRectGetWidth(_scrollView.bounds)) + YYRefreshViewHeight;
             width = CGRectGetHeight(_scrollView.bounds);
             break;
         }
@@ -132,9 +137,16 @@
     CGSize oldContentSize = [change[NSKeyValueChangeOldKey] CGSizeValue];
     CGSize newContentSize = [change[NSKeyValueChangeNewKey] CGSizeValue];
     CGPoint center = self.center;
-    if (self.position == YYRefreshPositionBottom)
+    
+    /**
+     这里做了点限制，防止refreshView 因为newContentSize太小，而显示到可见区域
+     */
+    if (self.position == YYRefreshPositionBottom) {
+        newContentSize.height = MAX(_scrollView.contentSize.height, CGRectGetHeight(_scrollView.bounds));
         center.y += newContentSize.height - oldContentSize.height;
+    }
     else if (self.position == YYRefreshPositionRight) {
+        newContentSize.width = MAX(_scrollView.contentSize.width, CGRectGetWidth(_scrollView.bounds));
         center.x += newContentSize.width - oldContentSize.width;
     }
     self.center = center;
@@ -152,7 +164,6 @@
     
     view.center = CGPointMake (view.center.x - transition.x, view.center.y - transition.y);
 }
-
 
 #pragma mark - KVO
 
@@ -202,6 +213,10 @@
             self.state = YYRefreshStateIdle;
         }];
     }
+}
+
+- (void)setCustomRefreshView:(UIView<YYRefreshView> *)view {
+    _refreshView = view;
 }
 
 #pragma mark - Override

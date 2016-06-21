@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YYRefreshConfig.h"
 
 typedef NS_ENUM(NSUInteger, YYRefreshPosition) {
     YYRefreshPositionTop,
@@ -15,7 +15,6 @@ typedef NS_ENUM(NSUInteger, YYRefreshPosition) {
     YYRefreshPositionBottom,
     YYRefreshPositionRight
 };
-
 
 /** 刷新控件的状态 */
 typedef NS_ENUM(NSUInteger, YYRefreshState) {
@@ -26,6 +25,17 @@ typedef NS_ENUM(NSUInteger, YYRefreshState) {
     /** 正在刷新中的状态 */
     YYRefreshStateRefreshing,
 };
+
+
+//自定义RefreshView必须实现的协议
+@protocol YYRefreshView <NSObject>
+
+@required
+- (void)showIdleWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
+- (void)showRedayWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
+- (void)showRefreshingWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
+
+@end
 
 #define DegreesToRadians(degrees) ((degrees * M_PI) / 180.0)
 

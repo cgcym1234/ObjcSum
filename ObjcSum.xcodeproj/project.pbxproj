@@ -2220,7 +2220,7 @@
 			path = YYHorizontalScrollView;
 			sourceTree = "<group>";
 		};
-		1F20257E1D13CB03006663BC /* YYPullRefresh */ = {
+		1F20257E1D13CB03006663BC /* YYRefresh */ = {
 			isa = PBXGroup;
 			children = (
 				1F5ED10D1D159DAD007F1290 /* UIScrollView+YYRefresh.h */,
@@ -2234,6 +2234,7 @@
 				1FFB431F1D17F59D00E04CF1 /* YYRefreshConfig.h */,
 				1FFB43201D17F59D00E04CF1 /* YYRefreshConfig.m */,
 			);
+			name = YYRefresh;
 			path = YYPullRefresh;
 			sourceTree = "<group>";
 		};
@@ -3744,7 +3745,7 @@
 				1F6872C61C27E886008BC6BE /* YYMultiSelectTable */,
 				1FDC2CCC1C212CCB000BF77F /* YYNoDataView */,
 				1F76E8731C167E5C005E43E9 /* YYPageController */,
-				1F20257E1D13CB03006663BC /* YYPullRefresh */,
+				1F20257E1D13CB03006663BC /* YYRefresh */,
 				1FA4A53A1BEC3B9D0076ECAA /* YYScrollSigment */,
 				1FDB551E1BF62C0E0048E1F7 /* YYSearchBar */,
 				1F2F69161C9A544800A3F432 /* YYSegmentedControl */,

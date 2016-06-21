@@ -19,8 +19,15 @@
 - (void)beginRefreshing;
 - (void)endRefreshing;
 
+/**
+ 自定义RefreshView
+ */
+- (void)setCustomRefreshView:(UIView<YYRefreshView> *)view;
+
 - (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler;
 
 - (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config;
+
+- (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config customView:(UIView<YYRefreshView> *)refreshView;
 
 @end

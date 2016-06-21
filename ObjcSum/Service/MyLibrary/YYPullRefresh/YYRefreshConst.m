@@ -8,8 +8,8 @@
 
 #import "YYRefreshConst.h"
 
-const CGFloat YYRefreshViewHeight = 54.0;
-const CGFloat YYRefreshReadyOffset = 80.0;
+const CGFloat YYRefreshViewHeight = 50.0;
+const CGFloat YYRefreshReadyOffset = 50.0;
 const CGFloat YYRefreshFastAnimationDuration = 0.25;
 const CGFloat YYRefreshSlowAnimationDuration = 0.4;
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//可以根据需要自行拓展
 @interface YYRefreshConfig : NSObject
 
 @property (nonatomic, strong) NSString *textIdle;

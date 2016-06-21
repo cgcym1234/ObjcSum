@@ -10,7 +10,7 @@
 #import "YYRefreshConfig.h"
 #import "YYRefreshConst.h"
 
-@interface YYRefreshView : UIView
+@interface YYRefreshView : UIView<YYRefreshView>
 
 - (instancetype)initWithConfig:(YYRefreshConfig *)config postion:(YYRefreshPosition)postion;
 

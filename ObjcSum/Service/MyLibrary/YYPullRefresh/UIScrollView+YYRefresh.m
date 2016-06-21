@@ -25,7 +25,11 @@ static char kYYRefreash;
 }
 
 - (YYRefresh *)addYYRefreshAtPosition:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config {
-    YYRefresh *refresh = [[YYRefresh alloc] initWithScrollView:self position:position action:actionHandler config:(YYRefreshConfig *)config];
+    return [self addYYRefreshAtPosition:position action:actionHandler config:nil customView:nil];
+}
+
+- (YYRefresh *)addYYRefreshAtPosition:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config customView:(UIView<YYRefreshView> *)refreshView {
+    YYRefresh *refresh = [[YYRefresh alloc] initWithScrollView:self position:position action:actionHandler config:config customView:nil];
     [self addSubview:refresh];
     return refresh;
 }
