@@ -11,10 +11,6 @@
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
-
-static NSString * const KeyCell = @"KeyCell";
-
 @interface YYRefreshView ()
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -27,15 +23,19 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setContext];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+- (instancetype)initWithConfig:(YYRefreshConfig *)config postion:(YYRefreshPosition)postion {
+    if (self = [super init]) {
+        switch (postion) {
+            case YYRefreshPositionBottom:
+            case YYRefreshPositionLeft:
+                self.imageView.image = [UIImage imageNamed:YYRefreshImageUp];
+                break;
+            case YYRefreshPositionTop:
+            case YYRefreshPositionRight:
+                self.imageView.image = [UIImage imageNamed:YYRefreshImageDown];
+                break;
+        }
+        self.textLabel.text = config.textIdle;
         [self setContext];
     }
     return self;
@@ -51,12 +51,17 @@ static NSString * const KeyCell = @"KeyCell";
 #pragma mark - Override
 
 - (void)layoutSubviews {
+    [self updateLocation];
+    [super layoutSubviews];
+}
+
+- (void)updateLocation {
+    [_textLabel sizeToFit];
     CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     _textLabel.center = center;
     
     center.x -= CGRectGetMidX(_textLabel.bounds) + CGRectGetMidX(_imageView.bounds) + 5;
     _imageView.center = center;
-    [super layoutSubviews];
 }
 
 #pragma mark - Private
@@ -65,10 +70,8 @@ static NSString * const KeyCell = @"KeyCell";
 #pragma mark - Public
 
 - (void)showIdleWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
-    
     void (^action)(void) = ^{
         _imageView.transform = CGAffineTransformIdentity;
-        _textLabel.text = config.textIdle;
     };
     
     if (animated) {
@@ -76,12 +79,14 @@ static NSString * const KeyCell = @"KeyCell";
     } else {
         action();
     }
+    
+    _textLabel.text = config.textIdle;
+    [self updateLocation];
 }
 - (void)showRedayWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
     
     void (^action)(void) = ^{
         _imageView.transform = CGAffineTransformRotate(_imageView.transform, DegreesToRadians(180.1));
-        _textLabel.text = config.textReady;
     };
     
     if (animated) {
@@ -89,18 +94,22 @@ static NSString * const KeyCell = @"KeyCell";
     } else {
         action();
     }
+    _textLabel.text = config.textReady;
+    [self updateLocation];
 }
 
 - (void)showRefreshingWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
-    void (^action)(void) = ^{
-        _textLabel.text = config.textRefreshing;
-    };
-    
-    if (animated) {
-        [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:action completion:nil];
-    } else {
-        action();
-    }
+//    void (^action)(void) = ^{
+//        _textLabel.text = config.textRefreshing;
+//    };
+//    
+//    if (animated) {
+//        [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:action completion:nil];
+//    } else {
+//        action();
+//    }
+    _textLabel.text = config.textRefreshing;
+    [self updateLocation];
 }
 
 #pragma mark - Delegate
@@ -117,10 +126,8 @@ static NSString * const KeyCell = @"KeyCell";
         label.font = YYRefreshLabelFont;
         label.textColor = YYRefreshLabelTextColor;
         label.textAlignment = NSTextAlignmentCenter;
-        label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         label.backgroundColor = [UIColor clearColor];
         label.text = YYRefreshIdleText;
-        [label sizeToFit];
         _textLabel = label;
     }
     return _textLabel;

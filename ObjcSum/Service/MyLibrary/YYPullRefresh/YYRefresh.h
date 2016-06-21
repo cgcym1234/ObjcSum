@@ -8,23 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YYRefreshConfig.h"
-
-/** 刷新控件的状态 */
-typedef NS_ENUM(NSUInteger, YYRefreshState) {
-    /** 普通闲置状态 */
-    YYRefreshStateIdle,
-    /** 松开就可以进行刷新的状态 */
-    YYRefreshStateReady,
-    /** 正在刷新中的状态 */
-    YYRefreshStateRefreshing,
-};
-
-typedef NS_ENUM(NSUInteger, YYRefreshPosition) {
-    YYRefreshPositionTop,
-    YYRefreshPositionLeft,
-    YYRefreshPositionBottom,
-    YYRefreshPositionRight
-};
+#import "YYRefreshConst.h"
 
 @interface YYRefresh : UIView
 

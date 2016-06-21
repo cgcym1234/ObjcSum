@@ -7,23 +7,19 @@
 //
 
 #import "YYRefresh.h"
-#import "YYRefreshConst.h"
+
+#import "YYRefreshView.h"
 
 @interface YYRefresh ()
 
 @property (nonatomic, weak) UIScrollView *scrollView;
-//@property (nonatomic, strong) YYRefreshView *refreshView;
+@property (nonatomic, strong) YYRefreshView *refreshView;
 
 /** 记录scrollView刚开始的inset */
 @property (nonatomic, assign) UIEdgeInsets scrollViewOriginalInset;
-//@property (nonatomic, assign) CGFloat readyOffset;
-
 @property (nonatomic, assign) YYRefreshPosition position;
 @property (nonatomic, assign) YYRefreshState state;
 @property (nonatomic, copy) void (^actionHandler)(YYRefresh *refresh);
-
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *textLabel;
 
 @end
 
@@ -46,12 +42,11 @@
 }
 
 - (void)setContext {
-    [self addSubview:self.textLabel];
-    [self addSubview:self.imageView];
+    _refreshView = [[YYRefreshView alloc] initWithConfig:_config postion:_position];
+    [self addSubview:_refreshView];
     
     self.backgroundColor = [UIColor orangeColor];
     self.state = YYRefreshStateIdle;
-    [self showIdleAnimated:NO];
 }
 
 #pragma mark - Override
@@ -124,12 +119,7 @@
     CGRect frame = CGRectMake(x, y, width, YYRefreshViewHeight);
     self.transform = CGAffineTransformIdentity;
     self.frame = frame;
-    
-    CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    _textLabel.center = center;
-    
-    center.x -= CGRectGetMidX(_textLabel.bounds) + CGRectGetMidX(_imageView.bounds) + 5;
-    _imageView.center = center;
+    _refreshView.frame = self.bounds;
     
     if (_position == YYRefreshPositionLeft || _position == YYRefreshPositionRight) {
         //如果直接设置anchorPoint，view的frame会改变
@@ -193,24 +183,31 @@
 
 #pragma mark - Public
 
-#pragma mark 进入刷新状态
 - (void)beginRefreshing {
-    self.state = YYRefreshStateRefreshing;
+    if (_state != YYRefreshStateRefreshing) {
+        self.state = YYRefreshStateRefreshing;
+        [UIView animateWithDuration:YYRefreshFastAnimationDuration animations:^{
+            [self parkVisible:YES];
+        } completion:^(BOOL finished) {
+            [self executeRefreshingCallback];
+        }];
+    }
 }
 
 - (void)endRefreshing {
-    self.state = YYRefreshStateIdle;
+    if (_state == YYRefreshStateRefreshing) {
+        [UIView animateWithDuration:YYRefreshFastAnimationDuration animations:^{
+            [self parkVisible:NO];
+        } completion:^(BOOL finished) {
+            self.state = YYRefreshStateIdle;
+        }];
+    }
 }
 
 #pragma mark - Override
 
 
 #pragma mark - Private
-
-
-- (void)scrollViewContentOffsetDidChange:(UIScrollView *)scrollView {
-    
-}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     // 在刷新的refreshing状态
@@ -240,38 +237,6 @@
     if (_actionHandler) {
         _actionHandler(self);
     }
-}
-
-- (void)showIdleAnimated:(BOOL)animated {
-    if (!UIEdgeInsetsEqualToEdgeInsets(self.scrollView.contentInset, _scrollViewOriginalInset)) {
-        // 恢复inset和offset
-        [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:^{
-//            self.scrollView.contentInset = _scrollViewOriginalInset;
-            [self parkVisible: NO];
-        } completion:^(BOOL finished) {
-        }];
-    }
-    
-    [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:^{
-        _imageView.transform = CGAffineTransformIdentity;
-        _textLabel.text = _config.textIdle;
-    } completion:^(BOOL finished) {
-    }];
-}
-- (void)showReadyAnimated:(BOOL)animated {
-    [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:^{
-        _textLabel.text = _config.textReady;
-        _imageView.transform = CGAffineTransformRotate(_imageView.transform, DegreesToRadians(180.1));
-    } completion:^(BOOL finished) {
-    }];
-}
-- (void)showRefreshingAnimated:(BOOL)animated {
-    _textLabel.text = _config.textRefreshing;
-    [UIView animateWithDuration:YYRefreshFastAnimationDuration animations:^{
-        [self parkVisible: YES];
-    } completion:^(BOOL finished) {
-        [self executeRefreshingCallback];
-    }];
 }
 
 - (void)parkVisible:(BOOL)visible {
@@ -348,15 +313,15 @@
     _state = state;
     switch (state) {
         case YYRefreshStateIdle: {
-            [self showIdleAnimated:YES];
+            [_refreshView showIdleWithConfig:_config animated:YES];
             break;
         }
         case YYRefreshStateReady: {
-            [self showReadyAnimated:YES];
+            [_refreshView showRedayWithConfig:_config animated:YES];
             break;
         }
         case YYRefreshStateRefreshing: {
-            [self showRefreshingAnimated:YES];
+            [_refreshView showRefreshingWithConfig:_config animated:YES];
             break;
         }
     }
@@ -365,53 +330,17 @@
 - (void)setPosition:(YYRefreshPosition)position {
     _position = position;
     
-    switch (_position) {
-        case YYRefreshPositionBottom:
-        case YYRefreshPositionLeft:
-            self.imageView.image = [UIImage imageNamed:YYRefreshImageUp];
-            break;
-        case YYRefreshPositionTop:
-        case YYRefreshPositionRight:
-            self.imageView.image = [UIImage imageNamed:YYRefreshImageDown];
-            break;
-    }
+//    switch (_position) {
+//        case YYRefreshPositionBottom:
+//        case YYRefreshPositionLeft:
+//            break;
+//        case YYRefreshPositionTop:
+//        case YYRefreshPositionRight:
+//            break;
+//    }
 }
 
 #pragma mark - Getter
-
-//- (YYRefreshView *)refreshView {
-//    if (!_refreshView) {
-//        YYRefreshView *refreshView = [YYRefreshView instance];
-//        CGRect frame = CGRectMake(0, -YYRefreshViewHeight, CGRectGetWidth(_scrollView.bounds), YYRefreshViewHeight);
-//        refreshView.frame = frame;
-//        _refreshView = refreshView;
-//    }
-//    return _refreshView;
-//}
-
-- (UILabel *)textLabel {
-    if (!_textLabel) {
-        UILabel *label = [[UILabel alloc] init];
-        label.font = YYRefreshLabelFont;
-        label.textColor = YYRefreshLabelTextColor;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        label.backgroundColor = [UIColor clearColor];
-        label.text = YYRefreshIdleText;
-        [label sizeToFit];
-        _textLabel = label;
-    }
-    return _textLabel;
-}
-
-- (UIImageView *)imageView {
-    if (!_imageView) {
-        UIImageView *imageView = [UIImageView new];
-        imageView.bounds = CGRectMake(0, 0, 16, 16);
-        _imageView = imageView;
-    }
-    return _imageView;
-}
 
 
 @end
