@@ -1,2 +1,0 @@
-/Users/sihuan/Library/Developer/Xcode/DerivedData/ObjcSum-diqrpsayqmbvkoaskuocathpapmq/Build/Products/Debug-iphonesimulator/ObjcSum.app
-iPhone Distribution: Sichuan Dingcheng Forensic Institution

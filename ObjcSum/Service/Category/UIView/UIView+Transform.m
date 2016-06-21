@@ -28,4 +28,20 @@
     return atan2f(t.b, t.a);
 }
 
+/**
+ 如果直接设置anchorPoint，frame会改变
+ 参考：http://blog.csdn.net/yongyinmg/article/details/37927833
+ */
+- (void)setAnchorPoint:(CGPoint)anchorPoint {
+    CGPoint oldOrigin = self.frame.origin;
+    self.layer.anchorPoint = anchorPoint;
+    CGPoint newOrigin = self.frame.origin;
+    
+    CGPoint transition;
+    transition.x = newOrigin.x - oldOrigin.x;
+    transition.y = newOrigin.y - oldOrigin.y;
+    
+    self.center = CGPointMake (self.center.x - transition.x, self.center.y - transition.y);
+}
+
 @end

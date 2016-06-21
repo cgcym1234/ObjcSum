@@ -15,4 +15,6 @@
 @property (readonly) CGFloat scaleX;
 @property (readonly) CGFloat scaleY;
 
+//如果直接设置anchorPoint，frame会改变
+- (void)setAnchorPoint:(CGPoint)anchorPoint;
 @end
