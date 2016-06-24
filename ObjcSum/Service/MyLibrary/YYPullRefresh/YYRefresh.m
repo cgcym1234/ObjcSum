@@ -49,7 +49,7 @@
 
 - (void)setContext {
     [self addSubview:_refreshView];
-    self.backgroundColor = [UIColor orangeColor];
+//    self.backgroundColor = [UIColor orangeColor];
 }
 
 #pragma mark - Override

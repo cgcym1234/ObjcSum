@@ -14,7 +14,9 @@
 @interface YYRefreshView ()
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIActivityIndicatorView *refreshingView;
 @property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, strong) NSString *currentText;
 
 @end
 
@@ -45,6 +47,7 @@
 - (void)setContext {
     [self addSubview:self.textLabel];
     [self addSubview:self.imageView];
+    [self addSubview:self.refreshingView];
 }
 
 
@@ -62,6 +65,7 @@
     
     center.x -= CGRectGetMidX(_textLabel.bounds) + CGRectGetMidX(_imageView.bounds) + 5;
     _imageView.center = center;
+    _refreshingView.center = center;
 }
 
 #pragma mark - Private
@@ -80,9 +84,11 @@
         action();
     }
     
-    _textLabel.text = config.textIdle;
-    [self updateLocation];
+    [_refreshingView stopAnimating];
+    _imageView.hidden = NO;
+    self.currentText = config.textIdle;
 }
+
 - (void)showRedayWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
     
     void (^action)(void) = ^{
@@ -94,8 +100,7 @@
     } else {
         action();
     }
-    _textLabel.text = config.textReady;
-    [self updateLocation];
+    self.currentText = config.textReady;
 }
 
 - (void)showRefreshingWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
@@ -108,15 +113,19 @@
 //    } else {
 //        action();
 //    }
-    _textLabel.text = config.textRefreshing;
-    [self updateLocation];
+    [_refreshingView startAnimating];
+    _imageView.hidden = YES;
+    self.currentText = config.textRefreshing;
 }
-
-#pragma mark - Delegate
-
 
 #pragma mark - Setter
 
+- (void)setCurrentText:(NSString *)currentText {
+    _currentText = currentText;
+    _textLabel.text = currentText;
+    [_textLabel sizeToFit];
+    [self layoutIfNeeded];
+}
 
 #pragma mark - Getter
 
@@ -142,6 +151,14 @@
     return _imageView;
 }
 
+- (UIActivityIndicatorView *)refreshingView {
+    if (!_refreshingView) {
+        UIActivityIndicatorView *refreshingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        refreshingView.hidesWhenStopped = YES;
+        _refreshingView = refreshingView;
+    }
+    return _refreshingView;
+}
 
 
 @end
