@@ -27,7 +27,7 @@
                      
                      [[LibDemoInfo alloc] initWithTitle:@"WebViewDemo" desc:@"js和oc相互调用demo" controllerName:@"WebViewDemo"],
                      
-                     [[LibDemoInfo alloc] initWithTitle:@"ObjectiveCDemo" desc:@"Objective-C特性测试" controllerName:@"ObjectiveCDemo"],
+                     [[LibDemoInfo alloc] initWithTitle:@"ObjectiveCDemo" desc:@"Objective-C相关demo" controllerName:@"ObjectiveCDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"FoundationDemo" desc:@"基本数据结构测试" controllerName:@"FoundationDemo"],
                      

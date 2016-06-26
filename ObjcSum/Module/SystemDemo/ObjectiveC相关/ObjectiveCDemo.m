@@ -8,6 +8,7 @@
 
 #import "ObjectiveCDemo.h"
 #import "ObjectiveCPointor.h"
+#import "ClassDemo.h"
 
 @interface ObjectiveCDemo () {
 }
@@ -21,7 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _dict = [NSMutableDictionary dictionary];
-    [self typeEncoding];
+//    [self typeEncoding];
+    [ClassDemo launch];
 }
 
 #pragma mark - 类型编码
