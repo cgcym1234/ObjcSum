@@ -8,11 +8,11 @@
 
 #import "UIViewController+Extension.h"
 #import <objc/runtime.h>
-@interface YYButton : UIButton
+@interface _YYButton : UIButton
 @property (nonatomic, copy)id object;
 @end
 
-@implementation YYButton
+@implementation _YYButton
 @end;
 
 static char KeyBarThemeType;
@@ -25,7 +25,7 @@ static char KeyBarThemeType;
 
 @implementation UIViewController (Extension)
 
-- (void)__btnClick:(YYButton *)btn {
+- (void)__btnClick:(_YYButton *)btn {
     if (btn.object) {
         ((void (^)(UIButton *))btn.object)(btn);
     }
@@ -34,7 +34,7 @@ static char KeyBarThemeType;
 #pragma mark - 添加一个button
 
 - (UIButton *)addButtonWithTitle:(NSString *)title action:(void (^)(UIButton *btn)) action {
-    YYButton *btn = [YYButton buttonWithType:UIButtonTypeSystem];
+    _YYButton *btn = [_YYButton buttonWithType:UIButtonTypeSystem];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(__btnClick:) forControlEvents:UIControlEventTouchUpInside];
     btn.object = action;

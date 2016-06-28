@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-@interface ClassDemo : NSObject
+@interface ClassDemo : NSObject<NSCopying, NSCoding>
 
 + (void)launch;
 

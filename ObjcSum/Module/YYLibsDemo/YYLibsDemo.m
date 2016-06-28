@@ -40,9 +40,7 @@
                    
                    [[LibDemoInfo alloc] initWithTitle:@"CountdownDemo" desc:@"倒计时功能" controllerName:@"CountdownDemo"],
                    
-                   [[LibDemoInfo alloc] initWithTitle:@"聊天界面demo" desc:@"聊天界面demo" controllerName:@"ChatMessagesDemo"],
-                   
-                   [[LibDemoInfo alloc] initWithTitle:@"iCarouselDemo" desc:@"iCarousel旋转切换效果控件" controllerName:@"iCarouselDemo"],
+                   [[LibDemoInfo alloc] initWithTitle:@"YYComponentsDemo" desc:@"一些小控件" controllerName:@"YYComponentsDemo"],
                    ];
 }
 
