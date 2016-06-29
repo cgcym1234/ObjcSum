@@ -16,12 +16,14 @@
 @end;
 
 static char KeyBarThemeType;
+static char kButtonCount;
 
 @interface UIViewController ()
 
 @property (nonatomic, assign) NSInteger buttonCount;
 
 @end
+
 
 @implementation UIViewController (Extension)
 
@@ -31,14 +33,23 @@ static char KeyBarThemeType;
     }
 }
 
+- (NSInteger)buttonCount {
+    return [objc_getAssociatedObject(self, &kButtonCount) integerValue];
+}
+
+- (void)setButtonCount:(NSInteger)buttonCount {
+    objc_setAssociatedObject(self, &kButtonCount, @(buttonCount), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 #pragma mark - 添加一个button
 
 - (UIButton *)addButtonWithTitle:(NSString *)title action:(void (^)(UIButton *btn)) action {
     _YYButton *btn = [_YYButton buttonWithType:UIButtonTypeSystem];
+    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     [btn setTitle:title forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(__btnClick:) forControlEvents:UIControlEventTouchUpInside];
     btn.object = action;
-    btn.frame = CGRectMake(10, 40*self.buttonCount++, 200, 40);
+    btn.frame = CGRectMake(0, 40 * ++self.buttonCount, CGRectGetWidth([UIScreen mainScreen].bounds), 40);
     [self.view addSubview:btn];
     return btn;
 }

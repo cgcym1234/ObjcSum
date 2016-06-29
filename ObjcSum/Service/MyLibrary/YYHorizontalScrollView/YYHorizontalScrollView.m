@@ -220,7 +220,7 @@ static NSString * const KeyCell = @"KeyCell";
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flowLayout.minimumInteritemSpacing = 0.0f;
         flowLayout.minimumLineSpacing = 0.0f;
         flowLayout.sectionInset = UIEdgeInsetsZero;
@@ -232,7 +232,7 @@ static NSString * const KeyCell = @"KeyCell";
         collectionView.pagingEnabled = YES;
         collectionView.backgroundColor = [UIColor clearColor];
         collectionView.delegate = self;
-//        collectionView.dataSource = self;
+        collectionView.dataSource = self;
         collectionView.showsVerticalScrollIndicator = NO;
         collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView = collectionView;

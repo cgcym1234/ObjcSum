@@ -10,10 +10,27 @@
 
 @implementation YYMessageMoreViewCellModel
 
-+ (instancetype)modelWithText:(NSString *)text imageName:(NSString *)imageName {
+//[YYMessageMoreViewCellModel modelWithText:@"照片" imageName:@"ChatWindow_Photo"],
+//[YYMessageMoreViewCellModel modelWithText:@"拍照" imageName:@"ChatWindow_Camera"]
+- (void)setType:(YYMessageMoreViewItem)type {
+    _type = type;
+    switch (type) {
+        case YYMessageMoreViewItemCamera: {
+            _text = @"照片";
+            _imageName = @"ChatWindow_Photo";
+            break;
+        }
+        case YYMessageMoreViewItemAlbum: {
+            _text = @"拍照";
+            _imageName = @"ChatWindow_Camera";
+            break;
+        }
+    }
+}
+
++ (instancetype)modelWithType:(YYMessageMoreViewItem)type {
     YYMessageMoreViewCellModel *model = [YYMessageMoreViewCellModel new];
-    model.text = text;
-    model.imageName = imageName;
+    model.type = type;
     return model;
 }
 

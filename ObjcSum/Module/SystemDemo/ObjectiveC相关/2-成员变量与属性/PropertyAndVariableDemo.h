@@ -10,4 +10,7 @@
 
 @interface PropertyAndVariableDemo : NSObject
 
++ (void)launch;
+
 @end
+

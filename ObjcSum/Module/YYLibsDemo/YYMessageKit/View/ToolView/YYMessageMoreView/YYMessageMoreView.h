@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "YYHorizontalScrollView.h"
+
+@class YYMessageMoreView;
+
+@protocol YYMessageMoreViewDelegate <NSObject>
+
+@optional
+- (void)yyMessageMoreView:(YYMessageMoreView *)view didSelectImages:(NSArray *)images;
+
+@end
+
 @interface YYMessageMoreView : UIView
 
-
+@property (nonatomic, weak) id<YYMessageMoreViewDelegate> delegate;
+@property (nonatomic, weak) UIViewController *containerController;
 
 @end

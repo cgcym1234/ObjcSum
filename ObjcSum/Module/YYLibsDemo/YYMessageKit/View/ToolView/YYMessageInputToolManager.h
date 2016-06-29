@@ -26,6 +26,7 @@
 @property (nonatomic, weak) id<YYMessageInputToolManagerDelegate> delegate;
 
 @property (nonatomic, weak) UIView *inputToolBarContainerView;
+@property (nonatomic, weak) UIViewController *containerController;
 @property (nonatomic, assign) CGFloat height;
 
 #pragma mark - Public

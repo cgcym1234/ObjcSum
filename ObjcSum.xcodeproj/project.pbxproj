@@ -140,6 +140,7 @@
 		1F364DD01D2226D3006B8412 /* YYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F364DCF1D2226D3006B8412 /* YYView.m */; };
 		1F364DD41D22295E006B8412 /* YYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F364DD31D22295E006B8412 /* YYImageView.m */; };
 		1F364DD81D2229A0006B8412 /* YYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F364DD71D2229A0006B8412 /* YYButton.m */; };
+		1F364DE01D236F06006B8412 /* MethodAndMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F364DDF1D236F05006B8412 /* MethodAndMessages.m */; };
 		1F3A27811C5E523F0030976A /* NSString+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A27801C5E523F0030976A /* NSString+YYMessage.m */; };
 		1F3A27841C5E52B20030976A /* NSDate+YYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A27831C5E52B20030976A /* NSDate+YYMessage.m */; };
 		1F45E38B1C1E571E00938B2E /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E38A1C1E571E00938B2E /* AppInfo.m */; };
@@ -1270,6 +1271,8 @@
 		1F364DD31D22295E006B8412 /* YYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageView.m; sourceTree = "<group>"; };
 		1F364DD61D2229A0006B8412 /* YYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYButton.h; sourceTree = "<group>"; };
 		1F364DD71D2229A0006B8412 /* YYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYButton.m; sourceTree = "<group>"; };
+		1F364DDE1D236F05006B8412 /* MethodAndMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodAndMessages.h; sourceTree = "<group>"; };
+		1F364DDF1D236F05006B8412 /* MethodAndMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodAndMessages.m; sourceTree = "<group>"; };
 		1F3A277F1C5E523F0030976A /* NSString+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYMessage.h"; sourceTree = "<group>"; };
 		1F3A27801C5E523F0030976A /* NSString+YYMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYMessage.m"; sourceTree = "<group>"; };
 		1F3A27821C5E52B20030976A /* NSDate+YYMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YYMessage.h"; sourceTree = "<group>"; };
@@ -2469,6 +2472,7 @@
 				1F199A151C190981000F690C /* ObjectiveCDemo.m */,
 				1F160BA61C2FC18800EDDAA4 /* ObjectiveCPointor.h */,
 				1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */,
+				1F364DE11D236F0B006B8412 /* 3-方法与消息 */,
 			);
 			path = "ObjectiveC相关";
 			sourceTree = "<group>";
@@ -2673,6 +2677,15 @@
 				1F364DD71D2229A0006B8412 /* YYButton.m */,
 			);
 			path = YYButton;
+			sourceTree = "<group>";
+		};
+		1F364DE11D236F0B006B8412 /* 3-方法与消息 */ = {
+			isa = PBXGroup;
+			children = (
+				1F364DDE1D236F05006B8412 /* MethodAndMessages.h */,
+				1F364DDF1D236F05006B8412 /* MethodAndMessages.m */,
+			);
+			name = "3-方法与消息";
 			sourceTree = "<group>";
 		};
 		1F45E3AA1C1EBF6600938B2E /* UIKit */ = {
@@ -5305,6 +5318,7 @@
 				1F2BE07D1C50C3BB00E71E53 /* DragImageViewGesture3.m in Sources */,
 				1F5A56931C2B9F3A000E9E04 /* FastRecordImageCell.m in Sources */,
 				1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */,
+				1F364DE01D236F06006B8412 /* MethodAndMessages.m in Sources */,
 				1F10373A1C970A0F0021CAC7 /* YYMessageCellAudio.m in Sources */,
 				1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */,
 				1F5A57991C2BA091000E9E04 /* RACSignal.m in Sources */,

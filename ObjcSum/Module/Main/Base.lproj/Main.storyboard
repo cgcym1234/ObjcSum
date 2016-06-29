@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -60,36 +59,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCJ-t2-Upd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1919" y="1353"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="0P2-Na-LcF">
-            <objects>
-                <viewController id="4Zi-4c-miE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Iyx-E1-ccn"/>
-                        <viewControllerLayoutGuide type="bottom" id="oOM-St-u8x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mgw-hJ-jrg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCR-oo-0b4">
-                                <rect key="frame" x="64" y="99" width="66" height="38"/>
-                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="iCR-oo-0b4" firstAttribute="top" secondItem="Iyx-E1-ccn" secondAttribute="bottom" constant="79" id="V1P-OP-tUZ"/>
-                            <constraint firstItem="iCR-oo-0b4" firstAttribute="leading" secondItem="mgw-hJ-jrg" secondAttribute="leadingMargin" constant="44" id="aqc-n1-XDl"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPc-lI-Ybo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2426" y="1135"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="cAn-P0-By0">

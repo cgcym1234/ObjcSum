@@ -19,7 +19,7 @@ static NSInteger const HeightForInputToolBar = 49;
 static NSString * const KeyCell = @"KeyCell";
 
 @interface YYMessageInputToolManager ()
-<YYKeyboardObserver, UITextViewDelegate, YYMessageInputToolBarDelegate>
+<YYKeyboardObserver, UITextViewDelegate, YYMessageInputToolBarDelegate, YYMessageMoreViewDelegate>
 
 @property (nonatomic, strong) YYMessageInputToolBar *inputToolBar;
 
@@ -92,6 +92,14 @@ static NSString * const KeyCell = @"KeyCell";
     return ret;
 }
 
+#pragma mark - YYMessageMoreViewDelegate
+
+- (void)yyMessageMoreView:(YYMessageMoreView *)view didSelectImages:(NSArray *)images {
+    [images enumerateObjectsUsingBlock:^(UIImage *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [_delegate yyMessageInputToolManager:self didSendMessage:obj messageType:YYMessageTypeImage];
+    }];
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
     if (textView.text.length >= 200) {
 //        [YYHud showTip:@"请将随手记内容保持在200个字以内"];
@@ -112,6 +120,8 @@ static NSString * const KeyCell = @"KeyCell";
     _inputToolBar.bottom = _inputToolBarContainerView.height;
     _inputToolBar.delegate = self;
     _inputToolBar.inputTextView.delegate = self;
+    _inputToolBar.moreView.delegate = self;
+    _inputToolBar.moreView.containerController = self.containerController;
     _inputToolBar.voiceRecordButton.completeBlock = ^(YYMessageAudioRecordButton *view, NSURL *voicePath) {
         [weakSelf.delegate yyMessageInputToolManager:weakSelf didSendMessage:voicePath messageType:YYMessageTypeAudio];
     };
@@ -121,6 +131,11 @@ static NSString * const KeyCell = @"KeyCell";
 
 
 #pragma mark - Setters
+
+- (void)setContainerController:(UIViewController *)containerController {
+    _containerController = containerController;
+    _inputToolBar.moreView.containerController = containerController;
+}
 
 #pragma mark - Getters
 

@@ -225,6 +225,7 @@
 - (YYMessageInputToolManager *)inputToolManager {
     if (!_inputToolManager) {
         YYMessageInputToolManager *inputToolManager = [[YYMessageInputToolManager alloc] initWithDelegate:self inputToolBarContainerView:self.view];
+        inputToolManager.containerController = self;
         _inputToolManager = inputToolManager;
         [self setCollectionViewInsetsTopValue:0 bottomValue:inputToolManager.height];
     }

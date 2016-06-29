@@ -459,4 +459,9 @@ Returns a lowercase NSString for md4 hash.
  */
 - (NSDictionary *)yy_dictionaryFromUrlParameters;
 
+/**
+ *  将阿拉伯数字转换为中文数字
+ */
++ (NSString *)yy_translationArabicNum:(NSInteger)arabicNum;
+
 @end

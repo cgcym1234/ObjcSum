@@ -9,6 +9,8 @@
 #import "ObjectiveCDemo.h"
 #import "ObjectiveCPointor.h"
 #import "ClassDemo.h"
+#import "PropertyAndVariableDemo.h"
+#import "UIViewController+Extension.h"
 
 @interface ObjectiveCDemo () {
 }
@@ -23,7 +25,14 @@
     // Do any additional setup after loading the view.
     _dict = [NSMutableDictionary dictionary];
 //    [self typeEncoding];
-    [ClassDemo launch];
+    
+    [self addButtonWithTitle:@"1-类与对象demo" action:^(UIButton *btn) {
+        [ClassDemo launch];
+    }];
+    
+    [self addButtonWithTitle:@"2-成员变量与属性demo" action:^(UIButton *btn) {
+        [PropertyAndVariableDemo launch];
+    }];
 }
 
 #pragma mark - 类型编码

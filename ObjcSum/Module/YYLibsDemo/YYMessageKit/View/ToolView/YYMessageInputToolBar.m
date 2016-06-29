@@ -28,7 +28,7 @@ static NSString * const ImageEmoji = @"ChatWindow_Expression";
 static NSString * const ImageMore = @"ChatWindow_More";
 
 @interface YYMessageInputToolBar ()
-<YYEmoticonInputViewDelegate>
+<YYEmoticonInputViewDelegate, YYMessageMoreViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *inputAndVoiceSwitchButton;
 
@@ -43,7 +43,6 @@ static NSString * const ImageMore = @"ChatWindow_More";
 @property (assign, nonatomic) YYMessageInputToolBarState state;
 
 @property (nonatomic, strong) YYEmoticonInputView *emoticonInputView;
-@property (nonatomic, strong) YYMessageMoreView *moreView;
 
 @end
 
@@ -147,6 +146,7 @@ static NSString * const ImageMore = @"ChatWindow_More";
 - (void)yyEmoticonInputViewDidTapSend:(YYEmoticonInputView *)view {
     [_inputTextView.delegate textView:_inputTextView shouldChangeTextInRange:NSMakeRange(0, 1) replacementText:@"\n"];
 }
+
 
 #pragma mark - Private methods
 

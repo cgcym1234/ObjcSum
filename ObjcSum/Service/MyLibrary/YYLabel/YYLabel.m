@@ -89,7 +89,7 @@ IB_DESIGNABLE
 
 //需要和intrinsicContentSize配合使用
 - (void)drawTextInRect:(CGRect)rect {
-    [super drawTextInRect:UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(_contentEdgeInsets.top, _contentEdgeInsets.left, _contentEdgeInsets.bottom, _contentEdgeInsets.right))];
+    [super drawTextInRect:UIEdgeInsetsInsetRect(rect, _contentEdgeInsets)];
 }
 
 @end

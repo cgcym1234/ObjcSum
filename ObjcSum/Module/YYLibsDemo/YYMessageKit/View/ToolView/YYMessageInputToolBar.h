@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YYMultiImageButton.h"
 #import "YYMessageAudioRecordButton.h"
+#import "YYMessageMoreView.h"
 
 typedef NS_ENUM(NSUInteger, YYMessageInputToolBarState) {
     YYMessageInputToolBarStateInput = 0,//输入文字状态
@@ -36,6 +37,8 @@ typedef NS_ENUM(NSUInteger, YYMessageInputToolBarState) {
 
 @property (weak, nonatomic, readonly) UIButton *emojiButton;
 @property (weak, nonatomic, readonly) UIButton *moreButton;
+@property (nonatomic, strong) YYMessageMoreView *moreView;
+
 @property (weak, nonatomic) id<YYMessageInputToolBarDelegate> delegate;
 @property (assign, nonatomic, readonly) YYMessageInputToolBarState state;
 

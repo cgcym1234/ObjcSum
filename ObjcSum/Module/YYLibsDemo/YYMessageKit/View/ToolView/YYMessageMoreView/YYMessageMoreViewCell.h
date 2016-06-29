@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "YYHorizontalScrollViewCell.h"
 
+typedef NS_ENUM(NSUInteger, YYMessageMoreViewItem) {
+    YYMessageMoreViewItemCamera,
+    YYMessageMoreViewItemAlbum,
+};
+
 @interface YYMessageMoreViewCellModel : NSObject
 
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *text;
+@property (nonatomic, assign) YYMessageMoreViewItem type;
 
-+ (instancetype)modelWithText:(NSString *)text imageName:(NSString *)imageName;
++ (instancetype)modelWithType:(YYMessageMoreViewItem)type;
 
 @end
 
