@@ -15,8 +15,8 @@
 
 //Objective-C类是由Class类型来表示的，它实际上是一个指向objc_class结构体的指针。它的定义如下：
 
-//typedef struct objc_class * YYClass;
-struct yy_class {
+//typedef struct objc_class * Class;
+struct yy_objc_class {
     //需要注意的是在Objective-C中，所有的类自身也是一个对象，这个对象的Class里面也有一个isa指针，它指向metaClass(元类)，我们会在后面介绍它。
     Class isa;
     
@@ -61,10 +61,10 @@ struct yy_class {
 #pragma mark ### objc_object与id
 
 //objc_object是表示一个类的实例的结构体，它的定义如下(objc/objc.h)：
-struct yy_object {
+struct yy_objc_object {
     Class isa;
 };
-typedef struct yy_object *yy_id;
+typedef struct objc_object *yy_id;
 
 #pragma mark ### objc_cache
 

@@ -890,6 +890,8 @@
 		1F8B8ACB1BE2185F00D81096 /* YYHud.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B8AC81BE2185F00D81096 /* YYHud.xib */; };
 		1F8B8ACF1BE33DC400D81096 /* LocalNotificationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8ACE1BE33DC400D81096 /* LocalNotificationDemo.m */; };
 		1F8B8AD41BE360A700D81096 /* SystemDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8AD31BE360A700D81096 /* SystemDemo.m */; };
+		1F8C7DBD1D33A9FD00114071 /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C7DBC1D33A9FD00114071 /* MethodSwizzling.m */; };
+		1F8C7DC11D35CECE00114071 /* CategoryAndProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C7DC01D35CECE00114071 /* CategoryAndProtocol.m */; };
 		1F9463A71D20DC4400C954A8 /* PropertyAndVariableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9463A61D20DC4400C954A8 /* PropertyAndVariableDemo.m */; };
 		1F9829C31BE70DFD00AF6E3F /* YYHttpRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C01BE70DFD00AF6E3F /* YYHttpRequestSerializer.m */; };
 		1F9829C41BE70DFD00AF6E3F /* YYJsonResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9829C21BE70DFD00AF6E3F /* YYJsonResponseSerializer.m */; };
@@ -1842,6 +1844,10 @@
 		1F8B8ACE1BE33DC400D81096 /* LocalNotificationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationDemo.m; sourceTree = "<group>"; };
 		1F8B8AD21BE360A700D81096 /* SystemDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDemo.h; sourceTree = "<group>"; };
 		1F8B8AD31BE360A700D81096 /* SystemDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDemo.m; sourceTree = "<group>"; };
+		1F8C7DBB1D33A9FD00114071 /* MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
+		1F8C7DBC1D33A9FD00114071 /* MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
+		1F8C7DBF1D35CECE00114071 /* CategoryAndProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAndProtocol.h; sourceTree = "<group>"; };
+		1F8C7DC01D35CECE00114071 /* CategoryAndProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryAndProtocol.m; sourceTree = "<group>"; };
 		1F9463A51D20DC4400C954A8 /* PropertyAndVariableDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyAndVariableDemo.h; sourceTree = "<group>"; };
 		1F9463A61D20DC4400C954A8 /* PropertyAndVariableDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyAndVariableDemo.m; sourceTree = "<group>"; };
 		1F9829BF1BE70DFD00AF6E3F /* YYHttpRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHttpRequestSerializer.h; sourceTree = "<group>"; };
@@ -2472,6 +2478,8 @@
 				1F199A151C190981000F690C /* ObjectiveCDemo.m */,
 				1F160BA61C2FC18800EDDAA4 /* ObjectiveCPointor.h */,
 				1F160BA71C2FC18800EDDAA4 /* ObjectiveCPointor.m */,
+				1F8C7DC21D35CED400114071 /* 5-协议与分类 */,
+				1F8C7DBE1D33AA0200114071 /* 4-MethodSwizzling */,
 				1F364DE11D236F0B006B8412 /* 3-方法与消息 */,
 			);
 			path = "ObjectiveC相关";
@@ -3878,6 +3886,24 @@
 			path = SystemDemo;
 			sourceTree = "<group>";
 		};
+		1F8C7DBE1D33AA0200114071 /* 4-MethodSwizzling */ = {
+			isa = PBXGroup;
+			children = (
+				1F8C7DBB1D33A9FD00114071 /* MethodSwizzling.h */,
+				1F8C7DBC1D33A9FD00114071 /* MethodSwizzling.m */,
+			);
+			name = "4-MethodSwizzling";
+			sourceTree = "<group>";
+		};
+		1F8C7DC21D35CED400114071 /* 5-协议与分类 */ = {
+			isa = PBXGroup;
+			children = (
+				1F8C7DBF1D35CECE00114071 /* CategoryAndProtocol.h */,
+				1F8C7DC01D35CECE00114071 /* CategoryAndProtocol.m */,
+			);
+			name = "5-协议与分类";
+			sourceTree = "<group>";
+		};
 		1F9463A81D20DC4700C954A8 /* 2-成员变量与属性 */ = {
 			isa = PBXGroup;
 			children = (
@@ -5124,6 +5150,7 @@
 				1F5A579C1C2BA091000E9E04 /* RACStream.m in Sources */,
 				1F5A576C1C2BA091000E9E04 /* NSObject+RACDescription.m in Sources */,
 				1F98C9901BE4BF39002EE116 /* UIImage+Extension.m in Sources */,
+				1F8C7DBD1D33A9FD00114071 /* MethodSwizzling.m in Sources */,
 				1F5A578A1C2BA091000E9E04 /* RACIndexSetSequence.m in Sources */,
 				1F364DD81D2229A0006B8412 /* YYButton.m in Sources */,
 				1F2DA2641C197B1E00126FB1 /* UIScrollView+MJExtension.m in Sources */,
@@ -5318,6 +5345,7 @@
 				1F2BE07D1C50C3BB00E71E53 /* DragImageViewGesture3.m in Sources */,
 				1F5A56931C2B9F3A000E9E04 /* FastRecordImageCell.m in Sources */,
 				1F8714171C74BA5500143074 /* YYWebImageManager.m in Sources */,
+				1F8C7DC11D35CECE00114071 /* CategoryAndProtocol.m in Sources */,
 				1F364DE01D236F06006B8412 /* MethodAndMessages.m in Sources */,
 				1F10373A1C970A0F0021CAC7 /* YYMessageCellAudio.m in Sources */,
 				1F87141E1C74C59C00143074 /* YYWebImageOperation.m in Sources */,
