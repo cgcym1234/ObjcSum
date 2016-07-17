@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, YYMessageAudioRecordButtonState) {
-    YYMessageAudioRecordButtonStateTouchDown,
+    YYMessageAudioRecordButtonStateTouchDown = 1,
     YYMessageAudioRecordButtonStateTouchUpInside,
     YYMessageAudioRecordButtonStateTouchUpOutside,
     YYMessageAudioRecordButtonStateTouchDragOutside,
@@ -22,6 +22,7 @@ typedef void (^YYMessageAudioRecordButtonCompleteBlock)(YYMessageAudioRecordButt
 
 @interface YYMessageAudioRecordButton : UIButton
 
+@property (nonatomic, assign, readonly) BOOL isRocording;
 @property (nonatomic, assign, readonly) YYMessageAudioRecordButtonState  recordState;
 @property (nonatomic, copy) YYMessageAudioRecordButtonCompleteBlock completeBlock;
 

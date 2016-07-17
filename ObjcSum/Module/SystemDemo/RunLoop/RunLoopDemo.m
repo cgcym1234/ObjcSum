@@ -9,7 +9,7 @@
 #import "RunLoopDemo.h"
 #import <pthread.h>
 
-static pthread_t kNilPthreadT = { nil, nil };
+//static pthread_t kNilPthreadT = { nil, nil };
 
 @implementation RunLoopDemo
 

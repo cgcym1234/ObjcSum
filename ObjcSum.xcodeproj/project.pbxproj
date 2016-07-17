@@ -182,6 +182,8 @@
 		1F45E40F1C210D3A00938B2E /* YYChrysanthemum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45E40E1C210D3A00938B2E /* YYChrysanthemum.m */; };
 		1F48F2461C61993B00416803 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48F2451C61993B00416803 /* HitTestView.m */; };
 		1F5019601D1921C8009631BC /* YYRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F50195F1D1921C8009631BC /* YYRefreshView.m */; };
+		1F5237B41D3B471A00B182D0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5237B31D3B471A00B182D0 /* TestViewController.m */; };
+		1F5237B71D3B479700B182D0 /* TestButtonTouchDownDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5237B61D3B479700B182D0 /* TestButtonTouchDownDelay.m */; };
 		1F5A56841C2B9F3A000E9E04 /* FastRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56561C2B9F3A000E9E04 /* FastRecord.m */; };
 		1F5A56851C2B9F3A000E9E04 /* FastRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A56571C2B9F3A000E9E04 /* FastRecord.storyboard */; };
 		1F5A56861C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A56591C2B9F3A000E9E04 /* FastRecordAddAndModifyController.m */; };
@@ -1358,6 +1360,10 @@
 		1F48F2451C61993B00416803 /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
 		1F50195E1D1921C8009631BC /* YYRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRefreshView.h; sourceTree = "<group>"; };
 		1F50195F1D1921C8009631BC /* YYRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRefreshView.m; sourceTree = "<group>"; };
+		1F5237B21D3B471A00B182D0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		1F5237B31D3B471A00B182D0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		1F5237B51D3B479700B182D0 /* TestButtonTouchDownDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestButtonTouchDownDelay.h; sourceTree = "<group>"; };
+		1F5237B61D3B479700B182D0 /* TestButtonTouchDownDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestButtonTouchDownDelay.m; sourceTree = "<group>"; };
 		1F5A56551C2B9F3A000E9E04 /* FastRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastRecord.h; sourceTree = "<group>"; };
 		1F5A56561C2B9F3A000E9E04 /* FastRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastRecord.m; sourceTree = "<group>"; };
 		1F5A56571C2B9F3A000E9E04 /* FastRecord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FastRecord.storyboard; sourceTree = "<group>"; };
@@ -2791,6 +2797,25 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		1F5237B81D3B479D00B182D0 /* 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				1F5237B21D3B471A00B182D0 /* TestViewController.h */,
+				1F5237B31D3B471A00B182D0 /* TestViewController.m */,
+				1F5237B91D3B47A800B182D0 /* 屏幕底部button延迟响应touchDown事件 */,
+			);
+			name = "测试";
+			sourceTree = "<group>";
+		};
+		1F5237B91D3B47A800B182D0 /* 屏幕底部button延迟响应touchDown事件 */ = {
+			isa = PBXGroup;
+			children = (
+				1F5237B51D3B479700B182D0 /* TestButtonTouchDownDelay.h */,
+				1F5237B61D3B479700B182D0 /* TestButtonTouchDownDelay.m */,
+			);
+			name = "屏幕底部button延迟响应touchDown事件";
+			sourceTree = "<group>";
+		};
 		1F5A56541C2B9F3A000E9E04 /* FastRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -3882,6 +3907,7 @@
 				1F792CD31C8F0E3A00EE70D4 /* 音频相关 */,
 				1F8B8AD21BE360A700D81096 /* SystemDemo.h */,
 				1F8B8AD31BE360A700D81096 /* SystemDemo.m */,
+				1F5237B81D3B479D00B182D0 /* 测试 */,
 			);
 			path = SystemDemo;
 			sourceTree = "<group>";
@@ -5082,6 +5108,7 @@
 				1F792CD11C8E820500EE70D4 /* YYAudioRocorder.m in Sources */,
 				1F5A57A81C2BA091000E9E04 /* RACValueTransformer.m in Sources */,
 				1F18BD371BE4B2B000005BA4 /* YYAlertTextView.m in Sources */,
+				1F5237B41D3B471A00B182D0 /* TestViewController.m in Sources */,
 				1F364DCB1D22090C006B8412 /* YYComponentsDemo.m in Sources */,
 				1F160BAE1C2FC77E00EDDAA4 /* NSObject+Debug.m in Sources */,
 				1F45E3CF1C1FFE9F00938B2E /* UIBezierPath+YYExtension.m in Sources */,
@@ -5125,6 +5152,7 @@
 				1F5A57B91C2BA091000E9E04 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				1F5A56981C2B9F3A000E9E04 /* FastRecordVoiceCell.m in Sources */,
 				1F2AA8D91D0E8D1500A5A477 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				1F5237B71D3B479700B182D0 /* TestButtonTouchDownDelay.m in Sources */,
 				1F8B8AA11BE20E3100D81096 /* DTError.m in Sources */,
 				1F3A27841C5E52B20030976A /* NSDate+YYMessage.m in Sources */,
 				1FF64A541C33C63600E3B562 /* UIView+YYMessage.m in Sources */,

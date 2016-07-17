@@ -37,6 +37,8 @@
                      
                      [[LibDemoInfo alloc] initWithTitle:@"YYAlertTextViewDemo" desc:@"alert输入框" controllerName:@"YYAlertTextViewDemo"],
                      
+                     [[LibDemoInfo alloc] initWithTitle:@"TestViewController" desc:@"一些测试" controllerName:@"TestViewController"],
+                     
                      ];
 }
 

@@ -23,6 +23,7 @@
     self.navigationBar.barTintColor = ColorFlattingBlue;
     self.navigationBar.tintColor = whiteColor;
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:whiteColor};
+    self.interactivePopGestureRecognizer.delegate = self;
     
 }
 
@@ -58,4 +59,9 @@
 {
     [self setNeedsStatusBarAppearanceUpdate];
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
 @end
