@@ -47,4 +47,6 @@
 #pragma mark - 给view截图
 + (UIImage *)screenShotForView:(UIView *)view;
 
+- (CGSize)fitSizeInView:(UIView *)toView;
+
 @end

@@ -108,9 +108,12 @@ static char kButtonCount;
 
 #pragma mark - 修改NavigationBar返回按钮，同时不会导致返回手势失效
 - (void)setBackBarButtonItemWithImage:(UIImage *)image {
+    //防止ios9 下图片被拉伸
+    UIImage *newImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0, image.size.width, 0, 0)];
+    
     UIBarButtonItem*backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"";
-    [backItem setBackButtonBackgroundImage:image forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [backItem setBackButtonBackgroundImage:newImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.backBarButtonItem = backItem;
 }
 

@@ -195,4 +195,36 @@
     UIGraphicsEndImageContext();
     return viewImage;
 }
+
+- (CGSize)fitSizeInView:(UIView *)toView {
+    CGFloat imageWidth = self.size.width;
+    CGFloat imageHeight = self.size.height;
+    
+    BOOL overWidth = imageWidth > toView.bounds.size.width;
+    BOOL overHeight = imageHeight > toView.bounds.size.height;
+    
+    CGSize fitSize = CGSizeMake(imageWidth, imageHeight);
+    
+    if (overWidth && overHeight) {
+        CGFloat timesThanScreenWidth = (imageWidth / toView.bounds.size.width);
+        
+        if (!((imageHeight / timesThanScreenWidth) > toView.bounds.size.height)) {
+            fitSize.width = toView.bounds.size.width;
+            fitSize.height = imageHeight / timesThanScreenWidth;
+        } else {
+            CGFloat timesThanScreenHeight = (imageHeight / toView.bounds.size.height);
+            fitSize.width = imageWidth / timesThanScreenHeight;
+            fitSize.height = toView.bounds.size.height;
+        }
+    } else if (overWidth && !overHeight) {
+        CGFloat timesThanFrameWidth = (imageWidth / toView.bounds.size.width);
+        fitSize.width = toView.bounds.size.width;
+        fitSize.height = imageHeight / timesThanFrameWidth;
+    } else if (overHeight && !overWidth) {
+        fitSize.height = toView.bounds.size.height;
+    }
+    
+    return fitSize;
+}
+
 @end
