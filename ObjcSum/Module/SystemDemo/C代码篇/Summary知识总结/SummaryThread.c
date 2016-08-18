@@ -22,10 +22,10 @@ void *thread(void *vargp) /* thread routine */  //line:conc:hello:beginthread
     #pragma mark //例程返回时，线程隐式终止
     
     //显式终止，如果主线程调用pthread_exit，它会等待所有其他对等线程终止，再终止主线程和进程。
-    pthread_exit(Null);
+    //pthread_exit(Null);
     
     //通过pthread_cancel终止另一个对等线程。
-    pthread_cancel(tid);
+    //pthread_cancel(tid);
 }
 
 void initRoutine() {

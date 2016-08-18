@@ -31,4 +31,26 @@
 
 #pragma mark - 截取字符串，防止表情字符被中间截断
 - (NSString *)truncateToLength:(NSInteger)maxLength;
+
+#pragma mark - 将阿拉伯数字转换为中文数字
++ (NSString *)translationArabicNum:(NSInteger)arabicNum;
+
+#pragma mark - 是否是纯字母或者纯数字
+- (BOOL)isPureFloat;
+- (BOOL)isPureInt; //检查是不是纯数字
+- (BOOL)hasAtLeastOneNumber; //至少有一位数字
+//检验字符串是否是 6-20位的字母和数字的组合
+- (BOOL)isValidatePassword;
+
+//判断是否为连续相同字符串，是返回yes
+- (BOOL)isContainSerialCharacters;
+#pragma mark - 是否是有效的移动电话号码
+-(BOOL)isValidateMobilePhoneNumber;
+
+#pragma mark - 是否是有效邮箱
+- (BOOL)isValidEmail;
+
+#pragma mark - 是否为400电话号码
+- (BOOL)isValidate400PhoneNumber;
+
 @end

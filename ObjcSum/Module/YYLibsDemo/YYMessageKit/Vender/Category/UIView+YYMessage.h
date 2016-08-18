@@ -17,9 +17,14 @@
 
 - (UIViewController*)viewController;
 
+
+
 #pragma mark - 圆形设置
 
 @property (nonatomic, assign) BOOL round;
+- (void)setToRounded;
+- (void)setToRounded:(CGFloat)radius;
+
 
 #pragma mark - view坐标和大小相关
 

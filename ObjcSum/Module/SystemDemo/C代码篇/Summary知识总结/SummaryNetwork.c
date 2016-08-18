@@ -84,7 +84,7 @@ int openClientFd(char *hostname, int port) {
 /**
  *  返回一个监听描述符，在port上接受连接请求。
  *
- *  @return @return 成功：0；失败：-1
+ *  @return 成功：0；失败：-1
  */
 int openListenFd(int port) {
     int listenfd, optval = -1;

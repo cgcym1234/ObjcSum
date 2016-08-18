@@ -22,7 +22,15 @@
 }
 
 - (BOOL)round {
-    return self.layer.cornerRadius == self.width/2;
+    return self.layer.cornerRadius == MIN(self.frame.size.width, self.frame.size.height)/2;
+}
+
+- (void)setToRounded {
+    [self setToRounded:MIN(self.frame.size.width, self.frame.size.height)/2];
+}
+- (void)setToRounded:(CGFloat)radius {
+    self.layer.cornerRadius = radius;
+    self.clipsToBounds = true;
 }
 
 - (void)setX:(CGFloat)x
