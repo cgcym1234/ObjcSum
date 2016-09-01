@@ -113,7 +113,6 @@
         case YYRefreshPositionRight: {
             /**
              在左右方向加刷新控件时，采用的方式是，将refreshView顺时针旋转90度，
-             
              旋转选择的是左上角那个点，所以这里x的要额外加refreshView的高度
              */
             x = MAX(_scrollView.contentSize.width, CGRectGetWidth(_scrollView.bounds)) + YYRefreshViewHeight;
