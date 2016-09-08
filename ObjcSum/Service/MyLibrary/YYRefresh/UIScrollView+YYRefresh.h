@@ -11,6 +11,11 @@
 
 @interface UIScrollView (YYRefresh)
 
+@property (nonatomic, strong) YYRefresh *yy_topRefresh;
+@property (nonatomic, strong) YYRefresh *yy_leftRefresh;
+@property (nonatomic, strong) YYRefresh *yy_bottomRefresh;
+@property (nonatomic, strong) YYRefresh *yy_rightRefresh;
+
 - (YYRefresh *)addYYRefreshAtPosition:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler;
 
 - (YYRefresh *)addYYRefreshAtPosition:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler config:(YYRefreshConfig *)config;

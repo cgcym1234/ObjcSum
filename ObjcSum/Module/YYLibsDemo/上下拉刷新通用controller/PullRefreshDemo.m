@@ -23,6 +23,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.scrollView];
     [self addRefresh];
+    [self.scrollView.yy_topRefresh beginRefresh];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -42,26 +43,26 @@
     [self.scrollView addYYRefreshAtPosition:YYRefreshPositionTop action:^(YYRefresh *refresh) {
         NSLog(@"YYRefreshPositionTop");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [refresh endRefreshing];
+            [refresh endRefresh];
         });
     } config:config];
      
     [self.scrollView addYYRefreshAtPosition:YYRefreshPositionBottom action:^(YYRefresh *refresh) {
         NSLog(@"YYPullRefreshPositionBottom");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [refresh endRefreshing];
+            [refresh endRefresh];
         });
     }];
     [self.scrollView addYYRefreshAtPosition:YYRefreshPositionRight action:^(YYRefresh *refresh) {
         NSLog(@"YYPullRefreshPositionRight");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [refresh endRefreshing];
+            [refresh endRefresh];
         });
     }];
     [self.scrollView addYYRefreshAtPosition:YYRefreshPositionLeft action:^(YYRefresh *refresh) {
         NSLog(@"YYRefreshPositionLeft");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [refresh endRefreshing];
+            [refresh endRefresh];
         });
     }];
 }
@@ -76,7 +77,6 @@
         scrollView.bounces = YES;
         scrollView.scrollEnabled = YES;
         scrollView.contentSize = [UIScreen mainScreen].bounds.size;
-//        scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _scrollView = scrollView;
         
     }

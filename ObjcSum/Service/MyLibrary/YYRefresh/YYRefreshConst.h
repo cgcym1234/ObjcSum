@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "YYRefreshConfig.h"
 
+
+#define DegreesToRadians(degrees) ((degrees * M_PI) / 180.0)
+
 typedef NS_ENUM(NSUInteger, YYRefreshPosition) {
-    YYRefreshPositionTop,
+    YYRefreshPositionTop = 1,
     YYRefreshPositionLeft,
     YYRefreshPositionBottom,
     YYRefreshPositionRight
@@ -31,23 +34,16 @@ typedef NS_ENUM(NSUInteger, YYRefreshState) {
 @protocol YYRefreshView <NSObject>
 
 @required
-- (void)showIdleWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
-- (void)showRedayWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
-- (void)showRefreshingWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
+- (void)showWithState:(YYRefreshState)state config:(YYRefreshConfig *)config animated:(BOOL)animated;
 
 @end
 
-#define DegreesToRadians(degrees) ((degrees * M_PI) / 180.0)
-
-// 文字颜色
-#define YYRefreshLabelTextColor [UIColor colorWithWhite:0.400 alpha:1.000]
-// 字体大小
-#define YYRefreshLabelFont [UIFont boldSystemFontOfSize:14]
+#pragma mark - [YYRefreshConfig defaultConfig] 默认值
 
 UIKIT_EXTERN const CGFloat YYRefreshViewHeight;
 UIKIT_EXTERN const CGFloat YYRefreshReadyOffset;
-UIKIT_EXTERN const CGFloat YYRefreshFastAnimationDuration;
-UIKIT_EXTERN const CGFloat YYRefreshSlowAnimationDuration;
+UIKIT_EXTERN const CGFloat YYRefreshAnimationDurationFast;
+UIKIT_EXTERN const CGFloat YYRefreshAnimationDurationSlow;
 
 UIKIT_EXTERN NSString *const YYRefreshKeyPathContentOffset;
 UIKIT_EXTERN NSString *const YYRefreshKeyPathContentInset;

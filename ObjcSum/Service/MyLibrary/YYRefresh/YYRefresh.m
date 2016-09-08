@@ -40,7 +40,7 @@
         _position = position;
         _actionHandler = actionHandler;
         _config = config ?: [YYRefreshConfig defaultConfig];
-        _refreshView = refreshView ?: [[YYRefreshView alloc] initWithConfig:_config postion:_position];
+        _refreshView = refreshView ?: [[YYRefreshView alloc] initWithPostion:_position];
         _state = YYRefreshStateIdle;
         [self setContext];
     }
@@ -49,6 +49,7 @@
 
 - (void)setContext {
     [self addSubview:_refreshView];
+    [_refreshView showWithState:YYRefreshStateIdle config:_config animated:NO];
 //    self.backgroundColor = [UIColor orangeColor];
 }
 
@@ -193,10 +194,10 @@
 
 #pragma mark - Public
 
-- (void)beginRefreshing {
+- (void)beginRefresh {
     if (_state != YYRefreshStateRefreshing) {
         self.state = YYRefreshStateRefreshing;
-        [UIView animateWithDuration:YYRefreshFastAnimationDuration animations:^{
+        [UIView animateWithDuration:_config.animationDurationFast animations:^{
             [self parkVisible:YES];
         } completion:^(BOOL finished) {
             [self executeRefreshingCallback];
@@ -204,9 +205,9 @@
     }
 }
 
-- (void)endRefreshing {
+- (void)endRefresh {
     if (_state == YYRefreshStateRefreshing) {
-        [UIView animateWithDuration:YYRefreshFastAnimationDuration animations:^{
+        [UIView animateWithDuration:_config.animationDurationFast animations:^{
             [self parkVisible:NO];
         } completion:^(BOOL finished) {
             self.state = YYRefreshStateIdle;
@@ -214,17 +215,10 @@
     }
 }
 
-- (void)setCustomRefreshView:(UIView<YYRefreshView> *)view {
-    _refreshView = view;
-}
-
-#pragma mark - Override
-
-
 #pragma mark - Private
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // 在刷新的refreshing状态
+    // 正在刷新的refreshing状态
     if (_state == YYRefreshStateRefreshing) {
         return;
     }
@@ -242,7 +236,7 @@
         // 即将刷新 && 手松开
         if (_state == YYRefreshStateReady) {
             // 开始刷新
-            [self beginRefreshing];
+            [self beginRefresh];
         }
     }
 }
@@ -255,47 +249,24 @@
 
 - (void)parkVisible:(BOOL)visible {
     UIEdgeInsets contentInset = self.scrollView.contentInset;
+    // 增加滚动区域
+    CGFloat contentOffset = visible ? YYRefreshViewHeight : -YYRefreshViewHeight;
     switch (_position) {
         case YYRefreshPositionTop:
-            // 增加滚动区域
-            visible ? (contentInset.top += YYRefreshViewHeight) : (contentInset.top -= YYRefreshViewHeight);
+            contentInset.top += contentOffset;
             break;
         case YYRefreshPositionBottom:
-            // 增加滚动区域
-            visible ? (contentInset.bottom += YYRefreshViewHeight) : (contentInset.bottom -= YYRefreshViewHeight);
+            contentInset.bottom += contentOffset;
             break;
         case YYRefreshPositionLeft:
-            // 增加滚动区域
-            visible ? (contentInset.left += YYRefreshViewHeight) : (contentInset.left -= YYRefreshViewHeight);
+            contentInset.left += contentOffset;
             break;
         case YYRefreshPositionRight:
-            // 增加滚动区域
-            visible ? (contentInset.right += YYRefreshViewHeight) : (contentInset.right -= YYRefreshViewHeight);
+            contentInset.right += contentOffset;
             break;
     }
     // 设置滚动位置
     self.scrollView.contentInset = contentInset;
-}
-
-
-- (BOOL)isScrolledToVisible {
-    switch (self.position) {
-        case YYRefreshPositionTop:
-        {
-            BOOL scrolledAboveContent = self.scrollView.contentOffset.y < 0.0;
-            return scrolledAboveContent && ![self isScrolledOverReadyOffset];
-        }
-        case YYRefreshPositionBottom:
-        {
-            BOOL scrolledBelowContent = self.scrollView.contentOffset.y > (self.scrollView.contentSize.height - self.scrollView.frame.size.height);
-            return scrolledBelowContent && ![self isScrolledOverReadyOffset];
-        }
-        case YYRefreshPositionLeft:
-        case YYRefreshPositionRight:
-            return ![self isScrolledOverReadyOffset];
-    }
-    
-    return NO;
 }
 
 - (BOOL)isScrolledOverReadyOffset {
@@ -325,33 +296,7 @@
         return;
     }
     _state = state;
-    switch (state) {
-        case YYRefreshStateIdle: {
-            [_refreshView showIdleWithConfig:_config animated:YES];
-            break;
-        }
-        case YYRefreshStateReady: {
-            [_refreshView showRedayWithConfig:_config animated:YES];
-            break;
-        }
-        case YYRefreshStateRefreshing: {
-            [_refreshView showRefreshingWithConfig:_config animated:YES];
-            break;
-        }
-    }
-}
-
-- (void)setPosition:(YYRefreshPosition)position {
-    _position = position;
-    
-//    switch (_position) {
-//        case YYRefreshPositionBottom:
-//        case YYRefreshPositionLeft:
-//            break;
-//        case YYRefreshPositionTop:
-//        case YYRefreshPositionRight:
-//            break;
-//    }
+    [_refreshView showWithState:state config:_config animated:YES];
 }
 
 #pragma mark - Getter

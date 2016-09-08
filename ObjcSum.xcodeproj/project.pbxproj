@@ -1036,6 +1036,12 @@
 		1FFC8DEE1C50DF6500B0C17A /* YYMessageCellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DED1C50DF6500B0C17A /* YYMessageCellImage.m */; };
 		1FFC8DF11C50DFC100B0C17A /* YYMessageImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DF01C50DFC100B0C17A /* YYMessageImageView.m */; };
 		1FFC8DF71C512EB900B0C17A /* YYMessageObjectImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC8DF61C512EB900B0C17A /* YYMessageObjectImage.m */; };
+		EE0A6BE11D8117E10091DC35 /* ReactiveCocoaDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6BE01D8117E10091DC35 /* ReactiveCocoaDemo.m */; };
+		EE0A6BE41D8135D10091DC35 /* ReactiveCocoaDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A6BE31D8135D10091DC35 /* ReactiveCocoaDemo.storyboard */; };
+		EE0A6BE71D81361D0091DC35 /* RWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6BE61D81361D0091DC35 /* RWViewController.m */; };
+		EE0A6BEA1D81369C0091DC35 /* kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0A6BE91D81369C0091DC35 /* kitten.jpg */; };
+		EE0A6BED1D8139320091DC35 /* RWSignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6BEC1D8139320091DC35 /* RWSignInService.m */; };
+		EE7E486A1D7926A400576A90 /* YYRefresh.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7E48691D7926A400576A90 /* YYRefresh.xcassets */; };
 		EEEAF11B1D77BA56006746BD /* SyntacticSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEAF11A1D77BA56006746BD /* SyntacticSugar.m */; };
 /* End PBXBuildFile section */
 
@@ -2165,6 +2171,15 @@
 		1FFC8DF21C512DF300B0C17A /* YYMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageObject.h; sourceTree = "<group>"; };
 		1FFC8DF51C512EB900B0C17A /* YYMessageObjectImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageObjectImage.h; sourceTree = "<group>"; };
 		1FFC8DF61C512EB900B0C17A /* YYMessageObjectImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageObjectImage.m; sourceTree = "<group>"; };
+		EE0A6BDF1D8117E10091DC35 /* ReactiveCocoaDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveCocoaDemo.h; sourceTree = "<group>"; };
+		EE0A6BE01D8117E10091DC35 /* ReactiveCocoaDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaDemo.m; sourceTree = "<group>"; };
+		EE0A6BE31D8135D10091DC35 /* ReactiveCocoaDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReactiveCocoaDemo.storyboard; sourceTree = "<group>"; };
+		EE0A6BE51D81361D0091DC35 /* RWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWViewController.h; sourceTree = "<group>"; };
+		EE0A6BE61D81361D0091DC35 /* RWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWViewController.m; sourceTree = "<group>"; };
+		EE0A6BE91D81369C0091DC35 /* kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten.jpg; sourceTree = "<group>"; };
+		EE0A6BEB1D8139320091DC35 /* RWSignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSignInService.h; sourceTree = "<group>"; };
+		EE0A6BEC1D8139320091DC35 /* RWSignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSignInService.m; sourceTree = "<group>"; };
+		EE7E48691D7926A400576A90 /* YYRefresh.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YYRefresh.xcassets; sourceTree = "<group>"; };
 		EEEAF1191D77BA56006746BD /* SyntacticSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntacticSugar.h; sourceTree = "<group>"; };
 		EEEAF11A1D77BA56006746BD /* SyntacticSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyntacticSugar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2407,6 +2422,7 @@
 				1F5ED1081D15893D007F1290 /* YYRefreshConst.m */,
 				1F50195E1D1921C8009631BC /* YYRefreshView.h */,
 				1F50195F1D1921C8009631BC /* YYRefreshView.m */,
+				EE7E48691D7926A400576A90 /* YYRefresh.xcassets */,
 			);
 			path = YYRefresh;
 			sourceTree = "<group>";
@@ -4544,6 +4560,7 @@
 				1FDD24001CA12BDF00FEA94A /* JSPatchDemo */,
 				1FDD23F91CA12B8700FEA94A /* ThirdLibraryDemo.h */,
 				1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */,
+				EE0A6BE21D8117E60091DC35 /* ReactiveCocoaDemo */,
 			);
 			path = ThirdLibraryDemo;
 			sourceTree = "<group>";
@@ -4668,6 +4685,29 @@
 				1F199A011C17F346000F690C /* sqlite3ext.h */,
 			);
 			path = sqlite3.9;
+			sourceTree = "<group>";
+		};
+		EE0A6BE21D8117E60091DC35 /* ReactiveCocoaDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A6BDF1D8117E10091DC35 /* ReactiveCocoaDemo.h */,
+				EE0A6BE01D8117E10091DC35 /* ReactiveCocoaDemo.m */,
+				EE0A6BE31D8135D10091DC35 /* ReactiveCocoaDemo.storyboard */,
+				EE0A6BE81D81363A0091DC35 /* 登录Demo */,
+			);
+			name = ReactiveCocoaDemo;
+			sourceTree = "<group>";
+		};
+		EE0A6BE81D81363A0091DC35 /* 登录Demo */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A6BE91D81369C0091DC35 /* kitten.jpg */,
+				EE0A6BE51D81361D0091DC35 /* RWViewController.h */,
+				EE0A6BE61D81361D0091DC35 /* RWViewController.m */,
+				EE0A6BEB1D8139320091DC35 /* RWSignInService.h */,
+				EE0A6BEC1D8139320091DC35 /* RWSignInService.m */,
+			);
+			name = "登录Demo";
 			sourceTree = "<group>";
 		};
 		EEEAF11C1D77BA6B006746BD /* OC语法糖 */ = {
@@ -4869,6 +4909,7 @@
 				1FDC2CD61C212CCB000BF77F /* YYNoDataView.xib in Resources */,
 				1FA4A5481BEC3C700076ECAA /* YYScrollSigmentDemo.xib in Resources */,
 				1F05D4541C3BB8F100C6DD29 /* YYMessage.xcassets in Resources */,
+				EE7E486A1D7926A400576A90 /* YYRefresh.xcassets in Resources */,
 				1FDD24051CA145AF00FEA94A /* Second.html in Resources */,
 				1FDC2CD31C212CCB000BF77F /* no_data_default@2x.png in Resources */,
 				1FDD240A1CA1482D00FEA94A /* JSPatchDemo.js in Resources */,
@@ -4886,6 +4927,7 @@
 				1F87A2A51CA3DD570001519E /* YYEmoticonInputView.xib in Resources */,
 				1F8B8A8B1BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				1F2F69181C9A56FC00A3F432 /* EmojisList.plist in Resources */,
+				EE0A6BEA1D81369C0091DC35 /* kitten.jpg in Resources */,
 				1F8B8A661BE2082300D81096 /* YYAlertGridViewCell.xib in Resources */,
 				1F8B8A001BE2058700D81096 /* Assets.xcassets in Resources */,
 				1F5A57F71C2BA37E000E9E04 /* imageResources.xcassets in Resources */,
@@ -4893,6 +4935,7 @@
 				1F8B8A641BE2082300D81096 /* YYAlertGridView.xib in Resources */,
 				1F8B8A5F1BE2082300D81096 /* YYAlertTable.xib in Resources */,
 				1F6872CA1C27EC63008BC6BE /* ic_radiobutton@2x.png in Resources */,
+				EE0A6BE41D8135D10091DC35 /* ReactiveCocoaDemo.storyboard in Resources */,
 				1F8B8ACA1BE2185F00D81096 /* YYHud.xcassets in Resources */,
 				1F8B8ACB1BE2185F00D81096 /* YYHud.xib in Resources */,
 				1F5A569A1C2B9F3A000E9E04 /* FastRecordVoiceInputView.xib in Resources */,
@@ -5727,6 +5770,7 @@
 				1F98C9451BE4BA64002EE116 /* UINavigationItem+ArrowBackButton.m in Sources */,
 				1F399E0B1D62A11900DF6908 /* YYTransitioningDelegate.m in Sources */,
 				1F5A56841C2B9F3A000E9E04 /* FastRecord.m in Sources */,
+				EE0A6BED1D8139320091DC35 /* RWSignInService.m in Sources */,
 				1F05D41E1C3A0AF100C6DD29 /* NSHTTPCookie+YYExtension.m in Sources */,
 				1F8B8A6C1BE2082300D81096 /* CountdownDemo.m in Sources */,
 				1F5A578B1C2BA091000E9E04 /* RACKVOChannel.m in Sources */,
@@ -5783,6 +5827,7 @@
 				1F5A57771C2BA091000E9E04 /* NSUserDefaults+RACSupport.m in Sources */,
 				1FAF6BA41CA4E25A00554A2A /* MethodForword.m in Sources */,
 				1F124DD71C60608700B281E4 /* AFSecurityPolicy.m in Sources */,
+				EE0A6BE71D81361D0091DC35 /* RWViewController.m in Sources */,
 				1F98C9951BE4BF39002EE116 /* UIView+MotionEffect.m in Sources */,
 				1F8B8AA91BE20F3400D81096 /* BaseNavigationController.m in Sources */,
 				1F8B8A6F1BE2082300D81096 /* FBEncryptorAES.m in Sources */,
@@ -5795,6 +5840,7 @@
 				1F399DFF1D629FAE00DF6908 /* UIImage+GIF.m in Sources */,
 				1F30EB751D517C9A001559B4 /* CDemoViewController.m in Sources */,
 				1F8B8A601BE2082300D81096 /* YYAlertTableCell.m in Sources */,
+				EE0A6BE11D8117E10091DC35 /* ReactiveCocoaDemo.m in Sources */,
 				1F8B8A721BE2082300D81096 /* YYThumbnailItem.m in Sources */,
 				1F5A576E1C2BA091000E9E04 /* NSObject+RACLifting.m in Sources */,
 				1FDC2CD41C212CCB000BF77F /* UIViewController+NoDataView.m in Sources */,

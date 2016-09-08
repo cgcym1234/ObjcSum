@@ -16,13 +16,8 @@
 @property (nonatomic, assign, readonly) YYRefreshState state;
 @property (nonatomic, strong) YYRefreshConfig *config;
 
-- (void)beginRefreshing;
-- (void)endRefreshing;
-
-/**
- 自定义RefreshView
- */
-- (void)setCustomRefreshView:(UIView<YYRefreshView> *)view;
+- (void)beginRefresh;
+- (void)endRefresh;
 
 - (instancetype)initWithScrollView:(UIScrollView *)scroll position:(YYRefreshPosition)position action:(void (^)(YYRefresh *refresh))actionHandler;
 

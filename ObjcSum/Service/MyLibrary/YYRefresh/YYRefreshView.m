@@ -10,6 +10,10 @@
 #import "YYRefreshConst.h"
 
 #pragma mark - Const
+// 文字颜色
+#define YYRefreshLabelTextColor [UIColor colorWithWhite:0.400 alpha:1.000]
+// 字体大小
+#define YYRefreshLabelFont [UIFont boldSystemFontOfSize:14]
 
 @interface YYRefreshView ()
 
@@ -18,6 +22,7 @@
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) NSString *currentText;
 
+
 @end
 
 @implementation YYRefreshView
@@ -25,19 +30,9 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithConfig:(YYRefreshConfig *)config postion:(YYRefreshPosition)postion {
+- (instancetype)initWithPostion:(YYRefreshPosition)postion {
     if (self = [super init]) {
-        switch (postion) {
-            case YYRefreshPositionBottom:
-            case YYRefreshPositionLeft:
-                self.imageView.image = [UIImage imageNamed:YYRefreshImageUp];
-                break;
-            case YYRefreshPositionTop:
-            case YYRefreshPositionRight:
-                self.imageView.image = [UIImage imageNamed:YYRefreshImageDown];
-                break;
-        }
-        self.textLabel.text = config.textIdle;
+        self.postion = postion;
         [self setContext];
     }
     return self;
@@ -68,10 +63,26 @@
     _refreshingView.center = center;
 }
 
+#pragma mark - YYRefreshView
+
+- (void)showWithState:(YYRefreshState)state config:(YYRefreshConfig *)config animated:(BOOL)animated {
+    switch (state) {
+        case YYRefreshStateIdle: {
+            [self showIdleWithConfig:config animated:animated];
+            break;
+        }
+        case YYRefreshStateReady: {
+            [self showRedayWithConfig:config animated:animated];
+            break;
+        }
+        case YYRefreshStateRefreshing: {
+            [self showRefreshingWithConfig:config animated:animated];
+            break;
+        }
+    }
+}
+
 #pragma mark - Private
-
-
-#pragma mark - Public
 
 - (void)showIdleWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated {
     void (^action)(void) = ^{
@@ -79,7 +90,7 @@
     };
     
     if (animated) {
-        [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:action completion:nil];
+        [UIView animateWithDuration:config.animationDurationSlow animations:action completion:nil];
     } else {
         action();
     }
@@ -96,7 +107,7 @@
     };
     
     if (animated) {
-        [UIView animateWithDuration:YYRefreshSlowAnimationDuration animations:action completion:nil];
+        [UIView animateWithDuration:config.animationDurationSlow animations:action completion:nil];
     } else {
         action();
     }
@@ -125,6 +136,23 @@
     _textLabel.text = currentText;
     [_textLabel sizeToFit];
     [self layoutIfNeeded];
+}
+
+- (void)setPostion:(YYRefreshPosition)postion {
+    if (_postion == postion) {
+        return;
+    }
+    _postion = postion;
+    switch (postion) {
+        case YYRefreshPositionBottom:
+        case YYRefreshPositionLeft:
+            self.imageView.image = [UIImage imageNamed:YYRefreshImageUp];
+            break;
+        case YYRefreshPositionTop:
+        case YYRefreshPositionRight:
+            self.imageView.image = [UIImage imageNamed:YYRefreshImageDown];
+            break;
+    }
 }
 
 #pragma mark - Getter

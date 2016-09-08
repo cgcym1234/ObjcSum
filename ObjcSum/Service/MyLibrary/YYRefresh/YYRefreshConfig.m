@@ -16,7 +16,11 @@
     config.textIdle = YYRefreshIdleText;
     config.textReady = YYRefreshReadyText;
     config.textRefreshing = YYRefreshRefreshingText;
+    
+    config.viewHeight = YYRefreshViewHeight;
     config.readyOffset = YYRefreshReadyOffset;
+    config.animationDurationFast = YYRefreshAnimationDurationFast;
+    config.animationDurationSlow = YYRefreshAnimationDurationSlow;
     return config;
 }
 

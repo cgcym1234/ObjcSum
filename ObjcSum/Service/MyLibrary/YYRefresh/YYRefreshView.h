@@ -12,11 +12,9 @@
 
 @interface YYRefreshView : UIView<YYRefreshView>
 
-- (instancetype)initWithConfig:(YYRefreshConfig *)config postion:(YYRefreshPosition)postion;
+@property (nonatomic, assign) YYRefreshPosition postion;
 
-- (void)showIdleWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
-- (void)showRedayWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
-- (void)showRefreshingWithConfig:(YYRefreshConfig *)config animated:(BOOL)animated;
-
+- (instancetype)initWithPostion:(YYRefreshPosition)postion;
+- (void)showWithState:(YYRefreshState)state config:(YYRefreshConfig *)config animated:(BOOL)animated;
 
 @end
