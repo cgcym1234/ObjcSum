@@ -4804,6 +4804,7 @@
 					1F8B89EF1BE2058600D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = R6XRM4JTNP;
+						ProvisioningStyle = Automatic;
 					};
 					1F8B8A081BE2058700D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -6104,6 +6105,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R6XRM4JTNP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6121,6 +6123,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -6131,6 +6134,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R6XRM4JTNP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6148,6 +6152,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

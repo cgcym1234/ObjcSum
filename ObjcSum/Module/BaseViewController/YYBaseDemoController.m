@@ -23,7 +23,6 @@
     UIView *footerView = [[UIView alloc] init];
     footerView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = footerView;
-    UILabel *b;
 }
 
 
