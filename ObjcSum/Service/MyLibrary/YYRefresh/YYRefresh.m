@@ -266,26 +266,25 @@
     switch (_position) {
         case YYRefreshPositionTop:
             contentInset.top += offset;
-            contentOffset.y -= offset;
+            contentOffset.y = visible ? -_config.readyOffset : 0;
             break;
         case YYRefreshPositionBottom:
             contentInset.bottom += offset;
-            contentOffset.y += offset;
             break;
         case YYRefreshPositionLeft:
             contentInset.left += offset;
-            contentOffset.x -= offset;
+            contentOffset.x = visible ? -_config.readyOffset : 0;
             break;
         case YYRefreshPositionRight:
             contentInset.right += offset;
-            contentOffset.x += offset;
             break;
     }
-    // 增加滚动区域
-    self.scrollView.contentInset = contentInset;
     
     // 设置滚动位置
     self.scrollView.contentOffset = contentOffset;
+    
+    // 增加滚动区域
+    self.scrollView.contentInset = contentInset;
 }
 
 - (BOOL)isScrolledOverReadyOffset {

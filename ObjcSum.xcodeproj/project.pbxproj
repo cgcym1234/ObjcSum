@@ -1042,7 +1042,24 @@
 		EE0A6BEA1D81369C0091DC35 /* kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0A6BE91D81369C0091DC35 /* kitten.jpg */; };
 		EE0A6BED1D8139320091DC35 /* RWSignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6BEC1D8139320091DC35 /* RWSignInService.m */; };
 		EE7E486A1D7926A400576A90 /* YYRefresh.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7E48691D7926A400576A90 /* YYRefresh.xcassets */; };
+		EE9E0D451D8FB51A0035A78B /* YYXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9E0D441D8FB51A0035A78B /* YYXibView.m */; };
 		EEEAF11B1D77BA56006746BD /* SyntacticSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEAF11A1D77BA56006746BD /* SyntacticSugar.m */; };
+		EEF0FCAB1D95226700CAAD95 /* LocalConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC8F1D95226700CAAD95 /* LocalConnection.m */; };
+		EEF0FCAC1D95226700CAAD95 /* FSMEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC931D95226700CAAD95 /* FSMEngine.m */; };
+		EEF0FCAD1D95226700CAAD95 /* FSMStateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC951D95226700CAAD95 /* FSMStateUtil.m */; };
+		EEF0FCAE1D95226700CAAD95 /* ReachState.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC971D95226700CAAD95 /* ReachState.m */; };
+		EEF0FCAF1D95226700CAAD95 /* ReachStateLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC991D95226700CAAD95 /* ReachStateLoading.m */; };
+		EEF0FCB01D95226700CAAD95 /* ReachStateUnloaded.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC9B1D95226700CAAD95 /* ReachStateUnloaded.m */; };
+		EEF0FCB11D95226700CAAD95 /* ReachStateUnReachable.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC9D1D95226700CAAD95 /* ReachStateUnReachable.m */; };
+		EEF0FCB21D95226700CAAD95 /* ReachStateWIFI.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FC9F1D95226700CAAD95 /* ReachStateWIFI.m */; };
+		EEF0FCB31D95226700CAAD95 /* ReachStateWWAN.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCA11D95226700CAAD95 /* ReachStateWWAN.m */; };
+		EEF0FCB41D95226700CAAD95 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF0FCA21D95226700CAAD95 /* Info.plist */; };
+		EEF0FCB51D95226700CAAD95 /* PingFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCA51D95226700CAAD95 /* PingFoundation.m */; };
+		EEF0FCB61D95226700CAAD95 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCA71D95226700CAAD95 /* PingHelper.m */; };
+		EEF0FCB71D95226700CAAD95 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCA81D95226700CAAD95 /* README.md */; };
+		EEF0FCB81D95226700CAAD95 /* RealReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCAA1D95226700CAAD95 /* RealReachability.m */; };
+		EEF0FCBB1D9522DB00CAAD95 /* RealReachabilityDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0FCBA1D9522DB00CAAD95 /* RealReachabilityDemo.m */; };
+		EEF0FCBD1D95251400CAAD95 /* RealReachabilityDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF0FCBC1D95251400CAAD95 /* RealReachabilityDemo.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2180,8 +2197,40 @@
 		EE0A6BEB1D8139320091DC35 /* RWSignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSignInService.h; sourceTree = "<group>"; };
 		EE0A6BEC1D8139320091DC35 /* RWSignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSignInService.m; sourceTree = "<group>"; };
 		EE7E48691D7926A400576A90 /* YYRefresh.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YYRefresh.xcassets; sourceTree = "<group>"; };
+		EE9E0D431D8FB51A0035A78B /* YYXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYXibView.h; sourceTree = "<group>"; };
+		EE9E0D441D8FB51A0035A78B /* YYXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYXibView.m; sourceTree = "<group>"; };
 		EEEAF1191D77BA56006746BD /* SyntacticSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntacticSugar.h; sourceTree = "<group>"; };
 		EEEAF11A1D77BA56006746BD /* SyntacticSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyntacticSugar.m; sourceTree = "<group>"; };
+		EEF0FC8E1D95226700CAAD95 /* LocalConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalConnection.h; sourceTree = "<group>"; };
+		EEF0FC8F1D95226700CAAD95 /* LocalConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalConnection.m; sourceTree = "<group>"; };
+		EEF0FC911D95226700CAAD95 /* FSMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMDefines.h; sourceTree = "<group>"; };
+		EEF0FC921D95226700CAAD95 /* FSMEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMEngine.h; sourceTree = "<group>"; };
+		EEF0FC931D95226700CAAD95 /* FSMEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMEngine.m; sourceTree = "<group>"; };
+		EEF0FC941D95226700CAAD95 /* FSMStateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMStateUtil.h; sourceTree = "<group>"; };
+		EEF0FC951D95226700CAAD95 /* FSMStateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMStateUtil.m; sourceTree = "<group>"; };
+		EEF0FC961D95226700CAAD95 /* ReachState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachState.h; sourceTree = "<group>"; };
+		EEF0FC971D95226700CAAD95 /* ReachState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachState.m; sourceTree = "<group>"; };
+		EEF0FC981D95226700CAAD95 /* ReachStateLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateLoading.h; sourceTree = "<group>"; };
+		EEF0FC991D95226700CAAD95 /* ReachStateLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateLoading.m; sourceTree = "<group>"; };
+		EEF0FC9A1D95226700CAAD95 /* ReachStateUnloaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateUnloaded.h; sourceTree = "<group>"; };
+		EEF0FC9B1D95226700CAAD95 /* ReachStateUnloaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateUnloaded.m; sourceTree = "<group>"; };
+		EEF0FC9C1D95226700CAAD95 /* ReachStateUnReachable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateUnReachable.h; sourceTree = "<group>"; };
+		EEF0FC9D1D95226700CAAD95 /* ReachStateUnReachable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateUnReachable.m; sourceTree = "<group>"; };
+		EEF0FC9E1D95226700CAAD95 /* ReachStateWIFI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateWIFI.h; sourceTree = "<group>"; };
+		EEF0FC9F1D95226700CAAD95 /* ReachStateWIFI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateWIFI.m; sourceTree = "<group>"; };
+		EEF0FCA01D95226700CAAD95 /* ReachStateWWAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateWWAN.h; sourceTree = "<group>"; };
+		EEF0FCA11D95226700CAAD95 /* ReachStateWWAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateWWAN.m; sourceTree = "<group>"; };
+		EEF0FCA21D95226700CAAD95 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF0FCA41D95226700CAAD95 /* PingFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingFoundation.h; sourceTree = "<group>"; };
+		EEF0FCA51D95226700CAAD95 /* PingFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingFoundation.m; sourceTree = "<group>"; };
+		EEF0FCA61D95226700CAAD95 /* PingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingHelper.h; sourceTree = "<group>"; };
+		EEF0FCA71D95226700CAAD95 /* PingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingHelper.m; sourceTree = "<group>"; };
+		EEF0FCA81D95226700CAAD95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EEF0FCA91D95226700CAAD95 /* RealReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealReachability.h; sourceTree = "<group>"; };
+		EEF0FCAA1D95226700CAAD95 /* RealReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
+		EEF0FCB91D9522DB00CAAD95 /* RealReachabilityDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealReachabilityDemo.h; sourceTree = "<group>"; };
+		EEF0FCBA1D9522DB00CAAD95 /* RealReachabilityDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachabilityDemo.m; sourceTree = "<group>"; };
+		EEF0FCBC1D95251400CAAD95 /* RealReachabilityDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealReachabilityDemo.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4013,6 +4062,7 @@
 		1F8B8A831BE20BAF00D81096 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EEF0FC8C1D95226700CAAD95 /* RealReachability */,
 				1F399DD31D629FAE00DF6908 /* SDWebImage */,
 				1F124DB21C60608700B281E4 /* AFNetworking */,
 				1F98C9591BE4BD7B002EE116 /* Aspects */,
@@ -4166,6 +4216,8 @@
 				1F8B8A8C1BE20D1500D81096 /* YYTextView */,
 				1F6872AB1C27CB1C008BC6BE /* YYTextViewTimePicker */,
 				1F364DD11D2226DA006B8412 /* YYView */,
+				EE9E0D431D8FB51A0035A78B /* YYXibView.h */,
+				EE9E0D441D8FB51A0035A78B /* YYXibView.m */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -4561,6 +4613,7 @@
 				1FDD23F91CA12B8700FEA94A /* ThirdLibraryDemo.h */,
 				1FDD23FA1CA12B8700FEA94A /* ThirdLibraryDemo.m */,
 				EE0A6BE21D8117E60091DC35 /* ReactiveCocoaDemo */,
+				EEF0FCBE1D95257D00CAAD95 /* RealReachabilityDemo */,
 			);
 			path = ThirdLibraryDemo;
 			sourceTree = "<group>";
@@ -4717,6 +4770,74 @@
 				EEEAF11A1D77BA56006746BD /* SyntacticSugar.m */,
 			);
 			name = "OC语法糖";
+			sourceTree = "<group>";
+		};
+		EEF0FC8C1D95226700CAAD95 /* RealReachability */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0FC8D1D95226700CAAD95 /* Connection */,
+				EEF0FC901D95226700CAAD95 /* FSM */,
+				EEF0FCA21D95226700CAAD95 /* Info.plist */,
+				EEF0FCA31D95226700CAAD95 /* Ping */,
+				EEF0FCA91D95226700CAAD95 /* RealReachability.h */,
+				EEF0FCAA1D95226700CAAD95 /* RealReachability.m */,
+			);
+			path = RealReachability;
+			sourceTree = "<group>";
+		};
+		EEF0FC8D1D95226700CAAD95 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0FC8E1D95226700CAAD95 /* LocalConnection.h */,
+				EEF0FC8F1D95226700CAAD95 /* LocalConnection.m */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		EEF0FC901D95226700CAAD95 /* FSM */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0FC911D95226700CAAD95 /* FSMDefines.h */,
+				EEF0FC921D95226700CAAD95 /* FSMEngine.h */,
+				EEF0FC931D95226700CAAD95 /* FSMEngine.m */,
+				EEF0FC941D95226700CAAD95 /* FSMStateUtil.h */,
+				EEF0FC951D95226700CAAD95 /* FSMStateUtil.m */,
+				EEF0FC961D95226700CAAD95 /* ReachState.h */,
+				EEF0FC971D95226700CAAD95 /* ReachState.m */,
+				EEF0FC981D95226700CAAD95 /* ReachStateLoading.h */,
+				EEF0FC991D95226700CAAD95 /* ReachStateLoading.m */,
+				EEF0FC9A1D95226700CAAD95 /* ReachStateUnloaded.h */,
+				EEF0FC9B1D95226700CAAD95 /* ReachStateUnloaded.m */,
+				EEF0FC9C1D95226700CAAD95 /* ReachStateUnReachable.h */,
+				EEF0FC9D1D95226700CAAD95 /* ReachStateUnReachable.m */,
+				EEF0FC9E1D95226700CAAD95 /* ReachStateWIFI.h */,
+				EEF0FC9F1D95226700CAAD95 /* ReachStateWIFI.m */,
+				EEF0FCA01D95226700CAAD95 /* ReachStateWWAN.h */,
+				EEF0FCA11D95226700CAAD95 /* ReachStateWWAN.m */,
+			);
+			path = FSM;
+			sourceTree = "<group>";
+		};
+		EEF0FCA31D95226700CAAD95 /* Ping */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0FCA41D95226700CAAD95 /* PingFoundation.h */,
+				EEF0FCA51D95226700CAAD95 /* PingFoundation.m */,
+				EEF0FCA61D95226700CAAD95 /* PingHelper.h */,
+				EEF0FCA71D95226700CAAD95 /* PingHelper.m */,
+				EEF0FCA81D95226700CAAD95 /* README.md */,
+			);
+			path = Ping;
+			sourceTree = "<group>";
+		};
+		EEF0FCBE1D95257D00CAAD95 /* RealReachabilityDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0FCB91D9522DB00CAAD95 /* RealReachabilityDemo.h */,
+				EEF0FCBA1D9522DB00CAAD95 /* RealReachabilityDemo.m */,
+				EEF0FCBC1D95251400CAAD95 /* RealReachabilityDemo.xib */,
+			);
+			name = RealReachabilityDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4911,11 +5032,13 @@
 				1FA4A5481BEC3C700076ECAA /* YYScrollSigmentDemo.xib in Resources */,
 				1F05D4541C3BB8F100C6DD29 /* YYMessage.xcassets in Resources */,
 				EE7E486A1D7926A400576A90 /* YYRefresh.xcassets in Resources */,
+				EEF0FCBD1D95251400CAAD95 /* RealReachabilityDemo.xib in Resources */,
 				1FDD24051CA145AF00FEA94A /* Second.html in Resources */,
 				1FDC2CD31C212CCB000BF77F /* no_data_default@2x.png in Resources */,
 				1FDD240A1CA1482D00FEA94A /* JSPatchDemo.js in Resources */,
 				1F1037311C8FC94E0021CAC7 /* EventDemo.storyboard in Resources */,
 				1F6872C21C27E881008BC6BE /* YYMultiSelectTable.xib in Resources */,
+				EEF0FCB41D95226700CAAD95 /* Info.plist in Resources */,
 				1F5B67BA1CACC583003CFD75 /* SimpleGestureRecognizers.xib in Resources */,
 				1FA4A5421BEC3B9D0076ECAA /* YYScrollSigmentCell.xib in Resources */,
 				1F5B67B21CACC03F003CFD75 /* rotation.png in Resources */,
@@ -5468,7 +5591,9 @@
 				1F124DDC1C60608700B281E4 /* AFImageDownloader.m in Sources */,
 				1F8B8AA21BE20E3100D81096 /* DTTimePeriod.m in Sources */,
 				1F160BC01C32284600EDDAA4 /* SerialisationTest.m in Sources */,
+				EEF0FCB71D95226700CAAD95 /* README.md in Sources */,
 				1F1037341C8FCAB10021CAC7 /* TouchEventDemo.m in Sources */,
+				EEF0FCAE1D95226700CAAD95 /* ReachState.m in Sources */,
 				1F792CC31C8A946D00EE70D4 /* YYMessageAudioIndicatorView.m in Sources */,
 				1FAC3C291C0D75CA0007520F /* NSNotificationCenter+YYExtension.m in Sources */,
 				1F9829C31BE70DFD00AF6E3F /* YYHttpRequestSerializer.m in Sources */,
@@ -5580,6 +5705,7 @@
 				1F45E3F41C20132400938B2E /* YYFileHash.m in Sources */,
 				1F5B67AD1CACBED1003CFD75 /* SimpleGestureRecognizers.m in Sources */,
 				1F199A021C17F346000F690C /* sqlite3.c in Sources */,
+				EEF0FCAC1D95226700CAAD95 /* FSMEngine.m in Sources */,
 				1F5A57751C2BA091000E9E04 /* NSString+RACSupport.m in Sources */,
 				1F30EB6F1D517C41001559B4 /* SummaryConcurrency.c in Sources */,
 				1F5A576F1C2BA091000E9E04 /* NSObject+RACPropertySubscribing.m in Sources */,
@@ -5594,6 +5720,7 @@
 				1F2DA25C1C197B1E00126FB1 /* MJRefreshBackGifFooter.m in Sources */,
 				1F5A58001C2BA37E000E9E04 /* MWTapDetectingImageView.m in Sources */,
 				1F399DF71D629FAE00DF6908 /* SDImageCache.m in Sources */,
+				EEF0FCB31D95226700CAAD95 /* ReachStateWWAN.m in Sources */,
 				1F30EB6C1D517C41001559B4 /* YYUtil.c in Sources */,
 				1F5A57EE1C2BA37E000E9E04 /* DNImageFlowViewController.m in Sources */,
 				1F98C94B1BE4BBAE002EE116 /* ApplicationInfo.m in Sources */,
@@ -5640,6 +5767,7 @@
 				1F8B8AD41BE360A700D81096 /* SystemDemo.m in Sources */,
 				1F5A568A1C2B9F3A000E9E04 /* FastRecordCellModel.m in Sources */,
 				1F124DE11C60608700B281E4 /* UIProgressView+AFNetworking.m in Sources */,
+				EEF0FCB81D95226700CAAD95 /* RealReachability.m in Sources */,
 				1F45E3FB1C20132400938B2E /* YYTimer.m in Sources */,
 				1F5A57A41C2BA091000E9E04 /* RACTuple.m in Sources */,
 				1F45E3A31C1EBAD200938B2E /* UIImage+YYExtension.m in Sources */,
@@ -5648,10 +5776,12 @@
 				1F5ED1091D15893D007F1290 /* YYRefreshConst.m in Sources */,
 				1F65D5021C0FD99F001216ED /* YYDiskCache.m in Sources */,
 				1F8B8A701BE2082300D81096 /* GTMBase64.m in Sources */,
+				EE9E0D451D8FB51A0035A78B /* YYXibView.m in Sources */,
 				1F8B8AA31BE20E3100D81096 /* DTTimePeriodChain.m in Sources */,
 				1FDC2CD91C215AD7000BF77F /* UIView+YYChrysanthemum.m in Sources */,
 				1F5A57811C2BA091000E9E04 /* RACDynamicSequence.m in Sources */,
 				1F199A161C190981000F690C /* ObjectiveCDemo.m in Sources */,
+				EEF0FCB51D95226700CAAD95 /* PingFoundation.m in Sources */,
 				1F5A57971C2BA091000E9E04 /* RACSerialDisposable.m in Sources */,
 				1FF64A5A1C33CE0C00E3B562 /* UILabel+YYMessage.m in Sources */,
 				1F5A57B21C2BA091000E9E04 /* UIImagePickerController+RACSignalSupport.m in Sources */,
@@ -5747,6 +5877,7 @@
 				1F98C99C1BE4BFB8002EE116 /* SSKeychainQuery.m in Sources */,
 				1F2DA2571C197B1E00126FB1 /* MJRefreshFooter.m in Sources */,
 				1F5A57AD1C2BA091000E9E04 /* UICollectionReusableView+RACSignalSupport.m in Sources */,
+				EEF0FCB11D95226700CAAD95 /* ReachStateUnReachable.m in Sources */,
 				1F5A577A1C2BA091000E9E04 /* RACBlockTrampoline.m in Sources */,
 				1F45E3A61C1EBC7B00938B2E /* CALayer+YYExtension.m in Sources */,
 				1F5A577C1C2BA091000E9E04 /* RACCommand.m in Sources */,
@@ -5812,10 +5943,12 @@
 				1F5A57741C2BA091000E9E04 /* NSString+RACSequenceAdditions.m in Sources */,
 				1F399DFC1D629FAE00DF6908 /* SDWebImageManager.m in Sources */,
 				1F45E3C61C1FFA2700938B2E /* UIDevice+YYExtension.m in Sources */,
+				EEF0FCAD1D95226700CAAD95 /* FSMStateUtil.m in Sources */,
 				1F139B541C873A17005E89EB /* iOS7Demo.m in Sources */,
 				1F5A57F51C2BA37E000E9E04 /* UIView+DNImagePicker.m in Sources */,
 				1F5A57AF1C2BA091000E9E04 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				1F5A57BB1C2BA091000E9E04 /* UITextView+RACSignalSupport.m in Sources */,
+				EEF0FCAF1D95226700CAAD95 /* ReachStateLoading.m in Sources */,
 				1F8B8A761BE20AD700D81096 /* UIViewController+Extension.m in Sources */,
 				1F98C9601BE4BD89002EE116 /* UncaughtExceptionHandler.m in Sources */,
 				1FFC8DF11C50DFC100B0C17A /* YYMessageImageView.m in Sources */,
@@ -5842,6 +5975,7 @@
 				1F30EB751D517C9A001559B4 /* CDemoViewController.m in Sources */,
 				1F8B8A601BE2082300D81096 /* YYAlertTableCell.m in Sources */,
 				EE0A6BE11D8117E10091DC35 /* ReactiveCocoaDemo.m in Sources */,
+				EEF0FCB21D95226700CAAD95 /* ReachStateWIFI.m in Sources */,
 				1F8B8A721BE2082300D81096 /* YYThumbnailItem.m in Sources */,
 				1F5A576E1C2BA091000E9E04 /* NSObject+RACLifting.m in Sources */,
 				1FDC2CD41C212CCB000BF77F /* UIViewController+NoDataView.m in Sources */,
@@ -5872,6 +6006,7 @@
 				1F45E40B1C20137B00938B2E /* NSObject+YYModel.m in Sources */,
 				1F2DA2661C197B1E00126FB1 /* UIView+MJExtension.m in Sources */,
 				1F67890B1CAB61AD00BF17DD /* ShowRoomCell.m in Sources */,
+				EEF0FCB61D95226700CAAD95 /* PingHelper.m in Sources */,
 				1F5A57621C2BA091000E9E04 /* MKAnnotationView+RACSignalSupport.m in Sources */,
 				1F05D4571C3BB93600C6DD29 /* UIImage+YYMessage.m in Sources */,
 				1FD1DD921BFC6221001AE9BE /* UITableView+CustomSetting.m in Sources */,
@@ -5887,12 +6022,15 @@
 				1F8B8A8A1BE20D0D00D81096 /* YYInputAccessoryViewWithCancel.m in Sources */,
 				1F01EB1B1BFE19D6009919F2 /* YYKeyValueStore.m in Sources */,
 				1F2DA25A1C197B1E00126FB1 /* MJRefreshAutoNormalFooter.m in Sources */,
+				EEF0FCBB1D9522DB00CAAD95 /* RealReachabilityDemo.m in Sources */,
 				1F45E38B1C1E571E00938B2E /* AppInfo.m in Sources */,
 				1F01EB181BFE1997009919F2 /* FMResultSet.m in Sources */,
 				1F5A57FF1C2BA37E000E9E04 /* JKPromptView.m in Sources */,
 				1F075BBC1C44DD3F0013C815 /* YYKeyboardManager.m in Sources */,
 				1F158D2F1C78AAD7008AD080 /* YYMessageMoreViewCell.m in Sources */,
+				EEF0FCAB1D95226700CAAD95 /* LocalConnection.m in Sources */,
 				1FAC3C1D1C0D44B00007520F /* NSArray+YYExtension.m in Sources */,
+				EEF0FCB01D95226700CAAD95 /* ReachStateUnloaded.m in Sources */,
 				1F9829CA1BE715DC00AF6E3F /* YYUrlCache.m in Sources */,
 				1F5A56991C2B9F3A000E9E04 /* FastRecordVoiceInputView.m in Sources */,
 				1F364DC61D220740006B8412 /* YYLabel.m in Sources */,
