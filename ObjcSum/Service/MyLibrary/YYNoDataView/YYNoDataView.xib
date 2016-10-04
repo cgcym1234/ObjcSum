@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,37 +14,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-S5-b3e">
-                    <rect key="frame" x="0.0" y="251.5" width="375" height="164"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="375" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-w4-kn4">
-                            <rect key="frame" x="0.0" y="106" width="375" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-Dp-DQY">
-                            <rect key="frame" x="137.5" y="0.0" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="iek-8E-96o"/>
                                 <constraint firstAttribute="width" secondItem="EKL-Dp-DQY" secondAttribute="height" multiplier="1:1" id="nT1-H5-IMN"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ4-Ly-vUU">
-                            <rect key="frame" x="129" y="132" width="117" height="32"/>
-                            <color key="backgroundColor" red="0.84313725490196079" green="0.035294117647058823" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.84313725490196079" green="0.035294117647058823" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="117" id="FAr-r0-blP"/>
                                 <constraint firstAttribute="height" constant="32" id="o7Z-Iv-yV4"/>
                             </constraints>
                             <state key="normal" title="Button">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="didClickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="PtW-T9-11A"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="EKL-Dp-DQY" firstAttribute="top" secondItem="fjM-S5-b3e" secondAttribute="top" id="8Oi-LX-QkD"/>
                         <constraint firstAttribute="trailing" secondItem="mY8-w4-kn4" secondAttribute="trailing" id="9U8-3T-ggj"/>
@@ -56,14 +53,13 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fjM-S5-b3e" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CKh-UR-88F"/>
                 <constraint firstItem="fjM-S5-b3e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nnn-jV-htc"/>
                 <constraint firstItem="fjM-S5-b3e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YzT-xj-mSS"/>
                 <constraint firstAttribute="trailing" secondItem="fjM-S5-b3e" secondAttribute="trailing" id="yME-Rf-boQ"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
                 <outlet property="button" destination="EQ4-Ly-vUU" id="MGl-pg-HV1"/>
                 <outlet property="buttonHeight" destination="o7Z-Iv-yV4" id="qFz-XC-qLk"/>

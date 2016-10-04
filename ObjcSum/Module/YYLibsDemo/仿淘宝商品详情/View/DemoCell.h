@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DemoCellModel.h"
+#import "JMRenderableTableView.h"
 
 
 @protocol DemoCellDelegate <NSObject>
@@ -16,11 +16,11 @@
 
 @end
 
-@interface DemoCell : UITableViewCell<GoodsDetailCellDelegate>
+@interface DemoCell : UITableViewCell<JMRenderableCell>
 
 @property (nonatomic, weak) IBOutlet UILabel *name;
 @property (nonatomic, weak) id<DemoCellDelegate> delegate;
 
-- (void)updateWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inView:(UIView *)view;
+- (void)updateWithCellModel:(id)model indexPath:(NSIndexPath *)indexPath containerView:(UIView *)view;
 
 @end

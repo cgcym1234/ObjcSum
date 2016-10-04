@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GoodsDetail.h"
+#import "JMRenderableTableView.h"
 
 
-@interface DemoCellModel : NSObject<GoodsDetailModel>
+@interface DemoCellModel : NSObject<JMRenderableCellModel>
 
-@property (nonatomic, strong, readonly) NSString *cellIdentifier;
+@property (nonatomic, strong) Class cellClass;
 
 @property (nonatomic, strong) NSString *text;
 

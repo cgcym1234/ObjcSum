@@ -7,11 +7,12 @@
 //
 
 #import "DemoCellModel.h"
+#import "DemoCell.h"
 
 @implementation DemoCellModel
 
-- (NSString *)cellIdentifier {
-    return @"DemoCell";
+- (Class)cellClass {
+    return [DemoCell class];
 }
 
 @end

@@ -8,7 +8,8 @@
 
 #import "RealReachabilityDemo.h"
 #import "RealReachability.h"
-
+#import <MobileCoreServices/MobileCoreServices.h>
+#include <objc/runtime.h>
 @interface RealReachabilityDemo ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flagLabel;

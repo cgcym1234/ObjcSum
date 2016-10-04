@@ -10,14 +10,13 @@
 
 #import "GoodsDetail.h"
 #import "GoodsDetailNomalViewController.h"
-#import "GoodsDetailBaseViewController.h"
 #import "GoodsDetailGraphicViewController.h"
 
 @interface GoodsDetailContainer ()
 <GoodsDetailEventDelegate>
 
 @property (nonatomic, strong) UIScrollView *containerScrollView;
-@property (nonatomic, strong) GoodsDetailBaseViewController *goodsController;
+@property (nonatomic, strong) GoodsDetailNomalViewController *goodsController;
 @property (nonatomic, strong) GoodsDetailGraphicViewController *goodsGrapicController;
 @property (nonatomic, assign) GoodsDetailType type;
 
@@ -138,18 +137,9 @@
 
 #pragma mark - Getter
 
-- (GoodsDetailBaseViewController *)goodsController {
+- (GoodsDetailNomalViewController *)goodsController {
     if (!_goodsController) {
-        GoodsDetailBaseViewController *goodsController;
-        switch (_type) {
-            case GoodsDetailTypeNomal: {
-                goodsController = [GoodsDetailNomalViewController new];
-                break;
-            }
-            case GoodsDetailTypeAuction: {
-                break;
-            }
-        }
+        GoodsDetailNomalViewController *goodsController = [GoodsDetailNomalViewController new];
         _goodsController = goodsController;
         _goodsController.delegate = self;
     }

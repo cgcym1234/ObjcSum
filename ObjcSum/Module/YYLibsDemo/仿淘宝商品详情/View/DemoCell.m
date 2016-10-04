@@ -7,13 +7,11 @@
 //
 
 #import "DemoCell.h"
+#import "DemoCellModel.h"
 
 @implementation DemoCell
 
-- (void)awakeFromNib {
-}
-
-- (void)updateWithModel:(id)model atIndexPath:(NSIndexPath *)indexPath inView:(UIView *)view {
+- (void)updateWithCellModel:(id)model indexPath:(NSIndexPath *)indexPath containerView:(UIView *)view {
     DemoCellModel *item = model;
     self.name.text = item.text;
 }

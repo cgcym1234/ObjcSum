@@ -6,9 +6,17 @@
 //  Copyright © 2016年 Meilele. All rights reserved.
 //
 
-#import "GoodsDetailBaseViewController.h"
+#import "JMRenderableTableView.h"
+#import "GoodsDetail.h"
 
 //普通商品详情
-@interface GoodsDetailNomalViewController : GoodsDetailBaseViewController
+@interface GoodsDetailNomalViewController : UIViewController<UITableViewDelegate>
+
+@property (nonatomic, weak) id<GoodsDetailEventDelegate> delegate;
+@property (nonatomic, strong, readonly) JMRenderableTableView *tableView;
+@property (nonatomic, strong, readonly) UIView *bottomContainer;
+
+//数据源，里面的model必须遵守JMRenderableCellModel协议
+@property (nonatomic, strong) NSMutableArray<JMRenderableCellModel> *dataArray;
 
 @end
