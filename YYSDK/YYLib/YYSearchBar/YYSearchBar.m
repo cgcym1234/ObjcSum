@@ -7,10 +7,12 @@
 //
 
 #import "YYSearchBar.h"
+#import "UIColor+YYSDK.h"
 
 @implementation YYSearchBar
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self setContext];
 }
 
@@ -26,7 +28,7 @@
 - (void)setContext {
 //    self.tintColor = [UIColor clearColor];
     // 经测试, 需要设置barTintColor后, 才能拿到UISearchBarTextField对象
-    self.barTintColor = ColorFromRGBHex(0xe8e8e8);
+    self.barTintColor = [UIColor colorWithHexString:@"0xaaaaaa"];
     
     [self setImage:[UIImage imageNamed:@"Search"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
     
@@ -44,7 +46,7 @@
             if ([subSubView isKindOfClass:NSClassFromString(@"UITextField")]) {
                 UITextField *textField = (UITextField *)subSubView;
                 //修改placeholder颜色和字体
-                textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索" attributes:@{NSForegroundColorAttributeName: ColorFromRGBHex(0xaaaaaa)}];
+                textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHexString:@"0xaaaaaa"]}];
             }
         }
     }

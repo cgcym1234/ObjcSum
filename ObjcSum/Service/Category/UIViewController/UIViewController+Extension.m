@@ -8,6 +8,7 @@
 
 #import "UIViewController+Extension.h"
 #import <objc/runtime.h>
+
 @interface _YYButton : UIButton
 @property (nonatomic, copy)id object;
 @end
@@ -26,6 +27,33 @@ static char kButtonCount;
 
 
 @implementation UIViewController (Extension)
+
+#pragma mark - TopViewController
+
+//获取app当前最顶层的ViewController
++ (UIViewController *)appTopViewController {
+    UIViewController *resultVC;
+    resultVC = [[UIApplication sharedApplication].keyWindow rootViewController].showingViewController;
+    while (resultVC.presentedViewController) {
+        resultVC = resultVC.presentedViewController.showingViewController;
+    }
+    return resultVC;
+}
+
+/**< 3种情况
+ 1. UINavigationController.topViewController
+ 2. UITabBarController.selectedViewController
+ 3. UIViewController 自己
+ */
+- (UIViewController *)showingViewController {
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        return [(UINavigationController *)self topViewController].showingViewController;
+    } else if ([self isKindOfClass:[UITabBarController class]]) {
+        return [(UITabBarController *)self selectedViewController].showingViewController;
+    } else {
+        return self;
+    }
+}
 
 - (void)__btnClick:(_YYButton *)btn {
     if (btn.object) {

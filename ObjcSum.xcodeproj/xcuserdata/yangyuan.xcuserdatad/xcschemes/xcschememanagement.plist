@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>YYSDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>1F8B8A131BE2058700D81096</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE2A1F2B1DAF5DE7001F9A2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

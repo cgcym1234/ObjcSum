@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8B89EF1BE2058600D81096"
-               BuildableName = "ObjcSum.app"
-               BlueprintName = "ObjcSum"
+               BlueprintIdentifier = "EE2A1F2B1DAF5DE7001F9A2E"
+               BuildableName = "YYSDK.framework"
+               BlueprintName = "YYSDK"
                ReferencedContainer = "container:ObjcSum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,36 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8B8A081BE2058700D81096"
-               BuildableName = "ObjcSumTests.xctest"
-               BlueprintName = "ObjcSumTests"
-               ReferencedContainer = "container:ObjcSum.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8B8A131BE2058700D81096"
-               BuildableName = "ObjcSumUITests.xctest"
-               BlueprintName = "ObjcSumUITests"
-               ReferencedContainer = "container:ObjcSum.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8B89EF1BE2058600D81096"
-            BuildableName = "ObjcSum.app"
-            BlueprintName = "ObjcSum"
-            ReferencedContainer = "container:ObjcSum.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -71,23 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8B89EF1BE2058600D81096"
-            BuildableName = "ObjcSum.app"
-            BlueprintName = "ObjcSum"
+            BlueprintIdentifier = "EE2A1F2B1DAF5DE7001F9A2E"
+            BuildableName = "YYSDK.framework"
+            BlueprintName = "YYSDK"
             ReferencedContainer = "container:ObjcSum.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OS_ACTIVITY_MODE"
-            value = "disable"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -97,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8B89EF1BE2058600D81096"
-            BuildableName = "ObjcSum.app"
-            BlueprintName = "ObjcSum"
+            BlueprintIdentifier = "EE2A1F2B1DAF5DE7001F9A2E"
+            BuildableName = "YYSDK.framework"
+            BlueprintName = "YYSDK"
             ReferencedContainer = "container:ObjcSum.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

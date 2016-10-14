@@ -8,8 +8,9 @@
 
 #import "YYImageBrowserScrollView.h"
 #import "UIImageView+Extension.h"
-#import "UIImage+Extension.h"
 #import "YYImageBrowser.h"
+#import "UIImage+YYSDK.h"
+
 
 #define PlaceHolderImage @"375x248"
 

@@ -9,6 +9,7 @@
 #import "MainTabBarController.h"
 #import "BaseNavigationController.h"
 #import "LoginManager.h"
+#import "YYLogger.h"
 
 #define KeyTitle              @"titile"
 #define KeySelectedImag       @"selectedImag"
@@ -33,6 +34,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self envInit];
+    
+    NSLog(@"-----------aaaaaaaa----------------");
+    
+    yyLogSetDefaultMiniLevel(YYLogLevelDebug);
+    yyLog(YYLogLevelDebug, @"%@", @"YYLogLevelDebug");
+    yyLogInfo(@"%@", @[@"1", @"2", @"3"]);
+    yyLogWarning(@"%@", @"yyLogWarning");
+    yyLogError(@"%@", @{@"key": @"yyLogError"});
+    yyLogFatal(@"%@", self);
+    
+    NSLog(@"-----------bbbbbbbb----------------");
+    
+    /*
+     😀[DEBUG][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 41] YYLogLevelDebug
+     🤔[INFO][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 42] (
+     1,
+     2,
+     3
+     )
+     😅[WARN][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 43] yyLogWarning
+x     😱[ERROR][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 44] {
+     key = yyLogError;
+     }
+     😭[FATAL][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 45] <MainTabBarController: 0x7fc1ce709bc0>
+     */
 }
 
 

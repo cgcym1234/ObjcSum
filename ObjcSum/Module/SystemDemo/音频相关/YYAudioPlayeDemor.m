@@ -6,6 +6,7 @@
 //  Copyright © 2016年 sihuan. All rights reserved.
 //
 
+#import "YYAudioPlayeDemor.h"
 #import "YYAudioPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 

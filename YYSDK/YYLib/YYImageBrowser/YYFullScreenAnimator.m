@@ -7,7 +7,7 @@
 //
 
 #import "YYFullScreenAnimator.h"
-#import "UIImage+Extension.h"
+#import "UIImage+YYSDK.h"
 
 @interface YYFullScreenAnimator()
 

@@ -16,6 +16,18 @@ typedef NS_ENUM(NSUInteger, NavigationControllerBarThemeType) {
 
 @interface UIViewController (Extension)
 
+#pragma mark - TopViewController
+
+//获取app当前最顶层的ViewController
++ (UIViewController *)appTopViewController;
+
+/**< 3种情况
+ 1. UINavigationController.topViewController
+ 2. UITabBarController.selectedViewController
+ 3. UIViewController 自己
+ */
+- (UIViewController *)showingViewController;
+
 #pragma mark - 添加一个button
 - (UIButton *)addButtonWithTitle:(NSString *)title action:(void (^)(UIButton *btn)) action;
 

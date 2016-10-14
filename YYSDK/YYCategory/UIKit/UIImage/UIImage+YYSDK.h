@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Extension)
+@interface UIImage (YYSDK)
 
 /**
  *根据图片名自动加载适配IOS6和iOS7的图片

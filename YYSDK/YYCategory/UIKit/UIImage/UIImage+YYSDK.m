@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 huansi. All rights reserved.
 //
 
-#import "UIImage+Extension.h"
+#import "UIImage+YYSDK.h"
 
-@implementation UIImage (Extension)
+@implementation UIImage (YYSDK)
 
 + (UIImage *)imageWithName:(NSString *)name
 {
