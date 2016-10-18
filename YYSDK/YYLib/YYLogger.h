@@ -10,7 +10,7 @@
 
 #pragma mark - 公开的便捷调用
 
-/**< 默认输出 >= Info级别日志 */
+/**< 指定要显示日志的最小级别，默认输出 >= Info级别日志 */
 #define yyLogSetDefaultMiniLevel(level) YYLogger.defaultInstance.miniLevel = level
 
 #define yyLog(level, fmt, ...) [YYLogger.defaultInstance log:level file:__FILE__ function:__PRETTY_FUNCTION__ line:__LINE__ format:(fmt), ##__VA_ARGS__]

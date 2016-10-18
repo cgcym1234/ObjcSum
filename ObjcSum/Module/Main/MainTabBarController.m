@@ -54,7 +54,7 @@
      3
      )
      😅[WARN][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 43] yyLogWarning
-x     😱[ERROR][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 44] {
+     😱[ERROR][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 44] {
      key = yyLogError;
      }
      😭[FATAL][2016-10-14 03:21:26 +0000][MainTabBarController.m: -[MainTabBarController viewDidLoad]: 45] <MainTabBarController: 0x7fc1ce709bc0>

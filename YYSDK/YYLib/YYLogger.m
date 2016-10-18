@@ -13,6 +13,7 @@
 
 /**< 日志在非主线程的一个串行队列中执行 */
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
+@property (nonatomic, strong) NSDateFormatter *formatter;
 
 @end
 
@@ -31,6 +32,13 @@
     if (self = [super init]) {
         _serialQueue = dispatch_queue_create("YYLogger", DISPATCH_QUEUE_SERIAL);
         _miniLevel = YYLogLevelInfo;
+        _formatter = ({
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            [formatter setLocale:[NSLocale currentLocale]];
+            formatter;
+        });
+        
     }
     return self;
 }
@@ -84,6 +92,7 @@
     }
     
     dispatch_async(_serialQueue, ^{
+        NSString *date = [_formatter stringFromDate:[NSDate date]];
         NSString *fileName = [[NSString stringWithFormat:@"%s", file] componentsSeparatedByString:@"/"].lastObject;
         NSString *detail = [NSString stringWithFormat:@"%@: %s: %lu", fileName, function, line];
         
@@ -97,7 +106,7 @@
          2016-10-14 11:09:15.991 ObjcSum[45129:1373229] xxxx
          改为使用 fprintf(stderr) 即可
          */
-        fprintf(stderr, "%s[%s][%s] %s\n", [self stringValueOfLevle:level].UTF8String, [NSString stringWithFormat:@"%@", [NSDate date]].UTF8String, detail.UTF8String, message.UTF8String);
+        fprintf(stderr, "%s[%s][%s] %s\n", [self stringValueOfLevle:level].UTF8String, date.UTF8String, detail.UTF8String, message.UTF8String);
     });
     
     
