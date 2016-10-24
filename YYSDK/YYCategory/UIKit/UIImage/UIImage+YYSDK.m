@@ -10,6 +10,20 @@
 
 @implementation UIImage (YYSDK)
 
+#pragma mark - Image Info
+
+/**
+ Whether this image has alpha channel.
+ */
+- (BOOL)hasAlphaChannel {
+    if (self.CGImage == NULL) return NO;
+    CGImageAlphaInfo alpha = CGImageGetAlphaInfo(self.CGImage) & kCGBitmapAlphaInfoMask;
+    return (alpha == kCGImageAlphaFirst ||
+            alpha == kCGImageAlphaLast ||
+            alpha == kCGImageAlphaPremultipliedFirst ||
+            alpha == kCGImageAlphaPremultipliedLast);
+}
+
 + (UIImage *)imageWithName:(NSString *)name
 {
     NSString *newName = name;
@@ -138,18 +152,15 @@
 }
 
 #pragma mark - 修改图片着色
-- (UIImage *) imageWithTintColor:(UIColor *)tintColor
-{
+- (UIImage *)imageWithTintColor:(UIColor *)tintColor {
     return [self imageWithTintColor:tintColor blendMode:kCGBlendModeDestinationIn];
 }
 
-- (UIImage *) imageWithGradientTintColor:(UIColor *)tintColor
-{
+- (UIImage *)imageWithGradientTintColor:(UIColor *)tintColor {
     return [self imageWithTintColor:tintColor blendMode:kCGBlendModeOverlay];
 }
 
-- (UIImage *) imageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode
-{
+- (UIImage *)imageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     [tintColor setFill];
     CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
@@ -168,13 +179,12 @@
 }
 
 + (UIImage *)imageWithColor:(UIColor *)color {
-    return [self imageWithColor:color size:CGSizeMake(2, 44)];
+    return [self imageWithColor:color size:CGSizeMake(1, 1)];
 }
 
-+ (UIImage*)imageWithColor: (UIColor*) color size:(CGSize)size
-{
++ (UIImage*)imageWithColor:(UIColor*) color size:(CGSize)size {
     CGRect rect = {CGPointZero, size};
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, rect);
@@ -227,4 +237,13 @@
     return fitSize;
 }
 
+
 @end
+
+
+
+
+
+
+
+

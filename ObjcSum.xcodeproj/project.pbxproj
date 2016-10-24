@@ -739,7 +739,22 @@
 		EE4C2C061DAF9D89008924A3 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4C2C051DAF9D89008924A3 /* libsqlite3.0.tbd */; };
 		EE4C2C091DB07158008924A3 /* YYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4C2C071DB07158008924A3 /* YYLogger.h */; };
 		EE4C2C0A1DB07158008924A3 /* YYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C2C081DB07158008924A3 /* YYLogger.m */; };
+		EE5FE87F1DBCF28500CB2FF0 /* YYGlobalTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */; };
+		EE5FE8801DBCF28500CB2FF0 /* YYGlobalTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */; };
+		EE5FE88C1DBD055C00CB2FF0 /* YYGCD.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */; };
+		EE5FE88D1DBD055C00CB2FF0 /* YYGCDGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8841DBD055C00CB2FF0 /* YYGCDGroup.h */; };
+		EE5FE88E1DBD055C00CB2FF0 /* YYGCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8851DBD055C00CB2FF0 /* YYGCDGroup.m */; };
+		EE5FE88F1DBD055C00CB2FF0 /* YYGCDQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8861DBD055C00CB2FF0 /* YYGCDQueue.h */; };
+		EE5FE8901DBD055C00CB2FF0 /* YYGCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8871DBD055C00CB2FF0 /* YYGCDQueue.m */; };
+		EE5FE8911DBD055C00CB2FF0 /* YYGCDSemaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8881DBD055C00CB2FF0 /* YYGCDSemaphore.h */; };
+		EE5FE8921DBD055C00CB2FF0 /* YYGCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8891DBD055C00CB2FF0 /* YYGCDSemaphore.m */; };
+		EE5FE8931DBD055C00CB2FF0 /* YYGCDTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE88A1DBD055C00CB2FF0 /* YYGCDTimer.h */; };
+		EE5FE8941DBD055C00CB2FF0 /* YYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE88B1DBD055C00CB2FF0 /* YYGCDTimer.m */; };
+		EE5FE8981DBD91E000CB2FF0 /* YYGlobalTimerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */; };
+		EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */; };
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
+		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
+		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1946,7 +1961,23 @@
 		EE4C2C051DAF9D89008924A3 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EE4C2C071DB07158008924A3 /* YYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLogger.h; sourceTree = "<group>"; };
 		EE4C2C081DB07158008924A3 /* YYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLogger.m; sourceTree = "<group>"; };
+		EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGlobalTimer.h; sourceTree = "<group>"; };
+		EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGlobalTimer.m; sourceTree = "<group>"; };
+		EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCD.h; sourceTree = "<group>"; };
+		EE5FE8841DBD055C00CB2FF0 /* YYGCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCDGroup.h; sourceTree = "<group>"; };
+		EE5FE8851DBD055C00CB2FF0 /* YYGCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGCDGroup.m; sourceTree = "<group>"; };
+		EE5FE8861DBD055C00CB2FF0 /* YYGCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCDQueue.h; sourceTree = "<group>"; };
+		EE5FE8871DBD055C00CB2FF0 /* YYGCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGCDQueue.m; sourceTree = "<group>"; };
+		EE5FE8881DBD055C00CB2FF0 /* YYGCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCDSemaphore.h; sourceTree = "<group>"; };
+		EE5FE8891DBD055C00CB2FF0 /* YYGCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGCDSemaphore.m; sourceTree = "<group>"; };
+		EE5FE88A1DBD055C00CB2FF0 /* YYGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCDTimer.h; sourceTree = "<group>"; };
+		EE5FE88B1DBD055C00CB2FF0 /* YYGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGCDTimer.m; sourceTree = "<group>"; };
+		EE5FE8951DBD91E000CB2FF0 /* YYGlobalTimerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGlobalTimerDemo.h; sourceTree = "<group>"; };
+		EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGlobalTimerDemo.m; sourceTree = "<group>"; };
+		EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYGlobalTimerDemo.xib; sourceTree = "<group>"; };
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
+		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2075,6 +2106,7 @@
 				EE2A1F391DAF5E54001F9A2E /* UIColor */,
 				EE2A1F551DAF6300001F9A2E /* UIImage */,
 				EE2A1F441DAF62BC001F9A2E /* UIView */,
+				EE82C14F1DB5C2DC0055593D /* UIButton */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -2139,6 +2171,8 @@
 				EE2A206A1DAF6D7A001F9A2E /* YYView */,
 				EE2A206D1DAF6D7A001F9A2E /* YYXibView */,
 				EE4C2C0B1DB07161008924A3 /* YYLog */,
+				EE5FE8821DBD055C00CB2FF0 /* YYGCD */,
+				EE5FE8811DBCF28A00CB2FF0 /* YYGlobalTimer */,
 			);
 			path = YYLib;
 			sourceTree = "<group>";
@@ -3230,6 +3264,7 @@
 				EE4C261D1DAF97E7008924A3 /* 缩略图控件 */,
 				EE4C26221DAF97E7008924A3 /* 面试相关 */,
 				EE4C26251DAF97E7008924A3 /* 颜色转换 */,
+				EE5FE89A1DBD91E500CB2FF0 /* YYGlobalTimerDemo */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -4639,6 +4674,41 @@
 			name = YYLog;
 			sourceTree = "<group>";
 		};
+		EE5FE8811DBCF28A00CB2FF0 /* YYGlobalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */,
+				EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */,
+			);
+			name = YYGlobalTimer;
+			sourceTree = "<group>";
+		};
+		EE5FE8821DBD055C00CB2FF0 /* YYGCD */ = {
+			isa = PBXGroup;
+			children = (
+				EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */,
+				EE5FE8841DBD055C00CB2FF0 /* YYGCDGroup.h */,
+				EE5FE8851DBD055C00CB2FF0 /* YYGCDGroup.m */,
+				EE5FE8861DBD055C00CB2FF0 /* YYGCDQueue.h */,
+				EE5FE8871DBD055C00CB2FF0 /* YYGCDQueue.m */,
+				EE5FE8881DBD055C00CB2FF0 /* YYGCDSemaphore.h */,
+				EE5FE8891DBD055C00CB2FF0 /* YYGCDSemaphore.m */,
+				EE5FE88A1DBD055C00CB2FF0 /* YYGCDTimer.h */,
+				EE5FE88B1DBD055C00CB2FF0 /* YYGCDTimer.m */,
+			);
+			path = YYGCD;
+			sourceTree = "<group>";
+		};
+		EE5FE89A1DBD91E500CB2FF0 /* YYGlobalTimerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE5FE8951DBD91E000CB2FF0 /* YYGlobalTimerDemo.h */,
+				EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */,
+				EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */,
+			);
+			name = YYGlobalTimerDemo;
+			sourceTree = "<group>";
+		};
 		EE8068CB1D992D03006E69F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4648,6 +4718,15 @@
 				EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE82C14F1DB5C2DC0055593D /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */,
+				EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */,
+			);
+			name = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4668,6 +4747,8 @@
 				EE2A20761DAF6D7A001F9A2E /* GTMDefines.h in Headers */,
 				EE2A21511DAF6D7A001F9A2E /* YYSegmentedControlCell.h in Headers */,
 				EE2A20A31DAF6D7A001F9A2E /* YYChrysanthemum.h in Headers */,
+				EE5FE8931DBD055C00CB2FF0 /* YYGCDTimer.h in Headers */,
+				EE5FE87F1DBCF28500CB2FF0 /* YYGlobalTimer.h in Headers */,
 				EE2A20C81DAF6D7A001F9A2E /* NSDate+YYExtension.h in Headers */,
 				EE2A21481DAF6D7A001F9A2E /* YYScrollSigment.h in Headers */,
 				EE2A21151DAF6D7A001F9A2E /* YYReachability.h in Headers */,
@@ -4756,6 +4837,7 @@
 				EE2A1F411DAF5E99001F9A2E /* UIColor+YYSDK.h in Headers */,
 				EE2A20F41DAF6D7A001F9A2E /* UIGestureRecognizer+YYExtension.h in Headers */,
 				EE2A20FA1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.h in Headers */,
+				EE5FE8911DBD055C00CB2FF0 /* YYGCDSemaphore.h in Headers */,
 				EE4C2BFE1DAF9D33008924A3 /* AFURLRequestSerialization.h in Headers */,
 				EE2A20F21DAF6D7A001F9A2E /* UIFont+YYExtension.h in Headers */,
 				EE2A207C1DAF6D7A001F9A2E /* YYAlertGridViewCell.h in Headers */,
@@ -4770,6 +4852,8 @@
 				EE4C2BF91DAF9D33008924A3 /* AFNetworking.h in Headers */,
 				EE2A21131DAF6D7A001F9A2E /* YYKeychain.h in Headers */,
 				EE2A214A1DAF6D7A001F9A2E /* YYScrollSigmentCell.h in Headers */,
+				EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */,
+				EE5FE88C1DBD055C00CB2FF0 /* YYGCD.h in Headers */,
 				EE2A20B51DAF6D7A001F9A2E /* YYImageBrowserCell.h in Headers */,
 				EE2A209F1DAF6D7A001F9A2E /* YYMemoryCache.h in Headers */,
 				EE2A1F4F1DAF62BD001F9A2E /* UIView+Frame.h in Headers */,
@@ -4777,6 +4861,7 @@
 				EE2A21191DAF6D7A001F9A2E /* YYThreadSafeArray.h in Headers */,
 				EE2A21361DAF6D7A001F9A2E /* UIViewController+NoDataView.h in Headers */,
 				EE2A20CA1DAF6D7A001F9A2E /* NSDictionary+YYExtension.h in Headers */,
+				EE5FE88F1DBD055C00CB2FF0 /* YYGCDQueue.h in Headers */,
 				EE2A20C01DAF6D7A001F9A2E /* CLLocation+YYExtension.h in Headers */,
 				EE2A20AA1DAF6D7A001F9A2E /* YYHorizontalScrollView.h in Headers */,
 				EE2A214D1DAF6D7A001F9A2E /* YYSearchBar.h in Headers */,
@@ -4785,6 +4870,7 @@
 				EE4C2C001DAF9D33008924A3 /* AFURLResponseSerialization.h in Headers */,
 				EE2A20D41DAF6D7A001F9A2E /* NSNull+YYKit.h in Headers */,
 				EE2A21581DAF6D7A001F9A2E /* YYTextViewTimePicker.h in Headers */,
+				EE5FE88D1DBD055C00CB2FF0 /* YYGCDGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4975,6 +5061,7 @@
 				EE4C292D1DAF97E9008924A3 /* DNImagePickerController.strings in Resources */,
 				EE4C289E1DAF97E9008924A3 /* FastRecord.storyboard in Resources */,
 				EE4C28B71DAF97E9008924A3 /* FastRecordVoiceInputViewDim.xib in Resources */,
+				EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */,
 				EE4C285E1DAF97E9008924A3 /* SystemDemo.storyboard in Resources */,
 				EE4C286E1DAF97E9008924A3 /* swipe.png in Resources */,
 				EE4C28DD1DAF97E9008924A3 /* YYMessageAudioIndicatorView.xib in Resources */,
@@ -5125,6 +5212,7 @@
 				EE4C28C81DAF97E9008924A3 /* NSURL+YYMessage.m in Sources */,
 				EE4C29611DAF97EA008924A3 /* UIScrollView+MJExtension.m in Sources */,
 				EE4C29551DAF97EA008924A3 /* MJRefreshHeader.m in Sources */,
+				EE5FE8981DBD91E000CB2FF0 /* YYGlobalTimerDemo.m in Sources */,
 				EE4C29721DAF97EA008924A3 /* NSObject+RACLifting.m in Sources */,
 				EE4C29051DAF97E9008924A3 /* EncryptionDemo.m in Sources */,
 				EE4C286B1DAF97E9008924A3 /* TouchEventDemoChild.m in Sources */,
@@ -5498,6 +5586,7 @@
 				EE4C2BFB1DAF9D33008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EE2A21221DAF6D7A001F9A2E /* YYWeakProxy.m in Sources */,
 				EE2A211A1DAF6D7A001F9A2E /* YYThreadSafeArray.m in Sources */,
+				EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */,
 				EE2A20C71DAF6D7A001F9A2E /* NSData+YYExtension.m in Sources */,
 				EE2A20CF1DAF6D7A001F9A2E /* NSHTTPCookie+YYExtension.m in Sources */,
 				EE2A20BE1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.m in Sources */,
@@ -5513,6 +5602,7 @@
 				EE2A1F591DAF6300001F9A2E /* UIImage+YYSDK.m in Sources */,
 				EE2A20A21DAF6D7A001F9A2E /* UIView+YYChrysanthemum.m in Sources */,
 				EE2A214E1DAF6D7A001F9A2E /* YYSearchBar.m in Sources */,
+				EE5FE8901DBD055C00CB2FF0 /* YYGCDQueue.m in Sources */,
 				EE2A21101DAF6D7A001F9A2E /* YYFileHash.m in Sources */,
 				EE2A20AE1DAF6D7A001F9A2E /* YYHud.m in Sources */,
 				EE2A208E1DAF6D7A001F9A2E /* YYHttpRequestSerializer.m in Sources */,
@@ -5543,6 +5633,7 @@
 				EE2A20801DAF6D7A001F9A2E /* YYAlertTable.m in Sources */,
 				EE2A207A1DAF6D7A001F9A2E /* YYAlertGridView.m in Sources */,
 				EE2A215B1DAF6D7A001F9A2E /* YYView.m in Sources */,
+				EE5FE8921DBD055C00CB2FF0 /* YYGCDSemaphore.m in Sources */,
 				EE2A21451DAF6D7A001F9A2E /* YYRefreshConst.m in Sources */,
 				EE2A20C91DAF6D7A001F9A2E /* NSDate+YYExtension.m in Sources */,
 				EE2A211C1DAF6D7A001F9A2E /* YYThreadSafeDictionary.m in Sources */,
@@ -5567,6 +5658,7 @@
 				EE2A21251DAF6D7A001F9A2E /* YYLabel.m in Sources */,
 				EE2A20851DAF6D7A001F9A2E /* YYAlertTableTitleCell.m in Sources */,
 				EE2A20D11DAF6D7A001F9A2E /* NSKeyedUnarchiver+YYExtension.m in Sources */,
+				EE5FE8941DBD055C00CB2FF0 /* YYGCDTimer.m in Sources */,
 				EE2A20CD1DAF6D7A001F9A2E /* NSError+YYExtension.m in Sources */,
 				EE2A20F31DAF6D7A001F9A2E /* UIFont+YYExtension.m in Sources */,
 				EE4C2BFF1DAF9D33008924A3 /* AFURLRequestSerialization.m in Sources */,
@@ -5581,6 +5673,7 @@
 				EE2A21371DAF6D7A001F9A2E /* UIViewController+NoDataView.m in Sources */,
 				EE4C2BFD1DAF9D33008924A3 /* AFSecurityPolicy.m in Sources */,
 				EE2A209A1DAF6D7A001F9A2E /* YYDiskCache.m in Sources */,
+				EE5FE8801DBCF28500CB2FF0 /* YYGlobalTimer.m in Sources */,
 				EE2A20DF1DAF6D7A001F9A2E /* NSTimer+YYExtension.m in Sources */,
 				EE4C2C031DAF9D33008924A3 /* AFURLSessionManager.m in Sources */,
 				EE2A20C51DAF6D7A001F9A2E /* NSBundle+YYExtension.m in Sources */,
@@ -5590,6 +5683,7 @@
 				EE2A1F521DAF62BD001F9A2E /* UIView+MotionEffect.m in Sources */,
 				EE2A21201DAF6D7A001F9A2E /* YYTransaction.m in Sources */,
 				EE2A21071DAF6D7A001F9A2E /* UIView+YYExtension.m in Sources */,
+				EE5FE88E1DBD055C00CB2FF0 /* YYGCDGroup.m in Sources */,
 				EE2A21401DAF6D7A001F9A2E /* YYRefresh.m in Sources */,
 				EE2A209C1DAF6D7A001F9A2E /* YYKVStorage.m in Sources */,
 				EE2A20DD1DAF6D7A001F9A2E /* NSThread+YYExtension.m in Sources */,

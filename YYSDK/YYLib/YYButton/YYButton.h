@@ -14,5 +14,4 @@
 @property (nonatomic, assign) IBInspectable CGFloat borderWidth;
 @property (nonatomic, assign) IBInspectable UIColor *borderColor;
 
-
 @end

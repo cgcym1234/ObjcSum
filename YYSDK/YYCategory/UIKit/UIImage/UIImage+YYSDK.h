@@ -10,6 +10,13 @@
 
 @interface UIImage (YYSDK)
 
+#pragma mark - Image Info
+
+/**
+ Whether this image has alpha channel.
+ */
+- (BOOL)hasAlphaChannel;
+
 /**
  *根据图片名自动加载适配IOS6和iOS7的图片
  */
@@ -41,6 +48,7 @@
 - (UIImage *) imageWithTintColor:(UIColor *)tintColor;
 
 #pragma mark - UIColor和UIImage转换
+
 + (UIImage*)imageWithColor:(UIColor*) color;
 + (UIImage*)imageWithColor:(UIColor*) color size:(CGSize)size;
 
