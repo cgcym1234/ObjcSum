@@ -19,6 +19,8 @@
     self.dataArr = @[
                      [[LibDemoInfo alloc] initWithTitle:@"TableViewDemo" desc:@"TableView相关" controllerName:@"TableViewDemo"],
                      
+                     [[LibDemoInfo alloc] initWithTitle:@"UIButtonDemo" desc:@"UIButtonDemo相关" controllerName:@"UIButtonDemo"],
+                     
                      [[LibDemoInfo alloc] initWithTitle:@"RuntimeDemo" desc:@"RunTime相关" controllerName:@"RuntimeDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"GestureDemo" desc:@"手势处理相关" controllerName:@"GestureDemo"],

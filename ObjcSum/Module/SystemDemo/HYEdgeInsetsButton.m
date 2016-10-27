@@ -1,28 +1,37 @@
 //
-//  UIButton+YYSDK.m
-//  ObjcSum
+//  HYEdgeInsetsButton.m
+//  
 //
-//  Created by yangyuan on 2016/10/18.
-//  Copyright © 2016年 sihuan. All rights reserved.
+//  Created by 韩保玉 on 15/6/28.
+//  Copyright (c) 2015年 韩保玉. All rights reserved.
 //
 
-#import "UIButton+YYSDK.h"
-#import "UIImage+YYSDK.h"
+#import "HYEdgeInsetsButton.h"
 
-@implementation UIButton (YYSDK)
+@implementation HYEdgeInsetsButton
 
-#pragma mark - 调整文字和图片位置
+- (void)setImage:(UIImage *)image forState:(UIControlState)state {
+    [super setImage:image forState:state];
+    [self setEdgeInsetsStyle:_edgeInsetsStyle];
+}
 
-- (void)setImagePosition:(YYButtonImagePosition)postion spacing:(CGFloat)space {
-    CGFloat imageViewWidth = CGRectGetWidth(self.imageView.frame);
-    CGFloat imageViewHeight = CGRectGetHeight(self.imageView.frame);
-    // 由于iOS8中titleLabel的size为0，需要用intrinsicContentSize
-    CGFloat labelWidth = self.titleLabel.intrinsicContentSize.width;
-    CGFloat labelHeight = self.titleLabel.intrinsicContentSize.height;
+- (void)setTitle:(NSString *)title forState:(UIControlState)state {
+    [super setTitle:title forState:state];
+    [self setEdgeInsetsStyle:_edgeInsetsStyle];
+}
+
+- (void)setEdgeInsetsStyle:(HYButtonEdgeInsetsStyle)edgeInsetsStyle {
     
-    CGFloat buttonHeight = CGRectGetHeight(self.bounds);
-    CGFloat overHeight = (imageViewHeight + labelHeight - buttonHeight) / 2;
-
+    [self setTitleEdgeInsets:UIEdgeInsetsZero];
+    [self setImageEdgeInsets:UIEdgeInsetsZero];
+    
+    [self layoutIfNeeded];
+    
+    _edgeInsetsStyle = edgeInsetsStyle;
+    CGFloat space = self.imageTitleSpace;
+    CGFloat imageViewWidth = CGRectGetWidth(self.imageView.frame);
+    CGFloat labelWidth = CGRectGetWidth(self.titleLabel.frame);
+    
     if (labelWidth == 0) {
         CGSize titleSize = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
         labelWidth  = titleSize.width;
@@ -38,13 +47,9 @@
     CGFloat titleInsetsBottom = 0.0f;
     CGFloat titleInsetsRight = 0.0f;
     
-    CGFloat contentInsetsTop = 0.0f;
-    CGFloat contentInsetsLeft = 0.0f;
-    CGFloat contentInsetsBottom = 0.0f;
-    CGFloat contentInsetsRight = 0.0f;
-    
-    switch (postion) {
-        case YYButtonImagePositionRight: {
+    switch (edgeInsetsStyle) {
+        case HYButtonEdgeInsetsStyleImageRight:
+        {
             space = space * 0.5;
             
             imageInsetsLeft = labelWidth + space;
@@ -52,13 +57,11 @@
             
             titleInsetsLeft = - (imageViewWidth + space);
             titleInsetsRight = -titleInsetsLeft;
-            
-            contentInsetsLeft = space;
-            contentInsetsRight = space;
-            overHeight = 0;
-            break;
         }
-        case YYButtonImagePositionLeft: {
+            break;
+            
+        case HYButtonEdgeInsetsStyleImageLeft:
+        {
             space = space * 0.5;
             
             imageInsetsLeft = -space;
@@ -66,14 +69,10 @@
             
             titleInsetsLeft = space;
             titleInsetsRight = -titleInsetsLeft;
-            
-            contentInsetsLeft = space;
-            contentInsetsRight = space;
-            overHeight = 0;
-            break;
         }
-            
-        case YYButtonImagePositionBottom: {
+            break;
+        case HYButtonEdgeInsetsStyleImageBottom:
+        {
             CGFloat imageHeight = CGRectGetHeight(self.imageView.frame);
             CGFloat labelHeight = CGRectGetHeight(self.titleLabel.frame);
             CGFloat buttonHeight = CGRectGetHeight(self.frame);
@@ -96,11 +95,10 @@
             titleInsetsRight = - titleInsetsLeft;
             titleInsetsBottom = - titleInsetsTop;
             
-            contentInsetsTop = space / 2;
-            contentInsetsBottom = space / 2;
-            break;
         }
-        case YYButtonImagePositionTop: {
+            break;
+        case HYButtonEdgeInsetsStyleImageTop:
+        {
             CGFloat imageHeight = CGRectGetHeight(self.imageView.frame);
             CGFloat labelHeight = CGRectGetHeight(self.titleLabel.frame);
             CGFloat buttonHeight = CGRectGetHeight(self.frame);
@@ -122,86 +120,21 @@
             titleInsetsLeft = -(centerX_titleLabel - centerX_button);
             titleInsetsRight = - titleInsetsLeft;
             titleInsetsBottom = - titleInsetsTop;
-            
-            contentInsetsTop = space / 2;
-            contentInsetsBottom = space / 2;
-            break;
         }
+            break;
+            
+        default:
+            break;
     }
     
     self.imageEdgeInsets = UIEdgeInsetsMake(imageInsetsTop, imageInsetsLeft, imageInsetsBottom, imageInsetsRight);
     self.titleEdgeInsets = UIEdgeInsetsMake(titleInsetsTop, titleInsetsLeft, titleInsetsBottom, titleInsetsRight);
+}
+
+- (void)setImageTitleSpace:(CGFloat)imageTitleSpace {
+    _imageTitleSpace = imageTitleSpace;
     
-    UIEdgeInsets contentEdgeInsets = self.contentEdgeInsets;
-    self.contentEdgeInsets = UIEdgeInsetsMake(contentEdgeInsets.top + contentInsetsTop + overHeight, contentEdgeInsets.left + contentInsetsLeft, contentEdgeInsets.bottom + contentInsetsBottom + overHeight, contentEdgeInsets.right + contentInsetsRight);
+    [self setEdgeInsetsStyle:_edgeInsetsStyle];
 }
 
-#pragma mark - Title
-
-- (void)setTitleAll:(NSString *)title {
-    [self setTitle:title forState:UIControlStateNormal];
-    [self setTitle:title forState:UIControlStateHighlighted];
-    [self setTitle:title forState:UIControlStateDisabled];
-    [self setTitle:title forState:UIControlStateSelected];
-}
-- (void)setTitleNormal:(NSString *)title {
-    [self setTitle:title forState:UIControlStateNormal];
-}
-- (void)setTitleHighlighted:(NSString *)title {
-    [self setTitle:title forState:UIControlStateHighlighted];
-}
-- (void)setTitleDisabled:(NSString *)title {
-    [self setTitle:title forState:UIControlStateDisabled];
-}
-- (void)setTitleSelected:(NSString *)title {
-    [self setTitle:title forState:UIControlStateSelected];
-}
-
-- (NSString *)titleNomal {
-    return [self titleForState:UIControlStateNormal];
-}
-- (NSString *)titleHighlighted {
-    return [self titleForState:UIControlStateHighlighted];
-}
-- (NSString *)titleDisabled {
-    return [self titleForState:UIControlStateDisabled];
-}
-- (NSString *)titleSelected {
-    return [self titleForState:UIControlStateSelected];
-}
-
-#pragma mark - 设置背景色
-
-- (void)setBackgroundColorNomal:(UIColor *)color {
-    [self setBackgroundImage:[UIImage imageWithColor:color] forState:UIControlStateNormal];
-}
-- (void)setBackgroundColorHighlighted:(UIColor *)color {
-    [self setBackgroundImage:[UIImage imageWithColor:color] forState:UIControlStateHighlighted];
-}
-- (void)setBackgroundColorDisabled:(UIColor *)color {
-    [self setBackgroundImage:[UIImage imageWithColor:color] forState:UIControlStateDisabled];
-}
-- (void)setBackgroundColorSelected:(UIColor *)color {
-    [self setBackgroundImage:[UIImage imageWithColor:color] forState:UIControlStateSelected];
-}
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

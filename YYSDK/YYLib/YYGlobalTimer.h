@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^YYGlobalTimerHandler)();
-
-// MARK: - 每隔0.1秒执行一次的定时器
-
-/*
+#define YYGlobalTimerInterval  0.1
+/* 每隔0.1秒执行一次的定时器
  1. 定时器运行在主线程中，滑动时也会运行，没有任务时，不执行
  2. 添加和移除操作是线程安全的
  3. 可以选择任务运行在主线程或Global线程中
+ 4. 当target释放时，上面的任务会被自动清除掉
  */
+
+typedef void (^YYGlobalTimerHandler)();
 
 @interface YYGlobalTimer : NSObject
 

@@ -75,7 +75,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     if (self = [super init]) {
         _targetTasksDict = [NSMutableDictionary new];
         _serialQueue = dispatch_queue_create("YYGlobalTimer", DISPATCH_QUEUE_SERIAL);
-        _timer = [[NSTimer alloc] initWithFireDate:[NSDate distantFuture] interval:0.1 target:self selector:@selector(timerTask) userInfo:nil repeats:YES];
+        _timer = [[NSTimer alloc] initWithFireDate:[NSDate distantFuture] interval:YYGlobalTimerInterval target:self selector:@selector(timerTask) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:UITrackingRunLoopMode];
         [self pause];

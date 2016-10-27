@@ -755,6 +755,9 @@
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
+		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
+		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
+		EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1978,6 +1981,12 @@
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
+		EEDCCB6E1DBFB00A00715955 /* UIButtonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDemo.h; sourceTree = "<group>"; };
+		EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemo.m; sourceTree = "<group>"; };
+		EEDCCB751DC03ABA00715955 /* HYEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEdgeInsetsButton.h; sourceTree = "<group>"; };
+		EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEdgeInsetsButton.m; sourceTree = "<group>"; };
+		EEEFF5FC1DC0E9A100959DC2 /* YYRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYRightImageButton.h; path = "../../../ObjcSum/Module/YYLibsDemo/一些小控件/YYRightImageButton.h"; sourceTree = "<group>"; };
+		EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYRightImageButton.m; path = "../../../ObjcSum/Module/YYLibsDemo/一些小控件/YYRightImageButton.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2266,6 +2275,8 @@
 		EE2A1F871DAF6D79001F9A2E /* YYButton */ = {
 			isa = PBXGroup;
 			children = (
+				EEEFF5FC1DC0E9A100959DC2 /* YYRightImageButton.h */,
+				EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */,
 				EE2A1F881DAF6D79001F9A2E /* YYButton.h */,
 				EE2A1F891DAF6D79001F9A2E /* YYButton.m */,
 			);
@@ -2816,6 +2827,7 @@
 				EE4C24D41DAF97E7008924A3 /* 测试 */,
 				EE4C24DA1DAF97E7008924A3 /* 读书笔记 */,
 				EE4C24FB1DAF97E7008924A3 /* 音频相关 */,
+				EEDCCB711DC03AA400715955 /* UIButtonDemo */,
 			);
 			path = SystemDemo;
 			sourceTree = "<group>";
@@ -4729,6 +4741,17 @@
 			name = UIButton;
 			sourceTree = "<group>";
 		};
+		EEDCCB711DC03AA400715955 /* UIButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCCB751DC03ABA00715955 /* HYEdgeInsetsButton.h */,
+				EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */,
+				EEDCCB6E1DBFB00A00715955 /* UIButtonDemo.h */,
+				EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */,
+			);
+			name = UIButtonDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -5299,6 +5322,7 @@
 				EE4C28901DAF97E9008924A3 /* ReactiveCocoaDemo.m in Sources */,
 				EE4C290F1DAF97E9008924A3 /* NSObject+Debug.m in Sources */,
 				EE4C28ED1DAF97E9008924A3 /* YYMessageImageView.m in Sources */,
+				EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */,
 				EE4C28DE1DAF97E9008924A3 /* YYMessageAudioRecordButton.m in Sources */,
 				EE4C28981DAF97E9008924A3 /* sqlite3.c in Sources */,
 				EE4C28BB1DAF97E9008924A3 /* YYCacheTest.m in Sources */,
@@ -5370,6 +5394,7 @@
 				EE4C29D31DAF97EA008924A3 /* SDImageCache.m in Sources */,
 				EE4C29561DAF97EA008924A3 /* MJRefreshAutoGifFooter.m in Sources */,
 				EE4C285A1DAF97E9008924A3 /* SyntacticSugar.m in Sources */,
+				EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */,
 				EE4C29171DAF97E9008924A3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				EE4C29C41DAF97EA008924A3 /* ReachStateLoading.m in Sources */,
 				EE4C29691DAF97EA008924A3 /* NSDictionary+RACSequenceAdditions.m in Sources */,
@@ -5509,6 +5534,7 @@
 				EE4C29CF1DAF97EA008924A3 /* RunTraceHelp.m in Sources */,
 				EE4C29861DAF97EA008924A3 /* RACDynamicSignal.m in Sources */,
 				EE4C286A1DAF97E9008924A3 /* TouchEventDemo.m in Sources */,
+				EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */,
 				EE4C283E1DAF97E9008924A3 /* YYFileManager.c in Sources */,
 				EE4C29221DAF97E9008924A3 /* DTConstants.m in Sources */,
 				EE4C29901DAF97EA008924A3 /* RACKVOProxy.m in Sources */,
