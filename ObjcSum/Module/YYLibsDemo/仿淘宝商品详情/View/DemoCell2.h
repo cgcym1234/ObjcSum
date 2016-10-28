@@ -11,6 +11,6 @@
 
 @interface DemoCell2 : UITableViewCell<JMRenderableCell>
 
-- (void)updateWithCellModel:(id)model indexPath:(NSIndexPath *)indexPath containerView:(UIView *)view;
+- (void)updateWithModel:(id<JMRenderableCellModel>)model indexPath:(NSIndexPath *)indexPath container:(UIView *)container;
 
 @end

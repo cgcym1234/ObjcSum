@@ -11,7 +11,7 @@
 
 @implementation DemoCell
 
-- (void)updateWithCellModel:(id)model indexPath:(NSIndexPath *)indexPath containerView:(UIView *)view {
+- (void)updateWithModel:(id<JMRenderableCellModel>)model indexPath:(NSIndexPath *)indexPath container:(UIView *)container {
     DemoCellModel *item = model;
     self.name.text = item.text;
 }

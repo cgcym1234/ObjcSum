@@ -11,9 +11,15 @@
 
 @implementation DemoCell2
 
-- (void)updateWithCellModel:(id)model indexPath:(NSIndexPath *)indexPath containerView:(UIView *)view {
++ (CGFloat)heightForModel:(id<JMRenderableCellModel>)model indexPath:(NSIndexPath *)indexPath container:(UIView *)container {
+    return 100;
+}
+
+- (void)updateWithModel:(id<JMRenderableCellModel>)model indexPath:(NSIndexPath *)indexPath container:(UIView *)container {
     DemoCellModel2 *item = model;
     self.textLabel.text = item.text;
 }
+
+
 
 @end

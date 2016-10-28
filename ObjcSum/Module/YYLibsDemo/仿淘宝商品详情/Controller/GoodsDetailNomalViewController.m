@@ -14,6 +14,8 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 
 #import "DemoCellModel2.h"
+#import "DemoCell.h"
+#import "DemoCell2.h"
 
 #define BottomContainerHeight (44)
 
@@ -40,6 +42,12 @@
     tableView.backgroundColor = [UIColor whiteColor];
     tableView.delegate = self;
     _tableView = tableView;
+    
+    NSArray *cellClass = @[
+                           DemoCell.class,
+                           DemoCell2.class,
+                           ];
+    [tableView regitsterCells:cellClass];
     
     UIView *bottomContainer = [UIView new];
     bottomContainer.backgroundColor = [UIColor redColor];

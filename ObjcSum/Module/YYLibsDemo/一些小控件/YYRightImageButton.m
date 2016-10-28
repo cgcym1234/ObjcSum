@@ -11,9 +11,6 @@
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
-
-static NSString * const KeyCell = @"KeyCell";
 
 IB_DESIGNABLE
 @interface YYRightImageButton ()
@@ -45,15 +42,12 @@ IB_DESIGNABLE
 - (void)setContext {
     self.userInteractionEnabled = YES;
     
-    _textLabelFont = [UIFont systemFontOfSize:14];
-    _textLabelColor = [UIColor blackColor];
-    
     _textLabel = ({
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
         label.numberOfLines = 1;
         label.textAlignment = NSTextAlignmentLeft;
-        label.font = _textLabelFont;
-        label.textColor = _textLabelColor;
+        label.font = [UIFont systemFontOfSize:14];
+        label.textColor = [UIColor blackColor];
         label;
     });
     
@@ -82,12 +76,12 @@ IB_DESIGNABLE
 
 - (CGSize)intrinsicContentSize {
     CGSize textSize = _textLabel.intrinsicContentSize;
-    CGFloat imageWidth = _imageSize.width == 0 ? _image.size.width : _imageSize.width;
-    CGFloat imageHeight = _imageSize.height == 0 ? _image.size.height : _imageSize.height;
-    CGFloat height = MAX(textSize.height, imageHeight);
+    CGSize imageSize = CGSizeEqualToSize(_imageSize, CGSizeZero) ? _imageView.image.size : _imageSize;
+    CGFloat height = MAX(textSize.height, imageSize.height);
+    _imageView.size = imageSize;
     
     CGSize contentSize = {
-        _contentEdgeInsets.left + textSize.width + _spacing + imageWidth + _contentEdgeInsets.right,
+        _contentEdgeInsets.left + textSize.width + _spacing + imageSize.width + _contentEdgeInsets.right,
         _contentEdgeInsets.top + height + _contentEdgeInsets.bottom
     };
     return contentSize;
@@ -97,13 +91,15 @@ IB_DESIGNABLE
 
 #pragma mark - Public
 
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    self.layer.contents = (__bridge id _Nullable)(backgroundImage.CGImage);
+}
+
 - (void)setTextLabelFont:(UIFont *)textLabelFont {
-    _textLabelFont = textLabelFont;
     _textLabel.font = textLabelFont;
 }
 
 - (void)setTextLabelColor:(UIColor *)textLabelColor {
-    _textLabelColor = textLabelColor;
     _textLabel.textColor = textLabelColor;
 }
 
@@ -118,8 +114,6 @@ IB_DESIGNABLE
 
 - (void)setImage:(UIImage *)image {
     _imageView.image = image;
-    _imageSize = image == nil ? CGSizeZero : image.size;
-    _imageView.size = _imageSize;
     [self invalidateIntrinsicContentSize];
 }
 
@@ -136,6 +130,14 @@ IB_DESIGNABLE
         return;
     }
     _spacing = spacing;
+    [self invalidateIntrinsicContentSize];
+}
+
+- (void)setContentEdgeInsets:(UIEdgeInsets)contentEdgeInsets {
+    if (UIEdgeInsetsEqualToEdgeInsets(_contentEdgeInsets, contentEdgeInsets)) {
+        return;
+    }
+    _contentEdgeInsets = contentEdgeInsets;
     [self invalidateIntrinsicContentSize];
 }
 
@@ -164,7 +166,21 @@ IB_DESIGNABLE
 
 #pragma mark - Getter
 
+- (UIImage *)backgroundImage {
+    return self.layer.contents;
+}
 
+- (UIImage *)image {
+    return _imageView.image;
+}
+
+- (UIFont *)textLabelFont {
+    return _textLabel.font;
+}
+
+- (UIColor *)textLabelColor {
+    return _textLabel.textColor;
+}
 
 @end
 
