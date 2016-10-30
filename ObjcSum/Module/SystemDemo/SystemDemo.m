@@ -41,6 +41,8 @@
                      
                      [[LibDemoInfo alloc] initWithTitle:@"TestViewController" desc:@"一些测试" controllerName:@"TestViewController"],
                      
+                     [[LibDemoInfo alloc] initWithTitle:@"UIDemosController" desc:@"常用系统控件篇" controllerName:@"UIDemosController"],
+                     
                      ];
 }
 

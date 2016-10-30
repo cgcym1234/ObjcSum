@@ -74,7 +74,8 @@ static char kIndex;
     _totalPages = 0;
     _currentPage = 0;
     
-    [self.pageController setViewControllers:@[[self getInitialController]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    UIViewController *initialVC = [self getInitialController] ?: [UIViewController new];
+    [self.pageController setViewControllers:@[initialVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 - (UIViewController *)getInitialController {

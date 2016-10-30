@@ -62,6 +62,7 @@ static NSString * const CellIdentifierDefault = @"YYSegmentedControlCell";
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.cellIdentifier = CellIdentifierDefault;
     [self.collectionView registerNib:[UINib nibWithNibName:_cellIdentifier bundle:nil] forCellWithReuseIdentifier:_cellIdentifier];
+    
     if (_dataArray.count > 0) {
         [self reloadData];
     }
