@@ -18,6 +18,7 @@
 - (UIViewController *)yyPageViewController:(YYPageViewController *)pageViewController controllerAtPage:(NSInteger)index;
 
 @optional
+- (void)yyPageViewController:(YYPageViewController *)pageViewController willScrollToPage:(NSInteger)page prevPage:(NSInteger)prevPage;
 - (void)yyPageViewController:(YYPageViewController *)pageViewController didScrollToPage:(NSInteger)page prevPage:(NSInteger)prevPage;
 
 @end
@@ -36,6 +37,6 @@
 @property (nonatomic, weak) id<YYPageViewControllerDelegate> delegate;
 
 - (void)reloadData;
-- (void)scrollToPage:(NSInteger)page animated:(BOOL)animated;
+- (void)scrollToPage:(NSInteger)page animated:(BOOL)animated notify:(BOOL)notify;
 
 @end
