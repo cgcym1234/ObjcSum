@@ -259,10 +259,13 @@
 }
 
 - (void)parkVisible:(BOOL)visible {
-    UIEdgeInsets contentInset = self.scrollView.contentInset;
+    //同时只能显示一个 parking 状态
+    UIEdgeInsets contentInset = _scrollViewOriginalInset;
     // 增加滚动区域
     CGPoint contentOffset = self.scrollView.contentOffset;
-    CGFloat offset = visible ? YYRefreshViewHeight : -YYRefreshViewHeight;
+    
+    CGFloat offset = visible ? YYRefreshViewHeight : 0;
+    
     switch (_position) {
         case YYRefreshPositionTop:
             contentInset.top += offset;

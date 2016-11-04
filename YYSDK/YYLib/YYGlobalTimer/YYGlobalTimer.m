@@ -1,9 +1,9 @@
 //
 //  YYGlobalTimer.m
-//  ObjcSum
+//  JuMei
 //
-//  Created by yangyuan on 2016/10/23.
-//  Copyright © 2016年 sihuan. All rights reserved.
+//  Created by yuany on 16/10/21.
+//  Copyright © 2016年 Jumei Inc. All rights reserved.
 //
 
 #import "YYGlobalTimer.h"
@@ -18,12 +18,15 @@
 @property (nonatomic, copy) YYGlobalTimerHandler task;
 @property (nonatomic, copy) NSString *taskName;
 
+//任务的执行间隔，毫秒
+@property (nonatomic, assign) NSUInteger intervalMS;
 @property (nonatomic, assign) BOOL executedInMainThread;
 
 + (instancetype)instanceWithTarget:(id)taget
                         targetName:(NSString *)targetName
                               task:(YYGlobalTimerHandler)task
                           taskName:(NSString *)targetName
+                          interval:(NSUInteger)interval
               executedInMainThread:(BOOL)executedInMainThread;
 
 @end
@@ -34,12 +37,14 @@
                         targetName:(NSString *)targetName
                               task:(YYGlobalTimerHandler)task
                           taskName:(NSString *)taskName
+                          interval:(NSUInteger)interval
               executedInMainThread: (BOOL)executedInMainThread {
     YYGlobalTimerTask *item = [YYGlobalTimerTask new];
     item.target = target;
     item.targetName = targetName;
     item.task = task;
     item.taskName = taskName;
+    item.intervalMS = interval;
     item.executedInMainThread = executedInMainThread;
     
     return item;
@@ -48,6 +53,8 @@
 @end
 
 #pragma mark - YYGlobalTimer
+
+#define YYGlobalTimerInterval 0.1
 
 typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDict;
 
@@ -58,6 +65,11 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 @property (nonatomic, strong) NSMutableDictionary<NSString *, YYGlobalTimerTaskDict *> *targetTasksDict;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) BOOL running;
+
+//timer开始运行的时间，毫秒，100的倍数，每次pause后都会清0
+@property (nonatomic, assign) NSUInteger durationMS;
+
+
 @end
 
 @implementation YYGlobalTimer
@@ -95,20 +107,25 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
                 //目标对象释放掉，删除target上的所有任务
                 [_targetTasksDict removeObjectForKey:task.targetName];
             } else {
-                if (task.executedInMainThread) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        task.task();
-                    });
-                } else {
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        task.task();
-                    });
+                //只有_durationMS是任务执行间隔时间的倍数时，才执行该任务
+                if (_durationMS % task.intervalMS == 0) {
+                    if (task.executedInMainThread) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            task.task();
+                        });
+                    } else {
+                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                            task.task();
+                        });
+                    }
                 }
+                
                 hasTask = YES;
             }
         }];
     }];
     
+    _durationMS += YYGlobalTimerInterval * 1000;
     //如果没有任务，停止timer
     if (!hasTask) {
         [self pause];
@@ -121,19 +138,22 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 ///
 /// - parameter target:      任务的目标对象
 /// - parameter key:         任务的名字
+/// - parameter interval:    任务执行的间隔，单位秒，最小粒度是0.1秒
 /// - parameter executedInMainThread: 是否在主线程中执行
 /// - parameter action:      action
 + (void)addTaskForTarget:(nonnull id)target
                      key:(nonnull NSString *)key
+                interval:(NSTimeInterval)interval
                   action:(nonnull YYGlobalTimerHandler)action
     executedInMainThread:(BOOL)executedInMainThread {
-    [YYGlobalTimer.sharedInstance addTaskForTarget:target key:key action:action executedInMainThread:executedInMainThread];
+    [YYGlobalTimer.sharedInstance addTaskForTarget:target key:key interval:interval action:action executedInMainThread:executedInMainThread];
 }
 
 + (void)addTaskForKey:(nonnull NSString *)key
+             interval:(NSTimeInterval)interval
                action:(nonnull YYGlobalTimerHandler)action
  executedInMainThread:(BOOL)executedInMainThread {
-    [YYGlobalTimer.sharedInstance addTaskForTarget:self key:key action:action executedInMainThread:executedInMainThread];
+    [YYGlobalTimer.sharedInstance addTaskForTarget:self key:key interval:interval action:action executedInMainThread:executedInMainThread];
 }
 
 
@@ -174,6 +194,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 - (void)pause {
     _timer.fireDate = [NSDate distantFuture];
     _running = NO;
+    _durationMS = 0;
 }
 
 - (void)startIfNeeded {
@@ -193,6 +214,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
  */
 - (void)addTaskForTarget:(nullable id)target
                      key:(nonnull NSString *)key
+                interval:(NSTimeInterval)interval
                   action:(nonnull YYGlobalTimerHandler)action
     executedInMainThread:(BOOL)executedInMainThread {
     
@@ -202,7 +224,9 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     
     id finaleTarget = target ?: self;
     NSString *targetKey = [NSString stringWithFormat:@"%p", finaleTarget];
-    YYGlobalTimerTask *task = [YYGlobalTimerTask instanceWithTarget:finaleTarget targetName:targetKey task:action taskName:key executedInMainThread:executedInMainThread];
+    NSUInteger intervalMS = (floorf(interval * 10) / 10) * 1000;
+    
+    YYGlobalTimerTask *task = [YYGlobalTimerTask instanceWithTarget:finaleTarget targetName:targetKey task:action taskName:key interval:intervalMS executedInMainThread:executedInMainThread];
     [self addTask:task];
 }
 

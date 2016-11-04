@@ -19,16 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [YYGlobalTimer addTaskForKey:@"task1" action:^{
-        yyLogInfo(@"task1   %@", [NSDate date]);
+    [YYGlobalTimer addTaskForKey:@"task1" interval:0.1111 action:^{
+        yyLogDebug(@"task1   %@", [NSDate date]);
     } executedInMainThread:YES];
     
-    [YYGlobalTimer addTaskForTarget:self key:@"task2" action:^{
+    [YYGlobalTimer addTaskForTarget:self key:@"task2" interval:0.323 action:^{
         yyLogInfo(@"task2   %@", [NSDate date]);
     } executedInMainThread:NO];
     
-    [YYGlobalTimer addTaskForTarget:self key:@"task3" action:^{
-        yyLogInfo(@"task3   %@", [NSDate date]);
+    [YYGlobalTimer addTaskForTarget:self key:@"task3" interval:1.999 action:^{
+        yyLogError(@"task3   %@", [NSDate date]);
     } executedInMainThread:NO];
 }
 

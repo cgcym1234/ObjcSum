@@ -19,6 +19,8 @@
     self.dataArr = @[
                    [[LibDemoInfo alloc] initWithTitle:@"YYGlobalTimerDemo" desc:@"全局定时器" controllerName:@"YYGlobalTimerDemo"],
                    
+                   [[LibDemoInfo alloc] initWithTitle:@"AutoLayoutDemo" desc:@"AutoLayout测试" controllerName:@"AutoLayoutDemo"],
+                   
                    [[LibDemoInfo alloc] initWithTitle:@"GoodsDetailContainer" desc:@"仿淘宝商品详情" controllerName:@"GoodsDetailContainer"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"PullRefreshDemo" desc:@"自定义下拉刷新" controllerName:@"PullRefreshDemo"],
