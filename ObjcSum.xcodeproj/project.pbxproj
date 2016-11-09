@@ -790,6 +790,7 @@
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
+		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
 		EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */; };
@@ -2078,6 +2079,8 @@
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
+		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
+		EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedView.m; sourceTree = "<group>"; };
 		EEDCCB6E1DBFB00A00715955 /* UIButtonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDemo.h; sourceTree = "<group>"; };
 		EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemo.m; sourceTree = "<group>"; };
 		EEDCCB751DC03ABA00715955 /* HYEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEdgeInsetsButton.h; sourceTree = "<group>"; };
@@ -2246,6 +2249,7 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
+				EECCCCD41DD00556007B47B1 /* YYSegmentedView */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
 				EE2A1F661DAF6D79001F9A2E /* YYAlertGridView */,
@@ -5111,6 +5115,16 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		EECCCCD41DD00556007B47B1 /* YYSegmentedView */ = {
+			isa = PBXGroup;
+			children = (
+				EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */,
+				EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */,
+			);
+			name = YYSegmentedView;
+			path = ../../ObjcSum/Module/YYLibsDemo;
+			sourceTree = "<group>";
+		};
 		EEDCCB711DC03AA400715955 /* UIButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -5647,6 +5661,7 @@
 				EE4C293D1DAF97EA008924A3 /* MWTapDetectingImageView.m in Sources */,
 				EE4C284F1DAF97E9008924A3 /* MyClass1.m in Sources */,
 				EE4C28331DAF97E9008924A3 /* YYBaseViewController+Navigation.m in Sources */,
+				EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */,
 				EE4C282D1DAF97E9008924A3 /* ApplicationManager.m in Sources */,
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
 				EE4C28AE1DAF97E9008924A3 /* FastRecordImageCell.m in Sources */,
@@ -6421,6 +6436,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R6XRM4JTNP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -6452,6 +6468,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R6XRM4JTNP;
 				DYLIB_COMPATIBILITY_VERSION = 1;

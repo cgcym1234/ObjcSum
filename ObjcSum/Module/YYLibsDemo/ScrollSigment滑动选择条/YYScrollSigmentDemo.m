@@ -12,6 +12,7 @@
 #import "YYSegmentedControl.h"
 #import "YYAlertTextViewDemo.h"
 #import "YYPageViewController.h"
+#import "YYSegmentedView.h"
 
 @interface YYScrollSigmentDemo ()<YYPageControllerDelegate, YYSegmentedControlDelegate, YYPageViewControllerDelegate>
 
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) YYPageController *viewController;
 @property (nonatomic, strong) YYPageViewController *pageController;
 @property (nonatomic, strong) YYSegmentedControl *segmentedControl;
+
+@property (nonatomic, strong) YYSegmentedView *segmentedView;
 
 @property (nonatomic, strong) NSArray *texts;
 
@@ -48,8 +51,11 @@
     
 //    [self.view addSubview:self.segment2];
 //    self.segment2.frame = CGRectMake(0, 50, 320, 44);
+    
+    [self.view addSubview:self.segmentedView];
     [self addPage2];
 }
+
 
 - (void)addPage1 {
     YYPageController *viewController = [[YYPageController alloc] init];
@@ -78,6 +84,23 @@
         _segmentedControl = segmentedControl;
     }
     return _segmentedControl;
+}
+
+- (YYSegmentedView *)segmentedView {
+    if (!_segmentedView) {
+        YYSegmentedView *segmentedView = [YYSegmentedView new];
+        segmentedView.frame = CGRectMake(0, 50, 320, 44);
+        segmentedView.itemWith = 60;
+        [segmentedView setTitles:_texts];
+        
+        __weak __typeof(self) weakSelf = self;
+        segmentedView.indexChangedBlock = ^(YYSegmentedView *view, NSInteger toIndex, NSInteger prevIndex) {
+            [weakSelf.pageController setCurrentPage:toIndex];
+        };
+        
+        _segmentedView = segmentedView;
+    }
+    return _segmentedView;
 }
 
 #pragma mark - YYSegmentedControlDelegate
@@ -131,7 +154,7 @@
 }
 
 - (void)yyPageViewController:(YYPageViewController *)pageViewController didScrollToPage:(NSInteger)page prevPage:(NSInteger)prevPage {
-    NSLog(@"%ld  %ld",page, prevPage);
+    [self.segmentedView setSelectedIndex:page animated:YES notify:NO];
 }
 
 @end

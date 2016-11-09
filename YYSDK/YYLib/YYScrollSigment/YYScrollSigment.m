@@ -165,7 +165,6 @@
         CGContextAddLineToPoint(context, self.frame.size.width, self.frame.size.height);
         CGContextStrokePath(context);
     }
-    
 }
 
 - (void)setDataArr:(NSArray *)dataArr {
