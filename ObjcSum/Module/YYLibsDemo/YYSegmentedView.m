@@ -10,14 +10,12 @@
 #import "UIView+Frame.h"
 #import "UIColor+YYSDK.h"
 
-#pragma mark - Const
-
 @interface YYSegmentedView ()<UIScrollViewDelegate>
 
 //条形指示条
 @property (nonatomic, strong) UIView *indicatorView;
 
-@property(nonatomic, strong) NSMutableArray<UILabel *> *titleLabels;
+@property(nonatomic, strong) NSMutableArray<UIButton *> *titleItems;
 
 @end
 
@@ -40,16 +38,18 @@
     return self;
 }
 
-
 - (void)setContext {
     self.userInteractionEnabled = YES;
     self.showsHorizontalScrollIndicator = NO;
     self.delegate = self;
     self.backgroundColor = [UIColor whiteColor];
     
-    _titleLabels = [NSMutableArray new];
+    _titleItems = [NSMutableArray new];
     _prevIndex = 0;
     _selectedIndex = 0;
+    
+    _fixedItemWidth = 0;
+    _paddingLeftRight = 10;
     
     _titleColorNomal = [UIColor colorWithHexString:@"0x333333"];
     _titleColorSelected = [UIColor colorWithHexString:@"0xF33873"];
@@ -64,7 +64,6 @@
     [self addSubview:self.indicatorView];
 }
 
-
 #pragma mark - Override
 
 - (void)layoutSubviews {
@@ -72,24 +71,12 @@
     [self layoutItems];
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self];
-    NSInteger index = point.x / _itemWith;
+#pragma mark - Action
+
+- (void)titleButtonDidClicked:(UIButton *)button {
+    NSInteger index = button.tag;
     if (index != _selectedIndex) {
         [self setSelectedIndex:index animated:YES notify:YES];
-    }
-}
-
-//bottomLine
-- (void)drawRect:(CGRect)rect {
-    if (_bottomLineEnable && _bottomLineColor) {
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetLineWidth(context, 1);
-        CGContextSetStrokeColorWithColor(context, _bottomLineColor.CGColor);
-        CGContextMoveToPoint(context, 0, self.frame.size.height-0.5);
-        CGContextAddLineToPoint(context, self.frame.size.width, self.frame.size.height);
-        CGContextStrokePath(context);
     }
 }
 
@@ -98,26 +85,27 @@
 - (void)setTitles:(NSArray<NSString *> *)titles {
     _titles = titles;
     //数量不相等的话重建
-    if (titles.count != _titleLabels.count) {
-        [self removeTitleLabels];
-        [self addTitleLabels];
+    if (titles.count != _titleItems.count) {
+        [self removeTitleItems];
+        [self addTitleItems];
     }
-    [self updateTitleLabels];
+    [self updateTitleItems];
+    [self setNeedsLayout];
 }
 
 - (void)setTitleFont:(UIFont *)titleFont {
     _titleFont = titleFont;
-    [self updateTitleLabels];
+    [self updateTitleItems];
 }
 
 - (void)setTitleColorNomal:(UIColor *)titleColorNomal {
     _titleColorNomal = titleColorNomal;
-    [self updateTitleLabels];
+    [self updateTitleItems];
 }
 
 - (void)setTitleColorSelected:(UIColor *)titleColorSelected {
     _titleColorSelected = titleColorSelected;
-    [self updateTitleLabels];
+    [self updateTitleItems];
 }
 
 - (void)setIndicatorViewEnable:(BOOL)indicatorViewEnable {
@@ -135,11 +123,19 @@
     [self setNeedsLayout];
 }
 
-- (void)setItemWith:(CGFloat)itemWith {
-    if (_itemWith == itemWith) {
+- (void)setfixedItemWidth:(CGFloat)fixedItemWidth {
+    if (_fixedItemWidth == fixedItemWidth) {
         return;
     }
-    _itemWith = itemWith;
+    _fixedItemWidth = fixedItemWidth;
+    [self setNeedsLayout];
+}
+
+- (void)setPaddingLeftRight:(CGFloat)paddingLeftRight {
+    if (_paddingLeftRight == paddingLeftRight) {
+        return;
+    }
+    _paddingLeftRight = paddingLeftRight;
     [self setNeedsLayout];
 }
 
@@ -158,8 +154,8 @@
     [self setIndicatorViewToIndex:index animated:animated];
     [self scrollToIndex:index animated:animated];
     
-    _titleLabels[_prevIndex].textColor = _titleColorNomal;
-    _titleLabels[_selectedIndex].textColor = _titleColorSelected;
+    _titleItems[_prevIndex].enabled = YES;
+    _titleItems[_selectedIndex].enabled = NO;
     
     if (notify && _indexChangedBlock) {
         _indexChangedBlock(self, _selectedIndex, _prevIndex);
@@ -169,47 +165,54 @@
 #pragma mark - Private
 
 - (BOOL)isValidIndex:(NSInteger)index {
-    return index >= 0 && index < _titleLabels.count;
+    return index >= 0 && index < _titleItems.count;
 }
 
 - (void)layoutItems {
-    [self layoutTitleLabels];
+    [self layoutTitleItems];
     [self layoutIndicatorView];
-    self.contentSize = CGSizeMake(_titleLabels.count * _itemWith, 0);
-}
-
-- (void)removeTitleLabels {
-    [_titleLabels enumerateObjectsUsingBlock:^(UILabel * _Nonnull label, NSUInteger idx, BOOL * _Nonnull stop) {
-        [label removeFromSuperview];
-    }];
-    [_titleLabels removeAllObjects];
-}
-
-- (void)addTitleLabels {
-    [_titles enumerateObjectsUsingBlock:^(NSString * _Nonnull text, NSUInteger idx, BOOL * _Nonnull stop) {
-        UILabel *label = [self titleLabel];
-        label.text = text;
-        [self addSubview:label];
-        [_titleLabels addObject:label];
-    }];
-}
-
-- (void)updateTitleLabels {
-    [_titleLabels enumerateObjectsUsingBlock:^(UILabel * _Nonnull label, NSUInteger idx, BOOL * _Nonnull stop) {
-        label.text = _titles[idx];
-        label.font = _titleFont;
-        label.textColor = idx == _selectedIndex ? _titleColorSelected : _titleColorNomal;
-    }];
-    _indicatorView.backgroundColor = _titleColorSelected;
-}
-
-- (void)layoutTitleLabels {
-    CGFloat itemHeight = self.height - _indicatorViewHeight;
-    [_titleLabels enumerateObjectsUsingBlock:^(UILabel * _Nonnull label, NSUInteger idx, BOOL * _Nonnull stop) {
-        CGFloat x = idx * _itemWith;
-        label.frame = CGRectMake(x, 0, _itemWith, itemHeight);
-    }];
     
+//    [self scrollToIndex:_selectedIndex animated:NO];
+}
+
+- (void)removeTitleItems {
+    [_titleItems enumerateObjectsUsingBlock:^(UIButton * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
+        [item removeFromSuperview];
+    }];
+    [_titleItems removeAllObjects];
+}
+
+- (void)addTitleItems {
+    [_titles enumerateObjectsUsingBlock:^(NSString * _Nonnull text, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIButton *item = [self titleButton];
+        item.tag = idx;
+        [self addSubview:item];
+        [_titleItems addObject:item];
+    }];
+}
+
+- (void)updateTitleItems {
+    [_titleItems enumerateObjectsUsingBlock:^(UIButton * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
+        [item setTitle:_titles[idx] forState:UIControlStateNormal];
+        [item setTitle:_titles[idx] forState:UIControlStateDisabled];
+        [item setTitleColor:_titleColorNomal forState:UIControlStateNormal];
+        [item setTitleColor:_titleColorSelected forState:UIControlStateDisabled];
+        item.titleLabel.font = _titleFont;
+        item.enabled = idx != _selectedIndex;
+    }];
+//    _indicatorView.backgroundColor = _titleColorSelected;
+}
+
+- (void)layoutTitleItems {
+    __block CGFloat itemWith = 0;
+    CGFloat itemHeight = self.height - _indicatorViewHeight;
+    __block CGFloat x = 0;
+    [_titleItems enumerateObjectsUsingBlock:^(UIButton * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
+        itemWith = _fixedItemWidth > 0 ? _fixedItemWidth : (item.titleLabel.intrinsicContentSize.width + _paddingLeftRight);
+        item.frame = CGRectMake(x, 0, itemWith, itemHeight);
+        x += itemWith;
+    }];
+    self.contentSize = CGSizeMake(x + itemWith, 0);
 }
 
 - (void)layoutIndicatorView {
@@ -218,24 +221,38 @@
     [self setIndicatorViewToIndex:_selectedIndex animated:NO];
 }
 
-//滚动到某个位置需要判断前后的内容是否需要滚动到可见区域
+// 让选中的item位于中间
 - (void)scrollToIndex:(NSInteger)index animated:(BOOL)animated {
-    if (self.contentSize.width <= self.bounds.size.width) {
+    if (self.contentSize.width <= self.bounds.size.width || !self.scrollEnabled) {
         return;
     }
     
-    CGFloat positionX = index * _itemWith;
-    CGFloat maxContenOffsetX = (_itemWith * _titleLabels.count) - CGRectGetWidth(self.bounds);
-    CGFloat contentOffsetX = MIN(MAX(0, positionX - _itemWith/2), maxContenOffsetX);
-    
-    [self setContentOffset:CGPointMake(contentOffsetX, 0) animated:animated];
+    CGRect frame = _titleItems[index].frame;
+    CGFloat itemX = frame.origin.x;
+    CGFloat width = self.width;
+    CGSize contentSize = self.contentSize;
+    if (itemX > width/2) {
+        CGFloat targetX;
+        if ((contentSize.width-itemX) <= width/2) {
+            targetX = contentSize.width - width;
+        } else {
+            targetX = frame.origin.x - width/2 + frame.size.width/2;
+        }
+        // 应该有更好的解决方法
+        if (targetX + width > contentSize.width) {
+            targetX = contentSize.width - width;
+        }
+        [self setContentOffset:CGPointMake(targetX, 0) animated:animated];
+    } else {
+        [self setContentOffset:CGPointMake(0, 0) animated:animated];
+    }
 }
 
 - (void)setIndicatorViewToIndex:(NSInteger)index animated:(BOOL)animated {
-    UILabel *selectedLabel =  _titleLabels[index];
+    UIButton *selectedItem =  _titleItems[index];
     void(^block)() = ^{
-        _indicatorView.width = selectedLabel.intrinsicContentSize.width + 2;
-        _indicatorView.centerX = selectedLabel.centerX;
+        _indicatorView.width = selectedItem.width + 2;
+        _indicatorView.centerX = selectedItem.centerX;
     };
     
     if (animated) {
@@ -259,23 +276,28 @@
 - (UIView *)indicatorView {
     if (!_indicatorView) {
         UIView *view = [[UIView alloc] init];
-        view.backgroundColor = _titleColorSelected;
+        view.backgroundColor = [UIColor clearColor];
+        view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"bottomLine_selected"].CGImage);
+        view.layer.contentsScale = [UIScreen mainScreen].scale;
+        view.layer.contentsCenter = CGRectMake(0.25, 1, 0.5, 0);
         view.hidden = !_indicatorViewEnable;
         _indicatorView = view;
     }
     return _indicatorView;
 }
 
-- (UILabel *)titleLabel {
-    UILabel *label = [UILabel new];
-    label.font = _titleFont;
-    label.textColor = _titleColorNomal;
-    label.textAlignment = NSTextAlignmentCenter;
-    return label;
+- (UIButton *)titleButton {
+    UIButton *button = [UIButton new];
+    button.contentEdgeInsets = UIEdgeInsetsZero;
+    button.titleLabel.font = _titleFont;
+    [button setTitleColor:_titleColorNomal forState:UIControlStateNormal];
+    [button setTitleColor:_titleColorSelected forState:UIControlStateDisabled];
+    [button addTarget:self action:@selector(titleButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
 }
 
 - (NSInteger)totalIndex {
-    return _titleLabels.count;
+    return _titleItems.count;
 }
 
 @end

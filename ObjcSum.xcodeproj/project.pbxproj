@@ -790,6 +790,7 @@
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
+		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
@@ -2079,6 +2080,8 @@
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
+		EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyntacticSugar+Extention.h"; sourceTree = "<group>"; };
+		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
 		EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedView.m; sourceTree = "<group>"; };
 		EEDCCB6E1DBFB00A00715955 /* UIButtonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDemo.h; sourceTree = "<group>"; };
@@ -3360,6 +3363,8 @@
 			children = (
 				EE4C24991DAF97E7008924A3 /* SyntacticSugar.h */,
 				EE4C249A1DAF97E7008924A3 /* SyntacticSugar.m */,
+				EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */,
+				EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */,
 			);
 			path = "OC语法糖";
 			sourceTree = "<group>";
@@ -5772,6 +5777,7 @@
 				EE4C29781DAF97EA008924A3 /* NSString+RACSequenceAdditions.m in Sources */,
 				EE4C28591DAF97E9008924A3 /* RuntimeDemo.m in Sources */,
 				EE4C28411DAF97E9008924A3 /* YYMalloc.c in Sources */,
+				EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */,
 				EE4C298A1DAF97EA008924A3 /* RACErrorSignal.m in Sources */,
 				EE4C29B21DAF97EA008924A3 /* UIControl+RACSignalSupport.m in Sources */,
 				EE4C29311DAF97EA008924A3 /* UIColor+Hex.m in Sources */,

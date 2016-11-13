@@ -7,6 +7,7 @@
 //
 
 #import "SyntacticSugar.h"
+#import "SyntacticSugar+Extention.h"
 
 @implementation SyntacticSugar
 
@@ -47,6 +48,16 @@
         imageView.frame = CGRectMake(0, 0, 100, 100);
         imageView;
     });
+    
+    NSLog(@"%@", self.name);
+}
+
+
+- (NSString *)name {
+    if (!_name) {
+        _name = @"调调的";
+    }
+    return _name;
 }
 
 @end

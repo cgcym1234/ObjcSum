@@ -26,7 +26,11 @@ typedef void (^YYSegmentedViewIndexChangedBlock)(YYSegmentedView *view, NSIntege
 
 @property (nonatomic, copy) YYSegmentedViewIndexChangedBlock indexChangedBlock;
 
-@property (nonatomic, assign) CGFloat itemWith;
+//fixedItemWith > 0 则使用该宽度，否则根据文字长度自动计算
+@property (nonatomic, assign) CGFloat fixedItemWidth;
+
+//文字的左右间距，默认10
+@property (nonatomic, assign) CGFloat paddingLeftRight;
 
 //default [UIFont systemFontOfSize:14]
 @property(nonatomic, strong) UIFont *titleFont;

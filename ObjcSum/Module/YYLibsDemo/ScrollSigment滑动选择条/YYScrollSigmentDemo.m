@@ -13,6 +13,8 @@
 #import "YYAlertTextViewDemo.h"
 #import "YYPageViewController.h"
 #import "YYSegmentedView.h"
+#import "UIViewController+Extension.h"
+#import "UIView+Frame.h"
 
 @interface YYScrollSigmentDemo ()<YYPageControllerDelegate, YYSegmentedControlDelegate, YYPageViewControllerDelegate>
 
@@ -34,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _texts = @[@"太阳",@"叉叉1",@"叉叉2",@"叉叉叉",@"叉叉叉",@"叉叉叉"];
+    _texts = @[@"太阳",@"叉叉1",@"叉叉2",@"叉叉叉叉",@"叉叉叉叉叉",@"叉叉叉叉叉叉"];
 //    _segment.currentIndex = 1;
 ////    _segment.indicatorViewEnable = YES;
 //    _segment.dataArr = @[@"太阳",@"牛叉叉叉叉"];
@@ -54,6 +56,11 @@
     
     [self.view addSubview:self.segmentedView];
     [self addPage2];
+    
+    __weak __typeof(self) weakSelf = self;
+    [self addButtonWithTitle:@"fixedItemWith = 80" action:^(UIButton *btn) {
+        weakSelf.segmentedView.fixedItemWidth = 80;
+    }].y = 4;
 }
 
 
@@ -90,7 +97,7 @@
     if (!_segmentedView) {
         YYSegmentedView *segmentedView = [YYSegmentedView new];
         segmentedView.frame = CGRectMake(0, 50, 320, 44);
-        segmentedView.itemWith = 60;
+//        segmentedView.fixedItemWith = 40;
         [segmentedView setTitles:_texts];
         
         __weak __typeof(self) weakSelf = self;
@@ -116,7 +123,7 @@
         YYScrollSigment *segment = [[YYScrollSigment alloc] initWithDataArr:_texts];
         segment.indicatorViewEnable = YES;
         segment.itemSizeAuto = NO;
-        segment.itemWith = 80;
+        segment.itemWith = 100;
         segment.didSelectedItemBlock = ^(YYScrollSigment *view, NSInteger idx) {
             weakSelf.viewController.currentPage = idx;
         };
