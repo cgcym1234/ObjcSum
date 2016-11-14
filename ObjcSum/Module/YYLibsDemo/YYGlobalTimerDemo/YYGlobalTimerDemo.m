@@ -9,6 +9,7 @@
 #import "YYGlobalTimerDemo.h"
 #import "YYGlobalTimer.h"
 #import "YYLogger.h"
+#import "NSString+YYSDK.h"
 
 @interface YYGlobalTimerDemo ()
 
@@ -19,15 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [YYGlobalTimer addTaskForKey:@"task1" interval:0.1111 action:^{
+    [YYGlobalTimer addTaskForKey:@"task1" interval:0.1111 action:^(NSDate *currentDate){
         yyLogDebug(@"task1   %@", [NSDate date]);
     } executedInMainThread:YES];
     
-    [YYGlobalTimer addTaskForTarget:self key:@"task2" interval:0.323 action:^{
+    [YYGlobalTimer addTaskForTarget:self key:@"task2" interval:0.323 action:^(NSDate *currentDate){
         yyLogInfo(@"task2   %@", [NSDate date]);
     } executedInMainThread:NO];
     
-    [YYGlobalTimer addTaskForTarget:self key:@"task3" interval:1.999 action:^{
+    [YYGlobalTimer addTaskForTarget:self key:@"task3" interval:1.999 action:^(NSDate *currentDate){
         yyLogError(@"task3   %@", [NSDate date]);
     } executedInMainThread:NO];
 }

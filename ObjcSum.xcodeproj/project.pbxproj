@@ -13,6 +13,8 @@
 		1F8B8A0E1BE2058700D81096 /* ObjcSumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A0D1BE2058700D81096 /* ObjcSumTests.m */; };
 		1F8B8A191BE2058700D81096 /* ObjcSumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A181BE2058700D81096 /* ObjcSumUITests.m */; };
 		1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
+		EE1E31D41DD94CB30012D49F /* NSString+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */; };
+		EE1E31D51DD94CB30012D49F /* NSString+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */; };
 		EE2A1F301DAF5DE7001F9A2E /* YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE2A1F331DAF5DE7001F9A2E /* YYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; };
 		EE2A1F341DAF5DE7001F9A2E /* YYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -847,6 +849,8 @@
 		1F8B8A181BE2058700D81096 /* ObjcSumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcSumUITests.m; sourceTree = "<group>"; };
 		1F8B8A1A1BE2058700D81096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAC3C191C0D44760007520F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYSDK.h"; sourceTree = "<group>"; };
+		EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYSDK.m"; sourceTree = "<group>"; };
 		EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSDK.h; sourceTree = "<group>"; };
 		EE2A1F2F1DAF5DE7001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2210,6 +2214,8 @@
 			isa = PBXGroup;
 			children = (
 				EE2A1F431DAF60C8001F9A2E /* UIKit */,
+				EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */,
+				EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */,
 			);
 			path = YYCategory;
 			sourceTree = "<group>";
@@ -5163,6 +5169,7 @@
 				EE5FE8931DBD055C00CB2FF0 /* YYGCDTimer.h in Headers */,
 				EE5FE87F1DBCF28500CB2FF0 /* YYGlobalTimer.h in Headers */,
 				EE2A20C81DAF6D7A001F9A2E /* NSDate+YYExtension.h in Headers */,
+				EE1E31D41DD94CB30012D49F /* NSString+YYSDK.h in Headers */,
 				EE2A21481DAF6D7A001F9A2E /* YYScrollSigment.h in Headers */,
 				EE2A21151DAF6D7A001F9A2E /* YYReachability.h in Headers */,
 				EE2A20971DAF6D7A001F9A2E /* YYCache.h in Headers */,
@@ -6029,6 +6036,7 @@
 				EE2A20F11DAF6D7A001F9A2E /* UIDevice+YYExtension.m in Sources */,
 				EE2A21491DAF6D7A001F9A2E /* YYScrollSigment.m in Sources */,
 				EE4C2C011DAF9D33008924A3 /* AFURLResponseSerialization.m in Sources */,
+				EE1E31D51DD94CB30012D49F /* NSString+YYSDK.m in Sources */,
 				EE2A21091DAF6D7A001F9A2E /* YYBenchmark.m in Sources */,
 				EE2A20731DAF6D7A001F9A2E /* FBEncryptorAES.m in Sources */,
 				EE2A20901DAF6D7A001F9A2E /* YYJsonRequestSerializer.m in Sources */,

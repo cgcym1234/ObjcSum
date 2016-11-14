@@ -17,7 +17,7 @@
 @end
 
 
-typedef  void (^YYGlobalTimerHandler)();
+typedef  void (^YYGlobalTimerHandler)(NSDate * _Nonnull currentDate);
 
 #pragma mark - 每隔0.1秒执行一次的定时器
 /*

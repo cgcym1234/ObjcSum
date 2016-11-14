@@ -99,6 +99,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 
 - (void)timerTask {
     __block BOOL hasTask = NO;
+    NSDate *currentDate = [NSDate date];
     NSArray<YYGlobalTimerTaskDict *> *targetTasks = [_targetTasksDict allValues];
     [targetTasks enumerateObjectsUsingBlock:^(YYGlobalTimerTaskDict * _Nonnull targetTask, NSUInteger idx, BOOL * _Nonnull stop) {
         NSArray<YYGlobalTimerTask *> *tasks = [targetTask allValues];
@@ -111,11 +112,11 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
                 if (_durationMS % task.intervalMS == 0) {
                     if (task.executedInMainThread) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            task.task();
+                            task.task(currentDate);
                         });
                     } else {
                         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                            task.task();
+                            task.task(currentDate);
                         });
                     }
                 }
