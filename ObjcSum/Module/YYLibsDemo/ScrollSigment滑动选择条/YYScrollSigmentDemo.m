@@ -8,7 +8,7 @@
 
 #import "YYScrollSigmentDemo.h"
 #import "YYScrollSigment.h"
-#import "YYPageController.h"
+
 #import "YYSegmentedControl.h"
 #import "YYAlertTextViewDemo.h"
 #import "YYPageViewController.h"
@@ -16,12 +16,12 @@
 #import "UIViewController+Extension.h"
 #import "UIView+Frame.h"
 
-@interface YYScrollSigmentDemo ()<YYPageControllerDelegate, YYSegmentedControlDelegate, YYPageViewControllerDelegate>
+@interface YYScrollSigmentDemo ()<YYSegmentedControlDelegate, YYPageViewControllerDelegate>
 
 @property (nonatomic, weak)IBOutlet UIView *containerView;
 @property (nonatomic, weak)IBOutlet YYScrollSigment *segment;
 @property (nonatomic, strong) YYScrollSigment *segment2;
-@property (nonatomic, strong) YYPageController *viewController;
+
 @property (nonatomic, strong) YYPageViewController *pageController;
 @property (nonatomic, strong) YYSegmentedControl *segmentedControl;
 
@@ -55,7 +55,7 @@
 //    self.segment2.frame = CGRectMake(0, 50, 320, 44);
     
     [self.view addSubview:self.segmentedView];
-    [self addPage2];
+    
     
     __weak __typeof(self) weakSelf = self;
     [self addButtonWithTitle:@"fixedItemWith = 80" action:^(UIButton *btn) {
@@ -63,25 +63,27 @@
     }].y = 4;
 }
 
-
-- (void)addPage1 {
-    YYPageController *viewController = [[YYPageController alloc] init];
-    viewController.delegate = self;
-    [self addChildViewController:viewController];
-    [self.containerView addSubview:viewController.view];
-    //    viewController.view.frame = self.containerView.bounds;
-    [viewController didMoveToParentViewController:self];
-    _viewController = viewController;
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self addPage2];
+    
 }
 
+
 - (void)addPage2 {
+    if (_pageController) {
+        return;
+    }
     YYPageViewController *pageController = [YYPageViewController new];
     pageController.delegate = self;
     [self addChildViewController:pageController];
     [self.containerView addSubview:pageController.view];
     [pageController didMoveToParentViewController:self];
     _pageController = pageController;
-    [_pageController reloadData];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_pageController reloadData];
+    });
 }
 
 - (YYSegmentedControl *)segmentedControl {
@@ -125,27 +127,12 @@
         segment.itemSizeAuto = NO;
         segment.itemWith = 100;
         segment.didSelectedItemBlock = ^(YYScrollSigment *view, NSInteger idx) {
-            weakSelf.viewController.currentPage = idx;
+            
         };
 
         _segment2 = segment;
     }
     return _segment2;
-}
-
-#pragma mark - YYPageControllerDelegate
-
-- (NSInteger)yyPageControllerNumberOfControllers {
-    return _texts.count;
-}
-
-- (UIViewController *)yyPageController:(YYPageController *)pageController controllerAtIndex:(NSInteger)index {
-    return [[YYAlertTextViewDemo alloc] init];
-}
-
-- (void)yyPageController:(YYPageController *)pageController didScrollToPage:(NSInteger)page {
-    NSLog(@"didScrollToPage %ld", (long)page);
-    self.segment2.currentIndex = page;
 }
 
 #pragma mark - YYPageViewControllerDelegate

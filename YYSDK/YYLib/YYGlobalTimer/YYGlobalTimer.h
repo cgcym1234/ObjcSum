@@ -52,9 +52,25 @@ typedef  void (^YYGlobalTimerHandler)(NSDate * _Nonnull currentDate);
  */
 + (void)removeTaskForTarget:(nonnull id)target
                         key:(nonnull NSString *)key;
-+ (void)removeTaskForTarget:(nonnull id)taget;
+
+/**
+ 移除target上的所有任务
+ */
++ (void)removeTaskForTarget:(nonnull id)target;
+
 + (void)removeTaskForKey:(nonnull NSString *)key;
+
+/**
+ 移除所有任务
+ */
 + (void)removeAllTask;
+
+
+/**
+ 判断target对象上是否有key任务
+ */
++ (BOOL)isExistingTaskForTarget:(nonnull id)target
+                            key:(nonnull NSString *)key;
 
 
 @end

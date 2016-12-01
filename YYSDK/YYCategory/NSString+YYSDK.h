@@ -23,4 +23,8 @@
 /* Trims white space and new line characters, returns a new string */
 - (NSString *)trimmed;
 
+- (NSString *)toUnicodeString;
+- (NSString *)toUnUnicodeString;
+
+
 @end

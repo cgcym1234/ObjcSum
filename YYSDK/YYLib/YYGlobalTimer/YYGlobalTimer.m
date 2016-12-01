@@ -176,6 +176,14 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 }
 
 /**
+ 判断target对象上是否有key任务
+ */
++ (BOOL)isExistingTaskForTarget:(nonnull id)target
+                            key:(nonnull NSString *)key {
+    return [YYGlobalTimer.sharedInstance isExistingTaskForTarget:target key:key];
+}
+
+/**
  强制启动或暂停
  */
 + (void)start {
@@ -210,6 +218,10 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     }
 }
 
+- (nonnull NSString *)keyOfTarget:(nullable id)target {
+    return [NSString stringWithFormat:@"%p", target ?: self];
+}
+
 /**
  添加一个任务后会自动开始
  */
@@ -224,7 +236,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     }
     
     id finaleTarget = target ?: self;
-    NSString *targetKey = [NSString stringWithFormat:@"%p", finaleTarget];
+    NSString *targetKey = [self keyOfTarget:target];
     NSUInteger intervalMS = (floorf(interval * 10) / 10) * 1000;
     
     YYGlobalTimerTask *task = [YYGlobalTimerTask instanceWithTarget:finaleTarget targetName:targetKey task:action taskName:key interval:intervalMS executedInMainThread:executedInMainThread];
@@ -253,7 +265,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
         return;
     }
     
-    NSString *targetKey = [NSString stringWithFormat:@"%p", target ?: self];
+    NSString *targetKey = [self keyOfTarget:target];
     dispatch_async(_serialQueue, ^{
         if (key != nil) {
             //删除target上指定任务
@@ -271,6 +283,23 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
         [_targetTasksDict removeAllObjects];
         [self pause];
     });
+}
+
+/**
+ 判断target对象上是否有key任务
+ */
+- (BOOL)isExistingTaskForTarget:(nonnull id)target
+                            key:(nonnull NSString *)key {
+    if (!key) {
+        return NO;
+    }
+    
+    __block BOOL isExisting = NO;
+    NSString *targetKey = [self keyOfTarget:target];
+    dispatch_sync(_serialQueue, ^{
+        isExisting = [[_targetTasksDict valueForKey:targetKey] valueForKey:key] != nil;
+    });
+    return isExisting;
 }
 
 @end

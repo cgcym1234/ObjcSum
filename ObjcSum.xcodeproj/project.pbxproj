@@ -233,8 +233,6 @@
 		EE2A21381DAF6D7A001F9A2E /* YYNoDataView.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A20401DAF6D79001F9A2E /* YYNoDataView.h */; };
 		EE2A21391DAF6D7A001F9A2E /* YYNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A20411DAF6D79001F9A2E /* YYNoDataView.m */; };
 		EE2A213A1DAF6D7A001F9A2E /* YYNoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2A20421DAF6D79001F9A2E /* YYNoDataView.xib */; };
-		EE2A213B1DAF6D7A001F9A2E /* YYPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A20441DAF6D79001F9A2E /* YYPageController.h */; };
-		EE2A213C1DAF6D7A001F9A2E /* YYPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A20451DAF6D79001F9A2E /* YYPageController.m */; };
 		EE2A213D1DAF6D7A001F9A2E /* UIScrollView+YYRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A20471DAF6D79001F9A2E /* UIScrollView+YYRefresh.h */; };
 		EE2A213E1DAF6D7A001F9A2E /* UIScrollView+YYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A20481DAF6D79001F9A2E /* UIScrollView+YYRefresh.m */; };
 		EE2A213F1DAF6D7A001F9A2E /* YYRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A20491DAF6D79001F9A2E /* YYRefresh.h */; };
@@ -521,8 +519,6 @@
 		EE4C29001DAF97E9008924A3 /* DemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C26091DAF97E7008924A3 /* DemoCell.m */; };
 		EE4C29011DAF97E9008924A3 /* DemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4C260A1DAF97E7008924A3 /* DemoCell.xib */; };
 		EE4C29021DAF97E9008924A3 /* DemoCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C260C1DAF97E7008924A3 /* DemoCell2.m */; };
-		EE4C29031DAF97E9008924A3 /* CountdownDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C260F1DAF97E7008924A3 /* CountdownDemo.m */; };
-		EE4C29041DAF97E9008924A3 /* YYTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C26111DAF97E7008924A3 /* YYTimeManager.m */; };
 		EE4C29051DAF97E9008924A3 /* EncryptionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C26141DAF97E7008924A3 /* EncryptionDemo.m */; };
 		EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C26171DAF97E7008924A3 /* YYAlertTextViewDemo.m */; };
 		EE4C29071DAF97E9008924A3 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C261A1DAF97E7008924A3 /* HttpManager.m */; };
@@ -789,9 +785,48 @@
 		EE5FE8941DBD055C00CB2FF0 /* YYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE88B1DBD055C00CB2FF0 /* YYGCDTimer.m */; };
 		EE5FE8981DBD91E000CB2FF0 /* YYGlobalTimerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */; };
 		EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */; };
+		EE6113EF1DE69B3500A9113A /* ArchitectureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */; };
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
+		EE9F1A061DE84233006AD033 /* JMData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19E91DE84232006AD033 /* JMData.m */; };
+		EE9F1A071DE84233006AD033 /* JMDescriptionUrlSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19EB1DE84232006AD033 /* JMDescriptionUrlSet.m */; };
+		EE9F1A081DE84233006AD033 /* JMDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19ED1DE84232006AD033 /* JMDetail.m */; };
+		EE9F1A091DE84233006AD033 /* JMExtDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19EF1DE84232006AD033 /* JMExtDesc.m */; };
+		EE9F1A0A1DE84233006AD033 /* JMExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F11DE84232006AD033 /* JMExtra.m */; };
+		EE9F1A0B1DE84233006AD033 /* JMIconTag.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F31DE84232006AD033 /* JMIconTag.m */; };
+		EE9F1A0C1DE84233006AD033 /* JMImageUrlSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */; };
+		EE9F1A0D1DE84233006AD033 /* JMNav.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F71DE84232006AD033 /* JMNav.m */; };
+		EE9F1A0E1DE84233006AD033 /* JMProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F91DE84232006AD033 /* JMProduct.m */; };
+		EE9F1A0F1DE84233006AD033 /* JMProductGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FB1DE84233006AD033 /* JMProductGallery.m */; };
+		EE9F1A101DE84233006AD033 /* JMProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FD1DE84233006AD033 /* JMProperty.m */; };
+		EE9F1A111DE84233006AD033 /* JMScanControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FF1DE84233006AD033 /* JMScanControl.m */; };
+		EE9F1A121DE84233006AD033 /* JMShareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1A011DE84233006AD033 /* JMShareInfo.m */; };
+		EE9F1A131DE84233006AD033 /* JMSpecialTag.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1A031DE84233006AD033 /* JMSpecialTag.m */; };
+		EE9F1A141DE84233006AD033 /* JMVideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1A051DE84233006AD033 /* JMVideoInfo.m */; };
+		EE9F1B4D1DEAB337006AD033 /* JMGoodsDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B131DEAB337006AD033 /* JMGoodsDetailHeaderView.m */; };
+		EE9F1B4E1DEAB337006AD033 /* JMGoodsDetailNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B161DEAB337006AD033 /* JMGoodsDetailNavTitleView.m */; };
+		EE9F1B4F1DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B171DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib */; };
+		EE9F1B501DEAB337006AD033 /* JMGoodsDetailPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B1A1DEAB337006AD033 /* JMGoodsDetailPageController.m */; };
+		EE9F1B511DEAB337006AD033 /* JMGoodsDetailRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B1E1DEAB337006AD033 /* JMGoodsDetailRefreshView.m */; };
+		EE9F1B521DEAB337006AD033 /* JMGoodsDetailRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B1F1DEAB337006AD033 /* JMGoodsDetailRefreshView.xib */; };
+		EE9F1B531DEAB337006AD033 /* JMGoodsDetailLickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B231DEAB337006AD033 /* JMGoodsDetailLickButton.m */; };
+		EE9F1B541DEAB337006AD033 /* JMGoodsDetailShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B261DEAB337006AD033 /* JMGoodsDetailShareButton.m */; };
+		EE9F1B551DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B281DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m */; };
+		EE9F1B561DEAB337006AD033 /* JMGoodsDetailCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B2C1DEAB337006AD033 /* JMGoodsDetailCommentViewController.m */; };
+		EE9F1B571DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B2F1DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.m */; };
+		EE9F1B581DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B311DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m */; };
+		EE9F1B591DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B331DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m */; };
+		EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B351DEAB337006AD033 /* JMGoodsDetailContainerViewController.m */; };
+		EE9F1B5B1DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B381DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.m */; };
+		EE9F1B5C1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B3B1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m */; };
+		EE9F1B5D1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B3E1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m */; };
+		EE9F1B5E1DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B411DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m */; };
+		EE9F1B5F1DEAB337006AD033 /* JMGoodsDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B431DEAB337006AD033 /* JMGoodsDetail.storyboard */; };
+		EE9F1B601DEAB337006AD033 /* JMGoodsDetailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B451DEAB337006AD033 /* JMGoodsDetailManager.m */; };
+		EE9F1B611DEAB337006AD033 /* JMSimpleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B491DEAB337006AD033 /* JMSimpleSegment.m */; };
+		EE9F1B621DEAB337006AD033 /* JMSimpleSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */; };
+		EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */; };
 		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
@@ -1069,8 +1104,6 @@
 		EE2A20401DAF6D79001F9A2E /* YYNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNoDataView.h; sourceTree = "<group>"; };
 		EE2A20411DAF6D79001F9A2E /* YYNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNoDataView.m; sourceTree = "<group>"; };
 		EE2A20421DAF6D79001F9A2E /* YYNoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYNoDataView.xib; sourceTree = "<group>"; };
-		EE2A20441DAF6D79001F9A2E /* YYPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPageController.h; sourceTree = "<group>"; };
-		EE2A20451DAF6D79001F9A2E /* YYPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPageController.m; sourceTree = "<group>"; };
 		EE2A20471DAF6D79001F9A2E /* UIScrollView+YYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YYRefresh.h"; sourceTree = "<group>"; };
 		EE2A20481DAF6D79001F9A2E /* UIScrollView+YYRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YYRefresh.m"; sourceTree = "<group>"; };
 		EE2A20491DAF6D79001F9A2E /* YYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRefresh.h; sourceTree = "<group>"; };
@@ -1577,10 +1610,6 @@
 		EE4C260A1DAF97E7008924A3 /* DemoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCell.xib; sourceTree = "<group>"; };
 		EE4C260B1DAF97E7008924A3 /* DemoCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCell2.h; sourceTree = "<group>"; };
 		EE4C260C1DAF97E7008924A3 /* DemoCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCell2.m; sourceTree = "<group>"; };
-		EE4C260E1DAF97E7008924A3 /* CountdownDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownDemo.h; sourceTree = "<group>"; };
-		EE4C260F1DAF97E7008924A3 /* CountdownDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownDemo.m; sourceTree = "<group>"; };
-		EE4C26101DAF97E7008924A3 /* YYTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTimeManager.h; sourceTree = "<group>"; };
-		EE4C26111DAF97E7008924A3 /* YYTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTimeManager.m; sourceTree = "<group>"; };
 		EE4C26131DAF97E7008924A3 /* EncryptionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionDemo.h; sourceTree = "<group>"; };
 		EE4C26141DAF97E7008924A3 /* EncryptionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionDemo.m; sourceTree = "<group>"; };
 		EE4C26161DAF97E7008924A3 /* YYAlertTextViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAlertTextViewDemo.h; sourceTree = "<group>"; };
@@ -2081,9 +2110,84 @@
 		EE5FE8951DBD91E000CB2FF0 /* YYGlobalTimerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGlobalTimerDemo.h; sourceTree = "<group>"; };
 		EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGlobalTimerDemo.m; sourceTree = "<group>"; };
 		EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYGlobalTimerDemo.xib; sourceTree = "<group>"; };
+		EE6113ED1DE69B3500A9113A /* ArchitectureDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchitectureDemo.h; sourceTree = "<group>"; };
+		EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchitectureDemo.m; sourceTree = "<group>"; };
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
+		EE9F19E81DE84232006AD033 /* JMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMData.h; sourceTree = "<group>"; };
+		EE9F19E91DE84232006AD033 /* JMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMData.m; sourceTree = "<group>"; };
+		EE9F19EA1DE84232006AD033 /* JMDescriptionUrlSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDescriptionUrlSet.h; sourceTree = "<group>"; };
+		EE9F19EB1DE84232006AD033 /* JMDescriptionUrlSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDescriptionUrlSet.m; sourceTree = "<group>"; };
+		EE9F19EC1DE84232006AD033 /* JMDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDetail.h; sourceTree = "<group>"; };
+		EE9F19ED1DE84232006AD033 /* JMDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDetail.m; sourceTree = "<group>"; };
+		EE9F19EE1DE84232006AD033 /* JMExtDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExtDesc.h; sourceTree = "<group>"; };
+		EE9F19EF1DE84232006AD033 /* JMExtDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExtDesc.m; sourceTree = "<group>"; };
+		EE9F19F01DE84232006AD033 /* JMExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExtra.h; sourceTree = "<group>"; };
+		EE9F19F11DE84232006AD033 /* JMExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExtra.m; sourceTree = "<group>"; };
+		EE9F19F21DE84232006AD033 /* JMIconTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMIconTag.h; sourceTree = "<group>"; };
+		EE9F19F31DE84232006AD033 /* JMIconTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMIconTag.m; sourceTree = "<group>"; };
+		EE9F19F41DE84232006AD033 /* JMImageUrlSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMImageUrlSet.h; sourceTree = "<group>"; };
+		EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMImageUrlSet.m; sourceTree = "<group>"; };
+		EE9F19F61DE84232006AD033 /* JMNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNav.h; sourceTree = "<group>"; };
+		EE9F19F71DE84232006AD033 /* JMNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNav.m; sourceTree = "<group>"; };
+		EE9F19F81DE84232006AD033 /* JMProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProduct.h; sourceTree = "<group>"; };
+		EE9F19F91DE84232006AD033 /* JMProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProduct.m; sourceTree = "<group>"; };
+		EE9F19FA1DE84232006AD033 /* JMProductGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProductGallery.h; sourceTree = "<group>"; };
+		EE9F19FB1DE84233006AD033 /* JMProductGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProductGallery.m; sourceTree = "<group>"; };
+		EE9F19FC1DE84233006AD033 /* JMProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProperty.h; sourceTree = "<group>"; };
+		EE9F19FD1DE84233006AD033 /* JMProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProperty.m; sourceTree = "<group>"; };
+		EE9F19FE1DE84233006AD033 /* JMScanControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMScanControl.h; sourceTree = "<group>"; };
+		EE9F19FF1DE84233006AD033 /* JMScanControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMScanControl.m; sourceTree = "<group>"; };
+		EE9F1A001DE84233006AD033 /* JMShareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMShareInfo.h; sourceTree = "<group>"; };
+		EE9F1A011DE84233006AD033 /* JMShareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMShareInfo.m; sourceTree = "<group>"; };
+		EE9F1A021DE84233006AD033 /* JMSpecialTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSpecialTag.h; sourceTree = "<group>"; };
+		EE9F1A031DE84233006AD033 /* JMSpecialTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSpecialTag.m; sourceTree = "<group>"; };
+		EE9F1A041DE84233006AD033 /* JMVideoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMVideoInfo.h; sourceTree = "<group>"; };
+		EE9F1A051DE84233006AD033 /* JMVideoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMVideoInfo.m; sourceTree = "<group>"; };
+		EE9F1B121DEAB337006AD033 /* JMGoodsDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailHeaderView.h; sourceTree = "<group>"; };
+		EE9F1B131DEAB337006AD033 /* JMGoodsDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailHeaderView.m; sourceTree = "<group>"; };
+		EE9F1B151DEAB337006AD033 /* JMGoodsDetailNavTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailNavTitleView.h; sourceTree = "<group>"; };
+		EE9F1B161DEAB337006AD033 /* JMGoodsDetailNavTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailNavTitleView.m; sourceTree = "<group>"; };
+		EE9F1B171DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMGoodsDetailNavTitleView.xib; sourceTree = "<group>"; };
+		EE9F1B191DEAB337006AD033 /* JMGoodsDetailPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailPageController.h; sourceTree = "<group>"; };
+		EE9F1B1A1DEAB337006AD033 /* JMGoodsDetailPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailPageController.m; sourceTree = "<group>"; };
+		EE9F1B1D1DEAB337006AD033 /* JMGoodsDetailRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailRefreshView.h; sourceTree = "<group>"; };
+		EE9F1B1E1DEAB337006AD033 /* JMGoodsDetailRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailRefreshView.m; sourceTree = "<group>"; };
+		EE9F1B1F1DEAB337006AD033 /* JMGoodsDetailRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMGoodsDetailRefreshView.xib; sourceTree = "<group>"; };
+		EE9F1B221DEAB337006AD033 /* JMGoodsDetailLickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailLickButton.h; sourceTree = "<group>"; };
+		EE9F1B231DEAB337006AD033 /* JMGoodsDetailLickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailLickButton.m; sourceTree = "<group>"; };
+		EE9F1B251DEAB337006AD033 /* JMGoodsDetailShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailShareButton.h; sourceTree = "<group>"; };
+		EE9F1B261DEAB337006AD033 /* JMGoodsDetailShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailShareButton.m; sourceTree = "<group>"; };
+		EE9F1B271DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDtailRightBarButtonView.h; sourceTree = "<group>"; };
+		EE9F1B281DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDtailRightBarButtonView.m; sourceTree = "<group>"; };
+		EE9F1B2B1DEAB337006AD033 /* JMGoodsDetailCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailCommentViewController.h; sourceTree = "<group>"; };
+		EE9F1B2C1DEAB337006AD033 /* JMGoodsDetailCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailCommentViewController.m; sourceTree = "<group>"; };
+		EE9F1B2E1DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMGoodsDetailContainerViewController+NavigationBar.h"; sourceTree = "<group>"; };
+		EE9F1B2F1DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMGoodsDetailContainerViewController+NavigationBar.m"; sourceTree = "<group>"; };
+		EE9F1B301DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMGoodsDetailContainerViewController+Network.h"; sourceTree = "<group>"; };
+		EE9F1B311DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMGoodsDetailContainerViewController+Network.m"; sourceTree = "<group>"; };
+		EE9F1B321DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMGoodsDetailContainerViewController+ShoppingCat.h"; sourceTree = "<group>"; };
+		EE9F1B331DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMGoodsDetailContainerViewController+ShoppingCat.m"; sourceTree = "<group>"; };
+		EE9F1B341DEAB337006AD033 /* JMGoodsDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailContainerViewController.h; sourceTree = "<group>"; };
+		EE9F1B351DEAB337006AD033 /* JMGoodsDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailContainerViewController.m; sourceTree = "<group>"; };
+		EE9F1B371DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailGoodsContainerViewController.h; sourceTree = "<group>"; };
+		EE9F1B381DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailGoodsContainerViewController.m; sourceTree = "<group>"; };
+		EE9F1B3A1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailGoodsViewController.h; sourceTree = "<group>"; };
+		EE9F1B3B1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailGoodsViewController.m; sourceTree = "<group>"; };
+		EE9F1B3D1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailGraphicViewController.h; sourceTree = "<group>"; };
+		EE9F1B3E1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailGraphicViewController.m; sourceTree = "<group>"; };
+		EE9F1B401DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailPublicPraiseViewController.h; sourceTree = "<group>"; };
+		EE9F1B411DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailPublicPraiseViewController.m; sourceTree = "<group>"; };
+		EE9F1B421DEAB337006AD033 /* JMGoodsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetail.h; sourceTree = "<group>"; };
+		EE9F1B431DEAB337006AD033 /* JMGoodsDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JMGoodsDetail.storyboard; sourceTree = "<group>"; };
+		EE9F1B441DEAB337006AD033 /* JMGoodsDetailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGoodsDetailManager.h; sourceTree = "<group>"; };
+		EE9F1B451DEAB337006AD033 /* JMGoodsDetailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGoodsDetailManager.m; sourceTree = "<group>"; };
+		EE9F1B481DEAB337006AD033 /* JMSimpleSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSimpleSegment.h; sourceTree = "<group>"; };
+		EE9F1B491DEAB337006AD033 /* JMSimpleSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSimpleSegment.m; sourceTree = "<group>"; };
+		EE9F1B4A1DEAB337006AD033 /* JMSimpleSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSimpleSegmentItem.h; sourceTree = "<group>"; };
+		EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSimpleSegmentItem.m; sourceTree = "<group>"; };
+		EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSimpleSegmentItem.xib; sourceTree = "<group>"; };
 		EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyntacticSugar+Extention.h"; sourceTree = "<group>"; };
 		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
@@ -2284,7 +2388,6 @@
 				EE2A202B1DAF6D79001F9A2E /* YYModel */,
 				EE2A20311DAF6D79001F9A2E /* YYMultiSelectTable */,
 				EE2A203C1DAF6D79001F9A2E /* YYNoDataView */,
-				EE2A20431DAF6D79001F9A2E /* YYPageController */,
 				EE4B96971DC5DAB900CCFB95 /* YYPageViewController */,
 				EE2A20461DAF6D79001F9A2E /* YYRefresh */,
 				EE2A20521DAF6D79001F9A2E /* YYScrollSigment */,
@@ -2712,15 +2815,6 @@
 				EE2A203D1DAF6D79001F9A2E /* no_data_default@2x.png */,
 			);
 			path = YYNoDataView;
-			sourceTree = "<group>";
-		};
-		EE2A20431DAF6D79001F9A2E /* YYPageController */ = {
-			isa = PBXGroup;
-			children = (
-				EE2A20441DAF6D79001F9A2E /* YYPageController.h */,
-				EE2A20451DAF6D79001F9A2E /* YYPageController.m */,
-			);
-			path = YYPageController;
 			sourceTree = "<group>";
 		};
 		EE2A20461DAF6D79001F9A2E /* YYRefresh */ = {
@@ -3649,7 +3743,6 @@
 				EE4C25ED1DAF97E7008924A3 /* 上下拉刷新通用controller */,
 				EE4C25F41DAF97E7008924A3 /* 二维码相关 */,
 				EE4C25F91DAF97E7008924A3 /* 仿淘宝商品详情 */,
-				EE4C260D1DAF97E7008924A3 /* 倒计时 */,
 				EE4C26121DAF97E7008924A3 /* 加密相关 */,
 				EE4C26151DAF97E7008924A3 /* 弹出控件相关 */,
 				EE4C26181DAF97E7008924A3 /* 登录相关 */,
@@ -3659,6 +3752,7 @@
 				EE4C25681DAF97E7008924A3 /* YYLibsDemo.h */,
 				EE4C25691DAF97E7008924A3 /* YYLibsDemo.m */,
 				EE412D961DC7378F005E6452 /* AutoLayoutDemo */,
+				EE6113F01DE69B3800A9113A /* 架构相关 */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -4106,6 +4200,8 @@
 		EE4C25F91DAF97E7008924A3 /* 仿淘宝商品详情 */ = {
 			isa = PBXGroup;
 			children = (
+				EE9F19E71DE84232006AD033 /* JMProduct */,
+				EE9F1B0A1DEAB337006AD033 /* GoodsDetail */,
 				EE4C25FA1DAF97E7008924A3 /* Controller */,
 				EE4C26021DAF97E7008924A3 /* Model */,
 				EE4C26071DAF97E7008924A3 /* View */,
@@ -4148,17 +4244,6 @@
 				EE4C260C1DAF97E7008924A3 /* DemoCell2.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		EE4C260D1DAF97E7008924A3 /* 倒计时 */ = {
-			isa = PBXGroup;
-			children = (
-				EE4C260E1DAF97E7008924A3 /* CountdownDemo.h */,
-				EE4C260F1DAF97E7008924A3 /* CountdownDemo.m */,
-				EE4C26101DAF97E7008924A3 /* YYTimeManager.h */,
-				EE4C26111DAF97E7008924A3 /* YYTimeManager.m */,
-			);
-			path = "倒计时";
 			sourceTree = "<group>";
 		};
 		EE4C26121DAF97E7008924A3 /* 加密相关 */ = {
@@ -5106,6 +5191,23 @@
 			path = YYGlobalTimerDemo;
 			sourceTree = "<group>";
 		};
+		EE6113F01DE69B3800A9113A /* 架构相关 */ = {
+			isa = PBXGroup;
+			children = (
+				EE6113ED1DE69B3500A9113A /* ArchitectureDemo.h */,
+				EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */,
+				EE6113F41DE69B5900A9113A /* 巧用Extension分离接口依赖 */,
+			);
+			name = "架构相关";
+			sourceTree = "<group>";
+		};
+		EE6113F41DE69B5900A9113A /* 巧用Extension分离接口依赖 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "巧用Extension分离接口依赖";
+			sourceTree = "<group>";
+		};
 		EE8068CB1D992D03006E69F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -5124,6 +5226,278 @@
 				EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		EE9F19E71DE84232006AD033 /* JMProduct */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F19E81DE84232006AD033 /* JMData.h */,
+				EE9F19E91DE84232006AD033 /* JMData.m */,
+				EE9F19EA1DE84232006AD033 /* JMDescriptionUrlSet.h */,
+				EE9F19EB1DE84232006AD033 /* JMDescriptionUrlSet.m */,
+				EE9F19EC1DE84232006AD033 /* JMDetail.h */,
+				EE9F19ED1DE84232006AD033 /* JMDetail.m */,
+				EE9F19EE1DE84232006AD033 /* JMExtDesc.h */,
+				EE9F19EF1DE84232006AD033 /* JMExtDesc.m */,
+				EE9F19F01DE84232006AD033 /* JMExtra.h */,
+				EE9F19F11DE84232006AD033 /* JMExtra.m */,
+				EE9F19F21DE84232006AD033 /* JMIconTag.h */,
+				EE9F19F31DE84232006AD033 /* JMIconTag.m */,
+				EE9F19F41DE84232006AD033 /* JMImageUrlSet.h */,
+				EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */,
+				EE9F19F61DE84232006AD033 /* JMNav.h */,
+				EE9F19F71DE84232006AD033 /* JMNav.m */,
+				EE9F19F81DE84232006AD033 /* JMProduct.h */,
+				EE9F19F91DE84232006AD033 /* JMProduct.m */,
+				EE9F19FA1DE84232006AD033 /* JMProductGallery.h */,
+				EE9F19FB1DE84233006AD033 /* JMProductGallery.m */,
+				EE9F19FC1DE84233006AD033 /* JMProperty.h */,
+				EE9F19FD1DE84233006AD033 /* JMProperty.m */,
+				EE9F19FE1DE84233006AD033 /* JMScanControl.h */,
+				EE9F19FF1DE84233006AD033 /* JMScanControl.m */,
+				EE9F1A001DE84233006AD033 /* JMShareInfo.h */,
+				EE9F1A011DE84233006AD033 /* JMShareInfo.m */,
+				EE9F1A021DE84233006AD033 /* JMSpecialTag.h */,
+				EE9F1A031DE84233006AD033 /* JMSpecialTag.m */,
+				EE9F1A041DE84233006AD033 /* JMVideoInfo.h */,
+				EE9F1A051DE84233006AD033 /* JMVideoInfo.m */,
+			);
+			name = JMProduct;
+			path = ../JMProduct;
+			sourceTree = "<group>";
+		};
+		EE9F1B0A1DEAB337006AD033 /* GoodsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B0B1DEAB337006AD033 /* Component */,
+				EE9F1B291DEAB337006AD033 /* Controller */,
+				EE9F1B421DEAB337006AD033 /* JMGoodsDetail.h */,
+				EE9F1B431DEAB337006AD033 /* JMGoodsDetail.storyboard */,
+				EE9F1B441DEAB337006AD033 /* JMGoodsDetailManager.h */,
+				EE9F1B451DEAB337006AD033 /* JMGoodsDetailManager.m */,
+				EE9F1B461DEAB337006AD033 /* Vendor */,
+			);
+			path = GoodsDetail;
+			sourceTree = "<group>";
+		};
+		EE9F1B0B1DEAB337006AD033 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B0C1DEAB337006AD033 /* Cells */,
+				EE9F1B101DEAB337006AD033 /* JMBrandButton */,
+				EE9F1B111DEAB337006AD033 /* JMGoodsDetailHeaderView */,
+				EE9F1B141DEAB337006AD033 /* JMGoodsDetailNavTitleView */,
+				EE9F1B181DEAB337006AD033 /* JMGoodsDetailPageController */,
+				EE9F1B1B1DEAB337006AD033 /* JMGoodsDetailPricePopView */,
+				EE9F1B1C1DEAB337006AD033 /* JMGoodsDetailRefreshView */,
+				EE9F1B201DEAB337006AD033 /* JMGoodsDtailRightBarButtonView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EE9F1B0C1DEAB337006AD033 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B0D1DEAB337006AD033 /* JMGoodsDetailCashCouponCell */,
+				EE9F1B0E1DEAB337006AD033 /* JMGoodsDetailPriceCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EE9F1B0D1DEAB337006AD033 /* JMGoodsDetailCashCouponCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JMGoodsDetailCashCouponCell;
+			sourceTree = "<group>";
+		};
+		EE9F1B0E1DEAB337006AD033 /* JMGoodsDetailPriceCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B0F1DEAB337006AD033 /* JMGoodsDetailPriceDetailButton */,
+			);
+			path = JMGoodsDetailPriceCell;
+			sourceTree = "<group>";
+		};
+		EE9F1B0F1DEAB337006AD033 /* JMGoodsDetailPriceDetailButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JMGoodsDetailPriceDetailButton;
+			sourceTree = "<group>";
+		};
+		EE9F1B101DEAB337006AD033 /* JMBrandButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JMBrandButton;
+			sourceTree = "<group>";
+		};
+		EE9F1B111DEAB337006AD033 /* JMGoodsDetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B121DEAB337006AD033 /* JMGoodsDetailHeaderView.h */,
+				EE9F1B131DEAB337006AD033 /* JMGoodsDetailHeaderView.m */,
+			);
+			path = JMGoodsDetailHeaderView;
+			sourceTree = "<group>";
+		};
+		EE9F1B141DEAB337006AD033 /* JMGoodsDetailNavTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B151DEAB337006AD033 /* JMGoodsDetailNavTitleView.h */,
+				EE9F1B161DEAB337006AD033 /* JMGoodsDetailNavTitleView.m */,
+				EE9F1B171DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib */,
+			);
+			path = JMGoodsDetailNavTitleView;
+			sourceTree = "<group>";
+		};
+		EE9F1B181DEAB337006AD033 /* JMGoodsDetailPageController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B191DEAB337006AD033 /* JMGoodsDetailPageController.h */,
+				EE9F1B1A1DEAB337006AD033 /* JMGoodsDetailPageController.m */,
+			);
+			path = JMGoodsDetailPageController;
+			sourceTree = "<group>";
+		};
+		EE9F1B1B1DEAB337006AD033 /* JMGoodsDetailPricePopView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JMGoodsDetailPricePopView;
+			sourceTree = "<group>";
+		};
+		EE9F1B1C1DEAB337006AD033 /* JMGoodsDetailRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B1D1DEAB337006AD033 /* JMGoodsDetailRefreshView.h */,
+				EE9F1B1E1DEAB337006AD033 /* JMGoodsDetailRefreshView.m */,
+				EE9F1B1F1DEAB337006AD033 /* JMGoodsDetailRefreshView.xib */,
+			);
+			path = JMGoodsDetailRefreshView;
+			sourceTree = "<group>";
+		};
+		EE9F1B201DEAB337006AD033 /* JMGoodsDtailRightBarButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B211DEAB337006AD033 /* JMGoodsDetailLickButton */,
+				EE9F1B241DEAB337006AD033 /* JMGoodsDetailShareButton */,
+				EE9F1B271DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.h */,
+				EE9F1B281DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m */,
+			);
+			path = JMGoodsDtailRightBarButtonView;
+			sourceTree = "<group>";
+		};
+		EE9F1B211DEAB337006AD033 /* JMGoodsDetailLickButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B221DEAB337006AD033 /* JMGoodsDetailLickButton.h */,
+				EE9F1B231DEAB337006AD033 /* JMGoodsDetailLickButton.m */,
+			);
+			path = JMGoodsDetailLickButton;
+			sourceTree = "<group>";
+		};
+		EE9F1B241DEAB337006AD033 /* JMGoodsDetailShareButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B251DEAB337006AD033 /* JMGoodsDetailShareButton.h */,
+				EE9F1B261DEAB337006AD033 /* JMGoodsDetailShareButton.m */,
+			);
+			path = JMGoodsDetailShareButton;
+			sourceTree = "<group>";
+		};
+		EE9F1B291DEAB337006AD033 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B2A1DEAB337006AD033 /* JMGoodsDetailCommentViewController */,
+				EE9F1B2D1DEAB337006AD033 /* JMGoodsDetailContainerViewController */,
+				EE9F1B361DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController */,
+				EE9F1B391DEAB337006AD033 /* JMGoodsDetailGoodsViewController */,
+				EE9F1B3C1DEAB337006AD033 /* JMGoodsDetailGraphicViewController */,
+				EE9F1B3F1DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE9F1B2A1DEAB337006AD033 /* JMGoodsDetailCommentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B2B1DEAB337006AD033 /* JMGoodsDetailCommentViewController.h */,
+				EE9F1B2C1DEAB337006AD033 /* JMGoodsDetailCommentViewController.m */,
+			);
+			path = JMGoodsDetailCommentViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B2D1DEAB337006AD033 /* JMGoodsDetailContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B2E1DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.h */,
+				EE9F1B2F1DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.m */,
+				EE9F1B301DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.h */,
+				EE9F1B311DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m */,
+				EE9F1B321DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.h */,
+				EE9F1B331DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m */,
+				EE9F1B341DEAB337006AD033 /* JMGoodsDetailContainerViewController.h */,
+				EE9F1B351DEAB337006AD033 /* JMGoodsDetailContainerViewController.m */,
+			);
+			path = JMGoodsDetailContainerViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B361DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B371DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.h */,
+				EE9F1B381DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.m */,
+			);
+			path = JMGoodsDetailGoodsContainerViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B391DEAB337006AD033 /* JMGoodsDetailGoodsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B3A1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.h */,
+				EE9F1B3B1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m */,
+			);
+			path = JMGoodsDetailGoodsViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B3C1DEAB337006AD033 /* JMGoodsDetailGraphicViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B3D1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.h */,
+				EE9F1B3E1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m */,
+			);
+			path = JMGoodsDetailGraphicViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B3F1DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B401DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.h */,
+				EE9F1B411DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m */,
+			);
+			path = JMGoodsDetailPublicPraiseViewController;
+			sourceTree = "<group>";
+		};
+		EE9F1B461DEAB337006AD033 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B471DEAB337006AD033 /* JMSimpleSegment */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		EE9F1B471DEAB337006AD033 /* JMSimpleSegment */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F1B481DEAB337006AD033 /* JMSimpleSegment.h */,
+				EE9F1B491DEAB337006AD033 /* JMSimpleSegment.m */,
+				EE9F1B4A1DEAB337006AD033 /* JMSimpleSegmentItem.h */,
+				EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */,
+				EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */,
+			);
+			path = JMSimpleSegment;
 			sourceTree = "<group>";
 		};
 		EECCCCD41DD00556007B47B1 /* YYSegmentedView */ = {
@@ -5203,7 +5577,6 @@
 				EE2A20C61DAF6D7A001F9A2E /* NSData+YYExtension.h in Headers */,
 				EE2A20C21DAF6D7A001F9A2E /* NSArray+YYExtension.h in Headers */,
 				EE2A20B91DAF6D7A001F9A2E /* YYTransitioningDelegate.h in Headers */,
-				EE2A213B1DAF6D7A001F9A2E /* YYPageController.h in Headers */,
 				EE2A20DC1DAF6D7A001F9A2E /* NSThread+YYExtension.h in Headers */,
 				EE2A20771DAF6D7A001F9A2E /* JMRenderableTableView.h in Headers */,
 				EE2A20741DAF6D7A001F9A2E /* GTMBase64.h in Headers */,
@@ -5466,6 +5839,7 @@
 				EE4C288B1DAF97E9008924A3 /* YYAudioRocorder.xib in Resources */,
 				EE4C28E11DAF97E9008924A3 /* YYEmoticonInputView.xib in Resources */,
 				EE4B967E1DC5D60200CCFB95 /* cellBg@2x.png in Resources */,
+				EE9F1B521DEAB337006AD033 /* JMGoodsDetailRefreshView.xib in Resources */,
 				EE4B96701DC5D60200CCFB95 /* decorate_title_bg.png in Resources */,
 				EE4C29C91DAF97EA008924A3 /* Info.plist in Resources */,
 				EE4C28B51DAF97E9008924A3 /* FastRecordVoiceInputView.xib in Resources */,
@@ -5473,6 +5847,7 @@
 				EE4C29EE1DAF97EA008924A3 /* Assets.xcassets in Resources */,
 				EE4C28961DAF97E9008924A3 /* RealReachabilityDemo.xib in Resources */,
 				EE4C28E91DAF97E9008924A3 /* YYMessageMoreViewCell.xib in Resources */,
+				EE9F1B4F1DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib in Resources */,
 				EE4C28DF1DAF97E9008924A3 /* EmojisList.plist in Resources */,
 				EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */,
 				EE4C28A91DAF97E9008924A3 /* FastRecordAccessoryView.xib in Resources */,
@@ -5484,6 +5859,7 @@
 				EE4C28BA1DAF97E9008924A3 /* YYScrollSigmentDemo.xib in Resources */,
 				EE4C292D1DAF97E9008924A3 /* DNImagePickerController.strings in Resources */,
 				EE4C289E1DAF97E9008924A3 /* FastRecord.storyboard in Resources */,
+				EE9F1B5F1DEAB337006AD033 /* JMGoodsDetail.storyboard in Resources */,
 				EE4C28B71DAF97E9008924A3 /* FastRecordVoiceInputViewDim.xib in Resources */,
 				EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */,
 				EE4C285E1DAF97E9008924A3 /* SystemDemo.storyboard in Resources */,
@@ -5499,6 +5875,7 @@
 				EE4C28291DAF97E9008924A3 /* AppConfig.plist in Resources */,
 				EE4C286D1DAF97E9008924A3 /* rotation.png in Resources */,
 				EE4C29D01DAF97EA008924A3 /* RunTraceHelp.xib in Resources */,
+				EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */,
 				EE4C290C1DAF97E9008924A3 /* README.png in Resources */,
 				EE4B96711DC5D60200CCFB95 /* decorate_wave.png in Resources */,
 				EE4C295F1DAF97EA008924A3 /* MJRefresh.bundle in Resources */,
@@ -5584,6 +5961,8 @@
 				EE4C28811DAF97E9008924A3 /* ObjectiveC_Memory.m in Sources */,
 				EE4B967C1DC5D60200CCFB95 /* UISliderController.m in Sources */,
 				EE4C29B81DAF97EA008924A3 /* UISegmentedControl+RACSignalSupport.m in Sources */,
+				EE9F1B5D1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m in Sources */,
+				EE9F1B531DEAB337006AD033 /* JMGoodsDetailLickButton.m in Sources */,
 				EE4C29DA1DAF97EA008924A3 /* UIButton+WebCache.m in Sources */,
 				EE4C28721DAF97E9008924A3 /* ThreadDemo.m in Sources */,
 				EE4C29C51DAF97EA008924A3 /* ReachStateUnloaded.m in Sources */,
@@ -5594,8 +5973,10 @@
 				EE4B966E1DC5D60200CCFB95 /* CALayerDemoController.m in Sources */,
 				EE4C28471DAF97E9008924A3 /* YYWebTool.c in Sources */,
 				EE4C296D1DAF97EA008924A3 /* NSInvocation+RACTypeParsing.m in Sources */,
+				EE9F1A0B1DE84233006AD033 /* JMIconTag.m in Sources */,
 				EE4C28C51DAF97E9008924A3 /* NSDate+YYMessage.m in Sources */,
 				EE4C295E1DAF97EA008924A3 /* MJRefreshStateHeader.m in Sources */,
+				EE9F1A111DE84233006AD033 /* JMScanControl.m in Sources */,
 				EE4C28321DAF97E9008924A3 /* YYBaseDemoController.m in Sources */,
 				EE4C28B11DAF97E9008924A3 /* FastRecordVoiceButton.m in Sources */,
 				EE4C29951DAF97EA008924A3 /* RACQueueScheduler.m in Sources */,
@@ -5603,6 +5984,7 @@
 				EE4C284B1DAF97E9008924A3 /* SummaryThread.c in Sources */,
 				EE4C28C11DAF97E9008924A3 /* YYMessageModel.m in Sources */,
 				EE4C28371DAF97E9008924A3 /* LoginViewController.m in Sources */,
+				EE9F1A0F1DE84233006AD033 /* JMProductGallery.m in Sources */,
 				EE4C283C1DAF97E9008924A3 /* tree_t.c in Sources */,
 				EE4C28751DAF97E9008924A3 /* LocalNotificationDemo.m in Sources */,
 				EE4C28BF1DAF97E9008924A3 /* YYMessageViewController.m in Sources */,
@@ -5624,12 +6006,15 @@
 				EE4C29141DAF97E9008924A3 /* UIImageView+Extension.m in Sources */,
 				EE4C282A1DAF97E9008924A3 /* AppDelegate.m in Sources */,
 				EE4C29E51DAF97EA008924A3 /* AFAutoPurgingImageCache.m in Sources */,
+				EE9F1B551DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m in Sources */,
 				EE4C28611DAF97E9008924A3 /* ShowRoomCellModel.m in Sources */,
 				EE4C28941DAF97E9008924A3 /* RWViewController.m in Sources */,
 				EE4C292B1DAF97E9008924A3 /* DNImageFlowViewController.m in Sources */,
+				EE9F1B4D1DEAB337006AD033 /* JMGoodsDetailHeaderView.m in Sources */,
 				EE4C29D11DAF97EA008924A3 /* MKAnnotationView+WebCache.m in Sources */,
 				EE4C28CE1DAF97E9008924A3 /* UIView+YYMessage.m in Sources */,
 				EE4C29B41DAF97EA008924A3 /* UIDatePicker+RACSignalSupport.m in Sources */,
+				EE9F1B5C1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m in Sources */,
 				EE4C28BD1DAF97E9008924A3 /* YYMessageCellLayoutConfig.m in Sources */,
 				EE4C290A1DAF97E9008924A3 /* YYThumbnailView.m in Sources */,
 				EE4C29E81DAF97EA008924A3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -5637,6 +6022,7 @@
 				EE4C28341DAF97E9008924A3 /* YYBaseViewController.m in Sources */,
 				EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */,
 				EE4C28FC1DAF97E9008924A3 /* GoodsDetailGraphicViewController.m in Sources */,
+				EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */,
 				EE4C291F1DAF97E9008924A3 /* AFURLSessionManager.m in Sources */,
 				EE4C28F21DAF97E9008924A3 /* YYWebImageManager.m in Sources */,
 				EE4C29971DAF97EA008924A3 /* RACReturnSignal.m in Sources */,
@@ -5653,16 +6039,21 @@
 				EE4C29F01DAF97EA008924A3 /* main.m in Sources */,
 				EE4C29E21DAF97EA008924A3 /* SSKeychainQuery.m in Sources */,
 				EE4C294A1DAF97EA008924A3 /* MASViewAttribute.m in Sources */,
+				EE6113EF1DE69B3500A9113A /* ArchitectureDemo.m in Sources */,
 				EE4C29C11DAF97EA008924A3 /* FSMEngine.m in Sources */,
 				EE4C282F1DAF97E9008924A3 /* BaseNavigationController.m in Sources */,
 				EE4C28D21DAF97E9008924A3 /* VoiceConverter.mm in Sources */,
 				EE4C29DB1DAF97EA008924A3 /* UIImage+GIF.m in Sources */,
 				EE4C29E71DAF97EA008924A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				EE9F1B541DEAB337006AD033 /* JMGoodsDetailShareButton.m in Sources */,
 				EE4C29961DAF97EA008924A3 /* RACReplaySubject.m in Sources */,
 				EE4C28951DAF97E9008924A3 /* RealReachabilityDemo.m in Sources */,
 				EE4C283B1DAF97E9008924A3 /* CDemoViewController.m in Sources */,
 				EE4C29BC1DAF97EA008924A3 /* UITableViewCell+RACSignalSupport.m in Sources */,
+				EE9F1B571DEAB337006AD033 /* JMGoodsDetailContainerViewController+NavigationBar.m in Sources */,
+				EE9F1A081DE84233006AD033 /* JMDetail.m in Sources */,
 				EE4C293C1DAF97EA008924A3 /* JKPromptView.m in Sources */,
+				EE9F1A101DE84233006AD033 /* JMProperty.m in Sources */,
 				EE4C29CE1DAF97EA008924A3 /* RunTrace.m in Sources */,
 				EE4C29131DAF97E9008924A3 /* NSString+Extention.m in Sources */,
 				EE4C28851DAF97E9008924A3 /* ProtocolAndCategory.m in Sources */,
@@ -5678,6 +6069,7 @@
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
 				EE4C28AE1DAF97E9008924A3 /* FastRecordImageCell.m in Sources */,
 				EE4C29C81DAF97EA008924A3 /* ReachStateWWAN.m in Sources */,
+				EE9F1A121DE84233006AD033 /* JMShareInfo.m in Sources */,
 				EE4C28571DAF97E9008924A3 /* ObjectiveCPointor.m in Sources */,
 				EE4C294B1DAF97EA008924A3 /* MASViewConstraint.m in Sources */,
 				EE4C29701DAF97EA008924A3 /* NSObject+RACDescription.m in Sources */,
@@ -5687,6 +6079,7 @@
 				EE4C28DC1DAF97E9008924A3 /* YYMessageAudioIndicatorView.m in Sources */,
 				EE4C28651DAF97E9008924A3 /* WebViewDemo.m in Sources */,
 				EE4C29161DAF97E9008924A3 /* UITabBarController+Extension.m in Sources */,
+				EE9F1B511DEAB337006AD033 /* JMGoodsDetailRefreshView.m in Sources */,
 				EE4C29431DAF97EA008924A3 /* FMResultSet.m in Sources */,
 				EE4C285B1DAF97E9008924A3 /* PrivateApiDemo.m in Sources */,
 				EE4C28A41DAF97E9008924A3 /* FastRecordCellModel.m in Sources */,
@@ -5717,7 +6110,9 @@
 				EE4C29201DAF97E9008924A3 /* Aspects.m in Sources */,
 				EE4C29591DAF97EA008924A3 /* MJRefreshBackGifFooter.m in Sources */,
 				EE4C29101DAF97E9008924A3 /* NSObject+Extention.m in Sources */,
+				EE9F1A091DE84233006AD033 /* JMExtDesc.m in Sources */,
 				EE4C28D31DAF97E9008924A3 /* YYAudioPlayer.m in Sources */,
+				EE9F1B601DEAB337006AD033 /* JMGoodsDetailManager.m in Sources */,
 				EE4C289B1DAF97E9008924A3 /* YYKeyValueStoreDemo.m in Sources */,
 				EE4C28A01DAF97E9008924A3 /* FastRecordAddAndModifyController.m in Sources */,
 				EE4C284A1DAF97E9008924A3 /* SummaryNetwork.c in Sources */,
@@ -5746,6 +6141,8 @@
 				EE4C29B51DAF97EA008924A3 /* UIGestureRecognizer+RACSignalSupport.m in Sources */,
 				EE4C28401DAF97E9008924A3 /* YYLog.c in Sources */,
 				EE4C28361DAF97E9008924A3 /* LoginManager.m in Sources */,
+				EE9F1A0A1DE84233006AD033 /* JMExtra.m in Sources */,
+				EE9F1A131DE84233006AD033 /* JMSpecialTag.m in Sources */,
 				EE4C28801DAF97E9008924A3 /* ObjectiveC_Class.m in Sources */,
 				EE4C29731DAF97EA008924A3 /* NSObject+RACPropertySubscribing.m in Sources */,
 				EE4C29331DAF97EA008924A3 /* UIViewController+DNImagePicker.m in Sources */,
@@ -5754,6 +6151,7 @@
 				EE4C283D1DAF97E9008924A3 /* tree_test.c in Sources */,
 				EE4C289A1DAF97E9008924A3 /* YYKeyValueStore.m in Sources */,
 				EE4C296A1DAF97EA008924A3 /* NSEnumerator+RACSequenceAdditions.m in Sources */,
+				EE9F1A0C1DE84233006AD033 /* JMImageUrlSet.m in Sources */,
 				EE4C29B71DAF97EA008924A3 /* UIRefreshControl+RACCommandSupport.m in Sources */,
 				EE4C289D1DAF97E9008924A3 /* FastRecord.m in Sources */,
 				EE4C29381DAF97EA008924A3 /* DNBrowserCell.m in Sources */,
@@ -5763,6 +6161,7 @@
 				EE4C29BF1DAF97EA008924A3 /* UITextView+RACSignalSupport.m in Sources */,
 				EE4C28CC1DAF97E9008924A3 /* UIImage+YYMessage.m in Sources */,
 				EE4C29AD1DAF97EA008924A3 /* UIActionSheet+RACSignalSupport.m in Sources */,
+				EE9F1B591DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m in Sources */,
 				EE4C28D51DAF97E9008924A3 /* YYKeyboardManager.m in Sources */,
 				EE4C28831DAF97E9008924A3 /* ObjectiveC_objc_msgSend.m in Sources */,
 				EE4C299C1DAF97EA008924A3 /* RACSignal+Operations.m in Sources */,
@@ -5781,6 +6180,7 @@
 				EE4C29AF1DAF97EA008924A3 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
 				EE4C285F1DAF97E9008924A3 /* ShowRoomCell.m in Sources */,
 				EE4C29241DAF97E9008924A3 /* DTTimePeriod.m in Sources */,
+				EE9F1B621DEAB337006AD033 /* JMSimpleSegmentItem.m in Sources */,
 				EE4C29781DAF97EA008924A3 /* NSString+RACSequenceAdditions.m in Sources */,
 				EE4C28591DAF97E9008924A3 /* RuntimeDemo.m in Sources */,
 				EE4C28411DAF97E9008924A3 /* YYMalloc.c in Sources */,
@@ -5792,7 +6192,6 @@
 				EE4C297E1DAF97EA008924A3 /* RACBlockTrampoline.m in Sources */,
 				EE4C296C1DAF97EA008924A3 /* NSIndexSet+RACSequenceAdditions.m in Sources */,
 				EE4C28B01DAF97E9008924A3 /* FastRecordTitleCell.m in Sources */,
-				EE4C29031DAF97E9008924A3 /* CountdownDemo.m in Sources */,
 				EE4C292A1DAF97E9008924A3 /* DNAsset.m in Sources */,
 				EE4C28F61DAF97E9008924A3 /* PullRefreshDemo.m in Sources */,
 				EE4C29AB1DAF97EA008924A3 /* RACUnit.m in Sources */,
@@ -5831,7 +6230,6 @@
 				EE4B967B1DC5D60200CCFB95 /* UIScrollViewController.m in Sources */,
 				EE4C28F11DAF97E9008924A3 /* YYImageCache.m in Sources */,
 				EE4B96761DC5D60200CCFB95 /* MyCollectionViewLayout.m in Sources */,
-				EE4C29041DAF97E9008924A3 /* YYTimeManager.m in Sources */,
 				EE4C28761DAF97E9008924A3 /* TestViewController.m in Sources */,
 				EE4C29531DAF97EA008924A3 /* MJRefreshComponent.m in Sources */,
 				EE4B967F1DC5D60200CCFB95 /* TableViewDemoController.m in Sources */,
@@ -5846,6 +6244,7 @@
 				EE4B96911DC5D7FE00CCFB95 /* NJKWebViewProgressView.m in Sources */,
 				EE4C290E1DAF97E9008924A3 /* NSDate+Extension.m in Sources */,
 				EE4C28821DAF97E9008924A3 /* ObjectiveC_method_swizzling.m in Sources */,
+				EE9F1A071DE84233006AD033 /* JMDescriptionUrlSet.m in Sources */,
 				EE4C29441DAF97EA008924A3 /* HYFileManager.m in Sources */,
 				EE4B96741DC5D60200CCFB95 /* UIButtonController.m in Sources */,
 				EE4C29471DAF97EA008924A3 /* MASConstraint.m in Sources */,
@@ -5859,7 +6258,9 @@
 				EE4C283A1DAF97E9008924A3 /* MainTabBarController.m in Sources */,
 				EE4C28F41DAF97E9008924A3 /* YYComponentsDemo.m in Sources */,
 				EE4C29791DAF97EA008924A3 /* NSString+RACSupport.m in Sources */,
+				EE9F1B501DEAB337006AD033 /* JMGoodsDetailPageController.m in Sources */,
 				EE4C29C61DAF97EA008924A3 /* ReachStateUnReachable.m in Sources */,
+				EE9F1B561DEAB337006AD033 /* JMGoodsDetailCommentViewController.m in Sources */,
 				EE4C29BA1DAF97EA008924A3 /* UIStepper+RACSignalSupport.m in Sources */,
 				EE4C29A11DAF97EA008924A3 /* RACStringSequence.m in Sources */,
 				EE4C28B31DAF97E9008924A3 /* FastRecordVoiceCell.m in Sources */,
@@ -5868,10 +6269,12 @@
 				EE4C298B1DAF97EA008924A3 /* RACEvent.m in Sources */,
 				EE4C292E1DAF97EA008924A3 /* DNPhotoBrowser.m in Sources */,
 				EE4C29631DAF97EA008924A3 /* UIView+MJExtension.m in Sources */,
+				EE9F1A0D1DE84233006AD033 /* JMNav.m in Sources */,
 				EE4C282E1DAF97E9008924A3 /* AppManager.m in Sources */,
 				EE4B96821DC5D60200CCFB95 /* TextViewController.m in Sources */,
 				EE4C29B01DAF97EA008924A3 /* UIButton+RACCommandSupport.m in Sources */,
 				EE4B96901DC5D7FE00CCFB95 /* NJKWebViewProgress.m in Sources */,
+				EE9F1B5E1DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m in Sources */,
 				EE4C28AD1DAF97E9008924A3 /* FastRecordCustomerCell.m in Sources */,
 				EE4C28931DAF97E9008924A3 /* RWSignInService.m in Sources */,
 				EE4C29A81DAF97EA008924A3 /* RACTuple.m in Sources */,
@@ -5891,6 +6294,7 @@
 				EE4C29021DAF97E9008924A3 /* DemoCell2.m in Sources */,
 				EE4C29231DAF97E9008924A3 /* DTError.m in Sources */,
 				EE4C29D91DAF97EA008924A3 /* SDWebImagePrefetcher.m in Sources */,
+				EE9F1B4E1DEAB337006AD033 /* JMGoodsDetailNavTitleView.m in Sources */,
 				EE4C29E31DAF97EA008924A3 /* UIViewController+UMStatistic.m in Sources */,
 				EE4C294E1DAF97EA008924A3 /* View+MASAdditions.m in Sources */,
 				EE4C29A41DAF97EA008924A3 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
@@ -5912,6 +6316,7 @@
 				EE4C29261DAF97E9008924A3 /* DTTimePeriodCollection.m in Sources */,
 				EE4C291C1DAF97E9008924A3 /* AFSecurityPolicy.m in Sources */,
 				EE4C29371DAF97EA008924A3 /* DNBadgeLabel.m in Sources */,
+				EE9F1B5B1DEAB337006AD033 /* JMGoodsDetailGoodsContainerViewController.m in Sources */,
 				EE4C28381DAF97E9008924A3 /* LoginModel.m in Sources */,
 				EE4C28B41DAF97E9008924A3 /* FastRecordVoiceInputView.m in Sources */,
 				EE4C29821DAF97EA008924A3 /* RACCompoundDisposableProvider.d in Sources */,
@@ -5930,6 +6335,7 @@
 				EE4C295C1DAF97EA008924A3 /* MJRefreshGifHeader.m in Sources */,
 				EE4C287C1DAF97E9008924A3 /* HitTestView.m in Sources */,
 				EE4C28CD1DAF97E9008924A3 /* UILabel+YYMessage.m in Sources */,
+				EE9F1A061DE84233006AD033 /* JMData.m in Sources */,
 				EE4C28621DAF97E9008924A3 /* ShowRoomListModel.m in Sources */,
 				EE4B96851DC5D60200CCFB95 /* UIImageController.m in Sources */,
 				EE4C28E41DAF97E9008924A3 /* YYMessageInputToolBar.m in Sources */,
@@ -5937,8 +6343,10 @@
 				EE4C29501DAF97EA008924A3 /* MBProgressHUD.m in Sources */,
 				EE4C28C21DAF97E9008924A3 /* YYMessageModelManager.m in Sources */,
 				EE4C287E1DAF97E9008924A3 /* InterfaceAndAPI.m in Sources */,
+				EE9F1B611DEAB337006AD033 /* JMSimpleSegment.m in Sources */,
 				EE4C28E01DAF97E9008924A3 /* YYEmoticonInputView.m in Sources */,
 				EE4C28461DAF97E9008924A3 /* YYUtil.c in Sources */,
+				EE9F1A141DE84233006AD033 /* JMVideoInfo.m in Sources */,
 				EE4C29621DAF97EA008924A3 /* UIScrollView+MJRefresh.m in Sources */,
 				EE4C29511DAF97EA008924A3 /* MJRefreshAutoFooter.m in Sources */,
 				EE4C287D1DAF97E9008924A3 /* TouchDemo.m in Sources */,
@@ -5953,6 +6361,7 @@
 				EE4C29A61DAF97EA008924A3 /* RACTargetQueueScheduler.m in Sources */,
 				EE4C28EC1DAF97E9008924A3 /* YYMessageCollectionView.m in Sources */,
 				EE4C29461DAF97EA008924A3 /* MASCompositeConstraint.m in Sources */,
+				EE9F1B581DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m in Sources */,
 				EE4C28CA1DAF97E9008924A3 /* UICollectionView+YYMessage.m in Sources */,
 				EE4C28521DAF97E9008924A3 /* MethodSwizzling.m in Sources */,
 				EE4C288A1DAF97E9008924A3 /* YYAudioRocorder.m in Sources */,
@@ -5983,6 +6392,7 @@
 				EE4B96871DC5D60200CCFB95 /* OrientationController.m in Sources */,
 				EE4C298F1DAF97EA008924A3 /* RACKVOChannel.m in Sources */,
 				EE4C29421DAF97EA008924A3 /* FMDatabaseQueue.m in Sources */,
+				EE9F1A0E1DE84233006AD033 /* JMProduct.m in Sources */,
 				EE4C28C61DAF97E9008924A3 /* NSObject+YYMessage.m in Sources */,
 				EE4C29521DAF97EA008924A3 /* MJRefreshBackFooter.m in Sources */,
 				EE4C284C1DAF97E9008924A3 /* FoundationDemo.m in Sources */,
@@ -6089,7 +6499,6 @@
 				EE2A20F91DAF6D7A001F9A2E /* UINavigationBar+YYExtension.m in Sources */,
 				EE2A21141DAF6D7A001F9A2E /* YYKeychain.m in Sources */,
 				EE2A20F71DAF6D7A001F9A2E /* UIImage+YYExtension.m in Sources */,
-				EE2A213C1DAF6D7A001F9A2E /* YYPageController.m in Sources */,
 				EE2A20E31DAF6D7A001F9A2E /* CALayer+YYExtension.m in Sources */,
 				EE2A20801DAF6D7A001F9A2E /* YYAlertTable.m in Sources */,
 				EE2A207A1DAF6D7A001F9A2E /* YYAlertGridView.m in Sources */,
