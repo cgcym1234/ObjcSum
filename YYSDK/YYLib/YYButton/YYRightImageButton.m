@@ -25,22 +25,25 @@ IB_DESIGNABLE
 
 #pragma mark - Initialization
 
+#pragma mark - Initialization
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setContext];
+        [self _setupContext];
     }
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self setContext];
+        [self _setupContext];
     }
     return self;
 }
 
-- (void)setContext {
+- (void)_setupContext {
     self.userInteractionEnabled = YES;
+    self.clipsToBounds = YES;
     
     _textLabel = ({
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -64,6 +67,12 @@ IB_DESIGNABLE
 
 #pragma mark - Override
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (_didClickBlock) {
+        _didClickBlock(self);
+    }
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -76,7 +85,8 @@ IB_DESIGNABLE
 
 - (CGSize)intrinsicContentSize {
     CGSize textSize = _textLabel.intrinsicContentSize;
-    CGSize imageSize = CGSizeEqualToSize(_imageSize, CGSizeZero) ? _imageView.image.size : _imageSize;
+    
+    CGSize imageSize = self.finalImageSize;
     CGFloat height = MAX(textSize.height, imageSize.height);
     _imageView.size = imageSize;
     
@@ -87,7 +97,30 @@ IB_DESIGNABLE
     return contentSize;
 }
 
+- (void)sizeToFit {
+    [super sizeToFit];
+    self.size = self.intrinsicContentSize;
+}
+
+- (void)setBounds:(CGRect)bounds {
+    [super setBounds:bounds];
+    [self limitTextLabelWidth:bounds.size.width];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self limitTextLabelWidth:frame.size.width];
+}
+
 #pragma mark - Private
+/*如果限制了宽度，将label宽度减小*/
+- (void)limitTextLabelWidth:(CGFloat)width {
+    CGSize imageSize = self.finalImageSize;
+    CGFloat maxWidth = width - ( _contentEdgeInsets.left + _spacing + imageSize.width + _contentEdgeInsets.right);
+    if (_textLabel.width > maxWidth) {
+        _textLabel.width = maxWidth;
+    }
+}
 
 #pragma mark - Public
 
@@ -174,6 +207,10 @@ IB_DESIGNABLE
     return _imageView.image;
 }
 
+- (NSString *)text {
+    return _textLabel.text;
+}
+
 - (UIFont *)textLabelFont {
     return _textLabel.font;
 }
@@ -182,5 +219,17 @@ IB_DESIGNABLE
     return _textLabel.textColor;
 }
 
-@end
+- (CGSize)realImageSize {
+    return _imageView.image.size;
+}
 
+- (CGSize)fixedImageSize {
+    return _imageSize;
+}
+
+- (CGSize)finalImageSize {
+    return CGSizeEqualToSize(self.fixedImageSize, CGSizeZero) ? self.realImageSize : self.fixedImageSize;
+}
+
+
+@end

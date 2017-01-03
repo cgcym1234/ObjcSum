@@ -50,3 +50,14 @@ typedef NS_ENUM(NSUInteger, GoodsDetailEventType) {
 
 
 #endif /* GoodsDetail_h */
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 sihuan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (YYSDK)
 
@@ -26,5 +26,7 @@
 - (NSString *)toUnicodeString;
 - (NSString *)toUnUnicodeString;
 
-
+/* 行间距相关 */
+-(CGSize)sizeWithFont:(UIFont*)font width:(CGFloat)width lineSpacing:(CGFloat)lineSpacing;
+- (NSMutableAttributedString *)attributedStringWithFont:(UIFont*)font lineSpacing:(CGFloat)lineSpacing;
 @end

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JMSkuNumSelectedCell">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="52"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWK-rz-f6G">
+                        <rect key="frame" x="12" y="14" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="WWK-rz-f6G" secondAttribute="height" multiplier="1:1" id="RB4-43-VHA"/>
+                            <constraint firstAttribute="width" constant="25" id="y4u-mg-TyV"/>
+                        </constraints>
+                        <state key="normal" image="skuMinusEnable">
+                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="disabled" image="skuMinusDisable"/>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-OY-bcr">
+                        <rect key="frame" x="37" y="18.5" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7QO-Jf-mBk"/>
+                        </constraints>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-xK-Ptv">
+                        <rect key="frame" x="77" y="14.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Xge-xK-Ptv" secondAttribute="height" multiplier="1:1" id="Jcd-sq-O8p"/>
+                            <constraint firstAttribute="width" constant="25" id="bWy-gh-8Bk"/>
+                        </constraints>
+                        <state key="normal" image="skuAddEnable">
+                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="disabled" image="skuAddDisable"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WWK-rz-f6G" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="1yI-So-bZq"/>
+                <constraint firstItem="dhL-OY-bcr" firstAttribute="leading" secondItem="WWK-rz-f6G" secondAttribute="trailing" id="63b-vo-fUX"/>
+                <constraint firstItem="Xge-xK-Ptv" firstAttribute="centerY" secondItem="WWK-rz-f6G" secondAttribute="centerY" id="7dW-Qu-u51"/>
+                <constraint firstItem="WWK-rz-f6G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="OJa-Zn-tEr"/>
+                <constraint firstItem="Xge-xK-Ptv" firstAttribute="leading" secondItem="dhL-OY-bcr" secondAttribute="trailing" id="OrJ-tm-0Cd"/>
+                <constraint firstItem="dhL-OY-bcr" firstAttribute="centerY" secondItem="WWK-rz-f6G" secondAttribute="centerY" id="jW3-2H-Vo8"/>
+                <constraint firstItem="Xge-xK-Ptv" firstAttribute="width" secondItem="Xge-xK-Ptv" secondAttribute="height" multiplier="1:1" id="kFU-4T-JMI"/>
+            </constraints>
+            <size key="customSize" width="312" height="52"/>
+            <connections>
+                <outlet property="addButton" destination="Xge-xK-Ptv" id="Jjc-lA-jEA"/>
+                <outlet property="minusButton" destination="WWK-rz-f6G" id="6kC-hJ-UVy"/>
+                <outlet property="textField" destination="dhL-OY-bcr" id="n55-6F-ko5"/>
+            </connections>
+            <point key="canvasLocation" x="384" y="58"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="skuAddDisable" width="22" height="22"/>
+        <image name="skuAddEnable" width="22" height="22"/>
+        <image name="skuMinusDisable" width="22" height="22"/>
+        <image name="skuMinusEnable" width="22" height="22"/>
+    </resources>
+</document>

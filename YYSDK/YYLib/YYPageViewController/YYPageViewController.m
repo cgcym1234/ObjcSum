@@ -238,10 +238,6 @@
     }
 }
 
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
-}
-
 #pragma mark - Setter
 
 - (void)setCurrentPage:(NSInteger)currentPage {

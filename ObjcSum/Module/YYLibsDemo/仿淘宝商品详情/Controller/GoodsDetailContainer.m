@@ -7,10 +7,13 @@
 //
 
 #import "GoodsDetailContainer.h"
+#import "JMSkuSelectedViewModel+JMSku.h"
 
 #import "GoodsDetail.h"
 #import "GoodsDetailNomalViewController.h"
 #import "GoodsDetailGraphicViewController.h"
+#import "UIViewController+Extension.h"
+#import "JMSkuSelectedView.h"
 
 @interface GoodsDetailContainer ()
 <GoodsDetailEventDelegate>
@@ -20,6 +23,7 @@
 @property (nonatomic, strong) GoodsDetailGraphicViewController *goodsGrapicController;
 @property (nonatomic, assign) GoodsDetailType type;
 
+@property (nonatomic, strong) JMSkuSelectedViewModel *selectedViewModel;
 
 @end
 
@@ -42,11 +46,20 @@
 
 - (void)setContext {
     [self setupUI];
+    
+    JMSkuModel *skuModel = [JMSkuSelectedViewModel requestData];
+    _selectedViewModel = [JMSkuSelectedViewModel instanceWithSkuModel:skuModel];
 }
 
 - (void)setupUI {
     self.title = @"商品详情";
     [self showGoodsController];
+    [self addRightBarButtonItemWithTitle:@"showSku" action:@selector(showSku)];
+}
+
+- (void)showSku {
+    
+    [[JMSkuSelectedView new] showInWindowWithData:_selectedViewModel];
 }
 
 - (void)showGoodsController {

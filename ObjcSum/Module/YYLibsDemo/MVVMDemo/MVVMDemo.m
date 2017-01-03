@@ -26,7 +26,9 @@
     }
     int btnNum = 2;
     [self addButtonWithTitle:@"随手记" action:^(UIButton *btn) {
-        [FastRecordController pushFromViewController:weakSelf];
+        
+        UIViewController *fastRecordVc = [[UIStoryboard storyboardWithName:@"FastRecord" bundle:nil] instantiateInitialViewController];
+        [weakSelf.navigationController pushViewController:fastRecordVc animated:YES];
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
 }
 

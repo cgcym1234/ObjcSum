@@ -49,7 +49,10 @@
         imageView;
     });
     
-    NSLog(@"%@", self.name);
+    SyntacticSugar.sName = @"Haha";
+    NSLog(@"%@, %@", self.name, SyntacticSugar.sName);
+    
+    
 }
 
 

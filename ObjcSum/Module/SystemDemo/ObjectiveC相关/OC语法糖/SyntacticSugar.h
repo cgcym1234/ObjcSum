@@ -10,4 +10,7 @@
 
 @interface SyntacticSugar : UIView
 
+//类变量
+@property (nonatomic, strong, class) NSString *sName;
+
 @end

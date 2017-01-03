@@ -68,7 +68,7 @@
 			JMIconTag * iconTagItem = [[JMIconTag alloc] initWithDictionary:iconTagDictionary];
 			[iconTagItems addObject:iconTagItem];
 		}
-		self.iconTag = iconTagItems;
+//		self.iconTag = iconTagItems;
 	}
 	if(![dictionary[@"image_url_set"] isKindOfClass:[NSNull class]]){
 		self.imageUrlSet = [[JMImageUrlSet alloc] initWithDictionary:dictionary[@"image_url_set"]];
@@ -220,13 +220,13 @@
 	if(self.hasShortVideo != nil){
 		dictionary[@"has_short_video"] = self.hasShortVideo;
 	}
-	if(self.iconTag != nil){
-		NSMutableArray * dictionaryElements = [NSMutableArray array];
-		for(JMIconTag * iconTagElement in self.iconTag){
-			[dictionaryElements addObject:[iconTagElement toDictionary]];
-		}
-		dictionary[@"icon_tag"] = dictionaryElements;
-	}
+//	if(self.iconTag != nil){
+//		NSMutableArray * dictionaryElements = [NSMutableArray array];
+//		for(JMIconTag * iconTagElement in self.iconTag){
+//			[dictionaryElements addObject:[iconTagElement toDictionary]];
+//		}
+//		dictionary[@"icon_tag"] = dictionaryElements;
+//	}
 	if(self.imageUrlSet != nil){
 		dictionary[@"image_url_set"] = [self.imageUrlSet toDictionary];
 	}
@@ -370,9 +370,9 @@
 	if(self.hasShortVideo != nil){
 		[aCoder encodeObject:self.hasShortVideo forKey:@"has_short_video"];
 	}
-	if(self.iconTag != nil){
-		[aCoder encodeObject:self.iconTag forKey:@"icon_tag"];
-	}
+//	if(self.iconTag != nil){
+//		[aCoder encodeObject:self.iconTag forKey:@"icon_tag"];
+//	}
 	if(self.imageUrlSet != nil){
 		[aCoder encodeObject:self.imageUrlSet forKey:@"image_url_set"];
 	}
@@ -479,7 +479,7 @@
 	self.guarantee = [aDecoder decodeObjectForKey:@"guarantee"];
 	self.guoneiBaoyou = [aDecoder decodeObjectForKey:@"guonei_baoyou"];
 	self.hasShortVideo = [aDecoder decodeObjectForKey:@"has_short_video"];
-	self.iconTag = [aDecoder decodeObjectForKey:@"icon_tag"];
+//	self.iconTag = [aDecoder decodeObjectForKey:@"icon_tag"];
 	self.imageUrlSet = [aDecoder decodeObjectForKey:@"image_url_set"];
 	self.isAuthBrand = [aDecoder decodeObjectForKey:@"is_auth_brand"];
 	self.itemId = [aDecoder decodeObjectForKey:@"item_id"];

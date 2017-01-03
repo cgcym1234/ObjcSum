@@ -194,6 +194,10 @@
  */
 - (void)yy_shuffle;
 
+
+- (id)safe_objectAtIndex:(NSUInteger)index;
+- (void)safe_addObject:(id)anObject;
+
 @end
 
 

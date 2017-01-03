@@ -340,6 +340,7 @@
  //这个没有使用
  product_.is_allow_add_scan = [stringInDictionaryForKey(scan_control, @"is_allow_add_scan") boolValue];
  */
+@property (nonatomic, strong) JMScanControl * scanControl; //是否显示浏览记录
 
 /*
  "fav_enabled": "0",
@@ -384,7 +385,7 @@
  @property (nonatomic, copy) NSString *shortVideoCoverUrl;  ///< 默认视频封面图片
  @property (nonatomic, copy) NSString *shortVideoUrl;       ///< 短视频mov格式，可在线播放
  */
-@property (nonatomic, strong) JMVideoInfo * videoInfo;
+@property (nonatomic, strong) JMVideoInfo * videoInfo; //头部短视频信息
 
 
 /*
@@ -407,30 +408,17 @@
  
  @property(nonatomic, strong) NSArray<MAShareInfo *> *arrShareInfo;
  */
-@property (nonatomic, strong) NSArray * iconTag;
+@property (nonatomic, strong) NSArray * shareInfo;//分享相关信息
 
 
-
-
-
-
-
-
-
-
-
-
-
-@property (nonatomic, strong) JMScanControl * scanControl;
-@property (nonatomic, strong) NSArray * shareInfo;
-
-
-
-
-
-
-
-@property (nonatomic, strong) NSArray * taxInfo;
+/*
+ tax_info": [
+     "1.财政部，海关总署，国家税务总局发布跨境电子商务零售进口税收政策，自2016年4月8日起，跨境电商单次交易限值为人民币2000元，个人年度交易限值为人民币20000元。",
+     "2.跨境电商综合税需按一般贸易增值税及消费税税额的70%征收，税费以结算页金额为准。"
+ ]
+ @property (nonatomic, strong) NSArray *taxInfoArray;              ///税收价格说明
+ */
+@property (nonatomic, strong) NSArray * taxInfo; //税收价格说明
 
 
 
@@ -439,7 +427,7 @@
 /*
  "price_ext_title": "",
  @property(nonatomic, copy) NSString *productPriceDescription;
- 不知道还有用不，好像是没用了
+ 好像是没用了
  */
 @property (nonatomic, strong) NSString * priceExtTitle;
 
@@ -511,6 +499,19 @@
  无用
  */
 @property (nonatomic, strong) NSString * shippingSystemId;
+
+
+
+
+
+#pragma mark - 动态
+
+/*
+ "is_sellable": "1",
+ */
+
+
+
 
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;

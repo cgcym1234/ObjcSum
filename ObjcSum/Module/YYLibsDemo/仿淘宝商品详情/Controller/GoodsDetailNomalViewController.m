@@ -43,11 +43,8 @@
     tableView.delegate = self;
     _tableView = tableView;
     
-    NSArray *cellClass = @[
-                           DemoCell.class,
-                           DemoCell2.class,
-                           ];
-    [tableView regitsterCells:cellClass];
+    [tableView registerNib:[UINib nibWithNibName:@"DemoCell" bundle:nil] forCellReuseIdentifier:@"DemoCell"];
+    [tableView registerClass:DemoCell2.class forCellReuseIdentifier:@"DemoCell2"];
     
     UIView *bottomContainer = [UIView new];
     bottomContainer.backgroundColor = [UIColor redColor];

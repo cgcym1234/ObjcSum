@@ -184,6 +184,30 @@
 - (void)setBackgroundColorSelected:(UIColor *)color {
     [self setBackgroundImage:[UIImage imageWithColor:color] forState:UIControlStateSelected];
 }
+
+- (void)setState:(UIControlState)state {
+    switch (state) {
+        case UIControlStateHighlighted:
+            self.highlighted = YES;
+            break;
+        case UIControlStateDisabled:
+            self.enabled = NO;
+            self.selected = NO;
+            self.highlighted = NO;
+            break;
+        case UIControlStateSelected:
+            self.selected = YES;
+            self.enabled = YES;
+            self.highlighted = NO;
+            break;
+        default:
+//            self.highlighted = NO;
+            self.enabled = YES;
+            self.selected = NO;
+            break;
+    }
+}
+
 @end
 
 

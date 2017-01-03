@@ -46,6 +46,7 @@ typedef NS_ENUM(NSUInteger, YYButtonImagePosition) {
 - (void)setBackgroundColorDisabled:(UIColor *)color;
 - (void)setBackgroundColorSelected:(UIColor *)color;
 
+- (void)setState:(UIControlState)state;
 
 @end
 

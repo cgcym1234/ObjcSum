@@ -301,6 +301,18 @@
     }
 }
 
+-(void)safe_addObject:(id)anObject{
+    if (anObject) {
+        [self addObject:anObject];
+    }
+}
+
+-(id)safe_objectAtIndex:(NSUInteger)index{
+    if (index < self.count) {
+        return [self objectAtIndex:index];
+    }
+    return nil;
+}
 @end
 
 

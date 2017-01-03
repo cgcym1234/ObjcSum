@@ -15,6 +15,37 @@
 		1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
 		EE1E31D41DD94CB30012D49F /* NSString+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */; };
 		EE1E31D51DD94CB30012D49F /* NSString+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */; };
+		EE270D021E13ACBE005BA294 /* UIButton+JMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */; };
+		EE270D051E13B04D005BA294 /* UIButton+setBackgroundColorForState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */; };
+		EE270D0E1E13BAB1005BA294 /* UIView+JMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */; };
+		EE270D7B1E1B6F42005BA294 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */; };
+		EE270DB11E1B6FE6005BA294 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D801E1B6FE6005BA294 /* JMSkuModel.m */; };
+		EE270DB21E1B6FE6005BA294 /* PriceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D821E1B6FE6005BA294 /* PriceDetail.m */; };
+		EE270DB31E1B6FE6005BA294 /* SkuGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */; };
+		EE270DB41E1B6FE6005BA294 /* SkuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D861E1B6FE6005BA294 /* SkuInfo.m */; };
+		EE270DB51E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D8A1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m */; };
+		EE270DB61E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D8B1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib */; };
+		EE270DB71E1B6FE6005BA294 /* JMSkuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D8E1E1B6FE6005BA294 /* JMSkuCell.m */; };
+		EE270DB81E1B6FE6005BA294 /* JMSkuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D8F1E1B6FE6005BA294 /* JMSkuCell.xib */; };
+		EE270DB91E1B6FE6005BA294 /* JMSkuConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D921E1B6FE6005BA294 /* JMSkuConfirmView.m */; };
+		EE270DBA1E1B6FE6005BA294 /* JMSkuConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D931E1B6FE6005BA294 /* JMSkuConfirmView.xib */; };
+		EE270DBB1E1B6FE6005BA294 /* JMSkuDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D961E1B6FE6005BA294 /* JMSkuDisplayView.m */; };
+		EE270DBC1E1B6FE6005BA294 /* JMSkuDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D971E1B6FE6005BA294 /* JMSkuDisplayView.xib */; };
+		EE270DBD1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D9A1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m */; };
+		EE270DBE1E1B6FE6005BA294 /* JMSkuNumSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D9B1E1B6FE6005BA294 /* JMSkuNumSelectedCell.xib */; };
+		EE270DBF1E1B6FE6005BA294 /* JMSkuGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D9E1E1B6FE6005BA294 /* JMSkuGroupHeader.m */; };
+		EE270DC01E1B6FE6005BA294 /* JMSkuGroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D9F1E1B6FE6005BA294 /* JMSkuGroupHeader.xib */; };
+		EE270DC11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */; };
+		EE270DC21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */; };
+		EE270DC31E1B6FE6005BA294 /* JMSkuSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */; };
+		EE270DC41E1B6FE6005BA294 /* JMSkuSelectedView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */; };
+		EE270DC51E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */; };
+		EE270DC61E1B6FE6005BA294 /* JMSkuSelectedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */; };
+		EE270DC71E1B6FE6005BA294 /* JMComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DB01E1B6FE6005BA294 /* JMComponent.m */; };
+		EE270DCA1E1B7096005BA294 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DC91E1B7096005BA294 /* UIView+Additions.m */; };
+		EE270DCD1E1B70C3005BA294 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */; };
+		EE270DD01E1B7150005BA294 /* UIView+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */; };
+		EE270DD21E1B7581005BA294 /* JMSkuMockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */; };
 		EE2A1F301DAF5DE7001F9A2E /* YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE2A1F331DAF5DE7001F9A2E /* YYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; };
 		EE2A1F341DAF5DE7001F9A2E /* YYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -772,6 +803,7 @@
 		EE4C2C061DAF9D89008924A3 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4C2C051DAF9D89008924A3 /* libsqlite3.0.tbd */; };
 		EE4C2C091DB07158008924A3 /* YYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4C2C071DB07158008924A3 /* YYLogger.h */; };
 		EE4C2C0A1DB07158008924A3 /* YYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C2C081DB07158008924A3 /* YYLogger.m */; };
+		EE51A63E1DF56D2000C13807 /* NSStringDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51A63D1DF56D2000C13807 /* NSStringDemo.m */; };
 		EE5FE87F1DBCF28500CB2FF0 /* YYGlobalTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */; };
 		EE5FE8801DBCF28500CB2FF0 /* YYGlobalTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */; };
 		EE5FE88C1DBD055C00CB2FF0 /* YYGCD.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */; };
@@ -797,7 +829,6 @@
 		EE9F1A0B1DE84233006AD033 /* JMIconTag.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F31DE84232006AD033 /* JMIconTag.m */; };
 		EE9F1A0C1DE84233006AD033 /* JMImageUrlSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */; };
 		EE9F1A0D1DE84233006AD033 /* JMNav.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F71DE84232006AD033 /* JMNav.m */; };
-		EE9F1A0E1DE84233006AD033 /* JMProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19F91DE84232006AD033 /* JMProduct.m */; };
 		EE9F1A0F1DE84233006AD033 /* JMProductGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FB1DE84233006AD033 /* JMProductGallery.m */; };
 		EE9F1A101DE84233006AD033 /* JMProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FD1DE84233006AD033 /* JMProperty.m */; };
 		EE9F1A111DE84233006AD033 /* JMScanControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19FF1DE84233006AD033 /* JMScanControl.m */; };
@@ -833,6 +864,9 @@
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
 		EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */; };
 		EEEFF6031DC1A0E400959DC2 /* GoodsDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF6021DC1A0E400959DC2 /* GoodsDetailButton.m */; };
+		EEFCDD8B1DF179220066C31A /* JMProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD8A1DF179220066C31A /* JMProduct.m */; };
+		EEFCDD911DF1794D0066C31A /* JMFenQi.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD8E1DF1794D0066C31A /* JMFenQi.m */; };
+		EEFCDD921DF1794D0066C31A /* JMSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD901DF1794D0066C31A /* JMSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -886,6 +920,61 @@
 		1FAC3C191C0D44760007520F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYSDK.h"; sourceTree = "<group>"; };
 		EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYSDK.m"; sourceTree = "<group>"; };
+		EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMCategory.h"; sourceTree = "<group>"; };
+		EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JMCategory.m"; sourceTree = "<group>"; };
+		EE270D031E13B04D005BA294 /* UIButton+setBackgroundColorForState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+setBackgroundColorForState.h"; sourceTree = "<group>"; };
+		EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+setBackgroundColorForState.m"; sourceTree = "<group>"; };
+		EE270D0C1E13BAB1005BA294 /* UIView+JMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMCategory.h"; sourceTree = "<group>"; };
+		EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMCategory.m"; sourceTree = "<group>"; };
+		EE270D791E1B6F42005BA294 /* NSObject+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additionals.h"; sourceTree = "<group>"; };
+		EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
+		EE270D7F1E1B6FE6005BA294 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
+		EE270D801E1B6FE6005BA294 /* JMSkuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuModel.m; sourceTree = "<group>"; };
+		EE270D811E1B6FE6005BA294 /* PriceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetail.h; sourceTree = "<group>"; };
+		EE270D821E1B6FE6005BA294 /* PriceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetail.m; sourceTree = "<group>"; };
+		EE270D831E1B6FE6005BA294 /* SkuGroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuGroupInfo.h; sourceTree = "<group>"; };
+		EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuGroupInfo.m; sourceTree = "<group>"; };
+		EE270D851E1B6FE6005BA294 /* SkuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuInfo.h; sourceTree = "<group>"; };
+		EE270D861E1B6FE6005BA294 /* SkuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuInfo.m; sourceTree = "<group>"; };
+		EE270D891E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuAdditionalInfoCell.h; sourceTree = "<group>"; };
+		EE270D8A1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuAdditionalInfoCell.m; sourceTree = "<group>"; };
+		EE270D8B1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuAdditionalInfoCell.xib; sourceTree = "<group>"; };
+		EE270D8D1E1B6FE6005BA294 /* JMSkuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuCell.h; sourceTree = "<group>"; };
+		EE270D8E1E1B6FE6005BA294 /* JMSkuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuCell.m; sourceTree = "<group>"; };
+		EE270D8F1E1B6FE6005BA294 /* JMSkuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuCell.xib; sourceTree = "<group>"; };
+		EE270D911E1B6FE6005BA294 /* JMSkuConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuConfirmView.h; sourceTree = "<group>"; };
+		EE270D921E1B6FE6005BA294 /* JMSkuConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuConfirmView.m; sourceTree = "<group>"; };
+		EE270D931E1B6FE6005BA294 /* JMSkuConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuConfirmView.xib; sourceTree = "<group>"; };
+		EE270D951E1B6FE6005BA294 /* JMSkuDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuDisplayView.h; sourceTree = "<group>"; };
+		EE270D961E1B6FE6005BA294 /* JMSkuDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuDisplayView.m; sourceTree = "<group>"; };
+		EE270D971E1B6FE6005BA294 /* JMSkuDisplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuDisplayView.xib; sourceTree = "<group>"; };
+		EE270D991E1B6FE6005BA294 /* JMSkuNumSelectedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuNumSelectedCell.h; sourceTree = "<group>"; };
+		EE270D9A1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuNumSelectedCell.m; sourceTree = "<group>"; };
+		EE270D9B1E1B6FE6005BA294 /* JMSkuNumSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuNumSelectedCell.xib; sourceTree = "<group>"; };
+		EE270D9D1E1B6FE6005BA294 /* JMSkuGroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuGroupHeader.h; sourceTree = "<group>"; };
+		EE270D9E1E1B6FE6005BA294 /* JMSkuGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuGroupHeader.m; sourceTree = "<group>"; };
+		EE270D9F1E1B6FE6005BA294 /* JMSkuGroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuGroupHeader.xib; sourceTree = "<group>"; };
+		EE270DA01E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCollectionViewLeftAlignLayout.h; sourceTree = "<group>"; };
+		EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCollectionViewLeftAlignLayout.m; sourceTree = "<group>"; };
+		EE270DA21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedView+SkuNumSelected.h"; sourceTree = "<group>"; };
+		EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedView+SkuNumSelected.m"; sourceTree = "<group>"; };
+		EE270DA41E1B6FE6005BA294 /* JMSkuSelectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedView.h; sourceTree = "<group>"; };
+		EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuSelectedView.m; sourceTree = "<group>"; };
+		EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JMSkuSelectedView.xcassets; sourceTree = "<group>"; };
+		EE270DA71E1B6FE6005BA294 /* JMSkuSelectedViewConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedViewConsts.h; sourceTree = "<group>"; };
+		EE270DA91E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+JMSku.h"; sourceTree = "<group>"; };
+		EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+JMSku.m"; sourceTree = "<group>"; };
+		EE270DAB1E1B6FE6005BA294 /* JMSkuSelectedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedViewModel.h; sourceTree = "<group>"; };
+		EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuSelectedViewModel.m; sourceTree = "<group>"; };
+		EE270DAF1E1B6FE6005BA294 /* JMComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMComponent.h; sourceTree = "<group>"; };
+		EE270DB01E1B6FE6005BA294 /* JMComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMComponent.m; sourceTree = "<group>"; };
+		EE270DC81E1B7096005BA294 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		EE270DC91E1B7096005BA294 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		EE270DCB1E1B70C3005BA294 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		EE270DCE1E1B7150005BA294 /* UIView+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additionals.h"; sourceTree = "<group>"; };
+		EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additionals.m"; sourceTree = "<group>"; };
+		EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData.plist; sourceTree = "<group>"; };
 		EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSDK.h; sourceTree = "<group>"; };
 		EE2A1F2F1DAF5DE7001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2096,6 +2185,8 @@
 		EE4C2C051DAF9D89008924A3 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EE4C2C071DB07158008924A3 /* YYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLogger.h; sourceTree = "<group>"; };
 		EE4C2C081DB07158008924A3 /* YYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLogger.m; sourceTree = "<group>"; };
+		EE51A63C1DF56D2000C13807 /* NSStringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringDemo.h; sourceTree = "<group>"; };
+		EE51A63D1DF56D2000C13807 /* NSStringDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringDemo.m; sourceTree = "<group>"; };
 		EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGlobalTimer.h; sourceTree = "<group>"; };
 		EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGlobalTimer.m; sourceTree = "<group>"; };
 		EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCD.h; sourceTree = "<group>"; };
@@ -2131,8 +2222,6 @@
 		EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMImageUrlSet.m; sourceTree = "<group>"; };
 		EE9F19F61DE84232006AD033 /* JMNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNav.h; sourceTree = "<group>"; };
 		EE9F19F71DE84232006AD033 /* JMNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNav.m; sourceTree = "<group>"; };
-		EE9F19F81DE84232006AD033 /* JMProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProduct.h; sourceTree = "<group>"; };
-		EE9F19F91DE84232006AD033 /* JMProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProduct.m; sourceTree = "<group>"; };
 		EE9F19FA1DE84232006AD033 /* JMProductGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProductGallery.h; sourceTree = "<group>"; };
 		EE9F19FB1DE84233006AD033 /* JMProductGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProductGallery.m; sourceTree = "<group>"; };
 		EE9F19FC1DE84233006AD033 /* JMProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProperty.h; sourceTree = "<group>"; };
@@ -2200,6 +2289,12 @@
 		EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRightImageButton.m; sourceTree = "<group>"; };
 		EEEFF6011DC1A0E400959DC2 /* GoodsDetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailButton.h; sourceTree = "<group>"; };
 		EEEFF6021DC1A0E400959DC2 /* GoodsDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailButton.m; sourceTree = "<group>"; };
+		EEFCDD891DF179220066C31A /* JMProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProduct.h; sourceTree = "<group>"; };
+		EEFCDD8A1DF179220066C31A /* JMProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProduct.m; sourceTree = "<group>"; };
+		EEFCDD8D1DF1794D0066C31A /* JMFenQi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFenQi.h; sourceTree = "<group>"; };
+		EEFCDD8E1DF1794D0066C31A /* JMFenQi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFenQi.m; sourceTree = "<group>"; };
+		EEFCDD8F1DF1794D0066C31A /* JMSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSize.h; sourceTree = "<group>"; };
+		EEFCDD901DF1794D0066C31A /* JMSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSize.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2294,6 +2389,150 @@
 			path = ObjcSumUITests;
 			sourceTree = "<group>";
 		};
+		EE270D7C1E1B6FE6005BA294 /* JMSkuSelectedView */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D7D1E1B6FE6005BA294 /* API */,
+				EE270D871E1B6FE6005BA294 /* Component */,
+				EE270DA01E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.h */,
+				EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */,
+				EE270DA21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.h */,
+				EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */,
+				EE270DA41E1B6FE6005BA294 /* JMSkuSelectedView.h */,
+				EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */,
+				EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */,
+				EE270DA71E1B6FE6005BA294 /* JMSkuSelectedViewConsts.h */,
+				EE270DA81E1B6FE6005BA294 /* JMSkuSelectedViewModel */,
+				EE270DAD1E1B6FE6005BA294 /* Vender */,
+			);
+			path = JMSkuSelectedView;
+			sourceTree = "<group>";
+		};
+		EE270D7D1E1B6FE6005BA294 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D7E1E1B6FE6005BA294 /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EE270D7E1E1B6FE6005BA294 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D7F1E1B6FE6005BA294 /* JMSkuModel.h */,
+				EE270D801E1B6FE6005BA294 /* JMSkuModel.m */,
+				EE270D811E1B6FE6005BA294 /* PriceDetail.h */,
+				EE270D821E1B6FE6005BA294 /* PriceDetail.m */,
+				EE270D831E1B6FE6005BA294 /* SkuGroupInfo.h */,
+				EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */,
+				EE270D851E1B6FE6005BA294 /* SkuInfo.h */,
+				EE270D861E1B6FE6005BA294 /* SkuInfo.m */,
+				EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE270D871E1B6FE6005BA294 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D881E1B6FE6005BA294 /* JMSkuAdditionalInfoCell */,
+				EE270D8C1E1B6FE6005BA294 /* JMSkuCell */,
+				EE270D901E1B6FE6005BA294 /* JMSkuConfirmView */,
+				EE270D941E1B6FE6005BA294 /* JMSkuDisplayView */,
+				EE270D981E1B6FE6005BA294 /* JMSkuNumSelectedCell */,
+				EE270D9C1E1B6FE6005BA294 /* JMSkuSectionHeader */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EE270D881E1B6FE6005BA294 /* JMSkuAdditionalInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D891E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.h */,
+				EE270D8A1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m */,
+				EE270D8B1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib */,
+			);
+			path = JMSkuAdditionalInfoCell;
+			sourceTree = "<group>";
+		};
+		EE270D8C1E1B6FE6005BA294 /* JMSkuCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D8D1E1B6FE6005BA294 /* JMSkuCell.h */,
+				EE270D8E1E1B6FE6005BA294 /* JMSkuCell.m */,
+				EE270D8F1E1B6FE6005BA294 /* JMSkuCell.xib */,
+			);
+			path = JMSkuCell;
+			sourceTree = "<group>";
+		};
+		EE270D901E1B6FE6005BA294 /* JMSkuConfirmView */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D911E1B6FE6005BA294 /* JMSkuConfirmView.h */,
+				EE270D921E1B6FE6005BA294 /* JMSkuConfirmView.m */,
+				EE270D931E1B6FE6005BA294 /* JMSkuConfirmView.xib */,
+			);
+			path = JMSkuConfirmView;
+			sourceTree = "<group>";
+		};
+		EE270D941E1B6FE6005BA294 /* JMSkuDisplayView */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D951E1B6FE6005BA294 /* JMSkuDisplayView.h */,
+				EE270D961E1B6FE6005BA294 /* JMSkuDisplayView.m */,
+				EE270D971E1B6FE6005BA294 /* JMSkuDisplayView.xib */,
+			);
+			path = JMSkuDisplayView;
+			sourceTree = "<group>";
+		};
+		EE270D981E1B6FE6005BA294 /* JMSkuNumSelectedCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D991E1B6FE6005BA294 /* JMSkuNumSelectedCell.h */,
+				EE270D9A1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m */,
+				EE270D9B1E1B6FE6005BA294 /* JMSkuNumSelectedCell.xib */,
+			);
+			path = JMSkuNumSelectedCell;
+			sourceTree = "<group>";
+		};
+		EE270D9C1E1B6FE6005BA294 /* JMSkuSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				EE270D9D1E1B6FE6005BA294 /* JMSkuGroupHeader.h */,
+				EE270D9E1E1B6FE6005BA294 /* JMSkuGroupHeader.m */,
+				EE270D9F1E1B6FE6005BA294 /* JMSkuGroupHeader.xib */,
+			);
+			path = JMSkuSectionHeader;
+			sourceTree = "<group>";
+		};
+		EE270DA81E1B6FE6005BA294 /* JMSkuSelectedViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE270DA91E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.h */,
+				EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */,
+				EE270DAB1E1B6FE6005BA294 /* JMSkuSelectedViewModel.h */,
+				EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */,
+			);
+			path = JMSkuSelectedViewModel;
+			sourceTree = "<group>";
+		};
+		EE270DAD1E1B6FE6005BA294 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				EE270DAE1E1B6FE6005BA294 /* JMComponent */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		EE270DAE1E1B6FE6005BA294 /* JMComponent */ = {
+			isa = PBXGroup;
+			children = (
+				EE270DAF1E1B6FE6005BA294 /* JMComponent.h */,
+				EE270DB01E1B6FE6005BA294 /* JMComponent.m */,
+			);
+			path = JMComponent;
+			sourceTree = "<group>";
+		};
 		EE2A1F2D1DAF5DE7001F9A2E /* YYSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -2362,7 +2601,6 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
-				EECCCCD41DD00556007B47B1 /* YYSegmentedView */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
 				EE2A1F661DAF6D79001F9A2E /* YYAlertGridView */,
@@ -2393,6 +2631,7 @@
 				EE2A20521DAF6D79001F9A2E /* YYScrollSigment */,
 				EE2A20581DAF6D79001F9A2E /* YYSearchBar */,
 				EE2A205B1DAF6D79001F9A2E /* YYSegmentedControl */,
+				EECCCCD41DD00556007B47B1 /* YYSegmentedView */,
 				EE2A20611DAF6D79001F9A2E /* YYSimpleAlertTable */,
 				EE2A20641DAF6D7A001F9A2E /* YYTextView */,
 				EE2A20671DAF6D7A001F9A2E /* YYTextViewTimePicker */,
@@ -2920,7 +3159,7 @@
 				EE412D921DC73789005E6452 /* AutoLayoutDemo.m */,
 				EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */,
 			);
-			name = AutoLayoutDemo;
+			path = AutoLayoutDemo;
 			sourceTree = "<group>";
 		};
 		EE4B96241DC5D60200CCFB95 /* 系统控件篇 */ = {
@@ -3286,7 +3525,6 @@
 			children = (
 				EE4C24501DAF97E6008924A3 /* C代码篇 */,
 				EE4C24751DAF97E6008924A3 /* Foundation相关测试 */,
-				EE4C24981DAF97E7008924A3 /* OC语法糖 */,
 				EE4C247A1DAF97E6008924A3 /* ObjectiveC相关 */,
 				EE4C249D1DAF97E7008924A3 /* RunLoop */,
 				EE4C24B41DAF97E7008924A3 /* 事件相关 */,
@@ -3367,6 +3605,8 @@
 			children = (
 				EE4C24761DAF97E6008924A3 /* FoundationDemo.h */,
 				EE4C24771DAF97E6008924A3 /* FoundationDemo.m */,
+				EE51A63C1DF56D2000C13807 /* NSStringDemo.h */,
+				EE51A63D1DF56D2000C13807 /* NSStringDemo.m */,
 				EE4C24781DAF97E6008924A3 /* SerialisationTest.h */,
 				EE4C24791DAF97E6008924A3 /* SerialisationTest.m */,
 			);
@@ -3381,6 +3621,7 @@
 				EE4C24831DAF97E6008924A3 /* 3-方法与消息 */,
 				EE4C24861DAF97E6008924A3 /* 4-MethodSwizzling */,
 				EE4C24891DAF97E7008924A3 /* 5-协议与分类 */,
+				EE4C24981DAF97E7008924A3 /* OC语法糖 */,
 				EE4C24931DAF97E7008924A3 /* RunTime */,
 				EE4C248C1DAF97E7008924A3 /* block原理 */,
 				EE4C248F1DAF97E7008924A3 /* ObjectiveCDemo.h */,
@@ -3461,10 +3702,10 @@
 		EE4C24981DAF97E7008924A3 /* OC语法糖 */ = {
 			isa = PBXGroup;
 			children = (
-				EE4C24991DAF97E7008924A3 /* SyntacticSugar.h */,
-				EE4C249A1DAF97E7008924A3 /* SyntacticSugar.m */,
 				EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */,
 				EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */,
+				EE4C24991DAF97E7008924A3 /* SyntacticSugar.h */,
+				EE4C249A1DAF97E7008924A3 /* SyntacticSugar.m */,
 			);
 			path = "OC语法糖";
 			sourceTree = "<group>";
@@ -3731,6 +3972,7 @@
 		EE4C251C1DAF97E7008924A3 /* YYLibsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EE412D961DC7378F005E6452 /* AutoLayoutDemo */,
 				EE4C251D1DAF97E7008924A3 /* KValue数据存储 */,
 				EE4C252B1DAF97E7008924A3 /* MVVMDemo */,
 				EE4C25611DAF97E7008924A3 /* ScrollSigment滑动选择条 */,
@@ -3745,14 +3987,13 @@
 				EE4C25F91DAF97E7008924A3 /* 仿淘宝商品详情 */,
 				EE4C26121DAF97E7008924A3 /* 加密相关 */,
 				EE4C26151DAF97E7008924A3 /* 弹出控件相关 */,
+				EE6113F01DE69B3800A9113A /* 架构相关 */,
 				EE4C26181DAF97E7008924A3 /* 登录相关 */,
 				EE4C261D1DAF97E7008924A3 /* 缩略图控件 */,
 				EE4C26221DAF97E7008924A3 /* 面试相关 */,
 				EE4C26251DAF97E7008924A3 /* 颜色转换 */,
 				EE4C25681DAF97E7008924A3 /* YYLibsDemo.h */,
 				EE4C25691DAF97E7008924A3 /* YYLibsDemo.m */,
-				EE412D961DC7378F005E6452 /* AutoLayoutDemo */,
-				EE6113F01DE69B3800A9113A /* 架构相关 */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -4200,12 +4441,27 @@
 		EE4C25F91DAF97E7008924A3 /* 仿淘宝商品详情 */ = {
 			isa = PBXGroup;
 			children = (
-				EE9F19E71DE84232006AD033 /* JMProduct */,
-				EE9F1B0A1DEAB337006AD033 /* GoodsDetail */,
 				EE4C25FA1DAF97E7008924A3 /* Controller */,
+				EEFCDD8C1DF1793C0066C31A /* Dynamic */,
+				EE9F1B0A1DEAB337006AD033 /* GoodsDetail */,
+				EE9F19E71DE84232006AD033 /* JMProduct */,
 				EE4C26021DAF97E7008924A3 /* Model */,
 				EE4C26071DAF97E7008924A3 /* View */,
 				EE4C26011DAF97E7008924A3 /* GoodsDetail.h */,
+				EE270DCE1E1B7150005BA294 /* UIView+Additionals.h */,
+				EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */,
+				EE270DC81E1B7096005BA294 /* UIView+Additions.h */,
+				EE270DC91E1B7096005BA294 /* UIView+Additions.m */,
+				EE270D791E1B6F42005BA294 /* NSObject+Additionals.h */,
+				EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */,
+				EE270D0C1E13BAB1005BA294 /* UIView+JMCategory.h */,
+				EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */,
+				EE270DCB1E1B70C3005BA294 /* UIView+Utils.h */,
+				EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */,
+				EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */,
+				EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */,
+				EE270D031E13B04D005BA294 /* UIButton+setBackgroundColorForState.h */,
+				EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */,
 			);
 			path = "仿淘宝商品详情";
 			sourceTree = "<group>";
@@ -5194,18 +5450,18 @@
 		EE6113F01DE69B3800A9113A /* 架构相关 */ = {
 			isa = PBXGroup;
 			children = (
+				EE6113F41DE69B5900A9113A /* 巧用Extension分离接口依赖 */,
 				EE6113ED1DE69B3500A9113A /* ArchitectureDemo.h */,
 				EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */,
-				EE6113F41DE69B5900A9113A /* 巧用Extension分离接口依赖 */,
 			);
-			name = "架构相关";
+			path = "架构相关";
 			sourceTree = "<group>";
 		};
 		EE6113F41DE69B5900A9113A /* 巧用Extension分离接口依赖 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "巧用Extension分离接口依赖";
+			path = "巧用Extension分离接口依赖";
 			sourceTree = "<group>";
 		};
 		EE8068CB1D992D03006E69F7 /* Frameworks */ = {
@@ -5247,8 +5503,6 @@
 				EE9F19F51DE84232006AD033 /* JMImageUrlSet.m */,
 				EE9F19F61DE84232006AD033 /* JMNav.h */,
 				EE9F19F71DE84232006AD033 /* JMNav.m */,
-				EE9F19F81DE84232006AD033 /* JMProduct.h */,
-				EE9F19F91DE84232006AD033 /* JMProduct.m */,
 				EE9F19FA1DE84232006AD033 /* JMProductGallery.h */,
 				EE9F19FB1DE84233006AD033 /* JMProductGallery.m */,
 				EE9F19FC1DE84233006AD033 /* JMProperty.h */,
@@ -5262,20 +5516,20 @@
 				EE9F1A041DE84233006AD033 /* JMVideoInfo.h */,
 				EE9F1A051DE84233006AD033 /* JMVideoInfo.m */,
 			);
-			name = JMProduct;
-			path = ../JMProduct;
+			path = JMProduct;
 			sourceTree = "<group>";
 		};
 		EE9F1B0A1DEAB337006AD033 /* GoodsDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EE270D7C1E1B6FE6005BA294 /* JMSkuSelectedView */,
 				EE9F1B0B1DEAB337006AD033 /* Component */,
 				EE9F1B291DEAB337006AD033 /* Controller */,
+				EE9F1B461DEAB337006AD033 /* Vendor */,
 				EE9F1B421DEAB337006AD033 /* JMGoodsDetail.h */,
 				EE9F1B431DEAB337006AD033 /* JMGoodsDetail.storyboard */,
 				EE9F1B441DEAB337006AD033 /* JMGoodsDetailManager.h */,
 				EE9F1B451DEAB337006AD033 /* JMGoodsDetailManager.m */,
-				EE9F1B461DEAB337006AD033 /* Vendor */,
 			);
 			path = GoodsDetail;
 			sourceTree = "<group>";
@@ -5506,8 +5760,7 @@
 				EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */,
 				EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */,
 			);
-			name = YYSegmentedView;
-			path = ../../ObjcSum/Module/YYLibsDemo;
+			path = YYSegmentedView;
 			sourceTree = "<group>";
 		};
 		EEDCCB711DC03AA400715955 /* UIButtonDemo */ = {
@@ -5519,6 +5772,19 @@
 				EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */,
 			);
 			path = UIButtonDemo;
+			sourceTree = "<group>";
+		};
+		EEFCDD8C1DF1793C0066C31A /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				EEFCDD8D1DF1794D0066C31A /* JMFenQi.h */,
+				EEFCDD8E1DF1794D0066C31A /* JMFenQi.m */,
+				EEFCDD891DF179220066C31A /* JMProduct.h */,
+				EEFCDD8A1DF179220066C31A /* JMProduct.m */,
+				EEFCDD8F1DF1794D0066C31A /* JMSize.h */,
+				EEFCDD901DF1794D0066C31A /* JMSize.m */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -5832,15 +6098,19 @@
 				EE4C28E51DAF97E9008924A3 /* YYMessageInputToolBar.xib in Resources */,
 				EE4C28351DAF97E9008924A3 /* Login.storyboard in Resources */,
 				EE4C28911DAF97E9008924A3 /* ReactiveCocoaDemo.storyboard in Resources */,
+				EE270DBC1E1B6FE6005BA294 /* JMSkuDisplayView.xib in Resources */,
 				EE4C29EF1DAF97EA008924A3 /* Info.plist in Resources */,
 				EE4C28F01DAF97E9008924A3 /* YYMessage.xcassets in Resources */,
 				EE4C28891DAF97E9008924A3 /* YYAudioPlayeDemor.xib in Resources */,
 				EE4C28671DAF97E9008924A3 /* EventDemo.storyboard in Resources */,
+				EE270DC01E1B6FE6005BA294 /* JMSkuGroupHeader.xib in Resources */,
 				EE4C288B1DAF97E9008924A3 /* YYAudioRocorder.xib in Resources */,
+				EE270DBE1E1B6FE6005BA294 /* JMSkuNumSelectedCell.xib in Resources */,
 				EE4C28E11DAF97E9008924A3 /* YYEmoticonInputView.xib in Resources */,
 				EE4B967E1DC5D60200CCFB95 /* cellBg@2x.png in Resources */,
 				EE9F1B521DEAB337006AD033 /* JMGoodsDetailRefreshView.xib in Resources */,
 				EE4B96701DC5D60200CCFB95 /* decorate_title_bg.png in Resources */,
+				EE270DC41E1B6FE6005BA294 /* JMSkuSelectedView.xcassets in Resources */,
 				EE4C29C91DAF97EA008924A3 /* Info.plist in Resources */,
 				EE4C28B51DAF97E9008924A3 /* FastRecordVoiceInputView.xib in Resources */,
 				EE4C28E31DAF97E9008924A3 /* YYEmoticonInputViewCell.xib in Resources */,
@@ -5850,8 +6120,10 @@
 				EE9F1B4F1DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib in Resources */,
 				EE4C28DF1DAF97E9008924A3 /* EmojisList.plist in Resources */,
 				EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */,
+				EE270DD21E1B7581005BA294 /* JMSkuMockData.plist in Resources */,
 				EE4C28A91DAF97E9008924A3 /* FastRecordAccessoryView.xib in Resources */,
 				EE4B96861DC5D60200CCFB95 /* UIImageController.xib in Resources */,
+				EE270DB81E1B6FE6005BA294 /* JMSkuCell.xib in Resources */,
 				EE4C286F1DAF97E9008924A3 /* tap.png in Resources */,
 				EE4C28DB1DAF97E9008924A3 /* YYAudioPlayButton.xib in Resources */,
 				EE4C28921DAF97E9008924A3 /* kitten.jpg in Resources */,
@@ -5862,6 +6134,7 @@
 				EE9F1B5F1DEAB337006AD033 /* JMGoodsDetail.storyboard in Resources */,
 				EE4C28B71DAF97E9008924A3 /* FastRecordVoiceInputViewDim.xib in Resources */,
 				EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */,
+				EE270DB61E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib in Resources */,
 				EE4C285E1DAF97E9008924A3 /* SystemDemo.storyboard in Resources */,
 				EE4B966F1DC5D60200CCFB95 /* CALayerDemoController.xib in Resources */,
 				EE4C286E1DAF97E9008924A3 /* swipe.png in Resources */,
@@ -5869,6 +6142,7 @@
 				EE4C28601DAF97E9008924A3 /* ShowRoomCell.xib in Resources */,
 				EE4C292F1DAF97EA008924A3 /* DNImagePicker.strings in Resources */,
 				EE4B96801DC5D60200CCFB95 /* login_icon_username@2x.png in Resources */,
+				EE270DBA1E1B6FE6005BA294 /* JMSkuConfirmView.xib in Resources */,
 				EE4C28711DAF97E9008924A3 /* SimpleGestureRecognizers.xib in Resources */,
 				EE4C28B21DAF97E9008924A3 /* FastRecordVoiceButton.xib in Resources */,
 				EE4C289F1DAF97E9008924A3 /* FastRecord.xcassets in Resources */,
@@ -5935,9 +6209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE270DB51E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m in Sources */,
 				EE4B967D1DC5D60200CCFB95 /* TabBarController.m in Sources */,
 				EE4C28B81DAF97E9008924A3 /* MVVMDemo.m in Sources */,
 				EE4C286C1DAF97E9008924A3 /* GestureTestView.m in Sources */,
+				EEFCDD921DF1794D0066C31A /* JMSize.m in Sources */,
 				EE4C28C41DAF97E9008924A3 /* YYMessageObjectImage.m in Sources */,
 				EE4C28C31DAF97E9008924A3 /* YYMessageObjectAudio.m in Sources */,
 				EE4C28491DAF97E9008924A3 /* SummaryIO.c in Sources */,
@@ -5973,6 +6249,7 @@
 				EE4B966E1DC5D60200CCFB95 /* CALayerDemoController.m in Sources */,
 				EE4C28471DAF97E9008924A3 /* YYWebTool.c in Sources */,
 				EE4C296D1DAF97EA008924A3 /* NSInvocation+RACTypeParsing.m in Sources */,
+				EE270DB71E1B6FE6005BA294 /* JMSkuCell.m in Sources */,
 				EE9F1A0B1DE84233006AD033 /* JMIconTag.m in Sources */,
 				EE4C28C51DAF97E9008924A3 /* NSDate+YYMessage.m in Sources */,
 				EE4C295E1DAF97EA008924A3 /* MJRefreshStateHeader.m in Sources */,
@@ -5988,6 +6265,7 @@
 				EE4C283C1DAF97E9008924A3 /* tree_t.c in Sources */,
 				EE4C28751DAF97E9008924A3 /* LocalNotificationDemo.m in Sources */,
 				EE4C28BF1DAF97E9008924A3 /* YYMessageViewController.m in Sources */,
+				EE270DC21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m in Sources */,
 				EE4C282C1DAF97E9008924A3 /* ApplicationInfo.m in Sources */,
 				EE4B96751DC5D60200CCFB95 /* CollectionViewController.m in Sources */,
 				EE4C29ED1DAF97EA008924A3 /* UIWebView+AFNetworking.m in Sources */,
@@ -6023,6 +6301,7 @@
 				EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */,
 				EE4C28FC1DAF97E9008924A3 /* GoodsDetailGraphicViewController.m in Sources */,
 				EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */,
+				EE270DB41E1B6FE6005BA294 /* SkuInfo.m in Sources */,
 				EE4C291F1DAF97E9008924A3 /* AFURLSessionManager.m in Sources */,
 				EE4C28F21DAF97E9008924A3 /* YYWebImageManager.m in Sources */,
 				EE4C29971DAF97EA008924A3 /* RACReturnSignal.m in Sources */,
@@ -6042,8 +6321,10 @@
 				EE6113EF1DE69B3500A9113A /* ArchitectureDemo.m in Sources */,
 				EE4C29C11DAF97EA008924A3 /* FSMEngine.m in Sources */,
 				EE4C282F1DAF97E9008924A3 /* BaseNavigationController.m in Sources */,
+				EE270DCA1E1B7096005BA294 /* UIView+Additions.m in Sources */,
 				EE4C28D21DAF97E9008924A3 /* VoiceConverter.mm in Sources */,
 				EE4C29DB1DAF97EA008924A3 /* UIImage+GIF.m in Sources */,
+				EE270D051E13B04D005BA294 /* UIButton+setBackgroundColorForState.m in Sources */,
 				EE4C29E71DAF97EA008924A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EE9F1B541DEAB337006AD033 /* JMGoodsDetailShareButton.m in Sources */,
 				EE4C29961DAF97EA008924A3 /* RACReplaySubject.m in Sources */,
@@ -6059,6 +6340,7 @@
 				EE4C28851DAF97E9008924A3 /* ProtocolAndCategory.m in Sources */,
 				EE4C29EB1DAF97EA008924A3 /* UIProgressView+AFNetworking.m in Sources */,
 				EE4C28D91DAF97E9008924A3 /* YYMessageCellText.m in Sources */,
+				EE270DBF1E1B6FE6005BA294 /* JMSkuGroupHeader.m in Sources */,
 				EE4C29771DAF97EA008924A3 /* NSString+RACKeyPathUtilities.m in Sources */,
 				EE4C29251DAF97E9008924A3 /* DTTimePeriodChain.m in Sources */,
 				EE4C293D1DAF97EA008924A3 /* MWTapDetectingImageView.m in Sources */,
@@ -6069,6 +6351,7 @@
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
 				EE4C28AE1DAF97E9008924A3 /* FastRecordImageCell.m in Sources */,
 				EE4C29C81DAF97EA008924A3 /* ReachStateWWAN.m in Sources */,
+				EE270DC31E1B6FE6005BA294 /* JMSkuSelectedView.m in Sources */,
 				EE9F1A121DE84233006AD033 /* JMShareInfo.m in Sources */,
 				EE4C28571DAF97E9008924A3 /* ObjectiveCPointor.m in Sources */,
 				EE4C294B1DAF97EA008924A3 /* MASViewConstraint.m in Sources */,
@@ -6115,7 +6398,9 @@
 				EE9F1B601DEAB337006AD033 /* JMGoodsDetailManager.m in Sources */,
 				EE4C289B1DAF97E9008924A3 /* YYKeyValueStoreDemo.m in Sources */,
 				EE4C28A01DAF97E9008924A3 /* FastRecordAddAndModifyController.m in Sources */,
+				EE270D7B1E1B6F42005BA294 /* NSObject+Additionals.m in Sources */,
 				EE4C284A1DAF97E9008924A3 /* SummaryNetwork.c in Sources */,
+				EE270DD01E1B7150005BA294 /* UIView+Additionals.m in Sources */,
 				EE4C29941DAF97EA008924A3 /* RACPassthroughSubscriber.m in Sources */,
 				EE4C29D81DAF97EA008924A3 /* SDWebImageManager.m in Sources */,
 				EE4C29661DAF97EA008924A3 /* MKAnnotationView+RACSignalSupport.m in Sources */,
@@ -6150,12 +6435,14 @@
 				EE4B967A1DC5D60200CCFB95 /* UIPageControlController.m in Sources */,
 				EE4C283D1DAF97E9008924A3 /* tree_test.c in Sources */,
 				EE4C289A1DAF97E9008924A3 /* YYKeyValueStore.m in Sources */,
+				EE270D0E1E13BAB1005BA294 /* UIView+JMCategory.m in Sources */,
 				EE4C296A1DAF97EA008924A3 /* NSEnumerator+RACSequenceAdditions.m in Sources */,
 				EE9F1A0C1DE84233006AD033 /* JMImageUrlSet.m in Sources */,
 				EE4C29B71DAF97EA008924A3 /* UIRefreshControl+RACCommandSupport.m in Sources */,
 				EE4C289D1DAF97E9008924A3 /* FastRecord.m in Sources */,
 				EE4C29381DAF97EA008924A3 /* DNBrowserCell.m in Sources */,
 				EE4C29541DAF97EA008924A3 /* MJRefreshFooter.m in Sources */,
+				EEFCDD8B1DF179220066C31A /* JMProduct.m in Sources */,
 				EE4C29841DAF97EA008924A3 /* RACDisposable.m in Sources */,
 				EE4C299E1DAF97EA008924A3 /* RACSignalProvider.d in Sources */,
 				EE4C29BF1DAF97EA008924A3 /* UITextView+RACSignalSupport.m in Sources */,
@@ -6164,6 +6451,7 @@
 				EE9F1B591DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m in Sources */,
 				EE4C28D51DAF97E9008924A3 /* YYKeyboardManager.m in Sources */,
 				EE4C28831DAF97E9008924A3 /* ObjectiveC_objc_msgSend.m in Sources */,
+				EE270DB21E1B6FE6005BA294 /* PriceDetail.m in Sources */,
 				EE4C299C1DAF97EA008924A3 /* RACSignal+Operations.m in Sources */,
 				EE4C295B1DAF97EA008924A3 /* MJRefreshBackStateFooter.m in Sources */,
 				EE4C28EF1DAF97E9008924A3 /* YYMultiImageButton.m in Sources */,
@@ -6198,6 +6486,7 @@
 				EE4C29E41DAF97EA008924A3 /* UMTrack.m in Sources */,
 				EE4C29111DAF97E9008924A3 /* NSObject+Property.m in Sources */,
 				EE4C28AA1DAF97E9008924A3 /* FastRecordBaseCell.m in Sources */,
+				EE270DB91E1B6FE6005BA294 /* JMSkuConfirmView.m in Sources */,
 				EE4C29481DAF97EA008924A3 /* MASConstraintMaker.m in Sources */,
 				EE4C29BD1DAF97EA008924A3 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				EE4C288C1DAF97E9008924A3 /* JSObject.m in Sources */,
@@ -6255,10 +6544,12 @@
 				EE4C29D41DAF97EA008924A3 /* SDWebImageCompat.m in Sources */,
 				EE4C293F1DAF97EA008924A3 /* FMDatabase.m in Sources */,
 				EE4C29B91DAF97EA008924A3 /* UISlider+RACSignalSupport.m in Sources */,
+				EE270D021E13ACBE005BA294 /* UIButton+JMCategory.m in Sources */,
 				EE4C283A1DAF97E9008924A3 /* MainTabBarController.m in Sources */,
 				EE4C28F41DAF97E9008924A3 /* YYComponentsDemo.m in Sources */,
 				EE4C29791DAF97EA008924A3 /* NSString+RACSupport.m in Sources */,
 				EE9F1B501DEAB337006AD033 /* JMGoodsDetailPageController.m in Sources */,
+				EEFCDD911DF1794D0066C31A /* JMFenQi.m in Sources */,
 				EE4C29C61DAF97EA008924A3 /* ReachStateUnReachable.m in Sources */,
 				EE9F1B561DEAB337006AD033 /* JMGoodsDetailCommentViewController.m in Sources */,
 				EE4C29BA1DAF97EA008924A3 /* UIStepper+RACSignalSupport.m in Sources */,
@@ -6267,6 +6558,7 @@
 				EE4B96891DC5D60200CCFB95 /* NSURLCacheController.m in Sources */,
 				EE4C29AE1DAF97EA008924A3 /* UIAlertView+RACSignalSupport.m in Sources */,
 				EE4C298B1DAF97EA008924A3 /* RACEvent.m in Sources */,
+				EE270DBB1E1B6FE6005BA294 /* JMSkuDisplayView.m in Sources */,
 				EE4C292E1DAF97EA008924A3 /* DNPhotoBrowser.m in Sources */,
 				EE4C29631DAF97EA008924A3 /* UIView+MJExtension.m in Sources */,
 				EE9F1A0D1DE84233006AD033 /* JMNav.m in Sources */,
@@ -6289,6 +6581,7 @@
 				EE4C28311DAF97E9008924A3 /* UITableViewCell+CustomSetting.m in Sources */,
 				EE4C29DE1DAF97EA008924A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE4C28A31DAF97E9008924A3 /* FastRecord.xcdatamodeld in Sources */,
+				EE270DB11E1B6FE6005BA294 /* JMSkuModel.m in Sources */,
 				EE4C292C1DAF97E9008924A3 /* DNImagePickerController.m in Sources */,
 				EE4C291B1DAF97E9008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EE4C29021DAF97E9008924A3 /* DemoCell2.m in Sources */,
@@ -6299,6 +6592,7 @@
 				EE4C294E1DAF97EA008924A3 /* View+MASAdditions.m in Sources */,
 				EE4C29A41DAF97EA008924A3 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				EE4C29571DAF97EA008924A3 /* MJRefreshAutoNormalFooter.m in Sources */,
+				EE270DC51E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m in Sources */,
 				EE4C28701DAF97E9008924A3 /* SimpleGestureRecognizers.m in Sources */,
 				EE4C28871DAF97E9008924A3 /* VoiceDemo.m in Sources */,
 				EE4C291A1DAF97E9008924A3 /* AFHTTPSessionManager.m in Sources */,
@@ -6335,11 +6629,13 @@
 				EE4C295C1DAF97EA008924A3 /* MJRefreshGifHeader.m in Sources */,
 				EE4C287C1DAF97E9008924A3 /* HitTestView.m in Sources */,
 				EE4C28CD1DAF97E9008924A3 /* UILabel+YYMessage.m in Sources */,
+				EE270DB31E1B6FE6005BA294 /* SkuGroupInfo.m in Sources */,
 				EE9F1A061DE84233006AD033 /* JMData.m in Sources */,
 				EE4C28621DAF97E9008924A3 /* ShowRoomListModel.m in Sources */,
 				EE4B96851DC5D60200CCFB95 /* UIImageController.m in Sources */,
 				EE4C28E41DAF97E9008924A3 /* YYMessageInputToolBar.m in Sources */,
 				EE4C29D71DAF97EA008924A3 /* SDWebImageDownloaderOperation.m in Sources */,
+				EE270DC71E1B6FE6005BA294 /* JMComponent.m in Sources */,
 				EE4C29501DAF97EA008924A3 /* MBProgressHUD.m in Sources */,
 				EE4C28C21DAF97E9008924A3 /* YYMessageModelManager.m in Sources */,
 				EE4C287E1DAF97E9008924A3 /* InterfaceAndAPI.m in Sources */,
@@ -6360,6 +6656,7 @@
 				EE4C28541DAF97E9008924A3 /* block.c in Sources */,
 				EE4C29A61DAF97EA008924A3 /* RACTargetQueueScheduler.m in Sources */,
 				EE4C28EC1DAF97E9008924A3 /* YYMessageCollectionView.m in Sources */,
+				EE270DC11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m in Sources */,
 				EE4C29461DAF97EA008924A3 /* MASCompositeConstraint.m in Sources */,
 				EE9F1B581DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m in Sources */,
 				EE4C28CA1DAF97E9008924A3 /* UICollectionView+YYMessage.m in Sources */,
@@ -6371,6 +6668,7 @@
 				EE4B96811DC5D60200CCFB95 /* UITextFieldController.m in Sources */,
 				EE4C28A11DAF97E9008924A3 /* FastRecordController.m in Sources */,
 				EE4C29CF1DAF97EA008924A3 /* RunTraceHelp.m in Sources */,
+				EE270DCD1E1B70C3005BA294 /* UIView+Utils.m in Sources */,
 				EE4C29861DAF97EA008924A3 /* RACDynamicSignal.m in Sources */,
 				EE4C286A1DAF97E9008924A3 /* TouchEventDemo.m in Sources */,
 				EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */,
@@ -6392,18 +6690,20 @@
 				EE4B96871DC5D60200CCFB95 /* OrientationController.m in Sources */,
 				EE4C298F1DAF97EA008924A3 /* RACKVOChannel.m in Sources */,
 				EE4C29421DAF97EA008924A3 /* FMDatabaseQueue.m in Sources */,
-				EE9F1A0E1DE84233006AD033 /* JMProduct.m in Sources */,
 				EE4C28C61DAF97E9008924A3 /* NSObject+YYMessage.m in Sources */,
+				EE270DBD1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m in Sources */,
 				EE4C29521DAF97EA008924A3 /* MJRefreshBackFooter.m in Sources */,
 				EE4C284C1DAF97E9008924A3 /* FoundationDemo.m in Sources */,
 				EE4C29BE1DAF97EA008924A3 /* UITextField+RACSignalSupport.m in Sources */,
 				EE4C284E1DAF97E9008924A3 /* ClassDemo.m in Sources */,
+				EE51A63E1DF56D2000C13807 /* NSStringDemo.m in Sources */,
 				EE4C28FF1DAF97E9008924A3 /* DemoCellModel2.m in Sources */,
 				EE4C28E71DAF97E9008924A3 /* YYMessageMoreView.m in Sources */,
 				EE4C29081DAF97E9008924A3 /* LoginDemo.m in Sources */,
 				EE4C29B61DAF97EA008924A3 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				EE4C28BE1DAF97E9008924A3 /* YYMessageSetting.m in Sources */,
 				EE4C29091DAF97E9008924A3 /* YYThumbnailItem.m in Sources */,
+				EE270DC61E1B6FE6005BA294 /* JMSkuSelectedViewModel.m in Sources */,
 				EE4C299F1DAF97EA008924A3 /* RACSignalSequence.m in Sources */,
 				EE4C296E1DAF97EA008924A3 /* NSNotificationCenter+RACSupport.m in Sources */,
 				EE4C29711DAF97EA008924A3 /* NSObject+RACKVOWrapper.m in Sources */,
