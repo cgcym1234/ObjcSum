@@ -7,6 +7,7 @@
 //
 
 #import "UIView+JMCategory.h"
+#import "YYHud.h"
 
 @implementation UIView (JMCategory)
 
@@ -19,7 +20,7 @@
 }
 
 - (void)showTip:(NSString *)tip animated:(BOOL)animated duration:(CGFloat)duration {
-    
+    [YYHud showTip:tip duration:duration];
 }
 
 + (UINib *)jm_nib {

@@ -16,19 +16,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pc-uG-1xn">
-                    <rect key="frame" x="323" y="0.0" width="52" height="44"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <rect key="frame" x="307" y="0.0" width="68" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="完成">
-                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.99607843139999996" green="0.25098039220000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="didClickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="TU0-Ni-5Ca"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6t-yv-ybx">
-                    <rect key="frame" x="0.0" y="0.0" width="52" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="52" id="fBe-7R-iiD"/>
+                        <constraint firstAttribute="width" constant="68" id="fBe-7R-iiD"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                     <state key="normal" title="取消">

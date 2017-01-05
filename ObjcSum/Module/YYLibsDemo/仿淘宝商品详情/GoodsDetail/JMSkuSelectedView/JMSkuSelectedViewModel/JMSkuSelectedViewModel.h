@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSObject+Additionals.h"
+#import "NSString+TransformToDisplay.h"
+#import "UIView+JMCategory.h"
 #import "JMComponent.h"
 #import "JMSkuDisplayView.h"
 #import "JMSkuAdditionalInfoCell.h"
@@ -16,20 +19,28 @@
 #import "JMSkuNumSelectedCell.h"
 #import "JMSkuConfirmView.h"
 #import "JMSkuModel.h"
+#import "JMSkuSelectedViewConsts.h"
 
 #define SkuAdditonalInfoSection 0
 
 @interface JMSkuSelectedViewModel : NSObject<JMComponentModel>
 
-@property (nonatomic, strong) JMSkuDisplayViewModel *skuDisplayModel;
-@property (nonatomic, strong) JMSkuAdditionalInfoCellModel *skuAdditonalInfo;//4.1取消，先预留
-@property (nonatomic, strong) NSArray<JMSkuGroupModel *> *skuGroupModels;
-@property (nonatomic, strong) JMSkuNumSelectedCellModel *skuNumSelectedModel;
-@property (nonatomic, strong) JMSkuConfirmViewModel *skuConfirmModel;
+@property (nonatomic, strong) JMSkuModel *jmSkuModel;
 
-@property (nonatomic, strong) NSString *jumeiPrice;
-@property (nonatomic, strong) NSString *goodsImage;
+/*只存放选中的CellModel，以CellModel.group.type为key*/
+@property (nonatomic, strong) NSMutableDictionary<NSString *, JMSkuCellModel *> *selectedCellItems;
 
+@property (nonatomic, readonly) BOOL isSelectedAllGroup;
+
+/*locatedSkuInfo不为空时为改sku库存，否则是所有sku的库存*/
+@property (nonatomic, readonly) NSInteger maxStockCurrent;
+
+/*选中全部的属性能定位到某个sku时候，不为空*/
+@property (nonatomic, readonly) SkuInfo *locatedSkuInfo;
+
+/* 选择的数量，
+ 如果没有选择数量view，为1(库存大于0)或者0 */
+@property (nonatomic, readonly) NSInteger numSelected;
 
 /*高度*/
 + (CGFloat)skuDisplayViewHeight;
@@ -37,25 +48,15 @@
 + (CGFloat)skuConfirmViewHeight;
 + (CGFloat)viewWidth;
 
-//屏幕宽度
-@property (nonatomic, assign, readonly) CGFloat viewWidth;
++ (instancetype)instanceWithSkuModel:(JMSkuModel *)skuModel;
 
-
-/*section数据说明：
- 0： 放附加信息数据 skuAdditonalInfos，可能为空
- 1 ~ n-1: 放sku分组数据，可能有多个
- n: 放数量选择数据，可能为空
- section是固定存在的，section中的数据可能为空
+#pragma mark - 选中cellItem后重新计算流程
+/*根据选中的cellModel更新所有数据
+ 1. SelectedCellItems
+ 2. 所有cell状态
+ 3. DisplayingView
  */
-- (NSInteger)sections;
-- (NSInteger)numberOfItemsInSection:(NSInteger)section;
-- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
-
-- (NSString *)identifierForCellAtIndexPath:(NSIndexPath *)indexPath;
-- (id<JMComponentModel>)dataForItemAtIndexPath:(NSIndexPath *)indexPath;
-
-
-+ (instancetype)testData;
+- (void)refreshWithSelectedCellModel:(JMSkuCellModel *)selectedCellModel;
 
 @end
 

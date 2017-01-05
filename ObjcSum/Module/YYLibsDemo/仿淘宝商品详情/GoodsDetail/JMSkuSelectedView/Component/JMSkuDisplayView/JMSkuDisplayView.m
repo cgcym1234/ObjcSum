@@ -9,12 +9,11 @@
 #import "JMSkuDisplayView.h"
 #import "JMSkuSelectedViewConsts.h"
 #import "UIView+JMCategory.h"
+#import "UIImageView+JMNetworking.h"
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
 
-static NSString * const KeyCell = @"KeyCell";
 
 @implementation JMSkuDisplayViewModel
 
@@ -27,8 +26,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuDisplayView ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
+
 
 @end
 
@@ -74,10 +72,17 @@ static NSString * const KeyCell = @"KeyCell";
     if (![model isKindOfClass:[JMSkuDisplayViewModel class]]) {
         return;
     }
+    
+    BOOL refreshImage = ![_model.skuImageName isEqualToString:[(JMSkuDisplayViewModel *)model skuImageName]];
+    
     _model = model;
     _priceLabel.text = _model.price;
     _stockLabel.text = _model.stock;
     _selectingTipLabel.text = _model.selectingTip;
+    
+    if (refreshImage) {
+//        [_imageView setImageWithURL:_model.skuImageName animation:nil];
+    }
 }
 
 #pragma mark - Private
@@ -93,9 +98,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Setter
 
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
+
 
 #pragma mark - Getter
 

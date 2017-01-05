@@ -11,10 +11,6 @@
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
-
-static NSString * const KeyCell = @"KeyCell";
-
 
 @implementation JMSkuAdditionalInfoCellModel
 
@@ -26,8 +22,6 @@ static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuAdditionalInfoCell ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
 
 @end
 
@@ -42,16 +36,11 @@ static NSString * const KeyCell = @"KeyCell";
 }
 
 - (void)setupContext {
-    self.userInteractionEnabled = YES;
-    self.autoresizingMask = UIViewAutoresizingNone;
-    self.translatesAutoresizingMaskIntoConstraints = YES;
+
 }
 
 #pragma mark - Override
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-}
 
 #pragma mark - Public
 
@@ -71,10 +60,6 @@ static NSString * const KeyCell = @"KeyCell";
 
 
 #pragma mark - Setter
-
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
 
 #pragma mark - Getter
 

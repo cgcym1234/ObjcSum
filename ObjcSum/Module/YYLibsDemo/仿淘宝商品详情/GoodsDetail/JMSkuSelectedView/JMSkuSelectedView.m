@@ -7,27 +7,28 @@
 //
 
 #import "JMSkuSelectedView.h"
-#import "JMSkuSelectedView+SkuNumSelected.h"
 #import "UIView+JMCategory.h"
 #import "UIView+Utils.h"
 #import "UIView+Additionals.h"
 #import "JMCollectionViewLeftAlignLayout.h"
 #import "JMSkuSelectedViewConsts.h"
-#import "JMSkuSelectedViewModel+JMSku.h"
+#import "JMSkuSelectedViewModel+HeaderDisplayView.h"
+#import "JMSkuSelectedViewModel+MiddleCollectionView.h"
+#import "JMSkuSelectedViewModel+BottomConfirmView.h"
+#import "YYKeyboardManager.h"
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
 
-static NSString * const KeyCell = @"KeyCell";
-
-@interface JMSkuSelectedView ()<UICollectionViewDelegate, UICollectionViewDataSource, JMSkuCellDelegate>
+@interface JMSkuSelectedView ()<UICollectionViewDelegate, UICollectionViewDataSource, JMSkuCellDelegate, JMSkuNumSelectedCellDelegate, YYKeyboardObserver>
 
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) JMSkuDisplayView *skuDisplayView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) JMSkuConfirmView *skuConfirmView;
 
+/**< Sku数量选择，某些情况不显示 */
+@property (nonatomic, weak) JMSkuNumSelectedCell *skuNumSelectedView;
 
 @end
 
@@ -69,6 +70,12 @@ static NSString * const KeyCell = @"KeyCell";
     _skuConfirmView.frame = CGRectMake(0, _collectionView.bottom, width, [JMSkuSelectedViewModel skuConfirmViewHeight]);
     
     _containerView.frame = CGRectMake(0, 0, width, _skuConfirmView.bottom);
+    
+    [[YYKeyboardManager defaultManager] addObserver:self];
+}
+
+- (void)dealloc {
+    [[YYKeyboardManager defaultManager] removeObserver:self];
 }
 
 #pragma mark - Override
@@ -79,6 +86,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self dismiss];
+    [self endEditing:YES];
 }
 
 #pragma mark - Public
@@ -127,10 +135,54 @@ static NSString * const KeyCell = @"KeyCell";
     [self showAnimated];
 }
 
-#pragma mark - Private
+#pragma mark - YYKeyboardObserver
+
+- (void)yyKeyboardManager:(YYKeyboardManager *)keyboardManager
+   keyboardWithTransition:(YYKeyboardTransition)transition {
+    CGRect keyboardFrame = [keyboardManager convertRect:transition.toFrame toView:self];
+    //默认最底部
+    CGFloat contentOffsetY = 0;
+    self.collectionView.scrollEnabled = YES;
+    
+    //键盘显示
+    if (CGRectGetMinY(keyboardFrame) < self.height) {
+        CGPoint expectedPointInCollectionView = [self convertPoint:keyboardFrame.origin toView:self.collectionView];
+        contentOffsetY = self.collectionView.contentSize.height - expectedPointInCollectionView.y;
+        self.collectionView.scrollEnabled = NO;
+    }
+
+    [self.collectionView setContentOffset:CGPointMake(0, contentOffsetY) animated:YES];
+}
 
 
 #pragma mark - Delegate
+
+
+#pragma mark - JMSkuCellDelegate
+
+- (void)jmSkuCellDidClicked:(JMSkuCell *)cell {
+    [_model refreshWithSelectedCellModel:cell.model];
+    
+    [self reloadData];
+}
+
+#pragma mark - JMSkuNumSelectedCellDelegate
+
+- (void)jmSkuNumSelectedCell:(JMSkuNumSelectedCell *)cell didClickWithAction:(JMSkuNumSelectedButtonAction)action {
+    [_model refreshNumSelectedModelWithAction:action];
+    
+    [self.skuNumSelectedView reloadData];
+}
+
+- (void)jmSkuNumSelectedCell:(JMSkuNumSelectedCell *)cell inputValueChanged:(NSString *)value {
+    NSInteger inputNum = [value integerValue];
+    if (inputNum > _model.maxStockCurrent) {
+        [self showTip:@"超出最大范围"];
+    }
+    
+    [_model refreshNumSelectedModelWithInputValue:inputNum];
+    [self.skuNumSelectedView reloadData];
+}
 
 #pragma mark - UICollectionViewDataSource, UICollectionViewDelegate
 
@@ -158,31 +210,25 @@ static NSString * const KeyCell = @"KeyCell";
     if (indexPath.section == SkuAdditonalInfoSection) {
         return nil;
     }
-    UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[JMSkuGroupHeader jm_identifier] forIndexPath:indexPath];
+    JMSkuGroupHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[JMSkuGroupHeader jm_identifier] forIndexPath:indexPath];
+    id<JMComponentModel> model = [_model headerDataForItemAtIndexPath:indexPath];
+    [header reloadWithData:model];
     return header;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifier = [_model identifierForCellAtIndexPath:indexPath];
+    NSString *identifier = [_model cellIdentifierForCellAtIndexPath:indexPath];
     UICollectionViewCell<JMComponent> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     if ([cell isKindOfClass:[JMSkuNumSelectedCell class]]) {
         self.skuNumSelectedView = (JMSkuNumSelectedCell *)cell;
-    } else {
-        if ([cell isKindOfClass:[JMSkuCell class]]) {
-            [(JMSkuCell *)cell setDelegate:self];
-        }
-        id<JMComponentModel> model = [_model dataForItemAtIndexPath:indexPath];
-        [cell reloadWithData:model];
+        [(JMSkuNumSelectedCell *)cell setDelegate:self];
+    } else if ([cell isKindOfClass:[JMSkuCell class]]) {
+        [(JMSkuCell *)cell setDelegate:self];
     }
-    return cell;
-}
-
-#pragma mark - JMSkuCellDelegate
-
-- (void)jmSkuCellDidClicked:(JMSkuCell *)cell {
-    [_model didClickCellWithModel:cell.model];
     
-    [self reloadData];
+    id<JMComponentModel> model = [_model cellDataForItemAtIndexPath:indexPath];
+    [cell reloadWithData:model];
+    return cell;
 }
 
 #pragma mark - Setter
@@ -209,6 +255,11 @@ static NSString * const KeyCell = @"KeyCell";
         _skuConfirmView = [JMSkuConfirmView instanceFromNib];
         __weak __typeof(self) weakSelf = self;
         _skuConfirmView.didClickBlock = ^(JMSkuConfirmView *view) {
+            if (!weakSelf.model.isSelectedAllGroup) {
+                [weakSelf showTip:weakSelf.model.skuDisplayModel.selectingTip];
+                return;
+            }
+            
             if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedViewDidPerformConfirmAction:)]) {
                 [weakSelf.delegate jmSkuSelectedViewDidPerformConfirmAction:weakSelf];
             }

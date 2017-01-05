@@ -8,34 +8,44 @@
 
 #import "JMSkuNumSelectedCell.h"
 #import "JMSkuSelectedViewConsts.h"
+#import "JMSkuGroupHeader.h"
+#import "ReactiveCocoa.h"
+#import "UIButton+JMCategory.h"
+#import "YYInputAccessoryViewWithCancel.h"
 
 @implementation JMSkuNumSelectedCellModel
 
+- (instancetype)init {
+    if (self= [super init]) {
+        _num = 1;
+        _minusButtonState = UIControlStateDisabled;
+        _addButtonState = UIControlStateNormal;
+    }
+    return self;
+}
 
 - (NSInteger)viewHeight {
     return 22;
 }
 
-- (void)setNum:(NSString *)num {
-    if (![num isKindOfClass:[NSString class]]) {
-        return;
+- (JMSkuGroupModel *)header {
+    if (!_header) {
+        _header = [JMSkuGroupModel new];
+        _header.groupName = @"购买数量";
+        _header.type = @" ";
     }
-    _num = [num copy];
-    _numInteger = [_num integerValue];
+    return _header;
 }
 
 @end
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
 
-static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuNumSelectedCell ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
+@property (nonatomic, strong) YYInputAccessoryViewWithCancel *accessoryView;
 
 @end
 
@@ -50,43 +60,81 @@ static NSString * const KeyCell = @"KeyCell";
 }
 
 - (void)setupContext {
-    self.userInteractionEnabled = YES;
-    self.autoresizingMask = UIViewAutoresizingNone;
-    self.translatesAutoresizingMaskIntoConstraints = YES;
     _addButton.exclusiveTouch = YES;
     _minusButton.exclusiveTouch = YES;
+    
+    _addButton.tag = JMSkuNumSelectedButtonActionAdd;
+    _minusButton.tag = JMSkuNumSelectedButtonActionMinus;
+    
+    [_addButton addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_minusButton addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    _textField.inputAccessoryView = self.accessoryView;
+    
+    __weak __typeof(self) weakSelf = self;
+    [[_textField rac_textSignal] subscribeNext:^(id value) {
+        if ([value integerValue] == 0) {
+            weakSelf.textField.text = @"0";
+            return;
+        }
+        
+        [weakSelf notifyValueChanged];
+    }];
 }
 
 #pragma mark - Override
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-}
 
 #pragma mark - Public
+
+- (void)reloadData {
+    [self reloadWithData:_model];
+}
 
 - (void)reloadWithData:(id<JMComponentModel>)model {
     if (![model isKindOfClass:[JMSkuNumSelectedCellModel class]]) {
         return;
     }
     _model = model;
-    _textField.text = _model.num;
+    _textField.text = [@(_model.num) stringValue];
+    
+    [_minusButton setState:_model.minusButtonState];
+    [_addButton setState:_model.addButtonState];
 }
 
 #pragma mark - Private
 
+- (void)notifyValueChanged {
+    if ([self.delegate respondsToSelector:@selector(jmSkuNumSelectedCell:inputValueChanged:)]) {
+        [self.delegate jmSkuNumSelectedCell:self inputValueChanged:self.textField.text];
+    }
+}
+
+- (void)buttonDidClick:(UIButton *)button {
+    if ([_delegate respondsToSelector:@selector(jmSkuNumSelectedCell:didClickWithAction:)]) {
+        [_delegate jmSkuNumSelectedCell:self didClickWithAction:button.tag];
+    }
+}
 
 #pragma mark - Delegate
 
 
 #pragma mark - Setter
 
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
 
 #pragma mark - Getter
 
-
+- (YYInputAccessoryViewWithCancel *)accessoryView {
+    if (!_accessoryView) {
+        _accessoryView = [YYInputAccessoryViewWithCancel instanceFromNib];
+        _accessoryView.cancelButton.hidden = YES;
+        __weak typeof(self) weakSelf = self;
+        _accessoryView.didClickedBlock = ^(YYInputAccessoryViewWithCancel *view, YYInputAccessoryViewWithCancelType type) {
+            [weakSelf.textField resignFirstResponder];
+            [weakSelf notifyValueChanged];
+        };
+    }
+    return _accessoryView;
+}
 
 @end

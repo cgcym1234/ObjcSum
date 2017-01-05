@@ -21,14 +21,10 @@
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
 
-static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuConfirmView ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
 
 @end
 
@@ -79,13 +75,11 @@ static NSString * const KeyCell = @"KeyCell";
     _model = model;
     [_button setTitleNormal:_model.text];
     [_button setState:_model.state];
-    
 }
 
 #pragma mark - Private
 
 - (void)buttonDidClick:(UIButton *)button {
-    button.enabled = NO;
     if (_didClickBlock) {
         _didClickBlock(self);
     }
@@ -96,9 +90,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Setter
 
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
+
 
 #pragma mark - Getter
 

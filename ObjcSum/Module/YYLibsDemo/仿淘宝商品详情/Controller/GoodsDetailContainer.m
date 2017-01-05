@@ -7,7 +7,6 @@
 //
 
 #import "GoodsDetailContainer.h"
-#import "JMSkuSelectedViewModel+JMSku.h"
 
 #import "GoodsDetail.h"
 #import "GoodsDetailNomalViewController.h"
@@ -47,8 +46,7 @@
 - (void)setContext {
     [self setupUI];
     
-    JMSkuModel *skuModel = [JMSkuSelectedViewModel requestData];
-    _selectedViewModel = [JMSkuSelectedViewModel instanceWithSkuModel:skuModel];
+    _selectedViewModel = [JMSkuSelectedViewModel instanceWithSkuModel:nil];
 }
 
 - (void)setupUI {

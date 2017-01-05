@@ -14,10 +14,6 @@
     [super awakeFromNib];
     _cancelButton.tag = YYInputAccessoryViewWithCancelTypeCancel;
     _doneButton.tag = YYInputAccessoryViewWithCancelTypeDone;
-    
-    
-    self.layer.borderWidth = 0.5;
-    self.layer.borderColor = [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1].CGColor;
 }
 
 - (IBAction)didClickedButton:(UIButton *)sender {

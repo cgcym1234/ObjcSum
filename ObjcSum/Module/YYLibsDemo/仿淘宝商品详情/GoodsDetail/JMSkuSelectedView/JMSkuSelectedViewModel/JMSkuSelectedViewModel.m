@@ -7,93 +7,124 @@
 //
 
 #import "JMSkuSelectedViewModel.h"
-#import "UIView+JMCategory.h"
+
 #import "JMSkuSelectedViewConsts.h"
 #import "JMSkuModel.h"
-#import "JMSkuSelectedViewModel+JMSku.h"
+#import "JMSkuSelectedViewModel+Network.h"
+#import "JMSkuSelectedViewModel+HeaderDisplayView.h"
+#import "JMSkuSelectedViewModel+MiddleCollectionView.h"
+#import "JMSkuSelectedViewModel+BottomConfirmView.h"
 
 @implementation JMSkuSelectedViewModel
 
 #pragma mark - Initialization
 
++ (instancetype)instanceWithSkuModel:(JMSkuModel *)skuModel {
+    if (!skuModel) {
+        skuModel = [self requestData];
+    }
+    return [[JMSkuSelectedViewModel alloc] initWithSkuModel:skuModel];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self){
+        self.selectedCellItems = [NSMutableDictionary new];
+    }
+    return self;
+}
+
+- (instancetype)initWithSkuModel:(JMSkuModel *)skuModel {
+    self = [super init];
+    if (self) {
+        self.selectedCellItems = [NSMutableDictionary new];
+        self.jumeiPrice = @"6666666666666.66";
+        self.jmSkuModel = skuModel;
+        //skuDisplayModel
+        JMSkuDisplayViewModel *skuDisplayModel = [JMSkuDisplayViewModel new];
+        
+        
+        //skuGroupModels
+        NSMutableArray *skuGroupModels = [NSMutableArray new];
+        for (SkuGroupInfo *groupInfo in skuModel.skuGroupInfos) {
+            JMSkuGroupModel *skuGroupModel = [JMSkuGroupModel new];
+            skuGroupModel.groupName = groupInfo.title;
+            skuGroupModel.type = groupInfo.type;
+            
+            //skuModels
+            NSMutableArray *array = [NSMutableArray new];
+            for (NSString *itemName in groupInfo.items) {
+                JMSkuCellModel *cellModel = [JMSkuCellModel new];
+                cellModel.text = itemName;
+                cellModel.viewWidth = 80;
+                cellModel.group = skuGroupModel;
+                [array addObject:cellModel];
+            }
+            
+            skuGroupModel.cellModels = array;
+            [skuGroupModels addObject:skuGroupModel];
+        }
+        
+        //
+        JMSkuNumSelectedCellModel *skuNumSelectedModel = [JMSkuNumSelectedCellModel new];
+        
+        //
+        JMSkuConfirmViewModel *skuConfirmModel = [JMSkuConfirmViewModel new];
+        skuConfirmModel.text = @"加入购物车";
+        
+        self.skuDisplayModel = skuDisplayModel;
+        self.skuGroupModels = skuGroupModels;
+        self.skuNumSelectedModel = skuNumSelectedModel;
+        self.skuConfirmModel = skuConfirmModel;
+        
+        [self refreshWithSelectedCellModel:nil];
+    }
+    
+    return self;
+}
 
 
 
 
 
 
-#pragma mark - Public
 
-/*section数据说明：
- 0： 放附加信息数据 skuAdditonalInfos，可能为空
- 1 ~ n-1: 放sku分组数据，可能有多个
- n: 放数量选择数据，可能为空
- section是固定存在的，section中的数据可能为空
+#pragma mark - 选中cellItem后重新计算流程
+/*根据选中的cellModel更新所有数据
+ 1. SelectedCellItems
+ 2. 所有cell状态
+ 3. DisplayingView
  */
-- (NSInteger)sections {
-    return 1 + _skuGroupModels.count + 1;
+- (void)refreshWithSelectedCellModel:(JMSkuCellModel *)selectedCellModel {
+    if (selectedCellModel) {
+        NSString *groupTypeKey = selectedCellModel.group.type;
+        
+        //如果之前有选中同类型的cell
+        JMSkuCellModel *prevCellModel = self.selectedCellItems[groupTypeKey];
+        if (prevCellModel) {
+            //同一个cell，取消并从字典删除
+            if (prevCellModel == selectedCellModel) {
+                selectedCellModel.state = UIControlStateNormal;
+                self.selectedCellItems[groupTypeKey] = nil;
+            } else {
+                //不同，取消之前的，选中当前
+                prevCellModel.state = UIControlStateNormal;
+                selectedCellModel.state = UIControlStateSelected;
+                self.selectedCellItems[groupTypeKey] = selectedCellModel;
+            }
+        } else {
+            selectedCellModel.state = UIControlStateSelected;
+            self.selectedCellItems[groupTypeKey] = selectedCellModel;
+        }
+    }
+    
+    [self refreshCellModelsStockWithSelectedCellItems];
+    
+    [self refreshDisplayingModelWithSelectedCellItems];
+    
+    [self refreshNumSelectedModelWithAction:JMSkuNumSelectedButtonActionNone];
 }
 
-- (NSInteger)numberOfItemsInSection:(NSInteger)section {
-    if (section == SkuAdditonalInfoSection) {
-        return _skuAdditonalInfo == nil ? 0 : 1;
-    }
-    
-    //
-    if (section == self.sections - 1) {
-        return _skuNumSelectedModel == nil ? 0 : 1;
-    }
-    
-    NSInteger skuGroupIndex = section - 1;
-    return _skuGroupModels[skuGroupIndex].cellModels.count;
-}
-
-- (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = 0;
-    //除了用于选择的skuButton，其他都是很view一样宽度
-    CGFloat width = [[self class] viewWidth];
-    NSInteger section = indexPath.section;
-    if (section == 0) {
-        height = _skuAdditonalInfo.viewHeight;
-    } else if (section == self.sections - 1) {
-        height = _skuNumSelectedModel.viewHeight;
-    } else {
-        JMSkuCellModel *skuModel = [self dataForItemAtIndexPath:indexPath];
-        width = skuModel.viewWidth;
-        height = skuModel.viewHeight;
-    }
-    return CGSizeMake(width, height);
-}
-
-- (NSString *)identifierForCellAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger section = indexPath.section;
-    if (section == SkuAdditonalInfoSection) {
-        return [JMSkuAdditionalInfoCell jm_identifier];
-    }
-    
-    //
-    if (section == self.sections - 1) {
-        return [JMSkuNumSelectedCell jm_identifier];
-    }
-    
-    return [JMSkuCell jm_identifier];
-}
-
-- (id<JMComponentModel>)dataForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger section = indexPath.section;
-    if (section == SkuAdditonalInfoSection) {
-        return _skuAdditonalInfo;
-    }
-    
-    //
-    if (section == self.sections - 1) {
-        return _skuNumSelectedModel;
-    }
-    
-    NSInteger skuGroupIndex = section - 1;
-    NSInteger row = indexPath.item;
-    return _skuGroupModels[skuGroupIndex].cellModels[row];
-}
 
 
 #pragma mark - Getter
@@ -109,6 +140,27 @@
 }
 + (CGFloat)viewWidth {
     return [UIScreen mainScreen].bounds.size.width;
+}
+
+- (BOOL)isSelectedAllGroup {
+    return [self.selectedCellItems allKeys].count == self.skuGroupModels.count;
+}
+
+- (SkuInfo *)locatedSkuInfo {
+    return self.isSelectedAllGroup ? [self.selectedCellItems allValues].firstObject.skuInfosFiltered.firstObject : nil;
+}
+
+- (NSInteger)maxStockCurrent {
+    SkuInfo *locatedSkuInfo = self.locatedSkuInfo;
+    return locatedSkuInfo ?  locatedSkuInfo.stock : self.jmSkuModel.stock;
+}
+
+- (NSInteger)numSelected {
+    if (self.skuNumSelectedModel) {
+        return self.skuNumSelectedModel.num;
+    } else {
+        return self.maxStockCurrent > 0 ? 1 : 0;
+    }
 }
 
 

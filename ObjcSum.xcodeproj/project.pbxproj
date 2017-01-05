@@ -19,10 +19,6 @@
 		EE270D051E13B04D005BA294 /* UIButton+setBackgroundColorForState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */; };
 		EE270D0E1E13BAB1005BA294 /* UIView+JMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */; };
 		EE270D7B1E1B6F42005BA294 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */; };
-		EE270DB11E1B6FE6005BA294 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D801E1B6FE6005BA294 /* JMSkuModel.m */; };
-		EE270DB21E1B6FE6005BA294 /* PriceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D821E1B6FE6005BA294 /* PriceDetail.m */; };
-		EE270DB31E1B6FE6005BA294 /* SkuGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */; };
-		EE270DB41E1B6FE6005BA294 /* SkuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D861E1B6FE6005BA294 /* SkuInfo.m */; };
 		EE270DB51E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D8A1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m */; };
 		EE270DB61E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D8B1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib */; };
 		EE270DB71E1B6FE6005BA294 /* JMSkuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D8E1E1B6FE6005BA294 /* JMSkuCell.m */; };
@@ -36,16 +32,29 @@
 		EE270DBF1E1B6FE6005BA294 /* JMSkuGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D9E1E1B6FE6005BA294 /* JMSkuGroupHeader.m */; };
 		EE270DC01E1B6FE6005BA294 /* JMSkuGroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270D9F1E1B6FE6005BA294 /* JMSkuGroupHeader.xib */; };
 		EE270DC11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */; };
-		EE270DC21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */; };
 		EE270DC31E1B6FE6005BA294 /* JMSkuSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */; };
 		EE270DC41E1B6FE6005BA294 /* JMSkuSelectedView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */; };
-		EE270DC51E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */; };
 		EE270DC61E1B6FE6005BA294 /* JMSkuSelectedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */; };
 		EE270DC71E1B6FE6005BA294 /* JMComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DB01E1B6FE6005BA294 /* JMComponent.m */; };
 		EE270DCA1E1B7096005BA294 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DC91E1B7096005BA294 /* UIView+Additions.m */; };
 		EE270DCD1E1B70C3005BA294 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */; };
 		EE270DD01E1B7150005BA294 /* UIView+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */; };
-		EE270DD21E1B7581005BA294 /* JMSkuMockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */; };
+		EE270DD51E1BC675005BA294 /* NSString+TransformToDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD41E1BC675005BA294 /* NSString+TransformToDisplay.m */; };
+		EE270DDB1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DDA1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m */; };
+		EE270DDE1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DDD1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m */; };
+		EE270DE11E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DE01E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m */; };
+		EE270DE41E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DE31E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m */; };
+		EE270DEF1E1C9A1A005BA294 /* JMSkuMockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE270DE61E1C9A1A005BA294 /* JMSkuMockData.plist */; };
+		EE270DF01E1C9A1A005BA294 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DE81E1C9A1A005BA294 /* JMSkuModel.m */; };
+		EE270DF11E1C9A1A005BA294 /* PriceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DEA1E1C9A1A005BA294 /* PriceDetail.m */; };
+		EE270DF21E1C9A1A005BA294 /* SkuGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DEC1E1C9A1A005BA294 /* SkuGroupInfo.m */; };
+		EE270DF31E1C9A1A005BA294 /* SkuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DEE1E1C9A1A005BA294 /* SkuInfo.m */; };
+		EE270E541E1CC494005BA294 /* UIImageView+JMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270E531E1CC494005BA294 /* UIImageView+JMNetworking.m */; };
+		EE270E5F1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270E5D1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.m */; };
+		EE270E601E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270E5E1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.xib */; };
+		EE270E651E1D0991005BA294 /* YYInputAccessoryViewWithCancel.h in Headers */ = {isa = PBXBuildFile; fileRef = EE270E621E1D0991005BA294 /* YYInputAccessoryViewWithCancel.h */; };
+		EE270E661E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270E631E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m */; };
+		EE270E671E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270E641E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib */; };
 		EE2A1F301DAF5DE7001F9A2E /* YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE2A1F331DAF5DE7001F9A2E /* YYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; };
 		EE2A1F341DAF5DE7001F9A2E /* YYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -138,9 +147,6 @@
 		EE2A20BA1DAF6D7A001F9A2E /* YYTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A1FB61DAF6D79001F9A2E /* YYTransitioningDelegate.m */; };
 		EE2A20BB1DAF6D7A001F9A2E /* YYImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1FB81DAF6D79001F9A2E /* YYImageView.h */; };
 		EE2A20BC1DAF6D7A001F9A2E /* YYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A1FB91DAF6D79001F9A2E /* YYImageView.m */; };
-		EE2A20BD1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1FBB1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.h */; };
-		EE2A20BE1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A1FBC1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.m */; };
-		EE2A20BF1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2A1FBD1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.xib */; };
 		EE2A20C01DAF6D7A001F9A2E /* CLLocation+YYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1FC11DAF6D79001F9A2E /* CLLocation+YYExtension.h */; };
 		EE2A20C11DAF6D7A001F9A2E /* CLLocation+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A1FC21DAF6D79001F9A2E /* CLLocation+YYExtension.m */; };
 		EE2A20C21DAF6D7A001F9A2E /* NSArray+YYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1FC31DAF6D79001F9A2E /* NSArray+YYExtension.h */; };
@@ -928,14 +934,6 @@
 		EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMCategory.m"; sourceTree = "<group>"; };
 		EE270D791E1B6F42005BA294 /* NSObject+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additionals.h"; sourceTree = "<group>"; };
 		EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
-		EE270D7F1E1B6FE6005BA294 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
-		EE270D801E1B6FE6005BA294 /* JMSkuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuModel.m; sourceTree = "<group>"; };
-		EE270D811E1B6FE6005BA294 /* PriceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetail.h; sourceTree = "<group>"; };
-		EE270D821E1B6FE6005BA294 /* PriceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetail.m; sourceTree = "<group>"; };
-		EE270D831E1B6FE6005BA294 /* SkuGroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuGroupInfo.h; sourceTree = "<group>"; };
-		EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuGroupInfo.m; sourceTree = "<group>"; };
-		EE270D851E1B6FE6005BA294 /* SkuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuInfo.h; sourceTree = "<group>"; };
-		EE270D861E1B6FE6005BA294 /* SkuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuInfo.m; sourceTree = "<group>"; };
 		EE270D891E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuAdditionalInfoCell.h; sourceTree = "<group>"; };
 		EE270D8A1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuAdditionalInfoCell.m; sourceTree = "<group>"; };
 		EE270D8B1E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuAdditionalInfoCell.xib; sourceTree = "<group>"; };
@@ -956,14 +954,10 @@
 		EE270D9F1E1B6FE6005BA294 /* JMSkuGroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSkuGroupHeader.xib; sourceTree = "<group>"; };
 		EE270DA01E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCollectionViewLeftAlignLayout.h; sourceTree = "<group>"; };
 		EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCollectionViewLeftAlignLayout.m; sourceTree = "<group>"; };
-		EE270DA21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedView+SkuNumSelected.h"; sourceTree = "<group>"; };
-		EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedView+SkuNumSelected.m"; sourceTree = "<group>"; };
 		EE270DA41E1B6FE6005BA294 /* JMSkuSelectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedView.h; sourceTree = "<group>"; };
 		EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuSelectedView.m; sourceTree = "<group>"; };
 		EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JMSkuSelectedView.xcassets; sourceTree = "<group>"; };
 		EE270DA71E1B6FE6005BA294 /* JMSkuSelectedViewConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedViewConsts.h; sourceTree = "<group>"; };
-		EE270DA91E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+JMSku.h"; sourceTree = "<group>"; };
-		EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+JMSku.m"; sourceTree = "<group>"; };
 		EE270DAB1E1B6FE6005BA294 /* JMSkuSelectedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuSelectedViewModel.h; sourceTree = "<group>"; };
 		EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuSelectedViewModel.m; sourceTree = "<group>"; };
 		EE270DAF1E1B6FE6005BA294 /* JMComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMComponent.h; sourceTree = "<group>"; };
@@ -974,7 +968,33 @@
 		EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		EE270DCE1E1B7150005BA294 /* UIView+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additionals.h"; sourceTree = "<group>"; };
 		EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additionals.m"; sourceTree = "<group>"; };
-		EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData.plist; sourceTree = "<group>"; };
+		EE270DD31E1BC675005BA294 /* NSString+TransformToDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TransformToDisplay.h"; sourceTree = "<group>"; };
+		EE270DD41E1BC675005BA294 /* NSString+TransformToDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TransformToDisplay.m"; sourceTree = "<group>"; };
+		EE270DD91E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+HeaderDisplayView.h"; sourceTree = "<group>"; };
+		EE270DDA1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+HeaderDisplayView.m"; sourceTree = "<group>"; };
+		EE270DDC1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+MiddleCollectionView.h"; sourceTree = "<group>"; };
+		EE270DDD1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+MiddleCollectionView.m"; sourceTree = "<group>"; };
+		EE270DDF1E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+BottomConfirmView.h"; sourceTree = "<group>"; };
+		EE270DE01E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+BottomConfirmView.m"; sourceTree = "<group>"; };
+		EE270DE21E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMSkuSelectedViewModel+Network.h"; sourceTree = "<group>"; };
+		EE270DE31E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMSkuSelectedViewModel+Network.m"; sourceTree = "<group>"; };
+		EE270DE61E1C9A1A005BA294 /* JMSkuMockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData.plist; sourceTree = "<group>"; };
+		EE270DE71E1C9A1A005BA294 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
+		EE270DE81E1C9A1A005BA294 /* JMSkuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSkuModel.m; sourceTree = "<group>"; };
+		EE270DE91E1C9A1A005BA294 /* PriceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetail.h; sourceTree = "<group>"; };
+		EE270DEA1E1C9A1A005BA294 /* PriceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetail.m; sourceTree = "<group>"; };
+		EE270DEB1E1C9A1A005BA294 /* SkuGroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuGroupInfo.h; sourceTree = "<group>"; };
+		EE270DEC1E1C9A1A005BA294 /* SkuGroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuGroupInfo.m; sourceTree = "<group>"; };
+		EE270DED1E1C9A1A005BA294 /* SkuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuInfo.h; sourceTree = "<group>"; };
+		EE270DEE1E1C9A1A005BA294 /* SkuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuInfo.m; sourceTree = "<group>"; };
+		EE270E521E1CC494005BA294 /* UIImageView+JMNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JMNetworking.h"; sourceTree = "<group>"; };
+		EE270E531E1CC494005BA294 /* UIImageView+JMNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JMNetworking.m"; sourceTree = "<group>"; };
+		EE270E5C1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYInputAccessoryViewWithCancel.h; sourceTree = "<group>"; };
+		EE270E5D1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYInputAccessoryViewWithCancel.m; sourceTree = "<group>"; };
+		EE270E5E1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYInputAccessoryViewWithCancel.xib; sourceTree = "<group>"; };
+		EE270E621E1D0991005BA294 /* YYInputAccessoryViewWithCancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYInputAccessoryViewWithCancel.h; sourceTree = "<group>"; };
+		EE270E631E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYInputAccessoryViewWithCancel.m; sourceTree = "<group>"; };
+		EE270E641E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYInputAccessoryViewWithCancel.xib; sourceTree = "<group>"; };
 		EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSDK.h; sourceTree = "<group>"; };
 		EE2A1F2F1DAF5DE7001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1067,9 +1087,6 @@
 		EE2A1FB61DAF6D79001F9A2E /* YYTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTransitioningDelegate.m; sourceTree = "<group>"; };
 		EE2A1FB81DAF6D79001F9A2E /* YYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageView.h; sourceTree = "<group>"; };
 		EE2A1FB91DAF6D79001F9A2E /* YYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageView.m; sourceTree = "<group>"; };
-		EE2A1FBB1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYInputAccessoryViewWithCancel.h; sourceTree = "<group>"; };
-		EE2A1FBC1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYInputAccessoryViewWithCancel.m; sourceTree = "<group>"; };
-		EE2A1FBD1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYInputAccessoryViewWithCancel.xib; sourceTree = "<group>"; };
 		EE2A1FC11DAF6D79001F9A2E /* CLLocation+YYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YYExtension.h"; sourceTree = "<group>"; };
 		EE2A1FC21DAF6D79001F9A2E /* CLLocation+YYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YYExtension.m"; sourceTree = "<group>"; };
 		EE2A1FC31DAF6D79001F9A2E /* NSArray+YYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYExtension.h"; sourceTree = "<group>"; };
@@ -2396,8 +2413,6 @@
 				EE270D871E1B6FE6005BA294 /* Component */,
 				EE270DA01E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.h */,
 				EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */,
-				EE270DA21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.h */,
-				EE270DA31E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m */,
 				EE270DA41E1B6FE6005BA294 /* JMSkuSelectedView.h */,
 				EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */,
 				EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */,
@@ -2411,25 +2426,8 @@
 		EE270D7D1E1B6FE6005BA294 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EE270D7E1E1B6FE6005BA294 /* Model */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		EE270D7E1E1B6FE6005BA294 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EE270D7F1E1B6FE6005BA294 /* JMSkuModel.h */,
-				EE270D801E1B6FE6005BA294 /* JMSkuModel.m */,
-				EE270D811E1B6FE6005BA294 /* PriceDetail.h */,
-				EE270D821E1B6FE6005BA294 /* PriceDetail.m */,
-				EE270D831E1B6FE6005BA294 /* SkuGroupInfo.h */,
-				EE270D841E1B6FE6005BA294 /* SkuGroupInfo.m */,
-				EE270D851E1B6FE6005BA294 /* SkuInfo.h */,
-				EE270D861E1B6FE6005BA294 /* SkuInfo.m */,
-				EE270DD11E1B7581005BA294 /* JMSkuMockData.plist */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EE270D871E1B6FE6005BA294 /* Component */ = {
@@ -2508,8 +2506,15 @@
 		EE270DA81E1B6FE6005BA294 /* JMSkuSelectedViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EE270DA91E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.h */,
-				EE270DAA1E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m */,
+				EE270DE51E1C9A1A005BA294 /* Model */,
+				EE270DD91E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.h */,
+				EE270DDA1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m */,
+				EE270DDC1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.h */,
+				EE270DDD1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m */,
+				EE270DDF1E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.h */,
+				EE270DE01E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m */,
+				EE270DE21E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.h */,
+				EE270DE31E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m */,
 				EE270DAB1E1B6FE6005BA294 /* JMSkuSelectedViewModel.h */,
 				EE270DAC1E1B6FE6005BA294 /* JMSkuSelectedViewModel.m */,
 			);
@@ -2519,6 +2524,7 @@
 		EE270DAD1E1B6FE6005BA294 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				EE270E5B1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel */,
 				EE270DAE1E1B6FE6005BA294 /* JMComponent */,
 			);
 			path = Vender;
@@ -2531,6 +2537,42 @@
 				EE270DB01E1B6FE6005BA294 /* JMComponent.m */,
 			);
 			path = JMComponent;
+			sourceTree = "<group>";
+		};
+		EE270DE51E1C9A1A005BA294 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE270DE61E1C9A1A005BA294 /* JMSkuMockData.plist */,
+				EE270DE71E1C9A1A005BA294 /* JMSkuModel.h */,
+				EE270DE81E1C9A1A005BA294 /* JMSkuModel.m */,
+				EE270DE91E1C9A1A005BA294 /* PriceDetail.h */,
+				EE270DEA1E1C9A1A005BA294 /* PriceDetail.m */,
+				EE270DEB1E1C9A1A005BA294 /* SkuGroupInfo.h */,
+				EE270DEC1E1C9A1A005BA294 /* SkuGroupInfo.m */,
+				EE270DED1E1C9A1A005BA294 /* SkuInfo.h */,
+				EE270DEE1E1C9A1A005BA294 /* SkuInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE270E5B1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel */ = {
+			isa = PBXGroup;
+			children = (
+				EE270E5C1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.h */,
+				EE270E5D1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.m */,
+				EE270E5E1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.xib */,
+			);
+			path = YYInputAccessoryViewWithCancel;
+			sourceTree = "<group>";
+		};
+		EE270E611E1D0991005BA294 /* YYInputAccessoryViewWithCancel */ = {
+			isa = PBXGroup;
+			children = (
+				EE270E621E1D0991005BA294 /* YYInputAccessoryViewWithCancel.h */,
+				EE270E631E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m */,
+				EE270E641E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib */,
+			);
+			path = YYInputAccessoryViewWithCancel;
 			sourceTree = "<group>";
 		};
 		EE2A1F2D1DAF5DE7001F9A2E /* YYSDK */ = {
@@ -2601,6 +2643,7 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
+				EE270E611E1D0991005BA294 /* YYInputAccessoryViewWithCancel */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
 				EE2A1F661DAF6D79001F9A2E /* YYAlertGridView */,
@@ -2619,7 +2662,6 @@
 				EE2A1FA71DAF6D79001F9A2E /* YYHud */,
 				EE2A1FAC1DAF6D79001F9A2E /* YYImageBrowser */,
 				EE2A1FB71DAF6D79001F9A2E /* YYImageView */,
-				EE2A1FBA1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel */,
 				EE2A1FBE1DAF6D79001F9A2E /* YYKit */,
 				EE2A20281DAF6D79001F9A2E /* YYLabel */,
 				EE4C2C0B1DB07161008924A3 /* YYLog */,
@@ -2846,16 +2888,6 @@
 				EE2A1FB91DAF6D79001F9A2E /* YYImageView.m */,
 			);
 			path = YYImageView;
-			sourceTree = "<group>";
-		};
-		EE2A1FBA1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel */ = {
-			isa = PBXGroup;
-			children = (
-				EE2A1FBB1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.h */,
-				EE2A1FBC1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.m */,
-				EE2A1FBD1DAF6D79001F9A2E /* YYInputAccessoryViewWithCancel.xib */,
-			);
-			path = YYInputAccessoryViewWithCancel;
 			sourceTree = "<group>";
 		};
 		EE2A1FBE1DAF6D79001F9A2E /* YYKit */ = {
@@ -4448,6 +4480,8 @@
 				EE4C26021DAF97E7008924A3 /* Model */,
 				EE4C26071DAF97E7008924A3 /* View */,
 				EE4C26011DAF97E7008924A3 /* GoodsDetail.h */,
+				EE270E521E1CC494005BA294 /* UIImageView+JMNetworking.h */,
+				EE270E531E1CC494005BA294 /* UIImageView+JMNetworking.m */,
 				EE270DCE1E1B7150005BA294 /* UIView+Additionals.h */,
 				EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */,
 				EE270DC81E1B7096005BA294 /* UIView+Additions.h */,
@@ -4456,6 +4490,8 @@
 				EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */,
 				EE270D0C1E13BAB1005BA294 /* UIView+JMCategory.h */,
 				EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */,
+				EE270DD31E1BC675005BA294 /* NSString+TransformToDisplay.h */,
+				EE270DD41E1BC675005BA294 /* NSString+TransformToDisplay.m */,
 				EE270DCB1E1B70C3005BA294 /* UIView+Utils.h */,
 				EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */,
 				EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */,
@@ -5850,7 +5886,6 @@
 				EE4C2C091DB07158008924A3 /* YYLogger.h in Headers */,
 				EE2A20CE1DAF6D7A001F9A2E /* NSHTTPCookie+YYExtension.h in Headers */,
 				EE2A20DA1DAF6D7A001F9A2E /* NSString+YYExtension.h in Headers */,
-				EE2A20BD1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.h in Headers */,
 				EE2A20E61DAF6D7A001F9A2E /* UIApplication+YYExtension.h in Headers */,
 				EE2A20DE1DAF6D7A001F9A2E /* NSTimer+YYExtension.h in Headers */,
 				EE2A21111DAF6D7A001F9A2E /* YYGestureRecognizer.h in Headers */,
@@ -5861,6 +5896,7 @@
 				EE2A21321DAF6D7A001F9A2E /* YYMultiSelectTable.h in Headers */,
 				EE2A1F301DAF5DE7001F9A2E /* YYSDK.h in Headers */,
 				EE2A20A81DAF6D7A001F9A2E /* YYDim.h in Headers */,
+				EE270E651E1D0991005BA294 /* YYInputAccessoryViewWithCancel.h in Headers */,
 				EE2A208F1DAF6D7A001F9A2E /* YYJsonRequestSerializer.h in Headers */,
 				EE2A212A1DAF6D7A001F9A2E /* YYModel.h in Headers */,
 				EE2A20891DAF6D7A001F9A2E /* YYBaseLayoutConstraint.h in Headers */,
@@ -6120,7 +6156,6 @@
 				EE9F1B4F1DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib in Resources */,
 				EE4C28DF1DAF97E9008924A3 /* EmojisList.plist in Resources */,
 				EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */,
-				EE270DD21E1B7581005BA294 /* JMSkuMockData.plist in Resources */,
 				EE4C28A91DAF97E9008924A3 /* FastRecordAccessoryView.xib in Resources */,
 				EE4B96861DC5D60200CCFB95 /* UIImageController.xib in Resources */,
 				EE270DB81E1B6FE6005BA294 /* JMSkuCell.xib in Resources */,
@@ -6132,6 +6167,7 @@
 				EE4C292D1DAF97E9008924A3 /* DNImagePickerController.strings in Resources */,
 				EE4C289E1DAF97E9008924A3 /* FastRecord.storyboard in Resources */,
 				EE9F1B5F1DEAB337006AD033 /* JMGoodsDetail.storyboard in Resources */,
+				EE270E601E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				EE4C28B71DAF97E9008924A3 /* FastRecordVoiceInputViewDim.xib in Resources */,
 				EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */,
 				EE270DB61E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.xib in Resources */,
@@ -6149,6 +6185,7 @@
 				EE4C28291DAF97E9008924A3 /* AppConfig.plist in Resources */,
 				EE4C286D1DAF97E9008924A3 /* rotation.png in Resources */,
 				EE4C29D01DAF97EA008924A3 /* RunTraceHelp.xib in Resources */,
+				EE270DEF1E1C9A1A005BA294 /* JMSkuMockData.plist in Resources */,
 				EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */,
 				EE4C290C1DAF97E9008924A3 /* README.png in Resources */,
 				EE4B96711DC5D60200CCFB95 /* decorate_wave.png in Resources */,
@@ -6182,13 +6219,13 @@
 				EE2A20B01DAF6D7A001F9A2E /* YYHud.xib in Resources */,
 				EE2A21351DAF6D7A001F9A2E /* no_data_default@2x.png in Resources */,
 				EE2A213A1DAF6D7A001F9A2E /* YYNoDataView.xib in Resources */,
+				EE270E671E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				EE2A20811DAF6D7A001F9A2E /* YYAlertTable.xib in Resources */,
 				EE2A20881DAF6D7A001F9A2E /* YYAlertTextView.xib in Resources */,
 				EE2A212B1DAF6D7A001F9A2E /* ic_radiobutton@2x.png in Resources */,
 				EE2A207E1DAF6D7A001F9A2E /* YYAlertGridViewCell.xib in Resources */,
 				EE2A21411DAF6D7A001F9A2E /* YYRefresh.xcassets in Resources */,
 				EE2A21341DAF6D7A001F9A2E /* YYMultiSelectTable.xib in Resources */,
-				EE2A20BF1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				EE2A21531DAF6D7A001F9A2E /* YYSegmentedControlCell.xib in Resources */,
 				EE2A212C1DAF6D7A001F9A2E /* ic_radiobutton_checked@2x.png in Resources */,
 				EE2A20AF1DAF6D7A001F9A2E /* YYHud.xcassets in Resources */,
@@ -6210,10 +6247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE270DB51E1B6FE6005BA294 /* JMSkuAdditionalInfoCell.m in Sources */,
+				EE270E541E1CC494005BA294 /* UIImageView+JMNetworking.m in Sources */,
 				EE4B967D1DC5D60200CCFB95 /* TabBarController.m in Sources */,
 				EE4C28B81DAF97E9008924A3 /* MVVMDemo.m in Sources */,
 				EE4C286C1DAF97E9008924A3 /* GestureTestView.m in Sources */,
 				EEFCDD921DF1794D0066C31A /* JMSize.m in Sources */,
+				EE270E5F1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel.m in Sources */,
 				EE4C28C41DAF97E9008924A3 /* YYMessageObjectImage.m in Sources */,
 				EE4C28C31DAF97E9008924A3 /* YYMessageObjectAudio.m in Sources */,
 				EE4C28491DAF97E9008924A3 /* SummaryIO.c in Sources */,
@@ -6241,6 +6280,7 @@
 				EE9F1B531DEAB337006AD033 /* JMGoodsDetailLickButton.m in Sources */,
 				EE4C29DA1DAF97EA008924A3 /* UIButton+WebCache.m in Sources */,
 				EE4C28721DAF97E9008924A3 /* ThreadDemo.m in Sources */,
+				EE270DDE1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m in Sources */,
 				EE4C29C51DAF97EA008924A3 /* ReachStateUnloaded.m in Sources */,
 				EE4C28531DAF97E9008924A3 /* CategoryAndProtocol.m in Sources */,
 				EE4C28481DAF97E9008924A3 /* SummaryConcurrency.c in Sources */,
@@ -6265,7 +6305,6 @@
 				EE4C283C1DAF97E9008924A3 /* tree_t.c in Sources */,
 				EE4C28751DAF97E9008924A3 /* LocalNotificationDemo.m in Sources */,
 				EE4C28BF1DAF97E9008924A3 /* YYMessageViewController.m in Sources */,
-				EE270DC21E1B6FE6005BA294 /* JMSkuSelectedView+SkuNumSelected.m in Sources */,
 				EE4C282C1DAF97E9008924A3 /* ApplicationInfo.m in Sources */,
 				EE4B96751DC5D60200CCFB95 /* CollectionViewController.m in Sources */,
 				EE4C29ED1DAF97EA008924A3 /* UIWebView+AFNetworking.m in Sources */,
@@ -6301,7 +6340,7 @@
 				EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */,
 				EE4C28FC1DAF97E9008924A3 /* GoodsDetailGraphicViewController.m in Sources */,
 				EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */,
-				EE270DB41E1B6FE6005BA294 /* SkuInfo.m in Sources */,
+				EE270DD51E1BC675005BA294 /* NSString+TransformToDisplay.m in Sources */,
 				EE4C291F1DAF97E9008924A3 /* AFURLSessionManager.m in Sources */,
 				EE4C28F21DAF97E9008924A3 /* YYWebImageManager.m in Sources */,
 				EE4C29971DAF97EA008924A3 /* RACReturnSignal.m in Sources */,
@@ -6348,8 +6387,10 @@
 				EE4C28331DAF97E9008924A3 /* YYBaseViewController+Navigation.m in Sources */,
 				EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */,
 				EE4C282D1DAF97E9008924A3 /* ApplicationManager.m in Sources */,
+				EE270DF21E1C9A1A005BA294 /* SkuGroupInfo.m in Sources */,
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
 				EE4C28AE1DAF97E9008924A3 /* FastRecordImageCell.m in Sources */,
+				EE270DF11E1C9A1A005BA294 /* PriceDetail.m in Sources */,
 				EE4C29C81DAF97EA008924A3 /* ReachStateWWAN.m in Sources */,
 				EE270DC31E1B6FE6005BA294 /* JMSkuSelectedView.m in Sources */,
 				EE9F1A121DE84233006AD033 /* JMShareInfo.m in Sources */,
@@ -6451,7 +6492,7 @@
 				EE9F1B591DEAB337006AD033 /* JMGoodsDetailContainerViewController+ShoppingCat.m in Sources */,
 				EE4C28D51DAF97E9008924A3 /* YYKeyboardManager.m in Sources */,
 				EE4C28831DAF97E9008924A3 /* ObjectiveC_objc_msgSend.m in Sources */,
-				EE270DB21E1B6FE6005BA294 /* PriceDetail.m in Sources */,
+				EE270DDB1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m in Sources */,
 				EE4C299C1DAF97EA008924A3 /* RACSignal+Operations.m in Sources */,
 				EE4C295B1DAF97EA008924A3 /* MJRefreshBackStateFooter.m in Sources */,
 				EE4C28EF1DAF97E9008924A3 /* YYMultiImageButton.m in Sources */,
@@ -6474,6 +6515,7 @@
 				EE4C28411DAF97E9008924A3 /* YYMalloc.c in Sources */,
 				EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */,
 				EE4C298A1DAF97EA008924A3 /* RACErrorSignal.m in Sources */,
+				EE270DE41E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m in Sources */,
 				EE4C29B21DAF97EA008924A3 /* UIControl+RACSignalSupport.m in Sources */,
 				EE4C29311DAF97EA008924A3 /* UIColor+Hex.m in Sources */,
 				EE4C28AB1DAF97E9008924A3 /* FastRecordCell.m in Sources */,
@@ -6497,6 +6539,7 @@
 				EE4C29D31DAF97EA008924A3 /* SDImageCache.m in Sources */,
 				EE4C29561DAF97EA008924A3 /* MJRefreshAutoGifFooter.m in Sources */,
 				EE4C285A1DAF97E9008924A3 /* SyntacticSugar.m in Sources */,
+				EE270DF01E1C9A1A005BA294 /* JMSkuModel.m in Sources */,
 				EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */,
 				EE4C29171DAF97E9008924A3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				EE4C29C41DAF97EA008924A3 /* ReachStateLoading.m in Sources */,
@@ -6581,7 +6624,6 @@
 				EE4C28311DAF97E9008924A3 /* UITableViewCell+CustomSetting.m in Sources */,
 				EE4C29DE1DAF97EA008924A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE4C28A31DAF97E9008924A3 /* FastRecord.xcdatamodeld in Sources */,
-				EE270DB11E1B6FE6005BA294 /* JMSkuModel.m in Sources */,
 				EE4C292C1DAF97E9008924A3 /* DNImagePickerController.m in Sources */,
 				EE4C291B1DAF97E9008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EE4C29021DAF97E9008924A3 /* DemoCell2.m in Sources */,
@@ -6592,7 +6634,6 @@
 				EE4C294E1DAF97EA008924A3 /* View+MASAdditions.m in Sources */,
 				EE4C29A41DAF97EA008924A3 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				EE4C29571DAF97EA008924A3 /* MJRefreshAutoNormalFooter.m in Sources */,
-				EE270DC51E1B6FE6005BA294 /* JMSkuSelectedViewModel+JMSku.m in Sources */,
 				EE4C28701DAF97E9008924A3 /* SimpleGestureRecognizers.m in Sources */,
 				EE4C28871DAF97E9008924A3 /* VoiceDemo.m in Sources */,
 				EE4C291A1DAF97E9008924A3 /* AFHTTPSessionManager.m in Sources */,
@@ -6629,7 +6670,6 @@
 				EE4C295C1DAF97EA008924A3 /* MJRefreshGifHeader.m in Sources */,
 				EE4C287C1DAF97E9008924A3 /* HitTestView.m in Sources */,
 				EE4C28CD1DAF97E9008924A3 /* UILabel+YYMessage.m in Sources */,
-				EE270DB31E1B6FE6005BA294 /* SkuGroupInfo.m in Sources */,
 				EE9F1A061DE84233006AD033 /* JMData.m in Sources */,
 				EE4C28621DAF97E9008924A3 /* ShowRoomListModel.m in Sources */,
 				EE4B96851DC5D60200CCFB95 /* UIImageController.m in Sources */,
@@ -6675,6 +6715,7 @@
 				EE4C283E1DAF97E9008924A3 /* YYFileManager.c in Sources */,
 				EE4C29221DAF97E9008924A3 /* DTConstants.m in Sources */,
 				EE4C29901DAF97EA008924A3 /* RACKVOProxy.m in Sources */,
+				EE270DE11E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m in Sources */,
 				EE4C28F81DAF97E9008924A3 /* YYCommonPullTableController.m in Sources */,
 				EE4C28561DAF97E9008924A3 /* ObjectiveCDemo.m in Sources */,
 				EE4C28A71DAF97E9008924A3 /* UILocalNotification+YYExtention.m in Sources */,
@@ -6691,6 +6732,7 @@
 				EE4C298F1DAF97EA008924A3 /* RACKVOChannel.m in Sources */,
 				EE4C29421DAF97EA008924A3 /* FMDatabaseQueue.m in Sources */,
 				EE4C28C61DAF97E9008924A3 /* NSObject+YYMessage.m in Sources */,
+				EE270DF31E1C9A1A005BA294 /* SkuInfo.m in Sources */,
 				EE270DBD1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m in Sources */,
 				EE4C29521DAF97EA008924A3 /* MJRefreshBackFooter.m in Sources */,
 				EE4C284C1DAF97E9008924A3 /* FoundationDemo.m in Sources */,
@@ -6759,7 +6801,6 @@
 				EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */,
 				EE2A20C71DAF6D7A001F9A2E /* NSData+YYExtension.m in Sources */,
 				EE2A20CF1DAF6D7A001F9A2E /* NSHTTPCookie+YYExtension.m in Sources */,
-				EE2A20BE1DAF6D7A001F9A2E /* YYInputAccessoryViewWithCancel.m in Sources */,
 				EE2A21271DAF6D7A001F9A2E /* NSObject+YYModel.m in Sources */,
 				EE2A1F541DAF62BD001F9A2E /* UIView+Transform.m in Sources */,
 				EE2A21571DAF6D7A001F9A2E /* YYTextView.m in Sources */,
@@ -6810,6 +6851,7 @@
 				EE2A20E91DAF6D7A001F9A2E /* UIBarButtonItem+YYExtension.m in Sources */,
 				EE2A20EB1DAF6D7A001F9A2E /* UIBezierPath+YYExtension.m in Sources */,
 				EE2A20781DAF6D7A001F9A2E /* JMRenderableTableView.m in Sources */,
+				EE270E661E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m in Sources */,
 				EE2A211E1DAF6D7A001F9A2E /* YYTimer.m in Sources */,
 				EE2A20ED1DAF6D7A001F9A2E /* UIColor+YYExtension.m in Sources */,
 				EE2A209E1DAF6D7A001F9A2E /* YYLinkedMap.m in Sources */,

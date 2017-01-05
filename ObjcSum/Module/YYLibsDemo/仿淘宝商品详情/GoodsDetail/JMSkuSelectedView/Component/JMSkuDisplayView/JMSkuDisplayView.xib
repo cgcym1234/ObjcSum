@@ -24,7 +24,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wn-YE-nf7">
-                    <rect key="frame" x="125" y="12" width="30.5" height="30"/>
+                    <rect key="frame" x="125" y="12" width="154" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -61,6 +61,7 @@
                 <constraint firstItem="JnU-9y-856" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="f9H-jj-cxA"/>
                 <constraint firstItem="EUh-QT-Y35" firstAttribute="top" secondItem="2wn-YE-nf7" secondAttribute="bottom" constant="4" id="gD0-kN-mri"/>
                 <constraint firstItem="2wn-YE-nf7" firstAttribute="leading" secondItem="JnU-9y-856" secondAttribute="trailing" constant="13" id="lRF-3A-nAq"/>
+                <constraint firstItem="Pec-ad-QhB" firstAttribute="leading" secondItem="2wn-YE-nf7" secondAttribute="trailing" id="meG-wt-5B6"/>
                 <constraint firstItem="EUh-QT-Y35" firstAttribute="leading" secondItem="2wn-YE-nf7" secondAttribute="leading" id="pvY-n4-3lu"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

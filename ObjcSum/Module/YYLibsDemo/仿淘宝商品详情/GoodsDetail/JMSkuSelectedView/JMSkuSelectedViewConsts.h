@@ -22,6 +22,12 @@
 #define JMSkuSelectedViewSkuLineSpacing (13.0)
 
 
+typedef NS_ENUM(NSUInteger, JMSkuSectionType) {
+    JMSkuSectionTypeAdditional,
+    JMSkuSectionTypeSkuGroup,
+    JMSkuSectionTypeNumSelected,
+};
+
 
 
 #endif /* JMSkuSelectedViewConsts_h */

@@ -31,13 +31,13 @@
                         <state key="disabled" image="skuMinusDisable"/>
                     </button>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-OY-bcr">
-                        <rect key="frame" x="37" y="18.5" width="40" height="15"/>
+                        <rect key="frame" x="37" y="0.0" width="40" height="52"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="7QO-Jf-mBk"/>
                         </constraints>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-xK-Ptv">
                         <rect key="frame" x="77" y="14.5" width="25" height="25"/>
@@ -59,8 +59,10 @@
                 <constraint firstItem="Xge-xK-Ptv" firstAttribute="centerY" secondItem="WWK-rz-f6G" secondAttribute="centerY" id="7dW-Qu-u51"/>
                 <constraint firstItem="WWK-rz-f6G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="OJa-Zn-tEr"/>
                 <constraint firstItem="Xge-xK-Ptv" firstAttribute="leading" secondItem="dhL-OY-bcr" secondAttribute="trailing" id="OrJ-tm-0Cd"/>
+                <constraint firstItem="dhL-OY-bcr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jHA-9s-GY7"/>
                 <constraint firstItem="dhL-OY-bcr" firstAttribute="centerY" secondItem="WWK-rz-f6G" secondAttribute="centerY" id="jW3-2H-Vo8"/>
                 <constraint firstItem="Xge-xK-Ptv" firstAttribute="width" secondItem="Xge-xK-Ptv" secondAttribute="height" multiplier="1:1" id="kFU-4T-JMI"/>
+                <constraint firstAttribute="bottom" secondItem="dhL-OY-bcr" secondAttribute="bottom" id="l1c-TA-4Wl"/>
             </constraints>
             <size key="customSize" width="312" height="52"/>
             <connections>

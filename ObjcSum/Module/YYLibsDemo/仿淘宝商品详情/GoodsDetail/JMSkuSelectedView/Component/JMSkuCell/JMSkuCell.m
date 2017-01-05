@@ -7,16 +7,12 @@
 //
 
 #import "JMSkuCell.h"
-#import "UIButton+setBackgroundColorForState.h"
 #import "UIButton+JMCategory.h"
 #import "JMSkuSelectedViewConsts.h"
 #import "JMSkuGroupHeader.h"
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
-
-static NSString * const KeyCell = @"KeyCell";
 
 @implementation JMSkuCellModel
 
@@ -35,8 +31,6 @@ static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuCell ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
 
 @end
 
@@ -89,9 +83,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Setter
 
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
+
 
 #pragma mark - Getter
 

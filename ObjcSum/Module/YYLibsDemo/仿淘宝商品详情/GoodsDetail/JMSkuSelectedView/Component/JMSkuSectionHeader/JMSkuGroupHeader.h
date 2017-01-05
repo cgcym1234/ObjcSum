@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) NSString *groupName;
 @property (nonatomic, copy) NSString *type;
-@property (nonatomic, copy) NSString *selectedItem;
+
 @property (nonatomic, strong) NSArray<JMSkuCellModel *> *cellModels;
 
 

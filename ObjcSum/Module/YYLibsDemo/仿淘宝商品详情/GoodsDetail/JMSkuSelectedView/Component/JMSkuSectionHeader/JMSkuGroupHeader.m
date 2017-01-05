@@ -12,9 +12,7 @@
 
 #pragma mark - Const
 
-static NSInteger const HeightForCommonCell = 49;
 
-static NSString * const KeyCell = @"KeyCell";
 
 @implementation JMSkuGroupModel
 
@@ -23,8 +21,7 @@ static NSString * const KeyCell = @"KeyCell";
 
 @interface JMSkuGroupHeader ()
 
-@property (nonatomic, strong) UIView *inputTextView;
-@property (nonatomic, copy) NSArray *dataArray;
+
 
 @end
 
@@ -39,16 +36,16 @@ static NSString * const KeyCell = @"KeyCell";
 }
 
 - (void)setupContext {
-    self.userInteractionEnabled = YES;
-    self.autoresizingMask = UIViewAutoresizingNone;
-    self.translatesAutoresizingMaskIntoConstraints = YES;
+    
     [self addBorderTopPadding:JMSkuSelectedViewPaddingLeftRight height:kSplitLineHeightFix(1) color:JMSkuSelectedViewSepratorColor];
+    
+    _skuGroupNameLabel.text = nil;
 }
 
 #pragma mark - Override
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)prepareForReuse {
+    _skuGroupNameLabel.text = nil;
 }
 
 #pragma mark - Public
@@ -69,9 +66,6 @@ static NSString * const KeyCell = @"KeyCell";
 
 #pragma mark - Setter
 
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
 
 #pragma mark - Getter
 
