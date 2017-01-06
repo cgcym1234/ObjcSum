@@ -31,6 +31,9 @@
 - (JMSkuSectionType)typeOfSection:(NSInteger)section;
 - (NSInteger)sections;
 - (NSInteger)numberOfItemsInSection:(NSInteger)section;
+- (UIEdgeInsets)contenInsetsForSection:(NSInteger)section;
+- (CGFloat)minimumLineSpacingForSection:(NSInteger)section;
+- (CGFloat)minimumInteritemSpacingForSection:(NSInteger)section;
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 - (NSString *)cellIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath;

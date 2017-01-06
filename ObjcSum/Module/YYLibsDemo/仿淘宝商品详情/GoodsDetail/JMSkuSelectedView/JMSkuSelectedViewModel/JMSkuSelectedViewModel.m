@@ -42,7 +42,7 @@
         self.jmSkuModel = skuModel;
         //skuDisplayModel
         JMSkuDisplayViewModel *skuDisplayModel = [JMSkuDisplayViewModel new];
-        
+        skuDisplayModel.usageText = @"尺码助手";
         
         //skuGroupModels
         NSMutableArray *skuGroupModels = [NSMutableArray new];

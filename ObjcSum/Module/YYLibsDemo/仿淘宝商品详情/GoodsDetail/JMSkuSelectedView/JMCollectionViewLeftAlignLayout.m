@@ -17,9 +17,9 @@
 
 - (void)prepareLayout {
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
-    self.minimumInteritemSpacing = JMSkuSelectedViewSkuItemSpacing;
-    self.minimumLineSpacing = JMSkuSelectedViewSkuLineSpacing;
-    self.sectionInset = UIEdgeInsetsMake(0, JMSkuSelectedViewPaddingLeftRight, JMSkuSelectedViewSkuItemSpacing, JMSkuSelectedViewPaddingLeftRight);
+//    self.minimumInteritemSpacing = JMSkuSelectedViewSkuItemSpacing;
+//    self.minimumLineSpacing = JMSkuSelectedViewSkuLineSpacing;
+//    self.sectionInset = UIEdgeInsetsMake(0, JMSkuSelectedViewPaddingLeftRight, JMSkuSelectedViewSkuItemSpacing, JMSkuSelectedViewPaddingLeftRight);
     self.footerReferenceSize = CGSizeZero;
     self.headerReferenceSize = CGSizeZero;
     self.itemSize = CGSizeMake(10, 10);

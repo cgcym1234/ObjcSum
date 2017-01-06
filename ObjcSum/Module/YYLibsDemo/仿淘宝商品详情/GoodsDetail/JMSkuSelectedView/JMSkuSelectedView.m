@@ -139,13 +139,13 @@
 
 - (void)yyKeyboardManager:(YYKeyboardManager *)keyboardManager
    keyboardWithTransition:(YYKeyboardTransition)transition {
-    CGRect keyboardFrame = [keyboardManager convertRect:transition.toFrame toView:self];
+    CGRect keyboardFrame = [YYKeyboardManager defaultManager].keyboardFrame;
     //默认最底部
     CGFloat contentOffsetY = 0;
     self.collectionView.scrollEnabled = YES;
     
     //键盘显示
-    if (CGRectGetMinY(keyboardFrame) < self.height) {
+    if ([YYKeyboardManager defaultManager].keyboardVisible) {
         CGPoint expectedPointInCollectionView = [self convertPoint:keyboardFrame.origin toView:self.collectionView];
         contentOffsetY = self.collectionView.contentSize.height - expectedPointInCollectionView.y;
         self.collectionView.scrollEnabled = NO;
@@ -202,10 +202,6 @@
     return size;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return [_model sizeForItemAtIndexPath:indexPath];
-}
-
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == SkuAdditonalInfoSection) {
         return nil;
@@ -214,6 +210,22 @@
     id<JMComponentModel> model = [_model headerDataForItemAtIndexPath:indexPath];
     [header reloadWithData:model];
     return header;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return [_model contenInsetsForSection:section];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return [_model minimumLineSpacingForSection:section];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return [_model minimumInteritemSpacingForSection:section];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [_model sizeForItemAtIndexPath:indexPath];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -241,10 +253,15 @@
         _skuDisplayView = [JMSkuDisplayView instanceFromNib];
         __weak __typeof(self) weakSelf = self;
         _skuDisplayView.closeButtonDidClickBlock = ^(JMSkuDisplayView *view) {
-            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedViewDidPerformCloseAction:)]) {
-                [weakSelf.delegate jmSkuSelectedViewDidPerformCloseAction:weakSelf];
+            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
+                [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionClose];
             }
             [weakSelf dismiss];
+        };
+        _skuDisplayView.usageButtonDidClickBlock = ^(JMSkuDisplayView *view) {
+            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
+                [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionUsage];
+            }
         };
     }
     return _skuDisplayView;
@@ -260,8 +277,8 @@
                 return;
             }
             
-            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedViewDidPerformConfirmAction:)]) {
-                [weakSelf.delegate jmSkuSelectedViewDidPerformConfirmAction:weakSelf];
+            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
+                [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionConfirm];
             }
         };
     }

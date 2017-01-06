@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "JMSkuSelectedViewModel.h"
 
+typedef NS_ENUM(NSUInteger, JMSkuSelectedViewAction) {
+    JMSkuSelectedViewActionClose, /* 点击关闭时*/
+    JMSkuSelectedViewActionConfirm, /* 点击确认时*/
+    JMSkuSelectedViewActionUsage, /* 点击尺码助手时*/
+};
+
 @class JMSkuSelectedView;
 
 @protocol JMSkuSelectedViewDelegate <NSObject>
@@ -17,11 +23,9 @@
 /* 联动选择到可以定位某个sku时调用, 并提供该sku数据*/
 - (void)jmSkuSelectedView:(JMSkuSelectedView *)view didLocateSkuWithInfo:(SkuInfo *)skuInfo;
 
-/* 点击关闭时调用*/
-- (void)jmSkuSelectedViewDidPerformCloseAction:(JMSkuSelectedView *)view;
+/* 点击关闭，确认等操作时调用*/
+- (void)jmSkuSelectedView:(JMSkuSelectedView *)view didPerformAction:(JMSkuSelectedViewAction)action;
 
-/* 点击确认时调用*/
-- (void)jmSkuSelectedViewDidPerformConfirmAction:(JMSkuSelectedView *)view;
 
 @end
 

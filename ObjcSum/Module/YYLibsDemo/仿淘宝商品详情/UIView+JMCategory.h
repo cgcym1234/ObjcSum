@@ -29,6 +29,11 @@
               height:(CGFloat)height
                color:(UIColor *)color;
 
+#pragma mark - Shadow
+- (void)addShadowOffset:(CGSize)offset
+               radius:(CGFloat)radius
+              opacity:(CGFloat)opacity
+                color:(UIColor *)color;
 
 @end
 

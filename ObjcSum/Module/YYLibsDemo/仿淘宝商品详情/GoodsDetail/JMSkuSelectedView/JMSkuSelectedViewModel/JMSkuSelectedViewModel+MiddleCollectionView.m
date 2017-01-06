@@ -47,6 +47,50 @@
     }
 }
 
+- (UIEdgeInsets)contenInsetsForSection:(NSInteger)section {
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    switch ([self typeOfSection:section]) {
+        case JMSkuSectionTypeSkuGroup: {
+            insets = UIEdgeInsetsMake(0, JMSkuSelectedViewPaddingLeftRight, JMSkuSelectedViewSkuItemSpacing, JMSkuSelectedViewPaddingLeftRight);
+            break;
+        }
+        case JMSkuSectionTypeNumSelected:
+            insets = UIEdgeInsetsMake(0, 0, JMSkuSelectedViewSkuItemSpacing, 0);
+            break;
+        default:
+            insets = UIEdgeInsetsZero;
+    }
+    return insets;
+}
+
+- (CGFloat)minimumLineSpacingForSection:(NSInteger)section {
+    CGFloat spacing = 0;
+    switch ([self typeOfSection:section]) {
+        case JMSkuSectionTypeSkuGroup: {
+            spacing = JMSkuSelectedViewSkuLineSpacing;
+            break;
+        }
+        default:
+            spacing = 0;
+            
+    }
+    return spacing;
+}
+
+- (CGFloat)minimumInteritemSpacingForSection:(NSInteger)section {
+    CGFloat spacing = 0;
+    switch ([self typeOfSection:section]) {
+        case JMSkuSectionTypeSkuGroup: {
+            spacing = JMSkuSelectedViewSkuItemSpacing;
+            break;
+        }
+        default:
+            spacing = 0;
+            
+    }
+    return spacing;
+}
+
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 0;
     //除了用于选择的skuButton，其他都是很view一样宽度
@@ -66,6 +110,7 @@
             JMSkuCellModel *skuModel = [self cellDataForItemAtIndexPath:indexPath];
             width = skuModel.viewWidth;
             height = skuModel.viewHeight;
+            break;
         }
     }
     
