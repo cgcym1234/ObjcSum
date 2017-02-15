@@ -17,6 +17,7 @@
 #define kSplitLineHeightFix(a)                     ((a) / ([UIScreen mainScreen].scale))
 
 #define JMSkuSelectedViewSepratorColor ColorFromRGBHex(0xeeeeee)
+#define JMSkuSelectedViewCellFont [UIFont systemFontOfSize:12]
 #define JMSkuSelectedViewPaddingLeftRight (12.0)
 #define JMSkuSelectedViewSkuItemSpacing (15.0)
 #define JMSkuSelectedViewSkuLineSpacing (13.0)

@@ -6,6 +6,7 @@
 
 #import "JMSkuModel.h"
 #import "NSObject+Additionals.h"
+#import "JMDataUtility.h"
 
 @interface JMSkuModel ()
 @end
@@ -81,21 +82,22 @@
 {
 	self = [super init];
 	
-	if(dictionary[@"attr_list"] != nil && [dictionary[@"attr_list"] isKindOfClass:[NSArray class]]){
-		NSArray * skuGroupDictionaries = dictionary[@"attr_list"];
-		NSMutableArray * skuGroupItems = [NSMutableArray array];
+    NSArray * skuGroupDictionaries = arrayInDictionaryForKey(dictionary, @"attr_list");
+    if (skuGroupDictionaries.count > 0) {
+        NSMutableArray * skuGroupItems = [NSMutableArray array];
         NSMutableDictionary * skuTypeDict = [NSMutableDictionary new];
-		for(NSDictionary * skuGroupDictionary in skuGroupDictionaries){
-			SkuGroupInfo * skuGroupItem = [[SkuGroupInfo alloc] initWithDictionary:skuGroupDictionary];
-			[skuGroupItems addSafeObject:skuGroupItem];
+        for(NSDictionary * skuGroupDictionary in skuGroupDictionaries){
+            SkuGroupInfo * skuGroupItem = [[SkuGroupInfo alloc] initWithDictionary:skuGroupDictionary];
+            [skuGroupItems addSafeObject:skuGroupItem];
             [skuTypeDict setSafeObject:skuGroupItem.title forKey:skuGroupItem.type];
-		}
-		self.skuGroupInfos = skuGroupItems;
+        }
+        self.skuGroupInfos = skuGroupItems;
         self.skuGroupTypeDict = skuTypeDict;
-	}
+    }
+
     
-    if(dictionary[@"size"] != nil && [dictionary[@"size"] isKindOfClass:[NSArray class]]){
-        NSArray * skuInfoDictionaries = dictionary[@"size"];
+    NSArray * skuInfoDictionaries = arrayInDictionaryForKey(dictionary, @"size");
+    if (skuInfoDictionaries.count > 0) {
         NSArray *skuTypeKeys = [self.skuGroupTypeDict allKeys];
         NSMutableArray * skuInfoItems = [NSMutableArray array];
         int stock = 0;
@@ -122,34 +124,10 @@
         }
         self.skuValueModelsDict = skuValueModelsDict;
     }
-    
+
 	return self;
 }
 
-
-/**
- * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
- */
--(NSDictionary *)toDictionary
-{
-	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.skuInfos != nil){
-		NSMutableArray * dictionaryElements = [NSMutableArray array];
-		for(SkuInfo * SkuInfoElement in self.skuInfos){
-			[dictionaryElements addObject:[SkuInfoElement toDictionary]];
-		}
-		dictionary[@"attr_list"] = dictionaryElements;
-	}
-	if(self.skuGroupInfos != nil){
-		NSMutableArray * dictionaryElements = [NSMutableArray array];
-		for(SkuGroupInfo * skuGroupElement in self.skuGroupInfos){
-			[dictionaryElements addObject:[skuGroupElement toDictionary]];
-		}
-		dictionary[@"size"] = dictionaryElements;
-	}
-	return dictionary;
-
-}
 
 - (NSString *)unit {
     return _skuInfos.count > 0 ? _skuInfos.firstObject.name : nil;

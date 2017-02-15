@@ -23,8 +23,11 @@
 
 #define SkuAdditonalInfoSection 0
 
+@class JMSkuSelectedView;
+
 @interface JMSkuSelectedViewModel : NSObject<JMComponentModel>
 
+@property (nonatomic, weak) JMSkuSelectedView *view;
 @property (nonatomic, strong) JMSkuModel *jmSkuModel;
 
 /*只存放选中的CellModel，以CellModel.group.type为key*/

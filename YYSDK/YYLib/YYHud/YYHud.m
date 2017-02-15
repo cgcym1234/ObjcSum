@@ -41,7 +41,8 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 - (instancetype)init {
-    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil].firstObject;
+    self = [[NSBundle bundleForClass:self.class] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil].firstObject;
+    
     //self.translatesAutoresizingMaskIntoConstraints = NO;
     self.hudContainer.layer.cornerRadius = YYHudRadius;
     self.allowUserInteraction = YES;
@@ -128,17 +129,20 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
             [superView addSubview:self];
         } else {
 #pragma mark - 找到当前显示的window
-            NSEnumerator *frontToBackWindows = [[UIApplication sharedApplication].windows reverseObjectEnumerator];
-            for (UIWindow *window in frontToBackWindows) {
-                BOOL windowOnMainScreen = window.screen == [UIScreen mainScreen];
-                BOOL windowIsVisible = !window.hidden && window.alpha > 0;
-                BOOL windowLevelNormal = window.windowLevel == UIWindowLevelNormal;
-                
-                if (windowOnMainScreen && windowIsVisible && windowLevelNormal) {
-                    [window addSubview:self];
-                    break;
-                }
-            }
+//            NSEnumerator *frontToBackWindows = [[UIApplication sharedApplication].windows reverseObjectEnumerator];
+//            for (UIWindow *window in frontToBackWindows) {
+//                BOOL windowOnMainScreen = window.screen == [UIScreen mainScreen];
+//                BOOL windowIsVisible = !window.hidden && window.alpha > 0;
+//                BOOL windowLevelNormal = window.windowLevel == UIWindowLevelNormal;
+//                
+//                if (windowOnMainScreen && windowIsVisible && windowLevelNormal) {
+//                    [window addSubview:self];
+//                    break;
+//                }
+//            }
+            UIWindow *window = [UIApplication sharedApplication].windows.lastObject;
+//            window = [[UIApplication sharedApplication].delegate window];
+            [window addSubview:self];
         }
         
     } else {
@@ -156,7 +160,7 @@ static const CGFloat YYHudImageContainerCenterTopWithStr = 10;
 }
 
 - (YYHud *)showInView:(UIView *)superView image:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType isText:(BOOL)isText {
-    return [self showInView:nil image:image str:str duration:duration maskType:maskType isText:isText isSpiner:NO];
+    return [self showInView:superView image:image str:str duration:duration maskType:maskType isText:isText isSpiner:NO];
 }
 
 - (YYHud *)showImage:(UIImage *)image str:(NSString *)str duration:(NSTimeInterval)duration maskType:(YYHudMaskType)maskType {

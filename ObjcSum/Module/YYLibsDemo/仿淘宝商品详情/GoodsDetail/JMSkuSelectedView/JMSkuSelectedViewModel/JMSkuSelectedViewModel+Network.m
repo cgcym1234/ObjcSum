@@ -11,7 +11,7 @@
 @implementation JMSkuSelectedViewModel (Network)
 
 + (JMSkuModel *)requestData {
-    NSString *mockData = [[NSBundle mainBundle] pathForResource:@"JMSkuMockData" ofType:@"plist"];
+    NSString *mockData = [[NSBundle mainBundle] pathForResource:@"JMSkuMockData3" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:mockData];
     JMSkuModel *skuModel = [[JMSkuModel alloc] initWithDictionary:dict];
     return skuModel;

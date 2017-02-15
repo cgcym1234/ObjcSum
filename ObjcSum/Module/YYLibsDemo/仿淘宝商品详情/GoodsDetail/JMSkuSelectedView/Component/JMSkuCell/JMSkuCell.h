@@ -20,6 +20,8 @@
 @property (nonatomic, assign, readonly) CGFloat viewHeight;
 @property (nonatomic, assign) CGFloat viewWidth;
 
+//支持点击该属性时切换的图片
+@property (nonatomic, copy) NSString *attributeImage;
 
 @property (nonatomic, weak) JMSkuGroupModel *group;
 @property (nonatomic, strong) NSMutableArray<SkuInfo *> *skuInfosFiltered;

@@ -21,14 +21,21 @@
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-d6-kt3" customClass="YYRightImageButton">
+                    <rect key="frame" x="230" y="13" width="80" height="17"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="2DP-FR-65N" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="14" id="ZMh-QC-ycc"/>
                 <constraint firstItem="2DP-FR-65N" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="12" id="a13-b6-J6c"/>
+                <constraint firstAttribute="trailing" secondItem="TYW-d6-kt3" secondAttribute="trailing" constant="10" id="iZC-a2-t1A"/>
+                <constraint firstItem="TYW-d6-kt3" firstAttribute="centerY" secondItem="2DP-FR-65N" secondAttribute="centerY" id="m8c-a4-GVb"/>
             </constraints>
             <connections>
                 <outlet property="skuGroupNameLabel" destination="2DP-FR-65N" id="ZeW-5E-TsK"/>
+                <outlet property="useageButton" destination="TYW-d6-kt3" id="5QC-kx-rrg"/>
             </connections>
             <point key="canvasLocation" x="194" y="63"/>
         </collectionReusableView>

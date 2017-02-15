@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-/**< 左对齐再换行的layout */
+/**< 左对齐再换行的layout
+ https://github.com/mokagio/UICollectionViewLeftAlignedLayout
+ */
 @interface JMCollectionViewLeftAlignLayout : UICollectionViewFlowLayout
 
 @end

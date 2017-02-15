@@ -7,6 +7,8 @@
 //
 
 #import "JMSkuSelectedViewModel+MiddleCollectionView.h"
+#import "UIView+JMCategory.h"
+#import "JMSkuSelectedView.h"
 
 @implementation JMSkuSelectedViewModel (MiddleCollectionView)
 
@@ -55,10 +57,9 @@
             break;
         }
         case JMSkuSectionTypeNumSelected:
-            insets = UIEdgeInsetsMake(0, 0, JMSkuSelectedViewSkuItemSpacing, 0);
             break;
         default:
-            insets = UIEdgeInsetsZero;
+            break;
     }
     return insets;
 }
@@ -160,6 +161,9 @@
             
         case JMSkuSectionTypeSkuGroup: {
             NSInteger skuGroupIndex = section - 1;
+            JMSkuGroupModel *groupModel = self.skuGroupModels[skuGroupIndex];
+            //尺码助手显示在第一个分组后面
+            groupModel.usageText = skuGroupIndex == 0 ? @"尺码助手" : nil;
             return self.skuGroupModels[skuGroupIndex];
         }
     }
@@ -242,24 +246,29 @@
         self.skuNumSelectedModel.num -= 1;
     }
     
-    //下面只考虑禁止点击的情况
+    //选择0，完成时
+    if (self.skuNumSelectedModel.num == 0) {
+        [self.view showTip:@"超出最大范围"];
+    }
+    
     NSInteger maxStock = self.maxStockCurrent;
     
-    if (maxStock <= 1) {
-        self.skuNumSelectedModel.num = maxStock;
+    if (maxStock <= 0) {
+        self.skuNumSelectedModel.num = 1;
         self.skuNumSelectedModel.minusButtonState = UIControlStateDisabled;
         self.skuNumSelectedModel.addButtonState = UIControlStateDisabled;
     } else {
-        
         NSInteger selectedNum = self.skuNumSelectedModel.num;
-        if (selectedNum <= 1) {
+        
+        if (selectedNum > maxStock) {
+            [self.view showTip:@"超出最大范围"];
+            self.skuNumSelectedModel.num = maxStock;
+            //                self.skuNumSelectedModel.addButtonState = UIControlStateDisabled;
+        }
+        
+        if (self.skuNumSelectedModel.num <= 1) {
             self.skuNumSelectedModel.num = 1;
             self.skuNumSelectedModel.minusButtonState = UIControlStateDisabled;
-        } else {
-            if (selectedNum >= maxStock) {
-                self.skuNumSelectedModel.num = maxStock;
-                self.skuNumSelectedModel.addButtonState = UIControlStateDisabled;
-            }
         }
     }
 }

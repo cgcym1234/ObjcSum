@@ -6,6 +6,7 @@
 
 #import "SkuInfo.h"
 #import "NSObject+Additionals.h"
+#import "JMDataUtility.h"
 
 @interface SkuInfo ()
 @end
@@ -40,36 +41,21 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary skuTypeKeys:(NSArray <NSString *> *)skuTypeKeys
 {
 	self = [super init];
-	if(![dictionary[@"discount"] isKindOfClass:[NSNull class]]){
-		self.discount = dictionary[@"discount"];
-	}	
-	if(![dictionary[@"img"] isKindOfClass:[NSNull class]]){
-		self.img = dictionary[@"img"];
-	}	
-	if(![dictionary[@"jumei_price"] isKindOfClass:[NSNull class]]){
-		self.jumeiPrice = dictionary[@"jumei_price"];
-	}	
-	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
-		self.name = dictionary[@"name"];
-	}	
-	if(![dictionary[@"price_detail"] isKindOfClass:[NSNull class]]){
-		self.priceDetail = [[PriceDetail alloc] initWithDictionary:dictionary[@"price_detail"]];
-	}
-
-	if(![dictionary[@"refund_policy"] isKindOfClass:[NSNull class]]){
-		self.refundPolicy = dictionary[@"refund_policy"];
-	}
-	if(![dictionary[@"sku"] isKindOfClass:[NSNull class]]){
-		self.skuId = dictionary[@"sku"];
-	}	
-	if(![dictionary[@"stock"] isKindOfClass:[NSNull class]]){
-		self.stock = [dictionary[@"stock"] integerValue];
-	}
+    self.discount = stringInDictionaryForKey(dictionary, @"discount");
+    self.img = stringInDictionaryForKey(dictionary, @"img");
+    self.jumeiPrice = stringInDictionaryForKey(dictionary, @"jumei_price");
+    self.name = stringInDictionaryForKey(dictionary, @"name");
+    
+    self.priceDetail = [[PriceDetail alloc] initWithDictionary:dictionaryInDictionaryForKey(dictionary, @"price_detail")];
+    
+    self.refundPolicy = arrayInDictionaryForKey(dictionary, @"refund_policy");
+    self.skuId = stringInDictionaryForKey(dictionary, @"sku");
+    self.stock = [stringInDictionaryForKey(dictionary, @"stock") integerValue];
     
     if (skuTypeKeys.count > 0) {
         NSMutableDictionary *skuTypeValus = [NSMutableDictionary new];
         for (NSString *key in skuTypeKeys) {
-            [skuTypeValus setSafeObject:dictionary[key] forKey:key];
+            [skuTypeValus setSafeObject:stringInDictionaryForKey(dictionary, key) forKey:key];
         }
         self.skuTypeValus = skuTypeValus;
     }

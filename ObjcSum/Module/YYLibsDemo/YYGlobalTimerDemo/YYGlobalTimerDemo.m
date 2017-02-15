@@ -32,6 +32,49 @@
     [YYGlobalTimer addTaskForTarget:self key:@"task3" interval:1.999 action:^(NSDate *currentDate){
         yyLogError(@"task3   %@", [NSDate date]);
     } executedInMainThread:NO];
+    
+    
+    for (int i = 0; i < 3000; i++) {
+        NSString *KEY = [NSString stringWithFormat:@"key%d", i];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //多线程写
+            [YYGlobalTimer addTaskForTarget:self key:KEY interval:0.323 action:^(NSDate *currentDate){
+                yyLogInfo(@"task %@   %@", KEY, [NSDate date]);
+            } executedInMainThread:NO];
+        });
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //主线程读
+            BOOL result = [YYGlobalTimer isExistingTaskForTarget:self key:KEY];
+            NSLog(@"-------------------------------- result : %d", result);
+        });
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i < 3000; i++) {
+            NSString *KEY = [NSString stringWithFormat:@"key%d", i];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                //主线程读
+                BOOL result = [YYGlobalTimer isExistingTaskForTarget:self key:KEY];
+                NSLog(@"-------------------------------- result : %d", result);
+            });
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [YYGlobalTimer removeTaskForTarget:self key:KEY];
+            });
+            
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                //多线程写
+                [YYGlobalTimer addTaskForTarget:self key:KEY interval:0.323 action:^(NSDate *currentDate){
+                    yyLogInfo(@"task %@   %@", KEY, [NSDate date]);
+                } executedInMainThread:NO];
+            });
+        }
+    });
+    
+    
+    
 }
 
 

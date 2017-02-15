@@ -22,12 +22,12 @@
 
 - (NSString *)goodsImageCurrent {
     SkuInfo *locatedSkuInfo = self.locatedSkuInfo;
-    return  locatedSkuInfo ? locatedSkuInfo.img : self.goodsImage;
+    return  locatedSkuInfo.img ?: self.goodsImage;
 }
 
 - (NSString *)priceCurrent {
     SkuInfo *locatedSkuInfo = self.locatedSkuInfo;
-    return  locatedSkuInfo ? locatedSkuInfo.jumeiPrice : self.jumeiPrice;
+    return  locatedSkuInfo.jumeiPrice ?: self.jumeiPrice;
 }
 
 - (NSString *)stockCurrent {

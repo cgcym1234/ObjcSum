@@ -7,6 +7,7 @@
 //
 
 #import "SmallViewsController.h"
+#import "UIViewController+Extension.h"
 
 @interface SmallViewsController ()
 
@@ -25,6 +26,11 @@
     [self.view addSubview:self.progress];
     [self.view addSubview:self.slider];
     [self.view addSubview:self.switchV];
+    
+    __weak __typeof(self) weakSelf = self;
+    [self addButtonWithTitle:@"dismiss" action:^(UIButton *btn) {
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 #pragma mark - UISegmentedControl

@@ -7,13 +7,14 @@
 //
 
 #import "JMSkuSelectedViewModel.h"
-
+#import "JMSkuSelectedView.h"
 #import "JMSkuSelectedViewConsts.h"
 #import "JMSkuModel.h"
 #import "JMSkuSelectedViewModel+Network.h"
 #import "JMSkuSelectedViewModel+HeaderDisplayView.h"
 #import "JMSkuSelectedViewModel+MiddleCollectionView.h"
 #import "JMSkuSelectedViewModel+BottomConfirmView.h"
+#import "NSString+JMCategory.h"
 
 @implementation JMSkuSelectedViewModel
 
@@ -42,21 +43,25 @@
         self.jmSkuModel = skuModel;
         //skuDisplayModel
         JMSkuDisplayViewModel *skuDisplayModel = [JMSkuDisplayViewModel new];
-        skuDisplayModel.usageText = @"尺码助手";
+        
         
         //skuGroupModels
         NSMutableArray *skuGroupModels = [NSMutableArray new];
+        CGFloat maxCellWidth = [[self class] viewWidth] -  2 * JMSkuSelectedViewPaddingLeftRight;
         for (SkuGroupInfo *groupInfo in skuModel.skuGroupInfos) {
             JMSkuGroupModel *skuGroupModel = [JMSkuGroupModel new];
             skuGroupModel.groupName = groupInfo.title;
             skuGroupModel.type = groupInfo.type;
-            
+            skuGroupModel.canChangeImage = groupInfo.canChangeImage;
             //skuModels
             NSMutableArray *array = [NSMutableArray new];
-            for (NSString *itemName in groupInfo.items) {
+            for (int i = 0; i < groupInfo.items.count; i++) {
+                SkuGroupItem *item = groupInfo.items[i];
+                NSString *itemName = item.value;
                 JMSkuCellModel *cellModel = [JMSkuCellModel new];
                 cellModel.text = itemName;
-                cellModel.viewWidth = 80;
+                cellModel.attributeImage = item.img;
+                cellModel.viewWidth = MIN(maxCellWidth, ceilf([itemName widthForFont:JMSkuSelectedViewCellFont]) + 2*JMSkuSelectedViewPaddingLeftRight);
                 cellModel.group = skuGroupModel;
                 [array addObject:cellModel];
             }
@@ -82,11 +87,6 @@
     
     return self;
 }
-
-
-
-
-
 
 
 #pragma mark - 选中cellItem后重新计算流程

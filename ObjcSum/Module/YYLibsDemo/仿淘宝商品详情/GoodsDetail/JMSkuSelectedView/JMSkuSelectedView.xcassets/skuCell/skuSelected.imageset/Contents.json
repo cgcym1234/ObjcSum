@@ -12,16 +12,28 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 20,
-          "left" : 20
+          "right" : 25,
+          "left" : 25
         }
       },
       "idiom" : "universal",
-      "filename" : "skuDisable.png",
+      "filename" : "skuSelected.png",
       "scale" : "2x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 37,
+          "left" : 37
+        }
+      },
       "idiom" : "universal",
+      "filename" : "skuSelected@3x.png",
       "scale" : "3x"
     }
   ],

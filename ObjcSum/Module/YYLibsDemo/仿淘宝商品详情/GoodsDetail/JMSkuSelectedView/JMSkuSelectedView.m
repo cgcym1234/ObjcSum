@@ -102,6 +102,7 @@
         return;
     }
     _model = model;
+    _model.view = self;
     [self reloadData];
 }
 
@@ -141,17 +142,17 @@
    keyboardWithTransition:(YYKeyboardTransition)transition {
     CGRect keyboardFrame = [YYKeyboardManager defaultManager].keyboardFrame;
     //默认最底部
-    CGFloat contentOffsetY = 0;
+    CGFloat contentOffsetY = MAX(0, self.collectionView.contentSize.height - self.collectionView.bounds.size.height);
     self.collectionView.scrollEnabled = YES;
     
     //键盘显示
     if ([YYKeyboardManager defaultManager].keyboardVisible) {
-        CGPoint expectedPointInCollectionView = [self convertPoint:keyboardFrame.origin toView:self.collectionView];
-        contentOffsetY = self.collectionView.contentSize.height - expectedPointInCollectionView.y;
+//        CGPoint expectedPointInCollectionView = [self convertPoint:keyboardFrame.origin toView:self.collectionView];
+        contentOffsetY = self.collectionView.contentSize.height - self.skuNumSelectedView.height ;
         self.collectionView.scrollEnabled = NO;
     }
 
-    [self.collectionView setContentOffset:CGPointMake(0, contentOffsetY) animated:YES];
+    [self.collectionView setContentOffset:CGPointMake(0, contentOffsetY) animated:NO];
 }
 
 
@@ -176,10 +177,6 @@
 
 - (void)jmSkuNumSelectedCell:(JMSkuNumSelectedCell *)cell inputValueChanged:(NSString *)value {
     NSInteger inputNum = [value integerValue];
-    if (inputNum > _model.maxStockCurrent) {
-        [self showTip:@"超出最大范围"];
-    }
-    
     [_model refreshNumSelectedModelWithInputValue:inputNum];
     [self.skuNumSelectedView reloadData];
 }
@@ -207,6 +204,13 @@
         return nil;
     }
     JMSkuGroupHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[JMSkuGroupHeader jm_identifier] forIndexPath:indexPath];
+    __weak __typeof(self) weakSelf = self;
+    //尺码助手点击
+    header.usageButtonDidClickBlock = ^(JMSkuGroupHeader *view) {
+        if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
+            [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionUsage];
+        }
+    };
     id<JMComponentModel> model = [_model headerDataForItemAtIndexPath:indexPath];
     [header reloadWithData:model];
     return header;
@@ -258,11 +262,11 @@
             }
             [weakSelf dismiss];
         };
-        _skuDisplayView.usageButtonDidClickBlock = ^(JMSkuDisplayView *view) {
-            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
-                [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionUsage];
-            }
-        };
+//        _skuDisplayView.usageButtonDidClickBlock = ^(JMSkuDisplayView *view) {
+//            if ([weakSelf.delegate respondsToSelector:@selector(jmSkuSelectedView:didPerformAction:)]) {
+//                [weakSelf.delegate jmSkuSelectedView:weakSelf didPerformAction:JMSkuSelectedViewActionUsage];
+//            }
+//        };
     }
     return _skuDisplayView;
 }

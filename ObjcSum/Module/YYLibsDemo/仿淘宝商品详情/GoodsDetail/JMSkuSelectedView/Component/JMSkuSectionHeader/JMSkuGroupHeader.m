@@ -9,9 +9,10 @@
 #import "JMSkuGroupHeader.h"
 #import "UIView+JMCategory.h"
 #import "JMSkuSelectedViewConsts.h"
+#import "YYRightImageButton.h"
+#import "NSString+JMCategory.h"
 
 #pragma mark - Const
-
 
 
 @implementation JMSkuGroupModel
@@ -40,6 +41,23 @@
     [self addBorderTopPadding:JMSkuSelectedViewPaddingLeftRight height:kSplitLineHeightFix(1) color:JMSkuSelectedViewSepratorColor];
     
     _skuGroupNameLabel.text = nil;
+    [self setupUseageButton];
+}
+
+- (void)setupUseageButton {
+    _useageButton.textLabelFont = [UIFont systemFontOfSize:12];
+    _useageButton.textLabelColor = ColorFromRGBHex(0xFE4070);
+    _useageButton.backgroundColor = [UIColor whiteColor];
+    _useageButton.spacing = 2;
+    _useageButton.image = [UIImage imageNamed:@"sku_usage"];
+    _useageButton.imageSize = CGSizeMake(11, 11);
+    
+    __weak __typeof(self) weakSelf = self;
+    _useageButton.didClickBlock = ^(YYRightImageButton *button) {
+        if (weakSelf.usageButtonDidClickBlock) {
+            weakSelf.usageButtonDidClickBlock(weakSelf);
+        }
+    };
 }
 
 #pragma mark - Override
@@ -56,6 +74,9 @@
     }
     _model = model;
     _skuGroupNameLabel.text = _model.groupName;
+    
+    _useageButton.text = _model.usageText;
+    _useageButton.hidden = !_useageButton.text.isNotBlank;
 }
 
 #pragma mark - Private

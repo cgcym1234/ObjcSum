@@ -112,11 +112,15 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
                 if (_durationMS % task.intervalMS == 0) {
                     if (task.executedInMainThread) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            task.task(currentDate);
+                            if (task.target && task.task) {
+                                task.task(currentDate);
+                            }
                         });
                     } else {
                         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                            task.task(currentDate);
+                            if (task.target && task.task) {
+                                task.task(currentDate);
+                            }
                         });
                     }
                 }
@@ -244,7 +248,10 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 }
 
 - (void)addTask:(nonnull YYGlobalTimerTask *)task {
-    dispatch_async(_serialQueue, ^{
+    if (!task) {
+        return;
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
         YYGlobalTimerTaskDict *targetTasksDict = _targetTasksDict[task.targetName];
         if (targetTasksDict != nil) {
             targetTasksDict[task.taskName] = task;
@@ -266,7 +273,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     }
     
     NSString *targetKey = [self keyOfTarget:target];
-    dispatch_async(_serialQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         if (key != nil) {
             //删除target上指定任务
             [_targetTasksDict[targetKey] removeObjectForKey:key];
@@ -279,7 +286,7 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
 }
 
 - (void)removeAllTask {
-    dispatch_async(_serialQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         [_targetTasksDict removeAllObjects];
         [self pause];
     });
@@ -296,9 +303,14 @@ typedef NSMutableDictionary<NSString *, YYGlobalTimerTask *> YYGlobalTimerTaskDi
     
     __block BOOL isExisting = NO;
     NSString *targetKey = [self keyOfTarget:target];
-    dispatch_sync(_serialQueue, ^{
+    if ([NSThread isMainThread]) {
         isExisting = [[_targetTasksDict valueForKey:targetKey] valueForKey:key] != nil;
-    });
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            isExisting = [[_targetTasksDict valueForKey:targetKey] valueForKey:key] != nil;
+        });
+    }
+    
     return isExisting;
 }
 

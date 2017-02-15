@@ -8,7 +8,7 @@
 
 @property (nonatomic, strong) NSArray<SkuInfo *> *skuInfos;
 
-@property (nonatomic, readonly) NSInteger stock;
+@property (nonatomic, assign) NSInteger stock;
 @property (nonatomic, strong, readonly) NSString *unit;
 
 /* sku类型key和代表值的字典，比如

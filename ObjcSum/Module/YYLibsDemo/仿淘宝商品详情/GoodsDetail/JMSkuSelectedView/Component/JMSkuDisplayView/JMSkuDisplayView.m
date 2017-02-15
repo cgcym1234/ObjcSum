@@ -57,24 +57,24 @@
     [_closeButton addTarget:self action:@selector(closeButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
     
     ;
-    [self setupUseageButton];
+//    [self setupUseageButton];
 }
 
-- (void)setupUseageButton {
-    _useageButton.textLabelFont = [UIFont systemFontOfSize:12];
-    _useageButton.textLabelColor = ColorFromRGBHex(0xFE4070);
-    _useageButton.backgroundColor = [UIColor whiteColor];
-    _useageButton.spacing = 2;
-    _useageButton.image = [UIImage imageNamed:@"sku_usage"];
-    _useageButton.imageSize = CGSizeMake(11, 11);
-    
-    __weak __typeof(self) weakSelf = self;
-    _useageButton.didClickBlock = ^(YYRightImageButton *button) {
-        if (weakSelf.usageButtonDidClickBlock) {
-            weakSelf.usageButtonDidClickBlock(weakSelf);
-        }
-    };
-}
+//- (void)setupUseageButton {
+//    _useageButton.textLabelFont = [UIFont systemFontOfSize:12];
+//    _useageButton.textLabelColor = ColorFromRGBHex(0xFE4070);
+//    _useageButton.backgroundColor = [UIColor whiteColor];
+//    _useageButton.spacing = 2;
+//    _useageButton.image = [UIImage imageNamed:@"sku_usage"];
+//    _useageButton.imageSize = CGSizeMake(11, 11);
+//    
+//    __weak __typeof(self) weakSelf = self;
+//    _useageButton.didClickBlock = ^(YYRightImageButton *button) {
+//        if (weakSelf.usageButtonDidClickBlock) {
+//            weakSelf.usageButtonDidClickBlock(weakSelf);
+//        }
+//    };
+//}
 
 #pragma mark - Override
 
@@ -117,8 +117,8 @@
     if (refreshImage) {
 //        [_imageView setImageWithURL:_model.skuImageName animation:nil];
     }
-    _useageButton.text = _model.usageText;
-    _useageButton.hidden = !_useageButton.text.isNotBlank;
+//    _useageButton.text = _model.usageText;
+//    _useageButton.hidden = !_useageButton.text.isNotBlank;
 }
 
 - (void)setDepositPriceLabelHidden:(BOOL)hidden {

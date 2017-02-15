@@ -21,6 +21,8 @@ static NSString * const CellIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.dataArr = @[
+                    [[LibDemoInfo alloc] initWithTitle:@"PushPresentDemo" desc:@"Push或Present时监听" controllerName:@"PushPresentDemo"],
+                     
                    [[LibDemoInfo alloc] initWithTitle:@"TableView相关" desc:@"TableView相关" controllerName:@"TableViewDemoController"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"CALayer相关" desc:@"CALayer相关" controllerName:@"CALayerDemoController"],

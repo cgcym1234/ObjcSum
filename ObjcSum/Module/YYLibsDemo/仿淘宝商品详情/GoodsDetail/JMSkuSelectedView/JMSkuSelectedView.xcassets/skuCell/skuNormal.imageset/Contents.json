@@ -12,8 +12,8 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 20,
-          "left" : 20
+          "right" : 25,
+          "left" : 25
         }
       },
       "idiom" : "universal",
@@ -21,7 +21,19 @@
       "scale" : "2x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 37,
+          "left" : 37
+        }
+      },
       "idiom" : "universal",
+      "filename" : "skuNormal@3x.png",
       "scale" : "3x"
     }
   ],

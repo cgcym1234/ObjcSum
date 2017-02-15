@@ -9,6 +9,24 @@
 #import "JMCollectionViewLeftAlignLayout.h"
 #import "JMSkuSelectedViewConsts.h"
 
+@interface UICollectionViewLayoutAttributes (LeftAligned)
+
+- (void)leftAlignFrameWithSectionInset:(UIEdgeInsets)sectionInset;
+
+@end
+
+@implementation UICollectionViewLayoutAttributes (LeftAligned)
+
+- (void)leftAlignFrameWithSectionInset:(UIEdgeInsets)sectionInset
+{
+    CGRect frame = self.frame;
+    frame.origin.x = sectionInset.left;
+    self.frame = frame;
+}
+
+@end
+
+
 @interface JMCollectionViewLeftAlignLayout ()
 
 @end
@@ -17,44 +35,84 @@
 
 - (void)prepareLayout {
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
-//    self.minimumInteritemSpacing = JMSkuSelectedViewSkuItemSpacing;
-//    self.minimumLineSpacing = JMSkuSelectedViewSkuLineSpacing;
-//    self.sectionInset = UIEdgeInsetsMake(0, JMSkuSelectedViewPaddingLeftRight, JMSkuSelectedViewSkuItemSpacing, JMSkuSelectedViewPaddingLeftRight);
+    //    self.minimumInteritemSpacing = JMSkuSelectedViewSkuItemSpacing;
+    //    self.minimumLineSpacing = JMSkuSelectedViewSkuLineSpacing;
+    //    self.sectionInset = UIEdgeInsetsMake(0, JMSkuSelectedViewPaddingLeftRight, JMSkuSelectedViewSkuItemSpacing, JMSkuSelectedViewPaddingLeftRight);
     self.footerReferenceSize = CGSizeZero;
     self.headerReferenceSize = CGSizeZero;
     self.itemSize = CGSizeMake(10, 10);
 }
 
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-    return YES;
-}
-
-- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSArray<UICollectionViewLayoutAttributes *> *attributes = [super layoutAttributesForElementsInRect:rect];
-    NSMutableArray<UICollectionViewLayoutAttributes *> *attris = [[NSMutableArray alloc] initWithArray:attributes copyItems:YES];
-    
-    if (attris.count > 0) {
-        CGFloat maxX = self.collectionView.bounds.size.width - (self.sectionInset.left + self.sectionInset.right);
-        UICollectionViewLayoutAttributes *attrPrev = attributes.firstObject;
-        UICollectionViewLayoutAttributes *attrCurrent = attributes.firstObject;
-        
-        for (int i = 1; i < attris.count; i++) {
-            attrCurrent = attris[i];
-            CGFloat prevCellMaxX = CGRectGetMaxX(attrPrev.frame);
-            if (prevCellMaxX < maxX - self.minimumInteritemSpacing ) {
-                CGFloat expectedCurrentCellX = prevCellMaxX + self.minimumInteritemSpacing;
-                CGFloat currentCellWith = attrCurrent.frame.size.width;
-                if (expectedCurrentCellX != attrCurrent.frame.origin.x && expectedCurrentCellX + currentCellWith <= maxX) {
-                    attrCurrent.frame = CGRectMake(expectedCurrentCellX, attrCurrent.frame.origin.y, currentCellWith, attrCurrent.frame.size.height);
-                }
-            }
-            attrPrev = attrCurrent;
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
+    NSArray *originalAttributes = [super layoutAttributesForElementsInRect:rect];
+    NSMutableArray *updatedAttributes = [NSMutableArray arrayWithArray:originalAttributes];
+    for (UICollectionViewLayoutAttributes *attributes in originalAttributes) {
+        if (!attributes.representedElementKind) {
+            NSUInteger index = [updatedAttributes indexOfObject:attributes];
+            updatedAttributes[index] = [self layoutAttributesForItemAtIndexPath:attributes.indexPath];
         }
     }
     
-    return attris;
+    return updatedAttributes;
 }
 
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewLayoutAttributes* currentItemAttributes = [[super layoutAttributesForItemAtIndexPath:indexPath] copy];
+    UIEdgeInsets sectionInset = [self evaluatedSectionInsetForItemAtIndex:indexPath.section];
+    
+    BOOL isFirstItemInSection = indexPath.item == 0;
+    CGFloat layoutWidth = CGRectGetWidth(self.collectionView.frame) - sectionInset.left - sectionInset.right;
+    
+    if (isFirstItemInSection) {
+        [currentItemAttributes leftAlignFrameWithSectionInset:sectionInset];
+        return currentItemAttributes;
+    }
+    
+    NSIndexPath* previousIndexPath = [NSIndexPath indexPathForItem:indexPath.item-1 inSection:indexPath.section];
+    CGRect previousFrame = [self layoutAttributesForItemAtIndexPath:previousIndexPath].frame;
+    CGFloat previousFrameRightPoint = previousFrame.origin.x + previousFrame.size.width;
+    CGRect currentFrame = currentItemAttributes.frame;
+    CGRect strecthedCurrentFrame = CGRectMake(sectionInset.left,
+                                              currentFrame.origin.y,
+                                              layoutWidth,
+                                              currentFrame.size.height);
+    // if the current frame, once left aligned to the left and stretched to the full collection view
+    // widht intersects the previous frame then they are on the same line
+    BOOL isFirstItemInRow = !CGRectIntersectsRect(previousFrame, strecthedCurrentFrame);
+    
+    if (isFirstItemInRow) {
+        // make sure the first item on a line is left aligned
+        [currentItemAttributes leftAlignFrameWithSectionInset:sectionInset];
+        return currentItemAttributes;
+    }
+    
+    CGRect frame = currentItemAttributes.frame;
+    frame.origin.x = previousFrameRightPoint + [self evaluatedMinimumInteritemSpacingForSectionAtIndex:indexPath.section];
+    currentItemAttributes.frame = frame;
+    return currentItemAttributes;
+}
+
+- (CGFloat)evaluatedMinimumInteritemSpacingForSectionAtIndex:(NSInteger)sectionIndex
+{
+    if ([self.collectionView.delegate respondsToSelector:@selector(collectionView:layout:minimumInteritemSpacingForSectionAtIndex:)]) {
+        id<UICollectionViewDelegateFlowLayout> delegate = (id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate;
+        
+        return [delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:sectionIndex];
+    } else {
+        return self.minimumInteritemSpacing;
+    }
+}
+
+- (UIEdgeInsets)evaluatedSectionInsetForItemAtIndex:(NSInteger)index
+{
+    if ([self.collectionView.delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
+        id<UICollectionViewDelegateFlowLayout> delegate = (id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate;
+        
+        return [delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:index];
+    } else {
+        return self.sectionInset;
+    }
+}
 
 @end
 

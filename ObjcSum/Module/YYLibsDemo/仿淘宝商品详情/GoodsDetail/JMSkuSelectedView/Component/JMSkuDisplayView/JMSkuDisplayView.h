@@ -13,7 +13,7 @@
 @class JMSkuDisplayView;
 
 typedef void(^JMSkuDisplayViewCloseButtonDidClickBlock)(JMSkuDisplayView *button);
-typedef void(^JMSkuDisplayViewUsageButtonDidClickBlock)(JMSkuDisplayView *button);
+//typedef void(^JMSkuDisplayViewUsageButtonDidClickBlock)(JMSkuDisplayView *button);
 
 @interface JMSkuDisplayViewModel : NSObject<JMComponentModel>
 
@@ -27,7 +27,7 @@ typedef void(^JMSkuDisplayViewUsageButtonDidClickBlock)(JMSkuDisplayView *button
 
 @property (nonatomic, copy) NSString *stock;
 @property (nonatomic, copy) NSString *selectingTip;
-@property (nonatomic, copy) NSString *usageText;
+//@property (nonatomic, copy) NSString *usageText;
 
 //94
 + (CGFloat)viewHeight;
@@ -49,12 +49,12 @@ typedef void(^JMSkuDisplayViewUsageButtonDidClickBlock)(JMSkuDisplayView *button
 @property (nonatomic, weak) IBOutlet UILabel *stockLabel;
 @property (nonatomic, weak) IBOutlet UILabel *selectingTipLabel;
 @property (nonatomic, weak) IBOutlet UIButton *closeButton;
-@property (nonatomic, weak) IBOutlet YYRightImageButton *useageButton;
+//@property (nonatomic, weak) IBOutlet YYRightImageButton *useageButton;
 
 
 @property (nonatomic, strong) JMSkuDisplayViewModel *model;
 @property (nonatomic, copy) JMSkuDisplayViewCloseButtonDidClickBlock closeButtonDidClickBlock;
-@property (nonatomic, copy) JMSkuDisplayViewUsageButtonDidClickBlock usageButtonDidClickBlock;
+//@property (nonatomic, copy) JMSkuDisplayViewUsageButtonDidClickBlock usageButtonDidClickBlock;
 
 + (instancetype)instanceFromNib;
 - (void)reloadWithData:(id<JMComponentModel>)model;

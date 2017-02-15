@@ -5,6 +5,7 @@
 
 
 #import "PriceDetail.h"
+#import "JMDataUtility.h"
 
 @interface PriceDetail ()
 @end
@@ -20,12 +21,9 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
-	if(![dictionary[@"desp"] isKindOfClass:[NSNull class]]){
-		self.desp = dictionary[@"desp"];
-	}	
-	if(![dictionary[@"title"] isKindOfClass:[NSNull class]]){
-		self.title = dictionary[@"title"];
-	}	
+    self.desp = stringInDictionaryForKey(dictionary, @"desp");
+    self.title = stringInDictionaryForKey(dictionary, @"title");
+
 	return self;
 }
 

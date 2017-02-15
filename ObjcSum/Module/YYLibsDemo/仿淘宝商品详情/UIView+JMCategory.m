@@ -20,7 +20,7 @@
 }
 
 - (void)showTip:(NSString *)tip animated:(BOOL)animated duration:(CGFloat)duration {
-    [YYHud showTip:tip duration:duration];
+    [YYHud showInView:nil image:nil str:tip duration:2 maskType:YYHudMaskTypeNone];
 }
 
 + (UINib *)jm_nib {
