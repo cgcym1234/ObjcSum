@@ -26,6 +26,8 @@
     __weak typeof(self) weakSelf = self;
     [self addButtonWithTitle:@"隐藏左边按钮" action:^(UIButton *btn) {
         weakSelf.leftLabel.text = @"";
+//        weakSelf.leftLabel.attributedText =  [[NSMutableAttributedString alloc] initWithString:nil];
+        CGSize size =  weakSelf.leftLabel.intrinsicContentSize;
         [weakSelf setLeftLabelHidden:weakSelf.leftLabel.text.length == 0];
     }];
 }

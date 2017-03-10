@@ -14,6 +14,43 @@
 
 @implementation BaseNavigationController
 
+
+//+ (void) setJMNavigationBarAppearance
+//{
+//    id appearance = [UINavigationBar appearance];
+//    
+//    //设置NavigationBar底部横线
+//    if ([UINavigationBar instanceMethodForSelector:@selector(setBackgroundImage:)]) {
+//        [appearance setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+//    }
+//    if ([UINavigationBar instanceMethodForSelector:@selector(setShadowImage:)]) {
+//        [appearance setShadowImage:[self lineImageWithColor:[UIColor colorWithHexString:@"#EEEEEE"]]];
+//    }
+//    
+//}
+//
+//+ (UIImage *)lineImageWithColor:(UIColor *)color
+//{
+//    CGFloat scale = [UIScreen mainScreen].scale;
+//    CGFloat sideLine = 1.0f * scale;
+//    CGRect rect = CGRectMake(0.0f, 0.0f, sideLine, sideLine);
+//    CGRect topRect = CGRectMake(0.0f, 0.0f, sideLine, sideLine-1.0f);
+//    CGRect bottomRect = CGRectMake(0.0f, sideLine-1.0f, sideLine, 1.0f);
+//    UIGraphicsBeginImageContext(rect.size);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    
+//    CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
+//    CGContextFillRect(context, topRect);
+//    CGContextSetFillColorWithColor(context, [color CGColor]);
+//    CGContextFillRect(context, bottomRect);
+//    
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    image = [UIImage imageWithCGImage:image.CGImage scale:scale orientation:UIImageOrientationUp];
+//    
+//    return image;
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationBar setTranslucent:NO];

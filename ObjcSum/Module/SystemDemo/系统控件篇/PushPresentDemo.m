@@ -21,9 +21,9 @@
     [super viewDidLoad];
     __weak typeof(self) weakSelf = self;
     [self addButtonWithTitle:@"push" action:^(UIButton *btn) {
-        UIViewController *vc = [weakSelf.class new];
-        vc.view.backgroundColor = [UIColor redColor];
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+//        UIViewController *vc = [weakSelf.class new];
+//        vc.view.backgroundColor = [UIColor redColor];
+//        [weakSelf.navigationController pushViewController:vc animated:YES];
         [weakSelf pushVC];
     }];
     
@@ -43,16 +43,20 @@
 //    } executedInMainThread:YES];
     
     
-    [YYGlobalTimer addTaskForTarget:self key:@"sss" interval:0.1 action:^(NSDate * _Nonnull currentDate) {
-        NSLog(@"isMovingToParentViewController = %d", weakSelf.isMovingToParentViewController);
-    } executedInMainThread:YES];
+//    [YYGlobalTimer addTaskForTarget:self key:@"sss" interval:0.1 action:^(NSDate * _Nonnull currentDate) {
+//        NSLog(@"isMovingToParentViewController = %d", weakSelf.isMovingToParentViewController);
+//        NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+//    } executedInMainThread:NO];
     
-    [self pushVC];
+//    [self pushVC];
 //    [self pushSelf];
     //  在低版本中当前现实的View有可能会出：《返回就崩了。。
     //    iOS7.1.2 :
     //    2015-12-13 11:41:33.837 xxx[4418:60b] nested push animation can result in corrupted navigation bar
     //    2015-12-13 11:41:34.195 xxx[4418:60b] Finishing up a navigation transition in an unexpected state. Navigation Bar subview tree might get corrupted.
+    
+    
+    [self setupNavigationLeftItems];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -74,6 +78,45 @@
     }
 }
 
+- (void)setupNavigationLeftItems {
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backsNextControllerEvent:)];
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
+}
+
+- (void)dealloc {
+    
+    NSLog(@"--------dealloc------------weakSelf.view.window = %@", self.view.window);
+}
+
+- (void)backsNextControllerEvent:(id)sender {
+    __weak __typeof(self) weakSelf = self;
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    NSLog(@"weakSelf.view = %@", weakSelf.view);
+    NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"weakSelf.view = %@", weakSelf.view);
+        NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"weakSelf.view = %@", weakSelf.view);
+        NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"weakSelf.view = %@", weakSelf.view);
+        NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"weakSelf.view = %@", weakSelf.view);
+        NSLog(@"weakSelf.view.window = %@", weakSelf.view.window);
+    });
+    
+}
+
 - (void)willMoveToParentViewController:(UIViewController *)parent {
     [super willMoveToParentViewController:parent];
     NSLog(@"willMoveToParentViewController");
@@ -83,7 +126,12 @@
     UIViewController *vc = [SmallViewsController new];
     vc.view.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:NO];
     [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController pushViewController:vc animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:[[SmallViewsController alloc] init] animated:YES];//0.x秒后push
+    });
 }
 
 - (void)pushSelf {

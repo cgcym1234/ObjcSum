@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArr = @[
+                     [[LibDemoInfo alloc] initWithTitle:@"PushPresentDemo" desc:@"Push或Present时监听" controllerName:@"PushPresentDemo"],
                    [[LibDemoInfo alloc] initWithTitle:@"YYGlobalTimerDemo" desc:@"全局定时器" controllerName:@"YYGlobalTimerDemo"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"AutoLayoutDemo" desc:@"AutoLayout测试" controllerName:@"AutoLayoutDemo"],

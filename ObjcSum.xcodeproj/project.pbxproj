@@ -822,6 +822,12 @@
 		EE5FE8981DBD91E000CB2FF0 /* YYGlobalTimerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */; };
 		EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */; };
 		EE6113EF1DE69B3500A9113A /* ArchitectureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */; };
+		EE72A6D81E72426600A34272 /* LoadAndInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6D71E72426600A34272 /* LoadAndInitialize.m */; };
+		EE72A6F31E724C3600A34272 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6EA1E724C3600A34272 /* Father.m */; };
+		EE72A6F41E724C3600A34272 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6EC1E724C3600A34272 /* Son.m */; };
+		EE72A6F51E724C3600A34272 /* Son+load.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6EE1E724C3600A34272 /* Son+load.m */; };
+		EE72A6F61E724C3600A34272 /* Other.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6F01E724C3600A34272 /* Other.m */; };
+		EE72A6F71E724C3600A34272 /* Other+initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6F21E724C3600A34272 /* Other+initialize.m */; };
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
@@ -2221,6 +2227,18 @@
 		EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYGlobalTimerDemo.xib; sourceTree = "<group>"; };
 		EE6113ED1DE69B3500A9113A /* ArchitectureDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchitectureDemo.h; sourceTree = "<group>"; };
 		EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchitectureDemo.m; sourceTree = "<group>"; };
+		EE72A6D61E72426600A34272 /* LoadAndInitialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadAndInitialize.h; sourceTree = "<group>"; };
+		EE72A6D71E72426600A34272 /* LoadAndInitialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadAndInitialize.m; sourceTree = "<group>"; };
+		EE72A6E91E724C3600A34272 /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		EE72A6EA1E724C3600A34272 /* Father.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
+		EE72A6EB1E724C3600A34272 /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		EE72A6EC1E724C3600A34272 /* Son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		EE72A6ED1E724C3600A34272 /* Son+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Son+load.h"; sourceTree = "<group>"; };
+		EE72A6EE1E724C3600A34272 /* Son+load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Son+load.m"; sourceTree = "<group>"; };
+		EE72A6EF1E724C3600A34272 /* Other.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Other.h; sourceTree = "<group>"; };
+		EE72A6F01E724C3600A34272 /* Other.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Other.m; sourceTree = "<group>"; };
+		EE72A6F11E724C3600A34272 /* Other+initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Other+initialize.h"; sourceTree = "<group>"; };
+		EE72A6F21E724C3600A34272 /* Other+initialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Other+initialize.m"; sourceTree = "<group>"; };
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
@@ -3683,8 +3701,8 @@
 				EE4C248C1DAF97E7008924A3 /* block原理 */,
 				EE4C248F1DAF97E7008924A3 /* ObjectiveCDemo.h */,
 				EE4C24901DAF97E7008924A3 /* ObjectiveCDemo.m */,
-				EE4C24911DAF97E7008924A3 /* ObjectiveCPointor.h */,
-				EE4C24921DAF97E7008924A3 /* ObjectiveCPointor.m */,
+				EE72A6D91E72426A00A34272 /* load和initialize */,
+				EE72A6D51E7241F700A34272 /* OC和C指针转换 */,
 			);
 			path = "ObjectiveC相关";
 			sourceTree = "<group>";
@@ -5529,6 +5547,34 @@
 			path = "巧用Extension分离接口依赖";
 			sourceTree = "<group>";
 		};
+		EE72A6D51E7241F700A34272 /* OC和C指针转换 */ = {
+			isa = PBXGroup;
+			children = (
+				EE4C24911DAF97E7008924A3 /* ObjectiveCPointor.h */,
+				EE4C24921DAF97E7008924A3 /* ObjectiveCPointor.m */,
+			);
+			name = "OC和C指针转换";
+			sourceTree = "<group>";
+		};
+		EE72A6D91E72426A00A34272 /* load和initialize */ = {
+			isa = PBXGroup;
+			children = (
+				EE72A6D61E72426600A34272 /* LoadAndInitialize.h */,
+				EE72A6D71E72426600A34272 /* LoadAndInitialize.m */,
+				EE72A6E91E724C3600A34272 /* Father.h */,
+				EE72A6EA1E724C3600A34272 /* Father.m */,
+				EE72A6EB1E724C3600A34272 /* Son.h */,
+				EE72A6EC1E724C3600A34272 /* Son.m */,
+				EE72A6ED1E724C3600A34272 /* Son+load.h */,
+				EE72A6EE1E724C3600A34272 /* Son+load.m */,
+				EE72A6EF1E724C3600A34272 /* Other.h */,
+				EE72A6F01E724C3600A34272 /* Other.m */,
+				EE72A6F11E724C3600A34272 /* Other+initialize.h */,
+				EE72A6F21E724C3600A34272 /* Other+initialize.m */,
+			);
+			name = "load和initialize";
+			sourceTree = "<group>";
+		};
 		EE8068CB1D992D03006E69F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -6332,6 +6378,7 @@
 				EE4C28C11DAF97E9008924A3 /* YYMessageModel.m in Sources */,
 				EE4C28371DAF97E9008924A3 /* LoginViewController.m in Sources */,
 				EE9F1A0F1DE84233006AD033 /* JMProductGallery.m in Sources */,
+				EE72A6F71E724C3600A34272 /* Other+initialize.m in Sources */,
 				EE4C283C1DAF97E9008924A3 /* tree_t.c in Sources */,
 				EE4C28751DAF97E9008924A3 /* LocalNotificationDemo.m in Sources */,
 				EE4C28BF1DAF97E9008924A3 /* YYMessageViewController.m in Sources */,
@@ -6374,6 +6421,7 @@
 				EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */,
 				EE4C28FC1DAF97E9008924A3 /* GoodsDetailGraphicViewController.m in Sources */,
 				EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */,
+				EE72A6F61E724C3600A34272 /* Other.m in Sources */,
 				EE270DD51E1BC675005BA294 /* NSString+TransformToDisplay.m in Sources */,
 				EE4C291F1DAF97E9008924A3 /* AFURLSessionManager.m in Sources */,
 				EE4C28F21DAF97E9008924A3 /* YYWebImageManager.m in Sources */,
@@ -6484,6 +6532,7 @@
 				EE4C293A1DAF97EA008924A3 /* DNSendButton.m in Sources */,
 				EE4C282B1DAF97E9008924A3 /* AppInfo.m in Sources */,
 				EE4C28991DAF97E9008924A3 /* SqlliteDemo.m in Sources */,
+				EE72A6F51E724C3600A34272 /* Son+load.m in Sources */,
 				EE4C28901DAF97E9008924A3 /* ReactiveCocoaDemo.m in Sources */,
 				EE4B96771DC5D60200CCFB95 /* UIDemosController.m in Sources */,
 				EE4C290F1DAF97E9008924A3 /* NSObject+Debug.m in Sources */,
@@ -6529,6 +6578,7 @@
 				EE4C295B1DAF97EA008924A3 /* MJRefreshBackStateFooter.m in Sources */,
 				EE4C28EF1DAF97E9008924A3 /* YYMultiImageButton.m in Sources */,
 				EE4C29B11DAF97EA008924A3 /* UICollectionReusableView+RACSignalSupport.m in Sources */,
+				EE72A6F31E724C3600A34272 /* Father.m in Sources */,
 				EE4C29A01DAF97EA008924A3 /* RACStream.m in Sources */,
 				EE4C29AA1DAF97EA008924A3 /* RACUnarySequence.m in Sources */,
 				EE4C29831DAF97EA008924A3 /* RACDelegateProxy.m in Sources */,
@@ -6746,8 +6796,10 @@
 				EE270DCD1E1B70C3005BA294 /* UIView+Utils.m in Sources */,
 				EE4C29861DAF97EA008924A3 /* RACDynamicSignal.m in Sources */,
 				EE4C286A1DAF97E9008924A3 /* TouchEventDemo.m in Sources */,
+				EE72A6D81E72426600A34272 /* LoadAndInitialize.m in Sources */,
 				EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */,
 				EE4C283E1DAF97E9008924A3 /* YYFileManager.c in Sources */,
+				EE72A6F41E724C3600A34272 /* Son.m in Sources */,
 				EE4C29221DAF97E9008924A3 /* DTConstants.m in Sources */,
 				EE4C29901DAF97EA008924A3 /* RACKVOProxy.m in Sources */,
 				EE270DE11E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m in Sources */,
