@@ -872,6 +872,7 @@
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
+		EEE795A41E8A048200B56C6E /* WeakDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795A31E8A048200B56C6E /* WeakDemo.m */; };
 		EEEDF9851E2659AE00CF9268 /* JMSkuMockData2.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */; };
 		EEEDF9861E2659AE00CF9268 /* JMSkuMockData3.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */; };
 		EEEDF9871E2659AE00CF9268 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF9801E2659AE00CF9268 /* JMSkuModel.m */; };
@@ -2321,6 +2322,8 @@
 		EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemo.m; sourceTree = "<group>"; };
 		EEDCCB751DC03ABA00715955 /* HYEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEdgeInsetsButton.h; sourceTree = "<group>"; };
 		EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEdgeInsetsButton.m; sourceTree = "<group>"; };
+		EEE795A21E8A048200B56C6E /* WeakDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakDemo.h; sourceTree = "<group>"; };
+		EEE795A31E8A048200B56C6E /* WeakDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakDemo.m; sourceTree = "<group>"; };
 		EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData2.plist; sourceTree = "<group>"; };
 		EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData3.plist; sourceTree = "<group>"; };
 		EEEDF97F1E2659AE00CF9268 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
@@ -2444,6 +2447,7 @@
 				EE01F1381E4B180D003276B5 /* PushPresentDemo.m */,
 			);
 			name = "Push或present判断";
+			path = "Push或present判断";
 			sourceTree = "<group>";
 		};
 		EE270D7C1E1B6FE6005BA294 /* JMSkuSelectedView */ = {
@@ -2451,14 +2455,14 @@
 			children = (
 				EE270D7D1E1B6FE6005BA294 /* API */,
 				EE270D871E1B6FE6005BA294 /* Component */,
+				EE270DA81E1B6FE6005BA294 /* JMSkuSelectedViewModel */,
+				EE270DAD1E1B6FE6005BA294 /* Vender */,
 				EE270DA01E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.h */,
 				EE270DA11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m */,
 				EE270DA41E1B6FE6005BA294 /* JMSkuSelectedView.h */,
 				EE270DA51E1B6FE6005BA294 /* JMSkuSelectedView.m */,
 				EE270DA61E1B6FE6005BA294 /* JMSkuSelectedView.xcassets */,
 				EE270DA71E1B6FE6005BA294 /* JMSkuSelectedViewConsts.h */,
-				EE270DA81E1B6FE6005BA294 /* JMSkuSelectedViewModel */,
-				EE270DAD1E1B6FE6005BA294 /* Vender */,
 			);
 			path = JMSkuSelectedView;
 			sourceTree = "<group>";
@@ -2547,12 +2551,12 @@
 			isa = PBXGroup;
 			children = (
 				EE270DE51E1C9A1A005BA294 /* Model */,
+				EE270DDF1E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.h */,
+				EE270DE01E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m */,
 				EE270DD91E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.h */,
 				EE270DDA1E1BC8E5005BA294 /* JMSkuSelectedViewModel+HeaderDisplayView.m */,
 				EE270DDC1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.h */,
 				EE270DDD1E1BC904005BA294 /* JMSkuSelectedViewModel+MiddleCollectionView.m */,
-				EE270DDF1E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.h */,
-				EE270DE01E1BC914005BA294 /* JMSkuSelectedViewModel+BottomConfirmView.m */,
 				EE270DE21E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.h */,
 				EE270DE31E1BC9B9005BA294 /* JMSkuSelectedViewModel+Network.m */,
 				EE270DAB1E1B6FE6005BA294 /* JMSkuSelectedViewModel.h */,
@@ -2564,8 +2568,8 @@
 		EE270DAD1E1B6FE6005BA294 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				EE270E5B1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel */,
 				EE270DAE1E1B6FE6005BA294 /* JMComponent */,
+				EE270E5B1E1D08B5005BA294 /* YYInputAccessoryViewWithCancel */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -2684,7 +2688,6 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
-				EE270E611E1D0991005BA294 /* YYInputAccessoryViewWithCancel */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
 				EE2A1F661DAF6D79001F9A2E /* YYAlertGridView */,
@@ -2703,6 +2706,7 @@
 				EE2A1FA71DAF6D79001F9A2E /* YYHud */,
 				EE2A1FAC1DAF6D79001F9A2E /* YYImageBrowser */,
 				EE2A1FB71DAF6D79001F9A2E /* YYImageView */,
+				EE270E611E1D0991005BA294 /* YYInputAccessoryViewWithCancel */,
 				EE2A1FBE1DAF6D79001F9A2E /* YYKit */,
 				EE2A20281DAF6D79001F9A2E /* YYLabel */,
 				EE4C2C0B1DB07161008924A3 /* YYLog */,
@@ -3239,6 +3243,7 @@
 			isa = PBXGroup;
 			children = (
 				EE4B96251DC5D60200CCFB95 /* CALayer相关 */,
+				EE01F13A1E4B1815003276B5 /* Push或present判断 */,
 				EE4C24A31DAF97E7008924A3 /* TableViewDemo */,
 				EE4B962B1DC5D60200CCFB95 /* UIActivityIndicatorView */,
 				EE4B962E1DC5D60200CCFB95 /* UIApplication */,
@@ -3265,7 +3270,6 @@
 				EE4B966B1DC5D60200CCFB95 /* 设备配置相关 */,
 				EE4B96391DC5D60200CCFB95 /* UIDemosController.h */,
 				EE4B963A1DC5D60200CCFB95 /* UIDemosController.m */,
-				EE01F13A1E4B1815003276B5 /* Push或present判断 */,
 			);
 			path = "系统控件篇";
 			sourceTree = "<group>";
@@ -3696,13 +3700,14 @@
 				EE4C24831DAF97E6008924A3 /* 3-方法与消息 */,
 				EE4C24861DAF97E6008924A3 /* 4-MethodSwizzling */,
 				EE4C24891DAF97E7008924A3 /* 5-协议与分类 */,
+				EE72A6D51E7241F700A34272 /* OC和C指针转换 */,
 				EE4C24981DAF97E7008924A3 /* OC语法糖 */,
 				EE4C24931DAF97E7008924A3 /* RunTime */,
 				EE4C248C1DAF97E7008924A3 /* block原理 */,
+				EE72A6D91E72426A00A34272 /* load和initialize */,
+				EEE795A51E8A048600B56C6E /* weak实现原理 */,
 				EE4C248F1DAF97E7008924A3 /* ObjectiveCDemo.h */,
 				EE4C24901DAF97E7008924A3 /* ObjectiveCDemo.m */,
-				EE72A6D91E72426A00A34272 /* load和initialize */,
-				EE72A6D51E7241F700A34272 /* OC和C指针转换 */,
 			);
 			path = "ObjectiveC相关";
 			sourceTree = "<group>";
@@ -4523,28 +4528,28 @@
 				EE4C26021DAF97E7008924A3 /* Model */,
 				EE4C26071DAF97E7008924A3 /* View */,
 				EE4C26011DAF97E7008924A3 /* GoodsDetail.h */,
+				EEEDF98A1E265E0800CF9268 /* JMDataUtility.h */,
+				EEEDF98B1E265E0800CF9268 /* JMDataUtility.m */,
+				EE270D791E1B6F42005BA294 /* NSObject+Additionals.h */,
+				EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */,
+				EE270ECD1E21EA71005BA294 /* NSString+JMCategory.h */,
+				EE270ECE1E21EA71005BA294 /* NSString+JMCategory.m */,
+				EE270DD31E1BC675005BA294 /* NSString+TransformToDisplay.h */,
+				EE270DD41E1BC675005BA294 /* NSString+TransformToDisplay.m */,
+				EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */,
+				EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */,
+				EE270D031E13B04D005BA294 /* UIButton+setBackgroundColorForState.h */,
+				EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */,
 				EE270E521E1CC494005BA294 /* UIImageView+JMNetworking.h */,
 				EE270E531E1CC494005BA294 /* UIImageView+JMNetworking.m */,
 				EE270DCE1E1B7150005BA294 /* UIView+Additionals.h */,
 				EE270DCF1E1B7150005BA294 /* UIView+Additionals.m */,
 				EE270DC81E1B7096005BA294 /* UIView+Additions.h */,
 				EE270DC91E1B7096005BA294 /* UIView+Additions.m */,
-				EE270D791E1B6F42005BA294 /* NSObject+Additionals.h */,
-				EE270D7A1E1B6F42005BA294 /* NSObject+Additionals.m */,
-				EE270ECD1E21EA71005BA294 /* NSString+JMCategory.h */,
-				EE270ECE1E21EA71005BA294 /* NSString+JMCategory.m */,
-				EEEDF98A1E265E0800CF9268 /* JMDataUtility.h */,
-				EEEDF98B1E265E0800CF9268 /* JMDataUtility.m */,
 				EE270D0C1E13BAB1005BA294 /* UIView+JMCategory.h */,
 				EE270D0D1E13BAB1005BA294 /* UIView+JMCategory.m */,
-				EE270DD31E1BC675005BA294 /* NSString+TransformToDisplay.h */,
-				EE270DD41E1BC675005BA294 /* NSString+TransformToDisplay.m */,
 				EE270DCB1E1B70C3005BA294 /* UIView+Utils.h */,
 				EE270DCC1E1B70C3005BA294 /* UIView+Utils.m */,
-				EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */,
-				EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */,
-				EE270D031E13B04D005BA294 /* UIButton+setBackgroundColorForState.h */,
-				EE270D041E13B04D005BA294 /* UIButton+setBackgroundColorForState.m */,
 			);
 			path = "仿淘宝商品详情";
 			sourceTree = "<group>";
@@ -5554,25 +5559,27 @@
 				EE4C24921DAF97E7008924A3 /* ObjectiveCPointor.m */,
 			);
 			name = "OC和C指针转换";
+			path = "OC和C指针转换";
 			sourceTree = "<group>";
 		};
 		EE72A6D91E72426A00A34272 /* load和initialize */ = {
 			isa = PBXGroup;
 			children = (
-				EE72A6D61E72426600A34272 /* LoadAndInitialize.h */,
-				EE72A6D71E72426600A34272 /* LoadAndInitialize.m */,
 				EE72A6E91E724C3600A34272 /* Father.h */,
 				EE72A6EA1E724C3600A34272 /* Father.m */,
-				EE72A6EB1E724C3600A34272 /* Son.h */,
-				EE72A6EC1E724C3600A34272 /* Son.m */,
-				EE72A6ED1E724C3600A34272 /* Son+load.h */,
-				EE72A6EE1E724C3600A34272 /* Son+load.m */,
-				EE72A6EF1E724C3600A34272 /* Other.h */,
-				EE72A6F01E724C3600A34272 /* Other.m */,
+				EE72A6D61E72426600A34272 /* LoadAndInitialize.h */,
+				EE72A6D71E72426600A34272 /* LoadAndInitialize.m */,
 				EE72A6F11E724C3600A34272 /* Other+initialize.h */,
 				EE72A6F21E724C3600A34272 /* Other+initialize.m */,
+				EE72A6EF1E724C3600A34272 /* Other.h */,
+				EE72A6F01E724C3600A34272 /* Other.m */,
+				EE72A6ED1E724C3600A34272 /* Son+load.h */,
+				EE72A6EE1E724C3600A34272 /* Son+load.m */,
+				EE72A6EB1E724C3600A34272 /* Son.h */,
+				EE72A6EC1E724C3600A34272 /* Son.m */,
 			);
 			name = "load和initialize";
+			path = "load和initialize";
 			sourceTree = "<group>";
 		};
 		EE8068CB1D992D03006E69F7 /* Frameworks */ = {
@@ -5633,9 +5640,9 @@
 		EE9F1B0A1DEAB337006AD033 /* GoodsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				EE270D7C1E1B6FE6005BA294 /* JMSkuSelectedView */,
 				EE9F1B0B1DEAB337006AD033 /* Component */,
 				EE9F1B291DEAB337006AD033 /* Controller */,
+				EE270D7C1E1B6FE6005BA294 /* JMSkuSelectedView */,
 				EE9F1B461DEAB337006AD033 /* Vendor */,
 				EE9F1B421DEAB337006AD033 /* JMGoodsDetail.h */,
 				EE9F1B431DEAB337006AD033 /* JMGoodsDetail.storyboard */,
@@ -5883,6 +5890,16 @@
 				EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */,
 			);
 			path = UIButtonDemo;
+			sourceTree = "<group>";
+		};
+		EEE795A51E8A048600B56C6E /* weak实现原理 */ = {
+			isa = PBXGroup;
+			children = (
+				EEE795A21E8A048200B56C6E /* WeakDemo.h */,
+				EEE795A31E8A048200B56C6E /* WeakDemo.m */,
+			);
+			name = "weak实现原理";
+			path = "weak实现原理";
 			sourceTree = "<group>";
 		};
 		EEFCDD8C1DF1793C0066C31A /* Dynamic */ = {
@@ -6783,6 +6800,7 @@
 				EE4C28EC1DAF97E9008924A3 /* YYMessageCollectionView.m in Sources */,
 				EE270DC11E1B6FE6005BA294 /* JMCollectionViewLeftAlignLayout.m in Sources */,
 				EE4C29461DAF97EA008924A3 /* MASCompositeConstraint.m in Sources */,
+				EEE795A41E8A048200B56C6E /* WeakDemo.m in Sources */,
 				EE9F1B581DEAB337006AD033 /* JMGoodsDetailContainerViewController+Network.m in Sources */,
 				EE4C28CA1DAF97E9008924A3 /* UICollectionView+YYMessage.m in Sources */,
 				EE4C28521DAF97E9008924A3 /* MethodSwizzling.m in Sources */,
