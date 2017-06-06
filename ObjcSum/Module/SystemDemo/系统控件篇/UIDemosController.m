@@ -40,6 +40,8 @@ static NSString * const CellIdentifier = @"Cell";
                    [[LibDemoInfo alloc] initWithTitle:@"UICollectionView相关" desc:@"UICollectionView相关" controllerName:@"CollectionViewController"],
                    
                    [[LibDemoInfo alloc] initWithTitle:@"UIWebView相关" desc:@"UIWebView相关" controllerName:@"WebViewController"],
+                    
+                    [[LibDemoInfo alloc] initWithTitle:@"WKWebView相关" desc:@"WKWebViewDemo相关" controllerName:@"WKWebViewDemo"],
                    ];
     
 }

@@ -301,6 +301,11 @@
 		EE2A215C1DAF6D7A001F9A2E /* YYXibView.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A206E1DAF6D7A001F9A2E /* YYXibView.h */; };
 		EE2A215D1DAF6D7A001F9A2E /* YYXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A206F1DAF6D7A001F9A2E /* YYXibView.m */; };
 		EE2F029C1E52FC970003A8EE /* UINavigationController+APSafeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2F029B1E52FC970003A8EE /* UINavigationController+APSafeTransition.m */; };
+		EE3548471EDEB9300012BA26 /* YYMapNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3548451EDEB9300012BA26 /* YYMapNavigation.h */; };
+		EE3548481EDEB9300012BA26 /* YYMapNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3548461EDEB9300012BA26 /* YYMapNavigation.m */; };
+		EE35484C1EDEC6AF0012BA26 /* JZLocationConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = EE35484A1EDEC6AF0012BA26 /* JZLocationConverter.h */; };
+		EE35484D1EDEC6AF0012BA26 /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35484B1EDEC6AF0012BA26 /* JZLocationConverter.m */; };
+		EE3548511EDECAE40012BA26 /* MapNavigationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3548501EDECAE40012BA26 /* MapNavigationDemo.m */; };
 		EE412D941DC73789005E6452 /* AutoLayoutDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE412D921DC73789005E6452 /* AutoLayoutDemo.m */; };
 		EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */; };
 		EE4B966E1DC5D60200CCFB95 /* CALayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B96271DC5D60200CCFB95 /* CALayerDemoController.m */; };
@@ -822,6 +827,7 @@
 		EE5FE8981DBD91E000CB2FF0 /* YYGlobalTimerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE8961DBD91E000CB2FF0 /* YYGlobalTimerDemo.m */; };
 		EE5FE8991DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */; };
 		EE6113EF1DE69B3500A9113A /* ArchitectureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */; };
+		EE6BB3511EDFEB5400193070 /* YYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6BB3501EDFEB5400193070 /* YYAlertView.m */; };
 		EE72A6D81E72426600A34272 /* LoadAndInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6D71E72426600A34272 /* LoadAndInitialize.m */; };
 		EE72A6F31E724C3600A34272 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6EA1E724C3600A34272 /* Father.m */; };
 		EE72A6F41E724C3600A34272 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = EE72A6EC1E724C3600A34272 /* Son.m */; };
@@ -868,11 +874,23 @@
 		EE9F1B611DEAB337006AD033 /* JMSimpleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B491DEAB337006AD033 /* JMSimpleSegment.m */; };
 		EE9F1B621DEAB337006AD033 /* JMSimpleSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */; };
 		EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */; };
+		EEABEFCA1EE50CFB00BA57B9 /* JMDeepLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */; };
+		EEABEFFE1EE527C100BA57B9 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */; };
+		EEABEFFF1EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */; };
+		EEABF0001EE527C100BA57B9 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF61EE527C100BA57B9 /* BaiduMapAPI_Location.framework */; };
+		EEABF0011EE527C100BA57B9 /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF71EE527C100BA57B9 /* BaiduMapAPI_Map.framework */; };
+		EEABF0021EE527C100BA57B9 /* BaiduMapAPI_Radar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF81EE527C100BA57B9 /* BaiduMapAPI_Radar.framework */; };
+		EEABF0031EE527C100BA57B9 /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF91EE527C100BA57B9 /* BaiduMapAPI_Search.framework */; };
+		EEABF0041EE527C100BA57B9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */; };
+		EEABF0051EE527C100BA57B9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFC1EE527C100BA57B9 /* libcrypto.a */; };
+		EEABF0061EE527C100BA57B9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFD1EE527C100BA57B9 /* libssl.a */; };
 		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
 		EEE795A41E8A048200B56C6E /* WeakDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795A31E8A048200B56C6E /* WeakDemo.m */; };
+		EEE795DF1E8CED7000B56C6E /* WKWebViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795DD1E8CED7000B56C6E /* WKWebViewDemo.m */; };
+		EEE795E01E8CED7000B56C6E /* WKWebViewDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE795DE1E8CED7000B56C6E /* WKWebViewDemo.xib */; };
 		EEEDF9851E2659AE00CF9268 /* JMSkuMockData2.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */; };
 		EEEDF9861E2659AE00CF9268 /* JMSkuMockData3.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */; };
 		EEEDF9871E2659AE00CF9268 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF9801E2659AE00CF9268 /* JMSkuModel.m */; };
@@ -1251,6 +1269,12 @@
 		EE2A206E1DAF6D7A001F9A2E /* YYXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYXibView.h; sourceTree = "<group>"; };
 		EE2A206F1DAF6D7A001F9A2E /* YYXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYXibView.m; sourceTree = "<group>"; };
 		EE2F029B1E52FC970003A8EE /* UINavigationController+APSafeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+APSafeTransition.m"; sourceTree = "<group>"; };
+		EE3548451EDEB9300012BA26 /* YYMapNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMapNavigation.h; sourceTree = "<group>"; };
+		EE3548461EDEB9300012BA26 /* YYMapNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMapNavigation.m; sourceTree = "<group>"; };
+		EE35484A1EDEC6AF0012BA26 /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
+		EE35484B1EDEC6AF0012BA26 /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
+		EE35484F1EDECAE40012BA26 /* MapNavigationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavigationDemo.h; sourceTree = "<group>"; };
+		EE3548501EDECAE40012BA26 /* MapNavigationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavigationDemo.m; sourceTree = "<group>"; };
 		EE412D911DC73789005E6452 /* AutoLayoutDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutDemo.h; sourceTree = "<group>"; };
 		EE412D921DC73789005E6452 /* AutoLayoutDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemo.m; sourceTree = "<group>"; };
 		EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutDemo.xib; sourceTree = "<group>"; };
@@ -2228,6 +2252,8 @@
 		EE5FE8971DBD91E000CB2FF0 /* YYGlobalTimerDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYGlobalTimerDemo.xib; sourceTree = "<group>"; };
 		EE6113ED1DE69B3500A9113A /* ArchitectureDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchitectureDemo.h; sourceTree = "<group>"; };
 		EE6113EE1DE69B3500A9113A /* ArchitectureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchitectureDemo.m; sourceTree = "<group>"; };
+		EE6BB34F1EDFEB5400193070 /* YYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAlertView.h; sourceTree = "<group>"; };
+		EE6BB3501EDFEB5400193070 /* YYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAlertView.m; sourceTree = "<group>"; };
 		EE72A6D61E72426600A34272 /* LoadAndInitialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadAndInitialize.h; sourceTree = "<group>"; };
 		EE72A6D71E72426600A34272 /* LoadAndInitialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadAndInitialize.m; sourceTree = "<group>"; };
 		EE72A6E91E724C3600A34272 /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
@@ -2314,6 +2340,16 @@
 		EE9F1B4A1DEAB337006AD033 /* JMSimpleSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSimpleSegmentItem.h; sourceTree = "<group>"; };
 		EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSimpleSegmentItem.m; sourceTree = "<group>"; };
 		EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSimpleSegmentItem.xib; sourceTree = "<group>"; };
+		EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMDeepLink.framework; sourceTree = "<group>"; };
+		EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		EEABEFF61EE527C100BA57B9 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
+		EEABEFF71EE527C100BA57B9 /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		EEABEFF81EE527C100BA57B9 /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
+		EEABEFF91EE527C100BA57B9 /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		EEABEFFC1EE527C100BA57B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		EEABEFFD1EE527C100BA57B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyntacticSugar+Extention.h"; sourceTree = "<group>"; };
 		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
@@ -2324,6 +2360,9 @@
 		EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEdgeInsetsButton.m; sourceTree = "<group>"; };
 		EEE795A21E8A048200B56C6E /* WeakDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakDemo.h; sourceTree = "<group>"; };
 		EEE795A31E8A048200B56C6E /* WeakDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakDemo.m; sourceTree = "<group>"; };
+		EEE795DC1E8CED7000B56C6E /* WKWebViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemo.h; sourceTree = "<group>"; };
+		EEE795DD1E8CED7000B56C6E /* WKWebViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemo.m; sourceTree = "<group>"; };
+		EEE795DE1E8CED7000B56C6E /* WKWebViewDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKWebViewDemo.xib; sourceTree = "<group>"; };
 		EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData2.plist; sourceTree = "<group>"; };
 		EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData3.plist; sourceTree = "<group>"; };
 		EEEDF97F1E2659AE00CF9268 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
@@ -2364,11 +2403,21 @@
 			files = (
 				EE4C29451DAF97EA008924A3 /* JSPatch.framework in Frameworks */,
 				EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */,
+				EEABF0051EE527C100BA57B9 /* libcrypto.a in Frameworks */,
+				EEABEFFF1EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework in Frameworks */,
+				EEABF0021EE527C100BA57B9 /* BaiduMapAPI_Radar.framework in Frameworks */,
 				1F76E85A1C15637D005E43E9 /* JavaScriptCore.framework in Frameworks */,
+				EEABEFCA1EE50CFB00BA57B9 /* JMDeepLink.framework in Frameworks */,
+				EEABF0031EE527C100BA57B9 /* BaiduMapAPI_Search.framework in Frameworks */,
 				EE2A1F331DAF5DE7001F9A2E /* YYSDK.framework in Frameworks */,
+				EEABF0041EE527C100BA57B9 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				EE4C28D01DAF97E9008924A3 /* libopencore-amrnb.a in Frameworks */,
+				EEABF0061EE527C100BA57B9 /* libssl.a in Frameworks */,
+				EEABEFFE1EE527C100BA57B9 /* BaiduMapAPI_Base.framework in Frameworks */,
 				EE4C28D11DAF97E9008924A3 /* libopencore-amrwb.a in Frameworks */,
+				EEABF0001EE527C100BA57B9 /* BaiduMapAPI_Location.framework in Frameworks */,
 				1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */,
+				EEABF0011EE527C100BA57B9 /* BaiduMapAPI_Map.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2446,7 +2495,6 @@
 				EE01F1371E4B180D003276B5 /* PushPresentDemo.h */,
 				EE01F1381E4B180D003276B5 /* PushPresentDemo.m */,
 			);
-			name = "Push或present判断";
 			path = "Push或present判断";
 			sourceTree = "<group>";
 		};
@@ -2688,6 +2736,7 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
+				EE3548441EDEB9170012BA26 /* YYMapNavigation */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
 				EE2A1F661DAF6D79001F9A2E /* YYAlertGridView */,
@@ -3227,6 +3276,34 @@
 				EE2A206F1DAF6D7A001F9A2E /* YYXibView.m */,
 			);
 			path = YYXibView;
+			sourceTree = "<group>";
+		};
+		EE3548441EDEB9170012BA26 /* YYMapNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EE3548491EDEC6AF0012BA26 /* JZLocationConverter */,
+				EE3548451EDEB9300012BA26 /* YYMapNavigation.h */,
+				EE3548461EDEB9300012BA26 /* YYMapNavigation.m */,
+			);
+			path = YYMapNavigation;
+			sourceTree = "<group>";
+		};
+		EE3548491EDEC6AF0012BA26 /* JZLocationConverter */ = {
+			isa = PBXGroup;
+			children = (
+				EE35484A1EDEC6AF0012BA26 /* JZLocationConverter.h */,
+				EE35484B1EDEC6AF0012BA26 /* JZLocationConverter.m */,
+			);
+			path = JZLocationConverter;
+			sourceTree = "<group>";
+		};
+		EE35484E1EDECAD00012BA26 /* MapNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EE35484F1EDECAE40012BA26 /* MapNavigationDemo.h */,
+				EE3548501EDECAE40012BA26 /* MapNavigationDemo.m */,
+			);
+			path = MapNavigation;
 			sourceTree = "<group>";
 		};
 		EE412D961DC7378F005E6452 /* AutoLayoutDemo */ = {
@@ -3824,6 +3901,7 @@
 				EE4C24B11DAF97E7008924A3 /* WebViewDemo.m */,
 				EE4C24B21DAF97E7008924A3 /* YYWebViewController.h */,
 				EE4C24B31DAF97E7008924A3 /* YYWebViewController.m */,
+				EEE795DB1E8CEC6900B56C6E /* WKWebView */,
 			);
 			path = "Web相关";
 			sourceTree = "<group>";
@@ -4052,6 +4130,7 @@
 		EE4C251C1DAF97E7008924A3 /* YYLibsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EE35484E1EDECAD00012BA26 /* MapNavigation */,
 				EE412D961DC7378F005E6452 /* AutoLayoutDemo */,
 				EE4C251D1DAF97E7008924A3 /* KValue数据存储 */,
 				EE4C252B1DAF97E7008924A3 /* MVVMDemo */,
@@ -4604,6 +4683,8 @@
 			children = (
 				EE4C26161DAF97E7008924A3 /* YYAlertTextViewDemo.h */,
 				EE4C26171DAF97E7008924A3 /* YYAlertTextViewDemo.m */,
+				EE6BB34F1EDFEB5400193070 /* YYAlertView.h */,
+				EE6BB3501EDFEB5400193070 /* YYAlertView.m */,
 			);
 			path = "弹出控件相关";
 			sourceTree = "<group>";
@@ -4756,6 +4837,8 @@
 		EE4C264C1DAF97E7008924A3 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EEABEFF31EE527C100BA57B9 /* BaiduMapSDK */,
+				EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */,
 				EE4C264D1DAF97E7008924A3 /* AFNetworking */,
 				EE4C265B1DAF97E7008924A3 /* Aspects */,
 				EE4C266F1DAF97E7008924A3 /* DNImagePicker */,
@@ -5558,7 +5641,6 @@
 				EE4C24911DAF97E7008924A3 /* ObjectiveCPointor.h */,
 				EE4C24921DAF97E7008924A3 /* ObjectiveCPointor.m */,
 			);
-			name = "OC和C指针转换";
 			path = "OC和C指针转换";
 			sourceTree = "<group>";
 		};
@@ -5578,7 +5660,6 @@
 				EE72A6EB1E724C3600A34272 /* Son.h */,
 				EE72A6EC1E724C3600A34272 /* Son.m */,
 			);
-			name = "load和initialize";
 			path = "load和initialize";
 			sourceTree = "<group>";
 		};
@@ -5872,6 +5953,30 @@
 			path = JMSimpleSegment;
 			sourceTree = "<group>";
 		};
+		EEABEFF31EE527C100BA57B9 /* BaiduMapSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */,
+				EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */,
+				EEABEFF61EE527C100BA57B9 /* BaiduMapAPI_Location.framework */,
+				EEABEFF71EE527C100BA57B9 /* BaiduMapAPI_Map.framework */,
+				EEABEFF81EE527C100BA57B9 /* BaiduMapAPI_Radar.framework */,
+				EEABEFF91EE527C100BA57B9 /* BaiduMapAPI_Search.framework */,
+				EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */,
+				EEABEFFB1EE527C100BA57B9 /* thirdlibs */,
+			);
+			path = BaiduMapSDK;
+			sourceTree = "<group>";
+		};
+		EEABEFFB1EE527C100BA57B9 /* thirdlibs */ = {
+			isa = PBXGroup;
+			children = (
+				EEABEFFC1EE527C100BA57B9 /* libcrypto.a */,
+				EEABEFFD1EE527C100BA57B9 /* libssl.a */,
+			);
+			path = thirdlibs;
+			sourceTree = "<group>";
+		};
 		EECCCCD41DD00556007B47B1 /* YYSegmentedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -5898,8 +6003,17 @@
 				EEE795A21E8A048200B56C6E /* WeakDemo.h */,
 				EEE795A31E8A048200B56C6E /* WeakDemo.m */,
 			);
-			name = "weak实现原理";
 			path = "weak实现原理";
+			sourceTree = "<group>";
+		};
+		EEE795DB1E8CEC6900B56C6E /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				EEE795DC1E8CED7000B56C6E /* WKWebViewDemo.h */,
+				EEE795DD1E8CED7000B56C6E /* WKWebViewDemo.m */,
+				EEE795DE1E8CED7000B56C6E /* WKWebViewDemo.xib */,
+			);
+			name = WKWebView;
 			sourceTree = "<group>";
 		};
 		EEFCDD8C1DF1793C0066C31A /* Dynamic */ = {
@@ -5961,6 +6075,7 @@
 				EE2A21541DAF6D7A001F9A2E /* YYSimpleAlertTable.h in Headers */,
 				EE4C2BFA1DAF9D33008924A3 /* AFNetworkReachabilityManager.h in Headers */,
 				EE2A20E41DAF6D7A001F9A2E /* YYCGUtilities.h in Headers */,
+				EE3548471EDEB9300012BA26 /* YYMapNavigation.h in Headers */,
 				EE2A208D1DAF6D7A001F9A2E /* YYHttpRequestSerializer.h in Headers */,
 				EE2A20861DAF6D7A001F9A2E /* YYAlertTextView.h in Headers */,
 				EE2A20EC1DAF6D7A001F9A2E /* UIColor+YYExtension.h in Headers */,
@@ -6037,6 +6152,7 @@
 				EE2A20791DAF6D7A001F9A2E /* YYAlertGridView.h in Headers */,
 				EE2A1F531DAF62BD001F9A2E /* UIView+Transform.h in Headers */,
 				EE4C2BF91DAF9D33008924A3 /* AFNetworking.h in Headers */,
+				EE35484C1EDEC6AF0012BA26 /* JZLocationConverter.h in Headers */,
 				EE2A21131DAF6D7A001F9A2E /* YYKeychain.h in Headers */,
 				EE2A214A1DAF6D7A001F9A2E /* YYScrollSigmentCell.h in Headers */,
 				EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */,
@@ -6165,7 +6281,7 @@
 				TargetAttributes = {
 					1F8B89EF1BE2058600D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = R6XRM4JTNP;
+						DevelopmentTeam = K8G86W2HGU;
 						ProvisioningStyle = Automatic;
 					};
 					1F8B8A081BE2058700D81096 = {
@@ -6178,7 +6294,7 @@
 					};
 					EE2A1F2B1DAF5DE7001F9A2E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R6XRM4JTNP;
+						DevelopmentTeam = K8G86W2HGU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -6245,6 +6361,7 @@
 				EE4C29EE1DAF97EA008924A3 /* Assets.xcassets in Resources */,
 				EE4C28961DAF97E9008924A3 /* RealReachabilityDemo.xib in Resources */,
 				EE4C28E91DAF97E9008924A3 /* YYMessageMoreViewCell.xib in Resources */,
+				EEE795E01E8CED7000B56C6E /* WKWebViewDemo.xib in Resources */,
 				EE9F1B4F1DEAB337006AD033 /* JMGoodsDetailNavTitleView.xib in Resources */,
 				EE4C28DF1DAF97E9008924A3 /* EmojisList.plist in Resources */,
 				EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */,
@@ -6418,6 +6535,7 @@
 				EE4C29141DAF97E9008924A3 /* UIImageView+Extension.m in Sources */,
 				EE4C282A1DAF97E9008924A3 /* AppDelegate.m in Sources */,
 				EE4C29E51DAF97EA008924A3 /* AFAutoPurgingImageCache.m in Sources */,
+				EE3548511EDECAE40012BA26 /* MapNavigationDemo.m in Sources */,
 				EE9F1B551DEAB337006AD033 /* JMGoodsDtailRightBarButtonView.m in Sources */,
 				EE4C28611DAF97E9008924A3 /* ShowRoomCellModel.m in Sources */,
 				EE4C28941DAF97E9008924A3 /* RWViewController.m in Sources */,
@@ -6607,6 +6725,7 @@
 				EE4C28E81DAF97E9008924A3 /* YYMessageMoreViewCell.m in Sources */,
 				EE4C29AF1DAF97EA008924A3 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
 				EE4C285F1DAF97E9008924A3 /* ShowRoomCell.m in Sources */,
+				EE6BB3511EDFEB5400193070 /* YYAlertView.m in Sources */,
 				EE4C29241DAF97E9008924A3 /* DTTimePeriod.m in Sources */,
 				EE9F1B621DEAB337006AD033 /* JMSimpleSegmentItem.m in Sources */,
 				EE4C29781DAF97EA008924A3 /* NSString+RACSequenceAdditions.m in Sources */,
@@ -6621,6 +6740,7 @@
 				EE4C297E1DAF97EA008924A3 /* RACBlockTrampoline.m in Sources */,
 				EE4C296C1DAF97EA008924A3 /* NSIndexSet+RACSequenceAdditions.m in Sources */,
 				EEEDF98C1E265E0800CF9268 /* JMDataUtility.m in Sources */,
+				EEE795DF1E8CED7000B56C6E /* WKWebViewDemo.m in Sources */,
 				EE4C28B01DAF97E9008924A3 /* FastRecordTitleCell.m in Sources */,
 				EE4C292A1DAF97E9008924A3 /* DNAsset.m in Sources */,
 				EE4C28F61DAF97E9008924A3 /* PullRefreshDemo.m in Sources */,
@@ -6899,6 +7019,7 @@
 				EE2A21471DAF6D7A001F9A2E /* YYRefreshView.m in Sources */,
 				EE2A20A01DAF6D7A001F9A2E /* YYMemoryCache.m in Sources */,
 				EE2A20D51DAF6D7A001F9A2E /* NSNull+YYKit.m in Sources */,
+				EE3548481EDEB9300012BA26 /* YYMapNavigation.m in Sources */,
 				EE4C2BFB1DAF9D33008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EE2A21221DAF6D7A001F9A2E /* YYWeakProxy.m in Sources */,
 				EE2A211A1DAF6D7A001F9A2E /* YYThreadSafeArray.m in Sources */,
@@ -6951,6 +7072,7 @@
 				EE5FE8921DBD055C00CB2FF0 /* YYGCDSemaphore.m in Sources */,
 				EE2A21451DAF6D7A001F9A2E /* YYRefreshConst.m in Sources */,
 				EE2A20C91DAF6D7A001F9A2E /* NSDate+YYExtension.m in Sources */,
+				EE35484D1EDEC6AF0012BA26 /* JZLocationConverter.m in Sources */,
 				EE2A211C1DAF6D7A001F9A2E /* YYThreadSafeDictionary.m in Sources */,
 				EE2A20E91DAF6D7A001F9A2E /* UIBarButtonItem+YYExtension.m in Sources */,
 				EE2A20EB1DAF6D7A001F9A2E /* UIBezierPath+YYExtension.m in Sources */,
@@ -7196,12 +7318,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = R6XRM4JTNP;
+				DEVELOPMENT_TEAM = K8G86W2HGU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/BaiduMapSDK",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/App/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
@@ -7210,6 +7333,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Module/YYLibsDemo/YYMessageKit/Vender/YYAudioManager/VoiceConvert/lib",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/BaiduMapSDK/thirdlibs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7225,12 +7349,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = R6XRM4JTNP;
+				DEVELOPMENT_TEAM = K8G86W2HGU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary",
 					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/JSPatch",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/BaiduMapSDK",
 				);
 				GCC_PREFIX_HEADER = ObjcSum/App/PrefixHeader.pch;
 				INFOPLIST_FILE = "ObjcSum/Supporting Files/Info.plist";
@@ -7239,6 +7364,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcSum/Module/YYLibsDemo/YYMessageKit/Vender/YYAudioManager/VoiceConvert/lib",
+					"$(PROJECT_DIR)/ObjcSum/Service/ThirdLibrary/BaiduMapSDK/thirdlibs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.ObjcSum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7307,7 +7433,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R6XRM4JTNP;
+				DEVELOPMENT_TEAM = K8G86W2HGU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -7339,7 +7465,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R6XRM4JTNP;
+				DEVELOPMENT_TEAM = K8G86W2HGU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

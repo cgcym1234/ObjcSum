@@ -25,8 +25,12 @@
 
 - (void)messageForward {
     //以向MethodForword对象发送testInstance消息为例子
-    MethodForword *obj = [MethodForword new];
-    [obj performSelector:@selector(testInstance)];
+//    MethodForword *obj = [MethodForword new];
+//    [obj performSelector:@selector(testInstance)];
+//    
+//    if ([self.class conformsToProtocol:<#(Protocol *)#>]) {
+//        <#statements#>
+//    }
     
     //1. 会被转换成如下C语言方式调用
     //objc_msgSend(obj, @selector(testInstance));

@@ -15,6 +15,8 @@
 #import "UIViewController+Extension.h"
 #import "UIViewController+NoDataView.h"
 #import "UIView+YYChrysanthemum.h"
+#import "ReactiveCocoa.h"
+#import "YYAlertView.h"
 
 @interface YYAlertTextViewDemo ()
 
@@ -33,7 +35,9 @@
     int btnNum = 2;
     
     [self addButtonWithTitle:@"show AlertTextView" action:^(UIButton *btn) {
-        [weakSelf.alertView show];
+//        [weakSelf.alertView show];
+        [YYAlertView showWithTitle:@"hah" cancel:nil confirm:nil];
+      
     }].frame = CGRectMake(10, 40*btnNum++, 200, 40);
     
     [self addButtonWithTitle:@"show AlertGridView" action:^(UIButton *btn) {

@@ -43,19 +43,6 @@
   
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-  [super viewWillDisappear:animated];
-}
-
 - (UIWebView *)webView {
   if (!_webView) {
     UIWebView *webView = [[UIWebView alloc] init];

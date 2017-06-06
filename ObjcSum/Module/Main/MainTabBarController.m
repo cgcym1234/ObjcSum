@@ -105,8 +105,7 @@
     UIStoryboard *secondStory = [UIStoryboard storyboardWithName:StoryboardNameApproval bundle:nil];
     BaseNavigationController *secondNav = [secondStory instantiateInitialViewController];
     secondNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:tabInfo[KeyTitle]image:[UIImage imageNamed:tabInfo[KeyUnselectedImag]] tag:i++];
-    
-    
+
     
     self.viewControllers = @[firstNav, secondNav];
 }

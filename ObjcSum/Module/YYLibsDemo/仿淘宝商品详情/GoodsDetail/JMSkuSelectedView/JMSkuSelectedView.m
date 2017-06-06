@@ -140,7 +140,10 @@
 
 - (void)yyKeyboardManager:(YYKeyboardManager *)keyboardManager
    keyboardWithTransition:(YYKeyboardTransition)transition {
+    //键盘frame
     CGRect keyboardFrame = [YYKeyboardManager defaultManager].keyboardFrame;
+    
+    
     //默认最底部
     CGFloat contentOffsetY = MAX(0, self.collectionView.contentSize.height - self.collectionView.bounds.size.height);
     self.collectionView.scrollEnabled = YES;
