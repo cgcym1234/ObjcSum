@@ -14,7 +14,6 @@
 @interface YYAlertTable ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *dataArr;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeight;
 
 @end
 
@@ -111,7 +110,6 @@ static NSString * const IdentifierTitle = @"YYAlertTableTitleCell";
 
 - (instancetype)show {
     CGFloat tableHeight = 1*HeightForTitle + MIN(MiniCells, _textArray.count)*HeightForCommonCell;
-    self.tableViewHeight.constant = MIN([UIScreen mainScreen].bounds.size.height, tableHeight);
     [self.tableView reloadData];
     [YYDim showView:self];
     return self;

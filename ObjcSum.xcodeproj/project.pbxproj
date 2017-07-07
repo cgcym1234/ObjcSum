@@ -837,6 +837,11 @@
 		EE8068CD1D992D03006E69F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */; };
 		EE82C14D1DB5C2D70055593D /* UIButton+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */; };
 		EE82C14E1DB5C2D70055593D /* UIButton+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */; };
+		EE8971D51EEFBBC3007F13F9 /* MMTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8971CC1EEFBBC3007F13F9 /* MMTagModel.m */; };
+		EE8971D61EEFBBC3007F13F9 /* TagViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8971CE1EEFBBC3007F13F9 /* TagViewUtils.m */; };
+		EE8971D71EEFBBC3007F13F9 /* MMBorderAttachView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8971D21EEFBBC3007F13F9 /* MMBorderAttachView.m */; };
+		EE8971D81EEFBBC3007F13F9 /* TaggingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8971D41EEFBBC3007F13F9 /* TaggingView.m */; };
+		EE8971DB1EEFBC30007F13F9 /* MeasureViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8971DA1EEFBC30007F13F9 /* MeasureViewDemo.m */; };
 		EE9F1A061DE84233006AD033 /* JMData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19E91DE84232006AD033 /* JMData.m */; };
 		EE9F1A071DE84233006AD033 /* JMDescriptionUrlSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19EB1DE84232006AD033 /* JMDescriptionUrlSet.m */; };
 		EE9F1A081DE84233006AD033 /* JMDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F19ED1DE84232006AD033 /* JMDetail.m */; };
@@ -891,6 +896,17 @@
 		EEE795A41E8A048200B56C6E /* WeakDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795A31E8A048200B56C6E /* WeakDemo.m */; };
 		EEE795DF1E8CED7000B56C6E /* WKWebViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795DD1E8CED7000B56C6E /* WKWebViewDemo.m */; };
 		EEE795E01E8CED7000B56C6E /* WKWebViewDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE795DE1E8CED7000B56C6E /* WKWebViewDemo.xib */; };
+		EEEBE55F1EE80948007BB181 /* TBActionBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE5491EE80948007BB181 /* TBActionBackground.m */; };
+		EEEBE5601EE80948007BB181 /* TBActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE54B1EE80948007BB181 /* TBActionButton.m */; };
+		EEEBE5611EE80948007BB181 /* TBActionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE54D1EE80948007BB181 /* TBActionContainer.m */; };
+		EEEBE5621EE80948007BB181 /* TBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE54F1EE80948007BB181 /* TBActionSheet.m */; };
+		EEEBE5631EE80948007BB181 /* TBActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE5511EE80948007BB181 /* TBActionSheetController.m */; };
+		EEEBE5641EE80948007BB181 /* UIView+TBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE5531EE80948007BB181 /* UIView+TBAdditions.m */; };
+		EEEBE5651EE80948007BB181 /* UIWindow+TBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE5551EE80948007BB181 /* UIWindow+TBAdditions.m */; };
+		EEEBE5661EE80948007BB181 /* TBAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE5581EE80948007BB181 /* TBAlertController.m */; };
+		EEEBE5671EE80948007BB181 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE55C1EE80948007BB181 /* UIImage+BoxBlur.m */; };
+		EEEBE56B1EE81206007BB181 /* YYActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = EEEBE5691EE81206007BB181 /* YYActionSheet.h */; };
+		EEEBE56C1EE81206007BB181 /* YYActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEBE56A1EE81206007BB181 /* YYActionSheet.m */; };
 		EEEDF9851E2659AE00CF9268 /* JMSkuMockData2.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */; };
 		EEEDF9861E2659AE00CF9268 /* JMSkuMockData3.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */; };
 		EEEDF9871E2659AE00CF9268 /* JMSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF9801E2659AE00CF9268 /* JMSkuModel.m */; };
@@ -900,6 +916,9 @@
 		EEEDF98F1E265FD700CF9268 /* SkuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF98E1E265FD700CF9268 /* SkuInfo.m */; };
 		EEEFF5FE1DC0E9A100959DC2 /* YYRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */; };
 		EEEFF6031DC1A0E400959DC2 /* GoodsDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEFF6021DC1A0E400959DC2 /* GoodsDetailButton.m */; };
+		EEF9D80A1EE8556100EC4794 /* YYActionSheetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF9D8071EE8556100EC4794 /* YYActionSheetCell.h */; };
+		EEF9D80B1EE8556100EC4794 /* YYActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF9D8081EE8556100EC4794 /* YYActionSheetCell.m */; };
+		EEF9D80C1EE8556100EC4794 /* YYActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF9D8091EE8556100EC4794 /* YYActionSheetCell.xib */; };
 		EEFCDD8B1DF179220066C31A /* JMProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD8A1DF179220066C31A /* JMProduct.m */; };
 		EEFCDD911DF1794D0066C31A /* JMFenQi.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD8E1DF1794D0066C31A /* JMFenQi.m */; };
 		EEFCDD921DF1794D0066C31A /* JMSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDD901DF1794D0066C31A /* JMSize.m */; };
@@ -2269,6 +2288,17 @@
 		EE8068CC1D992D03006E69F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EE82C14B1DB5C2D70055593D /* UIButton+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYSDK.h"; sourceTree = "<group>"; };
 		EE82C14C1DB5C2D70055593D /* UIButton+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYSDK.m"; sourceTree = "<group>"; };
+		EE8971CB1EEFBBC3007F13F9 /* MMTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTagModel.h; sourceTree = "<group>"; };
+		EE8971CC1EEFBBC3007F13F9 /* MMTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTagModel.m; sourceTree = "<group>"; };
+		EE8971CD1EEFBBC3007F13F9 /* TagViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewUtils.h; sourceTree = "<group>"; };
+		EE8971CE1EEFBBC3007F13F9 /* TagViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewUtils.m; sourceTree = "<group>"; };
+		EE8971D01EEFBBC3007F13F9 /* MMAbstractView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAbstractView.h; sourceTree = "<group>"; };
+		EE8971D11EEFBBC3007F13F9 /* MMBorderAttachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBorderAttachView.h; sourceTree = "<group>"; };
+		EE8971D21EEFBBC3007F13F9 /* MMBorderAttachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBorderAttachView.m; sourceTree = "<group>"; };
+		EE8971D31EEFBBC3007F13F9 /* TaggingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaggingView.h; sourceTree = "<group>"; };
+		EE8971D41EEFBBC3007F13F9 /* TaggingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaggingView.m; sourceTree = "<group>"; };
+		EE8971D91EEFBC30007F13F9 /* MeasureViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureViewDemo.h; sourceTree = "<group>"; };
+		EE8971DA1EEFBC30007F13F9 /* MeasureViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewDemo.m; sourceTree = "<group>"; };
 		EE9F19E81DE84232006AD033 /* JMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMData.h; sourceTree = "<group>"; };
 		EE9F19E91DE84232006AD033 /* JMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMData.m; sourceTree = "<group>"; };
 		EE9F19EA1DE84232006AD033 /* JMDescriptionUrlSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDescriptionUrlSet.h; sourceTree = "<group>"; };
@@ -2363,6 +2393,27 @@
 		EEE795DC1E8CED7000B56C6E /* WKWebViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemo.h; sourceTree = "<group>"; };
 		EEE795DD1E8CED7000B56C6E /* WKWebViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemo.m; sourceTree = "<group>"; };
 		EEE795DE1E8CED7000B56C6E /* WKWebViewDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKWebViewDemo.xib; sourceTree = "<group>"; };
+		EEEBE5481EE80948007BB181 /* TBActionBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionBackground.h; sourceTree = "<group>"; };
+		EEEBE5491EE80948007BB181 /* TBActionBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionBackground.m; sourceTree = "<group>"; };
+		EEEBE54A1EE80948007BB181 /* TBActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionButton.h; sourceTree = "<group>"; };
+		EEEBE54B1EE80948007BB181 /* TBActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionButton.m; sourceTree = "<group>"; };
+		EEEBE54C1EE80948007BB181 /* TBActionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionContainer.h; sourceTree = "<group>"; };
+		EEEBE54D1EE80948007BB181 /* TBActionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionContainer.m; sourceTree = "<group>"; };
+		EEEBE54E1EE80948007BB181 /* TBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionSheet.h; sourceTree = "<group>"; };
+		EEEBE54F1EE80948007BB181 /* TBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionSheet.m; sourceTree = "<group>"; };
+		EEEBE5501EE80948007BB181 /* TBActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionSheetController.h; sourceTree = "<group>"; };
+		EEEBE5511EE80948007BB181 /* TBActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionSheetController.m; sourceTree = "<group>"; };
+		EEEBE5521EE80948007BB181 /* UIView+TBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TBAdditions.h"; sourceTree = "<group>"; };
+		EEEBE5531EE80948007BB181 /* UIView+TBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TBAdditions.m"; sourceTree = "<group>"; };
+		EEEBE5541EE80948007BB181 /* UIWindow+TBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TBAdditions.h"; sourceTree = "<group>"; };
+		EEEBE5551EE80948007BB181 /* UIWindow+TBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TBAdditions.m"; sourceTree = "<group>"; };
+		EEEBE5571EE80948007BB181 /* TBAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAlertController.h; sourceTree = "<group>"; };
+		EEEBE5581EE80948007BB181 /* TBAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAlertController.m; sourceTree = "<group>"; };
+		EEEBE55A1EE80948007BB181 /* TBMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMacro.h; sourceTree = "<group>"; };
+		EEEBE55B1EE80948007BB181 /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		EEEBE55C1EE80948007BB181 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
+		EEEBE5691EE81206007BB181 /* YYActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYActionSheet.h; sourceTree = "<group>"; };
+		EEEBE56A1EE81206007BB181 /* YYActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYActionSheet.m; sourceTree = "<group>"; };
 		EEEDF97D1E2659AE00CF9268 /* JMSkuMockData2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData2.plist; sourceTree = "<group>"; };
 		EEEDF97E1E2659AE00CF9268 /* JMSkuMockData3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JMSkuMockData3.plist; sourceTree = "<group>"; };
 		EEEDF97F1E2659AE00CF9268 /* JMSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSkuModel.h; sourceTree = "<group>"; };
@@ -2379,6 +2430,9 @@
 		EEEFF5FD1DC0E9A100959DC2 /* YYRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRightImageButton.m; sourceTree = "<group>"; };
 		EEEFF6011DC1A0E400959DC2 /* GoodsDetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailButton.h; sourceTree = "<group>"; };
 		EEEFF6021DC1A0E400959DC2 /* GoodsDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailButton.m; sourceTree = "<group>"; };
+		EEF9D8071EE8556100EC4794 /* YYActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYActionSheetCell.h; sourceTree = "<group>"; };
+		EEF9D8081EE8556100EC4794 /* YYActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYActionSheetCell.m; sourceTree = "<group>"; };
+		EEF9D8091EE8556100EC4794 /* YYActionSheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYActionSheetCell.xib; sourceTree = "<group>"; };
 		EEFCDD891DF179220066C31A /* JMProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMProduct.h; sourceTree = "<group>"; };
 		EEFCDD8A1DF179220066C31A /* JMProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMProduct.m; sourceTree = "<group>"; };
 		EEFCDD8D1DF1794D0066C31A /* JMFenQi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFenQi.h; sourceTree = "<group>"; };
@@ -2736,6 +2790,7 @@
 		EE2A1F5A1DAF6D79001F9A2E /* YYLib */ = {
 			isa = PBXGroup;
 			children = (
+				EEEBE5681EE811F6007BB181 /* YYActionSheet */,
 				EE3548441EDEB9170012BA26 /* YYMapNavigation */,
 				EE2A1F5B1DAF6D79001F9A2E /* AES128ECB */,
 				EE2A1F631DAF6D79001F9A2E /* JMRenderableTableView */,
@@ -4077,6 +4132,7 @@
 				EE4C25161DAF97E7008924A3 /* RealReachabilityDemo */,
 				EE4C251A1DAF97E7008924A3 /* ThirdLibraryDemo.h */,
 				EE4C251B1DAF97E7008924A3 /* ThirdLibraryDemo.m */,
+				EE8971DC1EEFBC36007F13F9 /* 测量view距离 */,
 			);
 			path = ThirdLibraryDemo;
 			sourceTree = "<group>";
@@ -4837,6 +4893,8 @@
 		EE4C264C1DAF97E7008924A3 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EE8971C91EEFBBC3007F13F9 /* TagViewUtils */,
+				EEEBE5431EE80948007BB181 /* TBActionSheet */,
 				EEABEFF31EE527C100BA57B9 /* BaiduMapSDK */,
 				EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */,
 				EE4C264D1DAF97E7008924A3 /* AFNetworking */,
@@ -5683,6 +5741,47 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		EE8971C91EEFBBC3007F13F9 /* TagViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				EE8971CA1EEFBBC3007F13F9 /* Model */,
+				EE8971CD1EEFBBC3007F13F9 /* TagViewUtils.h */,
+				EE8971CE1EEFBBC3007F13F9 /* TagViewUtils.m */,
+				EE8971CF1EEFBBC3007F13F9 /* View */,
+			);
+			path = TagViewUtils;
+			sourceTree = "<group>";
+		};
+		EE8971CA1EEFBBC3007F13F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE8971CB1EEFBBC3007F13F9 /* MMTagModel.h */,
+				EE8971CC1EEFBBC3007F13F9 /* MMTagModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE8971CF1EEFBBC3007F13F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE8971D01EEFBBC3007F13F9 /* MMAbstractView.h */,
+				EE8971D11EEFBBC3007F13F9 /* MMBorderAttachView.h */,
+				EE8971D21EEFBBC3007F13F9 /* MMBorderAttachView.m */,
+				EE8971D31EEFBBC3007F13F9 /* TaggingView.h */,
+				EE8971D41EEFBBC3007F13F9 /* TaggingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE8971DC1EEFBC36007F13F9 /* 测量view距离 */ = {
+			isa = PBXGroup;
+			children = (
+				EE8971D91EEFBC30007F13F9 /* MeasureViewDemo.h */,
+				EE8971DA1EEFBC30007F13F9 /* MeasureViewDemo.m */,
+			);
+			name = "测量view距离";
+			sourceTree = "<group>";
+		};
 		EE9F19E71DE84232006AD033 /* JMProduct */ = {
 			isa = PBXGroup;
 			children = (
@@ -6016,6 +6115,76 @@
 			name = WKWebView;
 			sourceTree = "<group>";
 		};
+		EEEBE5431EE80948007BB181 /* TBActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE5461EE80948007BB181 /* Source */,
+			);
+			path = TBActionSheet;
+			sourceTree = "<group>";
+		};
+		EEEBE5461EE80948007BB181 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE5471EE80948007BB181 /* TBActionSheet */,
+				EEEBE5561EE80948007BB181 /* TBAlertController */,
+				EEEBE5591EE80948007BB181 /* Utils */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EEEBE5471EE80948007BB181 /* TBActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE5481EE80948007BB181 /* TBActionBackground.h */,
+				EEEBE5491EE80948007BB181 /* TBActionBackground.m */,
+				EEEBE54A1EE80948007BB181 /* TBActionButton.h */,
+				EEEBE54B1EE80948007BB181 /* TBActionButton.m */,
+				EEEBE54C1EE80948007BB181 /* TBActionContainer.h */,
+				EEEBE54D1EE80948007BB181 /* TBActionContainer.m */,
+				EEEBE54E1EE80948007BB181 /* TBActionSheet.h */,
+				EEEBE54F1EE80948007BB181 /* TBActionSheet.m */,
+				EEEBE5501EE80948007BB181 /* TBActionSheetController.h */,
+				EEEBE5511EE80948007BB181 /* TBActionSheetController.m */,
+				EEEBE5521EE80948007BB181 /* UIView+TBAdditions.h */,
+				EEEBE5531EE80948007BB181 /* UIView+TBAdditions.m */,
+				EEEBE5541EE80948007BB181 /* UIWindow+TBAdditions.h */,
+				EEEBE5551EE80948007BB181 /* UIWindow+TBAdditions.m */,
+			);
+			path = TBActionSheet;
+			sourceTree = "<group>";
+		};
+		EEEBE5561EE80948007BB181 /* TBAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE5571EE80948007BB181 /* TBAlertController.h */,
+				EEEBE5581EE80948007BB181 /* TBAlertController.m */,
+			);
+			path = TBAlertController;
+			sourceTree = "<group>";
+		};
+		EEEBE5591EE80948007BB181 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE55A1EE80948007BB181 /* TBMacro.h */,
+				EEEBE55B1EE80948007BB181 /* UIImage+BoxBlur.h */,
+				EEEBE55C1EE80948007BB181 /* UIImage+BoxBlur.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EEEBE5681EE811F6007BB181 /* YYActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EEEBE5691EE81206007BB181 /* YYActionSheet.h */,
+				EEEBE56A1EE81206007BB181 /* YYActionSheet.m */,
+				EEF9D8071EE8556100EC4794 /* YYActionSheetCell.h */,
+				EEF9D8081EE8556100EC4794 /* YYActionSheetCell.m */,
+				EEF9D8091EE8556100EC4794 /* YYActionSheetCell.xib */,
+			);
+			path = YYActionSheet;
+			sourceTree = "<group>";
+		};
 		EEFCDD8C1DF1793C0066C31A /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -6074,6 +6243,7 @@
 				EE2A21421DAF6D7A001F9A2E /* YYRefreshConfig.h in Headers */,
 				EE2A21541DAF6D7A001F9A2E /* YYSimpleAlertTable.h in Headers */,
 				EE4C2BFA1DAF9D33008924A3 /* AFNetworkReachabilityManager.h in Headers */,
+				EEF9D80A1EE8556100EC4794 /* YYActionSheetCell.h in Headers */,
 				EE2A20E41DAF6D7A001F9A2E /* YYCGUtilities.h in Headers */,
 				EE3548471EDEB9300012BA26 /* YYMapNavigation.h in Headers */,
 				EE2A208D1DAF6D7A001F9A2E /* YYHttpRequestSerializer.h in Headers */,
@@ -6141,6 +6311,7 @@
 				EE2A20FA1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.h in Headers */,
 				EE5FE8911DBD055C00CB2FF0 /* YYGCDSemaphore.h in Headers */,
 				EE4C2BFE1DAF9D33008924A3 /* AFURLRequestSerialization.h in Headers */,
+				EEEBE56B1EE81206007BB181 /* YYActionSheet.h in Headers */,
 				EE2A20F21DAF6D7A001F9A2E /* UIFont+YYExtension.h in Headers */,
 				EE2A207C1DAF6D7A001F9A2E /* YYAlertGridViewCell.h in Headers */,
 				EE2A20F81DAF6D7A001F9A2E /* UINavigationBar+YYExtension.h in Headers */,
@@ -6435,6 +6606,7 @@
 				EE2A212B1DAF6D7A001F9A2E /* ic_radiobutton@2x.png in Resources */,
 				EE2A207E1DAF6D7A001F9A2E /* YYAlertGridViewCell.xib in Resources */,
 				EE2A21411DAF6D7A001F9A2E /* YYRefresh.xcassets in Resources */,
+				EEF9D80C1EE8556100EC4794 /* YYActionSheetCell.xib in Resources */,
 				EE2A21341DAF6D7A001F9A2E /* YYMultiSelectTable.xib in Resources */,
 				EE2A21531DAF6D7A001F9A2E /* YYSegmentedControlCell.xib in Resources */,
 				EE2A212C1DAF6D7A001F9A2E /* ic_radiobutton_checked@2x.png in Resources */,
@@ -6472,6 +6644,7 @@
 				EE4C29071DAF97E9008924A3 /* HttpManager.m in Sources */,
 				EE4C29EC1DAF97EA008924A3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				EE4C29E01DAF97EA008924A3 /* UIView+WebCacheOperation.m in Sources */,
+				EE8971DB1EEFBC30007F13F9 /* MeasureViewDemo.m in Sources */,
 				EE4C28301DAF97E9008924A3 /* UITableView+CustomSetting.m in Sources */,
 				EE4C28C91DAF97E9008924A3 /* UIButton+YYMessage.m in Sources */,
 				EE4C29E91DAF97EA008924A3 /* UIButton+AFNetworking.m in Sources */,
@@ -6486,7 +6659,9 @@
 				EE4C28811DAF97E9008924A3 /* ObjectiveC_Memory.m in Sources */,
 				EE4B967C1DC5D60200CCFB95 /* UISliderController.m in Sources */,
 				EE4C29B81DAF97EA008924A3 /* UISegmentedControl+RACSignalSupport.m in Sources */,
+				EEEBE5641EE80948007BB181 /* UIView+TBAdditions.m in Sources */,
 				EE9F1B5D1DEAB337006AD033 /* JMGoodsDetailGraphicViewController.m in Sources */,
+				EEEBE5661EE80948007BB181 /* TBAlertController.m in Sources */,
 				EE9F1B531DEAB337006AD033 /* JMGoodsDetailLickButton.m in Sources */,
 				EE4C29DA1DAF97EA008924A3 /* UIButton+WebCache.m in Sources */,
 				EE4C28721DAF97E9008924A3 /* ThreadDemo.m in Sources */,
@@ -6501,6 +6676,7 @@
 				EE4C296D1DAF97EA008924A3 /* NSInvocation+RACTypeParsing.m in Sources */,
 				EE270DB71E1B6FE6005BA294 /* JMSkuCell.m in Sources */,
 				EE9F1A0B1DE84233006AD033 /* JMIconTag.m in Sources */,
+				EE8971D81EEFBBC3007F13F9 /* TaggingView.m in Sources */,
 				EE4C28C51DAF97E9008924A3 /* NSDate+YYMessage.m in Sources */,
 				EE4C295E1DAF97EA008924A3 /* MJRefreshStateHeader.m in Sources */,
 				EE9F1A111DE84233006AD033 /* JMScanControl.m in Sources */,
@@ -6602,6 +6778,7 @@
 				EE4C293D1DAF97EA008924A3 /* MWTapDetectingImageView.m in Sources */,
 				EE4C284F1DAF97E9008924A3 /* MyClass1.m in Sources */,
 				EE4C28331DAF97E9008924A3 /* YYBaseViewController+Navigation.m in Sources */,
+				EEEBE5631EE80948007BB181 /* TBActionSheetController.m in Sources */,
 				EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */,
 				EE4C282D1DAF97E9008924A3 /* ApplicationManager.m in Sources */,
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -6622,6 +6799,7 @@
 				EE4C29431DAF97EA008924A3 /* FMResultSet.m in Sources */,
 				EE4C285B1DAF97E9008924A3 /* PrivateApiDemo.m in Sources */,
 				EE4C28A41DAF97E9008924A3 /* FastRecordCellModel.m in Sources */,
+				EEEBE5601EE80948007BB181 /* TBActionButton.m in Sources */,
 				EE4C28F91DAF97E9008924A3 /* QrcodeDemo.m in Sources */,
 				EE4C296B1DAF97EA008924A3 /* NSFileHandle+RACSupport.m in Sources */,
 				EE4C291D1DAF97E9008924A3 /* AFURLRequestSerialization.m in Sources */,
@@ -6670,6 +6848,7 @@
 				EE72A6F51E724C3600A34272 /* Son+load.m in Sources */,
 				EE4C28901DAF97E9008924A3 /* ReactiveCocoaDemo.m in Sources */,
 				EE4B96771DC5D60200CCFB95 /* UIDemosController.m in Sources */,
+				EE8971D61EEFBBC3007F13F9 /* TagViewUtils.m in Sources */,
 				EE4C290F1DAF97E9008924A3 /* NSObject+Debug.m in Sources */,
 				EE4C28ED1DAF97E9008924A3 /* YYMessageImageView.m in Sources */,
 				EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */,
@@ -6678,6 +6857,7 @@
 				EE4C28BB1DAF97E9008924A3 /* YYCacheTest.m in Sources */,
 				EE4C28FD1DAF97E9008924A3 /* GoodsDetailNomalViewController.m in Sources */,
 				EE4C29CA1DAF97EA008924A3 /* PingFoundation.m in Sources */,
+				EEEBE55F1EE80948007BB181 /* TBActionBackground.m in Sources */,
 				EE4C29D21DAF97EA008924A3 /* NSData+ImageContentType.m in Sources */,
 				EE4C29671DAF97EA008924A3 /* NSArray+RACSequenceAdditions.m in Sources */,
 				EE4C29B51DAF97EA008924A3 /* UIGestureRecognizer+RACSignalSupport.m in Sources */,
@@ -6723,6 +6903,7 @@
 				EE4C28EB1DAF97E9008924A3 /* YYMessageBubbleView.m in Sources */,
 				EE4C289C1DAF97E9008924A3 /* MainShiDemo.m in Sources */,
 				EE4C28E81DAF97E9008924A3 /* YYMessageMoreViewCell.m in Sources */,
+				EE8971D51EEFBBC3007F13F9 /* MMTagModel.m in Sources */,
 				EE4C29AF1DAF97EA008924A3 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
 				EE4C285F1DAF97E9008924A3 /* ShowRoomCell.m in Sources */,
 				EE6BB3511EDFEB5400193070 /* YYAlertView.m in Sources */,
@@ -6810,6 +6991,8 @@
 				EE4C283A1DAF97E9008924A3 /* MainTabBarController.m in Sources */,
 				EE4C28F41DAF97E9008924A3 /* YYComponentsDemo.m in Sources */,
 				EE4C29791DAF97EA008924A3 /* NSString+RACSupport.m in Sources */,
+				EEEBE5651EE80948007BB181 /* UIWindow+TBAdditions.m in Sources */,
+				EEEBE5611EE80948007BB181 /* TBActionContainer.m in Sources */,
 				EE9F1B501DEAB337006AD033 /* JMGoodsDetailPageController.m in Sources */,
 				EEFCDD911DF1794D0066C31A /* JMFenQi.m in Sources */,
 				EE4C29C61DAF97EA008924A3 /* ReachStateUnReachable.m in Sources */,
@@ -6846,6 +7029,7 @@
 				EE4C29DE1DAF97EA008924A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE4C28A31DAF97E9008924A3 /* FastRecord.xcdatamodeld in Sources */,
 				EE4C292C1DAF97E9008924A3 /* DNImagePickerController.m in Sources */,
+				EEEBE5671EE80948007BB181 /* UIImage+BoxBlur.m in Sources */,
 				EE4C291B1DAF97E9008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EE4C29021DAF97E9008924A3 /* DemoCell2.m in Sources */,
 				EE4C29231DAF97E9008924A3 /* DTError.m in Sources */,
@@ -6869,6 +7053,7 @@
 				EE4C29991DAF97EA008924A3 /* RACScopedDisposable.m in Sources */,
 				EE4C29401DAF97EA008924A3 /* FMDatabaseAdditions.m in Sources */,
 				EE4C28D71DAF97E9008924A3 /* YYMessageCellBase.m in Sources */,
+				EE8971D71EEFBBC3007F13F9 /* MMBorderAttachView.m in Sources */,
 				EE4C29261DAF97E9008924A3 /* DTTimePeriodCollection.m in Sources */,
 				EE4C291C1DAF97E9008924A3 /* AFSecurityPolicy.m in Sources */,
 				EE4C29371DAF97EA008924A3 /* DNBadgeLabel.m in Sources */,
@@ -6910,6 +7095,7 @@
 				EE4C29491DAF97EA008924A3 /* MASLayoutConstraint.m in Sources */,
 				EE412D941DC73789005E6452 /* AutoLayoutDemo.m in Sources */,
 				EE4C291E1DAF97E9008924A3 /* AFURLResponseSerialization.m in Sources */,
+				EEEBE5621EE80948007BB181 /* TBActionSheet.m in Sources */,
 				EE4C28B61DAF97E9008924A3 /* FastRecordVoiceInputViewDim.m in Sources */,
 				EE4B96721DC5D60200CCFB95 /* UIActivityIndicatorViewController.m in Sources */,
 				EEEDF9871E2659AE00CF9268 /* JMSkuModel.m in Sources */,
@@ -7052,6 +7238,7 @@
 				EE2A21121DAF6D7A001F9A2E /* YYGestureRecognizer.m in Sources */,
 				EE2A21391DAF6D7A001F9A2E /* YYNoDataView.m in Sources */,
 				EE2A20D71DAF6D7A001F9A2E /* NSNumber+YYExtension.m in Sources */,
+				EEEBE56C1EE81206007BB181 /* YYActionSheet.m in Sources */,
 				EE2A20EF1DAF6D7A001F9A2E /* UIControl+YYExtension.m in Sources */,
 				EE2A21591DAF6D7A001F9A2E /* YYTextViewTimePicker.m in Sources */,
 				EE2A20E11DAF6D7A001F9A2E /* NSURL+YYExtension.m in Sources */,
@@ -7101,6 +7288,7 @@
 				EE2A20F31DAF6D7A001F9A2E /* UIFont+YYExtension.m in Sources */,
 				EE4C2BFF1DAF9D33008924A3 /* AFURLRequestSerialization.m in Sources */,
 				EE2A20FB1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.m in Sources */,
+				EEF9D80B1EE8556100EC4794 /* YYActionSheetCell.m in Sources */,
 				EE2A208A1DAF6D7A001F9A2E /* YYBaseLayoutConstraint.m in Sources */,
 				EE2A214B1DAF6D7A001F9A2E /* YYScrollSigmentCell.m in Sources */,
 				EE2A21501DAF6D7A001F9A2E /* YYSegmentedControl.m in Sources */,
