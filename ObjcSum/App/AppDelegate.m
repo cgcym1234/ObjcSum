@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <JSPatch/JSPatch.h>
+#import "PAirSandbox.h"
 
 @interface AppDelegate ()
 {
@@ -38,6 +39,13 @@
     static NSString *AppKeyJSPatch = @"32d4c3a5ffdfb78f";
     [JSPatch startWithAppKey:AppKeyJSPatch];
     [JSPatch sync];
+    
+#ifdef DEBUG
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[PAirSandbox sharedInstance] enableSwipe];
+    });
+#endif
+    
     
     // Override point for customization after application launch.
     //延迟启动图显示时间,2秒
