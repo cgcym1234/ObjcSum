@@ -47,7 +47,7 @@
         return;
     }
     
-    if (!CLLocationCoordinate2DIsValid(from.coordinate) || CLLocationCoordinate2DIsValid(to.coordinate)) {
+    if (!CLLocationCoordinate2DIsValid(from.coordinate) || !CLLocationCoordinate2DIsValid(to.coordinate)) {
         return;
     }
     

@@ -53,6 +53,14 @@
 		EE270E661E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270E631E1D0991005BA294 /* YYInputAccessoryViewWithCancel.m */; };
 		EE270E671E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE270E641E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib */; };
 		EE270ECF1E21EA71005BA294 /* NSString+JMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270ECE1E21EA71005BA294 /* NSString+JMCategory.m */; };
+		EE2A0F04202D8F1F00C88869 /* UIImage+DHImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A0EFC202D8F1F00C88869 /* UIImage+DHImageAdditions.m */; };
+		EE2A0F05202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A0EFD202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.m */; };
+		EE2A0F06202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A0EFE202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h */; };
+		EE2A0F07202D8F1F00C88869 /* UIView+DHSmartScreenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A0EFF202D8F1F00C88869 /* UIView+DHSmartScreenshot.h */; };
+		EE2A0F08202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A0F00202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.h */; };
+		EE2A0F09202D8F1F00C88869 /* UIImage+DHImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A0F01202D8F1F00C88869 /* UIImage+DHImageAdditions.h */; };
+		EE2A0F0A202D8F1F00C88869 /* UITableView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A0F02202D8F1F00C88869 /* UITableView+DHSmartScreenshot.m */; };
+		EE2A0F0B202D8F1F00C88869 /* UIView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A0F03202D8F1F00C88869 /* UIView+DHSmartScreenshot.m */; };
 		EE2A1F301DAF5DE7001F9A2E /* YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE2A1F331DAF5DE7001F9A2E /* YYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; };
 		EE2A1F341DAF5DE7001F9A2E /* YYSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -309,6 +317,7 @@
 		EE3548511EDECAE40012BA26 /* MapNavigationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3548501EDECAE40012BA26 /* MapNavigationDemo.m */; };
 		EE412D941DC73789005E6452 /* AutoLayoutDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE412D921DC73789005E6452 /* AutoLayoutDemo.m */; };
 		EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */; };
+		EE430927202A991700FFACCC /* CaptivePortalCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = EE430926202A991600FFACCC /* CaptivePortalCheck.m */; };
 		EE4B966E1DC5D60200CCFB95 /* CALayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B96271DC5D60200CCFB95 /* CALayerDemoController.m */; };
 		EE4B966F1DC5D60200CCFB95 /* CALayerDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4B96281DC5D60200CCFB95 /* CALayerDemoController.xib */; };
 		EE4B96701DC5D60200CCFB95 /* decorate_title_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4B96291DC5D60200CCFB95 /* decorate_title_bg.png */; };
@@ -892,6 +901,12 @@
 		EEABF0041EE527C100BA57B9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */; };
 		EEABF0051EE527C100BA57B9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFC1EE527C100BA57B9 /* libcrypto.a */; };
 		EEABF0061EE527C100BA57B9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFD1EE527C100BA57B9 /* libssl.a */; };
+		EEC09928200C4A2C00ED368B /* LocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC09926200C4A2C00ED368B /* LocationManager.h */; };
+		EEC09929200C4A2C00ED368B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC09927200C4A2C00ED368B /* LocationManager.m */; };
+		EEC0992D200C4DA300ED368B /* LocationManager+Loaction.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC0992B200C4DA300ED368B /* LocationManager+Loaction.h */; };
+		EEC0992E200C4DA300ED368B /* LocationManager+Loaction.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC0992C200C4DA300ED368B /* LocationManager+Loaction.m */; };
+		EEC0995C200DED7B00ED368B /* OnePixelLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC0995A200DED7B00ED368B /* OnePixelLayoutConstraint.h */; };
+		EEC0995D200DED7B00ED368B /* OnePixelLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */; };
 		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
@@ -1045,6 +1060,14 @@
 		EE270E641E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYInputAccessoryViewWithCancel.xib; sourceTree = "<group>"; };
 		EE270ECD1E21EA71005BA294 /* NSString+JMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JMCategory.h"; sourceTree = "<group>"; };
 		EE270ECE1E21EA71005BA294 /* NSString+JMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JMCategory.m"; sourceTree = "<group>"; };
+		EE2A0EFC202D8F1F00C88869 /* UIImage+DHImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DHImageAdditions.m"; sourceTree = "<group>"; };
+		EE2A0EFD202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
+		EE2A0EFE202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		EE2A0EFF202D8F1F00C88869 /* UIView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		EE2A0F00202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		EE2A0F01202D8F1F00C88869 /* UIImage+DHImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DHImageAdditions.h"; sourceTree = "<group>"; };
+		EE2A0F02202D8F1F00C88869 /* UITableView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
+		EE2A0F03202D8F1F00C88869 /* UIView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
 		EE2A1F2C1DAF5DE7001F9A2E /* YYSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2A1F2E1DAF5DE7001F9A2E /* YYSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSDK.h; sourceTree = "<group>"; };
 		EE2A1F2F1DAF5DE7001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1303,6 +1326,8 @@
 		EE412D911DC73789005E6452 /* AutoLayoutDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutDemo.h; sourceTree = "<group>"; };
 		EE412D921DC73789005E6452 /* AutoLayoutDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemo.m; sourceTree = "<group>"; };
 		EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutDemo.xib; sourceTree = "<group>"; };
+		EE430925202A991600FFACCC /* CaptivePortalCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptivePortalCheck.h; sourceTree = "<group>"; };
+		EE430926202A991600FFACCC /* CaptivePortalCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptivePortalCheck.m; sourceTree = "<group>"; };
 		EE4B96261DC5D60200CCFB95 /* CALayerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerDemoController.h; sourceTree = "<group>"; };
 		EE4B96271DC5D60200CCFB95 /* CALayerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerDemoController.m; sourceTree = "<group>"; };
 		EE4B96281DC5D60200CCFB95 /* CALayerDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CALayerDemoController.xib; sourceTree = "<group>"; };
@@ -2388,6 +2413,12 @@
 		EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		EEABEFFC1EE527C100BA57B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		EEABEFFD1EE527C100BA57B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		EEC09926200C4A2C00ED368B /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		EEC09927200C4A2C00ED368B /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		EEC0992B200C4DA300ED368B /* LocationManager+Loaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationManager+Loaction.h"; sourceTree = "<group>"; };
+		EEC0992C200C4DA300ED368B /* LocationManager+Loaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LocationManager+Loaction.m"; sourceTree = "<group>"; };
+		EEC0995A200DED7B00ED368B /* OnePixelLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnePixelLayoutConstraint.h; sourceTree = "<group>"; };
+		EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnePixelLayoutConstraint.m; sourceTree = "<group>"; };
 		EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyntacticSugar+Extention.h"; sourceTree = "<group>"; };
 		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
@@ -2741,6 +2772,21 @@
 			path = YYInputAccessoryViewWithCancel;
 			sourceTree = "<group>";
 		};
+		EE2A0EFB202D8F1F00C88869 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				EE2A0EFC202D8F1F00C88869 /* UIImage+DHImageAdditions.m */,
+				EE2A0EFD202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.m */,
+				EE2A0EFE202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h */,
+				EE2A0EFF202D8F1F00C88869 /* UIView+DHSmartScreenshot.h */,
+				EE2A0F00202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.h */,
+				EE2A0F01202D8F1F00C88869 /* UIImage+DHImageAdditions.h */,
+				EE2A0F02202D8F1F00C88869 /* UITableView+DHSmartScreenshot.m */,
+				EE2A0F03202D8F1F00C88869 /* UIView+DHSmartScreenshot.m */,
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
 		EE2A1F2D1DAF5DE7001F9A2E /* YYSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -2774,6 +2820,7 @@
 		EE2A1F431DAF60C8001F9A2E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				EE2A0EFB202D8F1F00C88869 /* Screenshot */,
 				EE82C14F1DB5C2DC0055593D /* UIButton */,
 				EE2A1F391DAF5E54001F9A2E /* UIColor */,
 				EE2A1F551DAF6300001F9A2E /* UIImage */,
@@ -2847,6 +2894,8 @@
 				EE2A20671DAF6D7A001F9A2E /* YYTextViewTimePicker */,
 				EE2A206A1DAF6D7A001F9A2E /* YYView */,
 				EE2A206D1DAF6D7A001F9A2E /* YYXibView */,
+				EEC0992A200C4D8100ED368B /* LocationManager */,
+				EEC0995E200DED8000ED368B /* OnePixelLayoutConstraint */,
 			);
 			path = YYLib;
 			sourceTree = "<group>";
@@ -3390,6 +3439,15 @@
 				EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */,
 			);
 			path = AutoLayoutDemo;
+			sourceTree = "<group>";
+		};
+		EE430924202A991600FFACCC /* CaptivePortalCheck */ = {
+			isa = PBXGroup;
+			children = (
+				EE430925202A991600FFACCC /* CaptivePortalCheck.h */,
+				EE430926202A991600FFACCC /* CaptivePortalCheck.m */,
+			);
+			path = CaptivePortalCheck;
 			sourceTree = "<group>";
 		};
 		EE4B96241DC5D60200CCFB95 /* 系统控件篇 */ = {
@@ -4915,6 +4973,7 @@
 		EE4C264C1DAF97E7008924A3 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EE430924202A991600FFACCC /* CaptivePortalCheck */,
 				EE068FD91F274E140066B97C /* AirSandbox */,
 				EE8971C91EEFBBC3007F13F9 /* TagViewUtils */,
 				EEEBE5431EE80948007BB181 /* TBActionSheet */,
@@ -6099,6 +6158,26 @@
 			path = thirdlibs;
 			sourceTree = "<group>";
 		};
+		EEC0992A200C4D8100ED368B /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				EEC09926200C4A2C00ED368B /* LocationManager.h */,
+				EEC09927200C4A2C00ED368B /* LocationManager.m */,
+				EEC0992B200C4DA300ED368B /* LocationManager+Loaction.h */,
+				EEC0992C200C4DA300ED368B /* LocationManager+Loaction.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		EEC0995E200DED8000ED368B /* OnePixelLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				EEC0995A200DED7B00ED368B /* OnePixelLayoutConstraint.h */,
+				EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */,
+			);
+			path = OnePixelLayoutConstraint;
+			sourceTree = "<group>";
+		};
 		EECCCCD41DD00556007B47B1 /* YYSegmentedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -6260,6 +6339,7 @@
 				EE2A207F1DAF6D7A001F9A2E /* YYAlertTable.h in Headers */,
 				EE2A20931DAF6D7A001F9A2E /* YYUrlCache.h in Headers */,
 				EE2A21561DAF6D7A001F9A2E /* YYTextView.h in Headers */,
+				EEC0995C200DED7B00ED368B /* OnePixelLayoutConstraint.h in Headers */,
 				EE2A208B1DAF6D7A001F9A2E /* YYBaseHttp.h in Headers */,
 				EE2A20991DAF6D7A001F9A2E /* YYDiskCache.h in Headers */,
 				EE2A21231DAF6D7A001F9A2E /* YYKit.h in Headers */,
@@ -6292,7 +6372,9 @@
 				EE2A20DC1DAF6D7A001F9A2E /* NSThread+YYExtension.h in Headers */,
 				EE2A20771DAF6D7A001F9A2E /* JMRenderableTableView.h in Headers */,
 				EE2A20741DAF6D7A001F9A2E /* GTMBase64.h in Headers */,
+				EE2A0F08202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.h in Headers */,
 				EE2A21441DAF6D7A001F9A2E /* YYRefreshConst.h in Headers */,
+				EE2A0F09202D8F1F00C88869 /* UIImage+DHImageAdditions.h in Headers */,
 				EE4C2C091DB07158008924A3 /* YYLogger.h in Headers */,
 				EE2A20CE1DAF6D7A001F9A2E /* NSHTTPCookie+YYExtension.h in Headers */,
 				EE2A20DA1DAF6D7A001F9A2E /* NSString+YYExtension.h in Headers */,
@@ -6329,6 +6411,7 @@
 				EE2A20A11DAF6D7A001F9A2E /* UIView+YYChrysanthemum.h in Headers */,
 				EE2A1F511DAF62BD001F9A2E /* UIView+MotionEffect.h in Headers */,
 				EE2A21301DAF6D7A001F9A2E /* YYMultiSelectModel.h in Headers */,
+				EE2A0F07202D8F1F00C88869 /* UIView+DHSmartScreenshot.h in Headers */,
 				EE2A215C1DAF6D7A001F9A2E /* YYXibView.h in Headers */,
 				EE2A211D1DAF6D7A001F9A2E /* YYTimer.h in Headers */,
 				EE2A20C41DAF6D7A001F9A2E /* NSBundle+YYExtension.h in Headers */,
@@ -6342,6 +6425,7 @@
 				EE2A1F411DAF5E99001F9A2E /* UIColor+YYSDK.h in Headers */,
 				EE2A20F41DAF6D7A001F9A2E /* UIGestureRecognizer+YYExtension.h in Headers */,
 				EE2A20FA1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.h in Headers */,
+				EE2A0F06202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h in Headers */,
 				EE5FE8911DBD055C00CB2FF0 /* YYGCDSemaphore.h in Headers */,
 				EE4C2BFE1DAF9D33008924A3 /* AFURLRequestSerialization.h in Headers */,
 				EEEBE56B1EE81206007BB181 /* YYActionSheet.h in Headers */,
@@ -6354,8 +6438,10 @@
 				EE2A21261DAF6D7A001F9A2E /* NSObject+YYModel.h in Headers */,
 				EE2A21211DAF6D7A001F9A2E /* YYWeakProxy.h in Headers */,
 				EE2A20791DAF6D7A001F9A2E /* YYAlertGridView.h in Headers */,
+				EEC0992D200C4DA300ED368B /* LocationManager+Loaction.h in Headers */,
 				EE2A1F531DAF62BD001F9A2E /* UIView+Transform.h in Headers */,
 				EE4C2BF91DAF9D33008924A3 /* AFNetworking.h in Headers */,
+				EEC09928200C4A2C00ED368B /* LocationManager.h in Headers */,
 				EE35484C1EDEC6AF0012BA26 /* JZLocationConverter.h in Headers */,
 				EE2A21131DAF6D7A001F9A2E /* YYKeychain.h in Headers */,
 				EE2A214A1DAF6D7A001F9A2E /* YYScrollSigmentCell.h in Headers */,
@@ -6764,6 +6850,7 @@
 				EE4C28341DAF97E9008924A3 /* YYBaseViewController.m in Sources */,
 				EE4C29061DAF97E9008924A3 /* YYAlertTextViewDemo.m in Sources */,
 				EE4C28FC1DAF97E9008924A3 /* GoodsDetailGraphicViewController.m in Sources */,
+				EE430927202A991700FFACCC /* CaptivePortalCheck.m in Sources */,
 				EE9F1B5A1DEAB337006AD033 /* JMGoodsDetailContainerViewController.m in Sources */,
 				EE72A6F61E724C3600A34272 /* Other.m in Sources */,
 				EE270DD51E1BC675005BA294 /* NSString+TransformToDisplay.m in Sources */,
@@ -7226,6 +7313,7 @@
 				EE2A21311DAF6D7A001F9A2E /* YYMultiSelectModel.m in Sources */,
 				EE2A212E1DAF6D7A001F9A2E /* YYMultiSelectCell.m in Sources */,
 				EE2A20711DAF6D7A001F9A2E /* AESenAndDe.m in Sources */,
+				EE2A0F05202D8F1F00C88869 /* UIScrollView+DHSmartScreenshot.m in Sources */,
 				EE2A20981DAF6D7A001F9A2E /* YYCache.m in Sources */,
 				EE2A20F51DAF6D7A001F9A2E /* UIGestureRecognizer+YYExtension.m in Sources */,
 				EE2A20BA1DAF6D7A001F9A2E /* YYTransitioningDelegate.m in Sources */,
@@ -7242,6 +7330,7 @@
 				EE2A20D51DAF6D7A001F9A2E /* NSNull+YYKit.m in Sources */,
 				EE3548481EDEB9300012BA26 /* YYMapNavigation.m in Sources */,
 				EE4C2BFB1DAF9D33008924A3 /* AFNetworkReachabilityManager.m in Sources */,
+				EEC09929200C4A2C00ED368B /* LocationManager.m in Sources */,
 				EE2A21221DAF6D7A001F9A2E /* YYWeakProxy.m in Sources */,
 				EE2A211A1DAF6D7A001F9A2E /* YYThreadSafeArray.m in Sources */,
 				EE6910EC1F134F7F0097AC99 /* NSAttributedString+YYExtension.m in Sources */,
@@ -7255,6 +7344,7 @@
 				EE2A1F421DAF5E99001F9A2E /* UIColor+YYSDK.m in Sources */,
 				EE4B96961DC5DAAF00CCFB95 /* YYPageViewController.m in Sources */,
 				EE2A20921DAF6D7A001F9A2E /* YYJsonResponseSerializer.m in Sources */,
+				EEC0995D200DED7B00ED368B /* OnePixelLayoutConstraint.m in Sources */,
 				EE2A20831DAF6D7A001F9A2E /* YYAlertTableCell.m in Sources */,
 				EE2A20871DAF6D7A001F9A2E /* YYAlertTextView.m in Sources */,
 				EE2A21051DAF6D7A001F9A2E /* UITextField+YYExtension.m in Sources */,
@@ -7262,6 +7352,7 @@
 				EE2A20A21DAF6D7A001F9A2E /* UIView+YYChrysanthemum.m in Sources */,
 				EE2A214E1DAF6D7A001F9A2E /* YYSearchBar.m in Sources */,
 				EE5FE8901DBD055C00CB2FF0 /* YYGCDQueue.m in Sources */,
+				EEC0992E200C4DA300ED368B /* LocationManager+Loaction.m in Sources */,
 				EE2A21101DAF6D7A001F9A2E /* YYFileHash.m in Sources */,
 				EE2A20AE1DAF6D7A001F9A2E /* YYHud.m in Sources */,
 				EE2A208E1DAF6D7A001F9A2E /* YYHttpRequestSerializer.m in Sources */,
@@ -7270,6 +7361,7 @@
 				EE2A21181DAF6D7A001F9A2E /* YYSentinel.m in Sources */,
 				EE2A20A91DAF6D7A001F9A2E /* YYDim.m in Sources */,
 				EE2A20A41DAF6D7A001F9A2E /* YYChrysanthemum.m in Sources */,
+				EE2A0F0B202D8F1F00C88869 /* UIView+DHSmartScreenshot.m in Sources */,
 				EE2A20961DAF6D7A001F9A2E /* YYButton.m in Sources */,
 				EE2A21121DAF6D7A001F9A2E /* YYGestureRecognizer.m in Sources */,
 				EE2A21391DAF6D7A001F9A2E /* YYNoDataView.m in Sources */,
@@ -7289,6 +7381,7 @@
 				EE2A21141DAF6D7A001F9A2E /* YYKeychain.m in Sources */,
 				EE2A20F71DAF6D7A001F9A2E /* UIImage+YYExtension.m in Sources */,
 				EE2A20E31DAF6D7A001F9A2E /* CALayer+YYExtension.m in Sources */,
+				EE2A0F04202D8F1F00C88869 /* UIImage+DHImageAdditions.m in Sources */,
 				EE2A20801DAF6D7A001F9A2E /* YYAlertTable.m in Sources */,
 				EE2A207A1DAF6D7A001F9A2E /* YYAlertGridView.m in Sources */,
 				EE2A215B1DAF6D7A001F9A2E /* YYView.m in Sources */,
@@ -7325,6 +7418,7 @@
 				EE4C2BFF1DAF9D33008924A3 /* AFURLRequestSerialization.m in Sources */,
 				EE2A20FB1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.m in Sources */,
 				EEF9D80B1EE8556100EC4794 /* YYActionSheetCell.m in Sources */,
+				EE2A0F0A202D8F1F00C88869 /* UITableView+DHSmartScreenshot.m in Sources */,
 				EE2A208A1DAF6D7A001F9A2E /* YYBaseLayoutConstraint.m in Sources */,
 				EE2A214B1DAF6D7A001F9A2E /* YYScrollSigmentCell.m in Sources */,
 				EE2A21501DAF6D7A001F9A2E /* YYSegmentedControl.m in Sources */,

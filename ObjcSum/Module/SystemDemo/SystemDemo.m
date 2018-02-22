@@ -38,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.dataArr = @[
                      [[LibDemoInfo alloc] initWithTitle:@"AuthenticationDemo" desc:@"指纹解锁" controllerName:@"AuthenticationDemo"],
                      
