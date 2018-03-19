@@ -30,6 +30,8 @@
   if (self.currentRequestUrl) {
       [self loadUrlStr:_currentRequestUrl];
   }
+
+	
 }
 
 

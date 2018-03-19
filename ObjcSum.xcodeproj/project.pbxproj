@@ -318,6 +318,8 @@
 		EE412D941DC73789005E6452 /* AutoLayoutDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE412D921DC73789005E6452 /* AutoLayoutDemo.m */; };
 		EE412D951DC73789005E6452 /* AutoLayoutDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */; };
 		EE430927202A991700FFACCC /* CaptivePortalCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = EE430926202A991600FFACCC /* CaptivePortalCheck.m */; };
+		EE490956204D2CAE00528358 /* UIApplication+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE490954204D2CAE00528358 /* UIApplication+YYSDK.h */; };
+		EE490957204D2CAE00528358 /* UIApplication+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE490955204D2CAE00528358 /* UIApplication+YYSDK.m */; };
 		EE4B966E1DC5D60200CCFB95 /* CALayerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B96271DC5D60200CCFB95 /* CALayerDemoController.m */; };
 		EE4B966F1DC5D60200CCFB95 /* CALayerDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4B96281DC5D60200CCFB95 /* CALayerDemoController.xib */; };
 		EE4B96701DC5D60200CCFB95 /* decorate_title_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4B96291DC5D60200CCFB95 /* decorate_title_bg.png */; };
@@ -823,6 +825,13 @@
 		EE4C2C091DB07158008924A3 /* YYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4C2C071DB07158008924A3 /* YYLogger.h */; };
 		EE4C2C0A1DB07158008924A3 /* YYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C2C081DB07158008924A3 /* YYLogger.m */; };
 		EE51A63E1DF56D2000C13807 /* NSStringDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51A63D1DF56D2000C13807 /* NSStringDemo.m */; };
+		EE5A28F72057B3B80007BD95 /* CLLocation+ChinaMapDeviation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A28F42057B3B60007BD95 /* CLLocation+ChinaMapDeviation.m */; };
+		EE5A28F82057B3B80007BD95 /* china.kml in Resources */ = {isa = PBXBuildFile; fileRef = EE5A28F52057B3B70007BD95 /* china.kml */; };
+		EE5A28F92057B3B80007BD95 /* CLLocation+ChinaMapDeviation.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5A28F62057B3B70007BD95 /* CLLocation+ChinaMapDeviation.h */; };
+		EE5A28FE2057B6D60007BD95 /* BPPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A28FA2057B6D30007BD95 /* BPPolygon.m */; };
+		EE5A28FF2057B6D60007BD95 /* BPPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5A28FB2057B6D40007BD95 /* BPPolygon.h */; };
+		EE5A29002057B6D60007BD95 /* BPRegion.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5A28FC2057B6D40007BD95 /* BPRegion.h */; };
+		EE5A29012057B6D60007BD95 /* BPRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5A28FD2057B6D50007BD95 /* BPRegion.m */; };
 		EE5FE87F1DBCF28500CB2FF0 /* YYGlobalTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */; };
 		EE5FE8801DBCF28500CB2FF0 /* YYGlobalTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */; };
 		EE5FE88C1DBD055C00CB2FF0 /* YYGCD.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */; };
@@ -1328,6 +1337,8 @@
 		EE412D931DC73789005E6452 /* AutoLayoutDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutDemo.xib; sourceTree = "<group>"; };
 		EE430925202A991600FFACCC /* CaptivePortalCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptivePortalCheck.h; sourceTree = "<group>"; };
 		EE430926202A991600FFACCC /* CaptivePortalCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptivePortalCheck.m; sourceTree = "<group>"; };
+		EE490954204D2CAE00528358 /* UIApplication+YYSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+YYSDK.h"; sourceTree = "<group>"; };
+		EE490955204D2CAE00528358 /* UIApplication+YYSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+YYSDK.m"; sourceTree = "<group>"; };
 		EE4B96261DC5D60200CCFB95 /* CALayerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerDemoController.h; sourceTree = "<group>"; };
 		EE4B96271DC5D60200CCFB95 /* CALayerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerDemoController.m; sourceTree = "<group>"; };
 		EE4B96281DC5D60200CCFB95 /* CALayerDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CALayerDemoController.xib; sourceTree = "<group>"; };
@@ -2286,6 +2297,13 @@
 		EE4C2C081DB07158008924A3 /* YYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLogger.m; sourceTree = "<group>"; };
 		EE51A63C1DF56D2000C13807 /* NSStringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringDemo.h; sourceTree = "<group>"; };
 		EE51A63D1DF56D2000C13807 /* NSStringDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringDemo.m; sourceTree = "<group>"; };
+		EE5A28F42057B3B60007BD95 /* CLLocation+ChinaMapDeviation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+ChinaMapDeviation.m"; sourceTree = "<group>"; };
+		EE5A28F52057B3B70007BD95 /* china.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = china.kml; sourceTree = "<group>"; };
+		EE5A28F62057B3B70007BD95 /* CLLocation+ChinaMapDeviation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+ChinaMapDeviation.h"; sourceTree = "<group>"; };
+		EE5A28FA2057B6D30007BD95 /* BPPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPPolygon.m; sourceTree = "<group>"; };
+		EE5A28FB2057B6D40007BD95 /* BPPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPPolygon.h; sourceTree = "<group>"; };
+		EE5A28FC2057B6D40007BD95 /* BPRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPRegion.h; sourceTree = "<group>"; };
+		EE5A28FD2057B6D50007BD95 /* BPRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPRegion.m; sourceTree = "<group>"; };
 		EE5FE87D1DBCF28500CB2FF0 /* YYGlobalTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGlobalTimer.h; sourceTree = "<group>"; };
 		EE5FE87E1DBCF28500CB2FF0 /* YYGlobalTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGlobalTimer.m; sourceTree = "<group>"; };
 		EE5FE8831DBD055C00CB2FF0 /* YYGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGCD.h; sourceTree = "<group>"; };
@@ -2813,6 +2831,15 @@
 				EE2A1F431DAF60C8001F9A2E /* UIKit */,
 				EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */,
 				EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */,
+				EE490954204D2CAE00528358 /* UIApplication+YYSDK.h */,
+				EE490955204D2CAE00528358 /* UIApplication+YYSDK.m */,
+				EE5A28F52057B3B70007BD95 /* china.kml */,
+				EE5A28F62057B3B70007BD95 /* CLLocation+ChinaMapDeviation.h */,
+				EE5A28F42057B3B60007BD95 /* CLLocation+ChinaMapDeviation.m */,
+				EE5A28FB2057B6D40007BD95 /* BPPolygon.h */,
+				EE5A28FA2057B6D30007BD95 /* BPPolygon.m */,
+				EE5A28FC2057B6D40007BD95 /* BPRegion.h */,
+				EE5A28FD2057B6D50007BD95 /* BPRegion.m */,
 			);
 			path = YYCategory;
 			sourceTree = "<group>";
@@ -6336,6 +6363,7 @@
 				EE2A21151DAF6D7A001F9A2E /* YYReachability.h in Headers */,
 				EE2A20971DAF6D7A001F9A2E /* YYCache.h in Headers */,
 				EE2A20721DAF6D7A001F9A2E /* FBEncryptorAES.h in Headers */,
+				EE490956204D2CAE00528358 /* UIApplication+YYSDK.h in Headers */,
 				EE2A207F1DAF6D7A001F9A2E /* YYAlertTable.h in Headers */,
 				EE2A20931DAF6D7A001F9A2E /* YYUrlCache.h in Headers */,
 				EE2A21561DAF6D7A001F9A2E /* YYTextView.h in Headers */,
@@ -6353,6 +6381,7 @@
 				EE2A209B1DAF6D7A001F9A2E /* YYKVStorage.h in Headers */,
 				EE2A20D81DAF6D7A001F9A2E /* NSObject+YYExtension.h in Headers */,
 				EE2A21421DAF6D7A001F9A2E /* YYRefreshConfig.h in Headers */,
+				EE5A29002057B6D60007BD95 /* BPRegion.h in Headers */,
 				EE2A21541DAF6D7A001F9A2E /* YYSimpleAlertTable.h in Headers */,
 				EE4C2BFA1DAF9D33008924A3 /* AFNetworkReachabilityManager.h in Headers */,
 				EEF9D80A1EE8556100EC4794 /* YYActionSheetCell.h in Headers */,
@@ -6408,6 +6437,7 @@
 				EE2A21081DAF6D7A001F9A2E /* YYBenchmark.h in Headers */,
 				EE2A20CC1DAF6D7A001F9A2E /* NSError+YYExtension.h in Headers */,
 				EE2A214F1DAF6D7A001F9A2E /* YYSegmentedControl.h in Headers */,
+				EE5A28FF2057B6D60007BD95 /* BPPolygon.h in Headers */,
 				EE2A20A11DAF6D7A001F9A2E /* UIView+YYChrysanthemum.h in Headers */,
 				EE2A1F511DAF62BD001F9A2E /* UIView+MotionEffect.h in Headers */,
 				EE2A21301DAF6D7A001F9A2E /* YYMultiSelectModel.h in Headers */,
@@ -6426,6 +6456,7 @@
 				EE2A20F41DAF6D7A001F9A2E /* UIGestureRecognizer+YYExtension.h in Headers */,
 				EE2A20FA1DAF6D7A001F9A2E /* UINavigationItem+YYExtension.h in Headers */,
 				EE2A0F06202D8F1F00C88869 /* UITableView+DHSmartScreenshot.h in Headers */,
+				EE5A28F92057B3B80007BD95 /* CLLocation+ChinaMapDeviation.h in Headers */,
 				EE5FE8911DBD055C00CB2FF0 /* YYGCDSemaphore.h in Headers */,
 				EE4C2BFE1DAF9D33008924A3 /* AFURLRequestSerialization.h in Headers */,
 				EEEBE56B1EE81206007BB181 /* YYActionSheet.h in Headers */,
@@ -6722,6 +6753,7 @@
 				EE270E671E1D0991005BA294 /* YYInputAccessoryViewWithCancel.xib in Resources */,
 				EE2A20811DAF6D7A001F9A2E /* YYAlertTable.xib in Resources */,
 				EE2A20881DAF6D7A001F9A2E /* YYAlertTextView.xib in Resources */,
+				EE5A28F82057B3B80007BD95 /* china.kml in Resources */,
 				EE2A212B1DAF6D7A001F9A2E /* ic_radiobutton@2x.png in Resources */,
 				EE2A207E1DAF6D7A001F9A2E /* YYAlertGridViewCell.xib in Resources */,
 				EE2A21411DAF6D7A001F9A2E /* YYRefresh.xcassets in Resources */,
@@ -7382,6 +7414,7 @@
 				EE2A20F71DAF6D7A001F9A2E /* UIImage+YYExtension.m in Sources */,
 				EE2A20E31DAF6D7A001F9A2E /* CALayer+YYExtension.m in Sources */,
 				EE2A0F04202D8F1F00C88869 /* UIImage+DHImageAdditions.m in Sources */,
+				EE5A29012057B6D60007BD95 /* BPRegion.m in Sources */,
 				EE2A20801DAF6D7A001F9A2E /* YYAlertTable.m in Sources */,
 				EE2A207A1DAF6D7A001F9A2E /* YYAlertGridView.m in Sources */,
 				EE2A215B1DAF6D7A001F9A2E /* YYView.m in Sources */,
@@ -7400,11 +7433,13 @@
 				EE2A20E71DAF6D7A001F9A2E /* UIApplication+YYExtension.m in Sources */,
 				EE2A20941DAF6D7A001F9A2E /* YYUrlCache.m in Sources */,
 				EE2A1F4E1DAF62BD001F9A2E /* UIView+AutoLayout.m in Sources */,
+				EE5A28FE2057B6D60007BD95 /* BPPolygon.m in Sources */,
 				EE2A208C1DAF6D7A001F9A2E /* YYBaseHttp.m in Sources */,
 				EE2A215D1DAF6D7A001F9A2E /* YYXibView.m in Sources */,
 				EE2A20B21DAF6D7A001F9A2E /* YYFullScreenAnimator.m in Sources */,
 				EE2A21031DAF6D7A001F9A2E /* UITableViewCell+YYExtension.m in Sources */,
 				EE2A21551DAF6D7A001F9A2E /* YYSimpleAlertTable.m in Sources */,
+				EE5A28F72057B3B80007BD95 /* CLLocation+ChinaMapDeviation.m in Sources */,
 				EE4C2BF81DAF9D33008924A3 /* AFHTTPSessionManager.m in Sources */,
 				EE4C2C0A1DB07158008924A3 /* YYLogger.m in Sources */,
 				EE2A20E51DAF6D7A001F9A2E /* YYCGUtilities.m in Sources */,
@@ -7446,6 +7481,7 @@
 				EE2A207D1DAF6D7A001F9A2E /* YYAlertGridViewCell.m in Sources */,
 				EE2A21011DAF6D7A001F9A2E /* UITableView+YYExtension.m in Sources */,
 				EE2A20DB1DAF6D7A001F9A2E /* NSString+YYExtension.m in Sources */,
+				EE490957204D2CAE00528358 /* UIApplication+YYSDK.m in Sources */,
 				EE2A20B61DAF6D7A001F9A2E /* YYImageBrowserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,14 +13,21 @@
 
 #pragma mark ### Class
 
-//Objective-C类是由Class类型来表示的，它实际上是一个指向objc_class结构体的指针。它的定义如下：
+/*
+ 在Objective-C中，对象是广义的概念，类也是对象，所以严谨的说法应该是类对象和实例对象。
+ 既然实例对象所属的类称为类对象，那类对象有所属的类吗？有，称之为元类(Metaclass)。
+ */
 
-//typedef struct objc_class * Class;
+#pragma mark -  类对象(Class)
+///类对象是由程序员定义并在运行时由编译器创建的，它没有自己的实例变量，这里需要注意的是类的成员变量和实例方法列表是属于实例对象的，但其存储于类对象当中的。
+
+//Objective-C类是由Class类型来表示的，它实际上是一个指向objc_class结构体的指针。定义如下：
+typedef struct yy_objc_class * YYClass;
 struct yy_objc_class {
-    //需要注意的是在Objective-C中，所有的类自身也是一个对象，这个对象的Class里面也有一个isa指针，它指向metaClass(元类)，我们会在后面介绍它。
-    Class isa;
+	//isa指针是和Class同类型的objc_class结构指针，类对象的指针指向其所属的类，即元类。元类中存储着类对象的类方法，当访问某个类的类方法时会通过该isa指针从元类中寻找方法对应的函数指针
+    Class isa; // 指向所属类的指针(_Nonnull)
     
-    //指向该类的父类，如果该类已经是最顶层的根类(如NSObject或NSProxy)，则super_class为NULL。
+    //指向该类所继承的父类对象，如果该类已经是最顶层的根类(如NSObject或NSProxy), 则 super_class为NULL
     Class super_class;
     
     // 类名
@@ -32,7 +39,7 @@ struct yy_objc_class {
      */
     long version;
     
-    // 类信息，供运行期使用的一些位标识
+	// 类信息，供运行期使用的一些位标识,比如:CLS_CLASS (0x1L)表示该类为普通类, CLS_META (0x2L)则表示该类为元类
     long info;
     
     // 该类的实例变量大小
