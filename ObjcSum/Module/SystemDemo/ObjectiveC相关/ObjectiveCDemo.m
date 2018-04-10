@@ -16,6 +16,12 @@
 }
 
 @property (nonatomic, strong) NSMutableDictionary *dict;
+
+@property (nonatomic, copy) NSMutableDictionary *dict2;
+@property (nonatomic, copy) NSMutableDictionary *dict3;
+
+@property (nonatomic, strong) NSDictionary *dict4;
+
 @end
 
 @implementation ObjectiveCDemo
@@ -25,7 +31,21 @@
     // Do any additional setup after loading the view.
     _dict = [NSMutableDictionary dictionary];
 //    [self typeEncoding];
-    
+	
+	_dict2 = _dict; //copy不会起作用
+	self.dict3 = _dict; //copy生效
+	
+	/*
+	 (lldb) po [_dict class];
+	 __NSDictionaryM
+	 
+	 (lldb) po [_dict2 class];
+	 __NSDictionaryM
+	 
+	 (lldb) po [_dict3 class];
+	 __NSFrozenDictionaryM
+	 */
+	
     [self addButtonWithTitle:@"1-类与对象demo" action:^(UIButton *btn) {
         [ClassDemo launch];
     }];
@@ -33,6 +53,12 @@
     [self addButtonWithTitle:@"2-成员变量与属性demo" action:^(UIButton *btn) {
         [PropertyAndVariableDemo launch];
     }];
+	
+	_dict4 = [[NSDictionary alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
 }
 
 #pragma mark - 类型编码

@@ -38,7 +38,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
     self.dataArr = @[
+					 [[LibDemoInfo alloc] initWithTitle:@"HotFixDemo" desc:@"HotFixDemo" controllerName:@"HotFixDemo"],
+					 [[LibDemoInfo alloc] initWithTitle:@"FlexboxDemo" desc:@"FlexboxDemo" controllerName:@"FlexboxDemo"],
                      [[LibDemoInfo alloc] initWithTitle:@"MeasureViewDemo" desc:@"测量view距离" controllerName:@"MeasureViewDemo"],
                      [[LibDemoInfo alloc] initWithTitle:@"JSPatchDemo" desc:@"JSPatch动态部署测试" controllerName:@"JSPatchDemo"],
                      [[LibDemoInfo alloc] initWithTitle:@"RealReachabilityDemo" desc:@"真实网络检测" controllerName:@"RealReachabilityDemo"],

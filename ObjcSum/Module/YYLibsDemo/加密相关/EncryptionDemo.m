@@ -26,7 +26,7 @@
     NSString *str = @"zhangjianlong";
     NSString *encryptStr = [self stringFromAESEncrypt:str];
     NSLog(@"加密前: %@， 加密后: %@", str, encryptStr);
-    
+	
     NSString *url = @"http://www.meilele.com/mll_api/api/app_ybj2_recommend";
     NSDictionary *parameters = @{@"datarow_need":@"5"};
     [[YYBaseHttp new] getUrlString:url parameters:parameters completion:^(id responseData, NSError *error, NSURLSessionDataTask *dataTask) {

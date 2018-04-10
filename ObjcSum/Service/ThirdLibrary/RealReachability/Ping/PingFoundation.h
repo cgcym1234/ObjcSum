@@ -276,10 +276,10 @@ struct ICMPHeader
 };
 typedef struct ICMPHeader ICMPHeader;
 
-check_compile_time(sizeof(ICMPHeader) == 8);
-check_compile_time(offsetof(ICMPHeader, type) == 0);
-check_compile_time(offsetof(ICMPHeader, code) == 1);
-check_compile_time(offsetof(ICMPHeader, checksum) == 2);
-check_compile_time(offsetof(ICMPHeader, identifier) == 4);
-check_compile_time(offsetof(ICMPHeader, sequenceNumber) == 6);
+//check_compile_time(sizeof(ICMPHeader) == 8);
+//check_compile_time(offsetof(ICMPHeader, type) == 0);
+//check_compile_time(offsetof(ICMPHeader, code) == 1);
+//check_compile_time(offsetof(ICMPHeader, checksum) == 2);
+//check_compile_time(offsetof(ICMPHeader, identifier) == 4);
+//check_compile_time(offsetof(ICMPHeader, sequenceNumber) == 6);
 

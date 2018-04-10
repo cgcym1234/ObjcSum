@@ -900,6 +900,8 @@
 		EE9F1B611DEAB337006AD033 /* JMSimpleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B491DEAB337006AD033 /* JMSimpleSegment.m */; };
 		EE9F1B621DEAB337006AD033 /* JMSimpleSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */; };
 		EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */; };
+		EEAB7AE62074A809000A223C /* HotFixDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB7AE52074A809000A223C /* HotFixDemo.m */; };
+		EEAB7AEA2074A95B000A223C /* Felix.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB7AE92074A95B000A223C /* Felix.m */; };
 		EEABEFCA1EE50CFB00BA57B9 /* JMDeepLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */; };
 		EEABEFFE1EE527C100BA57B9 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */; };
 		EEABEFFF1EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */; };
@@ -910,6 +912,17 @@
 		EEABF0041EE527C100BA57B9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */; };
 		EEABF0051EE527C100BA57B9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFC1EE527C100BA57B9 /* libcrypto.a */; };
 		EEABF0061EE527C100BA57B9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFD1EE527C100BA57B9 /* libssl.a */; };
+		EEBB32CA206B880800A69074 /* FlexboxDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32C9206B880800A69074 /* FlexboxDemo.m */; };
+		EEBB32E9206B887F00A69074 /* FBAsyLayoutTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32CF206B887F00A69074 /* FBAsyLayoutTransaction.m */; };
+		EEBB32EA206B887F00A69074 /* FBViewLayoutCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32D1206B887F00A69074 /* FBViewLayoutCache.m */; };
+		EEBB32EB206B887F00A69074 /* FBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32D5206B887F00A69074 /* FBLayout.m */; };
+		EEBB32EC206B887F00A69074 /* Yoga.c in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32D9206B887F00A69074 /* Yoga.c */; };
+		EEBB32ED206B887F00A69074 /* YGNodeList.c in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32DB206B887F00A69074 /* YGNodeList.c */; };
+		EEBB32EE206B887F00A69074 /* FBLayoutDiv.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32DE206B887F00A69074 /* FBLayoutDiv.m */; };
+		EEBB32EF206B887F00A69074 /* UIView+CellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32DF206B887F00A69074 /* UIView+CellStyle.m */; };
+		EEBB32F0206B887F00A69074 /* UIView+FBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32E0206B887F00A69074 /* UIView+FBLayout.m */; };
+		EEBB32F1206B887F00A69074 /* UITableView+FBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32E2206B887F00A69074 /* UITableView+FBLayout.m */; };
+		EEBB32F2206B887F00A69074 /* UIScrollView+FBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32E7206B887F00A69074 /* UIScrollView+FBLayout.m */; };
 		EEC09928200C4A2C00ED368B /* LocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC09926200C4A2C00ED368B /* LocationManager.h */; };
 		EEC09929200C4A2C00ED368B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC09927200C4A2C00ED368B /* LocationManager.m */; };
 		EEC0992D200C4DA300ED368B /* LocationManager+Loaction.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC0992B200C4DA300ED368B /* LocationManager+Loaction.h */; };
@@ -2421,6 +2434,10 @@
 		EE9F1B4A1DEAB337006AD033 /* JMSimpleSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSimpleSegmentItem.h; sourceTree = "<group>"; };
 		EE9F1B4B1DEAB337006AD033 /* JMSimpleSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSimpleSegmentItem.m; sourceTree = "<group>"; };
 		EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSimpleSegmentItem.xib; sourceTree = "<group>"; };
+		EEAB7AE42074A808000A223C /* HotFixDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotFixDemo.h; sourceTree = "<group>"; };
+		EEAB7AE52074A809000A223C /* HotFixDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotFixDemo.m; sourceTree = "<group>"; };
+		EEAB7AE82074A95B000A223C /* Felix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Felix.h; sourceTree = "<group>"; };
+		EEAB7AE92074A95B000A223C /* Felix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Felix.m; sourceTree = "<group>"; };
 		EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMDeepLink.framework; sourceTree = "<group>"; };
 		EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
@@ -2431,6 +2448,33 @@
 		EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		EEABEFFC1EE527C100BA57B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		EEABEFFD1EE527C100BA57B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		EEBB32C8206B880800A69074 /* FlexboxDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexboxDemo.h; sourceTree = "<group>"; };
+		EEBB32C9206B880800A69074 /* FlexboxDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexboxDemo.m; sourceTree = "<group>"; };
+		EEBB32CE206B887F00A69074 /* FBAsyLayoutTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAsyLayoutTransaction.h; sourceTree = "<group>"; };
+		EEBB32CF206B887F00A69074 /* FBAsyLayoutTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAsyLayoutTransaction.m; sourceTree = "<group>"; };
+		EEBB32D1206B887F00A69074 /* FBViewLayoutCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBViewLayoutCache.m; sourceTree = "<group>"; };
+		EEBB32D2206B887F00A69074 /* YGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
+		EEBB32D3206B887F00A69074 /* FBLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLayoutProtocol.h; sourceTree = "<group>"; };
+		EEBB32D4206B887F00A69074 /* YGMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
+		EEBB32D5206B887F00A69074 /* FBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLayout.m; sourceTree = "<group>"; };
+		EEBB32D6206B887F00A69074 /* Yoga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		EEBB32D7206B887F00A69074 /* YGNodeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodeList.h; sourceTree = "<group>"; };
+		EEBB32D8206B887F00A69074 /* FBViewLayoutCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBViewLayoutCache.h; sourceTree = "<group>"; };
+		EEBB32D9206B887F00A69074 /* Yoga.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Yoga.c; sourceTree = "<group>"; };
+		EEBB32DA206B887F00A69074 /* FBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLayout.h; sourceTree = "<group>"; };
+		EEBB32DB206B887F00A69074 /* YGNodeList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YGNodeList.c; sourceTree = "<group>"; };
+		EEBB32DC206B887F00A69074 /* FBLayout+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBLayout+Private.h"; sourceTree = "<group>"; };
+		EEBB32DE206B887F00A69074 /* FBLayoutDiv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLayoutDiv.m; sourceTree = "<group>"; };
+		EEBB32DF206B887F00A69074 /* UIView+CellStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CellStyle.m"; sourceTree = "<group>"; };
+		EEBB32E0206B887F00A69074 /* UIView+FBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FBLayout.m"; sourceTree = "<group>"; };
+		EEBB32E1206B887F00A69074 /* UIScrollView+FBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FBLayout.h"; sourceTree = "<group>"; };
+		EEBB32E2206B887F00A69074 /* UITableView+FBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FBLayout.m"; sourceTree = "<group>"; };
+		EEBB32E3206B887F00A69074 /* UIView+CellStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CellStyle.h"; sourceTree = "<group>"; };
+		EEBB32E4206B887F00A69074 /* FBLayoutDiv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLayoutDiv.h; sourceTree = "<group>"; };
+		EEBB32E5206B887F00A69074 /* UIView+FBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FBLayout.h"; sourceTree = "<group>"; };
+		EEBB32E6206B887F00A69074 /* UITableView+FBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FBLayout.h"; sourceTree = "<group>"; };
+		EEBB32E7206B887F00A69074 /* UIScrollView+FBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FBLayout.m"; sourceTree = "<group>"; };
+		EEBB32E8206B887F00A69074 /* FlexBoxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexBoxLayout.h; sourceTree = "<group>"; };
 		EEC09926200C4A2C00ED368B /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		EEC09927200C4A2C00ED368B /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		EEC0992B200C4DA300ED368B /* LocationManager+Loaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationManager+Loaction.h"; sourceTree = "<group>"; };
@@ -4240,6 +4284,8 @@
 				EE4C251A1DAF97E7008924A3 /* ThirdLibraryDemo.h */,
 				EE4C251B1DAF97E7008924A3 /* ThirdLibraryDemo.m */,
 				EE8971DC1EEFBC36007F13F9 /* 测量view距离 */,
+				EEBB32CB206B880E00A69074 /* Flexbox */,
+				EEAB7AE72074A80E000A223C /* HotFixDemo */,
 			);
 			path = ThirdLibraryDemo;
 			sourceTree = "<group>";
@@ -6161,6 +6207,17 @@
 			path = JMSimpleSegment;
 			sourceTree = "<group>";
 		};
+		EEAB7AE72074A80E000A223C /* HotFixDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EEAB7AE42074A808000A223C /* HotFixDemo.h */,
+				EEAB7AE52074A809000A223C /* HotFixDemo.m */,
+				EEAB7AE82074A95B000A223C /* Felix.h */,
+				EEAB7AE92074A95B000A223C /* Felix.m */,
+			);
+			path = HotFixDemo;
+			sourceTree = "<group>";
+		};
 		EEABEFF31EE527C100BA57B9 /* BaiduMapSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -6183,6 +6240,72 @@
 				EEABEFFD1EE527C100BA57B9 /* libssl.a */,
 			);
 			path = thirdlibs;
+			sourceTree = "<group>";
+		};
+		EEBB32CB206B880E00A69074 /* Flexbox */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB32CC206B887F00A69074 /* FlexBoxLayout */,
+				EEBB32C8206B880800A69074 /* FlexboxDemo.h */,
+				EEBB32C9206B880800A69074 /* FlexboxDemo.m */,
+			);
+			path = Flexbox;
+			sourceTree = "<group>";
+		};
+		EEBB32CC206B887F00A69074 /* FlexBoxLayout */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB32CD206B887F00A69074 /* Transaction */,
+				EEBB32D0206B887F00A69074 /* Layout */,
+				EEBB32DD206B887F00A69074 /* Component */,
+				EEBB32E8206B887F00A69074 /* FlexBoxLayout.h */,
+			);
+			path = FlexBoxLayout;
+			sourceTree = "<group>";
+		};
+		EEBB32CD206B887F00A69074 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB32CE206B887F00A69074 /* FBAsyLayoutTransaction.h */,
+				EEBB32CF206B887F00A69074 /* FBAsyLayoutTransaction.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		EEBB32D0206B887F00A69074 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB32D1206B887F00A69074 /* FBViewLayoutCache.m */,
+				EEBB32D2206B887F00A69074 /* YGEnums.h */,
+				EEBB32D3206B887F00A69074 /* FBLayoutProtocol.h */,
+				EEBB32D4206B887F00A69074 /* YGMacros.h */,
+				EEBB32D5206B887F00A69074 /* FBLayout.m */,
+				EEBB32D6206B887F00A69074 /* Yoga.h */,
+				EEBB32D7206B887F00A69074 /* YGNodeList.h */,
+				EEBB32D8206B887F00A69074 /* FBViewLayoutCache.h */,
+				EEBB32D9206B887F00A69074 /* Yoga.c */,
+				EEBB32DA206B887F00A69074 /* FBLayout.h */,
+				EEBB32DB206B887F00A69074 /* YGNodeList.c */,
+				EEBB32DC206B887F00A69074 /* FBLayout+Private.h */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEBB32DD206B887F00A69074 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB32DE206B887F00A69074 /* FBLayoutDiv.m */,
+				EEBB32DF206B887F00A69074 /* UIView+CellStyle.m */,
+				EEBB32E0206B887F00A69074 /* UIView+FBLayout.m */,
+				EEBB32E1206B887F00A69074 /* UIScrollView+FBLayout.h */,
+				EEBB32E2206B887F00A69074 /* UITableView+FBLayout.m */,
+				EEBB32E3206B887F00A69074 /* UIView+CellStyle.h */,
+				EEBB32E4206B887F00A69074 /* FBLayoutDiv.h */,
+				EEBB32E5206B887F00A69074 /* UIView+FBLayout.h */,
+				EEBB32E6206B887F00A69074 /* UITableView+FBLayout.h */,
+				EEBB32E7206B887F00A69074 /* UIScrollView+FBLayout.m */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		EEC0992A200C4D8100ED368B /* LocationManager */ = {
@@ -6842,6 +6965,7 @@
 				EE72A6F71E724C3600A34272 /* Other+initialize.m in Sources */,
 				EE4C283C1DAF97E9008924A3 /* tree_t.c in Sources */,
 				EE4C28751DAF97E9008924A3 /* LocalNotificationDemo.m in Sources */,
+				EEBB32F2206B887F00A69074 /* UIScrollView+FBLayout.m in Sources */,
 				EE4C28BF1DAF97E9008924A3 /* YYMessageViewController.m in Sources */,
 				EE4C282C1DAF97E9008924A3 /* ApplicationInfo.m in Sources */,
 				EE4B96751DC5D60200CCFB95 /* CollectionViewController.m in Sources */,
@@ -6870,12 +6994,14 @@
 				EE01F1391E4B180D003276B5 /* PushPresentDemo.m in Sources */,
 				EE4C292B1DAF97E9008924A3 /* DNImageFlowViewController.m in Sources */,
 				EE9F1B4D1DEAB337006AD033 /* JMGoodsDetailHeaderView.m in Sources */,
+				EEBB32CA206B880800A69074 /* FlexboxDemo.m in Sources */,
 				EE270ECF1E21EA71005BA294 /* NSString+JMCategory.m in Sources */,
 				EE4C29D11DAF97EA008924A3 /* MKAnnotationView+WebCache.m in Sources */,
 				EE4C28CE1DAF97E9008924A3 /* UIView+YYMessage.m in Sources */,
 				EE4C29B41DAF97EA008924A3 /* UIDatePicker+RACSignalSupport.m in Sources */,
 				EE9F1B5C1DEAB337006AD033 /* JMGoodsDetailGoodsViewController.m in Sources */,
 				EE4C28BD1DAF97E9008924A3 /* YYMessageCellLayoutConfig.m in Sources */,
+				EEBB32F0206B887F00A69074 /* UIView+FBLayout.m in Sources */,
 				EE4C290A1DAF97E9008924A3 /* YYThumbnailView.m in Sources */,
 				EE4C29E81DAF97EA008924A3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EE4C29DC1DAF97EA008924A3 /* UIImage+MultiFormat.m in Sources */,
@@ -7080,11 +7206,13 @@
 				EE4C28F61DAF97E9008924A3 /* PullRefreshDemo.m in Sources */,
 				EE4C29AB1DAF97EA008924A3 /* RACUnit.m in Sources */,
 				EE4C29E41DAF97EA008924A3 /* UMTrack.m in Sources */,
+				EEAB7AEA2074A95B000A223C /* Felix.m in Sources */,
 				EE4C29111DAF97E9008924A3 /* NSObject+Property.m in Sources */,
 				EE4C28AA1DAF97E9008924A3 /* FastRecordBaseCell.m in Sources */,
 				EE270DB91E1B6FE6005BA294 /* JMSkuConfirmView.m in Sources */,
 				EE4C29481DAF97EA008924A3 /* MASConstraintMaker.m in Sources */,
 				EE4C29BD1DAF97EA008924A3 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
+				EEBB32E9206B887F00A69074 /* FBAsyLayoutTransaction.m in Sources */,
 				EE4C288C1DAF97E9008924A3 /* JSObject.m in Sources */,
 				EE4C28641DAF97E9008924A3 /* TestJSObjectProtocol.m in Sources */,
 				EE4C28DA1DAF97E9008924A3 /* YYAudioPlayButton.m in Sources */,
@@ -7097,6 +7225,7 @@
 				EE4C29171DAF97E9008924A3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				EE4C29C41DAF97EA008924A3 /* ReachStateLoading.m in Sources */,
 				EE4C29691DAF97EA008924A3 /* NSDictionary+RACSequenceAdditions.m in Sources */,
+				EEAB7AE62074A809000A223C /* HotFixDemo.m in Sources */,
 				EE4C29001DAF97E9008924A3 /* DemoCell.m in Sources */,
 				EE4C28661DAF97E9008924A3 /* YYWebViewController.m in Sources */,
 				EE4C28441DAF97E9008924A3 /* YYStr.c in Sources */,
@@ -7114,6 +7243,7 @@
 				EE4C297B1DAF97EA008924A3 /* NSUserDefaults+RACSupport.m in Sources */,
 				EE4B967B1DC5D60200CCFB95 /* UIScrollViewController.m in Sources */,
 				EE4C28F11DAF97E9008924A3 /* YYImageCache.m in Sources */,
+				EEBB32EE206B887F00A69074 /* FBLayoutDiv.m in Sources */,
 				EE4B96761DC5D60200CCFB95 /* MyCollectionViewLayout.m in Sources */,
 				EE4C28761DAF97E9008924A3 /* TestViewController.m in Sources */,
 				EE4C29531DAF97EA008924A3 /* MJRefreshComponent.m in Sources */,
@@ -7136,6 +7266,7 @@
 				EE4C29411DAF97EA008924A3 /* FMDatabasePool.m in Sources */,
 				EE4C29CC1DAF97EA008924A3 /* README.md in Sources */,
 				EE4C29641DAF97EA008924A3 /* MSWeakTimer.m in Sources */,
+				EEBB32EA206B887F00A69074 /* FBViewLayoutCache.m in Sources */,
 				EE4C297A1DAF97EA008924A3 /* NSURLConnection+RACSupport.m in Sources */,
 				EE4C29D41DAF97EA008924A3 /* SDWebImageCompat.m in Sources */,
 				EE4C293F1DAF97EA008924A3 /* FMDatabase.m in Sources */,
@@ -7165,6 +7296,7 @@
 				EE4C282E1DAF97E9008924A3 /* AppManager.m in Sources */,
 				EE4B96821DC5D60200CCFB95 /* TextViewController.m in Sources */,
 				EE4C29B01DAF97EA008924A3 /* UIButton+RACCommandSupport.m in Sources */,
+				EEBB32ED206B887F00A69074 /* YGNodeList.c in Sources */,
 				EE4B96901DC5D7FE00CCFB95 /* NJKWebViewProgress.m in Sources */,
 				EE9F1B5E1DEAB337006AD033 /* JMGoodsDetailPublicPraiseViewController.m in Sources */,
 				EE4C28AD1DAF97E9008924A3 /* FastRecordCustomerCell.m in Sources */,
@@ -7207,6 +7339,7 @@
 				EE4C29401DAF97EA008924A3 /* FMDatabaseAdditions.m in Sources */,
 				EE4C28D71DAF97E9008924A3 /* YYMessageCellBase.m in Sources */,
 				EE8971D71EEFBBC3007F13F9 /* MMBorderAttachView.m in Sources */,
+				EEBB32F1206B887F00A69074 /* UITableView+FBLayout.m in Sources */,
 				EE4C29261DAF97E9008924A3 /* DTTimePeriodCollection.m in Sources */,
 				EE4C291C1DAF97E9008924A3 /* AFSecurityPolicy.m in Sources */,
 				EE4C29371DAF97EA008924A3 /* DNBadgeLabel.m in Sources */,
@@ -7236,6 +7369,7 @@
 				EE4C29D71DAF97EA008924A3 /* SDWebImageDownloaderOperation.m in Sources */,
 				EE270DC71E1B6FE6005BA294 /* JMComponent.m in Sources */,
 				EE4C29501DAF97EA008924A3 /* MBProgressHUD.m in Sources */,
+				EEBB32EF206B887F00A69074 /* UIView+CellStyle.m in Sources */,
 				EE4C28C21DAF97E9008924A3 /* YYMessageModelManager.m in Sources */,
 				EE4C287E1DAF97E9008924A3 /* InterfaceAndAPI.m in Sources */,
 				EE9F1B611DEAB337006AD033 /* JMSimpleSegment.m in Sources */,
@@ -7265,6 +7399,7 @@
 				EE4C28521DAF97E9008924A3 /* MethodSwizzling.m in Sources */,
 				EE4C288A1DAF97E9008924A3 /* YYAudioRocorder.m in Sources */,
 				EE4C296F1DAF97EA008924A3 /* NSObject+RACDeallocating.m in Sources */,
+				EEBB32EC206B887F00A69074 /* Yoga.c in Sources */,
 				EE4C28581DAF97E9008924A3 /* MethodForword.m in Sources */,
 				EE4C29A71DAF97EA008924A3 /* RACTestScheduler.m in Sources */,
 				EE4B96811DC5D60200CCFB95 /* UITextFieldController.m in Sources */,
@@ -7299,6 +7434,7 @@
 				EE4C28C61DAF97E9008924A3 /* NSObject+YYMessage.m in Sources */,
 				EE270DBD1E1B6FE6005BA294 /* JMSkuNumSelectedCell.m in Sources */,
 				EE4C29521DAF97EA008924A3 /* MJRefreshBackFooter.m in Sources */,
+				EEBB32EB206B887F00A69074 /* FBLayout.m in Sources */,
 				EE4C284C1DAF97E9008924A3 /* FoundationDemo.m in Sources */,
 				EE4C29BE1DAF97EA008924A3 /* UITextField+RACSignalSupport.m in Sources */,
 				EE4C284E1DAF97E9008924A3 /* ClassDemo.m in Sources */,
