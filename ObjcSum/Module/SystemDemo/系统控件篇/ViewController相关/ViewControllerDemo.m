@@ -7,8 +7,12 @@
 //
 
 #import "ViewControllerDemo.h"
+#import "SystemDemo.h"
+#import "UIViewController+Extension.h"
 
 @interface ViewControllerDemo ()
+
+@property (nonatomic, strong) UIViewController *child;
 
 @end
 
@@ -54,6 +58,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	UIViewController *child = [SystemDemo new];
+	child.view.backgroundColor = [UIColor clearColor];
+	_child = child;
+	
+	__weak __typeof(self) weakSelf = self;
+	[self addButtonWithTitle:@"test" action:^(UIButton *btn) {
+		weakSelf.child.view.backgroundColor = [UIColor clearColor];
+	}];
+}
+
+- (void)didReceiveMemoryWarning {
+	NSLog(@"didReceiveMemoryWarning");
 }
 
 

@@ -11,12 +11,14 @@
 
 NSString *const LocationManagerDidUpdateLactionNotification = @"LocationManagerDidUpdateLactionNotification";
 NSString *const LocationManagerDidUpdateHeadingNotification = @"LocationManagerDidUpdateHeadingNotification";
+NSString *const LocationManagerDidChangeAuthorizationNotification = @"LocationManagerDidChangeAuthorizationNotification";
 
 @interface LocationManager ()
 <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLHeading *heading;
 @property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, strong) CLLocation *gcjLocation;
 @property (nonatomic, strong) CLPlacemark *placemark;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -43,10 +45,37 @@ NSString *const LocationManagerDidUpdateHeadingNotification = @"LocationManagerD
 }
 
 + (void)startWorking {
-	[LocationManager sharedInstance];
+	[[self sharedInstance] startWorking];
+}
+
++ (void)stopWorking {
+	[[LocationManager sharedInstance] stopUpdatingLocation];
+}
+
++ (void)requestAlwaysAuthorization {
+	[[LocationManager sharedInstance].locationManager requestAlwaysAuthorization];
 }
 
 #pragma mark - Func
+
+- (void)startWorking {
+	if (![CLLocationManager locationServicesEnabled]) {
+		return;
+	}
+	
+	CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+	switch (status) {
+		case kCLAuthorizationStatusAuthorizedAlways:
+		case kCLAuthorizationStatusAuthorizedWhenInUse:
+			[self startUpdatingLocation];
+			break;
+		case kCLAuthorizationStatusNotDetermined:
+			[self.locationManager requestWhenInUseAuthorization];
+			break;
+		default:
+			break;
+	}
+}
 
 - (void)startUpdatingLocation {
 	[self.locationManager startUpdatingLocation];
@@ -64,6 +93,17 @@ NSString *const LocationManagerDidUpdateHeadingNotification = @"LocationManagerD
 }
 
 #pragma mark - Getter
+
+- (BOOL)isLocationServiceEnable {
+	if ([CLLocationManager locationServicesEnabled]) {
+		CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+		if (status == kCLAuthorizationStatusAuthorizedAlways ||
+			status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+			return YES;
+		}
+	}
+	return NO;
+}
 
 - (CLLocationManager *)locationManager {
 	if (!_locationManager) {
@@ -95,11 +135,12 @@ NSString *const LocationManagerDidUpdateHeadingNotification = @"LocationManagerD
 	if (location) {
 		CLLocationCoordinate2D gciCoordinate = [JZLocationConverter wgs84ToGcj02:location.coordinate];
 		CLLocation *gciLocation = [[CLLocation alloc] initWithLatitude:gciCoordinate.latitude longitude:gciCoordinate.longitude];
-		self.location = gciLocation;
+		self.location = location;
+		self.gcjLocation = gciLocation;
 		[[NSNotificationCenter defaultCenter] postNotificationName:LocationManagerDidUpdateLactionNotification object:gciLocation];
 		
 		[self.geocodeManager cancelGeocode];
-		[self.geocodeManager reverseGeocodeLocation:gciLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+		[self.geocodeManager reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
 			if (placemarks.firstObject && gciLocation == self.location) {
 				self.placemark = placemarks.firstObject;
 			}
@@ -124,6 +165,7 @@ NSString *const LocationManagerDidUpdateHeadingNotification = @"LocationManagerD
 		default:
 			break;
 	}
+	[[NSNotificationCenter defaultCenter] postNotificationName:LocationManagerDidChangeAuthorizationNotification object:@(status)];
 }
 
 @end

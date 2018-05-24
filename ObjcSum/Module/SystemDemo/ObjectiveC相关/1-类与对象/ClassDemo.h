@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-@interface ClassDemo : NSObject<NSCopying, NSCoding>
+@interface ClassDemo : NSObject<NSCopying, NSCoding> {
+	NSString *hhh;
+	__weak NSString *ddddd;
+}
 
 + (void)launch;
 

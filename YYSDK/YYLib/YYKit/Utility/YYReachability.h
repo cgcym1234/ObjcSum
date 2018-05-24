@@ -45,4 +45,6 @@ typedef NS_ENUM(NSUInteger, YYReachabilityWWANStatus) {
 + (instancetype)reachabilityWithHostname:(NSString *)hostname;
 + (instancetype)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress;
 
++ (BOOL)isNetworkConnected;
+
 @end

@@ -25,7 +25,7 @@
 typedef struct yy_objc_class * YYClass;
 struct yy_objc_class {
 	//isa指针是和Class同类型的objc_class结构指针，类对象的指针指向其所属的类，即元类。元类中存储着类对象的类方法，当访问某个类的类方法时会通过该isa指针从元类中寻找方法对应的函数指针
-    Class isa; // 指向所属类的指针(_Nonnull)
+    Class isa; // 指向所属类的指针(元类)
     
     //指向该类所继承的父类对象，如果该类已经是最顶层的根类(如NSObject或NSProxy), 则 super_class为NULL
     Class super_class;
@@ -69,7 +69,7 @@ struct yy_objc_class {
 
 //objc_object是表示一个类的实例的结构体，它的定义如下(objc/objc.h)：
 struct yy_objc_object {
-    Class isa;
+    Class isa; // 指向所属类的指针
 };
 typedef struct objc_object *yy_id;
 
@@ -107,11 +107,17 @@ void TestMetaClass(id self, SEL _cmd) {
     NSLog(@"NSObject's class is %p", [NSObject class]);
     
     NSLog(@"NSObject's meta class is %p", objc_getClass((__bridge void *)[NSObject class]));
+	
+	/**
+	 通过objc_getClass来获取对象的isa
+	 >这里需要注意的是：我们在一个类对象调用class方法是无法获取meta-class，它只是返回类而已
+	 */
 }
 
 #pragma mark - ## 元类(Meta Class)
 
 @implementation ClassDemo
+
 
 + (void)launch {
     [self ex_registerClassPair];
@@ -120,24 +126,113 @@ void TestMetaClass(id self, SEL _cmd) {
     [self instanceMethodDemo];
 }
 
++ (Class)class {
+	return self;
+}
+
+- (Class)class {
+	return object_getClass(self);
+	//	return self->isa;
+}
+
++ (BOOL)isKindOfClass:(Class)aClass {
+	for (Class cls = object_getClass(self); cls; cls = cls.superclass) {
+		if (cls == aClass) {
+			return YES;
+		}
+	}
+	return NO;
+}
+
+- (BOOL)isKindOfClass:(Class)aClass {
+	for (Class cls = self.class; cls; cls = cls.superclass) {
+		if (cls == aClass) {
+			return YES;
+		}
+	}
+	return NO;
+}
+
++ (BOOL)isMemberOfClass:(Class)aClass {
+	return object_getClass(self) == aClass;
+}
+
+- (BOOL)isMemberOfClass:(Class)aClass {
+	return self.class == aClass;
+}
+
+
++ (void)testClass {
+	ClassDemo *obj = [ClassDemo new];
+	Class clsClass0 = [ClassDemo class];     // 返回ClassDemo类对象的本身的地址
+	Class objClass0 = [obj class];          // isa指向的ClassDemo类对象的地址
+	Class ogcClass0 = object_getClass(obj); // isa指向的ClassDemo类对象的地址
+	NSLog(@"clsClass0 -> %p", clsClass0); // -> 0x10fb22068
+	NSLog(@"objClass0 -> %p", objClass0); // -> 0x10fb22068
+	NSLog(@"ogcClass0 -> %p", ogcClass0); // -> 0x10fb22068
+	
+	Class objClass1 = [objClass0 class]; 		// 返回ClassDemo类对象本身的地址
+	Class ogcClass1 = object_getClass(objClass0); // isa指向的ClassDemo元类的地址
+	NSLog(@"objClass1 -> %p", objClass1); // -> 0x10fb22068
+	NSLog(@"ogcClass1 -> %p", ogcClass1); // -> 0x10fb22040
+	/*
+	 此时objClass0为ClassDemo的类对象，所以类方法[objClass0 class]返回的objClass1为self,
+	 即ClassDemo类对象本身的地址，故结果与上面的地址相同。
+	 而ogcClass1返回的为ClassDemo元类的地址。
+	 */
+	
+	
+	/// 'ogcClass1'为ClassDemo的元类(ClassDemo metaClass)
+	Class objClass2 = [ogcClass1 class];          // 返回ClassDemo元类对象的本身的地址
+	Class ogcClass2 = object_getClass(ogcClass1); // isa指向的ClassDemo元类的元类地址
+	NSLog(@"objClass2 -> %p", objClass2); // -> 0x10fb22040
+	NSLog(@"ogcClass2 -> %p", ogcClass2); // -> 0x110ad9e58
+	
+	Class rootMetaCls0 = object_getClass([NSObject class]); // 返回NSObject元类(根元类)的地址
+	Class rootMetaCls1 = object_getClass(rootMetaCls0);     // 返回NSObject元类(根元类)的元类地址
+	NSLog(@"rootMetaCls0 -> %p", rootMetaCls0); // -> 0x110ad9e58
+	NSLog(@"rootMetaCls1 -> %p", rootMetaCls1); // -> 0x110ad9e58
+	/*
+	 看到结果就一目了然了，根元类的isa指针指向自己，也就是根元类的元类即其本身。
+	 另外，可以发现ogcClass2的地址和根元类isa的地址相同，说明任意元类的isa指针都指向根元类，这样就构成一个封闭的循环。
+	 */
+	
+	
+	///另外，我们可以通过class_isMetaClass函数来判断某个类是否是元类，比如:
+	NSLog(@"ogcClass0 is metaClass: %@", class_isMetaClass(objClass0) ? @"YES" : @"NO");
+	NSLog(@"ogcClass1 is metaClass: %@", class_isMetaClass(ogcClass1) ? @"YES" : @"NO");
+//	LearningClass[58516:3424874] ogcClass0 is metaClass: NO
+//	LearningClass[58516:3424874] ogcClass1 is metaClass: YES
+}
+
 #pragma mark - 查看元类demo
 + (void)ex_registerClassPair {
+	NSLog(@"---------查看元类demo--------------");
     //在运行时创建了一个NSError的子类TestClass，然后为这个子类添加一个方法testMetaClass，这个方法的实现是TestMetaClass函数。
-    Class newClass = objc_allocateClassPair([NSError class], "TestClass", 0);
+    Class newClass = objc_allocateClassPair([NSError class], "TestStringClass", 0);
     class_addMethod(newClass, @selector(testMetaClass), (IMP)TestMetaClass, "v@:");
     objc_registerClassPair(newClass);
     
     id instance = [[newClass alloc] initWithDomain:@"some domain" code:0 userInfo:nil];
     [instance performSelector:@selector(testMetaClass)];
-    
-    /**
-     >这里需要注意的是：我们在一个类对象调用class方法是无法获取meta-class，它只是返回类而已
-     */
+	
+	/*
+	 2014-10-20 22:57:07.352 mountain[1303:41490] This objcet is 0x7a6e22b0
+	 2014-10-20 22:57:07.353 mountain[1303:41490] Class is TestStringClass, super class is NSError
+	 2014-10-20 22:57:07.353 mountain[1303:41490] Following the isa pointer 0 times gives 0x7a6e21b0
+	 2014-10-20 22:57:07.353 mountain[1303:41490] Following the isa pointer 1 times gives 0x0
+	 2014-10-20 22:57:07.353 mountain[1303:41490] Following the isa pointer 2 times gives 0x0
+	 2014-10-20 22:57:07.353 mountain[1303:41490] Following the isa pointer 3 times gives 0x0
+	 2014-10-20 22:57:07.353 mountain[1303:41490] NSObject's class is 0xe10000
+	 2014-10-20 22:57:07.354 mountain[1303:41490] NSObject's meta class is 0x0
+	 */
+	
 }
 
 #pragma mark - 1.2-类与对象操作函数 Demo
 
 + (void)testClassFunctions {
+	
     NSLog(@"---------类与对象操作函数 Demo--------------");
     
     MyClass1 *myClass = [MyClass1 new];
@@ -147,9 +242,10 @@ void TestMetaClass(id self, SEL _cmd) {
     NSLog(@"类名：%s", class_getName(cls));
     
     NSLog(@"父类：%s", class_getName(class_getSuperclass(cls)));
+	NSLog(@"父类：%s", class_getName(myClass.superclass));
     
     NSLog(@"是否是元类： %@", class_isMetaClass(cls) ? @"yes" : @"no");
-    
+
     Class metaClass = objc_getMetaClass(class_getName(cls));
     NSLog(@"class %s 的元类是： %s", class_getName(cls), class_getName(metaClass));
     
@@ -178,7 +274,7 @@ void TestMetaClass(id self, SEL _cmd) {
     if (array != NULL) {
         NSLog(@"class_getProperty获取属性: %s", property_getName(array));
     }
-    
+
     Method *methods = class_copyMethodList(cls, &outCount);
     for (int i = 0; i < outCount; i++) {
         Method method = methods[i];
@@ -263,7 +359,7 @@ void imp_submethod1(id self, SEL _cmd) {
 //    id newB = object_copy(a, class_getInstanceSize(self));
 //    object_setClass(newB, self);
 //    object_dispose(a);
-    
+	
     unsigned int numClass;
     Class *classes = NULL;
     /**

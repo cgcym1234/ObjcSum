@@ -11,5 +11,6 @@
 @interface YYAlertView : UIView
 
 + (void)showWithTitle:(NSString *)title cancel:(void (^)(void))cancel confirm:(void (^)(void))confirm;
++ (void)showWithTitle:(NSString *)title message:(NSString *)message cancel:(void (^)(void))cancel confirm:(void (^)(void))confirm;
 
 @end

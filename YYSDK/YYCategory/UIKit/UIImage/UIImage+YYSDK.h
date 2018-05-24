@@ -17,6 +17,9 @@
  */
 - (BOOL)hasAlphaChannel;
 
+/// Determine if a UIImage is generally dark or generally light
+- (BOOL)isDarkImage;
+
 /**
  *根据图片名自动加载适配IOS6和iOS7的图片
  */

@@ -902,6 +902,8 @@
 		EE9F1B631DEAB337006AD033 /* JMSimpleSegmentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9F1B4C1DEAB337006AD033 /* JMSimpleSegmentItem.xib */; };
 		EEAB7AE62074A809000A223C /* HotFixDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB7AE52074A809000A223C /* HotFixDemo.m */; };
 		EEAB7AEA2074A95B000A223C /* Felix.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB7AE92074A95B000A223C /* Felix.m */; };
+		EEAB7BAC207DF236000A223C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB7BAA207DF234000A223C /* Reachability.m */; };
+		EEAB7BAD207DF236000A223C /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAB7BAB207DF235000A223C /* Reachability.h */; };
 		EEABEFCA1EE50CFB00BA57B9 /* JMDeepLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */; };
 		EEABEFFE1EE527C100BA57B9 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */; };
 		EEABEFFF1EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */; };
@@ -912,6 +914,7 @@
 		EEABF0041EE527C100BA57B9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */; };
 		EEABF0051EE527C100BA57B9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFC1EE527C100BA57B9 /* libcrypto.a */; };
 		EEABF0061EE527C100BA57B9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABEFFD1EE527C100BA57B9 /* libssl.a */; };
+		EEB02FA9209071AE000CDD08 /* ChainSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB02FA8209071AE000CDD08 /* ChainSugar.m */; };
 		EEBB32CA206B880800A69074 /* FlexboxDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32C9206B880800A69074 /* FlexboxDemo.m */; };
 		EEBB32E9206B887F00A69074 /* FBAsyLayoutTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32CF206B887F00A69074 /* FBAsyLayoutTransaction.m */; };
 		EEBB32EA206B887F00A69074 /* FBViewLayoutCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBB32D1206B887F00A69074 /* FBViewLayoutCache.m */; };
@@ -931,6 +934,7 @@
 		EEC0995D200DED7B00ED368B /* OnePixelLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */; };
 		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
+		EED25D6520AAE52C00483559 /* CheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED25D6420AAE52C00483559 /* CheckUpdate.m */; };
 		EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */; };
 		EEDCCB771DC03ABA00715955 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCCB761DC03ABA00715955 /* HYEdgeInsetsButton.m */; };
 		EEE795A41E8A048200B56C6E /* WeakDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE795A31E8A048200B56C6E /* WeakDemo.m */; };
@@ -2438,6 +2442,8 @@
 		EEAB7AE52074A809000A223C /* HotFixDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotFixDemo.m; sourceTree = "<group>"; };
 		EEAB7AE82074A95B000A223C /* Felix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Felix.h; sourceTree = "<group>"; };
 		EEAB7AE92074A95B000A223C /* Felix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Felix.m; sourceTree = "<group>"; };
+		EEAB7BAA207DF234000A223C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		EEAB7BAB207DF235000A223C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		EEABEFC91EE50CFB00BA57B9 /* JMDeepLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMDeepLink.framework; sourceTree = "<group>"; };
 		EEABEFF41EE527C100BA57B9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		EEABEFF51EE527C100BA57B9 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
@@ -2448,6 +2454,8 @@
 		EEABEFFA1EE527C100BA57B9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		EEABEFFC1EE527C100BA57B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		EEABEFFD1EE527C100BA57B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		EEB02FA7209071AE000CDD08 /* ChainSugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainSugar.h; sourceTree = "<group>"; };
+		EEB02FA8209071AE000CDD08 /* ChainSugar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainSugar.m; sourceTree = "<group>"; };
 		EEBB32C8206B880800A69074 /* FlexboxDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexboxDemo.h; sourceTree = "<group>"; };
 		EEBB32C9206B880800A69074 /* FlexboxDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexboxDemo.m; sourceTree = "<group>"; };
 		EEBB32CE206B887F00A69074 /* FBAsyLayoutTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAsyLayoutTransaction.h; sourceTree = "<group>"; };
@@ -2485,6 +2493,8 @@
 		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
 		EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSegmentedView.m; sourceTree = "<group>"; };
+		EED25D6320AAE52C00483559 /* CheckUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckUpdate.h; sourceTree = "<group>"; };
+		EED25D6420AAE52C00483559 /* CheckUpdate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckUpdate.m; sourceTree = "<group>"; };
 		EEDCCB6E1DBFB00A00715955 /* UIButtonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDemo.h; sourceTree = "<group>"; };
 		EEDCCB6F1DBFB00A00715955 /* UIButtonDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemo.m; sourceTree = "<group>"; };
 		EEDCCB751DC03ABA00715955 /* HYEdgeInsetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEdgeInsetsButton.h; sourceTree = "<group>"; };
@@ -3311,6 +3321,8 @@
 				EE2A20181DAF6D79001F9A2E /* YYKeychain.m */,
 				EE2A20191DAF6D79001F9A2E /* YYReachability.h */,
 				EE2A201A1DAF6D79001F9A2E /* YYReachability.m */,
+				EEAB7BAB207DF235000A223C /* Reachability.h */,
+				EEAB7BAA207DF234000A223C /* Reachability.m */,
 				EE2A201B1DAF6D79001F9A2E /* YYSentinel.h */,
 				EE2A201C1DAF6D79001F9A2E /* YYSentinel.m */,
 				EE2A201D1DAF6D79001F9A2E /* YYThreadSafeArray.h */,
@@ -3899,6 +3911,8 @@
 				EE4C24FB1DAF97E7008924A3 /* 音频相关 */,
 				EE4C24A01DAF97E7008924A3 /* SystemDemo.h */,
 				EE4C24A11DAF97E7008924A3 /* SystemDemo.m */,
+				EED25D6320AAE52C00483559 /* CheckUpdate.h */,
+				EED25D6420AAE52C00483559 /* CheckUpdate.m */,
 				EE4C24A21DAF97E7008924A3 /* SystemDemo.storyboard */,
 				EEFC86331F2350F100029ABC /* 指纹解锁 */,
 			);
@@ -4069,6 +4083,8 @@
 				EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */,
 				EE4C24991DAF97E7008924A3 /* SyntacticSugar.h */,
 				EE4C249A1DAF97E7008924A3 /* SyntacticSugar.m */,
+				EEB02FA7209071AE000CDD08 /* ChainSugar.h */,
+				EEB02FA8209071AE000CDD08 /* ChainSugar.m */,
 			);
 			path = "OC语法糖";
 			sourceTree = "<group>";
@@ -6565,6 +6581,7 @@
 				EE2A1F511DAF62BD001F9A2E /* UIView+MotionEffect.h in Headers */,
 				EE2A21301DAF6D7A001F9A2E /* YYMultiSelectModel.h in Headers */,
 				EE2A0F07202D8F1F00C88869 /* UIView+DHSmartScreenshot.h in Headers */,
+				EEAB7BAD207DF236000A223C /* Reachability.h in Headers */,
 				EE2A215C1DAF6D7A001F9A2E /* YYXibView.h in Headers */,
 				EE2A211D1DAF6D7A001F9A2E /* YYTimer.h in Headers */,
 				EE2A20C41DAF6D7A001F9A2E /* NSBundle+YYExtension.h in Headers */,
@@ -6975,6 +6992,7 @@
 				EE4C29A31DAF97EA008924A3 /* RACSubscriber.m in Sources */,
 				EE4C299B1DAF97EA008924A3 /* RACSerialDisposable.m in Sources */,
 				EE4C28E21DAF97E9008924A3 /* YYEmoticonInputViewCell.m in Sources */,
+				EED25D6520AAE52C00483559 /* CheckUpdate.m in Sources */,
 				EE4C29361DAF97EA008924A3 /* DNAssetsViewCell.m in Sources */,
 				EE2F029C1E52FC970003A8EE /* UINavigationController+APSafeTransition.m in Sources */,
 				EE4C28F71DAF97E9008924A3 /* YYCommonList.m in Sources */,
@@ -7228,6 +7246,7 @@
 				EEAB7AE62074A809000A223C /* HotFixDemo.m in Sources */,
 				EE4C29001DAF97E9008924A3 /* DemoCell.m in Sources */,
 				EE4C28661DAF97E9008924A3 /* YYWebViewController.m in Sources */,
+				EEB02FA9209071AE000CDD08 /* ChainSugar.m in Sources */,
 				EE4C28441DAF97E9008924A3 /* YYStr.c in Sources */,
 				EE4C298E1DAF97EA008924A3 /* RACIndexSetSequence.m in Sources */,
 				EE4C28EE1DAF97E9008924A3 /* YYMessageTextLabel.m in Sources */,
@@ -7499,6 +7518,7 @@
 				EE3548481EDEB9300012BA26 /* YYMapNavigation.m in Sources */,
 				EE4C2BFB1DAF9D33008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EEC09929200C4A2C00ED368B /* LocationManager.m in Sources */,
+				EEAB7BAC207DF236000A223C /* Reachability.m in Sources */,
 				EE2A21221DAF6D7A001F9A2E /* YYWeakProxy.m in Sources */,
 				EE2A211A1DAF6D7A001F9A2E /* YYThreadSafeArray.m in Sources */,
 				EE6910EC1F134F7F0097AC99 /* NSAttributedString+YYExtension.m in Sources */,

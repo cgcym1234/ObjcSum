@@ -24,6 +24,37 @@
             alpha == kCGImageAlphaPremultipliedLast);
 }
 
+/// Determine if a UIImage is generally dark or generally light
+- (BOOL)isDarkImage {
+	
+	BOOL isDark = FALSE;
+	
+	CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage));
+	const UInt8 *pixels = CFDataGetBytePtr(imageData);
+	
+	int darkPixels = 0;
+	
+	int length = (int)CFDataGetLength(imageData);
+	int const darkPixelThreshold = (self.size.width*self.size.height)*.45;
+	
+	for(int i=0; i<length; i+=4) {
+		int r = pixels[i];
+		int g = pixels[i+1];
+		int b = pixels[i+2];
+		
+		//luminance calculation gives more weight to r and b for human eyes
+		float luminance = (0.299*r + 0.587*g + 0.114*b);
+		if (luminance<150) darkPixels ++;
+	}
+	
+	if (darkPixels >= darkPixelThreshold)
+		isDark = YES;
+	
+	CFRelease(imageData);
+	
+	return isDark;
+}
+
 + (UIImage *)imageWithName:(NSString *)name
 {
     NSString *newName = name;

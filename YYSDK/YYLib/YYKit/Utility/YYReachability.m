@@ -10,6 +10,7 @@
 //
 
 #import "YYReachability.h"
+#import "Reachability.h"
 #import <objc/message.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
@@ -162,6 +163,12 @@ static void YYReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 - (void)setNotifyBlock:(void (^)(YYReachability *reachability))notifyBlock {
     _notifyBlock = [notifyBlock copy];
     self.scheduled = (self.notifyBlock != nil);
+}
+
++ (BOOL)isNetworkConnected {
+	Reachability *reachability = [Reachability reachabilityForInternetConnection];
+	NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+	return networkStatus != NotReachable;
 }
 
 @end

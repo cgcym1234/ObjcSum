@@ -12,20 +12,24 @@
 @implementation YYAlertView
 
 + (void)showWithTitle:(NSString *)title cancel:(void (^)(void))cancel confirm:(void (^)(void))confirm {
-    UIAlertView *chooseAlert = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
-    [chooseAlert show];
-    
-    [[chooseAlert rac_buttonClickedSignal] subscribeNext:^(NSNumber *indexNumber) {
-        if ([indexNumber intValue] == 0) {
-            if (cancel) {
-                cancel();
-            }
-        } else if ([indexNumber intValue] == 1) {
-            if (confirm) {
-                confirm();
-            }
-        }
-    }];
+	[self showWithTitle:title message:nil cancel:cancel confirm:confirm];
+}
+
++ (void)showWithTitle:(NSString *)title message:(NSString *)message cancel:(void (^)(void))cancel confirm:(void (^)(void))confirm {
+	UIAlertView *chooseAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+	[chooseAlert show];
+	
+	[[chooseAlert rac_buttonClickedSignal] subscribeNext:^(NSNumber *indexNumber) {
+		if ([indexNumber intValue] == 0) {
+			if (cancel) {
+				cancel();
+			}
+		} else if ([indexNumber intValue] == 1) {
+			if (confirm) {
+				confirm();
+			}
+		}
+	}];
 }
 
 @end

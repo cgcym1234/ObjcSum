@@ -19,8 +19,10 @@ static NSString * const CellIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+	
     self.dataArr = @[
+					 [[LibDemoInfo alloc] initWithTitle:@"ViewControllerDemo" desc:@"ViewControllerDemo" controllerName:@"ViewControllerDemo"],
+					 
                     [[LibDemoInfo alloc] initWithTitle:@"PushPresentDemo" desc:@"Push或Present时监听" controllerName:@"PushPresentDemo"],
                      
                    [[LibDemoInfo alloc] initWithTitle:@"TableView相关" desc:@"TableView相关" controllerName:@"TableViewDemoController"],
@@ -43,6 +45,9 @@ static NSString * const CellIdentifier = @"Cell";
                     
                     [[LibDemoInfo alloc] initWithTitle:@"WKWebView相关" desc:@"WKWebViewDemo相关" controllerName:@"WKWebViewDemo"],
                    ];
+	
+	
+	
     
 }
 
