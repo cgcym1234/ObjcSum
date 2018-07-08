@@ -9,7 +9,17 @@
 #import "SyntacticSugar.h"
 #import "SyntacticSugar+Extention.h"
 
+static NSString *_sName = @"";
+
 @implementation SyntacticSugar
+
++ (NSString *)sName {
+	return _sName;
+}
+
++ (void)setSName:(NSString *)sName {
+	_sName = sName;
+}
 
 - (void)demo {
     //NSNumber的语法糖
@@ -51,8 +61,6 @@
     
     SyntacticSugar.sName = @"Haha";
     NSLog(@"%@, %@", self.name, SyntacticSugar.sName);
-    
-    
 }
 
 

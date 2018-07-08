@@ -15,8 +15,6 @@
 
 #pragma mark - Category是表示一个指向分类的结构体的指针，其定义如下：
 //typedef struct objc_category *Category;
-
-
 struct yy_objc_category {
     char *category_name;// 分类名
     char *class_name;// 分类所属的类名

@@ -13,9 +13,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
-#if (!defined(DEBUG))
-#define NSLog(...)
-#endif
+//#if (!defined(DEBUG))
+//#define NSLog(...)
+//#endif
 
 #define kDefaultHost @"www.apple.com"
 #define kDefaultCheckInterval 2.0f

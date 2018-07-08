@@ -15,6 +15,7 @@
 		1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
 		EE01F1391E4B180D003276B5 /* PushPresentDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01F1381E4B180D003276B5 /* PushPresentDemo.m */; };
 		EE068FDC1F274E140066B97C /* PAirSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = EE068FDB1F274E140066B97C /* PAirSandbox.m */; };
+		EE0FE77220E33FD0005CDE35 /* GenericClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0FE77120E33FD0005CDE35 /* GenericClass.m */; };
 		EE1E31D41DD94CB30012D49F /* NSString+YYSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */; };
 		EE1E31D51DD94CB30012D49F /* NSString+YYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */; };
 		EE270D021E13ACBE005BA294 /* UIButton+JMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270D011E13ACBE005BA294 /* UIButton+JMCategory.m */; };
@@ -1022,6 +1023,8 @@
 		EE01F1381E4B180D003276B5 /* PushPresentDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPresentDemo.m; sourceTree = "<group>"; };
 		EE068FDA1F274E140066B97C /* PAirSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAirSandbox.h; sourceTree = "<group>"; };
 		EE068FDB1F274E140066B97C /* PAirSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAirSandbox.m; sourceTree = "<group>"; };
+		EE0FE77020E33FD0005CDE35 /* GenericClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericClass.h; sourceTree = "<group>"; };
+		EE0FE77120E33FD0005CDE35 /* GenericClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericClass.m; sourceTree = "<group>"; };
 		EE1E31D21DD94CB30012D49F /* NSString+YYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYSDK.h"; sourceTree = "<group>"; };
 		EE1E31D31DD94CB30012D49F /* NSString+YYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYSDK.m"; sourceTree = "<group>"; };
 		EE270D001E13ACBE005BA294 /* UIButton+JMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMCategory.h"; sourceTree = "<group>"; };
@@ -3998,7 +4001,7 @@
 				EE4C24861DAF97E6008924A3 /* 4-MethodSwizzling */,
 				EE4C24891DAF97E7008924A3 /* 5-协议与分类 */,
 				EE72A6D51E7241F700A34272 /* OC和C指针转换 */,
-				EE4C24981DAF97E7008924A3 /* OC语法糖 */,
+				EE4C24981DAF97E7008924A3 /* OC语法糖,新特性 */,
 				EE4C24931DAF97E7008924A3 /* RunTime */,
 				EE4C248C1DAF97E7008924A3 /* block原理 */,
 				EE72A6D91E72426A00A34272 /* load和initialize */,
@@ -4076,7 +4079,7 @@
 			path = RunTime;
 			sourceTree = "<group>";
 		};
-		EE4C24981DAF97E7008924A3 /* OC语法糖 */ = {
+		EE4C24981DAF97E7008924A3 /* OC语法糖,新特性 */ = {
 			isa = PBXGroup;
 			children = (
 				EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */,
@@ -4085,8 +4088,10 @@
 				EE4C249A1DAF97E7008924A3 /* SyntacticSugar.m */,
 				EEB02FA7209071AE000CDD08 /* ChainSugar.h */,
 				EEB02FA8209071AE000CDD08 /* ChainSugar.m */,
+				EE0FE77020E33FD0005CDE35 /* GenericClass.h */,
+				EE0FE77120E33FD0005CDE35 /* GenericClass.m */,
 			);
-			path = "OC语法糖";
+			path = "OC语法糖,新特性";
 			sourceTree = "<group>";
 		};
 		EE4C249D1DAF97E7008924A3 /* RunLoop */ = {
@@ -7256,6 +7261,7 @@
 				EE4C28D41DAF97E9008924A3 /* YYAudioRecorder.m in Sources */,
 				EE4C294D1DAF97EA008924A3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				EE4C29C71DAF97EA008924A3 /* ReachStateWIFI.m in Sources */,
+				EE0FE77220E33FD0005CDE35 /* GenericClass.m in Sources */,
 				EE4C298D1DAF97EA008924A3 /* RACImmediateScheduler.m in Sources */,
 				EE4C29B31DAF97EA008924A3 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				EE4C28741DAF97E9008924A3 /* UISearchDemo.m in Sources */,

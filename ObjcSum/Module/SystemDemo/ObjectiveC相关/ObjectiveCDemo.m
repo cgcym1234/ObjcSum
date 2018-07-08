@@ -11,6 +11,7 @@
 #import "ClassDemo.h"
 #import "PropertyAndVariableDemo.h"
 #import "UIViewController+Extension.h"
+#import "MethodAndMessages.h"
 
 @interface ObjectiveCDemo () {
 }
@@ -53,6 +54,10 @@
     [self addButtonWithTitle:@"2-成员变量与属性demo" action:^(UIButton *btn) {
         [PropertyAndVariableDemo launch];
     }];
+	
+	[self addButtonWithTitle:@"3-方法与消息" action:^(UIButton *btn) {
+		[MethodAndMessages test1];
+	}];
 	
 	_dict4 = [[NSDictionary alloc] init];
 }

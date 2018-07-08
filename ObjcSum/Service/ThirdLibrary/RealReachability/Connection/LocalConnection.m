@@ -12,9 +12,9 @@
 #import <arpa/inet.h>
 #import <ifaddrs.h>
 
-#if (!defined(DEBUG))
-#define NSLog(...)
-#endif
+//#if (!defined(DEBUG))
+//#define NSLog(...)
+//#endif
 
 NSString *const kLocalConnectionInitializedNotification = @"kLocalConnectionInitializedNotification";
 NSString *const kLocalConnectionChangedNotification = @"kLocalConnectionChangedNotification";

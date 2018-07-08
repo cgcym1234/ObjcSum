@@ -35,6 +35,7 @@
         if (didAddMethod) {
             class_replaceMethod(cls, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
+			///如果这个类中没有实现这个方法，class_getInstanceMethod() 返回的是某个父类的 Method 对象，这样 method_exchangeImplementations() 就把父类的原始实现（IMP）跟这个类的 Swizzle 实现交换了。这样其他父类及其其他子类的方法调用就会出问题，最严重的就是 Crash。
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
     });
@@ -44,6 +45,7 @@
 #pragma mark - Method Swizzling
 
 - (void)ch_viewWillAppear:(BOOL)animated {
+	///在swizzling的过程中，方法中的[self ch_viewWillAppear:animated]已经被重新指定到UIViewController类的-viewWillAppear:中。在这种情况下，不会产生无限循环。不过如果我们调用的是[self viewWillAppear:animated]，则会产生无限循环，因为这个方法的实现在运行时已经被重新指定为ch_viewWillAppear:了。
     [self ch_viewWillAppear:animated];
     NSLog(@"viewWillAppear: %@", self);
 }

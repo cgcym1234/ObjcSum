@@ -10,4 +10,6 @@
 
 @interface MethodAndMessages : NSObject
 
++ (void)test1;
+
 @end

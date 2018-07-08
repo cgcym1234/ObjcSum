@@ -9,9 +9,9 @@
 #import "PingHelper.h"
 #import "PingFoundation.h"
 
-#if (!defined(DEBUG))
-#define NSLog(...)
-#endif
+//#if (!defined(DEBUG))
+//#define NSLog(...)
+//#endif
 
 // We post the ping result to this notification,
 // which is a NSNumber from BOOL; YES -> success , NO -> failure.

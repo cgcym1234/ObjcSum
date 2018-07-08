@@ -9,6 +9,7 @@
 #import "PropertyAndVariableDemo.h"
 #import "MyClass1.h"
 #import <objc/runtime.h>
+#import <UIKit/UIKit.h>
 
 @implementation PropertyAndVariableDemo
 
@@ -23,9 +24,57 @@
  任何可以作为sizeof()操作参数的类型都可以用于@encode()。
  */
 + (void)typeEncodeDemo {
-    float a[] = { 1, 2, 3};
-    NSLog(@"array encoding type: %s", @encode(typeof(a)));
-    //array encoding type: [3f]
+
+	NSLog(@"array encoding type: %s", @encode(char));	//encoding type: c
+	NSLog(@"array encoding type: %s", @encode(int));	//encoding type: i
+	NSLog(@"array encoding type: %s", @encode(short));	//encoding type: s
+	NSLog(@"array encoding type: %s", @encode(long));	//encoding type: q
+	NSLog(@"array encoding type: %s", @encode(long long));	//encoding type: q
+	NSLog(@"array encoding type: %s", @encode(unsigned char));	//encoding type: C
+	NSLog(@"array encoding type: %s", @encode(unsigned int));	//encoding type: I
+	NSLog(@"array encoding type: %s", @encode(unsigned short));	//encoding type: S
+	NSLog(@"array encoding type: %s", @encode(unsigned long));	//encoding type: Q
+	NSLog(@"array encoding type: %s", @encode(unsigned long long));	//encoding type: Q
+	NSLog(@"array encoding type: %s", @encode(float));	//encoding type: f
+	NSLog(@"array encoding type: %s", @encode(double));	//encoding type: d
+	NSLog(@"array encoding type: %s", @encode(_Bool));	//encoding type: B
+	NSLog(@"array encoding type: %s", @encode(void));	//encoding type: v
+	NSLog(@"array encoding type: %s", @encode(char *));	//encoding type: *
+	NSLog(@"array encoding type: %s", @encode(int *));	//encoding type: ^i
+	NSLog(@"array encoding type: %s", @encode(void **)); //encoding type: ^^v
+	
+	NSLog(@"array encoding type: %s", @encode(id));		//encoding type: @
+	NSLog(@"array encoding type: %s", @encode(typeof([NSObject class])));		//encoding type: #
+	NSLog(@"array encoding type: %s", @encode(Class));	//encoding type: #
+	NSLog(@"array encoding type: %s", @encode(UIView));	//encoding type: {UIView=#}
+	NSLog(@"array encoding type: %s", @encode(UIView *));	//encoding type: @
+	NSLog(@"array encoding type: %s", @encode(typeof(UIView **)));	//encoding type: ^@
+	
+	NSArray *arr = @[@"dd", [UIView new], @(11)];
+	NSLog(@"array encoding type: %s", @encode(typeof(arr)));	//encoding type: @
+	
+	float a[] = { 1, 2, 3};
+	NSLog(@"array encoding type: %s", @encode(typeof(a))); //array encoding type: [3f]
+	
+	/*
+	 @ An object (whether statically typed or typed id)
+	 
+	 # A class object (Class)
+	 
+	 : A method selector (SEL)
+	 
+	 [array type] An array
+	 
+	 {name=type...} A structure
+	 
+	 (name=type...) A union
+	 
+	 bnum A bit field of num bits
+	 
+	 ^type A pointer to type
+	 
+	 ? An unknown type (among other things, this code is used for function pointers)
+	 */
 }
 
 + (void)ivarAndPropertyDemo {
@@ -78,9 +127,26 @@
         for (int j = 0; j < pCount; j ++) {
             objc_property_attribute_t attr = attrs[j];
             NSLog(@"objc_property_attribute_t name = %s, value = %s", attr.name, attr.value);
+			///objc_property_attribute_t name = T, value = q
         }
         free(attrs);
     }
+	/*
+	 2018-06-14 15:04:11.927708+0800 ObjcSum[7385:4105219] property name = interger, property attributes = Tq,N,V_interger
+	 2018-06-14 15:04:11.927739+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = T, value = q
+	 2018-06-14 15:04:11.927759+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = N, value =
+	 2018-06-14 15:04:11.927879+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = V, value = _interger
+	 2018-06-14 15:04:11.927895+0800 ObjcSum[7385:4105219] property name = array, property attributes = T@"NSArray",&,N,V_array
+	 2018-06-14 15:04:11.927918+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = T, value = @"NSArray"
+	 2018-06-14 15:04:11.927937+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = &, value =
+	 2018-06-14 15:04:11.927957+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = N, value =
+	 2018-06-14 15:04:11.927976+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = V, value = _array
+	 2018-06-14 15:04:11.927989+0800 ObjcSum[7385:4105219] property name = string, property attributes = T@"NSString",&,N,V_string
+	 2018-06-14 15:04:11.928010+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = T, value = @"NSString"
+	 2018-06-14 15:04:11.928030+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = &, value =
+	 2018-06-14 15:04:11.928130+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = N, value =
+	 2018-06-14 15:04:11.928152+0800 ObjcSum[7385:4105219] objc_property_attribute_t name = V, value = _string
+	 */
     free(properties);
 }
 

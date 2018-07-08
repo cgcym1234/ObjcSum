@@ -14,9 +14,9 @@
 #import "ReachStateUnReachable.h"
 #import "ReachStateLoading.h"
 
-#if (!defined(DEBUG))
-#define NSLog(...)
-#endif
+//#if (!defined(DEBUG))
+//#define NSLog(...)
+//#endif
 
 @interface FSMEngine()
 
