@@ -60,4 +60,57 @@
 
 - (CGSize)fitSizeInView:(UIView *)toView;
 
+/*
+ https://stackoverflow.com/questions/6073259/getting-rgb-pixel-data-from-cgimage
+ 打印一组有关图像的相关信息，以及图像像素数据的转储。
+ 它适用于带有alpha通道或没有的图像。
+ 该代码甚至可以处理不在RGB色彩空间中的图像，但我怀疑你是否有可能在iOS上获得任何这些。
+ 
+ Here's some sample output on two images I tried. They're both 5x3 rgb. The "a.png" image has an alpha channel, while the "b.rgb" does not.
+ 
+ ===== a.png =====
+ CGImageGetHeight: 5
+ CGImageGetWidth:  3
+ CGImageGetColorSpace: <CGColorSpace 0x4d08ff0> (kCGColorSpaceDeviceRGB)
+ CGImageGetBitsPerPixel:     32
+ CGImageGetBitsPerComponent: 8
+ CGImageGetBytesPerRow:      20
+ CGImageGetBitmapInfo: 0x00000003
+ kCGBitmapAlphaInfoMask     = YES
+ kCGBitmapFloatComponents   = NO
+ kCGBitmapByteOrderMask     = NO
+ kCGBitmapByteOrderDefault  = NO
+ kCGBitmapByteOrder16Little = NO
+ kCGBitmapByteOrder32Little = NO
+ kCGBitmapByteOrder16Big    = NO
+ kCGBitmapByteOrder32Big    = NO
+ Pixel Data:
+ (00,00,00,FF), (FF,FF,FF,FF), (FF,00,00,FF), (00,FF,00,FF), (00,00,FF,FF)
+ (00,00,00,FF), (FF,FF,FF,FF), (FF,00,00,FF), (00,FF,00,FF), (00,00,FF,FF)
+ (FF,FF,FF,00), (FF,FF,FF,00), (FF,FF,FF,00), (FF,FF,FF,00), (FF,FF,FF,00)
+ 
+ 
+ ===== b.png =====
+ CGImageGetHeight: 5
+ CGImageGetWidth:  3
+ CGImageGetColorSpace: <CGColorSpace 0x4d08ff0> (kCGColorSpaceDeviceRGB)
+ CGImageGetBitsPerPixel:     24
+ CGImageGetBitsPerComponent: 8
+ CGImageGetBytesPerRow:      15
+ CGImageGetBitmapInfo: 0x00000000
+ kCGBitmapAlphaInfoMask     = NO
+ kCGBitmapFloatComponents   = NO
+ kCGBitmapByteOrderMask     = NO
+ kCGBitmapByteOrderDefault  = NO
+ kCGBitmapByteOrder16Little = NO
+ kCGBitmapByteOrder32Little = NO
+ kCGBitmapByteOrder16Big    = NO
+ kCGBitmapByteOrder32Big    = NO
+ Pixel Data:
+ (00,00,00), (FF,FF,FF), (FF,00,00), (00,FF,00), (00,00,FF)
+ (00,00,00), (FF,FF,FF), (FF,00,00), (00,FF,00), (00,00,FF)
+ (00,00,00), (FF,FF,FF), (FF,00,00), (00,FF,00), (00,00,FF)
+ */
+- (void)dumpInfo;
+
 @end

@@ -39,8 +39,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+	
     self.dataArr = @[
+					 [[LibDemoInfo alloc] initWithTitle:@"SSLTestController" desc:@"SSLTest" controllerName:@"SSLTestController"],
+					 
                      [[LibDemoInfo alloc] initWithTitle:@"AuthenticationDemo" desc:@"指纹解锁" controllerName:@"AuthenticationDemo"],
                      
                      [[LibDemoInfo alloc] initWithTitle:@"TableViewDemo" desc:@"TableView相关" controllerName:@"TableViewDemo"],

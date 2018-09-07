@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+YYSDK.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @implementation UIImage (YYSDK)
 
@@ -268,8 +269,86 @@
     return fitSize;
 }
 
+- (void)dumpInfo {
+	CGImageRef cgImage = self.CGImage;
+	
+	size_t width = CGImageGetWidth(cgImage);
+	size_t height = CGImageGetHeight(cgImage);
+	
+	size_t bytesPerRow = CGImageGetBytesPerRow(cgImage);
+	size_t bitsPerPixel = CGImageGetBitsPerPixel(cgImage);
+	size_t bitsPerComponent = CGImageGetBitsPerComponent(cgImage);
+	size_t bytesPerPixel = bitsPerPixel / bitsPerComponent;
+	
+	CGBitmapInfo info = CGImageGetBitmapInfo(cgImage);
+	
+	NSLog(
+		  @"\n"
+		  "===== %@ =====\n"
+		  "CGImageGetHeight: %d\n"
+		  "CGImageGetWidth:  %d\n"
+		  "CGImageGetColorSpace: %@\n"
+		  "CGImageGetBitsPerPixel:     %d\n"
+		  "CGImageGetBitsPerComponent: %d\n"
+		  "CGImageGetBytesPerRow:      %d\n"
+		  "CGImageGetBitmapInfo: 0x%.8X\n"
+		  "  kCGBitmapAlphaInfoMask     = %s\n"
+		  "  kCGBitmapFloatComponents   = %s\n"
+		  "  kCGBitmapByteOrderMask     = 0x%.8X\n"
+		  "  kCGBitmapByteOrderDefault  = %s\n"
+		  "  kCGBitmapByteOrder16Little = %s\n"
+		  "  kCGBitmapByteOrder32Little = %s\n"
+		  "  kCGBitmapByteOrder16Big    = %s\n"
+		  "  kCGBitmapByteOrder32Big    = %s\n",
+		  self.description,
+		  (int)width,
+		  (int)height,
+		  CGImageGetColorSpace(cgImage),
+		  (int)bitsPerPixel,
+		  (int)bitsPerComponent,
+		  (int)bytesPerRow,
+		  (unsigned)info,
+		  (info & kCGBitmapAlphaInfoMask)     ? "YES" : "NO",
+		  (info & kCGBitmapFloatComponents)   ? "YES" : "NO",
+		  (info & kCGBitmapByteOrderMask),
+		  ((info & kCGBitmapByteOrderMask) == kCGBitmapByteOrderDefault)  ? "YES" : "NO",
+		  ((info & kCGBitmapByteOrderMask) == kCGBitmapByteOrder16Little) ? "YES" : "NO",
+		  ((info & kCGBitmapByteOrderMask) == kCGBitmapByteOrder32Little) ? "YES" : "NO",
+		  ((info & kCGBitmapByteOrderMask) == kCGBitmapByteOrder16Big)    ? "YES" : "NO",
+		  ((info & kCGBitmapByteOrderMask) == kCGBitmapByteOrder32Big)    ? "YES" : "NO"
+		  );
+	
+	CGDataProviderRef provider = CGImageGetDataProvider(cgImage);
+	NSData *data = CFBridgingRelease(CGDataProviderCopyData(provider));
+	const uint8_t *bytes = [data bytes];
+	printf("Pixel Data:\n");
+	for (size_t row = 0; row < height; row++) {
+		for (size_t col = 0; col < width; col++) {
+			const uint8_t *pixel = &bytes[row * bytesPerRow + col * bytesPerPixel];
+			printf("(");
+			for (size_t x = 0; x < bytesPerPixel; x++) {
+				printf("%.2X", pixel[x]);
+				if( x < bytesPerPixel - 1 ) printf(",");
+			}
+			
+			printf(")");
+			if(col < width - 1) printf(", ");
+		}
+		printf("\n");
+	}
+}
 
 @end
+
+
+
+
+
+
+
+
+
+
 
 
 

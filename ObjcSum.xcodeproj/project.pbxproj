@@ -768,7 +768,6 @@
 		EE4C29C61DAF97EA008924A3 /* ReachStateUnReachable.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27CE1DAF97E8008924A3 /* ReachStateUnReachable.m */; };
 		EE4C29C71DAF97EA008924A3 /* ReachStateWIFI.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27D01DAF97E8008924A3 /* ReachStateWIFI.m */; };
 		EE4C29C81DAF97EA008924A3 /* ReachStateWWAN.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27D21DAF97E8008924A3 /* ReachStateWWAN.m */; };
-		EE4C29C91DAF97EA008924A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE4C27D31DAF97E8008924A3 /* Info.plist */; };
 		EE4C29CA1DAF97EA008924A3 /* PingFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27D61DAF97E8008924A3 /* PingFoundation.m */; };
 		EE4C29CB1DAF97EA008924A3 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27D81DAF97E8008924A3 /* PingHelper.m */; };
 		EE4C29CC1DAF97EA008924A3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EE4C27D91DAF97E8008924A3 /* README.md */; };
@@ -806,7 +805,6 @@
 		EE4C29EC1DAF97EA008924A3 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C28221DAF97E9008924A3 /* UIRefreshControl+AFNetworking.m */; };
 		EE4C29ED1DAF97EA008924A3 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C28241DAF97E9008924A3 /* UIWebView+AFNetworking.m */; };
 		EE4C29EE1DAF97EA008924A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4C28261DAF97E9008924A3 /* Assets.xcassets */; };
-		EE4C29EF1DAF97EA008924A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE4C28271DAF97E9008924A3 /* Info.plist */; };
 		EE4C29F01DAF97EA008924A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C28281DAF97E9008924A3 /* main.m */; };
 		EE4C2BF71DAF9D33008924A3 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4C264E1DAF97E7008924A3 /* AFHTTPSessionManager.h */; };
 		EE4C2BF81DAF9D33008924A3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4C264F1DAF97E7008924A3 /* AFHTTPSessionManager.m */; };
@@ -933,6 +931,7 @@
 		EEC0992E200C4DA300ED368B /* LocationManager+Loaction.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC0992C200C4DA300ED368B /* LocationManager+Loaction.m */; };
 		EEC0995C200DED7B00ED368B /* OnePixelLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC0995A200DED7B00ED368B /* OnePixelLayoutConstraint.h */; };
 		EEC0995D200DED7B00ED368B /* OnePixelLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */; };
+		EEC45459214219AE000FB7B9 /* SSLTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC45457214219AD000FB7B9 /* SSLTestController.m */; };
 		EEC7296C1DD35F7200867DBC /* SyntacticSugar+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */; };
 		EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECCCCD61DD005D3007B47B1 /* YYSegmentedView.m */; };
 		EED25D6520AAE52C00483559 /* CheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED25D6420AAE52C00483559 /* CheckUpdate.m */; };
@@ -2234,7 +2233,6 @@
 		EE4C27D01DAF97E8008924A3 /* ReachStateWIFI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateWIFI.m; sourceTree = "<group>"; };
 		EE4C27D11DAF97E8008924A3 /* ReachStateWWAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachStateWWAN.h; sourceTree = "<group>"; };
 		EE4C27D21DAF97E8008924A3 /* ReachStateWWAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachStateWWAN.m; sourceTree = "<group>"; };
-		EE4C27D31DAF97E8008924A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE4C27D51DAF97E8008924A3 /* PingFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingFoundation.h; sourceTree = "<group>"; };
 		EE4C27D61DAF97E8008924A3 /* PingFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingFoundation.m; sourceTree = "<group>"; };
 		EE4C27D71DAF97E8008924A3 /* PingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingHelper.h; sourceTree = "<group>"; };
@@ -2492,6 +2490,8 @@
 		EEC0992C200C4DA300ED368B /* LocationManager+Loaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LocationManager+Loaction.m"; sourceTree = "<group>"; };
 		EEC0995A200DED7B00ED368B /* OnePixelLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnePixelLayoutConstraint.h; sourceTree = "<group>"; };
 		EEC0995B200DED7B00ED368B /* OnePixelLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnePixelLayoutConstraint.m; sourceTree = "<group>"; };
+		EEC45457214219AD000FB7B9 /* SSLTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLTestController.m; sourceTree = "<group>"; };
+		EEC45458214219AD000FB7B9 /* SSLTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLTestController.h; sourceTree = "<group>"; };
 		EEC7296A1DD35F7200867DBC /* SyntacticSugar+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyntacticSugar+Extention.h"; sourceTree = "<group>"; };
 		EEC7296B1DD35F7200867DBC /* SyntacticSugar+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SyntacticSugar+Extention.m"; sourceTree = "<group>"; };
 		EECCCCD51DD005D3007B47B1 /* YYSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSegmentedView.h; sourceTree = "<group>"; };
@@ -3914,9 +3914,10 @@
 				EE4C24FB1DAF97E7008924A3 /* 音频相关 */,
 				EE4C24A01DAF97E7008924A3 /* SystemDemo.h */,
 				EE4C24A11DAF97E7008924A3 /* SystemDemo.m */,
+				EE4C24A21DAF97E7008924A3 /* SystemDemo.storyboard */,
 				EED25D6320AAE52C00483559 /* CheckUpdate.h */,
 				EED25D6420AAE52C00483559 /* CheckUpdate.m */,
-				EE4C24A21DAF97E7008924A3 /* SystemDemo.storyboard */,
+				EEC4545A214219EF000FB7B9 /* SSLTestController */,
 				EEFC86331F2350F100029ABC /* 指纹解锁 */,
 			);
 			path = SystemDemo;
@@ -5617,7 +5618,6 @@
 				EE4C27BE1DAF97E8008924A3 /* Connection */,
 				EE4C27C11DAF97E8008924A3 /* FSM */,
 				EE4C27D41DAF97E8008924A3 /* Ping */,
-				EE4C27D31DAF97E8008924A3 /* Info.plist */,
 				EE4C27DA1DAF97E8008924A3 /* RealReachability.h */,
 				EE4C27DB1DAF97E8008924A3 /* RealReachability.m */,
 			);
@@ -6349,6 +6349,15 @@
 			path = OnePixelLayoutConstraint;
 			sourceTree = "<group>";
 		};
+		EEC4545A214219EF000FB7B9 /* SSLTestController */ = {
+			isa = PBXGroup;
+			children = (
+				EEC45458214219AD000FB7B9 /* SSLTestController.h */,
+				EEC45457214219AD000FB7B9 /* SSLTestController.m */,
+			);
+			path = SSLTestController;
+			sourceTree = "<group>";
+		};
 		EECCCCD41DD00556007B47B1 /* YYSegmentedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -6742,7 +6751,7 @@
 		1F8B89E81BE2058600D81096 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = sihuan;
 				TargetAttributes = {
 					1F8B89EF1BE2058600D81096 = {
@@ -6809,7 +6818,6 @@
 				EE4C28351DAF97E9008924A3 /* Login.storyboard in Resources */,
 				EE4C28911DAF97E9008924A3 /* ReactiveCocoaDemo.storyboard in Resources */,
 				EE270DBC1E1B6FE6005BA294 /* JMSkuDisplayView.xib in Resources */,
-				EE4C29EF1DAF97EA008924A3 /* Info.plist in Resources */,
 				EE4C28F01DAF97E9008924A3 /* YYMessage.xcassets in Resources */,
 				EE4C28891DAF97E9008924A3 /* YYAudioPlayeDemor.xib in Resources */,
 				EE4C28671DAF97E9008924A3 /* EventDemo.storyboard in Resources */,
@@ -6821,7 +6829,6 @@
 				EE9F1B521DEAB337006AD033 /* JMGoodsDetailRefreshView.xib in Resources */,
 				EE4B96701DC5D60200CCFB95 /* decorate_title_bg.png in Resources */,
 				EE270DC41E1B6FE6005BA294 /* JMSkuSelectedView.xcassets in Resources */,
-				EE4C29C91DAF97EA008924A3 /* Info.plist in Resources */,
 				EE4C28B51DAF97E9008924A3 /* FastRecordVoiceInputView.xib in Resources */,
 				EE4C28E31DAF97E9008924A3 /* YYEmoticonInputViewCell.xib in Resources */,
 				EE4C29EE1DAF97EA008924A3 /* Assets.xcassets in Resources */,
@@ -7108,6 +7115,7 @@
 				EE4C294F1DAF97EA008924A3 /* ViewController+MASAdditions.m in Sources */,
 				EE4C28B91DAF97E9008924A3 /* YYScrollSigmentDemo.m in Sources */,
 				EE4C29811DAF97EA008924A3 /* RACCompoundDisposable.m in Sources */,
+				EEC45459214219AE000FB7B9 /* SSLTestController.m in Sources */,
 				EE4C290B1DAF97E9008924A3 /* InterviewDemo.m in Sources */,
 				EE4C28A51DAF97E9008924A3 /* FastRecordModel+CoreDataProperties.m in Sources */,
 				EE4C28D61DAF97E9008924A3 /* YYMessageCellAudio.m in Sources */,
@@ -7749,17 +7757,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -7782,7 +7801,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -7793,17 +7812,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -7820,7 +7850,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -7944,7 +7974,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -7976,7 +8006,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
