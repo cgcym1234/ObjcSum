@@ -6756,7 +6756,7 @@
 				TargetAttributes = {
 					1F8B89EF1BE2058600D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = K8G86W2HGU;
+						DevelopmentTeam = 5PK7JV6E62;
 						ProvisioningStyle = Automatic;
 					};
 					1F8B8A081BE2058700D81096 = {
@@ -6769,7 +6769,7 @@
 					};
 					EE2A1F2B1DAF5DE7001F9A2E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = K8G86W2HGU;
+						DevelopmentTeam = 4QA4S2484R;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -7864,7 +7864,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K8G86W2HGU;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7895,7 +7895,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K8G86W2HGU;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7979,7 +7979,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K8G86W2HGU;
+				DEVELOPMENT_TEAM = 4QA4S2484R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -8011,7 +8011,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K8G86W2HGU;
+				DEVELOPMENT_TEAM = 4QA4S2484R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
