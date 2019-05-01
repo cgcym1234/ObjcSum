@@ -36,7 +36,7 @@
 	policy.validatesDomainName = YES;
 	policy.allowInvalidCertificates = NO;
 
-	AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.ankerjiedian.com"]];
+	AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.baidu.com"]];
 	manager.securityPolicy = policy;
 	manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
 	
