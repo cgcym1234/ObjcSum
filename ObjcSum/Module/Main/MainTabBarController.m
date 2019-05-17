@@ -10,6 +10,7 @@
 #import "BaseNavigationController.h"
 #import "LoginManager.h"
 #import "YYLogger.h"
+#import "AppInfo.h"
 
 #define KeyTitle              @"titile"
 #define KeySelectedImag       @"selectedImag"
@@ -34,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self envInit];
+    
+    NSLog(@"%@", [AppInfo sharedInstance].macaddress);
     
     NSLog(@"-----------aaaaaaaa----------------");
     

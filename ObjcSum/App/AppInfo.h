@@ -12,6 +12,7 @@
 
 @interface AppInfo : NSObject
 
+- (NSString *) macaddress;
 
 //是否为第一次启动标记，如果是第一次启动则不需要提示wifi联网信息
 @property (nonatomic, assign) BOOL beFirstLaunch;
