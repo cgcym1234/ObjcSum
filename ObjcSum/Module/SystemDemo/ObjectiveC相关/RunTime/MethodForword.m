@@ -40,7 +40,10 @@
 
 #pragma mark - objc_msgSend过程
 - (void)objc_msgSendDemo {
-    id value = [self test1:@"test"];
+    ///
+    
+    MethodForword *a = [MethodForword new];
+    id value = [a test1:@"test"];
     /**
      1.  编译器看到此消息后,将其转换成标准的C语言函数调用,
      所调用的函数是消息传递机制中的核心函数,叫objc_msgSend,原型如下:
@@ -49,7 +52,7 @@
     
     /**
      *  第一个参数是接受者,第二个参数是selector,后续是参数,所以上面的消息被转换成如下函数:
-     id value1 = objc_msgSend(self, @selector(test1:), @"test11");
+     id value1 = objc_msgSend(a, @selector(test1:), @"test");
      */
     
     
