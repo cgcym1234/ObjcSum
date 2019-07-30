@@ -24,21 +24,34 @@
 #pragma mark - 消息转发过程
 
 - (void)messageForward {
-    //以向MethodForword对象发送testInstance消息为例子
-//    MethodForword *obj = [MethodForword new];
-//    [obj performSelector:@selector(testInstance)];
-//    
-//    if ([self.class conformsToProtocol:<#(Protocol *)#>]) {
-//        <#statements#>
-//    }
+    MethodForword *a = [MethodForword new];
+    id value = [a test2:@"test"];
+    /*
+     1.  编译器看到此消息后,将其转换成标准的C语言函数调用,
+     ​     所调用的函数是消息传递机制中的核心函数,叫objc_msgSend,原型如下:
+     ​     void objc_msgSend(id self, SEL cmd, ...);
+     
+     第一个参数是接受者,第二个参数是selector,后续是参数,所以上面的消息被转换成如下函数:
+     
+     ​     id value1 = objc_msgSend(a, @selector(test1:), @"test");
+     */
     
-    //1. 会被转换成如下C语言方式调用
-    //objc_msgSend(obj, @selector(testInstance));
+    /*
+     2. 在接收者(someObject)所属的类中,查询它的"方法列表"(list of methods),
+     
+     ​     如果能找到与selector名称相同的方法, 就调至其实现代码。
+     */
     
-    /**
-     objc_msgSend的动作比较清晰：
-     1. 首先在 Class 中的缓存查找 IMP （没缓存则初始化缓存），如果没找到，则向父类的 Class 查找。
-     2. 如果一直查找到根类仍旧没有实现，则用_objc_msgForward函数指针代替 IMP 。最后，执行这个 IMP 。
+    /*
+     3. 如果找不到, 沿着继承体系结构向上查找,直到找到合适的方法再跳转。
+     
+     ​     如果最终找不到相应的方法, 将执行“消息转发”(message forwarding)操作。
+     */
+    
+    /*
+     4. 如上所述调用一个方法需要很多步骤。不过objc_msgSend 会将匹配结果缓存 在“快速映射表”(fast map)中,每个类都有这个缓存, 后面当收到相同的消息,执行起来就快了很多.
+     
+     ​     不过这种“快速执行路径”(fast path)还是不如 “静态绑定的函数调用操作”(statically bound function call)迅速,但也不会慢很多,实际上,消息派发(message dispatch)并非应用程序的瓶颈所在。
      */
 }
 

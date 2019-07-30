@@ -6,7 +6,7 @@
 //  Copyright © 2016年 sihuan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MethodParent : NSObject
 
@@ -16,5 +16,7 @@
 
 - (void)test;
 + (void)test;
+
+- (NSString *)test2:(NSString *)name;
 
 @end

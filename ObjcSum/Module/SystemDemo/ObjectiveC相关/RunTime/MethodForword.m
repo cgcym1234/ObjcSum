@@ -27,6 +27,11 @@
 + (void)test {
     [self performSelector:@selector(testClass)];
 }
+
+- (NSString *)test2:(NSString *)name {
+    return name;
+}
+
 #pragma mark - 理解 objc_msgSend 的作用
 /**
  *  在 Objective-C 中,如果向对象发送消息, 会使用动态绑定机制来决定需要调用的方法。
