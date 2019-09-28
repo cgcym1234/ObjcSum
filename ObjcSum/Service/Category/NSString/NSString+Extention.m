@@ -84,29 +84,25 @@
 #pragma mark - 通过UUID生成唯一标志符
 + (NSString *)uniqueDeviceIdentifier
 {
-    NSString *stringToHash = [NSString stringWithFormat:@"%@%@",[self uniqueGlobalDeviceIdentifier],[NSBundle mainBundle].bundleIdentifier];
+    NSString *stringToHash = [NSString stringWithFormat:@"%@%@",[self uniqueUUID],[NSBundle mainBundle].bundleIdentifier];
     return [stringToHash stringToMD5];
 }
 
-+ (NSString *)uniqueGlobalDeviceIdentifier
-{
++ (NSString *)uniqueUUID {
     static NSString *account = @"yy-device-id";
     NSString *bundleIdentifier = [NSBundle mainBundle].bundleIdentifier;
     NSString *identifier = [SSKeychain passwordForService:bundleIdentifier
                                                   account:account];
     
-    if (!identifier)
-    {
-        CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-        identifier = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
-        CFRelease(uuidRef);
-        
+    if (!identifier) {
+        identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         [SSKeychain setPassword:identifier
                      forService:bundleIdentifier
                         account:account];
     }
     
-    return [identifier stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    return identifier;
+//    return [identifier stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
 
 

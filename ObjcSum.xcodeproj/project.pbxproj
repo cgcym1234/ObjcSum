@@ -1018,6 +1018,7 @@
 		1F8B8A181BE2058700D81096 /* ObjcSumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcSumUITests.m; sourceTree = "<group>"; };
 		1F8B8A1A1BE2058700D81096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAC3C191C0D44760007520F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		282B1E16230BDED200CC7DF8 /* ObjcSum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjcSum.entitlements; sourceTree = "<group>"; };
 		EE01F1371E4B180D003276B5 /* PushPresentDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushPresentDemo.h; sourceTree = "<group>"; };
 		EE01F1381E4B180D003276B5 /* PushPresentDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPresentDemo.m; sourceTree = "<group>"; };
 		EE068FDA1F274E140066B97C /* PAirSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAirSandbox.h; sourceTree = "<group>"; };
@@ -3800,6 +3801,7 @@
 		EE4C241E1DAF97E6008924A3 /* ObjcSum */ = {
 			isa = PBXGroup;
 			children = (
+				282B1E16230BDED200CC7DF8 /* ObjcSum.entitlements */,
 				EE4C2BF61DAF9CC6008924A3 /* App */,
 				EE4C242A1DAF97E6008924A3 /* Header */,
 				EE4C24321DAF97E6008924A3 /* Module */,
@@ -6758,6 +6760,11 @@
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 5PK7JV6E62;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+						};
 					};
 					1F8B8A081BE2058700D81096 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -6779,6 +6786,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
