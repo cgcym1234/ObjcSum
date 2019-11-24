@@ -49,33 +49,32 @@
 }
 
 - (void)handlePan:(UIPanGestureRecognizer *)pan {
-    if (pan.state == UIGestureRecognizerStateEnded) {
-        CGPoint newCenter = CGPointMake(self.center.x + self.transform.tx, self.center.y + self.transform.ty);
-        
-        //最后改变view实际位置
-        self.center = newCenter;
-        self.transform = CGAffineTransformIdentity;
-        return;
-    }
-    
-    /**
-     *  仿射变换与简单的偏移量不同，可以同时达成旋转，缩放，平移操作。
-     为了支持变换，手势识别器以绝对量的方式来描述坐标改变，而不是给出2次改变的相对差值。
-     这样就不需要把多个偏移量累加起来。
-     
-     UIPanGestureRecognizer只返回一个变化量，且以某个view的坐标系来描述位置的变化。
-     一般使用superView
-     */
     CGPoint translation = [pan translationInView:self.superview];
-    CGAffineTransform transform = self.transform;
-    transform.tx = translation.x;
-    transform.ty = translation.y;
-    self.transform = transform;
     
-    /**
-     *  如果使用这种方式需要记录_previousLocation
-     */
-//    self.center = CGPointMake(_previousLocation.x + translation.x, _previousLocation.y + translation.y);
+//    if (pan.state == UIGestureRecognizerStateEnded) {
+//        CGPoint newCenter = CGPointMake(self.center.x + self.transform.tx, self.center.y + self.transform.ty);
+//
+//        //最后改变view实际位置
+//        self.center = newCenter;
+//        self.transform = CGAffineTransformIdentity;
+//        return;
+//    }
+//
+//    /**
+//     *  仿射变换与简单的偏移量不同，可以同时达成旋转，缩放，平移操作。
+//     为了支持变换，手势识别器以绝对量的方式来描述坐标改变，而不是给出2次改变的相对差值。
+//     这样就不需要把多个偏移量累加起来。
+//
+//     UIPanGestureRecognizer只返回一个变化量，且以某个view的坐标系来描述位置的变化。
+//     一般使用superView
+//     */
+//    CGAffineTransform transform = self.transform;
+//    transform.tx = translation.x;
+//    transform.ty = translation.y;
+//    self.transform = transform;
+    
+    /// 如果使用这种方式需要记录_previousLocation
+    self.center = CGPointMake(_previousLocation.x + translation.x, _previousLocation.y + translation.y);
 }
 @end
 

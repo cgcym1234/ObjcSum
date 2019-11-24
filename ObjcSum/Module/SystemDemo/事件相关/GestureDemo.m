@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    [self.view addSubview:self.dragImageView];
-//    [self.view addSubview:self.dragImageViewGesture];
+    [self.view addSubview:self.dragImageViewGesture];
 //    [self.view addSubview:self.dragImageViewGesture3];
     __weak typeof(self) weakSelf = self;
     int btnNum = 2;
