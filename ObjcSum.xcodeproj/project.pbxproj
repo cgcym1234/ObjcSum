@@ -11,6 +11,20 @@
 		1F8B8A0E1BE2058700D81096 /* ObjcSumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A0D1BE2058700D81096 /* ObjcSumTests.m */; };
 		1F8B8A191BE2058700D81096 /* ObjcSumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B8A181BE2058700D81096 /* ObjcSumUITests.m */; };
 		1FAC3C1A1C0D44760007520F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAC3C191C0D44760007520F /* libz.tbd */; };
+		2818CCFA2398DD1D00E22D6F /* VideoCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CCF82398DD1D00E22D6F /* VideoCreator.h */; };
+		2818CCFB2398DD1D00E22D6F /* VideoCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CCF92398DD1D00E22D6F /* VideoCreator.m */; };
+		2818CE58239A556D00E22D6F /* Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE50239A556C00E22D6F /* Recorder.m */; };
+		2818CE59239A556D00E22D6F /* AudioFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE51239A556C00E22D6F /* AudioFormat.m */; };
+		2818CE5A239A556D00E22D6F /* AudioQueueModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE52239A556C00E22D6F /* AudioQueueModel.h */; };
+		2818CE5B239A556D00E22D6F /* AudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE53239A556C00E22D6F /* AudioPlayer.h */; };
+		2818CE5C239A556D00E22D6F /* Recorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE54239A556C00E22D6F /* Recorder.h */; };
+		2818CE5D239A556D00E22D6F /* AudioFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE55239A556C00E22D6F /* AudioFormat.h */; };
+		2818CE5E239A556D00E22D6F /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE56239A556C00E22D6F /* AudioPlayer.m */; };
+		2818CE5F239A556D00E22D6F /* AudioQueueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE57239A556C00E22D6F /* AudioQueueModel.m */; };
+		2818CE65239A692200E22D6F /* H264HwDecoderImpl2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE61239A692200E22D6F /* H264HwDecoderImpl2.m */; };
+		2818CE66239A692200E22D6F /* DecodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE62239A692200E22D6F /* DecodeView.m */; };
+		2818CE67239A692200E22D6F /* H264HwDecoderImpl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE63239A692200E22D6F /* H264HwDecoderImpl2.h */; };
+		2818CE68239A692200E22D6F /* DecodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE64239A692200E22D6F /* DecodeView.h */; };
 		28D53274238A697400C5D1C5 /* faac.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D5306E238A697000C5D1C5 /* faac.h */; };
 		28D53275238A697400C5D1C5 /* faaccfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D5306F238A697000C5D1C5 /* faaccfg.h */; };
 		28D53276238A697400C5D1C5 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D53071238A697000C5D1C5 /* libfaac.a */; };
@@ -1509,6 +1523,20 @@
 		1F8B8A181BE2058700D81096 /* ObjcSumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcSumUITests.m; sourceTree = "<group>"; };
 		1F8B8A1A1BE2058700D81096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAC3C191C0D44760007520F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2818CCF82398DD1D00E22D6F /* VideoCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCreator.h; sourceTree = "<group>"; };
+		2818CCF92398DD1D00E22D6F /* VideoCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCreator.m; sourceTree = "<group>"; };
+		2818CE50239A556C00E22D6F /* Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recorder.m; sourceTree = "<group>"; };
+		2818CE51239A556C00E22D6F /* AudioFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFormat.m; sourceTree = "<group>"; };
+		2818CE52239A556C00E22D6F /* AudioQueueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueModel.h; sourceTree = "<group>"; };
+		2818CE53239A556C00E22D6F /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		2818CE54239A556C00E22D6F /* Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recorder.h; sourceTree = "<group>"; };
+		2818CE55239A556C00E22D6F /* AudioFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFormat.h; sourceTree = "<group>"; };
+		2818CE56239A556C00E22D6F /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		2818CE57239A556C00E22D6F /* AudioQueueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueueModel.m; sourceTree = "<group>"; };
+		2818CE61239A692200E22D6F /* H264HwDecoderImpl2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H264HwDecoderImpl2.m; sourceTree = "<group>"; };
+		2818CE62239A692200E22D6F /* DecodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodeView.m; sourceTree = "<group>"; };
+		2818CE63239A692200E22D6F /* H264HwDecoderImpl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264HwDecoderImpl2.h; sourceTree = "<group>"; };
+		2818CE64239A692200E22D6F /* DecodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeView.h; sourceTree = "<group>"; };
 		282B1E16230BDED200CC7DF8 /* ObjcSum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjcSum.entitlements; sourceTree = "<group>"; };
 		28D5306E238A697000C5D1C5 /* faac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faac.h; sourceTree = "<group>"; };
 		28D5306F238A697000C5D1C5 /* faaccfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faaccfg.h; sourceTree = "<group>"; };
@@ -3638,9 +3666,47 @@
 			path = ObjcSumUITests;
 			sourceTree = "<group>";
 		};
+		2818CCF72398DD1D00E22D6F /* VideoCreator */ = {
+			isa = PBXGroup;
+			children = (
+				2818CCF82398DD1D00E22D6F /* VideoCreator.h */,
+				2818CCF92398DD1D00E22D6F /* VideoCreator.m */,
+			);
+			path = VideoCreator;
+			sourceTree = "<group>";
+		};
+		2818CE4F239A556C00E22D6F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				2818CE54239A556C00E22D6F /* Recorder.h */,
+				2818CE50239A556C00E22D6F /* Recorder.m */,
+				2818CE53239A556C00E22D6F /* AudioPlayer.h */,
+				2818CE56239A556C00E22D6F /* AudioPlayer.m */,
+				2818CE55239A556C00E22D6F /* AudioFormat.h */,
+				2818CE51239A556C00E22D6F /* AudioFormat.m */,
+				2818CE52239A556C00E22D6F /* AudioQueueModel.h */,
+				2818CE57239A556C00E22D6F /* AudioQueueModel.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		2818CE60239A557B00E22D6F /* StreamPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2818CE64239A692200E22D6F /* DecodeView.h */,
+				2818CE62239A692200E22D6F /* DecodeView.m */,
+				2818CE63239A692200E22D6F /* H264HwDecoderImpl2.h */,
+				2818CE61239A692200E22D6F /* H264HwDecoderImpl2.m */,
+				2818CE4F239A556C00E22D6F /* Audio */,
+			);
+			path = StreamPlayer;
+			sourceTree = "<group>";
+		};
 		28D5306A238A697000C5D1C5 /* MHVideoTools */ = {
 			isa = PBXGroup;
 			children = (
+				2818CE60239A557B00E22D6F /* StreamPlayer */,
+				2818CCF72398DD1D00E22D6F /* VideoCreator */,
 				28D5306B238A697000C5D1C5 /* clibs */,
 				28D53090238A697000C5D1C5 /* MHPlayer */,
 				28D5309B238A697000C5D1C5 /* MHCapture */,
@@ -8200,6 +8266,7 @@
 				28D53436238A697500C5D1C5 /* FWLordKelvinFilter.h in Headers */,
 				EE2A210B1DAF6D7A001F9A2E /* YYAsyncLayer.h in Headers */,
 				EE4B96951DC5DAAF00CCFB95 /* YYPageViewController.h in Headers */,
+				2818CE5D239A556D00E22D6F /* AudioFormat.h in Headers */,
 				28D5330A238A697400C5D1C5 /* GPUImagePinchDistortionFilter.h in Headers */,
 				EE2A20B11DAF6D7A001F9A2E /* YYFullScreenAnimator.h in Headers */,
 				28D532AD238A697400C5D1C5 /* GPUImageHoughTransformLineDetector.h in Headers */,
@@ -8298,6 +8365,7 @@
 				28D53349238A697400C5D1C5 /* GPUImagePrewittEdgeDetectionFilter.h in Headers */,
 				28D532CF238A697400C5D1C5 /* GLProgram.h in Headers */,
 				28D533C1238A697500C5D1C5 /* GPUImageErosionFilter.h in Headers */,
+				2818CE67239A692200E22D6F /* H264HwDecoderImpl2.h in Headers */,
 				28D53429238A697500C5D1C5 /* FWLomofiFilter.h in Headers */,
 				EE2A20861DAF6D7A001F9A2E /* YYAlertTextView.h in Headers */,
 				EE6910EB1F134F7F0097AC99 /* NSAttributedString+YYExtension.h in Headers */,
@@ -8309,6 +8377,7 @@
 				28D5328B238A697400C5D1C5 /* rotate_argb.h in Headers */,
 				28D53308238A697400C5D1C5 /* GPUImageTwoInputCrossTextureSamplingFilter.h in Headers */,
 				EE2A210F1DAF6D7A001F9A2E /* YYFileHash.h in Headers */,
+				2818CE5C239A556D00E22D6F /* Recorder.h in Headers */,
 				EE2A1F581DAF6300001F9A2E /* UIImage+YYSDK.h in Headers */,
 				28D532BA238A697400C5D1C5 /* GPUImageContext.h in Headers */,
 				28D533BF238A697500C5D1C5 /* GPUImageDissolveBlendFilter.h in Headers */,
@@ -8335,6 +8404,7 @@
 				28D533D8238A697500C5D1C5 /* GPUImageToneCurveFilter.h in Headers */,
 				EE2A20CE1DAF6D7A001F9A2E /* NSHTTPCookie+YYExtension.h in Headers */,
 				EE2A20DA1DAF6D7A001F9A2E /* NSString+YYExtension.h in Headers */,
+				2818CE5A239A556D00E22D6F /* AudioQueueModel.h in Headers */,
 				EE2A20E61DAF6D7A001F9A2E /* UIApplication+YYExtension.h in Headers */,
 				28D5334A238A697400C5D1C5 /* GPUImageDarkenBlendFilter.h in Headers */,
 				28D53369238A697400C5D1C5 /* GPUImageTwoInputFilter.h in Headers */,
@@ -8417,6 +8487,7 @@
 				28D533BD238A697500C5D1C5 /* GPUImagePixellateFilter.h in Headers */,
 				28D532A2238A697400C5D1C5 /* GPUImageStillCamera.h in Headers */,
 				28D532E9238A697400C5D1C5 /* GPUImageHalftoneFilter.h in Headers */,
+				2818CCFA2398DD1D00E22D6F /* VideoCreator.h in Headers */,
 				28D5345A238A697500C5D1C5 /* MHHWAACEncoder.h in Headers */,
 				28D5327C238A697400C5D1C5 /* scale.h in Headers */,
 				EE2A21301DAF6D7A001F9A2E /* YYMultiSelectModel.h in Headers */,
@@ -8576,7 +8647,9 @@
 				28D533B6238A697400C5D1C5 /* GPUImage3x3TextureSamplingFilter.h in Headers */,
 				28D532DF238A697400C5D1C5 /* GPUImageThreeInputFilter.h in Headers */,
 				EE2A21581DAF6D7A001F9A2E /* YYTextViewTimePicker.h in Headers */,
+				2818CE5B239A556D00E22D6F /* AudioPlayer.h in Headers */,
 				EE5FE88D1DBD055C00CB2FF0 /* YYGCDGroup.h in Headers */,
+				2818CE68239A692200E22D6F /* DecodeView.h in Headers */,
 				28D533AD238A697400C5D1C5 /* GPUImageSolarizeFilter.h in Headers */,
 				28D53389238A697400C5D1C5 /* GPUImageChromaKeyFilter.h in Headers */,
 				28D5330F238A697400C5D1C5 /* GPUImageLinearBurnBlendFilter.h in Headers */,
@@ -9469,6 +9542,7 @@
 				EE2A1F501DAF62BD001F9A2E /* UIView+Frame.m in Sources */,
 				28D5337F238A697400C5D1C5 /* GPUImageContrastFilter.m in Sources */,
 				28D5335E238A697400C5D1C5 /* GPUImageRGBFilter.m in Sources */,
+				2818CE5E239A556D00E22D6F /* AudioPlayer.m in Sources */,
 				28D53433238A697500C5D1C5 /* FW1977Filter.m in Sources */,
 				28D53305238A697400C5D1C5 /* GPUImageCannyEdgeDetectionFilter.m in Sources */,
 				EE2A21311DAF6D7A001F9A2E /* YYMultiSelectModel.m in Sources */,
@@ -9515,6 +9589,7 @@
 				28D532B5238A697400C5D1C5 /* GLProgram.m in Sources */,
 				28D533AF238A697400C5D1C5 /* GPUImageTwoInputCrossTextureSamplingFilter.m in Sources */,
 				EE3548481EDEB9300012BA26 /* YYMapNavigation.m in Sources */,
+				2818CE65239A692200E22D6F /* H264HwDecoderImpl2.m in Sources */,
 				EE4C2BFB1DAF9D33008924A3 /* AFNetworkReachabilityManager.m in Sources */,
 				EEC09929200C4A2C00ED368B /* LocationManager.m in Sources */,
 				28D53397238A697400C5D1C5 /* GPUImageLowPassFilter.m in Sources */,
@@ -9588,6 +9663,7 @@
 				28D5344E238A697500C5D1C5 /* FSKGPUImageBeautyFilter.m in Sources */,
 				EE2A20A41DAF6D7A001F9A2E /* YYChrysanthemum.m in Sources */,
 				28D532EF238A697400C5D1C5 /* GPUImageSoftEleganceFilter.m in Sources */,
+				2818CE58239A556D00E22D6F /* Recorder.m in Sources */,
 				28D53341238A697400C5D1C5 /* GPUImageCropFilter.m in Sources */,
 				EE2A0F0B202D8F1F00C88869 /* UIView+DHSmartScreenshot.m in Sources */,
 				EE2A20961DAF6D7A001F9A2E /* YYButton.m in Sources */,
@@ -9625,6 +9701,8 @@
 				EE2A20B81DAF6D7A001F9A2E /* YYImageBrowserScrollView.m in Sources */,
 				28D5334F238A697400C5D1C5 /* GPUImageDivideBlendFilter.m in Sources */,
 				28D5344B238A697500C5D1C5 /* FWFiveInputFilter.m in Sources */,
+				2818CCFB2398DD1D00E22D6F /* VideoCreator.m in Sources */,
+				2818CE66239A692200E22D6F /* DecodeView.m in Sources */,
 				28D5329F238A697400C5D1C5 /* GPUImagePicture.m in Sources */,
 				28D533D0238A697500C5D1C5 /* GPUImageCrosshatchFilter.m in Sources */,
 				EE2A20A61DAF6D7A001F9A2E /* YYCountLabel.m in Sources */,
@@ -9664,6 +9742,7 @@
 				28D532F0238A697400C5D1C5 /* GPUImageTwoPassFilter.m in Sources */,
 				EE35484D1EDEC6AF0012BA26 /* JZLocationConverter.m in Sources */,
 				EE2A211C1DAF6D7A001F9A2E /* YYThreadSafeDictionary.m in Sources */,
+				2818CE5F239A556D00E22D6F /* AudioQueueModel.m in Sources */,
 				28D5334C238A697400C5D1C5 /* GPUImageDifferenceBlendFilter.m in Sources */,
 				EE2A20E91DAF6D7A001F9A2E /* UIBarButtonItem+YYExtension.m in Sources */,
 				28D533D6238A697500C5D1C5 /* GPUImageMosaicFilter.m in Sources */,
@@ -9672,6 +9751,7 @@
 				28D53331238A697400C5D1C5 /* GPUImageMultiplyBlendFilter.m in Sources */,
 				28D53441238A697500C5D1C5 /* FWLomofiFilter.m in Sources */,
 				28D532BE238A697400C5D1C5 /* GPUImageAverageColor.m in Sources */,
+				2818CE59239A556D00E22D6F /* AudioFormat.m in Sources */,
 				EE2A20781DAF6D7A001F9A2E /* JMRenderableTableView.m in Sources */,
 				28D5337B238A697400C5D1C5 /* GPUImageColorBlendFilter.m in Sources */,
 				28D5333C238A697400C5D1C5 /* GPUImageToonFilter.m in Sources */,
