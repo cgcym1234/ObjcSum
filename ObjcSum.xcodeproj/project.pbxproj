@@ -25,6 +25,10 @@
 		2818CE66239A692200E22D6F /* DecodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818CE62239A692200E22D6F /* DecodeView.m */; };
 		2818CE67239A692200E22D6F /* H264HwDecoderImpl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE63239A692200E22D6F /* H264HwDecoderImpl2.h */; };
 		2818CE68239A692200E22D6F /* DecodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2818CE64239A692200E22D6F /* DecodeView.h */; };
+		2841709D246BFC270073F9F0 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2841709C246BFC270073F9F0 /* NSMutableArray+Safe.m */; };
+		28902C262404CA3F00C3C318 /* yyclib.c in Sources */ = {isa = PBXBuildFile; fileRef = 28902C252404CA3F00C3C318 /* yyclib.c */; };
+		28C65FFB2401262E00DCB1F1 /* YYSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C65FFA2401262E00DCB1F1 /* YYSocket.m */; };
+		28C65FFE2401265C00DCB1F1 /* YYServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C65FFD2401265C00DCB1F1 /* YYServer.m */; };
 		28D53274238A697400C5D1C5 /* faac.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D5306E238A697000C5D1C5 /* faac.h */; };
 		28D53275238A697400C5D1C5 /* faaccfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D5306F238A697000C5D1C5 /* faaccfg.h */; };
 		28D53276238A697400C5D1C5 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D53071238A697000C5D1C5 /* libfaac.a */; };
@@ -1538,6 +1542,14 @@
 		2818CE63239A692200E22D6F /* H264HwDecoderImpl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264HwDecoderImpl2.h; sourceTree = "<group>"; };
 		2818CE64239A692200E22D6F /* DecodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeView.h; sourceTree = "<group>"; };
 		282B1E16230BDED200CC7DF8 /* ObjcSum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjcSum.entitlements; sourceTree = "<group>"; };
+		2841709B246BFC270073F9F0 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		2841709C246BFC270073F9F0 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		28902C242404CA3F00C3C318 /* yyclib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yyclib.h; sourceTree = "<group>"; };
+		28902C252404CA3F00C3C318 /* yyclib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = yyclib.c; sourceTree = "<group>"; };
+		28C65FF92401262E00DCB1F1 /* YYSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSocket.h; sourceTree = "<group>"; };
+		28C65FFA2401262E00DCB1F1 /* YYSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSocket.m; sourceTree = "<group>"; };
+		28C65FFC2401265C00DCB1F1 /* YYServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYServer.h; sourceTree = "<group>"; };
+		28C65FFD2401265C00DCB1F1 /* YYServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYServer.m; sourceTree = "<group>"; };
 		28D5306E238A697000C5D1C5 /* faac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faac.h; sourceTree = "<group>"; };
 		28D5306F238A697000C5D1C5 /* faaccfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faaccfg.h; sourceTree = "<group>"; };
 		28D53071238A697000C5D1C5 /* libfaac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfaac.a; sourceTree = "<group>"; };
@@ -3702,6 +3714,19 @@
 			path = StreamPlayer;
 			sourceTree = "<group>";
 		};
+		28902C232404C9B500C3C318 /* YYServer */ = {
+			isa = PBXGroup;
+			children = (
+				28C65FF92401262E00DCB1F1 /* YYSocket.h */,
+				28C65FFA2401262E00DCB1F1 /* YYSocket.m */,
+				28C65FFC2401265C00DCB1F1 /* YYServer.h */,
+				28C65FFD2401265C00DCB1F1 /* YYServer.m */,
+				28902C242404CA3F00C3C318 /* yyclib.h */,
+				28902C252404CA3F00C3C318 /* yyclib.c */,
+			);
+			path = YYServer;
+			sourceTree = "<group>";
+		};
 		28D5306A238A697000C5D1C5 /* MHVideoTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -5694,6 +5719,7 @@
 				EE4C246C1DAF97E6008924A3 /* Summary知识总结 */,
 				EE4C24511DAF97E6008924A3 /* CDemoViewController.h */,
 				EE4C24521DAF97E6008924A3 /* CDemoViewController.m */,
+				28902C232404C9B500C3C318 /* YYServer */,
 			);
 			path = "C代码篇";
 			sourceTree = "<group>";
@@ -6148,6 +6174,8 @@
 				EE4C26251DAF97E7008924A3 /* 颜色转换 */,
 				EE4C25681DAF97E7008924A3 /* YYLibsDemo.h */,
 				EE4C25691DAF97E7008924A3 /* YYLibsDemo.m */,
+				2841709B246BFC270073F9F0 /* NSMutableArray+Safe.h */,
+				2841709C246BFC270073F9F0 /* NSMutableArray+Safe.m */,
 			);
 			path = YYLibsDemo;
 			sourceTree = "<group>";
@@ -9117,6 +9145,7 @@
 				EEEBE5631EE80948007BB181 /* TBActionSheetController.m in Sources */,
 				EECCCCD71DD005D3007B47B1 /* YYSegmentedView.m in Sources */,
 				EE4C282D1DAF97E9008924A3 /* ApplicationManager.m in Sources */,
+				2841709D246BFC270073F9F0 /* NSMutableArray+Safe.m in Sources */,
 				EE4C295A1DAF97EA008924A3 /* MJRefreshBackNormalFooter.m in Sources */,
 				EE4C28AE1DAF97E9008924A3 /* FastRecordImageCell.m in Sources */,
 				EE4C29C81DAF97EA008924A3 /* ReachStateWWAN.m in Sources */,
@@ -9157,6 +9186,7 @@
 				EE4C29A21DAF97EA008924A3 /* RACSubject.m in Sources */,
 				EE4C29D61DAF97EA008924A3 /* SDWebImageDownloader.m in Sources */,
 				EE4C29D51DAF97EA008924A3 /* SDWebImageDecoder.m in Sources */,
+				28C65FFE2401265C00DCB1F1 /* YYServer.m in Sources */,
 				EE4C28731DAF97E9008924A3 /* ExtensionDemo.m in Sources */,
 				EE4C28FA1DAF97E9008924A3 /* YYQRcodeGenerater.m in Sources */,
 				EE4C290D1DAF97E9008924A3 /* yy_color_converter.c in Sources */,
@@ -9188,6 +9218,8 @@
 				EE8971D61EEFBBC3007F13F9 /* TagViewUtils.m in Sources */,
 				EE4C290F1DAF97E9008924A3 /* NSObject+Debug.m in Sources */,
 				EE4C28ED1DAF97E9008924A3 /* YYMessageImageView.m in Sources */,
+				28C65FFB2401262E00DCB1F1 /* YYSocket.m in Sources */,
+				28902C262404CA3F00C3C318 /* yyclib.c in Sources */,
 				EEDCCB701DBFB00A00715955 /* UIButtonDemo.m in Sources */,
 				EE4C28DE1DAF97E9008924A3 /* YYMessageAudioRecordButton.m in Sources */,
 				EE4C28981DAF97E9008924A3 /* sqlite3.c in Sources */,

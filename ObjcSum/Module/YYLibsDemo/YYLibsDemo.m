@@ -8,14 +8,24 @@
 
 #import "YYLibsDemo.h"
 
+
+
+
 @interface YYLibsDemo ()
+
+
+@property (nonatomic, strong) NSString *test;
 
 @end
 
 @implementation YYLibsDemo
 
+
+@dynamic test;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.dataArr = @[
                      
                      [[LibDemoInfo alloc] initWithTitle:@"MapNavigationDemo" desc:@"地图导航" controllerName:@"MapNavigationDemo"],
@@ -52,41 +62,6 @@
     
 }
 
-
-//- (void)layoutItems {
-//    CGFloat maxWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
-//    CGFloat itmeWith = [JMMetroCellItem fixedSize].width;
-//    CGFloat itmeHeight = [JMMetroCellItem fixedSize].height;
-//    CGFloat x = 0;
-//    CGFloat y = 0;
-//    CGFloat itemSpacing = 0;
-//    NSInteger itemCount = _items.count;
-//
-//    NSInteger totalLine = ((itemCount-1) / ItemCountPerLine) + 1;
-//    totalLine = MIN(totalLine, MaxLine);
-//
-//    NSInteger absoluteIndex = 0;
-//    //从最后一行开始计算坐标
-//    for (NSInteger currentLine = totalLine; currentLine > 0; currentLine--) {
-//        NSInteger itemCountCurrentLine = 0;
-//        //最后一行
-//        if (currentLine == totalLine) {
-//            itemCountCurrentLine = (itemCount-1) % ItemCountPerLine + 1;
-//        } else {
-//            itemCountCurrentLine = ItemCountPerLine;
-//        }
-//
-//        //该行显示5个item的话就有6个间距
-//        itemSpacing = (maxWidth - itemCountCurrentLine*itmeWith) / (itemCountCurrentLine+1);
-//        y = MarginTopBottom * currentLine + itmeHeight * (currentLine-1);
-//        for (int i = 0; i < itemCountCurrentLine; i++) {
-//            absoluteIndex = ItemCountPerLine * (currentLine-1) + i;
-//            x = itemSpacing * (i+1) + itmeWith * i;
-//            JMMetroCellItem *cellItem = _items[absoluteIndex];
-//            cellItem.frame = CGRectMake(x, y, itmeWith, itmeHeight);
-//        }
-//    }
-//}
 
 
 @end

@@ -11,8 +11,8 @@
 @implementation Son
 
 + (void)load {
-//    NSLog(@"Son:%s %@", __FUNCTION__, [self class]);
-    NSLog(@"Son:%s %@", __FUNCTION__, @"Son");
+    NSLog(@"Son:%s %@", __FUNCTION__, [self class]);
+//    NSLog(@"Son:%s %@", __FUNCTION__, @"Son");
 }
 
 //+ (void)initialize {

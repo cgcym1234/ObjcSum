@@ -17,17 +17,71 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    dispatch_queue_t myCustomQueue;
-    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
-    dispatch_sync(myCustomQueue, ^{
-        sleep(10);
+//    dispatch_queue_t myCustomQueue;
+//    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
+//    dispatch_sync(myCustomQueue, ^{
+//        sleep(10);
+//    });
+    
+//    [self asyncBarrier];
+    [self interview1];
+}
+
+- (void)interview1{
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"1---%@",[NSThread currentThread]);
+        [self performSelector:@selector(test1) withObject:nil afterDelay:.0f];
+        NSLog(@"3---%@",[NSThread currentThread]);
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)test1{
+    NSLog(@"2---%@",[NSThread currentThread]);
 }
+
+
+
+// 异步栅栏函数
+- (void)asyncBarrier{
+    NSLog(@"当前线程1");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.tsk", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+       NSLog(@"开始下载part1---%@",[NSThread currentThread]);
+        [NSThread sleepForTimeInterval:2.0f]; // 模拟下载耗时2s
+        NSLog(@"完成下载part1---%@",[NSThread currentThread]);
+    });
+    
+    NSLog(@"当前线程2");
+    
+    dispatch_async(queue, ^{
+       NSLog(@"开始下载part2---%@",[NSThread currentThread]);
+       [NSThread sleepForTimeInterval:1.0f]; // 模拟下载耗时1s
+       NSLog(@"完成下载part2---%@",[NSThread currentThread]);
+    });
+    
+    NSLog(@"当前线程3");
+    
+    dispatch_barrier_async(queue, ^{
+       NSLog(@"开始合并part1和part2---%@",[NSThread currentThread]);
+       [NSThread sleepForTimeInterval:1.0f]; // 模拟下载耗时1s
+       NSLog(@"完成合并part1和part2---%@",[NSThread currentThread]);
+    });
+    
+    NSLog(@"当前线程4");
+        
+    dispatch_async(queue, ^{
+       NSLog(@"开始写入磁盘---%@",[NSThread currentThread]);
+       [NSThread sleepForTimeInterval:1.0f]; // 模拟下载耗时1s
+       NSLog(@"完成写入磁盘---%@",[NSThread currentThread]);
+    });
+    
+    NSLog(@"当前线程5");
+}
+
+
 
 #pragma mark - dispatch_queue
 

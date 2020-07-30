@@ -11,13 +11,13 @@
 @implementation Father
 
 + (void)load {
-//    NSLog(@"Father:%s %@", __FUNCTION__, [self class]);
-    NSLog(@"Father:%s %@", __FUNCTION__, @"Father");
+    NSLog(@"Father:%s %@", __FUNCTION__, [self class]);
+//    NSLog(@"Father:%s %@", __FUNCTION__, @"Father");
 }
 
 + (void)initialize {
-//    NSLog(@"Father:%s %@", __FUNCTION__, [self class]);
-    NSLog(@"Father:%s %@", __FUNCTION__, @"Father");
+    NSLog(@"Father:%s %@", __FUNCTION__, [self class]);
+//    NSLog(@"Father:%s %@", __FUNCTION__, @"Father");
 }
 
 @end
